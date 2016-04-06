@@ -11,18 +11,6 @@ Page Detail
   .item  img {
     width: 100%;
   }
-
-  .item-collections {
-
-    .inner{
-      background-color: $color_white;
-
-      // &:hover .info-collections {
-      //   bottom: 0;
-      //   @include prefix(transform,translateY(0));
-      // }
-    }
-  }
 }
 
 .item-collections {
@@ -33,17 +21,18 @@ Page Detail
     position: relative;
   }
   .inner {
+    background-color: $color_white;
+
     .info-collections {
       @include transition(all 0.3s ease-in-out 0s);
       background-color: rgba($color_black, 0.4);
       bottom: 0;
       left: 0;
-      position: absolute;
       right: 0;
-      @extend %text-center;
-      z-index: 20;
+      position: absolute;
       color: $color_white;
       line-height: 2.2;
+      @extend %text-center;
 
       .title {
         display: block;
@@ -56,10 +45,6 @@ Page Detail
 
     &:hover .info-collections {
       background-color: rgba($color_black, 0.6);
-      // bottom: 50%;
-      // @include prefix(transform,translateY(50%));
-     
-
     }
   }
 }

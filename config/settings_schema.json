@@ -1,3 +1,4 @@
+
 [
   {
     "name": "theme_info",
@@ -288,7 +289,7 @@
         "id": "mega_main_family",
         "label": "Font family",
         "options": [
-         {
+          {
             "value": "'Open Sans', sans-serif",
             "label": "Open Sans",
             "group": "Sans-serif"
@@ -1281,7 +1282,7 @@
         "type": "text",
         "id": "header_hotline",
         "label": "Hotline",
-        "default":"Call Us: 0800 266 966"
+        "default": "Call Us: 0800 266 966"
       },
       {
         "type": "text",
@@ -3347,6 +3348,23 @@
             "label": "Detail width sidebar"
           }
         ]
+      },
+      {
+        "type": "select",
+        "id": "product_image_gallery_style",
+        "label": "Product image gallery style (product details view)",
+        "info": "For Variant Product: you should set Zoom style",
+        "options": [
+          {
+            "value": "1",
+            "label": "Zoom"
+          },
+          {
+            "value": "2",
+            "label": "Slider"
+          }
+        ],
+        "default": "2"
       }
     ]
   },
@@ -3588,6 +3606,35 @@
             "label": "Modal"
           }
         ]
+      },
+      {
+        "type": "header",
+        "content": "Delivery date",
+        "info": " use for Cart type = Page "
+      },
+      {
+        "type": "checkbox",
+        "id": "show_delivery_date",
+        "label": "Show delivery date",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_heading",
+        "label": "Delivery heading",
+        "default": "Pick a delivery date:"
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_input",
+        "label": "Delivery text",
+        "default": "Input date "
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_note",
+        "label": "Delivery note",
+        "default": "( We do not deliver during the week-end. ) "
       }
     ]
   },

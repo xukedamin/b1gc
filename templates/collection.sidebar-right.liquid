@@ -37,9 +37,23 @@
     <div class="container" >
       <div class="row" >
         <div class="grid-item{% if has_sidebar %} col-md-9 {% endif %}">
-        {% comment %}
-        Different markup if description is set
-      {% endcomment %}
+        {% comment %} Different markup if description is set {% endcomment %}
+        
+          <div class="section-header__right sort-pagi-bar top clearfix">
+            {% include 'collection-views' %}
+          
+            {% if paginate.pages > 1 %}
+              <div class="pagination-2">
+                {% include 'pagination-2' %}
+              </div>
+            {% endif %}
+
+            <div class="product-filter pull-right">
+            {% include 'collection-sorting' %}
+            </div>
+
+          </div>
+
       <div class="row masonry-container">
         {% for product in collection.products  %}
           
@@ -57,7 +71,7 @@
       {% endif %}
     </div>
     {% if has_sidebar %}
-      <aside class="sidebar col-md-3" id="collectionFilters">
+      <aside class="sidebar sidebar-product col-md-3" id="collectionFilters">
         {% include 'collection-sidebar' %}
       </aside>
     {% endif %}
