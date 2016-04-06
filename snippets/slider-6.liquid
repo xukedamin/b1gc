@@ -1,0 +1,52 @@
+{% if settings.slider_home_enable %}
+<div class="home-boxed-slider style-5 caption-slider dir-nav control-nav slider-6" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}" >
+  {% for i in (1..4) %}
+  {% capture slide %}slide_{{ i }}{% endcapture %}
+  {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+  {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
+  {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}    
+  {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
+  {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
+  {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
+  {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
+  {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
+
+  {% if settings[slide] %}
+
+  <div class="home-slider-item">
+    <div style="background-image:url({{ slide_img | asset_url  }}); " class="item-image">
+      {% if settings[slide_video] != blank %}
+      <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
+        <source src="{{settings[slide_video]}}" type="video/mp4">
+      </video>
+      {% endif %}      
+      <div class="overlay">
+        <div class="cell-vertical-wrapper">
+          <div class="cell-middle">
+            <div class="caption-wrapper text-center">
+
+              	<div class="heading-icon caption size-70 {% if settings[slide_icon] != blank  %} {{ settings[slide_icon] }} {% endif %}">
+                {% if settings[slide_icon] == blank  %}
+                <br />{{ slide_icon_img | asset_url | img_tag: settings[slide_alt] }} <br />
+                {% endif %}
+                </div>              
+
+              {% if settings[slide_title1] != blank  %}
+              <p data-caption-animation="fadeIn" class="caption">{{ settings[slide_title1] }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+{% endif %}
+
+

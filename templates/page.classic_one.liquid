@@ -1,0 +1,153 @@
+<main class="main-content">
+
+  {% if page.metafields.jvpage.titlePage != 'hide'  %}  
+  <div class="common-static-header">
+    <div class="parallax-bg" data-stellar-background-ratio="0.25" 
+         {% if page.metafields.jvpage.titleBackground != blank %}         
+         style="background-image:url({{ page.metafields.jvpage.titleBackground }})"         
+         {% endif %}          
+         ></div>
+    <div class="container">
+
+
+
+
+      <h1 >
+        <span>
+          {% if current_tags %}
+          {{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}
+          {% else %}
+          {{ blog.title }}
+          {% endif %}
+        </span>
+      </h1>      
+
+
+    </div>  
+  </div>
+  {% endif %}    
+
+
+
+
+
+
+  <section role="main" class="wrapper-content 111111111111111 full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+    <div class="container">
+
+
+      {% paginate blog.articles by 5 %}
+
+
+      <div class="row">
+
+        <div class="col-md-9 col-md-offset-3  ">
+
+
+
+
+
+          {% for article in blog.articles %}
+
+
+
+          <article class="post-index post-index-style-1 standard">
+            <header class="entry-header">
+
+
+              {% if article.excerpt.size > 0 %}
+              <div class="video-container">
+                {{ article.excerpt }}
+              </div>
+              {% else %}
+              {% if article.image %}
+              {% assign image_alt = article.title | escape %}
+              <div class="post-thumbnail">
+                {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+              </div>
+              {% endif %}    
+              {% endif %}  
+
+
+
+
+
+              <h6 class="post-meta color-main">{{ blog.title }} /
+
+
+                {% if blog.comments_enabled? %}
+
+                <a href="{{ article.url }}#comments">
+                  {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                </a>
+                /
+                {% endif %}
+
+                <time pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
+              </h6>
+              <h2 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+            </header>
+
+
+
+
+
+            <div class="entry-content">{{ article.content | strip_html | truncatewords: 70 }}</div>
+
+
+
+
+
+            <footer class="entry-footer">
+              <div class="readmore text-center">
+
+                <a class="border-btn border-btn-lightgray btn-size-3" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} →</a>
+              </div>
+              <div class="author font-serif color-main"><span>
+
+                {{ 'blogs.article.postedby' | t }}
+
+                {{ article.author }}        
+
+
+                </span></div>
+
+
+
+              {% if settings.social_sharing_blog %}
+              {% include 'social-sharing-ul' %}
+
+
+              {% endif %}
+
+            </footer>
+          </article>    
+
+
+
+          {% endfor %}
+
+          {% if paginate.pages > 1 %}
+          <div class="pagination">
+            {% include 'pagination-custom' %}
+          </div>
+          {% endif %}
+
+
+        </div>
+
+        <aside class=" sidebar   col-md-3  col-md-jvoffset-12">
+          {% include 'blog-sidebar' %}
+        </aside>
+      </div>
+
+      {% endpaginate %}
+
+    </div>  
+  </section>
+
+</main>  
+
+
+
+

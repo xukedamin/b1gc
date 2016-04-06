@@ -1,0 +1,134 @@
+
+.widget-title.sub-title {
+    margin: 0 0 25px;
+}
+
+.sidebar-product .title-product a:hover{
+      color: $color_dusty-gray;
+  }
+
+.widget.widget-category {
+  h3 {
+    font-size: 13px;
+    margin: 0 0 15px;
+    @extend %text-up;
+  }
+
+  > h3 a {
+    color: $color_shark;
+    &:hover{
+      color: $color_dusty-gray;
+    }
+  }
+  > h3 a:hover, 
+ 
+
+  > ul {
+    list-style: outside none none;
+    margin: 0 0 40px;
+    padding: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul li a {
+    color: $color_dove-gray;
+    padding-left: 30px;
+    position: relative;
+
+    &:hover,
+    &.active {
+      color: $color_dusty-gray;
+      &:after{
+        background: transparent;
+      }
+    }
+
+    &:before {
+      @extend %jv-font-Linearicons;
+      left: 0;
+      position: absolute;
+      top: 0;
+      content: '\e87a';//lnr-arrow-right
+      border:none;
+    }
+  }
+}
+
+
+
+.sidebar-product .widget {
+    border: 1px solid $color_mercury;
+    margin-bottom: 30px;
+    padding:30px;
+
+   ul{
+  	padding:0;
+  	list-style:none;
+  }
+
+   .title-product a {
+      color: $color_dove-gray;
+  }
+
+}
+
+.product-thumb {
+    background: $color_wild-sand none repeat scroll 0 0;
+    float: left;
+    margin-right: 20px;
+    max-width: 70px;
+    width: 100%;
+}
+
+
+.sidebar-product .product-small .info-price  span{
+  font-size: 16px;
+}
+
+.sidebar-product .product-small,
+.widget-top-seller li {
+    margin-bottom: 20px;
+}
+.widget.widget-category li {
+    border-bottom: 1px solid $color_mercury;
+    padding: 8px 0;
+  &:last-child{
+  	border-bottom: 1px solid transparent;
+  } 
+}
+
+
+.widget.widget-compare ul li {
+  margin-bottom: 20px;
+  position: relative;
+
+  .remove-product-compare {
+    color: $color_shark;
+    left: -20px;
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+.widget-compare-link {
+  border-top: 1px solid $color_mercury;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+  .clear-compare {
+    color: $color_shark;
+    @extend %text-up;
+
+    &:hover {
+      color: $color_dusty-gray;
+    }
+  }
+}
+
+.btn-link-default.btn-compare {
+  margin-right: 25px;
+  padding: 0 20px;
+}

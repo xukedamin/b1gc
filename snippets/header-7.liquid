@@ -1,0 +1,58 @@
+<div id="header">
+	<div class="header header7">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="logo-header7">
+						<a href="index.html"><img src="{{ 'logo7.png' | asset_url }}" alt="" /></a>
+					<!-- 	<a  title="{{ shop.name }}" alt="{{ shop.name }}" href="/" rel="home">
+						<span class="logo-table">
+							<span class="logo-table-cell">
+								<img src="{{ 'logo7.png' | asset_url }}" alt="{{ shop.name }}" class="logo-img-1" >
+								<img src="{{ 'logo-2-mobile.png' | asset_url }}" alt="{{ shop.name }}" class="logo-img-2" >
+							</span>
+						</span> -->
+					
+					</div>
+					<div class="search-form7">
+						{% include 'search-bar' %}
+					</div>
+				</div>
+				<div class="col-md-5 col-sm-8 col-xs-12">
+					<div class="main-nav main-nav7">
+					 {% include 'nav' class: 'dropdownMenu main-menu', handle: 'menu-short-1' %}
+						<div class="mobile-menu">
+							<a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
+							<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-12">
+					<div class="register-box">
+						<!-- <a href="#" class="link-login">Login</a>
+						<a href="#" class="link-signin">Sign In</a> -->
+							{% if shop.customer_accounts_enabled %}
+		          	{% if customer %}
+		             <a class="link-login account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
+		                 {{ 'layout.customer.my_account' | t }}
+		                </a>
+		           {% else %}
+		           <a href="/account/login" class="link-signin account-link">
+		                {{ 'layout.customer.my_account' | t }}
+		              </a>
+		           {% endif %}
+		      		{% endif %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info-cart info-cart7">
+			<a class="info-icon icon-cart" href="#"><span class="lnr lnr-cart"></span> <sup>0</sup></a>
+			<div class="inner-cart-info">
+				{% include 'mini-cart' %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Header -->

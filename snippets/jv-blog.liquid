@@ -1,0 +1,50 @@
+{% if settings.home_blog_enable %}
+<div class="home-blog container">
+  {% if settings.home_blog_title != blank %}
+  <h2 class="title title_center">
+    <span>{{ settings.home_blog_title }}</span>
+  </h2>
+  {% endif %}
+
+    {% assign tmp = settings.home_blog %}
+    {% assign blog = blogs[tmp] %}
+    {% for article in blog.articles limit:settings.home_blog_number %}
+
+
+
+    <div class="col-md-4 col-xs-12">
+      <div class="blog-item section-block-p">
+
+        {% if article.excerpt.size > 0 %}
+
+           <div class="item-image video-container">
+          {{ article.excerpt }}
+        </div>
+        {% else %}
+        {% if article.image %}
+        {% assign image_alt = article.title | escape %}
+          
+         <div class="item-image">
+
+          {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+
+        </div>
+            
+        {% endif %}    
+        {% endif %} 
+
+
+        
+        
+        
+        
+        <p><a href="{{ blog.url }}">{{ blog.title }}</a>&nbsp;/&nbsp;<time pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></p>
+        <h5><a href="{{ article.url }}">{{ article.title }}</a></h5>
+      </div>
+    </div>
+
+
+    {% endfor %}
+
+</div>
+{% endif %}

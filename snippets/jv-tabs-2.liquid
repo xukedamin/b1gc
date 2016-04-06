@@ -1,0 +1,19 @@
+
+{% for i in (1..6) %}
+{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
+{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
+{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+
+
+{% if settings[tab_item_title] != blank %}
+            
+<div class="block-service-style-01">
+
+  <h5><i class="{% if settings[tab_item_icon] == blank %}  icon-outline-vector-icons-pack-101 {% else %}    {{ settings[tab_item_icon] }} {% endif %}    "></i> {{ settings[tab_item_title] }}</h5>
+
+  <p>{{ settings[tab_item_text] }}</p>
+</div>
+{% endif %}  
+
+
+{% endfor %}

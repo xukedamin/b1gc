@@ -1,0 +1,30 @@
+
+
+  {% if paginate.previous %}
+    <a class="item-paginate" href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}"><i class="icon-left-open-big"></i></a>
+  {% else %}
+   <span  class="item-paginate disabled"><i class="icon-left-open-big"></i></span>
+  {% endif %}
+
+  {% for part in paginate.parts %}
+    {% if part.is_link %}
+
+        <a class="item-paginate" href="{{ part.url }}" title="">{{ part.title }}</a>
+
+    {% else %}
+      {% if part.title == paginate.current_page %}
+      <span class="item-paginate active">{{ part.title }}</span>
+      {% else %}
+      <span class="item-paginate">{{ part.title }}</span>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if paginate.next %}
+    <a class="item-paginate" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><i class="icon-right-open-big"></i></a>
+  {% else %}
+    <span class="item-paginate disabled"><i class="icon-right-open-big"></i></span>
+  {% endif %}
+
+
+

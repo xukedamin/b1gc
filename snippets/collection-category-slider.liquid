@@ -1,0 +1,20 @@
+<div class="category-slider owl-default space30">
+  <div class="container">
+    <div class="wrap-item space30">
+      {% for collection in collections %}
+        {% unless collection.handle == 'frontpage' or collection.handle == 'all' %}
+        {% include 'collection-item' %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>
+</div>
+<script language="javascript">
+jQuery(function($){
+  var $container = $('.masonry-container').imagesLoaded(function(){
+    $container.masonry({
+    itemSelector: '.itemMasonry'
+    });
+  });
+});
+</script>

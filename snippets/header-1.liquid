@@ -1,0 +1,43 @@
+
+<div id="header">
+
+  {% include 'header-top-black-1' %}
+  <div class="header header-home clearfix">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="logo logo-home">
+            <a title="{{ shop.name }}" alt="{{ shop.name }}" href="/" class="" rel="home">
+              <span class="logo-table">
+                <span class="logo-table-cell">
+                  <!-- <img src="{{ 'logo-1.png' | asset_url }}" alt="{{ shop.name }}"  > -->
+                  <h1><span class="lnr lnr-apartment"></span> {{ shop.name }}</h1> 
+                </span>
+              </span>
+            </a>
+          </div>
+          
+
+          <div class="main-nav main-nav-home">
+            {% include 'nav' class: 'mainmenu ', handle: 'main-menu' %}
+            <div class="mobile-menu">
+              <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
+              <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-7 col-sm-7 col-xs-12">
+          {% include 'header-1_slider' %}
+          
+          {% include 'header-1_banner' %}
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12">
+          {% include 'header-1_box-extra' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Header -->

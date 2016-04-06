@@ -1,0 +1,52 @@
+
+{% capture cpricetable %}{% if settings.pricetable_4_enable %}4{% else %}3{% endif %}{% endcapture %}
+
+
+{% for i in (1..cpricetable) %}
+
+
+{% capture pricetable_name %}pricetable_{{ i }}_name{% endcapture %}
+{% capture pricetable_field_1 %}pricetable_{{ i }}_field_1{% endcapture %}
+{% capture pricetable_field_2 %}pricetable_{{ i }}_field_2{% endcapture %}
+{% capture pricetable_field_3 %}pricetable_{{ i }}_field_3{% endcapture %}
+{% capture pricetable_field_4 %}pricetable_{{ i }}_field_4{% endcapture %}
+{% capture pricetable_field_5 %}pricetable_{{ i }}_field_5{% endcapture %}
+{% capture pricetable_price %}pricetable_{{ i }}_price{% endcapture %}
+{% capture pricetable_button %}pricetable_{{ i }}_button{% endcapture %}
+{% capture pricetable_link %}pricetable_{{ i }}_link{% endcapture %}
+
+
+
+
+<div class="col-md-{% if settings.pricetable_4_enable %}3{% else %}4{% endif %} col-sm-6 col-xs-11">
+  <div class="price-table-content ">
+    {% if settings[pricetable_name] != blank %}
+    <h5>{{ settings[pricetable_name] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_field_1] != blank %}
+    <h5>{{ settings[pricetable_field_1] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_field_2] != blank %}                  
+    <h5>{{ settings[pricetable_field_2] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_field_3] != blank %}                  
+    <h5>{{ settings[pricetable_field_3] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_field_4] != blank %}                  
+    <h5>{{ settings[pricetable_field_4] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_field_5] != blank %}                  
+    <h5>{{ settings[pricetable_field_5] }}</h5>
+    {% endif %}
+    {% if settings[pricetable_price] != blank %}                  
+    <h1>{{ settings[pricetable_price] }}</h1>
+    {% endif %}
+    {% if settings[pricetable_button] != blank %}
+    <a href="{{ settings[pricetable_link] }}" class="normal-btn normal-btn-main btn-size-5">{{ settings[pricetable_button] }}</a>
+    {% endif %}
+  </div>
+</div>              
+
+
+
+{% endfor %}

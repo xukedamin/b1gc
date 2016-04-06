@@ -1,0 +1,238 @@
+/***********************************************************************
+						Teams				
+************************************************************************/
+.team-gallery-thumb {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+  &:before {
+    background: rgba($color_boulder-darker, 0.5) url('{{ "icon-zoom.png" | asset_url }}') no-repeat scroll center center;
+    content: "";
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    @extend %jv-transition-easeout;
+    width: 0;
+    z-index: 9;
+  }
+  &:hover:before {
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.item-team-gallery h3{
+  margin:0 0 20px;
+  
+  a{
+    color:$color_currious-blue-darker;
+    font-size:16px;
+    &:hover{
+      color:$color_shark;
+    }
+  }
+  
+  > span {
+      color: $color_dusty-gray;
+      display: block;
+      margin-bottom: 10px;
+  }
+  
+  .desc{
+    color:$color_dove-gray;
+  }
+}
+
+
+.team-social-network {
+  margin-left: -2px;
+  margin-top: 20px;
+
+  li {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  a {
+    background: $color_wild-sand none repeat scroll 0 0;
+    @extend %jv-border-radius-50;
+    color: $color_dove-gray;
+    display: block;
+    height: 34px;
+    @extend %text-center;
+    width: 34px;
+
+    @extend %jv-transition-easeout;
+    i {
+        line-height: 34px;
+      }
+
+    &:hover {
+      background: $color_currious-blue-darker;
+      color: $color_white;
+
+    
+    }
+  }
+}
+
+.team-cirle-image {
+  
+  @extend %jv-border-radius-50;
+  @extend %jv-transition-easeout;
+  width:100%;
+}
+
+.team-circle-thumb {
+  background: $color_shark none repeat scroll 0 0;
+  @extend %jv-border-radius-50;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    z-index: 9;
+
+    .team-cirle-image {
+      margin-left: 30px;
+      @include prefix(transform, scale(0.5) translateX(100%) rotate(360deg));
+      
+    }
+    .info-circle-thumb {
+      visibility: visible;
+      opacity: 1;
+      @extend %jv-transform-scale-1;
+    }
+  }
+}
+
+
+
+
+.info-circle-thumb {
+  left: 0;
+  padding: 50px 50px 0;
+  position: absolute;
+  @extend %text-center;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  opacity: 0;
+  @extend %jv-transition-easeout;
+  @extend %jv-transform-scale-0;
+  
+  .desc{
+  	color:$color_dusty-gray;
+  }
+}
+
+
+.team-circle-social-network {
+  margin-left: -2px;
+  margin-top: 20px;
+
+  a {
+    background: $color_wild-sand none repeat scroll 0 0;
+    color: $color_dove-gray;
+    display: block;
+    height: 34px;
+    @extend %text-center;
+    width: 34px;
+    @extend %jv-transition-easeout;
+    @extend %jv-border-radius-50;
+
+    &:hover {
+      background: $color_golden-tainoi;
+      color: $color_white;
+    }
+    i {
+      line-height: 34px;
+    }
+  }
+  li {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.team-circle-info {
+  @extend %text-center;
+
+  h3 a {
+    color: $color_shark;
+    font-size: 16px;
+
+    &:hover {
+      color: $color_golden-tainoi;
+    }
+  }
+  span {
+    color: $color_dusty-gray;
+  }
+  > h3 {
+    margin: 15px 0 10px;
+  }
+}
+
+.item-team-rectang {
+  border: 1px solid $color_mercury-darker;
+  overflow: hidden;
+  position: relative;
+  @extend %text-center;
+
+  .team-circle-info {
+    background: $color_white none repeat scroll 0 0;
+    bottom: -60px;
+    left: 0;
+    padding: 0 20px 15px;
+    position: absolute;
+    @extend %jv-transition-easeout;
+    width: 100%;
+  }
+  &:hover .team-circle-info {
+    bottom: 0;
+  }
+}
+
+
+.list-team-box {
+    margin-bottom: 50px;
+    margin-top: 55px;
+  
+  .team-gallery ,
+  .team-circle{
+      margin-bottom: 100px;
+  }
+}
+
+
+.item-team-circle1{
+	z-index:104;
+}
+.item-team-circle2{
+	z-index:103;
+}
+.item-team-circle3{
+	z-index:102;
+}
+.item-team-circle4{
+	z-index:101;
+}
+
+.item-team-circle{
+	position:relative;
+}
+
+.team-rectang-thumb > img ,
+.team-circle-thumb > img {
+    width: 100%;
+}

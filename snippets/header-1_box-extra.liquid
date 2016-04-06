@@ -1,0 +1,46 @@
+<div class="home-box-extra">
+  {% if settings.show_header_cart %}
+  <div class="home-cart-box">
+    <a href="#" class="icon-extra-sub icon-home-cart">
+      <span class="lnr lnr-cart"></span>
+      <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
+    </a>
+
+    <div class="home-extra-sub">
+      <a href="#" class="close-extra-sub">Close</a>
+   <!--    <a href="/cart" class="mycart-link">
+        <span class="lnr-cart"></span> {{ 'cart.general.mycart' | t }}  
+      </a> -->
+      <div class="inner-cart-info">
+        {% include 'mini-cart' %}
+      </div>
+    </div>
+  </div><!-- home-cart-box -->
+  {% endif %}
+
+  <div class="home-share-box">
+    <a href="#" class="icon-extra-sub icon-home-share">
+      <span class="lnr lnr-bullhorn"></span>
+    </a>
+    <div class="home-extra-sub">
+      <a href="#" class="close-extra-sub">Close</a>
+      <ul class="list-unstyled share-social">
+        <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+        <li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+        <li><a href="#"><i class="fa fa-pinterest-square"></i> Pinterest</a></li>
+        <li><a href="#"><i class="fa fa-youtube-square"></i> Youtube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="home-search-box">
+    <a href="#" class="icon-extra-sub icon-home-search">
+      <span class="lnr lnr-magnifier"></span>
+    </a>
+    <div class="home-extra-sub">
+      <a href="#" class="close-extra-sub">Close</a>
+      <div class="home-search-form">
+       {% include 'search-bar' %}
+      </div>
+    </div>
+  </div>
+</div>

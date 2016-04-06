@@ -1,0 +1,273 @@
+// _bigc-banners.scss
+
+/***********************************************************************
+            Banners         
+************************************************************************/
+.item-product-leading .item-product-thumb:hover .product-thumb-link img {
+  
+  @extend %jv-transform-scale-115;
+}
+
+
+.banner-box {
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  @extend %text-up;
+}
+
+.banner-style1 {
+  .banner-box-info {
+    left: 30px;
+    position: absolute;
+    top: 200px;
+    z-index: 10;
+  }
+  .desc {
+    letter-spacing: 5px;
+    margin-top: 20px;
+  }
+  @include p-el(before, 0, 0) {
+    top: 0;
+    left: 0;
+    background: rgba($color_shark, 0.1);
+    @extend %jv-transition-easeout;
+    z-index: 9;
+  }
+
+  &:hover:before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @include p-el(after, 0, 0) {
+    bottom: 0;
+    right: 0;
+    background: rgba($color_shark, 0.1);
+    @extend %jv-transition-easeout;
+    z-index: 9;
+  }
+
+  &:hover:after {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// NOTE: addition class
+.label_title-banner-box{
+  border-radius: 4px;
+  color: $color_white;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.title-banner-box-yellow {
+  margin: 0;
+
+  > span {
+    @extend .label_title-banner-box;
+    
+    background: $color_candlelight none repeat scroll 0 0;
+    padding: 0 10px 3px;
+  }
+}
+
+.title-banner-box-blue {
+  margin: 0;
+
+  > span {
+    @extend .label_title-banner-box;
+
+    background: $color_currious-blue-darker none repeat scroll 0 0;
+    padding: 0 10px 4px;
+  }
+}
+
+.btn-box-banner {
+  background: $color_currious-blue-darker none repeat scroll 0 0;
+
+  border-radius: 4px;
+  color: $color_white;
+  display: inline-block;
+
+  height: 40px;
+  line-height: 40px;
+  margin-top: 12px;
+  padding: 0 20px;
+  @extend %jv-transition-easeout;
+
+  &:hover {
+    background: $color_candlelight none repeat scroll 0 0;
+    color: $color_white;
+  }
+}
+
+.banner-box.banner-style1 {
+  &.box-center {
+    margin: 0 -7px;
+  }
+  &.box-left {
+    margin-right: -14px;
+  }
+  &.box-right {
+    margin-left: -14px;
+  }
+}
+.banner-box-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-box {
+  .banner-box-link img {
+    @extend %jv-transition-easeout;
+    width: 100%;
+  }
+  &:hover {
+    .banner-box-link img {
+      
+      @extend %jv-transform-scale-115;
+
+    }
+  }
+}
+
+
+.banner-style2 {
+  .banner-box-title.banner-box-title-blue {
+    background: $color_currious-blue-darker;
+    @extend %text-center;
+    margin: 0;
+    padding: 2px 15px 5px;
+    color: $color_white;
+    @extend %jv-transition-easeout;
+  }
+  .title-banner-box-blue {
+    font-size: 48px;
+    color: $color_currious-blue-darker;
+    margin: 0;
+  }
+  &:hover {
+    .banner-box-title.banner-box-title-blue {
+      background: $color_candlelight;
+    }
+  }
+  .title-banner-box-black {
+    font-size: 24px;
+    margin: 0;
+  }
+  .banner-box-info {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    @extend %text-center;
+    z-index: 10;
+    opacity: 0;
+    @extend %jv-transition-easeout;
+  }
+  &:hover  .banner-box-info {
+    opacity: 1;
+  }
+}
+
+.banner-box.banner-style3 {
+  &.box-left {
+    margin-right: -10px;
+  }
+  &.box-right {
+    margin-left: -10px;
+  }
+}
+.banner-box.banner-style3 {
+  margin-bottom: 10px;
+  @extend %jv-transition-easeout;
+  overflow: visible;
+
+  .banner-box-info {
+    background: $color_white none repeat scroll 0 0;
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.2);
+    left: 0;
+    margin-top: -50px;
+    position: absolute;
+    @extend %text-up;
+    top: 50%;
+    z-index: 10;
+    padding: 25px 30px;
+
+    @include p-el(before, 0, 0) {
+      border-right: 36px solid transparent;
+      border-top: 36px solid $color_currious-blue-darker;
+      left: 0;
+      top: 0;
+      @extend %jv-transition-easeout;
+    }
+
+    @include p-el(after, 0, 0) {
+      border-right: 36px solid transparent;
+      border-top: 36px solid $color_white;
+      left: 36px;
+      top: 0;
+      @extend %jv-transition-easeout;
+      opacity: 0;
+    }
+   
+  }
+  .btn-link-hidden {
+    background: $color_currious-blue-darker none repeat scroll 0 0;
+    border-radius: 6px;
+    color: $color_white;
+    display: inline-block;
+    height: 40px;
+    left: 100%;
+    line-height: 40px;
+    margin-top: -20px;
+    opacity: 0;
+    position: absolute;
+    @extend %text-center;
+    @extend %text-up;
+    top: 50%;
+    @extend %jv-transition-easeout;
+    width: 140px;
+    margin-left: 10px;
+    
+    @extend %jv-transform-scale-0;
+
+    &:hover {
+      background: $color_bright-sun none repeat scroll 0 0;
+    }
+  }
+  &:hover {
+    box-shadow: 4px 4px 4px -1px rgba(0, 0, 0, 0.1);
+
+    .banner-box-info:after {
+      opacity: 1;
+      left: 0;
+    }
+    .banner-box-info:before {
+      left: -2px;
+    }
+    .btn-link-hidden {
+      opacity: 1;
+      
+      @extend %jv-transform-scale-1;
+    }
+  }
+}
+.title-banner-box {
+  font-size: 18px;
+  margin: 0;
+
+  &.style1 {
+    color: $color_mine-shaft;
+  }
+  &.style2 {
+    color: $color_currious-blue-darker;
+  }
+}
+// banner-adv-product
+.banner-adv-product {
+  margin: 50px 0 20px;
+}

@@ -1,0 +1,428 @@
+{% assign variant_tmp = product.selected_or_first_available_variant  %}
+{% for variant in product.variants %}
+{% if variant.available == true and variant.price < variant_tmp.price %}
+{% assign variant_tmp = variant %}	
+{% endif %}
+{% endfor %}
+
+{% unless current_collection %}
+{% assign current_collection = collection %}
+{% endunless %}
+
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+{% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available  %}
+{% assign sold_out = false %}
+{% endif %}
+
+{% include 'breadcrumb' %}
+
+<main role="main" class="wrapper main-content  product-style-detail pt-50  {% if settings.product_style_option == 'style-1' %} shop-detail-1-page  {% else %}    shop-detail-2-page  {% endif %} ">
+  <div class="container">
+
+    {% if settings.product_style_option == 'style-2' %}
+    <div class="row product-style-2">
+
+      <div class="grid-item  col-md-9 large--four-fifths grid-border--left col-md-offset-3">    
+
+        {% endif %}    
+
+        <div class="row {% if settings.product_style_option == 'style-2' %}  product-detail-2-wrapper {% endif %}  " itemscope itemtype="http://schema.org/Product">
+          <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+          <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+
+          <div class="{% if settings.product_style_option == 'style-1' %} col-lg-7 col-sm-6 col-xs-12  {% else %} col-sm-6 col-xs-12 product-thumbnail-slider-wrapper  {% endif %} ">
+
+
+            {% if settings.product_style_option == 'style-1' %}           
+
+            <div class="product-image-slider-wrapper">
+              <div class="product-image-slider simple-slider control-nav zoomed-img-container animation-zoom">
+
+                {% for image in product.images %}
+
+                <div class="product-image-item">
+                  <div class="item-image">
+
+                    <img class="mfp-item"  data-mfp-src="{{ image.src | img_url: 'original' }}" src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
+
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+
+
+            {% else %}            
+
+            <div class="product-thumbnail-slider">
+              <div class="product-syn-slider-1 syn-slider-1 dir-nav zoomed-img-container">
+
+
+                {% for image in product.images %}
+                <div class="product-slider-item">
+                  <div class="item-image"><img class="mfp-item"  data-mfp-src="{{ image.src | img_url: 'original' }}" src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}"></div>
+                </div>
+                {% endfor %}
+
+              </div>
+              <div class="product-syn-slider-2-wrapper">
+                <div class="product-syn-slider-2 syn-slider-2">
+
+
+                  {% for image in product.images %}
+                  <div class="product-slider-item">
+                    <div class="item-image text-center layout-after"><img class="mfp-item"   src="{{ image.src | img_url: 'small' }}" alt="{{ image.alt | escape }}"></div>
+                  </div>
+                  {% endfor %}
+
+
+                </div>
+              </div>
+            </div>            
+
+            {% endif %}           
+
+
+
+          </div>
+
+          <div class=" {% if settings.product_style_option == 'style-1' %} col-lg-5 col-sm-6 col-xs-12 product-detail-1  {% else %}  col-sm-6 col-xs-12 product-detail-2  {% endif %}">
+
+            <h1 itemprop="name">{{ product.title }}</h1>
+
+
+
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+              {% assign variant = product.selected_or_first_available_variant %}
+
+              <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+              <meta itemprop="price" content="{{ variant.price | money }}">
+
+
+
+
+              <div class="product-item--price price ">
+                <span id="productPrice" class="h1 color-main">
+                  {% include 'price' with variant.price %}
+                </span>
+
+                {% if product.compare_at_price_max > product.price %}
+                <span class="saleoff">-{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
+                <del id="comparePrice" class="sale-tag large h4">
+                  {% assign compare_price = variant.compare_at_price %}
+                  {% assign product_price = variant.price %}
+                  {% include 'price-sale' %}
+                </del>
+
+                {% endif %}  
+              </div> 
+
+              {% if settings.product_reviews_enable %}
+              <div class="product-meta--review rating ">
+                <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+              </div>
+              {% endif %}
+
+
+
+              <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+ 
+<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart product-option">
+                <div class="wrap-variants clearfix">
+                  <select name="id" id="productSelect"   class="product-variants hidden">
+                    {% for variant in product.variants %}
+                    {% if variant.available %}
+
+                    <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+
+                    {% else %}
+                    <option disabled="disabled">
+                      {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                    </option>
+                    {% endif %}
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="wrap-cart-detail clearfix">
+
+
+                  {% if settings.product_quantity_enable %}
+                  <div class="quantity-wrapper">
+                    <div class="quantity">
+
+                      <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+                      <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
+                    </div>   </div>         
+                  {% endif %}
+                  <div class="cart-button">
+
+
+
+                    <button type="submit" name="add" id="addToCart" class="normal-btn normal-btn-gray btn-size-3 uppercase addToCart">
+                      <i class="icon-svg-icon-16"></i>
+                      <span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+                    </button>
+
+                  </div>  
+                </div>                
+
+
+                {% if settings.product_quantity_message %}
+                <span id="variantQuantity" class="variant-quantity"></span>
+                {% endif %}
+
+
+              </form>
+
+           
+
+
+
+              <div class="product-detail-others">
+
+                {% unless variant_tmp and variant_tmp.sku %}
+                <p id="sku"{% unless variant_tmp and variant_tmp.sku %} class="hidden"{% endunless %}><span class="uppercase">{{'products.product.sku' | t}} : </span>
+                  <span class="color-main ">  {{variant_tmp.sku}}</span>  </p>
+                {% endunless %}
+
+                {% if settings.product_vendor_enable %}
+                <p class="product-meta" itemprop="brand"> <span class="uppercase">{{'products.product.vendor' | t}} :</span> <span class="color-main ">{{ product.vendor }}</span></p>
+                {% endif %}
+
+                {% if settings.social_sharing_products %}
+                <p><span class="uppercase">{{'products.product.shares' | t}} :</span> <span class="color-main ">{% include 'social-sharing' %}</span></p>
+                {% endif %}
+
+              </div>          
+
+
+
+
+
+            </div>
+
+
+            {% if settings.product_style_option == 'style-1' %}
+
+            <div class="accordion-3 style-2">
+              <div id="accordion-4" class="panel-group">
+                <div class="panel">
+                  <div class="panel-heading"><a data-toggle="collapse" data-parent="#accordion-4" href="#description10" class="panel-title">
+                    <h5> {{ 'products.product.description' | t }}</h5></a></div>
+                  <div id="description10" class="panel-collapse collapse in">
+                    <div class="panel-body"> {{ product.description }}</div>
+                  </div>
+                </div>
+
+                {% if settings.product_reviews_enable %}
+                <div class="panel">
+                  <div class="panel-heading"><a data-toggle="collapse" data-parent="#accordion-4" href="#description11" class="collapsed panel-title">
+                    <h5>{{ 'products.product.reviews' | t }}</h5></a></div>
+                  <div id="description11" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                      <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>  
+
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% endif %}        
+
+          </div>
+
+        </div>     
+        {% if settings.product_style_option == 'style-2' %}
+
+        <div class="accordion-3 style-2 pt-50">
+          <div id="accordion-4" class="panel-group">
+            <div class="panel">
+              <div class="panel-heading"><a data-toggle="collapse" data-parent="#accordion-4" href="#description10" class="panel-title">
+                <h5>{{ 'products.product.description' | t }}</h5></a></div>
+              <div id="description10" class="panel-collapse collapse in">
+                <div class="panel-body"> {{ product.description }}</div>
+              </div>
+            </div>
+
+            {% if settings.product_reviews_enable %}
+            <div class="panel">
+              <div class="panel-heading"><a data-toggle="collapse" data-parent="#accordion-4" href="#description11" class="collapsed panel-title">
+                <h5>{{ 'products.product.reviews' | t }}</h5></a></div>
+              <div id="description11" class="panel-collapse collapse">
+                <div class="panel-body">
+
+                  <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>  
+
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% endif %} 
+
+
+        <div class="  {% if settings.product_style_option == 'style-1' %} shop-detail-orther-link  {% else %} shop-detail-orther-link  pt-70 pb-70  {% endif %}">
+
+
+
+          <form action="/cart" method="post" class="cart-form " novalidate>
+            <a class="border-btn border-btn-lightgray btn-size-3 uppercase" href="/collections/all"> {{ 'cart.general.backtoshop' | t }}</a>
+            <button type="submit" name="checkout" class="normal-btn normal-btn-gray btn-size-3 uppercase">
+              {{ 'cart.general.checkout' | t }}
+            </button>
+          </form>          
+
+
+        </div>
+
+        {% if settings.product_style_option == 'style-1' %} <div class="separator-5"></div>   {% endif %}    
+
+
+        {% if settings.related_products_enable %}
+        {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
+        {% include 'related-products' %}
+        {% endif %}
+
+
+
+
+
+
+
+
+        {% if settings.product_style_option == 'style-2' %}
+      </div>
+
+      <aside class="sidebar  large--one-fifth collection-filters col-md-3  col-md-jvoffset-12" id="collectionFilters">
+        {% include 'collection-sidebar' %}
+      </aside>
+
+    </div>
+
+    {% endif %}    
+
+
+
+
+
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    <script>
+
+      // Pre-loading product images, to avoid a lag when a thumbnail is clicked, or
+      // when a variant is selected that has a variant image.
+      Shopify.Image.preload({{ product.images | json }}, 'large');
+
+      var selectCallback = function(variant, selector) {
+
+        var $addToCart = $('#addToCart'),
+            $productPrice = $('#productPrice'),
+            $comparePrice = $('#comparePrice'),
+            $variantQuantity = $('#variantQuantity'),
+            $quantityElements = $('.quantity-selector, label + .js-qty'),
+            $addToCartText = $('#addToCartText'),
+            $featuredImage = $('#productPhotoImg');
+
+        if (variant) {
+          // Update variant image, if one is set
+          // Call timber.switchImage function in shop.js
+          if (variant.featured_image) {
+            var newImg = variant.featured_image,
+                el = $featuredImage[0];
+            $(function() {
+              Shopify.Image.switchImage(newImg, el, timber.switchImage);
+            });
+          }
+
+          // Select a valid variant if available
+          if (variant.available) {
+            // We have a valid product variant, so enable the submit button
+            $addToCart.removeClass('disabled').prop('disabled', false);
+            $addToCartText.html({{ 'products.product.add_to_cart' | t | json }});
+
+            // Show how many items are left, if below 10
+            {% if settings.product_quantity_message %}
+            if (variant.inventory_management) {
+              if (variant.inventory_quantity < 10 && variant.inventory_quantity > 0) {
+                $variantQuantity.html({{ 'products.product.only_left' | t: count: '1' | json }}.replace('1', variant.inventory_quantity)).addClass('is-visible');
+              } else {
+                $variantQuantity.removeClass('is-visible');
+              }
+            }
+            else {
+              $variantQuantity.removeClass('is-visible');
+            }
+            {% endif %}
+
+
+            $quantityElements.show();
+          } else {
+            // Variant is sold out, disable the submit button
+            $addToCart.addClass('disabled').prop('disabled', true);
+            $addToCartText.html({{ 'products.product.sold_out' | t | json }});
+            $variantQuantity.removeClass('is-visible');
+            $quantityElements.hide();
+          }
+
+          // Regardless of stock, update the product price
+          var customPriceFormat = timber.formatMoney( Shopify.formatMoney(variant.price, "{{ shop.money_format }}") );
+                                                                          $productPrice.html(customPriceFormat);
+
+                                                     // Also update and show the product's compare price if necessary
+                                                     if ( variant.compare_at_price > variant.price ) {
+            var priceSaving = timber.formatSaleTag( Shopify.formatMoney(variant.compare_at_price - variant.price, "{{ shop.money_format }}") );
+                                                                        {% comment %}
+                                                                        priceSaving += ' (' + ( (variant.compare_at_price - variant.price)*100/(variant.compare_at_price) ).toFixed(0) + '%)';
+            {% endcomment %}
+            $comparePrice.html({{ 'products.general.save_html' | t: saved_amount: '[$]' | json }}.replace('[$]', priceSaving)).show();
+          } else {
+            $comparePrice.hide();
+          }
+
+        } else {
+          // The variant doesn't exist, disable submit button.
+          // This may be an error or notice that a specific variant is not available.
+          $addToCart.addClass('disabled').prop('disabled', true);
+          $addToCartText.html({{ 'products.product.unavailable' | t | json }});
+          $variantQuantity.removeClass('is-visible');
+          $quantityElements.hide();
+        }
+      };
+
+      jQuery(function($) {
+        new Shopify.OptionSelectors('productSelect', {
+          product: {{ product | json }},
+          onVariantSelected: selectCallback,
+          enableHistoryState: true
+        });
+
+        // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+        {% if product.options.size == 1 and product.options.first != 'Title' %}
+        $('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first | escape }}</label>');
+                                             {% endif %}
+
+                                             // Hide selectors if we only have 1 variant and its title contains 'Default'.
+                                             {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+                                             $('.selector-wrapper').hide();
+        {% else %}
+        $('#variantBreak').removeClass('hr--clear');
+        {% endif %}
+      });
+    </script>
+
+
+  </div>
+
+</main>      

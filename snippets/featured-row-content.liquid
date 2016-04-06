@@ -1,0 +1,36 @@
+{% comment %}
+  This snippet is used for featured product rows on the homeage page.
+
+  Required variables are:
+    - featured_row, row_limit_setting
+
+  If this snippet is used multiple times on a page, make sure to
+  reset or send empty variables so a previous definition isn't used.
+{% endcomment %}
+
+{% assign header_title = collections[featured_row].title %}
+{% assign more_link = collections[featured_row].url %}
+
+{% capture row_limit %}{{ row_limit_setting}}{% endcapture %}
+
+<div class="row">
+  {% for product in collections[featured_row].products limit: row_limit %}
+
+    {% assign grid_item_width = 'col-md-3 col-sm-6 col-xs-12' %}
+    {% assign current_collection = collections[featured_row] %}
+    {% include 'product-grid-item' %}
+  {% endfor %}
+  {% if more_link %}
+  <div class="col-md-3 col-sm-6 col-xs-12 ">
+              <div class="shop-product-1 next-page">
+         {% assign header_title = header_title | downcase %}
+          
+                <a href="{{ more_link }}">
+                  <div class="fixed-ratio-1-1 bgc-gray text-center">
+                    <div class="fixed-ratio-content">
+                      <h5>{{ 'homepage.featured_collection_rows.more_in_collection' | t: collection_title: header_title }}</h5><i class="icon-outline-vector-icons-pack-149 fz-common-2"></i>
+                    </div>
+                  </div></a></div>
+            </div>
+  {% endif %}
+</div>

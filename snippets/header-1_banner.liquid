@@ -1,0 +1,47 @@
+<div class="header-banner">
+  <div class="row">
+ 
+       {% assign index = 0 %}
+       {% if settings.home_featured_collections_sort == 'manual' %}
+        {% for i in (1..12) %}
+          {% capture featured_collection %}collection_{{ i }}{% endcapture %}
+          
+          {% unless settings[featured_collection] == blank %}
+            {% assign featured = settings[featured_collection] %}
+            {% include 'featured-collection' %}
+          {% endunless %}
+
+        {% endfor %}
+
+        {% else %}
+        {% assign index = 0 %}
+        {% for collection in collections limit:4 %}
+          
+          {% unless index >= 4 %}
+            {% unless collection.handle == 'frontpage' %}
+              {% assign featured = collection.handle %}
+
+              {% assign class_box = index | modulo:2 %}
+              {% if class_box == 0 %}
+                {% assign class_box = 'left'%}
+              {% else %}
+                {% assign class_box = 'right'%}
+              {% endif %}
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="item-header-banner box-{{class_box}}">
+                  {% include 'featured-collection' %}
+                  {% include 'category-lightbox' %}
+                </div>
+              </div>
+
+               {% assign index = index | plus: 1 %}
+                
+            {% endunless %}
+          {% endunless %}
+
+        {% endfor %}
+      {% endif %}
+
+  </div>
+</div>
+<!-- End Header Banner -->

@@ -1,0 +1,51 @@
+{% if settings.slider_home_enable %}
+<div class="banner-slider owl-arrow-banner slider-1">
+			<div class="wrap-item">  
+  {% for i in (1..4) %}
+  {% capture slide %}slide_{{ i }}{% endcapture %}
+  {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+  {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}  
+  {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
+  {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
+  {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
+  {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
+  {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
+  {% capture slide_video %}slide_{{ i }}_video{% endcapture %}
+
+  {% if settings[slide] %}
+
+    <div style="background-image:url({{ slide_img | asset_url  }});" class="item">
+
+      {% if settings[slide_video] != blank %}
+      <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
+        <source src="{{settings[slide_video]}}" type="video/mp4">
+      </video>
+      {% endif %}
+						<div class="banner-info">
+							<div class="container">
+								<div class="banner-info-text">
+                {% if settings[slide_title1] != blank  %}
+                <h4>{{ settings[slide_title1] }}</h4>
+                {% endif %}
+                {% if settings[slide_title2] != blank %}
+                <h2>{{ settings[slide_title2] }}</h2>
+                {% endif %} 
+                {% if settings[slide_text]  != blank %}
+                <h4>{{ settings[slide_text] }}</h4>
+                {% endif %}
+                {% if settings[slide_button]  != blank %}
+                <a href="{{ settings[slide_link] }}" class="btn-link-default banner-link">{{ settings[slide_button] }}</a>                            
+                {% endif %}                                  
+                                  
+								</div>
+							</div>
+						</div>
+    </div>
+  {% endif %}
+  {% endfor %}
+</div>
+</div>
+{% endif %}
+
+
+

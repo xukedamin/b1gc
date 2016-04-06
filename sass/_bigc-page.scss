@@ -1,0 +1,77 @@
+// _bigc-page.scss
+
+/*************************************************************
+Page Detail
+*************************************************************/
+
+.category-slider {
+  background: $color_wild-sand none repeat scroll 0 0;
+  padding: 50px 0;
+
+  .item  img {
+    width: 100%;
+  }
+
+  .item-collections {
+
+    .inner{
+      background-color: $color_white;
+
+      // &:hover .info-collections {
+      //   bottom: 0;
+      //   @include prefix(transform,translateY(0));
+      // }
+    }
+  }
+}
+
+.item-collections {
+  margin-bottom: 30px;
+
+  .inner {
+    display: block;
+    position: relative;
+  }
+  .inner {
+    .info-collections {
+      @include transition(all 0.3s ease-in-out 0s);
+      background-color: rgba($color_black, 0.4);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      @extend %text-center;
+      z-index: 20;
+      color: $color_white;
+      line-height: 2.2;
+
+      .title {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: -10px;
+        @extend %text-up;
+      }
+    }
+
+    &:hover .info-collections {
+      background-color: rgba($color_black, 0.6);
+      // bottom: 50%;
+      // @include prefix(transform,translateY(50%));
+     
+
+    }
+  }
+}
+
+.title-list-collection {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+
+  a {
+    margin-top: 10px;
+  }
+  h2 {
+    margin: 0;
+  }
+}

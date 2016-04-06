@@ -1,0 +1,52 @@
+{% for i in (1..9) %}
+{% capture team %}team_{{ i }}_enable{% endcapture %}
+{% capture team_img %}team-{{ i }}.jpg{% endcapture %}            
+{% capture team_name %}team{{ i }}_name{% endcapture %}
+{% capture team_job %}team{{ i }}_job{% endcapture %}
+{% capture team_twitter %}team{{ i }}_twitter{% endcapture %}
+{% capture team_pinterest %}team{{ i }}_pinterest{% endcapture %}
+{% capture team_facebook %}team{{ i }}_facebook{% endcapture %}
+{% capture team_gplus %}team{{ i }}_gplus{% endcapture %}
+
+
+{% if settings[team] %}
+
+<div class="col-md-4 ">
+  <div class="team-style-01 text-center section-block-p">
+    <div class="image">
+
+      <img src="{{ team_img | asset_url }}"   alt="{{ settings[team_name] }}">
+
+
+      {% if settings[team_twitter] != blank or settings[team_facebook]  != blank or settings[team_gplus]  != blank or settings[team_pinterest]  != blank %}
+      <div class="overlay">
+        <div class="cell-vertical-wrapper">
+          <div class="cell-middle">
+            <ul class="social-01">
+              {% if settings[team_twitter] != blank %}
+              <li><a target="_blank" href="{{ settings[team_twitter] }}"><i class="icon-twitter"></i></a></li>
+              {% endif %}
+              {% if settings[team_facebook] != blank %}
+              <li><a target="_blank" href="{{ settings[team_facebook] }}"><i class="icon-facebook"></i></a></li>
+              {% endif %}
+              {% if settings[team_gplus] != blank %}
+              <li><a target="_blank" href="{{ settings[team_gplus] }}"><i class="icon-gplus"> </i></a></li>
+              {% endif %}
+              {% if settings[team_pinterest] != blank %}
+              <li><a target="_blank" href="{{ settings[team_pinterest] }}"><i class="icon-pinterest"></i></a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <h5 class="name">{{ settings[team_name] }}</h5>
+    <p class="job">{{ settings[team_job] }}</p>
+  </div>
+</div>        
+
+
+
+{% endif %}
+{% endfor %}

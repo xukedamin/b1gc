@@ -1,0 +1,71 @@
+{% include 'collection-category-slider' %}
+
+<div id="box">
+  <div id="collection">
+    {% if page.metafields.jvpage.titlePage != 'hide'  %}
+      <div class="common-static-header collection-header">
+        <div class="parallax-bg" data-stellar-background-ratio="0.25"
+          {% if settings.bg_page_shop_enable %}
+            style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"
+          {% endif %}
+        ></div>
+        <div class="container">
+          <h1 class="section-header--title">{{ collection.title }}
+          <span class="count">({{ collection.all_products_count }}   {{ collection.all_products_count | pluralize: 'collections.general.items', 'collections.general.items' | t }})</span>
+          </h1>
+          
+          
+          {% if collection.description != blank %}
+            <div class="collection-description">
+              {{ collection.description }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% paginate collection.products by 15 %}
+
+    <div class="container">
+    {% include 'breadcrumb' %}
+    </div>
+
+    {% assign has_sidebar = false %}
+    {% if collection.all_tags.size > 0 %}
+      {% assign has_sidebar = true %}
+    {% endif %}
+
+    <main class="wrapper main-content templates-collection  collection-sidebar-left" role="main">
+      <div class="container">
+        <div class="row" >
+          <div class="grid-item{% if has_sidebar %} col-md-9  col-md-offset-3 {% endif %}">
+          {% comment %} Different markup if description is set {% endcomment %}
+          <div class="row masonry-container">
+            {% for product in collection.products  %}
+              
+              {% include 'product-grid-item' %}
+            {% else %}
+              <div class="grid-item col-xs-12 messagefull info">
+                <div class=" content">{{ 'collections.general.no_matches' | t }}</div>
+              </div>
+            {% endfor %}
+          </div>
+
+        {% if paginate.pages > 1 %}
+          <div class="pagination-2">
+            {% include 'pagination-2' %}
+          </div>
+        {% endif %}
+      </div>
+      {% if has_sidebar %}
+        <aside class="sidebar col-md-jvoffset-12 col-md-3 sidebar-left sidebar-product" id="collectionFilters">
+          {% include 'collection-sidebar' %}
+        </aside>
+      {% endif %}
+    </div>
+
+    {% endpaginate %}
+      </div>
+    </main>
+  </div> 
+</div>

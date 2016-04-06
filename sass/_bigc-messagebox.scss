@@ -1,0 +1,37 @@
+/***********************************************************************
+            Message Boxes           
+************************************************************************/
+.list-message-box {
+  margin: 80px 0 20px;
+}
+
+.item-message-box {
+  margin-bottom: 30px;
+  padding: 20px 30px;
+
+  &.item-message-info {
+    background: $color_currious-blue-darker none repeat scroll 0 0;
+    color: $color_white;
+  }
+  span.lnr {
+    font-size: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  p {
+    font-size: 16px;
+    margin: 0;
+  }
+  &.item-message-error {
+    background: $color_white none repeat scroll 0 0;
+    color: #ff0000;
+  }
+  &.item-message-success {
+    background: $color_peppermint none repeat scroll 0 0;
+    color: #2ebe12;
+  }
+  &.item-message-warning {
+    background: $color_white none repeat scroll 0 0;
+    color: $color_golden-tainoi;
+  }
+}

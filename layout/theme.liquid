@@ -1,0 +1,224 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-touch no-js"> <!--<![endif]-->
+<head>
+
+  <!-- Basic page needs ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  {% if settings.favicon_enable %}
+  <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+  {% endif %}
+
+  <!-- Title and description ================================================== -->
+  <title>
+    {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <!-- Product meta ================================================== -->
+  {% include 'open-graph-tags' %}
+  {% include 'twitter-card' %}
+
+  <!-- Helpers ================================================== -->
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {% if settings.ajax_cart_method != 'page' %}
+  <!-- Ajaxify Cart Plugin ================================================== -->
+  {{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+  <!-- CSS ================================================== -->
+  {% if  settings.type_base_use == '1'  %}
+  <link href='https://fonts.googleapis.com/css?family={{ settings.type_base_google }}:{{ settings.type_base_google_style }}' rel='stylesheet' type='text/css'>
+  {% endif %}  
+  {% if settings.type_heading_use == '1'  %}
+  <link href='https://fonts.googleapis.com/css?family={{ settings.type_heading_google }}:{{ settings.type_heading_google_style }}' rel='stylesheet' type='text/css'>
+  {% endif %}  
+  {% if   settings.type_orther_use == '1' %}
+  <link href='https://fonts.googleapis.com/css?family={{ settings.type_orther_google }}:{{ settings.type_orther_google_style }}' rel='stylesheet' type='text/css'>
+  {% endif %}  
+  
+  
+
+
+  {{ 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' | stylesheet_tag }}
+  {{ 'https://cdn.jsdelivr.net/animatecss/3.4.0/animate.min.css' | stylesheet_tag }}
+  {{ 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | stylesheet_tag }}
+  {{ 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' | stylesheet_tag }}
+  
+
+
+  {{ 'bootstrap-theme.css' | asset_url | stylesheet_tag }} 
+  {{ 'jquery.fancybox.css' | asset_url | stylesheet_tag }} 
+  {{ 'jquery-ui.css' | asset_url | stylesheet_tag }} 
+  {{ 'owl.carousel.css' | asset_url | stylesheet_tag }} 
+  {{ 'owl.transitions.css' | asset_url | stylesheet_tag }} 
+  {{ 'owl.theme.css' | asset_url | stylesheet_tag }} 
+  {{ 'tilteffect.css' | asset_url | stylesheet_tag }} 
+  {{ 'PieChart.css' | asset_url | stylesheet_tag }}
+
+  {{ 'bigc-include.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+
+
+
+
+  {% include 'google-fonts' %}
+
+  <!-- Header hook for plugins ================================================== -->
+  {{ content_for_header }}
+
+  {% include 'oldIE-js' %}
+
+  {% comment %}
+  If you store has customers disabled, you can remove the following JS file
+  {% endcomment %}
+  {% if template contains 'customers' %}
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+
+
+  {{ 'jquery-1.10.2.min.js' | asset_url | script_tag }}
+  {{ 'bootstrap.min.js' | asset_url | script_tag }}
+  {{ 'modernizr.min.js' | asset_url | script_tag }}  
+  {{ 'jquery.masonry.min.js' | asset_url | script_tag }}  
+  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
+  {{ 'jquery-ui.js' | asset_url | script_tag }}
+  {{ 'owl.carousel.js' | asset_url | script_tag }}
+  {{ 'TimeCircles.js' | asset_url | script_tag }}
+  {{ 'PieChart.js' | asset_url | script_tag }}
+  {{ 'circles.js' | asset_url | script_tag }}
+
+  {{ 'slick.min.js' | asset_url | script_tag }}
+  {{ 'jquery.currencies.min.js' | asset_url | script_tag }}
+  {{ 'jquery.bxslider.js' | asset_url | script_tag }}
+  {{ 'script.js' | asset_url | script_tag }}
+
+
+
+</head>
+
+<body id="{{ page_title | handle }}" class="jv-homepage-{{settings.homepage_option}} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}  " >
+
+<div class="wrap">
+
+  
+    {% case settings.header_default %}
+    {% when '1' %}
+    {% include 'header-1' %}
+    {% when '2' %}
+    {% include 'header-2' %}
+    {% when '3' %}
+    {% include 'header-3' %}
+    {% when '4' %}
+    {% include 'header-4' %}
+    {% when '5' %}
+    {% include 'header-5' %}
+    {% when '6' %}
+    {% include 'header-6' %}
+    {% when '7' %}
+    {% include 'header-7' %}
+    {% else %}
+    {% include 'header-1' %}
+    {% endcase %}
+	
+        {{ content_for_layout }}
+
+
+  {% include 'footer-black' %}
+   {% include 'footer-white' %}
+
+  
+  
+ </div>	 
+  
+  
+  {{ 'fastclick.min.js' | asset_url | script_tag }}
+  {{ 'tiltfx.js' | asset_url | script_tag }}
+  {{ 'shop.js' | asset_url | script_tag }}
+  <script>
+    var moneyFormat = '{{ shop.money_format }}';
+  </script>
+
+  {% if settings.ajax_cart_method != 'page' %}
+  {{ 'handlebars.min.js' | asset_url | script_tag }}
+  {% include 'ajax-cart-template' %}
+  {{ 'ajaxify.js' | asset_url | script_tag }}
+  <script>
+    jQuery(function($) {
+      window.ajaxifyShopifyInit = function()
+      {
+      ajaxifyShopify.init({
+        method: '{{ settings.ajax_cart_method }}',
+        wrapperClass: 'wrapper',
+        formSelector: '.addToCartForm',
+        addToCartSelector: '.addToCart',
+        cartCountSelector: '.cart-count',
+        toggleCartButton: '.cart-toggle',
+        useCartTemplate: true,
+        btnClass: 'btn',
+        moneyFormat: {{ shop.money_format | json }},
+        disableAjaxCart: false,
+        enableQtySelectors: true
+      });
+      }
+      ajaxifyShopifyInit();
+    });
+  </script>
+  {% endif %}
+
+
+
+  {% if settings.show_multiple_currencies %}              
+  {% include 'currencies' %}
+  {% endif %}    
+ <a id="back-top" class=" icon-up-open" href="#"></a>
+  
+  
+  <div id="overlays-loading" class=" show-loading">
+				<span class="loading-ball ">
+					<span class="ball"></span>
+					<span class="ball1"></span>
+					
+				</span> 
+			</div>
+
+  
+  <script>
+    jQuery( function( $ ) {
+      $('ul.mega-menu-content.double-sub').each( function() {
+      	var a = []
+        ,b = $('<ul>')
+        ,w = $(this)
+        ;
+        w.children('li').each( function( i ) {
+
+          b.append( this );
+          if( i%2 )
+          {
+            a.push( b );
+            b = $('<ul>');
+          }
+        } );
+
+        w.empty();
+
+        a.length && $.each( a, function() {
+          w.append( $('<li class="column">').append( this ) );
+        } );
+      } );
+      
+    } );
+  </script>  
+</body>
+</html>

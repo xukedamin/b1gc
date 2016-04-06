@@ -1,0 +1,10 @@
+<div class="post-comments-style style-02">
+
+
+<div class="comment content"> 
+  <p class="name">{{ comment.author }}</p><time datetime="{{ comment.created_at | date: '%Y-%m-%d' }}">{{ comment.created_at | date: format: 'month_day_year' }}</time>
+ {{ comment.content }}
+  
+</div>
+  
+  </div>

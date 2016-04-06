@@ -1,0 +1,116 @@
+// _bigc-contact.scss
+
+/*******************************************************************
+              Contact
+********************************************************************/
+.content-contact .bread-crumb {
+  border: medium none;
+  margin: 0;
+}
+.item-contact-box {
+  color: $color_currious-blue-darker;
+  display: inline-block;
+  margin-bottom: 20px;
+  min-width: 160px;
+  vertical-align: middle;
+
+  > a {
+    border: 2px solid $color_currious-blue-darker;
+    @extend %jv-border-radius-50;
+    color: $color_currious-blue-darker;
+    display: inline-block;
+    height: 55px;
+    margin-right: 15px;
+    @extend %text-center;
+    width: 55px;
+
+    span {
+      font-size: 18px;
+      line-height: 51px;
+    }
+  }
+
+  > label {
+    font-size: 16px;
+    font-weight: 400;
+    @extend %text-up;
+  }
+}
+
+.contact-info-box {
+  color: $color_dove-gray;
+  margin-top: 50px;
+}
+.phone-box {
+  display: inline-block;
+  padding-top: 20px;
+  vertical-align: top;
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+  }
+}
+.mail-box {
+  display: inline-block;
+  padding-top: 20px;
+  vertical-align: top;
+
+  a {
+    color: $color_dove-gray;
+
+    &:hover {
+      color: $color_dusty-gray;
+    }
+  }
+}
+.contact-form {
+  margin-top: 25px;
+
+  > h2 {
+    color: $color_currious-blue-darker;
+    font-size: 16px;
+    margin: 20px 0 0;
+    @extend %text-up;
+  }
+  .comment-form {
+    margin-top: 25px;
+    input[type="text"],
+    textarea {
+      border-color: $color_silver-darker;
+    }
+
+    input[type="submit"] + input[type="submit"]{
+      margin-right: 2px;
+    }
+  }
+}
+
+//bt-link bt-blue bt-radius bt-style23
+.btn-submit-form {
+  background-color: $color_currious-blue-darker ;
+  border: medium none;
+  color: $color_white;
+  height: 40px;
+  padding: 0 30px;
+  
+  @extend %text-up;
+  @extend %jv-border-radius-4;
+  @extend %jv-transition-easeout;
+
+  &:hover {
+  background-color: $color_bright-sun ;
+  }
+
+}
+
+// bt-link bt-gold bt-radius bt-shadow bt-style28
+.btn-reset-form {
+
+  @extend .btn-submit-form;
+  background-color: $color_bright-sun ;
+
+  &:hover {
+    background-color: $color_currious-blue-darker ;
+  }
+}

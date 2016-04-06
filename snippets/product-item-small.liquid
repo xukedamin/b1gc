@@ -1,0 +1,33 @@
+{% assign variant_tmp = product.selected_or_first_available_variant  %}
+{% for variant in product.variants %}
+{% if variant.available == true and variant.price < variant_tmp.price %}
+{% assign variant_tmp = variant %}	
+{% endif %}
+{% endfor %}
+
+
+<div class="product-small shop-recently-viewed-item clearfix {{settings.wrapper_style}}">
+  <div class="product-thumb">
+    <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
+    <div class="image"><img src="{{ product.featured_image | product_img_url: settings.wrapper_img_size }}" class="main-image img-responsive" alt="{{ product.title }}" /></div>
+    </a>
+  </div>
+  <h3 class="title-product"><a href="{{ product.url | within: collection }}" title="{{ product.title }}">{{ product.title }}</a></h3>
+  <div class="price info-price">
+      <div class="clearfix">
+
+
+        {% if on_sale %}
+        <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+          {% assign compare_price = product.compare_at_price %}
+          {% assign product_price = product.price %}
+          {% include 'price-sale' %}
+        </del>
+        {% endif %}
+        <span class=" medium--left">
+          {% include 'price' with product.price %}
+        </span>
+      </div>    
+    
+  </div>
+</div>

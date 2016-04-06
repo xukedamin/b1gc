@@ -1,0 +1,6101 @@
+[
+  {
+    "name": "theme_info",
+    "logo": "https:\/\/cdn.shopify.com\/s\/global\/branding\/shopify_logo_256x256.png",
+    "settings": [
+      {
+        "type": "header",
+        "content": "BigC Theme"
+      },
+      {
+        "type": "paragraph",
+        "content": "Ideal for stores with large inventories, Wolverine is designed to make it quick and easy to browse through all the categories and products your store has to offer. Features include prominent navigation, multiple homepage collections, sidebar filtering, and easy integration with the Product Reviews app."
+      },
+      {
+        "type": "paragraph",
+        "content": "This theme is fully supported by Shopify. For support and customizations, read the [theme documentation](https:\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply) or contact [theme-support@shopify.com](mailto:theme-support@shopify.com?subject=[Supply]+Theme+Support)."
+      }
+    ]
+  },
+  {
+    "name": "Mega Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Nav #1"
+      },
+      {
+        "type": "link_list",
+        "id": "nav1",
+        "label": "Select Mega Menu"
+      },
+      {
+        "type": "select",
+        "id": "nav1_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav1_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Nav #2"
+      },
+      {
+        "type": "link_list",
+        "id": "nav2",
+        "label": "Select Mega Menu"
+      },
+      {
+        "type": "select",
+        "id": "nav2_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav2_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Nav #3"
+      },
+      {
+        "type": "link_list",
+        "id": "nav3",
+        "label": "Select Mega Menu"
+      },
+      {
+        "type": "select",
+        "id": "nav3_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav3_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Style Mainmenu"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_size",
+        "label": "Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "11"
+      },
+      {
+        "type": "text",
+        "id": "mega_main_padding",
+        "label": "Padding",
+        "default": "20",
+        "info": "in px"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "700"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_family",
+        "label": "Font family",
+        "options": [
+         {
+            "value": "'Open Sans', sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
+            "label": "Avant Garde",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
+            "label": "Gill Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "label": "Helvetica Neue",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            "label": "Candara",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Geneva, Tahoma, Verdana, sans-serif",
+            "label": "Geneva",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
+            "label": "Big Calson",
+            "group": "Serif"
+          },
+          {
+            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
+            "label": "Calisto MT",
+            "group": "Serif"
+          },
+          {
+            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+            "label": "Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          }
+        ],
+        "default": "'Open Sans', sans-serif"
+      },
+      {
+        "type": "color",
+        "id": "mega_main_color",
+        "label": "Color item",
+        "default": "#333",
+        "info": "Color item main menu"
+      },
+      {
+        "type": "header",
+        "content": "Style Submenu"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_bg_color",
+        "label": "Background Submenu",
+        "default": "#fff",
+        "info": "Background Submenu"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_boder_color",
+        "label": "Border Submenu",
+        "default": "#e5e5e5",
+        "info": "Border Submenu"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_size_header",
+        "label": "Header Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "14"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_weight_header",
+        "label": "Header Font weight  ",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "400"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_color_header",
+        "label": "Header Color  ",
+        "default": "#666",
+        "info": "Header Color "
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_size",
+        "label": "Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "11"
+      },
+      {
+        "type": "text",
+        "id": "mega_sub_padding",
+        "label": "Padding",
+        "default": "15",
+        "info": "in px"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_family",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "0",
+            "label": "Inherit",
+            "group": "inherit"
+          },
+          {
+            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
+            "label": "Avant Garde",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
+            "label": "Gill Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "label": "Helvetica Neue",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            "label": "Candara",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Geneva, Tahoma, Verdana, sans-serif",
+            "label": "Geneva",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
+            "label": "Big Calson",
+            "group": "Serif"
+          },
+          {
+            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
+            "label": "Calisto MT",
+            "group": "Serif"
+          },
+          {
+            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+            "label": "Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          }
+        ],
+        "default": "0"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_color",
+        "label": "Color item",
+        "default": "#ccc",
+        "info": "Color item main menu"
+      }
+    ]
+  },
+  {
+    "name": " Background Parallax Title",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Defult Theme"
+      },
+      {
+        "type": "image",
+        "id": "header-parallax.jpg",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Page Shop"
+      },
+      {
+        "type": "checkbox",
+        "id": "bg_page_shop_enable",
+        "label": "Use Background ?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "bg_page_shop.jpg",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Page Contact"
+      },
+      {
+        "type": "checkbox",
+        "id": "bg_page_contact_enable",
+        "label": "Use Background ?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "bg_page_contact.jpg",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Page About Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "bg_page_about_enable",
+        "label": "Use Background ?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "bg_page_about.jpg",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Page Blog"
+      },
+      {
+        "type": "checkbox",
+        "id": "bg_page_blog_enable",
+        "label": "Use Background ?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "bg_page_blog.jpg",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Page FAQs"
+      },
+      {
+        "type": "checkbox",
+        "id": "bg_page_faqs_enable",
+        "label": "Use Background ?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "bg_page_faqs.jpg",
+        "label": "Background image"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary content",
+        "default": "#204a80",
+        "info": "Text links and primary buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Secondary content",
+        "default": "#333",
+        "info": "Secondary buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_body_bg",
+        "label": "Body background",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color_body_text",
+        "label": "Body text",
+        "default": "#555"
+      },
+      {
+        "type": "header",
+        "content": "Menu"
+      },
+      {
+        "type": "color",
+        "id": "color_nav_bg",
+        "label": "Main menu background",
+        "default": "#eee"
+      },
+      {
+        "type": "color",
+        "id": "color_nav_text",
+        "label": "Main menu items",
+        "default": "#333"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bg",
+        "label": "Background",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_text",
+        "label": "Text",
+        "default": "#555"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Base styles",
+        "info": "This font is used for Body"
+      },
+      {
+        "type": "select",
+        "id": "type_base_use",
+        "label": "Base Use?",
+        "options": [
+          {
+            "value": "1",
+            "label": "Google Web Fonts"
+          },
+          {
+            "value": "0",
+            "label": "Family Fonts"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "type_base_google",
+        "label": "Google Web Fonts",
+        "default": "Raleway"
+      },
+      {
+        "type": "text",
+        "id": "type_base_google_style",
+        "label": "Google Web Fonts Style",
+        "default": "100,200,300,400,500,600,700,800,900",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "select",
+        "id": "type_base_family",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
+            "label": "Avant Garde",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
+            "label": "Gill Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "label": "Helvetica Neue",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            "label": "Candara",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Geneva, Tahoma, Verdana, sans-serif",
+            "label": "Geneva",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
+            "label": "Big Calson",
+            "group": "Serif"
+          },
+          {
+            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
+            "label": "Calisto MT",
+            "group": "Serif"
+          },
+          {
+            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+            "label": "Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "type_base_size",
+        "label": "Font size",
+        "options": [
+          {
+            "value": "12px",
+            "label": "12px"
+          },
+          {
+            "value": "13px",
+            "label": "13px"
+          },
+          {
+            "value": "14px",
+            "label": "14px"
+          },
+          {
+            "value": "15px",
+            "label": "15px"
+          },
+          {
+            "value": "16px",
+            "label": "16px"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "font_weight_body",
+        "label": "Font weight",
+        "default": "400"
+      },
+      {
+        "type": "text",
+        "id": "line_height_body",
+        "label": "Line Height",
+        "default": "2.2"
+      },
+      {
+        "type": "header",
+        "content": "Heading font size (in px)"
+      },
+      {
+        "type": "text",
+        "id": "size_heading_h1",
+        "label": "H1",
+        "default": "36"
+      },
+      {
+        "type": "text",
+        "id": "size_heading_h2",
+        "label": "H2",
+        "default": "28"
+      },
+      {
+        "type": "text",
+        "id": "size_heading_h3",
+        "label": "H3",
+        "default": "21"
+      },
+      {
+        "type": "text",
+        "id": "b_heading_h4",
+        "label": "H4",
+        "default": "18"
+      },
+      {
+        "type": "text",
+        "id": "size_heading_h5",
+        "label": "H5",
+        "default": "14"
+      },
+      {
+        "type": "text",
+        "id": "size_heading_h6",
+        "label": "H6",
+        "default": "11"
+      },
+      {
+        "type": "header",
+        "content": "Heading  styles",
+        "info": "This font is used for: Heading, Button, Menu..."
+      },
+      {
+        "type": "select",
+        "id": "type_heading_use",
+        "label": "Heading Use?",
+        "options": [
+          {
+            "value": "1",
+            "label": "Google Web Fonts"
+          },
+          {
+            "value": "0",
+            "label": "Family Fonts"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "type_heading_google",
+        "label": "Google Web Fonts",
+        "default": "Montserrat"
+      },
+      {
+        "type": "text",
+        "id": "type_heading_google_style",
+        "label": "Google Web Fonts Style",
+        "default": "700,400",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "select",
+        "id": "type_heading_family",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
+            "label": "Avant Garde",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
+            "label": "Gill Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "label": "Helvetica Neue",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            "label": "Candara",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Geneva, Tahoma, Verdana, sans-serif",
+            "label": "Geneva",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
+            "label": "Big Calson",
+            "group": "Serif"
+          },
+          {
+            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
+            "label": "Calisto MT",
+            "group": "Serif"
+          },
+          {
+            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+            "label": "Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Orther styles",
+        "info": "This font is used for: italic text, quote, notes..."
+      },
+      {
+        "type": "select",
+        "id": "type_orther_use",
+        "label": "Orther Use?",
+        "options": [
+          {
+            "value": "1",
+            "label": "Google Web Fonts"
+          },
+          {
+            "value": "0",
+            "label": "Family Fonts"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "type_orther_google",
+        "label": "Google Web Fonts",
+        "default": "Playfair Display"
+      },
+      {
+        "type": "text",
+        "id": "type_orther_google_style",
+        "label": "Google Web Fonts Style",
+        "default": "400,400italic,700,700italic,900,900italic",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "select",
+        "id": "type_orther_family",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
+            "label": "Avant Garde",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
+            "label": "Gill Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            "label": "Helvetica Neue",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            "label": "Candara",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Geneva, Tahoma, Verdana, sans-serif",
+            "label": "Geneva",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
+            "label": "Big Calson",
+            "group": "Serif"
+          },
+          {
+            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
+            "label": "Calisto MT",
+            "group": "Serif"
+          },
+          {
+            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
+            "label": "Baskerville",
+            "group": "Serif"
+          },
+          {
+            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Favicon"
+      },
+      {
+        "type": "checkbox",
+        "id": "favicon_enable",
+        "label": "Use a custom icon"
+      },
+      {
+        "type": "image",
+        "id": "favicon.png",
+        "label": "Custom favicon",
+        "max-width": 16,
+        "max-height": 16,
+        "info": "16 x 16px .png required"
+      },
+      {
+        "type": "header",
+        "content": "Select header default"
+      },
+      {
+        "type": "select",
+        "id": "header_default",
+        "label": "Header",
+        "options": [
+          {
+            "value": "1",
+            "label": "Header 1"
+          },
+          {
+            "value": "2",
+            "label": "Header 2"
+          },
+          {
+            "value": "3",
+            "label": "Header 3"
+          },
+          {
+            "value": "4",
+            "label": "Header 4"
+          },
+          {
+            "value": "5",
+            "label": "Header 5"
+          },
+          {
+            "value": "6",
+            "label": "Header 6"
+          },
+          {
+            "value": "7",
+            "label": "Header 7"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "header_height",
+        "label": "Fix height header",
+        "default": "90",
+        "info": "in px"
+      },
+      {
+        "type": "header",
+        "content": "Header #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_use_image",
+        "label": "Use a custom logo"
+      },
+      {
+        "type": "image",
+        "id": "logo-1.png",
+        "label": "Custom logo",
+        "max-height": 150,
+        "info": " .png recommended"
+      },
+      {
+        "type": "text",
+        "id": "maxheight-logo-1",
+        "label": "Max height Logo",
+        "default": "100",
+        "info": "in px"
+      },
+      {
+        "type": "image",
+        "id": "logo-1-mobile.png",
+        "label": "Logo Mobile",
+        "max-height": 120
+      },
+      {
+        "type": "text",
+        "id": "maxheight-logo-1-mobile",
+        "label": "Max height Logo Mobile",
+        "default": "35",
+        "info": "in px"
+      },
+      {
+        "type": "header",
+        "content": "Message"
+      },
+      {
+        "type": "text",
+        "id": "header_welcome",
+        "label": "Text",
+        "default": "Welcome to BigC Store"
+      },
+      {
+        "type": "text",
+        "id": "header_hotline",
+        "label": "Hotline",
+        "default":"Call Us: 0800 266 966"
+      },
+      {
+        "type": "text",
+        "id": "skype",
+        "label": "Skype",
+        "default": "SkypeName"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_header_cart",
+        "label": "Show header Cart ?"
+      },
+      {
+        "type": "header",
+        "content": "Header #2"
+      },
+      {
+        "type": "image",
+        "id": "logo-2.png",
+        "label": "Logo",
+        "max-height": 150,
+        "info": " .png recommended"
+      },
+      {
+        "type": "text",
+        "id": "maxheight-logo-2",
+        "label": "Max height Logo",
+        "default": "70",
+        "info": "in px"
+      },
+      {
+        "type": "image",
+        "id": "logo-2-mobile.png",
+        "label": "Logo Mobile",
+        "max-height": 120,
+        "info": " .png recommended"
+      },
+      {
+        "type": "text",
+        "id": "maxheight-logo-2-mobile",
+        "label": "Max height Logo Mobile",
+        "default": "35",
+        "info": "in px"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Contact information"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_content_enable",
+        "label": "Show footer contact info"
+      },
+      {
+        "type": "image",
+        "id": "footer-001.png",
+        "label": "Footer logo",
+        "max-width": 500,
+        "max-height": 150
+      },
+      {
+        "type": "text",
+        "id": "footer_email",
+        "label": "E Mail",
+        "default": "hello123@gmail.com"
+      },
+      {
+        "type": "text",
+        "id": "footer_phone",
+        "label": "Phone",
+        "default": "0123 456 789"
+      },
+      {
+        "type": "text",
+        "id": "footer_add",
+        "label": "Add",
+        "default": "2809 Lincoln st, Califonia, USA"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_content_text",
+        "label": "Contact text",
+        "info": "Use basic HTML to format text"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_social_enable",
+        "label": "Show social media icons",
+        "info": "Add accounts in Social media section",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_newsletter_enable",
+        "label": "Show newsletter sign-up",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "mailing_list_form_action",
+        "label": "MailChimp form action URL",
+        "info": "[Find your MailChimp form action URL](https:\/\/docs.shopify.com\/manual\/configuration\/store-customization\/communicating-with-customers\/accounts-and-newsletters\/get-a-mailchimp-form-action-url\/)."
+      },
+      {
+        "type": "header",
+        "content": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "instagram_id",
+        "label": "Instagram Client ID [( ? )](http:\/\/jelled.com\/instagram\/access-token)",
+        "default": "c42ae934e02f48daa2eb1793851e2d39"
+      },
+      {
+        "type": "text",
+        "id": "instagram_token",
+        "label": "Instagram Access Token [( ? )](http:\/\/jelled.com\/instagram\/access-token)",
+        "default": "2209322954.cf0499d.0f04acc59d3e46ef824ddd6d7d4be1e0"
+      },
+      {
+        "type": "text",
+        "id": "instagram_userid",
+        "label": "Instagram User ID [( ? )](http:\/\/jelled.com\/instagram\/lookup-user-id)",
+        "default": "2209322954"
+      },
+      {
+        "type": "text",
+        "id": "instagram_username",
+        "label": "Instagram Username",
+        "default": "toan_cuchi123"
+      },
+      {
+        "type": "header",
+        "content": "Contact Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_contact_enable",
+        "label": "Show Contact Us",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Legal links"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_legallinks_enable",
+        "label": "Show legal links in bottom bar"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_legallinks_linklist",
+        "label": "Legal link list"
+      },
+      {
+        "type": "header",
+        "content": "Copyright"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_copyright_text",
+        "label": "Copyright text",
+        "info": "Use basic HTML to format text"
+      }
+    ]
+  },
+  {
+    "name": "Select default homepage",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Homepage"
+      },
+      {
+        "type": "select",
+        "id": "homepage_option",
+        "label": "Select Homepage",
+        "options": [
+          {
+            "value": "1",
+            "label": "Homepage 1"
+          },
+          {
+            "value": "2",
+            "label": "Homepage 2"
+          },
+          {
+            "value": "3",
+            "label": "Homepage 3"
+          },
+          {
+            "value": "4",
+            "label": "Homepage 4"
+          },
+          {
+            "value": "5",
+            "label": "Homepage 5"
+          },
+          {
+            "value": "6",
+            "label": "Homepage 6"
+          },
+          {
+            "value": "7",
+            "label": "Homepage 7"
+          }
+        ],
+        "default": "1"
+      }
+    ]
+  },
+  {
+    "name": "Home page 1",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Slideshow"
+      },
+      {
+        "type": "header",
+        "content": "Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_home_enable",
+        "label": "Enable slideshow"
+      },
+      {
+        "type": "select",
+        "id": "home1_slide_style",
+        "label": "Select Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "1",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "text",
+        "id": "home1_slide_height",
+        "label": "Slideshow Height (px)",
+        "default": "750"
+      },
+      {
+        "type": "header",
+        "content": "Special Offers"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_special_offers",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_special_offers_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "home_special_offers_content",
+        "label": "Content"
+      },
+      {
+        "type": "image",
+        "id": "shop-hp-banner-1.jpg",
+        "label": "1st offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home_offer_caption_1",
+        "label": "1st offer caption"
+      },
+      {
+        "type": "text",
+        "id": "home_offer_link_1",
+        "label": "1st offer link"
+      },
+      {
+        "type": "image",
+        "id": "shop-hp-banner-2.jpg",
+        "label": "2nd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home_offer_caption_2",
+        "label": "2nd offer caption"
+      },
+      {
+        "type": "text",
+        "id": "home_offer_link_2",
+        "label": "2nd offer link"
+      },
+      {
+        "type": "image",
+        "id": "shop-hp-banner-3.jpg",
+        "label": "3rd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home_offer_caption_3",
+        "label": "3rd offer caption"
+      },
+      {
+        "type": "text",
+        "id": "home_offer_link_3",
+        "label": "3rd offer link"
+      },
+      {
+        "type": "header",
+        "content": "Latest Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_latest_products",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_latest_products_heading",
+        "label": "Heading",
+        "default": "Latest Products"
+      },
+      {
+        "type": "textarea",
+        "id": "home_latest_content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "home_latest_products_num",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "collection",
+        "id": "home_latest_products_collection",
+        "label": "Collection to use:"
+      },
+      {
+        "type": "header",
+        "content": "Featured Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_featured_products",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_featured_products_heading",
+        "label": "Heading",
+        "default": "Featured Products"
+      },
+      {
+        "type": "textarea",
+        "id": "home_featured_content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "home_featured_products_num",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "collection",
+        "id": "home_featured_products_collection",
+        "label": "Collection to use:"
+      },
+      {
+        "type": "header",
+        "content": "Featured collections"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_featured_collections_enable",
+        "label": "Enable",
+        "info": "Show up to twelve featured collections"
+      },
+      {
+        "type": "textarea",
+        "id": "home_featured_collections_content",
+        "label": "Content"
+      },
+      {
+        "type": "select",
+        "id": "home_featured_collections_column",
+        "label": "Select Column",
+        "options": [
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "radio",
+        "id": "home_featured_collections_sort",
+        "label": "Choose collections",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatically"
+          },
+          {
+            "value": "manual",
+            "label": "Manually:"
+          }
+        ]
+      },
+      {
+        "type": "collection",
+        "id": "collection_1"
+      },
+      {
+        "type": "collection",
+        "id": "collection_2"
+      },
+      {
+        "type": "collection",
+        "id": "collection_3"
+      },
+      {
+        "type": "collection",
+        "id": "collection_4"
+      },
+      {
+        "type": "collection",
+        "id": "collection_5"
+      },
+      {
+        "type": "collection",
+        "id": "collection_6"
+      },
+      {
+        "type": "collection",
+        "id": "collection_7"
+      },
+      {
+        "type": "collection",
+        "id": "collection_8"
+      },
+      {
+        "type": "collection",
+        "id": "collection_9"
+      },
+      {
+        "type": "collection",
+        "id": "collection_10"
+      },
+      {
+        "type": "collection",
+        "id": "collection_11"
+      },
+      {
+        "type": "collection",
+        "id": "collection_12"
+      },
+      {
+        "type": "header",
+        "content": "Blog Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "home_blog_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home_blog_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "home_blog_text",
+        "label": "Content"
+      },
+      {
+        "type": "blog",
+        "id": "home_blog",
+        "label": "Choose blog:"
+      },
+      {
+        "type": "select",
+        "id": "home_blog_number",
+        "label": "Number of",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "3"
+      }
+    ]
+  },
+  {
+    "name": "Home page 2",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Menu Collections"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_collections_enable",
+        "label": "Show Menu ",
+        "default": true
+      },
+      {
+        "type": "link_list",
+        "id": "home2_collections_menu",
+        "label": "Select Menu "
+      },
+      {
+        "type": "header",
+        "content": "Slideshow"
+      },
+      {
+        "type": "header",
+        "content": "Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_home2_enable",
+        "label": "Enable slideshow"
+      },
+      {
+        "type": "select",
+        "id": "home2_slide_style",
+        "label": "Select Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "6",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "text",
+        "id": "home2_slide_height",
+        "label": "Slideshow Height (px)",
+        "default": "510"
+      },
+      {
+        "type": "header",
+        "content": "Featured Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_products",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "home2_featured_background",
+        "label": "Background color",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_products_num",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_products_collection",
+        "label": "Collection to use:"
+      },
+      {
+        "type": "header",
+        "content": "Latest Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_latest_products",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "home2_latest_content",
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "home2_latest_products_heading",
+        "label": "Heading",
+        "default": "Latest Products"
+      },
+      {
+        "type": "text",
+        "id": "home2_latest_products_num",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "collection",
+        "id": "home2_latest_products_collection",
+        "label": "Collection to use:"
+      },
+      {
+        "type": "header",
+        "content": "Featured collection tabs"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_collection_tabs_enable",
+        "label": "Enable collection tabs"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row1_enable",
+        "label": "Enable tabs 1"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row1",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row1_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row2_enable",
+        "label": "Enable tabs 2"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row2",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row2_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row3_enable",
+        "label": "Enable tabs 3"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row3",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row3_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row4_enable",
+        "label": "Enable tabs 4"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row4",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row4_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row5_enable",
+        "label": "Enable tabs 5"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row5",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row5_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_featured_row6_enable",
+        "label": "Enable tabs 6"
+      },
+      {
+        "type": "collection",
+        "id": "home2_featured_row6",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "home2_featured_row6_number",
+        "label": "Number of products to display",
+        "default": "8"
+      },
+      {
+        "type": "header",
+        "content": "Blog Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_blog_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home2_blog_bg.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "home2_blog_text_1",
+        "label": "Blog text 1",
+        "default": "GO TO OUR BLOG"
+      },
+      {
+        "type": "text",
+        "id": "home2_blog_text_2",
+        "label": "Blog text 2",
+        "default": "Click here to take a look"
+      },
+      {
+        "type": "text",
+        "id": "home2_blog_link",
+        "label": "Blog link",
+        "default": "\/blogs\/news"
+      }
+    ]
+  },
+  {
+    "name": "Home page 3",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Block Slideshow"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_home3_enable",
+        "label": "Enable slideshow",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "home3_slide_style",
+        "label": "Select Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "1",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "header",
+        "content": "Block Who We Are"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_who_we_are",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_who_we_are_heading_1",
+        "label": "Heading 1",
+        "default": "WHO WE ARE"
+      },
+      {
+        "type": "text",
+        "id": "home3_who_we_are_heading_2",
+        "label": "Heading 2",
+        "default": "A STORY ABOUT US"
+      },
+      {
+        "type": "text",
+        "id": "home3_who_we_are_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-03"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_who_we_are_text",
+        "label": "Content",
+        "default": "Wolverine Creative is an award winning digital media, web design and PR agency. In 2012, Wolverine Creative was recognized as one of the top 3 Advertising Agencies in Wisconsin by readers of Corporate Report Wisconsin."
+      },
+      {
+        "type": "image",
+        "id": "about_01.jpg",
+        "label": "1st offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_1_1",
+        "label": "1st offer caption 1",
+        "default": "WE ARE"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_1_2",
+        "label": "1st offer caption 2",
+        "default": "FULLY RESPONSIVE & RETINA READY"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_offer_text_1",
+        "label": "1rd offer content"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_link_1",
+        "label": "1st offer link"
+      },
+      {
+        "type": "image",
+        "id": "about_02.jpg",
+        "label": "2nd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_2_1",
+        "label": "2st offer caption 1",
+        "default": "WE ARE"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_2_2",
+        "label": "2st offer caption 2",
+        "default": "30 USEFUL SHORTCODES"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_offer_text_2",
+        "label": "2rd offer content"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_link_2",
+        "label": "2nd offer link"
+      },
+      {
+        "type": "image",
+        "id": "about_03.jpg",
+        "label": "3rd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_3_1",
+        "label": "3st offer caption 1",
+        "default": "WE OFFERS"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_caption_3_2",
+        "label": "3st offer caption 2",
+        "default": "FAST SUPPORT & FREE UPDATES"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_offer_text_3",
+        "label": "3rd offer content"
+      },
+      {
+        "type": "text",
+        "id": "home3_offer_link_3",
+        "label": "3rd offer link"
+      },
+      {
+        "type": "header",
+        "content": "Block Quote"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_quote",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home3_quote.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_quote_text",
+        "label": "Content",
+        "default": "Success or failure depends more upon attitude than upon capacity successful men act as though they have accomplished or are enjoying something. Soon it becomes a reality. Act, look, feel successful, conduct yourself accordingly, and you will be amazed at the positive results."
+      },
+      {
+        "type": "text",
+        "id": "home3_quote_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "header",
+        "content": "Block Portfolio"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_portfolio_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_portfolio_heading_1",
+        "label": "Heading 1",
+        "default": "WHAT WE WORK"
+      },
+      {
+        "type": "text",
+        "id": "home3_portfolio_heading_2",
+        "label": "Heading 2",
+        "default": "ENJOY OUR PORTFOLIO"
+      },
+      {
+        "type": "text",
+        "id": "home3_portfolio_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_portfolio_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_portfolio",
+        "label": "Show portfolio item?",
+        "default": true,
+        "info": "The Portfolio configuration stays at tabs 'Material Portfolio' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Purchase"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_purchase_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "home3_purchase_text",
+        "label": "Content",
+        "default": "Start now with this demo or check out our other demos to find what you need."
+      },
+      {
+        "type": "text",
+        "id": "home3_purchase_button",
+        "label": "Button",
+        "default": "PURCHASE"
+      },
+      {
+        "type": "text",
+        "id": "home3_purchase_link",
+        "label": "Link",
+        "default": "http:\/\/themeforest.net\/user\/joomlavi\/portfolio"
+      },
+      {
+        "type": "header",
+        "content": "Block Creativity & Darings"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_creativity_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_creativity_heading_1",
+        "label": "Heading 1",
+        "default": "CREATIVITY & DARINGS"
+      },
+      {
+        "type": "text",
+        "id": "home3_creativity_heading_2",
+        "label": "Heading 2",
+        "default": "CHECK OUT OUR SERVICES"
+      },
+      {
+        "type": "text",
+        "id": "home3_creativity_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-03"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_creativity_text",
+        "label": "Content",
+        "default": "Design is our art and our passion. Our goal is to create the best products with a pixel-perfect eye for detail and a high standard for aesthetic excellence. Let us help you make your website simple, beautiful and professional."
+      },
+      {
+        "type": "image",
+        "id": "service_01.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_creativity",
+        "label": "Show Tabs content?",
+        "default": true,
+        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
+      },
+      {
+        "type": "text",
+        "id": "home3_creativity_button",
+        "label": "Button",
+        "default": "JOIN NOW"
+      },
+      {
+        "type": "text",
+        "id": "home3_creativity_link",
+        "label": "Link",
+        "default": "http:\/\/themeforest.net\/user\/joomlavi\/portfolio"
+      },
+      {
+        "type": "header",
+        "content": "Block Testimonial"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_testimonial_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_testimonial_heading",
+        "label": "Heading",
+        "default": "TESTIMONIALS"
+      },
+      {
+        "type": "image",
+        "id": "home3_testimonial.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_testimonial",
+        "label": "Show Testimonial?",
+        "default": true,
+        "info": "The Testimonial configuration stays at tabs 'Material Testimonial' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Meet Our Team"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_team_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_team_heading_1",
+        "label": "Heading 1",
+        "default": "MEET OUR TEAM"
+      },
+      {
+        "type": "text",
+        "id": "home3_team_heading_2",
+        "label": "Heading 2",
+        "default": "WHAT MAKES US SUCCESSFUL"
+      },
+      {
+        "type": "text",
+        "id": "home3_team_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-03"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_team_text",
+        "label": "Content",
+        "default": "Most businesses think that product is the most important thing, but without great leadership, mission and a team that deliver results at a high level, even the best product won't make a company successful."
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_team",
+        "label": "Show Team ?",
+        "default": true,
+        "info": "The Team configuration stays at tabs 'Material Team' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Logo Partner"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_partner_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "home3_partner_bg",
+        "label": "Background Color",
+        "default": "#f4f4f4",
+        "info": "The Logo Partner configuration stays at tabs 'Material Logo Partner' below."
+      },
+      {
+        "type": "header",
+        "content": "Blog Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_blog_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_blog_heading_1",
+        "label": "Heading 1",
+        "default": "BLOG UPDATES"
+      },
+      {
+        "type": "text",
+        "id": "home3_blog_heading_2",
+        "label": "Heading 2",
+        "default": "LASTED POSTS FROM OUR BLOG"
+      },
+      {
+        "type": "text",
+        "id": "home3_blog_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-03"
+      },
+      {
+        "type": "textarea",
+        "id": "home3_blog_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
+      },
+      {
+        "type": "blog",
+        "id": "home3_blog",
+        "label": "Choose blog:"
+      },
+      {
+        "type": "select",
+        "id": "home3_blog_number",
+        "label": "Number of",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "3"
+      }
+    ]
+  },
+  {
+    "name": "Home page 4",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo"
+      },
+      {
+        "type": "image",
+        "id": "home4_logo_1.png",
+        "label": "Select Image",
+        "max-width": 300,
+        "max-height": 100
+      },
+      {
+        "type": "image",
+        "id": "home4_logo_2.png",
+        "label": "Select Image",
+        "max-width": 300,
+        "max-height": 100
+      },
+      {
+        "type": "header",
+        "content": "Scroll Effects"
+      },
+      {
+        "type": "select",
+        "id": "home4_scroll_effects",
+        "label": "Enable Scroll Effects",
+        "options": [
+          {
+            "value": "1",
+            "label": "Yes"
+          },
+          {
+            "value": "2",
+            "label": "No"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "header",
+        "content": "Block Home"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_home_enable",
+        "label": "Show ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-1.jpg",
+        "label": "Background Image 1"
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-2.jpg",
+        "label": "Background Image 2"
+      },
+      {
+        "type": "text",
+        "id": "home4_home_heading_1",
+        "label": "Heading 1",
+        "default": "WELCOME TO"
+      },
+      {
+        "type": "text",
+        "id": "home4_home_heading_2",
+        "label": "Heading 2",
+        "default": "WOLVERINE THEME"
+      },
+      {
+        "type": "text",
+        "id": "home4_home_heading_icon",
+        "label": "Icon",
+        "default": "indians-icons-07"
+      },
+      {
+        "type": "image",
+        "id": "home4_home_img_icon.png",
+        "label": "Image Icon",
+        "max-width": 500,
+        "max-height": 200,
+        "info": "If you use images here. Please empty input text of *Icon* box above"
+      },
+      {
+        "type": "header",
+        "content": "Block About Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_about_enable",
+        "label": "Show ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-3.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "home4_about_heading_1",
+        "label": "Heading 1",
+        "default": "WELCOME TO"
+      },
+      {
+        "type": "text",
+        "id": "home4_about_heading_2",
+        "label": "Heading 2",
+        "default": "WOLVERINE THEME"
+      },
+      {
+        "type": "text",
+        "id": "home4_about_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "textarea",
+        "id": "home4_about_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt"
+      },
+      {
+        "type": "text",
+        "id": "home4_about_name",
+        "label": "Author",
+        "default": "Elena Lincoln"
+      },
+      {
+        "type": "header",
+        "content": "Block Our Works"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_works_enable",
+        "label": "Show ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-4.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "home4_works_heading_1",
+        "label": "Heading 1",
+        "default": "WELCOME TO"
+      },
+      {
+        "type": "text",
+        "id": "home4_works_heading_2",
+        "label": "Heading 2",
+        "default": "WOLVERINE THEME"
+      },
+      {
+        "type": "text",
+        "id": "home4_works_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "textarea",
+        "id": "home4_works_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt."
+      },
+      {
+        "type": "text",
+        "id": "home4_works_button",
+        "label": "Button",
+        "default": "PORTFOLIO"
+      },
+      {
+        "type": "text",
+        "id": "home4_works_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Block Services"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_service_enable",
+        "label": "Show ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-5.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "home4_services_heading_1",
+        "label": "Heading 1",
+        "default": "CREATIVITY & DARINGS"
+      },
+      {
+        "type": "text",
+        "id": "home4_services_heading_2",
+        "label": "Heading 2",
+        "default": "CHECK OUT OUR SERVICES"
+      },
+      {
+        "type": "text",
+        "id": "home4_services_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_services_tabs",
+        "label": "Show Tabs content?",
+        "default": true,
+        "info": "The Tabs Services configuration stays at tabs 'Material Tabs content' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Blog"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_blog_enable",
+        "label": "Show ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slip-bg-6.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "home4_blog_heading_1",
+        "label": "Heading 1",
+        "default": "FROM OUR BLOG"
+      },
+      {
+        "type": "text",
+        "id": "home4_blog_heading_2",
+        "label": "Heading 2",
+        "default": "I LOVE MY LIFE VERY MUCH"
+      },
+      {
+        "type": "text",
+        "id": "home4_blog_heading_icon",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "textarea",
+        "id": "home4_blog_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt."
+      },
+      {
+        "type": "text",
+        "id": "home4_blog_button",
+        "label": "Button",
+        "default": "READ MORE"
+      },
+      {
+        "type": "text",
+        "id": "home4_blog_link",
+        "label": "Link",
+        "default": "https:\/\/wolverine-1.myshopify.com\/blogs\/news"
+      }
+    ]
+  },
+  {
+    "name": "Home page 5",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Block Slideshow"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_home5_enable",
+        "label": "Enable slideshow",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "home5_slide_style",
+        "label": "Select Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "7",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "header",
+        "content": "Block We Are Good At"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_who_we_are",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_who_we_are_heading",
+        "label": "Heading",
+        "default": "WE ARE GOOD AT"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_who_we_are_text",
+        "label": "Content",
+        "default": "Wolverine Creative are an independent , one-stop creative specialist with the experience & the know how to come up with great business solutions and make them happen"
+      },
+      {
+        "type": "image",
+        "id": "home5_about_01.jpg",
+        "label": "1st offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_caption_1",
+        "label": "1st offer caption",
+        "default": "CHECK OUT OUR FEATURES"
+      },
+      {
+        "type": "text",
+        "id": "home5_who_we_are_offer_icon_1",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_link_1",
+        "label": "1st offer link"
+      },
+      {
+        "type": "image",
+        "id": "home5_about_02.jpg",
+        "label": "2nd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_caption_2",
+        "label": "2st offer caption",
+        "default": "CHECK OUT OUR FEATURES"
+      },
+      {
+        "type": "text",
+        "id": "home5_who_we_are_offer_icon_2",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_link_2",
+        "label": "2nd offer link"
+      },
+      {
+        "type": "image",
+        "id": "home5_about_03.jpg",
+        "label": "3rd offer image --------------------",
+        "max-width": 400
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_caption_3",
+        "label": "3st offer caption",
+        "default": "CHECK OUT OUR FEATURES"
+      },
+      {
+        "type": "text",
+        "id": "home5_who_we_are_offer_icon_3",
+        "label": "Icon",
+        "default": "icon-indians-icons-04"
+      },
+      {
+        "type": "text",
+        "id": "home5_offer_link_3",
+        "label": "3rd offer link"
+      },
+      {
+        "type": "header",
+        "content": "Block About Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_about_enable",
+        "label": "Show About ?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "home5_about_bg",
+        "label": "Background Color",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "text",
+        "id": "home5_about_title_1",
+        "label": "Title column 1"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_about_text_1",
+        "label": "Text column 1"
+      },
+      {
+        "type": "text",
+        "id": "home5_about_name_1",
+        "label": "Name column 1"
+      },
+      {
+        "type": "text",
+        "id": "home5_about_title_2",
+        "label": "Title column 2"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_about_text_2",
+        "label": "Text column 2"
+      },
+      {
+        "type": "header",
+        "content": "Block Testimonial"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_testimonial_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_testimonial_heading",
+        "label": "Heading",
+        "default": "TESTIMONIALS"
+      },
+      {
+        "type": "image",
+        "id": "home5_testimonial.jpg",
+        "label": "Background Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_testimonial",
+        "label": "Show Testimonial?",
+        "default": true,
+        "info": "The Testimonial configuration stays at tabs 'Material Testimonial' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Services"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_services_enable",
+        "label": "Show Services ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_services_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_services_text",
+        "label": "Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_services_img",
+        "label": "Show images ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "home5_our-service-1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_services_tabs",
+        "label": "Show Tabs content  ?",
+        "default": true,
+        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Meet Our Team"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_team_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_team_heading",
+        "label": "Heading",
+        "default": "MEET OUR TEAM"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_team_text",
+        "label": "Content",
+        "default": "Most businesses think that product is the most important thing, but without great leadership, mission and a team that deliver results at a high level, even the best product won't make a company successful."
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_team",
+        "label": "Show Team ?",
+        "default": true,
+        "info": "The Team configuration stays at tabs 'Material Team' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Counter"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_counter_enable",
+        "label": "Show Counter ?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "home5_counter_bg",
+        "label": "Background Color",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_counter",
+        "label": "Show Counter  ?",
+        "default": true,
+        "info": "The Counter configuration stays at tabs 'Material Counter' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Portfolio"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_portfolio_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_portfolio_heading",
+        "label": "Heading",
+        "default": "WHAT WE WORK"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_portfolio_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_portfolio",
+        "label": "Show portfolio item?",
+        "default": true,
+        "info": "The Portfolio configuration stays at tabs 'Material Portfolio' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Logo Partner"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_partner_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Blog Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_blog_enable",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_blog_heading",
+        "label": "Heading",
+        "default": "BLOG UPDATES"
+      },
+      {
+        "type": "textarea",
+        "id": "home5_blog_text",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
+      },
+      {
+        "type": "blog",
+        "id": "home5_blog",
+        "label": "Choose blog:"
+      },
+      {
+        "type": "select",
+        "id": "home5_blog_number",
+        "label": "Number of",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "5"
+          },
+          {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "3"
+      }
+    ]
+  },
+  {
+    "name": "Product page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "product_masonry_effect",
+        "label": "Use Masonry layout",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "product_quickview_enable",
+        "label": "Show Quickview and Add to cart",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "product_quantity_enable",
+        "label": "Show quantity selector"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_quantity_message",
+        "label": "Show remaining quantity message",
+        "info": "Shown when less than 10 items are in stock"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_vendor_enable",
+        "label": "Show product vendor"
+      },
+      {
+        "type": "checkbox",
+        "id": "related_products_enable",
+        "label": "Show related products"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_reviews_enable",
+        "label": "Enable product reviews",
+        "info": "Install the free Shopify [Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app to add product reviews."
+      },
+      {
+        "type": "color",
+        "id": "product_reviews_star_color",
+        "label": "Star color",
+        "default": "#e5c649",
+        "info": "This selection overrides your product review app settings."
+      },
+      {
+        "type": "select",
+        "id": "product_style_option",
+        "label": "Style Product detail ",
+        "options": [
+          {
+            "value": "style-1",
+            "label": "Detail no sidebar"
+          },
+          {
+            "value": "style-2",
+            "label": "Detail width sidebar"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sidebar ",
+    "settings": [
+      {
+        "type": "select",
+        "id": "collection_prod_image_sizes",
+        "label": "Product image size",
+        "options": [
+          {
+            "value": "compact",
+            "label": "Small"
+          },
+          {
+            "value": "large",
+            "label": "Medium (default)"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Link Lists"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist1",
+        "label": "Show link list #1?"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist1",
+        "label": "Use list:"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist2",
+        "label": "Show link list #2?"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist2",
+        "label": "Use list:"
+      },
+      {
+        "type": "header",
+        "content": "Product Filters"
+      },
+      {
+        "type": "radio",
+        "id": "collection_sidebar_filters",
+        "label": "Sidebar product filters",
+        "options": [
+          {
+            "value": "tags",
+            "label": "By tag"
+          },
+          {
+            "value": "groups",
+            "label": "By group"
+          }
+        ],
+        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_type_enable",
+        "label": "Shop by type"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_vendor_enable",
+        "label": "Shop by vendor"
+      },
+      {
+        "type": "header",
+        "content": "Featured Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "featured_prod_visible",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "featured_prod_heading",
+        "label": "Heading",
+        "default": "Featured Products"
+      },
+      {
+        "type": "collection",
+        "id": "featured_prod_collection",
+        "label": "Choose collection"
+      },
+      {
+        "type": "text",
+        "id": "featured_prod_num",
+        "label": "Number of",
+        "default": "3"
+      },
+      {
+        "type": "header",
+        "content": "Text Widget"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_visible",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget_heading",
+        "label": "Heading",
+        "default": "Welcome"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_image",
+        "label": "Image"
+      },
+      {
+        "type": "image",
+        "id": "textwidget_image.jpg",
+        "max-width": 270
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget_content",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
+      },
+      {
+        "type": "header",
+        "content": "Custom content from"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_content_enable",
+        "label": "Show ?"
+      },
+      {
+        "type": "page",
+        "id": "sidebar_content_page",
+        "label": " Show custom content from  ",
+        "info": "Max 50 words"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar Blog",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_search",
+        "label": "Show post search ?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_categories",
+        "label": "Show post categories ?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_recent",
+        "label": "Show recent articles ?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Banner ADV"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_visible",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_heading",
+        "label": "Heading",
+        "default": "BANNER"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_image",
+        "label": "Image",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "textwidget2_image.jpg",
+        "max-width": 470
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_link",
+        "label": "link"
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget2_content",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Cart page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Enable order notes"
+      },
+      {
+        "type": "select",
+        "id": "ajax_cart_method",
+        "label": "Cart type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          },
+          {
+            "value": "page",
+            "label": "Page"
+          },
+          {
+            "value": "flip",
+            "label": "Flip"
+          },
+          {
+            "value": "modal",
+            "label": "Modal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Price format",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_dollar_symbol",
+        "label": "Show dollar sign"
+      },
+      {
+        "type": "checkbox",
+        "id": "superscript_decimals",
+        "label": "Show cents as superscript"
+      }
+    ]
+  },
+  {
+    "name": "Customer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Login"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading",
+        "label": "Heading H3",
+        "default": "WELCOME BACK!"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading_text",
+        "label": "Customer text",
+        "default": "Login to your account below"
+      },
+      {
+        "type": "image",
+        "id": "customer_image.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Currency",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "To offer multiple currencies on your online store, you must first [edit your store's currency formatting](https:\/\/docs.shopify.com\/support\/settings\/general\/tell-my-script-where-to-find-money-formats)."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Enable currency conversion",
+        "default": true,
+        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without currency ($10.00)"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With currency ($10.00 CAD)"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Supported currencies",
+        "default": "INR GBP CAD USD AUD EUR JPY",
+        "info": "Use the country's ISO [currency code](http:\/\/www.xe.com\/iso4217.php). Separate your currency codes with a space."
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Page FAQ",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "text",
+        "id": "faq1_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq1_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "text",
+        "id": "faq2_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq2_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "text",
+        "id": "faq3_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq3_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "text",
+        "id": "faq4_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq4_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "text",
+        "id": "faq5_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq5_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "text",
+        "id": "faq6_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq6_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "text",
+        "id": "faq7_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq7_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "text",
+        "id": "faq8_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq8_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #9"
+      },
+      {
+        "type": "text",
+        "id": "faq9_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq9_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #10"
+      },
+      {
+        "type": "text",
+        "id": "faq10_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "faq10_text",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Page Collections",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "page_collections_enable",
+        "label": "Show Collections",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "page_product_in_collections_enable",
+        "label": "Show product in Collections"
+      }
+    ]
+  },
+  {
+    "name": "Page About Us",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Block Introduce"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_introduce_enable",
+        "label": "Show Introduce ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "about_introduce_text_1",
+        "label": "Text 1"
+      },
+      {
+        "type": "text",
+        "id": "about_introduce_text_2",
+        "label": "Text 2"
+      },
+      {
+        "type": "header",
+        "content": "Block About Us"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_about_enable",
+        "label": "Show About ?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "about_about_bg",
+        "label": "Background Color",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "text",
+        "id": "about_about_title_1",
+        "label": "Title column 1"
+      },
+      {
+        "type": "textarea",
+        "id": "about_about_text_1",
+        "label": "Text column 1"
+      },
+      {
+        "type": "text",
+        "id": "about_about_name_1",
+        "label": "Name column 1"
+      },
+      {
+        "type": "text",
+        "id": "about_about_title_2",
+        "label": "Title column 2"
+      },
+      {
+        "type": "textarea",
+        "id": "about_about_text_2",
+        "label": "Text column 2"
+      },
+      {
+        "type": "header",
+        "content": "Block Services"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_services_enable",
+        "label": "Show Services ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "about_services_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "about_services_text",
+        "label": "Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_services_img",
+        "label": "Show images ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "our-service-1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_services_tabs",
+        "label": "Show Tabs content  ?",
+        "default": true,
+        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Counter"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_counter_enable",
+        "label": "Show Counter ?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "about_counter_bg",
+        "label": "Background Color",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_counter",
+        "label": "Show Counter  ?",
+        "default": true,
+        "info": "The Counter configuration stays at tabs 'Material Counter' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Our Team"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_team_enable",
+        "label": "Show Our Team ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "about_team_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "about_team_text",
+        "label": "Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_team",
+        "label": "Show Team  ?",
+        "default": true,
+        "info": "The Our Team configuration stays at tabs 'Material Team' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Testimonials"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_testimonials_enable",
+        "label": "Show Testimonials ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "testimonials.jpg",
+        "label": "Background Image",
+        "info": "The Testimonials configuration stays at tabs 'Material Testimonials' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Price Table"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_pricetable_enable",
+        "label": "Show  Price Table ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "about_pricetable_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "about_pricetable_text",
+        "label": "Text"
+      },
+      {
+        "type": "checkbox",
+        "id": "about_pricetable",
+        "label": "Show Table  ?",
+        "default": true,
+        "info": "The Our Team configuration stays at tabs 'Material Team' below."
+      },
+      {
+        "type": "header",
+        "content": "Block Logo Partner"
+      },
+      {
+        "type": "color",
+        "id": "about_partner_bg",
+        "label": "Background Color",
+        "default": "#444444",
+        "info": "The Logo Partner configuration stays at tabs 'Material Logo Partner' below."
+      }
+    ]
+  },
+  {
+    "name": " Page Contact",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_map_heading",
+        "label": "Heading H5",
+        "default": "HI! WE ARE SUPPORT"
+      },
+      {
+        "type": "text",
+        "id": "contact_map_heading-2",
+        "label": "Heading H3",
+        "default": "SEND EMAIL FOR US"
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_map",
+        "label": "Show contact map",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "contact_address",
+        "label": "Map address",
+        "default": "https:\/\/www.google.com\/maps\/embed\/v1\/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+      },
+      {
+        "type": "radio",
+        "id": "contact_map_placement",
+        "label": "Contact map placement",
+        "options": [
+          {
+            "value": "full-width",
+            "label": "Style 1"
+          },
+          {
+            "value": "within-container",
+            "label": "Style 2"
+          }
+        ],
+        "default": "full-width"
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_show",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_facebook_show",
+        "label": "Facebook",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_twitter_show",
+        "label": "Twitter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_pinterest_show",
+        "label": "Pinterest",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_google_show",
+        "label": "Google+",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_youtube_show",
+        "label": "Youtube",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_vimeo_show",
+        "label": "Vimeo",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_flickr_show",
+        "label": "Flickr",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_instagram_show",
+        "label": "Instagram",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_tumblr_show",
+        "label": "Tumblr",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_social_rss_show",
+        "label": "RSS",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Material Slideshow",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Base Param"
+      },
+      {
+        "type": "select",
+        "id": "slide_autoplay",
+        "label": "Autoplay",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "select",
+        "id": "slide_pauseOnHover",
+        "label": "Pause On Hover",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "text",
+        "id": "slide_speed",
+        "label": "Speed",
+        "default": "400"
+      },
+      {
+        "type": "text",
+        "id": "slide_time",
+        "label": "Time",
+        "default": "8000"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_1",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "image",
+        "id": "slide_1_icon_img.png",
+        "label": "Image Icon",
+        "max-width": 130,
+        "max-height": 130,
+        "info": "If you use images here. Please empty input text of *Font Icon* box above"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_1_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_link",
+        "label": "Slide link",
+        "default": "http:\/\/wolverine-1.myshopify.com\/"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_2",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_2.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "image",
+        "id": "slide_2_icon_img.png",
+        "label": "Image Icon",
+        "max-width": 130,
+        "max-height": 130,
+        "info": "If you use images here. Please empty input text of *Font Icon* box above"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_2_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_link",
+        "label": "Slide link",
+        "default": "http:\/\/wolverine-1.myshopify.com\/"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_3",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_3.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "image",
+        "id": "slide_3_icon_img.png",
+        "label": "Image Icon",
+        "max-width": 130,
+        "max-height": 130,
+        "info": "If you use images here. Please empty input text of *Font Icon* box above"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_3_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_link",
+        "label": "Slide link",
+        "default": "http:\/\/wolverine-1.myshopify.com\/"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_4",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_4.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "image",
+        "id": "slide_4_icon_img.png",
+        "label": "Image Icon",
+        "max-width": 130,
+        "max-height": 130,
+        "info": "If you use images here. Please empty input text of *Font Icon* box above"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_4_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_link",
+        "label": "Slide link",
+        "default": "http:\/\/wolverine-1.myshopify.com\/"
+      }
+    ]
+  },
+  {
+    "name": "Material Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Accounts"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter",
+        "info": "https:\/\/twitter.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook",
+        "info": "https:\/\/facebook.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "Pinterest",
+        "info": "https:\/\/pinterest.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_google_plus_link",
+        "label": "Google+",
+        "info": "https:\/\/plus.google.com\/+shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram",
+        "info": "https:\/\/instagram.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "Tumblr",
+        "info": "https:\/\/www.tumblr.com"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube",
+        "info": "https:\/\/www.youtube.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "Vimeo",
+        "info": "https:\/\/vimeo.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_fancy_link",
+        "label": "Fancy",
+        "info": "http:\/\/fancy.com\/shopify"
+      },
+      {
+        "type": "header",
+        "content": "Sharing"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_products",
+        "label": "Enable product sharing"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_blog",
+        "label": "Enable blog post sharing"
+      },
+      {
+        "type": "checkbox",
+        "id": "social_sharing_count",
+        "label": "Show number of shares",
+        "info": "Available for Facebook, Twitter, and Pinterest."
+      },
+      {
+        "type": "select",
+        "id": "social_sharing_style",
+        "label": "Button style",
+        "options": [
+          {
+            "value": "is-default",
+            "label": "Normal"
+          },
+          {
+            "value": "is-large",
+            "label": "Large"
+          },
+          {
+            "value": "is-clean",
+            "label": "Clean"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": "Share on Facebook"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": "Tweet on Twitter"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_pinterest",
+        "label": "Pin on Pinterest"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_fancy",
+        "label": "Add to Fancy"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_google",
+        "label": "+1 on Google Plus"
+      }
+    ]
+  },
+  {
+    "name": "Material Tabs content",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_1_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_1_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_1_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_2_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_2_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_2_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_3_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_3_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_3_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_4_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_4_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_4_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_5_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_5_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_5_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_6_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tab_item_6_icon",
+        "label": "Font icon"
+      },
+      {
+        "type": "textarea",
+        "id": "tab_item_6_text",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Material Testimonials",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "text",
+        "id": "testimonials1_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials1_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "text",
+        "id": "testimonials2_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials2_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "text",
+        "id": "testimonials3_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials3_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "text",
+        "id": "testimonials4_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials4_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "text",
+        "id": "testimonials5_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials5_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "text",
+        "id": "testimonials6_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials6_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "text",
+        "id": "testimonials7_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials7_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "text",
+        "id": "testimonials8_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials8_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #9"
+      },
+      {
+        "type": "text",
+        "id": "testimonials9_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials9_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #10"
+      },
+      {
+        "type": "text",
+        "id": "testimonials10_title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "testimonials10_text",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Material Logo Partner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_1_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-1.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner1_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_2_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-2.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner2_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_3_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-3.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner3_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_4_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-4.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner4_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_5_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-5.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner5_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_6_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-6.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner6_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_7_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-7.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner7_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_8_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-8.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner8_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #9"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_9_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-9.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner9_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #10"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_10_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-10.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner10_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #11"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_11_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-11.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner11_url",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Item #12"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_12_enable",
+        "label": "Show logo",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand-slider-12.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "logopartner12_url",
+        "label": "Link"
+      }
+    ]
+  },
+  {
+    "name": "Material Team",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_1_enable",
+        "label": "Show people ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "team-1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team1_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team1_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team1_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team1_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team1_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team1_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_2_enable",
+        "label": "Show people ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "team-2.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team2_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team2_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team2_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team2_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team2_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team2_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_3_enable",
+        "label": "Show people ?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "team-3.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team3_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team3_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team3_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team3_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team3_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team3_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_4_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-4.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team4_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team4_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team4_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team4_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team4_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team4_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_5_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-5.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team5_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team5_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team5_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team5_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team5_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team5_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_6_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-6.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team6_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team6_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team6_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team6_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team6_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team6_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_7_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-7.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team7_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team7_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team7_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team7_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team7_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team7_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_8_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-8.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team8_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team8_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team8_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team8_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team8_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team8_pinterest",
+        "label": "Pinterest"
+      },
+      {
+        "type": "header",
+        "content": "Item #9"
+      },
+      {
+        "type": "checkbox",
+        "id": "team_9_enable",
+        "label": "Show people ?"
+      },
+      {
+        "type": "image",
+        "id": "team-9.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "team9_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "team9_job",
+        "label": "Job"
+      },
+      {
+        "type": "text",
+        "id": "team9_twitter",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "team9_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "team9_gplus",
+        "label": "Gplus"
+      },
+      {
+        "type": "text",
+        "id": "team9_pinterest",
+        "label": "Pinterest"
+      }
+    ]
+  },
+  {
+    "name": "Material Price Table",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Table #1"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_field_1",
+        "label": "Field 1"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_field_2",
+        "label": "Field 2"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_field_3",
+        "label": "Field 3"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_field_4",
+        "label": "Field 4"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_field_5",
+        "label": "Field 5"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_price",
+        "label": "Price"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_button",
+        "label": "Button"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_1_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Table #2"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_field_1",
+        "label": "Field 1"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_field_2",
+        "label": "Field 2"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_field_3",
+        "label": "Field 3"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_field_4",
+        "label": "Field 4"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_field_5",
+        "label": "Field 5"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_price",
+        "label": "Price"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_button",
+        "label": "Button"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_2_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Table #3"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_field_1",
+        "label": "Field 1"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_field_2",
+        "label": "Field 2"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_field_3",
+        "label": "Field 3"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_field_4",
+        "label": "Field 4"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_field_5",
+        "label": "Field 5"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_price",
+        "label": "Price"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_button",
+        "label": "Button"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_3_link",
+        "label": "Link"
+      },
+      {
+        "type": "header",
+        "content": "Table #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "pricetable_4_enable",
+        "label": "Show Table #4 ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_field_1",
+        "label": "Field 1"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_field_2",
+        "label": "Field 2"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_field_3",
+        "label": "Field 3"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_field_4",
+        "label": "Field 4"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_field_5",
+        "label": "Field 5"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_price",
+        "label": "Price"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_button",
+        "label": "Button"
+      },
+      {
+        "type": "text",
+        "id": "pricetable_4_link",
+        "label": "Link"
+      }
+    ]
+  },
+  {
+    "name": "Material Counter",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "text",
+        "id": "counter_1_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_1_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "text",
+        "id": "counter_2_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_2_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "text",
+        "id": "counter_3_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_3_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "text",
+        "id": "counter_4_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_4_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "text",
+        "id": "counter_5_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_5_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "text",
+        "id": "counter_6_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_6_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "text",
+        "id": "counter_7_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_7_value",
+        "label": "Value"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "text",
+        "id": "counter_8_number",
+        "label": "Number"
+      },
+      {
+        "type": "text",
+        "id": "counter_8_value",
+        "label": "Value"
+      }
+    ]
+  },
+  {
+    "name": "Material Portfolio",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio1_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio1_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio1_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-2.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio2_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio2_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio2_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-3.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio3_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio3_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio3_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-4.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio4_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio4_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio4_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-5.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio5_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio5_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio5_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-6.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio6_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio6_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio6_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-7.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio7_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio7_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio7_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-8.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio8_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio8_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio8_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #9"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-9.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio9_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio9_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio9_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #10"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-10.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio10_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio10_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio10_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #11"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-11.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio11_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio11_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio11_text",
+        "label": "Content"
+      },
+      {
+        "type": "header",
+        "content": "Item #12"
+      },
+      {
+        "type": "image",
+        "id": "portfolio-special-2-12.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "portfolio12_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "portfolio12_link",
+        "label": "Link"
+      },
+      {
+        "type": "textarea",
+        "id": "portfolio12_text",
+        "label": "Content"
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+<main class="main-content">
+
+  {% if page.metafields.jvpage.titlePage != 'hide'  %}  
+  <div class="common-static-header">
+    <div class="parallax-bg" data-stellar-background-ratio="0.25" 
+         {% if settings.bg_page_faqs_enable %}    
+         style="background-image:url({{ 'bg_page_faqs.jpg' | asset_url }})"         
+         {% endif %}           
+         ></div>
+    <div class="container">
+      <h1 ><span>{{ page.title }}</span></h1>
+    </div>  
+  </div>
+  {% endif %}    
+
+
+
+  <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+    <div class="container">
+
+      {% if page.content != blank %}   
+      <div class="row">      
+        <div class="col-sm-7">      
+
+          {% endif %}          
+
+
+          <div class="accordion-1">
+            <div id="accordion-faq-1" class="panel-group">
+
+
+
+              {% for i in (1..10) %}
+              {% capture faq_title %}faq{{ i }}_title{% endcapture %}
+              {% capture faq_text %}faq{{ i }}_text{% endcapture %}
+              {% if settings[faq_title] != blank %}
+              <div class="panel">
+                <div class="panel-heading"><a data-toggle="collapse" data-parent="#accordion-faq-1" href="#faq-item-{{ i }}-0" class="panel-title">
+                  <h5> <i class="icon-help"></i>{{ settings[faq_title] }}</h5>
+                  </a></div>
+                <div id="faq-item-{{ i }}-0" class="panel-collapse collapse   {% if i == 1 %} in {% endif %}  ">
+                  <div class="panel-body">{{ settings[faq_text] }}</div>
+                </div>
+              </div>
+              {% endif %}   
+              {% endfor %}
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+          {% if page.content != blank %}   
+        </div>
+        <div class="col-sm-5">      
+          {{ page.content }}
+        </div>
+      </div>
+      {% endif %}       
+
+
+    </div>  
+  </section>
+
+</main>  
+

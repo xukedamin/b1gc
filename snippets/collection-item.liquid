@@ -1,0 +1,16 @@
+{% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
+<div class="col-sm-4 item item-collections">
+  <a class="inner thumb-link-default" href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" class="featured-box">
+      {% if collection.image %}
+      <img src="{{ collection.image.src | collection_img_url: 'large' }}" alt="{{ collection_title }}" />
+      {% else %}
+      <img src="{{ collection.products.first.featured_image | product_img_url: 'large' }}" alt="{{ collection_title }}" />
+      {% endif %}    
+    <span class="info-collections">
+      <span class="title">
+        {{ collection_title }}
+      </span>
+      <span class="count"> {{ collection.products_count }} {{ 'collections.general.products' | t }} </span>
+    </span>
+  </a>
+</div>

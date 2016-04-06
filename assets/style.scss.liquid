@@ -1,0 +1,313 @@
+/*============================================================================
+Shopify JV BigC v1.0
+Copyright 2014 Shopify Inc.
+Built with Sass - http://sass-lang.com/
+
+Some things to know about this file:
+- Sass is compiled on Shopify's server so you don't need to convert it to CSS yourself
+- The output CSS is compressed and comments are removed
+- You cannot use @imports in this file
+* Use grunt or gulp tasks to enable @imports - https://github.com/Shopify/shopify-css-import
+- Helpers variables, mixins, and starter classes are provided. Change as needed.
+==============================================================================*/
+
+
+
+/*============================================================================
+#Breakpoint and Grid Variables
+==============================================================================*/
+$viewportIncrement: 1px;
+
+$small: 480px;
+$medium: 768px;
+$large: 769px;
+
+$postSmall: $small + $viewportIncrement;
+$preMedium: $medium - $viewportIncrement;
+$preLarge: $large - $viewportIncrement;
+
+
+
+/*============================================================================
+#General Variables
+==============================================================================*/
+
+// Wolverine Theme Colors
+$colorPrimary: {{ settings.color_primary }};
+$colorSecondary: {{ settings.color_secondary }};
+
+
+
+
+// Text link colors
+$colorLink: $colorPrimary;
+$colorLinkHover: lighten($colorPrimary, 15%);
+
+// General colors
+$colorBody: {{ settings.color_body_bg }};
+$colorTextBody: {{ settings.color_body_text }};
+$fontWeightBody: {{ settings.font_weight_body }};
+$lineHeightBody: {{ settings.line_height_body }};
+
+
+// Nav background
+$colorNav: {{ settings.color_nav_bg }};
+$colorNavText: {{ settings.color_nav_text }};
+
+// Mobile Nav Bar
+$mobileNavBarHeight: 50px;
+
+// Site Footer
+$colorFooterBg: {{ settings.color_footer_bg }};
+$colorFooterText: {{ settings.color_footer_text }};
+
+
+// Width variables
+$gutter: 30px;
+$gridGutter: 30px;
+
+
+// Radius
+$radius: 2px;
+
+// Password page
+$passwordPageUseBgImage: true;
+
+.color-main {
+  color: $colorPrimary;
+}
+
+$row-about-bg: {{ settings.about_about_bg }};
+$row-counter-bg: {{ settings.about_counter_bg }};
+$row-partner-bg: {{ settings.about_partner_bg }};
+$home3_partner_bg: {{ settings.home3_partner_bg }};
+
+$row-home2-featured-bg: {{ settings.home2_featured_background }};
+
+
+
+.home2_featured_products { background-color: $row-home2-featured-bg; }
+.page-aboutus .logo-partner,
+.page-home-home5 .logo-partner{     background-color: $row-partner-bg;}
+.page-home-home3 .logo-partner {     background-color: $home3_partner_bg;}
+
+
+/*================ Typography ================*/
+
+/*============================================================================
+Get font-families from theme settings
+==============================================================================*/
+{% if settings.type_base_family contains 'Google' %}
+{% assign type_base_parts = settings.type_base_family | split: '_' %}
+{% assign type_base_name = type_base_parts[1] %}
+{% capture base_family %}"{{ type_base_name | split: ':' | first | replace: '+', ' ' }}"{% if type_base_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
+{% else %}
+{% assign base_family = settings.type_base_family %}
+{% endif %}
+
+{% if settings.type_header_family contains 'Google' %}
+{% assign type_header_parts = settings.type_header_family | split: '_' %}
+{% assign type_header_name = type_header_parts[1] %}
+{% capture header_family %}"{{ type_header_name | split: ':' | first | replace: '+', ' ' }}"{% if type_header_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
+{% assign header_weight = type_header_parts[2] %}
+{% else %}
+{% assign header_family = settings.type_header_family %}
+{% assign header_weight = 700 %}
+{% endif %}
+
+{% if settings.type_accent_family contains 'Google' %}
+{% assign type_accent_parts = settings.type_accent_family | split: '_' %}
+{% assign type_accent_name = type_accent_parts[1] %}
+{% capture accent_family %}"{{ type_accent_name | split: ':' | first | replace: '+', ' ' }}"{% if type_accent_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
+{% assign accent_weight = type_accent_parts[2] %}
+{% else %}
+{% assign accent_family = settings.type_accent_family %}
+{% assign accent_weight = 500 %}
+{% endif %}
+
+// Header Font
+$headerFontStack: {{ header_family }};
+$headerFontWeight: {{ header_weight }};
+
+// Body Font
+$bodyFontStack: {{ base_family }};
+$baseFontSize: {{ settings.type_base_size }};
+
+// Navigation and Button Font
+$accentFontStackBold: {{ accent_family }};
+$accentFontWeight: {{ accent_weight }};
+
+
+/*============================================================================
+#Sass Mixins
+==============================================================================*/
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin visuallyHidden {
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+
+@mixin transition() {
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+@mixin translateName($value) {
+  animation-name: $value;  
+  -webkit-animation-name: $value;
+}
+
+@mixin translateDuration($value) {
+  animation-duration: $value;  
+  -webkit-animation-duration: $value;
+}
+
+
+@mixin translate($x,$y) {
+  transform: translate($x,$y);
+  -webkit-transform: translate($x,$y);
+}
+
+
+@mixin gradient($from, $to, $fallback) {
+  background: $fallback;
+  background: -moz-linear-gradient(top, $from 0%, $to 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+  background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+  background: -o-linear-gradient(top, $from 0%,$to 100%);
+  background: -ms-linear-gradient(top, $from 0%,$to 100%);
+  background: linear-gradient(top bottom, $from 0%,$to 100%);
+}
+
+@mixin backface($visibility: hidden) {
+  @include prefix('backface-visibility', #{$visibility});
+}
+
+@mixin box-sizing($box-sizing: border-box) {
+  -webkit-box-sizing: #{$box-sizing};
+  -moz-box-sizing: #{$box-sizing};
+  box-sizing: #{$box-sizing};
+}
+
+@function color-control($color) {
+  @if (lightness( $color ) > 48) {
+    @return $headerText;
+  }
+  @else {
+    @return #fff;
+  }
+}
+
+@function em($target, $context: $baseFontSize) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @return $target / $context + 0em;
+}
+
+/*============================================================================
+Dependency-free breakpoint mixin
+// http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
+==============================================================================*/
+$min: min-width;
+$max: max-width;
+@mixin at-query ($constraint, $viewport1, $viewport2:null) {
+  @if $constraint == $min {
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == $max {
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+
+
+/*============================================================================
+#Dropdown Menu
+==============================================================================*/
+
+.dropdownMenu > li > a {
+  font-family: {{ settings.mega_main_family }};
+}
+
+.dropdownMenu li ul li a{
+    {% if settings.mega_sub_family != '0' %}
+      font-family: {{ settings.mega_sub_family }};
+    {% endif %}
+}
+
+
+/***********************************************************************
+								Lightbox						
+************************************************************************/
+.product-popup-content{
+	max-width:870px;
+	width:100%;
+}
+
+
+.jv-homepage-1  .banner-slider .item, .jv-homepage-1   .banner-slider .wrap-item  { height: {{ settings.home1_slide_height }}px !important; overflow: hidden; }
+.jv-homepage-2  .banner-slider .item { height: {{ settings.home2_slide_height }}px !important; }
+.jv-homepage-3  .banner-slider .item { height: {{ settings.home3_slide_height }}px !important; }
+.jv-homepage-4  .banner-slider .item { height: {{ settings.home4_slide_height }}px !important; }
+
+
+.product-style-detail .addToCartForm.process .addToCart  i:before {
+    color: $colorPrimary;
+}
+
+.item .inner {
+    display: block;
+}
+
+
+.template-list-collections   .wrapper-content {
+    background-color: #f6f6f6;
+    padding: 50px 0;
+}
+
+
+.page-login-wrapper .page-login form p {
+  font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %}  {{ settings.type_orther_family }} {% endif %};
+}
+.page-register form label {
+  font-family: {% if settings.type_heading_use == '1'%} '{{ settings.type_heading_google }}', sans-serif; {% else %}  {{ settings.type_heading_family }} {% endif %};
+}
+
+.page-register form span {
+  font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %}  {{ settings.type_orther_family }} {% endif %};
+}
+

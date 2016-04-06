@@ -1,0 +1,176 @@
+<main class="wrapper main-content " role="main">
+
+  {% unless settings.home2_content == blank or pages[settings.home2_content].empty? or pages[settings.home2_content].content == blank %}
+  {% assign page = pages[settings.home2_content] %}
+  <div class="container">
+    {{ page.content }}
+  </div>
+  <hr>
+  {% endunless %}
+
+  <section class="pt-50 pb-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+          <div class="widget-shop-categories">
+            
+            {% comment %} ----- Menu Collections  ----- {% endcomment %}
+            {% if settings.home2_collections_enable %}
+            {% assign list_temp = settings.home2_collections_menu %}
+            {% if linklists[list_temp] != empty %}
+            {% assign list = linklists[list_temp] %}
+
+            <ul id="accordion" class="uppercase">
+              {% for link in list.links %}
+              {% assign child_list_handle = link.title | handleize %}
+              {% if linklists[child_list_handle].links != blank %}
+
+
+              <li class="panel {% if link.active %} active{% endif %}" >
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ link.title | handleize }}">
+                  <h5>{{ link.title }}</h5>
+                </a>
+                <div id="collapse{{ link.title | handleize }}" class="collapse ">
+                  <div class="block-shop-categories">          
+                    <ul>
+                      {% for childlink in linklists[child_list_handle].links %}
+                      <li {% if childlink.active %}class="active"{% endif %}><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>                    
+              </li>
+
+              {% else %}
+              <li  class="panel {% if link.active %}active{% endif %} ">
+ 				<a href="{{ link.url }}"> <h5>{{ link.title }}</h5></a>
+              </li>
+              {% endif %}
+              {% endfor %}
+
+            </ul>
+            {% endif %}
+            {% endif %}
+
+          </div>
+        </div>
+        <div class="col-md-9 col-xs-12">
+
+          {% capture slider %}slider-{{settings.home2_slide_style}}{% endcapture %}
+          {% include slider  %}
+
+        </div>
+      </div>
+    </div>
+  </section>    
+
+  {% comment %} ----- Featured Products ----- {% endcomment %}
+  {% if settings.home2_featured_products %} 
+  <section class="no-padding-bottom home2_featured_products">
+    <div class="container">
+      <div class="shop-gallery-carousel multi-slider dir-nav">
+
+        {% assign collection = collections[settings.home2_featured_products_collection] %}
+        {% for product in collection.products limit: settings.home2_featured_products_num %}
+
+        value="Product, brand..."
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>    
+  {% endif %}  
+
+
+  {% comment %} ----- Latest Products ----- {% endcomment %}
+  {% if settings.home2_latest_products %}
+  <div class=" latest-products no-padding-bottom pt-55">
+    <div class="container">
+      <header class="section-header-shop-homepage pb-75">    
+        {% if settings.home2_latest_products_heading != blank %}
+
+        <h4 class="heading-border-1"><span>{{ settings.home2_latest_products_heading }}</span></h4>
+        {% endif %}
+
+        {% if settings.home2_latest_content != blank %}
+        <p class="font-serif header-caption text-center">{{ settings.home2_latest_content }}</p>  
+        {% endif %}  
+      </header>  
+      <div id="latest-products" class="row  masonry-container">
+        {% assign collection = collections[settings.home2_latest_products_collection] %}
+        {% for product in collection.products limit: settings.home2_latest_products_num %}
+
+        {% include 'product-item' %}
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}      
+
+
+
+  {% comment %} ----- Featured Collections Tabs ----- {% endcomment %}
+
+  {% if settings.home2_featured_collection_tabs_enable %}      
+
+  <div class="tab-section-01 style-2 pt-30" id="tab-2">
+    <div class="container">
+      <ul class="tabs mb-30 text-center uppercase">      
+        {% for i in (1..6) %}
+        {% capture featured_row_enable %}home2_featured_row{{ i }}_enable{% endcapture %}
+        {% capture featured_row %}home2_featured_row{{ i }}{% endcapture %}
+        {% capture row_limit_setting %}home2_featured_row{{ i }}_number{% endcapture %}
+
+        {% if settings[featured_row_enable] and settings[featured_row] != blank %}
+        {% assign featured_row = settings[featured_row] %}
+        {% assign row_limit_setting = settings[row_limit_setting] %}
+        {% unless collections[featured_row].all_products_count == 0 %}
+        <li class="{% if i == 1 %} active {% endif %} "><a href="#tab{{ i }}tab-2" data-toggle="tab">{% include 'featured-row-title' %}</a></li>
+        {% endunless %}
+        {% endif %}
+        {% endfor %} 
+      </ul>      
+
+
+      {% for i in (1..6) %}
+      {% capture featured_row_enable %}home2_featured_row{{ i }}_enable{% endcapture %}
+      {% capture featured_row %}home2_featured_row{{ i }}{% endcapture %}
+      {% capture row_limit_setting %}home2_featured_row{{ i }}_number{% endcapture %}
+
+      {% if settings[featured_row_enable] and settings[featured_row] != blank %}
+      {% assign featured_row = settings[featured_row] %}
+      {% assign row_limit_setting = settings[row_limit_setting] %}
+
+      {% unless collections[featured_row].all_products_count == 0 %}
+      <div class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tab{{ i }}tab-2">
+        {% include 'featured-row-content' %}
+      </div>    
+      {% endunless %}
+      {% endif %}
+      {% endfor %}
+
+    </div>  
+  </div>
+  {% endif %}    
+
+  {% comment %} ----- Home Blog ----- {% endcomment %}
+  {% if settings.home2_blog_enable %} 
+  
+  <section class="pb-60">
+    <div class="call-to-action-2">
+      <div class="container">
+        <div style="background-image: url('{{ 'home2_blog_bg.jpg' | asset_url }}')" class="content">
+          <a href="{{ settings.home2_blog_link }}">
+          <h3>{{ settings.home2_blog_text_1 }}</h3></a>
+          <p>{{ settings.home2_blog_text_2 }}</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+   
+
+  {% endif %}     
+
+
+</main>     

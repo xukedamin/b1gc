@@ -1,0 +1,39 @@
+// _bigc-brand.scss
+
+/*The Brand*/
+.the-brand {
+  margin-top: 35px;
+}
+.item-brand {
+  margin: 0 -15px;
+  position: relative;
+  @extend %text-center;
+
+  @include p-el(before, 100%, 40px) {
+    background-image: url('{{ "bg-product-2.png" | asset_url }}');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -40px;
+    left: 0;
+  }
+
+}
+
+.item-brand-text {
+  margin-top: 25px;
+}
+.btn-link-default.brand-link {
+  margin-bottom: 26px;
+  margin-top: 20px;
+}
+
+.item-product-thumb{
+  &.item-left {
+    margin-right: -5px;
+  }
+
+  &.item-right {
+    margin-left: -5px;
+  }
+}

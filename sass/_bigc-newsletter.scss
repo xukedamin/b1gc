@@ -1,0 +1,157 @@
+/*******************************************************************
+            Newsletter Popup
+********************************************************************/
+.newsletter-popup {
+  background: $color_white none repeat scroll 0 0;
+  margin: auto;
+  max-width: 768px;
+  position: relative;
+  width: 96%;
+
+  .close-popup {
+    color: $color_white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+.title-popup {
+  background: $color_casablanca none repeat scroll 0 0;
+  color: $color_white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 13px 15px;
+  @extend %text-up;
+}
+
+.newsletter-popup-thumb {
+  @extend %text-center;
+}
+
+.content-popup {
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.newsletter-popup-info {
+  > h3 {
+    font-size: 16px;
+    @extend %text-up;
+  }
+  > form {
+    margin-top: 20px;
+  }
+  > p {
+    color: $color_dove-gray;
+  }
+  input[type="text"] {
+    border: 1px solid $color_mercury;
+    color: $color_dusty-gray;
+    height: 40px;
+    padding: 0 15px;
+    width: 100%;
+  }
+  input[type="submit"] {
+    background: $color_casablanca none repeat scroll 0 0;
+    border: medium none;
+    color: $color_white;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    @extend %text-up;
+
+    &:hover {
+      background: $color_shark;
+    }
+  }
+  input[type="checkbox"] {
+    border: 1px solid $color_mercury;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: text-top;
+    width: 10px;
+  }
+  label {
+    color: $color_dusty-gray;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+.box-header-intro {
+  margin-bottom: 25px;
+  margin-top: 40px;
+
+  a {
+    color: #fece6e;
+  }
+  label {
+    border-right: 1px solid $color_shark;
+    font-size: 30px;
+    font-weight: 400;
+    margin-right: 20px;
+    padding-right: 20px;
+    @extend %text-up;
+    vertical-align: middle;
+  }
+}
+.content-element {
+  border-top: 1px solid $color_mercury;
+}
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: $color_black;
+  display: none;
+}
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 9999;
+}
+.newsletter-about {
+  background: $color_wild-sand none repeat scroll 0 0;
+  border-bottom: 1px solid $color_mercury-darker;
+  border-top: 1px solid $color_mercury-darker;
+  margin-top: 40px;
+  padding: 35px 0;
+}
+.newsletter-form {
+  @extend %text-center;
+
+  label {
+    font-weight: 400;
+    margin-right: 25px;
+    @extend %text-up;
+  }
+  input[type="text"] {
+    border: 1px solid $color_currious-blue-darker;
+    border-radius: 4px;
+    color: $color_dusty-gray;
+    height: 40px;
+    max-width: 495px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 5px 0;
+  }
+  input[type="submit"] {
+    background: $color_currious-blue-darker none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 4px;
+    color: $color_white;
+    height: 40px;
+    padding: 0 25px;
+    @extend %text-up;
+    margin: 5px 0;
+    @extend %jv-transition-easeout;
+
+    &:hover {
+      background: $color_bright-sun;
+    }
+  }
+}

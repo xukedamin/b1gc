@@ -1,0 +1,72 @@
+{% include 'collection-category-slider' %}
+
+<div id="box">
+  <div id="collection">
+    {% if page.metafields.jvpage.titlePage != 'hide'  %}
+      <div class="common-static-header collection-header">
+        <div class="parallax-bg" data-stellar-background-ratio="0.25"
+          {% if settings.bg_page_shop_enable %}
+            style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"
+          {% endif %}
+        ></div>
+        <div class="container">
+          <h1 class="section-header--title">{{ collection.title }}
+            <span class="count">({{ collection.all_products_count }}   {{ collection.all_products_count | pluralize: 'collections.general.items', 'collections.general.items' | t }})</span>
+          </h1>
+          
+          {% if collection.description != blank %}
+            <div class="collection-description">
+              {{ collection.description }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% paginate collection.products by 16 %}
+    {% assign has_sidebar = false %}
+    
+    {% if collection.all_tags.size > 0 %}
+      {% assign has_sidebar = true %}
+    {% endif %}
+    <main class="wrapper main-content templates-collection collection-sidebar-no" role="main">
+      <div class="container">
+        {% include 'breadcrumb' %}
+      
+        <div class="sort-pagi-bar top clearfix">
+          {% include 'collection-views' %}
+          
+          <div class="filter-product">
+            <a href="#" class="btn-filter style-border-left "> {{ 'collections.general.filter' | t }}</a>
+          </div>
+          {% if paginate.pages > 1 %}
+            {% include 'pagination-2' %}
+          {% endif %}
+          
+          <div class="product-filter pull-right">
+            {% include 'collection-sorting' %}
+            
+          </div>
+          {% if has_sidebar %}
+            <aside  id="collectionFilters" class="box-attr-filter" >
+              {% include 'collection-sidebar-filter' %}
+            </aside>
+          {% endif %}
+        </div>
+      
+      {% comment %}    Different markup if description is set  {% endcomment %}
+        <div class="row masonry-container">
+          {% for product in collection.products  %}
+            
+            {% include 'product-grid-item' %}
+          {% else %}
+            <div class="grid-item col-xs-12 messagefull info">
+              <div class=" content">{{ 'collections.general.no_matches' | t }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endpaginate %}
+      </div>
+    </main>
+  </div> 
+</div>

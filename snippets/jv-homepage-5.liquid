@@ -1,0 +1,306 @@
+<main class="page-home-home5 ">
+  <header class="home-sticky-nav-trigger">
+
+
+      {% capture slider %}slider-{{settings.home5_slide_style}}{% endcapture %}
+      {% include slider  %}
+
+  </header>
+
+  {% comment %} ----- Block Who We Are ----- {% endcomment %}
+  {% if settings.home5_who_we_are %}   
+
+  <section>
+    <header class="section-header header-type-2 style-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-xs-12">
+            <h1>{{  settings.home5_who_we_are_heading }}</h1>
+          </div>
+          <div class="col-lg-9 col-md-8 col-xs-12">
+            <q class="header-caption">"{{  settings.home5_who_we_are_text }}"</q>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container section-block-p">
+
+      {% for i in (1..3) %}
+      {% capture who_we_are_title %}home5_offer_caption_{{ i }}{% endcapture %}
+      {% capture who_we_are_link %}home5_offer_link_{{ i }}{% endcapture %}
+      {% capture who_we_are_icon %}home5_who_we_are_offer_icon_{{ i }}{% endcapture %}
+      {% capture who_we_are_img %}home5_about_0{{ i }}.jpg{% endcapture %}
+
+      <div class="section-block col-md-4 col-sm-6">
+        <a href="{% if settings[who_we_are_link] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[who_we_are_link] }} {% endif %}" class="portfolio-item portfolio-simple">
+          <img src="{{ who_we_are_img | asset_url }}"  alt="{{ settings[who_we_are_title] }}" >
+          <div class="overlay">
+            <div class="cell-vertical-wrapper">
+              <div class="cell-middle overlay-content text-center">
+                <div class="heading-icon size-50 color-main {{ settings[who_we_are_icon] }}"></div>
+                <h5 >{{ settings[who_we_are_title] }}</h5>
+              </div>
+            </div>
+          </div></a>
+      </div>
+      {% endfor %} 
+
+    </div>
+  </section>
+  {% endif %} 
+
+  {% comment %} ----- Block About Us ----- {% endcomment %}
+  {% if settings.home5_about_enable %} 
+  <section class="no-padding">
+
+
+    <div class="page-about about-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-5 col-xs-12 quote">
+            <div class="page-about-item">
+              <h4>{{  settings.home5_about_title_1 }}</h4>
+              <p>{{  settings.home5_about_text_1 }}</p>
+              <h5>- {{  settings.home5_about_name_1 }} -</h5>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-7 col-xs-12 pragraph">
+            <div class="page-about-item">
+              <h4>{{  settings.home5_about_title_2 }}</h4>
+              <p>{{  settings.home5_about_text_2 }}</p>
+              <h5></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section> 
+  {% endif %} 
+
+
+
+  {% comment %} ----- Block Testimonial ----- {% endcomment %}
+  {% if settings.home5_testimonial_enable %}  
+  <section class="one-child">
+    <div data-stellar-background-ratio="0.25" style="background-image: url('{{ 'home5_testimonial.jpg' | asset_url }}');" class="parallax-bg quote-slider-parallax"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-xs-12 text-center color-light">
+          <h4 class="testimonial-heading-01 hr-light">  {{  settings.home5_testimonial_heading }}   </h4>
+          <div class="testimonial-01 simple-slider">
+
+            {% include 'jv-testimonials-2' %}
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %} 
+
+
+
+  {% if settings.home5_services_enable %}   
+  <section class="large-space border-bottom">
+    <header class="section-header header-type-2 style-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-xs-12">
+            <h1>{{ settings.home5_services_title }}</h1>
+          </div>
+          <div class="col-lg-9 col-md-8 col-xs-12">
+            <q class="header-caption">{{ settings.home5_services_text }}</q>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% if settings.home5_services_tabs or  settings.home5_services_img %} 
+    <div class="service-section-02 section-block">
+      <div class="container">
+        <div class="row">
+          {% if settings.home5_services_img %}           
+          <div class="col-lg-{% if settings.home5_services_tabs %}6{% else %}12{% endif %}        text-center">
+            <img src="{{ 'our-service-1.jpg' | asset_url }}" alt="image">
+          </div>
+          {% endif %}           
+          {% if settings.home5_services_tabs %} 
+          <div class="col-lg-{% if settings.home5_services_img %}6{% else %}12{% endif %}">
+            <div id="accordion-service-1" class="panel-group">
+              {% include 'jv-tabs' %}
+            </div>
+          </div>
+          {% endif %} 
+        </div>
+      </div>
+    </div>
+    {% endif %} 
+  </section>
+  {% endif %}  
+
+
+
+
+
+  {% comment %} ----- Block Team ----- {% endcomment %}
+  {% if settings.home5_team_enable %}  
+  <section>
+    <header class="section-header header-type-2 style-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-xs-12">
+            <h1>{{  settings.home5_team_heading }}</h1>
+          </div>
+          <div class="col-lg-9 col-md-8 col-xs-12">
+            <q class="header-caption">{{  settings.home5_team_text }}</q>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="team-section-01">
+      <div class="container">
+        <div class="row">
+          {% include 'jv-team' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if settings.about_counter_enable %} 
+  <section >
+    <div data-stellar-background-ratio="0.25" style="background-image: url('https://cdn.shopify.com/s/files/1/1070/5358/files/quote-bg.jpg');" class="parallax-bg background-default"></div>
+
+    <div class="count-section-01 style-4">
+      <div class="container remove-col-padding">
+        <div class="counter-group">
+          {% include 'jv-counter' %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}     
+
+  {% comment %} ----- Block Portfolio ----- {% endcomment %}
+  {% if settings.home5_portfolio_enable %}  
+  <section class="large-space no-padding-bottom">
+
+
+
+    <header class="section-header header-type-2 style-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-xs-12">
+            <h1>{{ settings.home5_portfolio_heading }}</h1>
+          </div>
+          <div class="col-lg-9 col-md-8 col-xs-12">
+            <q class="header-caption"> {{ settings.home5_portfolio_text }}</q>
+          </div>
+        </div>
+      </div>
+    </header>    
+
+    {% if settings.home5_portfolio %}  
+    <div class="isotope-container">
+      <div class="portfolio-group container-fluid remove-col-padding">
+        <div class="row iso-grid">
+
+          {% include 'jv-portfolio-2' %}
+
+        </div>
+      </div>
+    </div>
+
+    {% endif %} 
+
+
+  </section>
+  {% endif %} 
+
+
+
+  {% comment %} ----- Block Partner ----- {% endcomment %}
+  {% if settings.home5_partner_enable %}  
+  <section  class=" one-child logo-partner">
+    <div class="container">
+      <div class="brand-carousel multi-slider">
+        {% include 'jv-logopartner' %}
+      </div>
+    </div>
+  </section>
+  {% endif %}  
+
+
+
+
+  {% comment %} ----- Block Blog ----- {% endcomment %}
+  {% if settings.home5_blog_enable %}   
+  <section class="bgc-gray">
+    <div class="container">
+
+      <header class="section-header header-type-2 style-2">
+        <div class="container">
+          <div class="row">
+
+            {% if settings.home5_blog_heading != blank %}
+            <div class="col-lg-3 col-md-4 col-xs-12">
+              <h1>{{ settings.home5_blog_heading }}</h1>
+            </div>
+            {% endif %}
+            {% if settings.home5_blog_text != blank %}
+            <div class="col-lg-9 col-md-8 col-xs-12">
+              <q class="header-caption">{{ settings.home5_blog_text }}</q>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </header>
+
+
+      <div class="blog-lastest-post  row">
+
+
+        {% assign tmp = settings.home5_blog %}
+        {% assign blog = blogs[tmp] %}
+        {% for article in blog.articles limit:settings.home5_blog_number %}
+
+        <div class="col-md-4 col-xs-12">
+          <div class="blog-item section-block-p">
+
+            {% if article.excerpt.size > 0 %}
+
+            <div class="item-image">
+              {{ article.excerpt }}
+            </div>
+            {% else %}
+            {% if article.image %}
+            {% assign image_alt = article.title | escape %}
+
+            <div class="item-image">
+
+              {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+
+            </div>
+
+            {% endif %}    
+            {% endif %} 
+            <p><a href="{{ blog.url }}">{{ blog.title }}</a>&nbsp;/&nbsp;<time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></p>
+            <h5><a href="{{ article.url }}">{{ article.title }}</a></h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>      
+
+  {% endif %}   
+
+
+
+
+
+</main>

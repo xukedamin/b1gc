@@ -1,0 +1,14 @@
+{% for i in (1..12) %}
+{% capture logo_partner %}logo_partner_{{ i }}_enable{% endcapture %}
+{% capture logopartner_img %}brand-slider-{{ i }}.png{% endcapture %}
+{% capture logopartner_url %}logopartner{{ i }}_url{% endcapture %}
+
+{% if settings[logo_partner] %}
+<div class="brand-item ">
+  <div class="item-image"><a target="_blank" href="{% if settings[logopartner_url] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[logopartner_url] }} {% endif %}">
+    <img src="{{ logopartner_img | asset_url }}"  alt="Brand image" class="img-responsive center-block">
+    </a></div>
+</div>
+
+{% endif %}
+{% endfor %}

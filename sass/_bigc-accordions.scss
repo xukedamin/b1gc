@@ -1,0 +1,114 @@
+/***********************************************************************
+            Accordions            
+************************************************************************/
+.accordion-box {
+  margin-bottom: 30px;
+
+  h2 {
+    color: $color_dusty-gray;
+    font-size: 16px;
+    margin: 0;
+    @extend %text-up;
+  }
+  .item-accordion {
+    .title-accordion {
+      font-size: 16px;
+      margin: 0;
+      color: $color_shark;
+      padding: 15px 0;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        color: $color_dusty-gray;
+      }
+    }
+    .desc-accordion {
+      color: $color_dove-gray;
+      margin: 0 0 20px;
+      display: none;
+    }
+    &:active {
+      .desc-accordion {
+        display: block;
+      }
+    }
+  }
+}
+.accordion-box.style1 {
+  .item-accordion {
+    border-bottom: 1px solid $color_mercury;
+
+    .title-accordion {
+      padding-right: 20px;
+
+      &:after {
+        color: $color_boulder;
+        @extend %jv-font-Linearicons;
+        font-size: 13px;
+        position: absolute;
+        right: 0;
+        top: 15px;
+      }
+    }
+  }
+}
+.accordion-box.style2 {
+  h2 {
+    margin-bottom: 30px;
+  }
+  .item-accordion {
+    border: 1px solid $color_mercury;
+    margin-bottom: 5px;
+    padding: 0 20px;
+
+    .title-accordion {
+      font-size: 13px;
+      padding: 17px 15px 17px 25px;
+      @extend %text-up;
+
+      @include p-el(before,14px, 14px) {
+        background: rgba($color_black, 0) url('{{ "add.png" | asset_url }}') no-repeat scroll center center;
+        display: block;
+        left: 0;
+        top: 17px;
+      }
+    }
+    &.active {
+      .title-accordion:before {
+        background-image: url('{{ "sub.png" | asset_url }}');
+      }
+    }
+  }
+}
+
+.accordion-box.style3 {
+  h2 {
+    margin-bottom: 30px;
+  }
+  .item-accordion {
+    margin-bottom: 5px;
+
+    .title-accordion {
+      background: $color_wild-sand none repeat scroll 0 0;
+      border: 1px solid $color_mercury;
+      font-size: 13px;
+      margin-bottom: 15px;
+      padding: 12px 15px 12px 55px;
+      @extend %text-up;
+
+      @include p-el(before,40px, 40px) {
+        background: $color_shark url('{{ "add1.png" | asset_url }}') no-repeat scroll center center;
+        display: block;
+        left: 0;
+        top: -1px;
+      }
+
+    }
+    &.active {
+      .title-accordion::before {
+        background-image: url('{{ "sub1.png" | asset_url }}');
+      }
+    }
+  }
+}

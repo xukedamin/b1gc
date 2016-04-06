@@ -1,0 +1,315 @@
+<main>
+  <!--site header-->
+  <!--end site header-->
+  <div class="homepage-slip-screen fullpage-container">
+
+    {% comment %} ----- Home ----- {% endcomment %}        
+    {% if settings.home4_home_enable %}          
+    <div id="home" class="slip-section section">
+      <div class="slip-home slip-wrapper">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-home-item-wrapper slip-full-height">
+            <div class="col-md-6 slip-full-height">
+              <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="col-md-6 hidden-xs hidden-sm slip-full-height">
+              <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="overlay">
+              <div class="cell-vertical-wrapper">
+                <div class="cell-middle">
+                  <div class="caption-wrapper text-center">
+                    <p>{{ settings.home4_home_heading_1 }}</p>
+
+                    {% if settings.home4_home_heading_icon != blank %}
+                    <div class="heading-icon-section {{  settings.home4_home_heading_icon }}"></div>
+                    {% endif %}
+
+                    <p>{{ settings.home4_home_heading_2 }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}    
+
+    {% comment %} ----- About ----- {% endcomment %}        
+    {% if settings.home4_about_enable %}      
+
+    <div id="about" class="slip-section section">
+      <div class="slip-about slip-wrapper slip-height-xs">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-full-height">
+            <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
+              <div style="background-image: url({{ 'slip-bg-3.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="col-md-6 slip-full-height">
+              <div class="row slip-full-height">
+                <div class="item-content-wrapper">
+                  <div class="cell-vertical-wrapper">
+                    <div class="cell-middle">
+                      <div class="item-content text-center">
+                        {% if settings.home4_about_heading_icon != blank %}
+                        <div class="heading-icon-section {{  settings.home4_about_heading_icon }}"></div>
+                        {% endif %}                        
+                        <h5 >{{ settings.home4_about_heading_1 }}</h5>
+                        <h2>{{ settings.home4_about_heading_1 }}</h2>
+                        <p class="paragraph">{{ settings.home4_about_text }}</p>
+                        <p class="name">{{ settings.home4_about_name }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}    
+
+    {% comment %} ----- Portfolio ----- {% endcomment %}        
+    {% if settings.home4_works_enable %}         
+
+
+    <div id="portfolio" class="slip-section section">
+      <div class="slip-portfolio slip-wrapper slip-height-xs">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-full-height">
+            <div class="col-md-6 slip-full-height">
+              <div class="row slip-full-height">
+                <div class="item-content-wrapper">
+                  <div class="cell-vertical-wrapper">
+                    <div class="cell-middle">
+                      <div class="item-content">
+                        {% if settings.home4_works_heading_icon != blank %}
+                        <div class="heading-icon-section {{  settings.home4_works_heading_icon }}"></div>
+                        {% endif %}                        
+                        <h5 > {{ settings.home4_works_heading_1 }}</h5>
+                        <h2> {{ settings.home4_works_heading_2 }}</h2>
+                        <p class="paragraph">{{ settings.home4_works_text }}</p>
+                        <a href="{{ settings.home4_works_link }} " class="border-btn border-btn-main btn-size-5">{{ settings.home4_works_button }}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
+              <div style="background-image: url({{ 'slip-bg-4.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}    
+
+    {% comment %} ----- Service ----- {% endcomment %}        
+    {% if settings.home4_service_enable %}           
+
+    <div id="service" class="slip-section section">
+      <div class="slip-service slip-wrapper slip-height-xs">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-full-height">
+            <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
+              <div style="background-image: url({{ 'slip-bg-5.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="col-md-6 slip-full-height">
+              <div class="row slip-full-height">
+                <div class="item-content-wrapper">
+                  <div class="cell-vertical-wrapper">
+                    <div class="cell-middle">
+                      <div class="item-content">
+                        <div class="content-header">
+
+                          {% if settings.home4_service_heading_icon != blank %}
+                          <div class="heading-icon-section {{  settings.home4_service_heading_icon }}"></div>
+                          {% endif %}  
+                          <h5>{{ settings.home4_services_heading_1 }}</h5>
+                          <h2>{{ settings.home4_services_heading_2 }}</h2>
+                        </div>
+                        {% if settings.home4_services_tabs %} 
+                        <div class="accordion-1">
+                          <div id="accordion-service-1" class="panel-group">
+
+                            {% include 'jv-tabs' %}
+
+                          </div>
+                        </div>
+
+                        {% endif %}                            
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}    
+
+    {% comment %} ----- Blog ----- {% endcomment %}        
+    {% if settings.home4_blog_enable %}          
+
+    <div id="blog" class="slip-section section">
+      <div class="slip-blog slip-wrapper slip-height-xs">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-full-height">
+            <div class="col-md-6 slip-full-height">
+              <div class="row slip-full-height">
+                <div class="item-content-wrapper">
+                  <div class="cell-vertical-wrapper">
+                    <div class="cell-middle">
+                      <div class="item-content">
+                        {% if settings.home4_blog_heading_icon != blank %}
+                        <div class="heading-icon-section {{  settings.home4_blog_heading_icon }}"></div>
+                        {% endif %}                         
+                        <h5 >{{ settings.home4_blog_heading_1 }}</h5>
+                        <h2>{{ settings.home4_blog_heading_2 }}</h2>
+                        <p class="paragraph">{{ settings.home4_blog_text }}</p><a href="{{ settings.home4_blog_link }}" class="border-btn border-btn-main btn-size-5">{{ settings.home4_blog_button }}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
+              <div style="background-image: url({{ 'slip-bg-6.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}            
+    <!-- Contact -->
+    <div id="contact" class="slip-section section">
+      <div class="slip-contact slip-wrapper">
+        <div class="container-fluid slip-full-height">
+          <div class="row slip-contact-item-wrapper slip-full-height">
+            <div class="col-md-6 slip-full-height">
+              <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="col-md-6 hidden-xs hidden-sm slip-full-height">
+              <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div>
+            </div>
+            <div class="overlay">
+              <div class="cell-vertical-wrapper">
+                <div class="cell-middle">
+                  <div class="caption-wrapper text-center">
+
+
+                    <a href="/"  >
+                      <img src="{{ 'footer-001.png' | asset_url }}" alt="Slip contact logo" class="caption-logo">
+                    </a>
+
+                    <div class="contact-info">
+                      <p>{{ 'layout.footer.email' | t }}:<span> {{  settings.footer_email }}</span></p>
+                      <p> {{ 'layout.footer.phone' | t }} :<span>{{  settings.footer_phone }}</span></p>
+                      <p>{{ 'layout.footer.add' | t }} :<span>{{  settings.footer_add }}</span></p>
+
+
+
+                    </div>
+
+
+                    <div class="social-04 uppercase">
+                      {% if settings.social_twitter_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_twitter_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Twitter' | escape }}">
+                        {{ 'layout.footer.twitter' | t }}
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_facebook_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_facebook_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Facebook' | escape }}">
+                        {{ 'layout.footer.facebook' | t }}
+
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_pinterest_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_pinterest_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Pinterest' | escape }}">
+                        {{ 'layout.footer.pinterest' | t }}
+
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_google_plus_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_google_plus_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Google' | escape }}" rel="publisher">
+                        {{ 'layout.footer.googleplus' | t }}
+
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_instagram_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_instagram_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Instagram' | escape }}">
+                        {{ 'layout.footer.instagram' | t }}
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_tumblr_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_tumblr_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Tumblr' | escape }}">
+                        {{ 'layout.footer.tumblr' | t }}
+
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_youtube_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_youtube_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'YouTube' | escape }}">
+                        {{ 'layout.footer.youtube' | t }}
+
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_vimeo_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_vimeo_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Vimeo' | escape }}">
+                        {{ 'layout.footer.vimeo' | t }}
+                      </a>
+
+                      {% endif %}
+                      {% if settings.social_fancy_link != blank %}
+
+                      <a class="icon-fallback-text" href="{{ settings.social_fancy_link }}" title="{{ 'layout.footer.store_on_social_network' | t: store_name: shop.name, social_network: 'Fancy' | escape }}">
+                        {{ 'layout.footer.fancy' | t }}
+                      </a>
+
+                      {% endif %}
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end - Contact -->
+  </div>
+  <!--site footer-->
+</main>
+
+{{ 'jquery.slimscroll.min.js' | asset_url | script_tag }}
+{{ 'jquery.easings.min.js' | asset_url | script_tag }}
+{{ 'jquery.fullPage.min.js' | asset_url | script_tag }}

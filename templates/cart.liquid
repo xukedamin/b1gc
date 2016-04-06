@@ -1,0 +1,135 @@
+
+<main class="main-content"> {% if page.metafields.jvpage.titlePage != 'hide'  %}
+  <div class="common-static-header">
+    <div class="parallax-bg" data-stellar-background-ratio="0.25" 
+         {% if page.metafields.jvpage.titleBackground != blank %}         
+         style="background-image:url({{ page.metafields.jvpage.titleBackground }})"         
+         {% endif %}          
+         >
+    </div>
+    <div class="container">
+      <h1 ><span>{{ 'cart.general.title' | t }}</span></h1>
+    </div>
+  </div>
+  {% endif %}
+  <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+    <div class="container"> {% if cart.item_count > 0 %}
+      <form action="/cart" method="post" class="cart-page-form" novalidate>
+
+        <div class="shop-cart-list" data-line="{{ forloop.index }}">
+          <table>
+            <thead>
+              <tr>
+                <th class="product-img"> {{ 'cart.general.image' | t }}</th>
+                <th class="product-name"> {{ 'cart.general.product' | t }}</th>
+                <th class="product-size"> {{ 'cart.general.size' | t }}</th>
+                <th class="product-price">{{ 'cart.general.price' | t }} </th>
+                <th class="product-quantity">    {{ 'cart.general.quantity' | t }}</th>
+                <th class="product-total"> {{ 'cart.general.total' | t }}</th>
+                <th class="product-remove">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in cart.items %}
+              <tr class="cart-item">
+                <td class="product-img"><a href="{{ item.url }}" class="cart-image"> <div class="image"> <img src="{{ item | img_url: 'medium' }}"  alt="{{ item.title | escape }}"> </div></a></td>
+                <td class="product-name"><a href="{{ item.url }}"> {{ item.product.title }} </a></td>
+                <td class="product-size"> 
+
+                  {% unless item.variant.title contains 'Default' %}
+                  {{ item.variant.title }}
+                  {% endunless %}
+
+                  {% assign property_size = item.properties | size %}
+                  {% if property_size > 0 %}
+                  {% for p in item.properties %}
+                  {% if forloop.first %}<br>{% endif %}
+                  {% unless p.last == blank %}
+                  {{ p.first }}:
+
+                  {% if p.last contains '/uploads/' %}
+                  <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                  {% else %}
+                  {{ p.last }}
+                  {% endif %}
+
+                  <br>
+                  {% endunless %}
+                  {% endfor %}
+                  {% endif %}                
+
+
+
+                </td>
+                <td class="product-price"> {% include 'price' with item.price %}   </td>
+                <td class="product-quantity"><input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}"></td>
+                <td class="product-total">{% include 'price' with item.line_price %}</td>
+                <td class="product-remove"><a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-line="{{ forloop.index }}" class="icon-fallback-text btn-secondary remove"> <span class="icon icon-x" aria-hidden="true"></span>  </a></td>
+              </tr>
+              {% endfor %}  
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+        <div class="row">
+
+          <div class="col-md-5 col-xs-12">
+
+            <div class="cart-row-special">
+              {% if settings.cart_notes_enable %}
+              <textarea name="note" placeholder="{{ 'cart.general.note' | t }}" class="input-full" id="cartSpecialInstructions">{{ cart.note }}</textarea>
+
+              {% endif %}
+
+            </div>
+
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <div class="shop-cart-total">
+
+              <div class="total">
+                <h4>{{ 'cart.general.subtotal' | t }}</h4><span class="price  color-main">{% include 'price' with cart.total_price %}</span>
+              </div>
+
+            </div>
+            {% if additional_checkout_buttons %}
+            <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+            
+
+            
+            
+            
+            {% endif %}                 
+
+            <div class="list-button row">
+
+              <div class="col-sm-6">
+                <a class="border-btn border-btn-gray" href="/collections/all"> {{ 'cart.general.continueshopping' | t }}</a>
+              </div> 
+              <div class="col-sm-6">
+                <input type="submit" name="update" class="btn-secondary update-cart normal-btn normal-btn-main" value="{{ 'cart.general.update' | t }}">
+                <button type="submit" name="checkout" class="normal-btn normal-btn-main"> <span class="icon icon-cart"></span> {{ 'cart.general.checkout' | t }} </button>
+                
+              </div> 
+
+
+
+
+            </div>                
+
+
+          </div>
+        </div>        
+
+
+
+      </form>
+      {% else %}
+      <h2>{{ 'cart.general.empty' | t }}</h2>
+      <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
+      {% endif %} </div>
+  </section>
+</main>

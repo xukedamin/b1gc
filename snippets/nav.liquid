@@ -1,0 +1,30 @@
+{% if handle != '' %}
+  {% if linklists[handle].links.size > 0 %}
+  <ul class="{{ class }} ">
+    {% for link in linklists[handle].links %}  
+      {% assign handlej = link.title | handleize %}
+      {% assign style ='nav' %}
+      {% for i in (1..10) %}
+        {% capture pick_name %}nav{{i}}{% endcapture %}
+        {% capture pick_name %}{{settings[pick_name] | remove: "jvsub-" }}{% endcapture %}
+        {% capture pick %}nav{{i}}_style{% endcapture %}
+
+        {% if pick_name == handlej %}
+          {% capture stylei %}nav-{{settings[pick]}}{% endcapture %}
+          {% assign style = stylei %}
+          {% break %}
+        {% endif %}
+
+      {% endfor %}
+
+      {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
+      <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-childrent{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">
+        <a  href="{{ link.url }}">{{ link.title }}</a>
+        {% include style class:' sub-menu', handle: handlei %}
+      </li>
+    {% endfor%}
+  </ul>
+  {% endif %}
+{% endif %}
+
+

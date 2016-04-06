@@ -1,0 +1,131 @@
+{% unless grid_item_width %}
+{% assign grid_item_width = 'large--one-quarter medium-down--one-half' %}
+{% endunless %}
+
+{% unless current_collection %}
+{% assign current_collection = collection %}
+{% endunless %}
+
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+{% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available  %}
+{% assign sold_out = false %}
+{% endif %}
+
+{% comment %}
+Select the product image size from settings.
+{% endcomment %}
+{% assign image_size = settings.collection_prod_image_sizes %}
+
+<div class="list-product row list-unstyled">
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="item-product clearfix">
+      <div class="item-product-thumb">
+        <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image.src | img_url: image_size }}" alt="{{ product.featured_image.alt | escape }}">
+          {% else %}
+            <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">
+          {% endif %}
+        </a>
+        
+        <div class="product-extra-mask">
+          <div class="product-extra-link">
+            <a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
+            
+            <a class="action product-wishlist" href="#"><span class="lnr lnr-heart"></span></a>
+            
+            {% if settings.product_quickview_enable %}
+              <a class="action product-quick-view" href="{{ product.url | within: current_collection }}"><span class="lnr lnr-magnifier"></span></a>
+            {% endif %}
+          </div>
+          </div><!-- product-extra-mask -->
+        </div>
+
+        <div class="product-box-promotion">
+
+        {% assign date_published = product.published_at | date:'%Y%m%d' %}
+        {% assign date_now = 'now' | date:'%Y%m%d' %}
+        {% assign date_difference = date_now | minus: date_published %}
+        {% if date_difference < 30 %}
+        <span class="new-item">new</span>
+        {% endif %}
+        
+          {% if sold_out %}
+              <div class="badge badge--sold-out saleoff"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
+            {% else %}
+              {% if on_sale %}
+                <span class="sale-item">-{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
+              {% endif %}
+          {% endif %}
+        </div>
+
+        <div class="item-product-info">
+          <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
+          <div class="wrap-star-rating">
+            <!-- <div class="inner-star-rating" style="width:80%"></div> -->
+            {% if settings.product_reviews_enable %}
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+            {% endif %}
+          </div>
+          <p class="desc"> <p>{{ product.content | strip_html | truncatewords: 30 }}</p></p>
+          <div class="wrap-cart-qty">
+            <div class="info-price">
+              <div class="product-item--price price">
+                <span class=" medium--left">
+                  {% include 'price' with product.price %}
+                </span>
+                {% if on_sale %}
+                  <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+                  {% assign compare_price = product.compare_at_price %}
+                  {% assign product_price = product.price %}
+                  {% include 'price-sale' %}
+                  </del>
+                {% endif %}
+                
+              </div>
+            </div>
+            <div class="info-extra">
+              <a href="#" class="link-wishlist"><span class="lnr lnr-heart"></span></a>
+              <a href="#" class="link-compare"><span class="lnr lnr-sync"></span></a>
+            </div>
+            
+       
+            <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
+            <select name="id"  class="product-variants hidden">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+                {% else %}
+                  <option disabled="disabled">
+                    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                  </option>
+                {% endif %}
+              {% endfor %}
+            </select>
+           
+
+              {% if settings.product_quantity_enable %}
+                <div class="quantity-wrapper info-qty">
+                  <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+                  <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
+                </div>
+                {% endif %}
+
+              <button type="submit" name="add" class="btn-link-default add-to-cart"><span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
+            </form>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+
+</div>

@@ -1,0 +1,51 @@
+<main class="main-content">
+
+{% if page.metafields.jvpage.titlePage != 'hide'  %}
+  <div class="common-static-header">
+    <div class="parallax-bg" data-stellar-background-ratio="0.25" 
+      {% if settings.bg_page_shop_enable %}
+        style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"
+      {% endif %}></div>
+    <div class="container">
+      <h1 ><span>{{ page.title }} {{ 'general.meta.listcollections' | t }}</span></h1>
+    </div>
+  </div>
+{% endif %}
+{% if page.metafields.jvpage.breadcrumb != 'hide'  %}
+<div class="container">
+  {% include 'breadcrumb' %}
+</div>
+{% endif %}
+
+<section role="main" class="wrapper-content full-content {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+<div class="container">
+  
+  {% if settings.page_collections_enable %}
+    <div class="row">
+      {% for collection in collections %}
+        {% unless collection.handle == 'frontpage' or collection.handle == 'all' %}
+          {% include 'collection-item' %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+
+{% if settings.page_product_in_collections_enable %}
+  
+    {% for link in linklists.all-collections.links %}
+      {% assign collection = link.object %}
+      {% include 'collection-list-item' %}
+    {% else %}
+      {% comment %} Default collection order  {% endcomment %}
+    {% for collection in collections %}
+        {% unless collection.handle == 'frontpage' or collection.handle == 'all' %}
+          {% include 'collection-list-item' %}
+        {% endunless %}
+    {% endfor %}
+  {% endfor %}
+
+{% endif %}
+</div>
+</section>
+</main>

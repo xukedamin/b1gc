@@ -1,0 +1,258 @@
+/***********************************************************************
+						Charts & Progress Bars						
+************************************************************************/
+
+/*Circle Chart*/
+.circle1 .circles-text {
+	color: $color_silver-darker;
+	font-size: 60px !important;
+}
+.list-chart-processbar {
+	padding: 40px 0;
+}
+.circle1 {
+	float: left;
+	margin-right: 135px;
+	width: 300px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.circle2 {
+	@extend %jv-border-radius-50;
+	float: left;
+	height: 170px;
+	margin-right: 80px;
+	padding: 23px;
+	width: 170px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.circle2 .circles-text {
+	font-size: 30px !important;
+}
+#chart-4 {
+	background: #2ea0d7;
+
+	.circles-text {
+		color: $color_white;
+	}
+}
+#chart-5 {
+	background: #fec942;
+
+	.circles-text {
+		color: $color_white;
+	}
+}
+#chart-6 {
+	background: $color_silver-darker;
+
+	.circles-text {
+		color: $color_shark;
+	}
+}
+#chart-7 {
+	background: $color_candlelight;
+
+	.circles-text {
+		color: $color_shark;
+	}
+}
+#chart-8 {
+	background: $color_shark;
+
+	.circles-text {
+		color: $color_candlelight;
+	}
+}
+
+/*Progressbar*/
+.item-progressbar label {
+	display: block;
+	width: 100%;
+	font-weight: 400;
+	font-size: 16px;
+	color: $color_abbey;
+}
+.list-chart-processbar {
+	.item-progressbar {
+		max-width: 470px;
+		width: 100%;
+	}
+	.ui-progressbar .ui-progressbar-value {
+		float: right;
+		margin: 0;
+		border: none;
+	}
+	.ui-progressbar.ui-widget-content {
+		background: $color_mercury;
+		border: none;
+	}
+	#progressbar-1 {
+		&.ui-progressbar {
+			height: 5px;
+			
+			@extend %jv-border-radius-0;
+
+			.ui-progressbar-value {
+				background: #fec942;
+				@extend %jv-border-radius-0;
+			}
+		}
+	}
+	#progressbar-2 {
+		&.ui-progressbar {
+			height: 5px;
+			@extend %jv-border-radius-0;
+
+			.ui-progressbar-value {
+				background: #2ea0d7;
+				@extend %jv-border-radius-0;
+			}
+		}
+	}
+	#progressbar-3 {
+		&.ui-progressbar {
+			height: 5px;
+			@extend %jv-border-radius-0;
+
+			.ui-progressbar-value {
+				background: $color_abbey;
+				@extend %jv-border-radius-0;
+			}
+		}
+	}
+	#progressbar-4 {
+		&.ui-progressbar {
+			height: 5px;
+			@extend %jv-border-radius-0;
+
+			.ui-progressbar-value {
+				background: $color_candlelight;
+				@extend %jv-border-radius-0;
+			}
+		}
+	}
+	#progressbar-5 {
+		&.ui-progressbar {
+			height: 11px;
+			@extend %jv-border-radius-4;
+
+			.ui-progressbar-value {
+				background: #fec942;
+				@extend %jv-border-radius-4;
+			}
+		}
+	}
+	#progressbar-6 {
+		&.ui-progressbar {
+			height: 11px;
+			@extend %jv-border-radius-4;
+
+			.ui-progressbar-value {
+				background: #2ea0d7;
+				
+				@extend %jv-border-radius-4;
+			}
+		}
+	}
+	#progressbar-7 {
+		&.ui-progressbar {
+			height: 11px;
+			@extend %jv-border-radius-4;
+
+			.ui-progressbar-value {
+				background: $color_abbey;
+				@extend %jv-border-radius-4;
+			}
+		}
+	}
+	#progressbar-8 {
+		&.ui-progressbar {
+			height: 11px;
+			@extend %jv-border-radius-4;
+
+			.ui-progressbar-value {
+				background: $color_candlelight;
+				@extend %jv-border-radius-4;
+			}
+		}
+	}
+	#progressbar-2, #progressbar-2, #progressbar-5, #progressbar-6 {
+		margin-bottom: 50px;
+	}
+	#progressbar-3, #progressbar-4 {
+		margin-bottom: 100px;
+	}
+}
+
+
+/*Pie Chart*/
+.pie-chart {
+	float: left;
+	height: 210px;
+	margin-left: -8px;
+	margin-right: 52px;
+	max-width: 200px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.percentage:last-child {
+	display: none;
+}
+#target1 {
+	.pie0 {
+		background-color: #2ea0d7;
+		fill: #2ea0d7;
+	}
+	.pie1 {
+		background-color: $color_jelly-bean;
+		fill: $color_jelly-bean;
+	}
+}
+#target2 {
+	.pie0 {
+		background-color: #fec942;
+		fill: #fec942;
+	}
+	.pie1 {
+		background-color: $color_old-gold;
+		fill: $color_old-gold;
+	}
+}
+#target3 {
+	.pie0 {
+		background-color: $color_silver-chalice;
+		fill: $color_silver-chalice;
+	}
+	.pie1 {
+		background-color: $color_silver-darker;
+		fill: $color_silver-darker;
+	}
+}
+#target4 {
+	.pie0 {
+		background-color: $color_golden-grass;
+		fill: $color_golden-grass;
+	}
+	.pie1 {
+		background-color: $color_candlelight;
+		fill: $color_candlelight;
+	}
+}
+#target5 {
+	.pie0 {
+		background-color: $color_abbey;
+		fill: $color_abbey;
+	}
+	.pie1 {
+		background-color: $color_shark;
+		fill: $color_shark;
+	}
+}

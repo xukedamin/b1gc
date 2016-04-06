@@ -1,0 +1,199 @@
+{% assign count_images = product.images | size %}
+<div id="ap-quick-view-product" style="display:none;">
+    <div class="ap-quickview-overlay"></div>
+    <div class="ap-quick-view-product">
+            
+    </div>
+    <div id="ap-quickview-modal" style="display:none;">
+    <div class="primary_block ap-row">
+        <div class="product-left-column">
+            <div class="image-block">
+                <div class="ajax-loading-thumimg"></div>
+                {% assign imagesize = settings.product_page_imagesize %}
+                <span class="view_full_size">
+                    {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+                    <a class="img-product" title="{{ product.title }}" href="{{ featured_image | img_url: '1024x1024' }}">
+                        <img class="img-responsive" id="ap-product-featured-image-quickview" src="{{ featured_image | img_url: imagesize }}" alt="{{ product.title }}"/>
+                    </a>
+                </span>
+            </div>
+            <div class="ap-more-view-wrapper">
+              <div id="thumbs_list_ap_quickview">
+                <ul class="product-photo-thumbs quickview-more-views-owlslider" id="thumblist_ap_quickview">
+                </ul>
+              </div>
+              <span class="ap_view_scroll_spacer">
+                 <a id="ap_view_scroll_left_quickview" class="" title="Previous" href="javascript:;"></a>
+                 <a id="ap_view_scroll_right_quickview" title="Next" href="javascript:;"></a>
+              </span>
+            </div>
+        </div>
+        <div class="product-right-column">
+            <div class="product-info">
+                <h3 class="qwp-name">&nbsp;</h3>
+                {% if settings.product_reviews_enable %}
+                    <div class="review hidden">
+                        <span class="shopify-product-reviews-badge" data-id=""></span>
+                    </div>
+                {% endif %}
+                <div class="product-description rte">
+                    {{ product.description | truncatewords: 30}}
+                </div>
+                <div class="brand"></div>
+                <div class="availability">
+                </div>
+                <div class="product-sku">
+                </div>
+                <div class="socialsharing_product hide">
+                  <ul class="social-sharing list-unstyled">
+                    <li class="li-twitter hide">
+                        <a class="btn btn-twitter" target="_blank" href="javascript:;">
+                            <i class="fa fa-twitter"></i> 
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li class="li-facebook hide">
+                        <a class="btn btn-facebook" target="_blank" href="javascript:;">
+                            <i class="fa fa-facebook"></i>
+                            <span>Share</span>
+                        </a>
+                    </li>
+                    <li class="li-google hide">
+                        <a class="btn btn-google-plus" target="_blank" href="javascript:;">
+                            <i class="fa fa-google-plus"></i>
+                            <span>Google+</span>
+                        </a>
+                    </li>
+                    <li class="li-linkedin hide">
+                        <a class="btn btn-linkedin" target="_blank" href="javascript:;">
+                            <i class="fa fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="li-pinterest hide">
+                        <a class="btn btn-pinterest" target="_blank" href="javascript:;">
+                            <i class="fa fa-pinterest"></i>
+                            <span>Pinterest</span>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="ap-clearfix usefull_link_block">
+                    <li class="print">
+                        <a href="javascript:print();"><i class="fa fa-print"></i> Print</a>
+                    </li>
+                    <li class="view-detail">
+                        <a href="" target="_blank"><i class="fa fa-eye"></i><span>View Detail</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-extra product-item">
+                <div id="quickview-nav-button" style="position: relative; top: -20px;">
+                  <ul>
+                    <li class="ajax-loading hide">Loading...</li>
+                    <li><a class="btn-previous-product" href="javascript:;" style="float:left;">u2190 Previous</a></li>
+                    <li><a class="btn-next-product" href="javascript:;" style="float:right;">Next u2192</a></li>
+                  </ul>
+                </div>
+                <div>
+                    <form action="/cart/add" method="post" enctype="multipart/form-data" class="variants form-ajaxtocart">
+                        <span class="prices">
+                          <span id="APProductPrice" class="price {% if product.compare_at_price > product.price %} sale-price{% endif %}">
+                            {{ product.price | money }}
+                          </span>
+                          <span class="price-product-detail">
+                            <span class="old-price product-price">{{ product.compare_at_price | money }}</span>
+                          </span>
+                        </span>
+                        <select name='id'></select>
+                        <div class="ap-clearfix"></div>
+                        <div class="quantity_wanted_p">
+                            <label for="ap-quantity-detail" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+                            <input type="number" id="ap-quantity-detail" name="quantity" value="1" min="1" class="quantity-selector">
+                        </div>
+                        <button type="submit" name="add" id="AddToCart{{ product.id }}" class="ap-clearfix btn add_to_cart_detail ajax_addtocart">
+                            <span >{{ 'products.product.add_to_cart' | t }}</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+          </div>
+      </div>
+      <a title="Close" class="ap-quickview-close" href="javascript:;"></a>
+    </div>
+</div>
+<script type="text/javascript">
+  Shopify.doNotTriggerClickOnThumb = false;
+  function changeImageQuickView(img, selector) {
+    var src = $(img).attr("src");
+    src = src.replace("_compact", "");
+    var n = $(".ap-quick-view-product .ajax-loading-thumimg");
+    n.show();
+    $(selector).attr("src", src);
+    n.hide();
+  }
+  var apSelectCallbackQuickView = function(variant, selector) {
+      var productItem = jQuery('.ap-quick-view-product .product-item');
+          addToCart = productItem.find('.add_to_cart_detail'),
+          productPrice = productItem.find('.price'),
+          comparePrice = productItem.find('.old-price'),
+          totalPrice = productItem.find('.total-price span');
+      
+      if (variant) {
+        if (variant.available) {
+          // We have a valid product variant, so enable the submit button
+          addToCart.removeClass('disabled').removeAttr('disabled');
+          $(addToCart).text(getConfig(config.add_to_cart, "Add to Cart"));
+        } else {
+          // Variant is sold out, disable the submit button
+          addToCart.addClass('disabled').attr('disabled', 'disabled');
+          $(addToCart).text(getConfig(config.sold_out, "Sold Out"));
+        }
+        // Regardless of stock, update the product price
+        productPrice.html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}"));
+        // Also update and show the product's compare price if necessary
+        if ( variant.compare_at_price > variant.price ) {
+          comparePrice
+            .html(Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}"))
+            .show();
+          productPrice.addClass('on-sale');
+        } else {
+          comparePrice.hide();
+          productPrice.removeClass('on-sale');
+        }
+        // Update variant inventory
+        var inventoryInfo = productItem.find("#ap-quick-view-product .product-inventory span");
+        if (variant.available) {
+          if (variant.inventory_management!=null) {
+            inventoryInfo.text(variant.inventory_quantity + " in stock");
+          } else {
+            inventoryInfo.text("Many in stock");
+          }
+        } else {
+          inventoryInfo.text("Out of stock");
+        }
+        apUpdatePricingQuickView();
+    
+        {% if settings.enable_multiple_currencies %}
+        if(jQuery("#ap-quick-view-product #currencies").val()) {
+          Currency.convertAll('{{ shop.currency }}', jQuery("#ap-quick-view-product #currencies").val(), 'span.money', 'money_format');
+        }
+        {% endif %}
+        /*begin variant image*/
+        if (variant && variant.featured_image) {
+          var originalImage = jQuery("#ap-product-featured-image-quickview");
+          var newImage = variant.featured_image;
+          var element = originalImage[0];
+          Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+            changeImageQuickView(newImage, "#ap-product-featured-image-quickview");
+          });
+        }
+        /*end of variant image*/
+    
+      } else {
+        // The variant doesn't exist. Just a safegaurd for errors, but disable the submit button anyway
+        addToCart.addClass('disabled').attr('disabled', 'disabled');
+        $(addToCart).text(getConfig(config.unavailable, "Unavailable"));
+      }
+  };
+</script>
