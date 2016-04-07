@@ -9,8 +9,6 @@
     margin-top: 50px;
 }
 
-
-
 .nav-tabs-default {
   margin-bottom: 20px;
 
@@ -63,10 +61,10 @@
 				line-height: inherit;
 				margin-right: 6px;
 				padding: 13px 30px;
-				@extend %text-up;
 				background: transparent;
-				@extend %jv-transition-easeout;
 				border: none;
+				@extend %text-up;
+				@extend %jv-transition-easeout;
 
 				&:before {
 					position: absolute;
@@ -148,11 +146,11 @@
 				line-height: inherit;
 				margin-right: 6px;
 				padding: 10px 25px;
-				@extend %text-up;
 				background: transparent;
-				@extend %jv-transition-easeout;
 				border: none;
 				overflow: hidden;
+				@extend %text-up;
+				@extend %jv-transition-easeout;
 
 				&:before {
 					position: absolute;

@@ -34,49 +34,51 @@
     {% endif %}
 
     <main class="wrapper main-content templates-collection collection-sidebar-right" role="main">
-    <div class="container" >
-      <div class="row" >
-        <div class="grid-item{% if has_sidebar %} col-md-9 {% endif %}">
-        {% comment %} Different markup if description is set {% endcomment %}
-        
-          <div class="section-header__right sort-pagi-bar top clearfix">
-            {% include 'collection-views' %}
-          
-            {% if paginate.pages > 1 %}
-              <div class="pagination-2">
-                {% include 'pagination-2' %}
+    <div class="container">
+      <div class="row">
+          <div class="grid-item{% if has_sidebar %} col-md-9 {% endif %}">
+            {% comment %} Different markup if description is set {% endcomment %}
+            
+              <div class="section-header__right sort-pagi-bar top clearfix">
+               {% assign collection_data_view = 'sidebar_right' %}
+                {% include 'collection-views' %}
+              
+                {% if paginate.pages > 1 %}
+                  <div class="pagination-2">
+                    {% include 'pagination-2' %}
+                  </div>
+                {% endif %}
+
+                <div class="product-filter pull-right">
+                {% include 'collection-sorting' %}
+                </div>
+
               </div>
-            {% endif %}
 
-            <div class="product-filter pull-right">
-            {% include 'collection-sorting' %}
+          <div class="row masonry-container">
+            {% for product in collection.products  %}
+              
+              {% include 'product-grid-item' %}
+            {% else %}
+              <div class="grid-item col-xs-12 messagefull info">
+                <div class=" content">{{ 'collections.general.no_matches' | t }}</div>
+              </div>
+            {% endfor %}
+          </div>
+          {% if paginate.pages > 1 %}
+            <div class="pagination-2">
+              {% include 'pagination-2' %}
             </div>
-
-          </div>
-
-      <div class="row masonry-container">
-        {% for product in collection.products  %}
-          
-          {% include 'product-grid-item' %}
-        {% else %}
-          <div class="grid-item col-xs-12 messagefull info">
-            <div class=" content">{{ 'collections.general.no_matches' | t }}</div>
-          </div>
-        {% endfor %}
-      </div>
-      {% if paginate.pages > 1 %}
-        <div class="pagination-2">
-          {% include 'pagination-2' %}
+          {% endif %}
         </div>
+      {% if has_sidebar %}
+        <aside class="sidebar sidebar-product col-md-3" id="collectionFilters">
+          {% include 'collection-sidebar' %}
+        </aside>
       {% endif %}
+      </div>
+  {% endpaginate %}
     </div>
-    {% if has_sidebar %}
-      <aside class="sidebar sidebar-product col-md-3" id="collectionFilters">
-        {% include 'collection-sidebar' %}
-      </aside>
-    {% endif %}
-  </div>
-{% endpaginate %}
+  </main>
+  </div> 
 </div>
-</main>
-</div> </div>

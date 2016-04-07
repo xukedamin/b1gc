@@ -1,0 +1,42 @@
+<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm ffffffffffffffffffffff form-add-to-cart product-option">
+  <div class="wrap-variants clearfix">
+    <select name="id" id="productSelect"   class="product-variants hidden">
+      {% for variant in product.variants %}
+      {% if variant.available %}
+
+      <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+
+      {% else %}
+      <option disabled="disabled">
+        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+      </option>
+      {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="wrap-cart-detail clearfix">
+
+    {% if settings.product_quantity_enable %}
+    <div class="quantity-wrapper">
+      <div class="quantity">
+
+        <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
+      </div>   </div>         
+    {% endif %}
+    <div  {% if settings.product_quantity_enable %} class="cart-button"  {% endif %} >
+
+      <button type="submit" name="add" id="addToCart" class="normal-btn normal-btn-gray btn-size-3 uppercase addToCart btn-link-default add-to-cart">
+        <i class="icon-svg-icon-16"></i>
+        <span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+      </button>
+
+    </div>  
+  </div>                
+
+  {% if settings.product_quantity_message %}
+  <span id="variantQuantity" class="variant-quantity"></span>
+  {% endif %}
+
+</form>

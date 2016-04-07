@@ -2881,7 +2881,7 @@
         "type": "text",
         "id": "home4_blog_link",
         "label": "Link",
-        "default": "https:\/\/wolverine-1.myshopify.com\/blogs\/news"
+        "default": "https:\/\/bigc-1.myshopify.com\/blogs\/news"
       }
     ]
   },
@@ -3371,6 +3371,21 @@
   {
     "name": "Sidebar ",
     "settings": [
+      {
+        "type": "select",
+        "id": "collection_sidebar_location",
+        "label": "Collection Sidebar Location",
+        "options": [
+          {
+            "value": "collection_sidebar_left",
+            "label": "Sidebar left"
+          },
+          {
+            "value": "collection_sidebar_right",
+            "label": "Sidebar right"
+          }
+        ]
+      },
       {
         "type": "select",
         "id": "collection_prod_image_sizes",
@@ -4310,7 +4325,7 @@
         "type": "text",
         "id": "slide_1_link",
         "label": "Slide link",
-        "default": "http:\/\/wolverine-1.myshopify.com\/"
+        "default": "http:\/\/bigc-1.myshopify.com\/"
       },
       {
         "type": "header",
@@ -4368,7 +4383,7 @@
         "type": "text",
         "id": "slide_2_link",
         "label": "Slide link",
-        "default": "http:\/\/wolverine-1.myshopify.com\/"
+        "default": "http:\/\/bigc-1.myshopify.com\/"
       },
       {
         "type": "header",
@@ -4426,7 +4441,7 @@
         "type": "text",
         "id": "slide_3_link",
         "label": "Slide link",
-        "default": "http:\/\/wolverine-1.myshopify.com\/"
+        "default": "http:\/\/bigc-1.myshopify.com\/"
       },
       {
         "type": "header",
@@ -4484,7 +4499,7 @@
         "type": "text",
         "id": "slide_4_link",
         "label": "Slide link",
-        "default": "http:\/\/wolverine-1.myshopify.com\/"
+        "default": "http:\/\/bigc-1.myshopify.com\/"
       }
     ]
   },

@@ -11,22 +11,46 @@
   {% endfor %}
 {% endif %}
 
-{% if collection and collection.products_count > 1 %}
-<div class="shop-detail-relate">
-  <h5 >{{ 'products.general.related_products' | t }}</h5>
-  <div class=" {% if settings.product_style_option == 'style-1' %} shop-gallery-carousel multi-slider dir-nav caro  {% else %} row shop-detail-relate pb-45 {% endif %} ">
-    {% assign current_product = product %}
-    {% assign current_product_found = false %}
-    {% for product in collection.products limit: number_of_products_to_fetch %}
-    {% if product.handle == current_product.handle %}
-    {% assign current_product_found = true %}
-    {% else %}
-    {% unless current_product_found == false and forloop.last %}
-    {% include 'product-related-item' %}
-    {% endunless %}
-    {% endif %}
-    {% endfor %}
-  </div>
-</div>   
-{% endif %}
+
+
  
+
+
+ <div class="relate-product">
+  <!-- Nav tabs -->
+  <div class="nav-tabs-default">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#relate-product" aria-controls="related-product" role="tab" data-toggle="tab">Related Products</a></li>
+      <li role="presentation"><a href="#upsell-product" aria-controls="upsell-product" role="tab" data-toggle="tab">UP-SELL PRODUCTS</a></li>
+    </ul>
+  </div>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="related-product">
+      <div class="shop-detail-relate">
+      
+{% if collection and collection.products_count > 1 %}
+        <h5 >{{ 'products.general.related_products' | t }}</h5>
+        <div class=" {% if settings.product_style_option == 'style-1' %} shop-gallery-carousel multi-slider dir-nav caro  {% else %} row shop-detail-relate pb-45 {% endif %} product-slider owl-default">
+          {% assign current_product = product %}
+          {% assign current_product_found = false %}
+          <div class="wrap-item">
+          {% for product in collection.products limit: number_of_products_to_fetch %}
+            {% if product.handle == current_product.handle %}
+              {% assign current_product_found = true %}
+            {% else %}
+              {% unless current_product_found == false and forloop.last %}
+
+                {% include 'product-grid-item' %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>   
+{% endif %}
+
+    </div>
+  </div>
+</div>
+
