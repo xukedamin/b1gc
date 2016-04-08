@@ -7,10 +7,11 @@
 	height: 40px;
 	line-height: 40px;
 	padding: 0 30px;
-	@extend %text-up;
-	@extend %jv-transition-easeout;
 	vertical-align: top;
 	overflow: hidden;
+	@extend %text-up;
+	@extend %jv-transition-easeout;
+	@extend %text-center;
 
 	a {
 		color: inherit;
@@ -18,8 +19,8 @@
 	span {
 		display: block;
 		line-height: 32px;
-		@extend %jv-transition-easeout;
 		margin: 4px;
+		@extend %jv-transition-easeout;
 	}
 }
 

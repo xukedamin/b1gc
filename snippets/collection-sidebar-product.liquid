@@ -1,0 +1,69 @@
+{% comment %}
+The code below relies on the advanced-tag-loop snippet.
+The snippet is already included in snippets/breadrumbs.liquid
+because it is needed there too, but if you remove
+breadcrumbs you need to include this:
+
+{% include 'advanced-tag-loop' %}
+{% endcomment %}
+
+
+
+{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
+  <div class="widget-wrapper">
+    <div class="widget category-product widget-category">
+    <h2 class="widget-title sub-title">{{ 'collections.sidebar.product_categories' | t }}</h2>
+{% endif %}
+
+  {% comment %} ----- Sidebar linklist 1 ----- {% endcomment %}
+  {% if settings.show_widget_linklist1 %}
+    {% assign list_temp = settings.widget_linklist1 %}
+    {% include 'collection-sidebar--linklist'%}
+  {% endif %}
+
+  {% comment %} ----- Sidebar linklist 2 ----- {% endcomment %}
+
+  {% if settings.show_widget_linklist2 %}
+    {% assign list_temp = settings.widget_linklist2 %}
+    {% include 'collection-sidebar--linklist'%}
+  {% endif %}
+
+{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
+      </div>  
+    </div>
+{% endif %}
+
+
+
+{% comment %} ----- Featured Products ----- {% endcomment %}
+{% if settings.featured_prod_visible and collections[settings.featured_prod_collection].products != empty %}
+<div class="widget-wrapper">
+  <div class="widget widget-default">  
+    {% if settings.featured_prod_heading != blank %}
+    <h3 class="widget-title sub-title">
+      <span>{{ settings.featured_prod_heading }}</span>
+    </h3>
+    {% endif %}
+
+    {% assign featuredCollection = collections[settings.featured_prod_collection] %}
+    <div class="featured-products shop-recently-viewed">
+      {% for product in featuredCollection.products limit: settings.featured_prod_num %}
+      {% include 'product-item-small' %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+{% if settings.sidebar_content_enable %}
+<nav class="sidebar-module">
+  <div class="section-header">
+    <p class="section-header__title h4">{{ pages[settings.sidebar_content_page].title }}</p>
+  </div>
+  <div>
+    {{ pages[settings.sidebar_content_page].content }}
+  </div>
+</nav>
+{% endif %}

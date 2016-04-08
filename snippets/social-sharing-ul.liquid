@@ -14,12 +14,12 @@
 
 {% assign shareButtonStyle = settings.social_sharing_style %}
 
-<ul class="social-sharing-ul social-01 {{ shareButtonStyle }}" data-permalink="{{ permalinkURL }}">
+<ul class="social-sharing-ul social-01 {{ shareButtonStyle }} list-inline share-social" data-permalink="{{ permalinkURL }}">
 
   {% if settings.share_facebook %}
   <li>
     <a target="_blank" href="//www.facebook.com/sharer.php?u={{ permalinkURL }}" class="share-facebook">
-      <i class="icon-facebook"></i>
+      <i class="fa fa-facebook-square"></i>
       {% if settings.social_sharing_count %}
         <span class="share-count">0</span>
       {% endif %}
@@ -28,7 +28,7 @@
 
   {% if settings.share_twitter %}
     <li><a target="_blank" href="//twitter.com/share?text={{ shareTitle }}&amp;url={{ permalinkURL }};source=webclient" class="share-twitter">
-      <i class="icon-twitter"></i>
+      <i class="fa fa-twitter-square"></i>
       {% if settings.social_sharing_count %}
         <span class="share-count">0</span>
       {% endif %}
@@ -39,7 +39,7 @@
 
     {% if settings.share_pinterest %}
      <li> <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ permalinkURL }}&amp;media=http:{% if template contains 'product' %}{{ product | img_url: '1024x1024' }}{% else %}{{ article | img_url: '1024x1024' }}{% endif %}&amp;description={{ shareTitle }}" class="share-pinterest">
-        <i class="icon-pinterest"></i>
+        <i class="fa fa-pinterest-square"></i>
         {% if settings.social_sharing_count %}
           <span class="share-count">0</span>
         {% endif %}
@@ -48,7 +48,7 @@
 
     {% if settings.share_fancy %}
    <li>   <a target="_blank" href="//fancy.com/fancyit?ItemURL={{ permalinkURL }}&amp;Title={{ shareTitle }}&amp;Category=Other&amp;ImageURL={% if template contains 'product' %}{{ product | img_url: '1024x1024' }}{% else %}{{ article | img_url: '1024x1024' }}{% endif %}" class="share-fancy">
-        <i class="icon icon-fancy"></i>
+        <i class="fa fa-share"></i>
         <span class="share-title">{{ 'general.social.share_on_fancy' | t }}</span>
       </a></li>
     {% endif %}
@@ -58,7 +58,7 @@
   {% if settings.share_google %}
    <li> <a target="_blank" href="//plus.google.com/share?url={{ permalinkURL }}" class="share-google">
       <!-- Cannot get Google+ share count with JS yet -->
-      <i class="icon-gplus"></i>
+      <i class="fa fa-google-plus-square"></i>
       {% if settings.social_sharing_count %}
         <span class="share-count">+1</span>
       {% endif %}

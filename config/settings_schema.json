@@ -3340,12 +3340,16 @@
         "label": "Style Product detail ",
         "options": [
           {
-            "value": "style-1",
+            "value": "product_style_option_nosidebar",
             "label": "Detail no sidebar"
           },
           {
-            "value": "style-2",
-            "label": "Detail width sidebar"
+            "value": "product_style_option_leftsidebar",
+            "label": "Detail width left sidebar"
+          },
+          {
+            "value": "product_style_option_rightsidebar",
+            "label": "Detail width right sidebar"
           }
         ]
       },
@@ -3356,15 +3360,15 @@
         "info": "For Variant Product: you should set Zoom style",
         "options": [
           {
-            "value": "1",
+            "value": "product_image_gallery_style_zoom",
             "label": "Zoom"
           },
           {
-            "value": "2",
+            "value": "product_image_gallery_style_slider",
             "label": "Slider"
           }
         ],
-        "default": "2"
+        "default": "product_image_gallery_style_slider"
       }
     ]
   },

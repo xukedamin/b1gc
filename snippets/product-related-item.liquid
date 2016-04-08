@@ -22,7 +22,7 @@
 {% assign image_size = settings.collection_prod_image_sizes %}
 
 
-{% if settings.product_style_option == 'style-1' %} 
+{% if settings.product_style_option == 'product_style_option_nosidebar' %} 
 <div class="shop-product-item">
   <div class="content text-center">
     <div class="image"><img src="{{ product.featured_image.src | img_url: image_size }}" alt="{{ product.featured_image.alt | escape }}">

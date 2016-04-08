@@ -31,7 +31,7 @@
       
 {% if collection and collection.products_count > 1 %}
         <h5 >{{ 'products.general.related_products' | t }}</h5>
-        <div class=" {% if settings.product_style_option == 'style-1' %} shop-gallery-carousel multi-slider dir-nav caro  {% else %} row shop-detail-relate pb-45 {% endif %} product-slider owl-default">
+        <div class=" {% if settings.product_style_option == 'product_style_option_nosidebar' %} shop-gallery-carousel multi-slider dir-nav caro  {% else %} row shop-detail-relate pb-45 {% endif %} product-slider owl-default">
           {% assign current_product = product %}
           {% assign current_product_found = false %}
           <div class="wrap-item">
