@@ -217,12 +217,24 @@
         }
         //Product Gallery
         if ($('.product-gallery .bxslider').length > 0) {
-            $('.product-gallery .bxslider').bxSlider({
-                pagerCustom: '.product-gallery #bx-pager',
+            // $('.product-gallery .bxslider').bxSlider({
+            //     pagerCustom: '.product-gallery #bx-pager',
+            //     nextText: '<span class="lnr lnr-chevron-right"></span>',
+            //     prevText: '<span class="lnr lnr-chevron-left"></span>'
+            // });
+
+             $('.product-gallery #bx-pager').bxSlider({
+                slideWidth: 100,
+                minSlides: 2,
+                maxSlides: 4,
+                slideMargin: 6,
                 nextText: '<span class="lnr lnr-chevron-right"></span>',
                 prevText: '<span class="lnr lnr-chevron-left"></span>'
-            });
+              });
         }
+
+
+
         //Post Gallery
         if ($('.post-format-gallery .bxslider').length > 0) {
             $('.post-format-gallery .bxslider').bxSlider({

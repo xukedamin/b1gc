@@ -486,6 +486,9 @@
         -moz-transform: rotate(-45deg);
         width: 200%;
       }
+
+
+
       img {
         width: 100%;
       }
@@ -495,8 +498,11 @@
     height: auto;
     width: 100%;
   }
-  .bx-viewport {
-    background: $color_wild-sand none repeat scroll 0 0;
+
+  .product-photo-container
+  // .bx-viewport 
+  {
+    background: $color_wild-sand none repeat scroll 0 0; 
   }
   .bx-prev {
     color: #a0a0a0;
@@ -519,6 +525,21 @@
     position: absolute;
     top: 50%;
   }
+
+////new
+
+  .bx-pager{
+    @extend %text-center;
+    .bx-pager-item {
+        display: inline-block;
+        margin: 5px;
+    }
+    .active::after{
+        display: none;
+    }
+  }
+
+
   .share-social {
     margin-left: 150px;
     margin-top: 15px;
