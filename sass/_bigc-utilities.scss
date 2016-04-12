@@ -393,12 +393,12 @@ blockquote {
 	margin:0;
 }
 .owl-default .owl-theme .owl-controls .owl-buttons div.owl-prev {
-    background: rgba(0, 0, 0, 0) url("left.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url('{{ "left.png" | asset_url }}') no-repeat scroll 0 0;
     left: 0;
 }
 .owl-default .owl-theme .owl-controls .owl-buttons div.owl-next {
-    right: 0;
-	background: rgba(0, 0, 0, 0) url("right.png") no-repeat scroll 0 0;
+  right: 0;
+	background: rgba(0, 0, 0, 0) url('{{ "right.png" | asset_url }}') no-repeat scroll 0 0;
 }
 .owl-default  .owl-theme .owl-controls .owl-buttons div {
 	background:transparent;
@@ -424,12 +424,12 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
 
-  background: $color_white url("select-arrow.png") no-repeat scroll 100% -40px;
+  background: rgba(0, 0, 0, 0) url('{{ "arrow-down.png" | asset_url }}') no-repeat scroll right 13px center;
   border: 1px solid #ddd;
   box-sizing: border-box;
   color: #444 !important;
   font-size: 13px;
-  height: 40px;
+  height: 38px;
   line-height: 22px;
   max-width: 100%;
   overflow: hidden;
@@ -544,8 +544,7 @@ select option {
   left: 3px;
   line-height: 44px;
   position: absolute;
-  // text-align: center;
-  // text-transform: uppercase;
+
   @extend %text-center;
   @extend %text-up;
 }

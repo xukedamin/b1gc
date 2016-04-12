@@ -174,7 +174,9 @@ Dependency-free breakpoint mixin
 }
 
 /* line 197, ../sass/_bigc-utilities.scss */
-.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .accordion-box h2, .accordion-box.style2 .item-accordion .title-accordion, .accordion-box.style3 .item-accordion .title-accordion, .sub-title, .title, .desc-title, .leading-text-adv, .item-text-adv, .dropdownMenu > li > a, .dropdownMenu li ul li a, .main-nav > ul > li > a, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-footer3 > a, .box-menu-footer3 > h2, .title-product a, .item-product-leading .readmore, .relate-product .item-product a, .title-product-detail, .attr-product.attr-size, .attr-product label, .info-qty > label, .item-collections .inner .info-collections .title, .content-catelog > h2, .content-catelog .download-catalog, .product-sort a, .product-filter .ui-selectmenu-button, .product-filter .filter-selected, .item-product-info .product-readmore, .title-popular-box, .post-title, .blog-list-title, .widget-post-adv-text, .title-sidebar-blog, .title-post-leading, .banner-box, .banner-box.banner-style3 .banner-box-info, .banner-box.banner-style3 .btn-link-hidden, .slider-tab #bx-pager a, .banner-rect-info, .banner-info-text, .page-register form label, .nav-tabs-filter .nav-tabs > li > a, .filter-product .btn-filter, .advanced-filters a, .home-extra-sub .close-extra-sub, .header-banner-title, .category-lightbox > h2, .category-lightbox .close-category-lightbox, .product-featured-info > h3, .item-popular-info > h3 a, .logo.logo-footer2 a, .list-tab-title .nav > li > a, .hotdeal-countdown .text, .box-title h2, .latest-post-content > h3, .latest-post-content .readmore, .title-normal, .item-product-loadmore .product-quick-view, .item-product-loadmore .title-product a, .register-box a {
+.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .accordion-box h2, .accordion-box.style2 .item-accordion .title-accordion, .accordion-box.style3 .item-accordion .title-accordion, .sub-title, .title, .desc-title, .leading-text-adv, .item-text-adv, .dropdownMenu > li > a, .dropdownMenu li ul li a, .main-nav > ul > li > a, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-footer3 > a, .box-menu-footer3 > h2, .title-product a, .item-product-leading .readmore, .related-product .item-product a, .title-product-detail, .selector-wrapper.attr-size,
+.attr-product.attr-size, .selector-wrapper label,
+.attr-product label, .info-qty > label, .info-qty .quantity-selector, .item-collections .inner .info-collections .title, .content-catelog > h2, .content-catelog .download-catalog, .product-sort a, .product-filter .ui-selectmenu-button, .product-filter .filter-selected, .item-product-info .product-readmore, .title-popular-box, .post-title, .blog-list-title, .widget-post-adv-text, .title-sidebar-blog, .title-post-leading, .banner-box, .banner-box.banner-style3 .banner-box-info, .banner-box.banner-style3 .btn-link-hidden, .slider-tab #bx-pager a, .banner-rect-info, .banner-info-text, .page-register form label, .nav-tabs-filter .nav-tabs > li > a, .filter-product .btn-filter, .advanced-filters a, .home-extra-sub .close-extra-sub, .header-banner-title, .category-lightbox > h2, .category-lightbox .close-category-lightbox, .product-featured-info > h3, .item-popular-info > h3 a, .logo.logo-footer2 a, .list-tab-title .nav > li > a, .hotdeal-countdown .text, .box-title h2, .latest-post-content > h3, .latest-post-content .readmore, .title-normal, .item-product-loadmore .product-quick-view, .item-product-loadmore .title-product a, .register-box a {
   text-transform: uppercase;
 }
 
@@ -638,14 +640,14 @@ blockquote {
 
 /* line 395, ../sass/_bigc-utilities.scss */
 .owl-default .owl-theme .owl-controls .owl-buttons div.owl-prev {
-  background: transparent url("left.png") no-repeat scroll 0 0;
+  background: transparent url('{{ "left.png" | asset_url }}') no-repeat scroll 0 0;
   left: 0;
 }
 
 /* line 399, ../sass/_bigc-utilities.scss */
 .owl-default .owl-theme .owl-controls .owl-buttons div.owl-next {
   right: 0;
-  background: transparent url("right.png") no-repeat scroll 0 0;
+  background: transparent url('{{ "right.png" | asset_url }}') no-repeat scroll 0 0;
 }
 
 /* line 403, ../sass/_bigc-utilities.scss */
@@ -674,12 +676,12 @@ blockquote {
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
-  background: #fff url("select-arrow.png") no-repeat scroll 100% -40px;
+  background: transparent url('{{ "arrow-down.png" | asset_url }}') no-repeat scroll right 13px center;
   border: 1px solid #ddd;
   box-sizing: border-box;
   color: #444 !important;
   font-size: 13px;
-  height: 40px;
+  height: 38px;
   line-height: 22px;
   max-width: 100%;
   overflow: hidden;
@@ -849,7 +851,7 @@ select option {
   position: absolute;
 }
 
-/* line 552, ../sass/_bigc-utilities.scss */
+/* line 551, ../sass/_bigc-utilities.scss */
 .show-loading .loading-ball .ball {
   border-left-color: #fff !important;
   border-top-color: #fff !important;
@@ -858,7 +860,7 @@ select option {
   -ms-animation: spin .5s infinite linear;
 }
 
-/* line 553, ../sass/_bigc-utilities.scss */
+/* line 552, ../sass/_bigc-utilities.scss */
 .show-loading .loading-ball .ball1 {
   opacity: 1;
   -moz-animation: spinoff .5s infinite linear;
@@ -866,12 +868,12 @@ select option {
   -ms-animation: spinoff .5s infinite linear;
 }
 
-/* line 554, ../sass/_bigc-utilities.scss */
+/* line 553, ../sass/_bigc-utilities.scss */
 .show-loading .loading-ball .ball2 {
   opacity: 0;
 }
 
-/* line 557, ../sass/_bigc-utilities.scss */
+/* line 556, ../sass/_bigc-utilities.scss */
 #overlays-loading {
   -moz-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
@@ -886,7 +888,7 @@ select option {
   opacity: 0;
   visibility: hidden;
 }
-/* line 568, ../sass/_bigc-utilities.scss */
+/* line 567, ../sass/_bigc-utilities.scss */
 #overlays-loading .loading-ball {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -895,13 +897,13 @@ select option {
   top: 50%;
 }
 
-/* line 576, ../sass/_bigc-utilities.scss */
+/* line 575, ../sass/_bigc-utilities.scss */
 body.ajaxing #overlays-loading {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 578, ../sass/_bigc-utilities.scss */
+/* line 577, ../sass/_bigc-utilities.scss */
 .overlay .errors.qty-error {
   background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0 !important;
   border-radius: 0 !important;
@@ -916,45 +918,45 @@ body.ajaxing #overlays-loading {
   width: 100% !important;
 }
 
-/* line 580, ../sass/_bigc-utilities.scss */
+/* line 579, ../sass/_bigc-utilities.scss */
 .btn-secondary.update-cart {
   margin-bottom: 10px;
 }
 
-/* line 582, ../sass/_bigc-utilities.scss */
+/* line 581, ../sass/_bigc-utilities.scss */
 .owl-carousel .item {
   width: auto !important;
   float: none !important;
   margin: 0 !important;
 }
 
-/* line 584, ../sass/_bigc-utilities.scss */
+/* line 583, ../sass/_bigc-utilities.scss */
 .space20 {
   margin-left: -10px !important;
   margin-right: -10px !important;
   width: auto !important;
 }
 
-/* line 589, ../sass/_bigc-utilities.scss */
+/* line 588, ../sass/_bigc-utilities.scss */
 .space20 .item {
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
 
-/* line 593, ../sass/_bigc-utilities.scss */
+/* line 592, ../sass/_bigc-utilities.scss */
 .space30 {
   margin-left: -15px !important;
   margin-right: -15px !important;
   width: auto !important;
 }
 
-/* line 598, ../sass/_bigc-utilities.scss */
+/* line 597, ../sass/_bigc-utilities.scss */
 .space30 .item {
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
 
-/* line 605, ../sass/_bigc-utilities.scss */
+/* line 604, ../sass/_bigc-utilities.scss */
 .page-common-background {
   background-attachment: fixed;
   background-position: 50% 0;
@@ -969,7 +971,7 @@ body.ajaxing #overlays-loading {
   background-image: url("{{ 'customer_image.jpg'  | asset_url }}");
 }
 
-/* line 620, ../sass/_bigc-utilities.scss */
+/* line 619, ../sass/_bigc-utilities.scss */
 .page-common-background:after {
   background-color: rgba(51, 51, 51, 0.6);
   content: "";
@@ -982,18 +984,18 @@ body.ajaxing #overlays-loading {
   width: 100%;
 }
 
-/* line 632, ../sass/_bigc-utilities.scss */
+/* line 631, ../sass/_bigc-utilities.scss */
 section.one-child {
   padding: 75px 0;
   position: relative;
 }
 
-/* line 637, ../sass/_bigc-utilities.scss */
+/* line 636, ../sass/_bigc-utilities.scss */
 .width100 {
   width: 100%;
 }
 
-/* line 640, ../sass/_bigc-utilities.scss */
+/* line 639, ../sass/_bigc-utilities.scss */
 input[type="text"], input[type="email"], input[type="password"] {
   height: 40px;
   border: 1px solid #d0d0d0;
@@ -3178,7 +3180,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 /* line 8, ../sass/_bigc-tab.scss */
-.relate-product .nav-tabs-icon {
+.related-product .nav-tabs-icon {
   margin-top: 50px;
 }
 
@@ -6989,25 +6991,30 @@ a.jvlogo {
   padding:10px;
 } */
 /* SINGE product page:*/
-/* line 432, ../sass/_bigc-product.scss */
-.relate-product .nav-tabs-default {
+/* line 433, ../sass/_bigc-product.scss */
+.related-product .nav-tabs-default {
   margin-bottom: 30px;
 }
-/* line 435, ../sass/_bigc-product.scss */
-.relate-product .owl-default .owl-theme .owl-controls .owl-buttons div {
+/* line 436, ../sass/_bigc-product.scss */
+.related-product .owl-default .owl-theme .owl-controls .owl-buttons div {
   margin-top: -50px;
 }
-/* line 438, ../sass/_bigc-product.scss */
-.relate-product .item-product {
+/* line 439, ../sass/_bigc-product.scss */
+.related-product .item-product {
   margin-bottom: 0;
 }
 
-/* line 446, ../sass/_bigc-product.scss */
+/* line 448, ../sass/_bigc-product.scss */
+.product--bottom-nav {
+  margin: 70px 0;
+}
+
+/* line 452, ../sass/_bigc-product.scss */
 .product-slider .item {
   padding: 0 15px;
 }
 
-/* line 449, ../sass/_bigc-product.scss */
+/* line 455, ../sass/_bigc-product.scss */
 .detail-product-tab {
   border: 1px solid #e5e5e5;
   margin-bottom: 50px;
@@ -7015,7 +7022,7 @@ a.jvlogo {
   padding: 0 30px 20px;
 }
 
-/* line 458, ../sass/_bigc-product.scss */
+/* line 464, ../sass/_bigc-product.scss */
 .product-gallery .bx-wrapper {
   float: left;
   margin: 0;
@@ -7023,12 +7030,12 @@ a.jvlogo {
   position: relative;
   width: 81.4%;
 }
-/* line 465, ../sass/_bigc-product.scss */
+/* line 471, ../sass/_bigc-product.scss */
 .product-gallery #bx-pager {
   float: left;
   width: 18.6%;
 }
-/* line 469, ../sass/_bigc-product.scss */
+/* line 475, ../sass/_bigc-product.scss */
 .product-gallery #bx-pager a {
   background: #f5f5f5 none repeat scroll 0 0;
   display: block;
@@ -7037,7 +7044,7 @@ a.jvlogo {
   position: relative;
   width: 100%;
 }
-/* line 477, ../sass/_bigc-product.scss */
+/* line 483, ../sass/_bigc-product.scss */
 .product-gallery #bx-pager a.active:before {
   background: #1b1d1f none repeat scroll 0 0;
   content: "";
@@ -7050,20 +7057,20 @@ a.jvlogo {
   -moz-transform: rotate(-45deg);
   width: 200%;
 }
-/* line 492, ../sass/_bigc-product.scss */
+/* line 498, ../sass/_bigc-product.scss */
 .product-gallery #bx-pager a img {
   width: 100%;
 }
-/* line 497, ../sass/_bigc-product.scss */
+/* line 503, ../sass/_bigc-product.scss */
 .product-gallery .bxslider img {
   height: auto;
   width: 100%;
 }
-/* line 502, ../sass/_bigc-product.scss */
+/* line 508, ../sass/_bigc-product.scss */
 .product-gallery .product-photo-container {
   background: #f5f5f5 none repeat scroll 0 0;
 }
-/* line 507, ../sass/_bigc-product.scss */
+/* line 513, ../sass/_bigc-product.scss */
 .product-gallery .bx-prev {
   color: #a0a0a0;
   font-size: 18px;
@@ -7073,11 +7080,11 @@ a.jvlogo {
   position: absolute;
   top: 50%;
 }
-/* line 516, ../sass/_bigc-product.scss */
+/* line 522, ../sass/_bigc-product.scss */
 .product-gallery .bx-controls-direction a:hover {
   color: #fec64d;
 }
-/* line 519, ../sass/_bigc-product.scss */
+/* line 525, ../sass/_bigc-product.scss */
 .product-gallery .bx-next {
   color: #a0a0a0;
   font-size: 18px;
@@ -7087,60 +7094,54 @@ a.jvlogo {
   position: absolute;
   top: 50%;
 }
-/* line 533, ../sass/_bigc-product.scss */
+/* line 539, ../sass/_bigc-product.scss */
 .product-gallery .bx-pager .bx-pager-item {
   display: inline-block;
   margin: 5px;
 }
-/* line 537, ../sass/_bigc-product.scss */
+/* line 543, ../sass/_bigc-product.scss */
 .product-gallery .bx-pager .active::after {
   display: none;
 }
-/* line 543, ../sass/_bigc-product.scss */
+/* line 549, ../sass/_bigc-product.scss */
 .product-gallery .share-social {
   margin-left: 150px;
   margin-top: 15px;
 }
-/* line 547, ../sass/_bigc-product.scss */
+/* line 553, ../sass/_bigc-product.scss */
 .product-gallery .share-social a {
   color: #999;
   font-size: 18px;
   padding: 0 5px;
 }
 
-/* line 555, ../sass/_bigc-product.scss */
-.product-popup-content {
-  max-width: 870px;
-  width: 100%;
-}
-
-/* line 561, ../sass/_bigc-product.scss */
+/* line 563, ../sass/_bigc-product.scss */
 .title-product-detail {
   font-size: 30px;
   margin-bottom: 15px;
   margin-top: 0;
 }
 
-/* line 567, ../sass/_bigc-product.scss */
+/* line 569, ../sass/_bigc-product.scss */
 .wrap-star-rating {
   background: transparent url('{{ "rate-bg.png" | asset_url }}') repeat-x scroll left top;
   height: 12px;
   width: 80px;
 }
 
-/* line 572, ../sass/_bigc-product.scss */
+/* line 574, ../sass/_bigc-product.scss */
 .inner-star-rating {
   background: transparent url('{{ "rate-star.png" | asset_url }}') repeat-x scroll left center;
   height: 12px;
 }
 
-/* line 576, ../sass/_bigc-product.scss */
+/* line 578, ../sass/_bigc-product.scss */
 .info-product-detail .desc {
   color: #666;
   margin: 15px 0 10px;
 }
 
-/* line 580, ../sass/_bigc-product.scss */
+/* line 582, ../sass/_bigc-product.scss */
 .select-attr-size {
   background: #fafafa none repeat scroll 0 0;
   box-shadow: 0 0 0 1px #e5e5e5;
@@ -7154,32 +7155,32 @@ a.jvlogo {
   width: 100%;
   z-index: 9;
 }
-/* line 593, ../sass/_bigc-product.scss */
+/* line 595, ../sass/_bigc-product.scss */
 .select-attr-size li {
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 596, ../sass/_bigc-product.scss */
+/* line 598, ../sass/_bigc-product.scss */
 .select-attr-size li:last-child {
   border-bottom: 1px solid transparent;
 }
-/* line 599, ../sass/_bigc-product.scss */
+/* line 601, ../sass/_bigc-product.scss */
 .select-attr-size li a {
   display: block;
   padding: 5px 20px;
   color: #1b1d1f;
 }
-/* line 604, ../sass/_bigc-product.scss */
+/* line 606, ../sass/_bigc-product.scss */
 .select-attr-size li a.selected {
   background: #f5f5f5 none repeat scroll 0 0;
 }
 
-/* line 610, ../sass/_bigc-product.scss */
+/* line 612, ../sass/_bigc-product.scss */
 .selected-attr-size > span {
   position: absolute;
   right: 65px;
 }
 
-/* line 614, ../sass/_bigc-product.scss */
+/* line 616, ../sass/_bigc-product.scss */
 .attr-size .selected-attr-size {
   background: transparent url('{{ "arrow-down.png" | asset_url }}') no-repeat scroll right 20px center;
   color: #1b1d1f;
@@ -7187,45 +7188,53 @@ a.jvlogo {
   padding: 10px 20px;
 }
 
-/* line 620, ../sass/_bigc-product.scss */
+/* line 623, ../sass/_bigc-product.scss */
+.selector-wrapper,
 .attr-product {
   border: 1px solid #e5e5e5;
 }
-/* line 623, ../sass/_bigc-product.scss */
+/* line 627, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-size,
 .attr-product.attr-size {
   margin-top: 20px;
   position: relative;
 }
-/* line 628, ../sass/_bigc-product.scss */
+/* line 632, ../sass/_bigc-product.scss */
+.selector-wrapper label,
 .attr-product label {
   font-weight: 400;
   margin: 0;
 }
-/* line 633, ../sass/_bigc-product.scss */
+/* line 638, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color,
 .attr-product.attr-color {
   display: table;
   margin-top: 20px;
   padding: 15px 10px 10px 20px;
   width: 100%;
 }
-/* line 639, ../sass/_bigc-product.scss */
+/* line 644, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color > ul,
 .attr-product.attr-color > ul {
   display: table-cell;
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-/* line 645, ../sass/_bigc-product.scss */
+/* line 650, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color > label,
 .attr-product.attr-color > label {
   display: table-cell;
   padding-right: 20px;
   vertical-align: top;
 }
-/* line 650, ../sass/_bigc-product.scss */
+/* line 655, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color li,
 .attr-product.attr-color li {
   display: inline-block;
 }
-/* line 653, ../sass/_bigc-product.scss */
+/* line 658, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color a,
 .attr-product.attr-color a {
   border: 1px solid #e5e5e5;
   display: block;
@@ -7234,7 +7243,8 @@ a.jvlogo {
   padding: 1px;
   width: 30px;
 }
-/* line 661, ../sass/_bigc-product.scss */
+/* line 666, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color a span,
 .attr-product.attr-color a span {
   display: block;
   height: 100%;
@@ -7242,7 +7252,8 @@ a.jvlogo {
   position: relative;
   width: 100%;
 }
-/* line 668, ../sass/_bigc-product.scss */
+/* line 673, ../sass/_bigc-product.scss */
+.selector-wrapper.attr-color a.selected span::after,
 .attr-product.attr-color a.selected span::after {
   background: #1b1d1f none repeat scroll 0 0;
   content: "";
@@ -7256,7 +7267,32 @@ a.jvlogo {
   width: 200%;
 }
 
-/* line 685, ../sass/_bigc-product.scss */
+/* line 689, ../sass/_bigc-product.scss */
+.selector-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+/* line 693, ../sass/_bigc-product.scss */
+.selector-wrapper > label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+/* line 699, ../sass/_bigc-product.scss */
+.selector-wrapper select {
+  display: block;
+  width: 100%;
+  padding: 0 50px 0 300px;
+  border: none;
+}
+
+/* line 707, ../sass/_bigc-product.scss */
+.product--detail-others {
+  margin-top: 20px;
+}
+
+/* line 712, ../sass/_bigc-product.scss */
 .info-qty {
   border: 1px solid #e5e5e5;
   height: 40px;
@@ -7264,62 +7300,86 @@ a.jvlogo {
   max-width: 220px;
   padding: 0 20px;
 }
-/* line 692, ../sass/_bigc-product.scss */
+/* line 719, ../sass/_bigc-product.scss */
 .info-qty > label {
   font-weight: 400;
   padding-right: 10px;
 }
-/* line 698, ../sass/_bigc-product.scss */
+/* line 725, ../sass/_bigc-product.scss */
 .info-qty a {
   color: #b8b8b8;
 }
-/* line 701, ../sass/_bigc-product.scss */
+/* line 728, ../sass/_bigc-product.scss */
 .info-qty a:hover {
   color: #fec64d;
 }
 
-/* line 708, ../sass/_bigc-product.scss */
+/* line 735, ../sass/_bigc-product.scss */
 .info-qty .quantity-selector {
   overflow: hidden;
   margin-bottom: 1em;
+  display: inline;
+  font-weight: normal;
 }
 
-/* line 714, ../sass/_bigc-product.scss */
+/* line 746, ../sass/_bigc-product.scss */
+.wrap-cart-detail .info-qty {
+  display: inline-block;
+  margin-right: 10px;
+  max-width: 220px;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* line 754, ../sass/_bigc-product.scss */
+.wrap-cart-detail .btn-link-default.add-to-cart {
+  margin: 20px 0 0;
+  max-width: 220px;
+}
+
+/* line 759, ../sass/_bigc-product.scss */
 .qty-val {
   display: inline-block;
   width: 60px;
 }
 
-/* line 719, ../sass/_bigc-product.scss */
+/* line 764, ../sass/_bigc-product.scss */
 .wrap-cart-qty .btn-link-default.add-to-cart {
   margin-top: 20px;
   max-width: 220px;
   width: 100%;
 }
 
-/* line 724, ../sass/_bigc-product.scss */
+/* line 769, ../sass/_bigc-product.scss */
 .info-extra {
   margin-top: 20px;
 }
-/* line 727, ../sass/_bigc-product.scss */
+/* line 772, ../sass/_bigc-product.scss */
 .info-extra a {
   color: #1b1d1f;
   margin-right: 15px;
 }
 
-/* line 732, ../sass/_bigc-product.scss */
-.content-product-detail.none-sidebar .wrap-attr-product {
+/* line 778, ../sass/_bigc-product.scss */
+.content-product-detail.none-sidebar
+.wrap-variants {
   float: left;
   margin-right: 20px;
+  max-width: 320px;
 }
 
-/* line 736, ../sass/_bigc-product.scss */
+/* line 786, ../sass/_bigc-product.scss */
+.content-product-detail.none-sidebar .selector-wrapper select {
+  padding: 0 50px 0 250px;
+}
+
+/* line 790, ../sass/_bigc-product.scss */
 .wrap-attr-product {
   max-width: 320px;
   width: 100%;
 }
 
-/* line 740, ../sass/_bigc-product.scss */
+/* line 795, ../sass/_bigc-product.scss */
 .wrap-cart-qty {
   float: left;
   margin-top: 20px;
@@ -7330,7 +7390,7 @@ a.jvlogo {
 /*****************************************
 Page Detail Mr
 ******************************************/
-/* line 751, ../sass/_bigc-product.scss */
+/* line 806, ../sass/_bigc-product.scss */
 .content-product-detail.has-sidebar .product-gallery .bx-wrapper {
   float: none;
   margin: 0;
@@ -7338,12 +7398,12 @@ Page Detail Mr
   position: relative;
   width: 100%;
 }
-/* line 758, ../sass/_bigc-product.scss */
+/* line 813, ../sass/_bigc-product.scss */
 .content-product-detail.has-sidebar .product-gallery #bx-pager {
   float: none;
   width: auto;
 }
-/* line 762, ../sass/_bigc-product.scss */
+/* line 817, ../sass/_bigc-product.scss */
 .content-product-detail.has-sidebar .product-gallery #bx-pager a {
   display: inline-block;
   margin-bottom: 0;
@@ -7351,9 +7411,160 @@ Page Detail Mr
   margin-top: 10px;
   max-width: 97px;
 }
-/* line 769, ../sass/_bigc-product.scss */
+/* line 824, ../sass/_bigc-product.scss */
 .content-product-detail.has-sidebar .product-gallery #bx-pager a:last-child {
   margin-right: 0;
+}
+
+/* line 832, ../sass/_bigc-product.scss */
+.product-photo-container {
+  float: left;
+  margin: 0;
+  position: relative;
+  width: 81.4%;
+}
+
+/* line 840, ../sass/_bigc-product.scss */
+#productThumbs {
+  float: left;
+  width: 18.6%;
+  padding-left: 10px;
+}
+
+/* line 847, ../sass/_bigc-product.scss */
+.none-sidebar .product-gallery .bx-wrapper {
+  padding: 0;
+}
+/* line 851, ../sass/_bigc-product.scss */
+.none-sidebar #productThumbs .bx-wrapper .bx-viewport {
+  height: 100% !important;
+  max-height: 463px;
+  overflow: hidden;
+}
+/* line 858, ../sass/_bigc-product.scss */
+.none-sidebar .product-gallery .bx-prev {
+  left: 50%;
+  bottom: 30px;
+  margin: 0;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 865, ../sass/_bigc-product.scss */
+.none-sidebar .product-gallery .bx-next {
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 874, ../sass/_bigc-product.scss */
+.content-product-detail.has-sidebar .product-photo-container {
+  float: none;
+  margin: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+}
+/* line 881, ../sass/_bigc-product.scss */
+.content-product-detail.has-sidebar #productThumbs {
+  float: none;
+  width: auto;
+  padding-left: 0;
+}
+/* line 898, ../sass/_bigc-product.scss */
+.content-product-detail.has-sidebar #productThumbs .bx-prev, .content-product-detail.has-sidebar #productThumbs .bx-prev {
+  top: 50%;
+  margin: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 906, ../sass/_bigc-product.scss */
+.variant-quantity.is-visible {
+  display: block;
+}
+
+/* 
+Swatches Styles
+*/
+/* line 913, ../sass/_bigc-product.scss */
+.swatch {
+  margin: 0 0 20px;
+}
+
+/* line 916, ../sass/_bigc-product.scss */
+.swatch > label {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+/* Hide radio buttons.*/
+/* line 922, ../sass/_bigc-product.scss */
+.swatch input {
+  display: none;
+}
+
+/* line 926, ../sass/_bigc-product.scss */
+.color.swatch-element label {
+  padding: 0;
+  margin: 0;
+  float: left;
+  border: 1px solid #202020;
+}
+
+/* line 927, ../sass/_bigc-product.scss */
+.swatch-element.text label {
+  min-width: 40px;
+  border: 1px solid #202020;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* line 937, ../sass/_bigc-product.scss */
+.swatch-element.text input:checked + label, .swatch-element.text label:hover {
+  color: #eeb013;
+  border: 1px solid #eeb013;
+  font-weight: bold;
+}
+
+/* Styling selected swatch */
+/* Slightly raised */
+/* line 944, ../sass/_bigc-product.scss */
+.swatch input:checked + label img, .swatch label:hover img {
+  border: 1px solid #202020;
+}
+
+/* line 947, ../sass/_bigc-product.scss */
+.swatch-element.color img {
+  display: block;
+  border: 1px solid transparent;
+}
+
+/* line 951, ../sass/_bigc-product.scss */
+.swatch-element {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 956, ../sass/_bigc-product.scss */
+label img {
+  pointer-events: none;
 }
 
 /* line 5, ../sass/_bigc-category.scss */
@@ -7816,32 +8027,32 @@ Page Product List
 /**************************************
 Page Product List Mr
 ***************************************/
-/* line 472, ../sass/_bigc-category.scss */
+/* line 473, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .item-product-thumb {
   float: left;
   width: 33%;
 }
-/* line 476, ../sass/_bigc-category.scss */
+/* line 477, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .item-product-info {
   float: left;
   margin-top: 0;
   padding-left: 30px;
   width: 67%;
 }
-/* line 482, ../sass/_bigc-category.scss */
+/* line 483, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .desc {
   margin-top: 20px;
 }
-/* line 486, ../sass/_bigc-category.scss */
+/* line 487, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .wrap-cart-qty {
   margin-top: 5px;
   max-width: inherit;
 }
-/* line 490, ../sass/_bigc-category.scss */
+/* line 491, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .info-extra {
   margin-bottom: 20px;
 }
-/* line 493, ../sass/_bigc-category.scss */
+/* line 494, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .info-qty {
   display: inline-block;
   margin-right: 10px;
@@ -7849,7 +8060,7 @@ Page Product List Mr
   vertical-align: top;
   width: 100%;
 }
-/* line 500, ../sass/_bigc-category.scss */
+/* line 501, ../sass/_bigc-category.scss */
 .product-list.has-sidebar .btn-link-default.add-to-cart {
   margin: 0;
   max-width: 220px;

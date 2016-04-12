@@ -216,22 +216,36 @@
             });
         }
         //Product Gallery
-        if ($('.product-gallery .bxslider').length > 0) {
+        if ($('.has-sidebar .product-gallery .bxslider').length > 0) {
             // $('.product-gallery .bxslider').bxSlider({
             //     pagerCustom: '.product-gallery #bx-pager',
             //     nextText: '<span class="lnr lnr-chevron-right"></span>',
             //     prevText: '<span class="lnr lnr-chevron-left"></span>'
             // });
 
-             $('.product-gallery #bx-pager').bxSlider({
-                slideWidth: 100,
-                minSlides: 2,
+             $('.has-sidebar .product-gallery #bx-pager').bxSlider({
+                slideWidth: 120,
+                minSlides: 4,
                 maxSlides: 4,
                 slideMargin: 6,
                 nextText: '<span class="lnr lnr-chevron-right"></span>',
                 prevText: '<span class="lnr lnr-chevron-left"></span>'
               });
         }
+
+        if ($('.none-sidebar .product-gallery .bxslider').length > 0) {
+
+             $('.none-sidebar .product-gallery #bx-pager').bxSlider({
+                slideWidth: 126,
+                minSlides: 4,
+                maxSlides: 4,
+                slideMargin: 0,
+                mode: 'vertical',
+                infiniteLoop: true,
+                nextText: '<span class="lnr lnr-chevron-up"></span>',
+                prevText: '<span class="lnr lnr-chevron-down"></span>'
+              });
+         }
 
 
 

@@ -1,4 +1,4 @@
-<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm ffffffffffffffffffffff form-add-to-cart product-option">
+<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart product-option">
   <div class="wrap-variants clearfix">
     <select name="id" id="productSelect"   class="product-variants hidden">
       {% for variant in product.variants %}
@@ -13,12 +13,26 @@
       {% endif %}
       {% endfor %}
     </select>
+    
+    {% if product.available and product.variants.size > 1 %}
+      {% for option in product.options %}
+        {% include 'swatch' with option %}
+      {% endfor %}
+    {% endif %}
+
   </div>
 
-  <div class="wrap-cart-detail clearfix">
+
+
+  
+  {% if settings.product_quantity_message %}
+  <span id="variantQuantity" class="variant-quantity"></span>
+  {% endif %}
+
+  <div class="wrap-cart-detail clearfix wrap-cart-qty">
 
     {% if settings.product_quantity_enable %}
-    <div class="quantity-wrapper">
+    <div class="quantity-wrapper info-qty">
       <div class="quantity">
 
         <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
@@ -28,15 +42,16 @@
     <div  {% if settings.product_quantity_enable %} class="cart-button"  {% endif %} >
 
       <button type="submit" name="add" id="addToCart" class="normal-btn normal-btn-gray btn-size-3 uppercase addToCart btn-link-default add-to-cart">
-        <i class="icon-svg-icon-16"></i>
         <span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span>
       </button>
 
     </div>  
+    <div class="info-extra">
+      <a href="#" class="link-wishlist"><span class="lnr lnr-heart"></span></a>
+      <a href="#" class="link-compare"><span class="lnr lnr-sync"></span></a>
+    </div>
   </div>                
 
-  {% if settings.product_quantity_message %}
-  <span id="variantQuantity" class="variant-quantity"></span>
-  {% endif %}
+ 
 
 </form>

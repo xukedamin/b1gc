@@ -61,7 +61,7 @@
           <div class="product-thumbnail-slider-wrapper {{content_product_childclass}}">
             {% include 'product--image' %}
             {% if settings.social_sharing_products %}
-              <p><span class="uppercase">{{'products.product.shares' | t}} :</span> <div class="color-main ">{% include 'social-sharing-ul' %}</div></p>
+              <p><span class="uppercase">{{'products.product.shares' | t}} :</span> <div class="text-center">{% include 'social-sharing-ul' %}</div></p>
             {% endif %}
           </div>
 
@@ -99,8 +99,9 @@
           </div>
 
         </div>     
-        <div class="row"> {% include 'product--extra-info' %}
-        </div>
+        
+          {% include 'product--extra-info' %}
+        
 
         {% if settings.related_products_enable %}
           {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}

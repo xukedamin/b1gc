@@ -1,4 +1,4 @@
-<div class="product-detail-others">
+<div class="product--detail-others">
 	{% unless variant_tmp and variant_tmp.sku %}
 	<p id="sku"{% unless variant_tmp and variant_tmp.sku %} class="hidden"{% endunless %}><span class="uppercase">{{'products.product.sku' | t}} : </span>
 	<span class="color-main ">  {{variant_tmp.sku}}</span>  </p>
