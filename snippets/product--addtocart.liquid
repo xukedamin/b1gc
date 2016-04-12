@@ -20,6 +20,10 @@
       {% endfor %}
     {% endif %}
 
+    {% if product.type contains 'Dyeable' and product.available %}
+      {% include 'swatch-lip' with 'Ivory, Hot Pink, Navy Blue, Olive' %}
+    {% endif %}
+
   </div>
 
 
