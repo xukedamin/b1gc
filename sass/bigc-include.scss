@@ -83,6 +83,8 @@ $color_rhino : #37436d;
 $color_danube : #5a88ca;
 
 
+$color_primary : $color_golden-tainoi;
+
 @-moz-keyframes spin {
 	0% { -moz-transform: rotate(0deg); }
 	100% { -moz-transform: rotate(360deg); }
