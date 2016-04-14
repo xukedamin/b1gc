@@ -1054,6 +1054,40 @@ jQuery(function($) {
         value: 12
     });
 
+
+    //wishlist
+    // ======================================================
+    // remove from wishlist
+    // ======================================================
+    $(".js-remove-button").on("click", function(e) {
+      e.preventDefault();
+      removeFromWishlist($(this));
+    });
+
+    // ======================================================
+    // add to cart from wishlist
+    // ======================================================
+    $(".js-add-to-cart").on("click", function(e) {
+      e.preventDefault();
+      variantID = $(this).attr("data-id");
+      $('#product-select').attr("value", variantID);
+      // uncomment next line if you want a product to be removed from the wish list when it is added to the cart
+      //removeFromWishlist($(this));
+      $('#add-variant').submit();
+    });
+
+    // ======================================================
+    // callback for option_selection.js
+    // ======================================================
+    // The following will have to be in your product template (without the comments wrapping it!) to initialize the option_selection.js
+
+    /*
+    jQuery(function($) {
+
+      new Shopify.OptionSelectors('product-select', { product: {{ product | json }}, onVariantSelected: selectCallback, enableHistoryState: true });
+    });
+    */
+
     
 
 });
