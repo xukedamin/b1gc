@@ -55,7 +55,7 @@
   {{ 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | stylesheet_tag }}
   {{ 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' | stylesheet_tag }}
   
-  {{'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag}}
+
 
 
 
@@ -101,7 +101,7 @@
   {{ 'PieChart.js' | asset_url | script_tag }}
   {{ 'circles.js' | asset_url | script_tag }}
   {{ 'jquery.magnific-popup.min.js' | asset_url | script_tag }}
-  {{ 'jquery.fancybox.min.js' | asset_url | script_tag }}
+  
 
   {{ 'slick.min.js' | asset_url | script_tag }}
   {{ 'jquery.currencies.min.js' | asset_url | script_tag }}
@@ -144,7 +144,8 @@
 
   {% include 'footer-black' %}
    {% include 'footer-white' %}
-
+  
+  <a id="newsletter-btn" href="#mc_embed_signup">Try now</a>
   {% include 'newsletter' %}
 
   
@@ -166,47 +167,23 @@
     jQuery(function($) {
       window.ajaxifyShopifyInit = function()
       {
-      ajaxifyShopify.init({
-        method: '{{ settings.ajax_cart_method }}',
-        wrapperClass: 'wrapper',
-        formSelector: '.addToCartForm',
-        addToCartSelector: '.addToCart',
-        cartCountSelector: '.cart-count',
-        toggleCartButton: '.cart-toggle',
-        useCartTemplate: true,
-        btnClass: 'btn',
-        moneyFormat: {{ shop.money_format | json }},
-        disableAjaxCart: false,
-        enableQtySelectors: true
-      });
+        ajaxifyShopify.init({
+          method: '{{ settings.ajax_cart_method }}',
+          wrapperClass: 'wrapper',
+          formSelector: '.addToCartForm',
+          addToCartSelector: '.addToCart',
+          cartCountSelector: '.cart-count',
+          toggleCartButton: '.cart-toggle',
+          useCartTemplate: true,
+          btnClass: 'btn',
+          moneyFormat: {{ shop.money_format | json }},
+          disableAjaxCart: false,
+          enableQtySelectors: true
+        });
       }
       ajaxifyShopifyInit();
 
-      //newsletter popup
-
-
-      // $(".open_popup").colorbox({width:"580px", inline:true, href:"#subscribe_popup"});
-
-
-      $("#mc_embed_signup").fancybox({
-        'transitionIn'  : 'elastic',
-        'transitionOut' : 'elastic',
-        'speedIn'   : 600, 
-        'speedOut'    : 200, 
-        'overlayShow' : false
-      });
-          // load the overlay
-
-      if (document.cookie.indexOf('visited=true') == -1) {
-      var fifteenDays = 1000*60*60*24*15;
-      var expires = new Date((new Date()).valueOf() + fifteenDays);
-      document.cookie = "visited=true;expires=" + expires.toUTCString();
-      // $.colorbox({width:"580px", inline:true, href:"#subscribe_popup"});
-       $("#mc_embed_signup").trigger('click');
-      }
      
-    
-       //newsletter popup
 
     });
   </script>
@@ -219,12 +196,10 @@
   {% endif %}    
  <a id="back-top" class=" icon-up-open" href="#"></a>
   
-  
   <div id="overlays-loading" class=" show-loading">
 				<span class="loading-ball ">
 					<span class="ball"></span>
 					<span class="ball1"></span>
-					
 				</span> 
 			</div>
 
@@ -252,23 +227,37 @@
           w.append( $('<li class="column">').append( this ) );
         } );
       } );
+
+
+      //newsletter popup
+      $("#newsletter-btn").fancybox({
+        'titleShow'   : false
+      });
+
+      if (document.cookie.indexOf('visited=true') == -1) {
+      var fifteenDays = 1000*60*60*24*15;
+      var expires = new Date((new Date()).valueOf() + fifteenDays);
+      document.cookie = "visited=true;expires=" + expires.toUTCString();
+        $("#newsletter-btn").trigger('click');
+      }
+
+      //end newsletter popup
       
     } );
-  </script>  
-
-  <script>
-jQuery(function() {
-  jQuery('.swatch :radio').change(function() {
-    var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
-    var optionValue = jQuery(this).val();
-    jQuery(this)
-      .closest('form')
-      .find('.single-option-selector')
-      .eq(optionIndex)
-      .val(optionValue)
-      .trigger('change');
-  });
-});
+ 
+     //swatch on single product
+    jQuery(function() {
+      jQuery('.swatch :radio').change(function() {
+        var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+        var optionValue = jQuery(this).val();
+        jQuery(this)
+          .closest('form')
+          .find('.single-option-selector')
+          .eq(optionIndex)
+          .val(optionValue)
+          .trigger('change');
+      });
+    });
 </script>
 
 </body>
