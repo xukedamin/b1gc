@@ -160,7 +160,7 @@ Dependency-free breakpoint mixin
 }
 
 /* line 188, ../sass/_bigc-utilities.scss */
-[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .accordion-box.style1 .item-accordion .title-accordion:after, .main-nav > ul > li.menu-item-has-childrent:after, .main-nav .sub-menu .menu-item-has-childrent:after, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
+[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .accordion-box.style1 .item-accordion .title-accordion:after, .main-nav > ul > li.menu-item-has-childrent:after, .main-nav .sub-menu .menu-item-has-childrent:after, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .language-box::after,
 .currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .content-catelog ul li a:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before, .item-popular-thumb:after {
   font-family: Linearicons-Free;
@@ -3051,7 +3051,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #666;
 }
 /* line 48, ../sass/_bigc-newsletter.scss */
-.newsletter-popup-info input[type="text"] {
+.newsletter-popup-info input[type="text"], .newsletter-popup-info input[type="email"] {
   border: 1px solid #e5e5e5;
   color: #999;
   height: 40px;
@@ -3130,7 +3130,19 @@ input[type="text"], input[type="email"], input[type="password"] {
   z-index: 9999;
 }
 
-/* line 117, ../sass/_bigc-newsletter.scss */
+/* line 119, ../sass/_bigc-newsletter.scss */
+.fancybox-close {
+  top: 15px;
+  right: -8px;
+  background-image: none;
+}
+/* line 123, ../sass/_bigc-newsletter.scss */
+.fancybox-close:before {
+  content: "\e870";
+  color: #fff;
+}
+
+/* line 132, ../sass/_bigc-newsletter.scss */
 .newsletter-about {
   background: #f5f5f5 none repeat scroll 0 0;
   border-bottom: 1px solid #e3e3e3;
@@ -3139,12 +3151,12 @@ input[type="text"], input[type="email"], input[type="password"] {
   padding: 35px 0;
 }
 
-/* line 127, ../sass/_bigc-newsletter.scss */
+/* line 142, ../sass/_bigc-newsletter.scss */
 .newsletter-form label {
   font-weight: 400;
   margin-right: 25px;
 }
-/* line 132, ../sass/_bigc-newsletter.scss */
+/* line 147, ../sass/_bigc-newsletter.scss */
 .newsletter-form input[type="text"] {
   border: 1px solid #1b8dbf;
   border-radius: 4px;
@@ -3155,7 +3167,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   width: 100%;
   margin: 5px 0;
 }
-/* line 142, ../sass/_bigc-newsletter.scss */
+/* line 157, ../sass/_bigc-newsletter.scss */
 .newsletter-form input[type="submit"] {
   background: #1b8dbf none repeat scroll 0 0;
   border: medium none;
@@ -3165,7 +3177,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   padding: 0 25px;
   margin: 5px 0;
 }
-/* line 153, ../sass/_bigc-newsletter.scss */
+/* line 168, ../sass/_bigc-newsletter.scss */
 .newsletter-form input[type="submit"]:hover {
   background: #fdd932;
 }

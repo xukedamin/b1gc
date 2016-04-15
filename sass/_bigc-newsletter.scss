@@ -45,7 +45,7 @@
   > p {
     color: $color_dove-gray;
   }
-  input[type="text"] {
+  input[type="text"],input[type="email"] {
     border: 1px solid $color_mercury;
     color: $color_dusty-gray;
     height: 40px;
@@ -114,6 +114,21 @@
   display: none;
   z-index: 9999;
 }
+
+//
+.fancybox-close{
+  top: 15px;
+  right: -8px;
+  background-image: none;
+  &:before{
+    content: "\e870";
+    @extend %jv-font-Linearicons;
+    color: $color_white;
+
+  }
+}
+
+
 .newsletter-about {
   background: $color_wild-sand none repeat scroll 0 0;
   border-bottom: 1px solid $color_mercury-darker;
