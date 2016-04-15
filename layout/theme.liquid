@@ -55,6 +55,8 @@
   {{ 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | stylesheet_tag }}
   {{ 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' | stylesheet_tag }}
   
+  {{'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag}}
+
 
 
   {{ 'bootstrap-theme.css' | asset_url | stylesheet_tag }} 
@@ -99,11 +101,14 @@
   {{ 'PieChart.js' | asset_url | script_tag }}
   {{ 'circles.js' | asset_url | script_tag }}
   {{ 'jquery.magnific-popup.min.js' | asset_url | script_tag }}
+  {{ 'jquery.fancybox.min.js' | asset_url | script_tag }}
 
   {{ 'slick.min.js' | asset_url | script_tag }}
   {{ 'jquery.currencies.min.js' | asset_url | script_tag }}
   {{ 'jquery.bxslider.js' | asset_url | script_tag }}
   {{ 'wish-list.js' | asset_url | script_tag }}
+
+
   {{ 'script.js' | asset_url | script_tag }}
 
 
@@ -140,7 +145,8 @@
   {% include 'footer-black' %}
    {% include 'footer-white' %}
 
-  
+  {% include 'newsletter' %}
+
   
  </div>	 
   
@@ -175,6 +181,33 @@
       });
       }
       ajaxifyShopifyInit();
+
+      //newsletter popup
+
+
+      // $(".open_popup").colorbox({width:"580px", inline:true, href:"#subscribe_popup"});
+
+
+      $("#mc_embed_signup").fancybox({
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic',
+        'speedIn'   : 600, 
+        'speedOut'    : 200, 
+        'overlayShow' : false
+      });
+          // load the overlay
+
+      if (document.cookie.indexOf('visited=true') == -1) {
+      var fifteenDays = 1000*60*60*24*15;
+      var expires = new Date((new Date()).valueOf() + fifteenDays);
+      document.cookie = "visited=true;expires=" + expires.toUTCString();
+      // $.colorbox({width:"580px", inline:true, href:"#subscribe_popup"});
+       $("#mc_embed_signup").trigger('click');
+      }
+     
+    
+       //newsletter popup
+
     });
   </script>
   {% endif %}
