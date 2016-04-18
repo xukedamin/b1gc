@@ -15,12 +15,7 @@
 						</ul>
 					</div>
 					<div class="social-network3">
-						<ul class="list-inline share-social">
-							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-						</ul>
+						{% include 'social-sharing-ul' %}
 					</div>
 				</div>
 				<div class="col-md-2 col-sm-6 col-xs-12">
@@ -69,6 +64,7 @@
 							<li><a href="#">Vimeo</a></li>
 							<li><a href="#">Google+</a></li>
 						</ul>
+
 					</div>
 				</div>
 			</div>
@@ -76,15 +72,7 @@
 		<div class="footer-bottom3">
 			<div class="row">
 				<div class="col-md-9 col-sm-9 col-xs-12">
-					<ul class="list-inline menu-footer3">
-						<li><a href="#">Home </a></li>
-						<li><a href="#">Terms of Service  </a></li>
-						<li><a href="#">Privacy guidelines</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Site Map</a></li>
-						<li><a href="#">Opinions</a></li>
-						<li><a href="#">Help</a></li>
-					</ul>
+					 {% include 'nav-simple' class: 'list-inline menu-footer3', handle: 'footer' %}
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<div class="copyright3">

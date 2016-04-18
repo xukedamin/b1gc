@@ -1333,6 +1333,22 @@
     "name": "Footer",
     "settings": [
       {
+        "type": "select",
+        "id": "footer_default",
+        "label": "Select footer default",
+        "options": [
+          {
+            "value": "footer_black",
+            "label": "Footer 1 - black"
+          },
+          {
+            "value": "footer_white",
+            "label": "Footer 2 - white"
+          }
+        ],
+        "default": "footer_black"
+      },
+        {
         "type": "header",
         "content": "Contact information"
       },

@@ -1,0 +1,9 @@
+{% if handle != '' %}
+  {% if linklists[handle].links.size > 0 %}
+  <ul class="{{ class }} ">
+  {% for link in linklists[handle].links %}
+      <li>{{ link.title | link_to: link.url }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+{% endif %}
