@@ -1,75 +1,17 @@
-<!-- footer 6 -->
-<div id="footer">
-  <div class="footer footer2">
-    <div class="container">
-      <div class="logo logo-footer2">
-        <a href="#"><span class="lnr lnr-apartment"></span> bigc.ltd.,</a>
-      </div>
-      <div class="footer-bottom2">
-        <div class="row">
-          <div class="col-md-9 col-sm-9 col-xs-12">
-            <div class="menu-footer">
-             {% include 'nav-simple' class: 'list-inline', handle: 'footer' %}
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="copyright">
-              <p>Design by <a href="#">7uptheme.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- End Footer -->
 <div id="footer">
-  <div class="footer footer-dark">
+  <div class="footer footer-dark {%if settings.footer_default == 'footer_black_simple'%}{{footer-simple}} {% endif %}">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="logo logo-footer">
+        {% if settings.footer_default == 'footer_black_simple'%}
+          <div class="col-md-12 logo logo-footer">
             <a href="#" class="sub-title"><span class="lnr lnr-apartment"></span> bigc.ltd.,</a>
           </div>
-          <div class="download">
-            <div class="row">
-              <div class="col-md-5 col-sm-5 col-xs-12">
-                <img class="img-responsive" src="https://cdn.shopify.com/s/files/1/1184/2838/files/img-download.png" alt="img-download.png" />
-              </div>
-              <div class="col-md-7 col-sm-7 col-xs-12">
-                <p>Architecto beatae vitae dicta sunt explicabo. Nemo enim</p>
-                <ul class="download-link list-unstyled">
-                  <li><a href="#"><span class="lnr lnr-download"></span> Download Profile</a></li>
-                  <li><a href="#"><span class="lnr lnr-download"></span> Download Catalog</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="contact-phone">
-            <label class="sub-title">hot-line:</label>
-            <span class="phone-number">(090) 345 9669</span>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="footer-nav">
-            <h2 class="sub-title">Account</h2>
-            <ul class="list-unstyled">
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Orders and Returns</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Search Terms</a></li>
-              <li><a href="#">Advanced Search</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          
-          {% include 'newsletter' %}
-          {% include 'social-sharing-ul' %}
-
-        </div>
+        {% else %}
+          {% include 'footer--row-detail'%}
+        {% endif %}
       </div>
+
       <div class="footer-bottom">
         <div class="row">
           <div class="col-md-9 col-sm-9 col-xs-12">

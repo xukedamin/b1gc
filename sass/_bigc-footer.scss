@@ -107,12 +107,13 @@
 
 //Home 2_
 /*Footer*/
-.footer{
-  &.footer2 {
-  
-    background: $color_shark none repeat scroll 0 0;
+// footer2 --> footer-dark.footer-simple
+
+.footer.footer-dark.footer-simple
+{
+    // background: $color_shark none repeat scroll 0 0;
     margin-top: 0;
-  }
+
   a:hover {
     color: $color_white;
   }

@@ -1344,6 +1344,10 @@
           {
             "value": "footer_white",
             "label": "Footer 2 - white"
+          },
+          {
+            "value": "footer_black_simple",
+            "label": "Footer 3 - Black simple"
           }
         ],
         "default": "footer_black"
