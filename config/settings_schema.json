@@ -1389,8 +1389,22 @@
         "type": "text",
         "id": "mailing_list_form_action",
         "label": "MailChimp form action URL",
+        "default" : "//myshopify.us13.list-manage.com/subscribe/post?u=60cdef5f425906b2bdfa01f06&amp;id=00d167a4f0",
         "info": "[Find your MailChimp form action URL](https:\/\/docs.shopify.com\/manual\/configuration\/store-customization\/communicating-with-customers\/accounts-and-newsletters\/get-a-mailchimp-form-action-url\/)."
       },
+      {
+         "type":      "text",
+         "id":        "mailling_list_title",
+         "label":     "Mailing list title",
+         "default":   "Subscribe to our newsletter"
+      },
+      {
+         "type":      "text",
+         "id":        "mailling_list_desc",
+         "label":     "Mailing list description",
+         "default":   "Enter your email address to receive all news, updates on new arrivals, special offers and other discount information."
+      },
+
       {
         "type": "header",
         "content": "Instagram"
@@ -4222,6 +4236,9 @@
       }
     ]
   },
+
+
+
   {
     "name": "Material Slideshow",
     "settings": [
@@ -4244,6 +4261,8 @@
           }
         ],
         "default": "true"
+
+
       },
       {
         "type": "select",

@@ -71,20 +71,10 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="newsletter">
-            <h2 class="sub-title">newsletter</h2>
-            <p>Make sure you dont miss interesting happenings by joining our newsletter program.</p>
-            <form>
-              <input type="text" value="Email" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" />
-              <input class="btn-link-default" type="submit" value="subscribe" />
-            </form>
-          </div>
-          <ul class="list-inline share-social">
-            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-            <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
-          </ul>
+          
+          {% include 'newsletter' %}
+          {% include 'social-sharing-ul' %}
+          
         </div>
       </div>
       <div class="footer-bottom">

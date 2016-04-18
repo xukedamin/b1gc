@@ -52,29 +52,9 @@
     margin-right: 8px;
   }
 }
-.newsletter {
-  border-bottom: 1px solid $color_mercury;
-  padding-bottom: 30px;
 
-  .sub-title {
-    margin-bottom: 20px;
-  }
-  input[type="text"] {
-    color: $color_dusty-gray;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 10px;
-    padding: 0 15px;
-    width: 306px;
-  }
-  input[type="submit"] {
-    border: medium none;
-    margin-top: 10px;
-  }
-}
-.footer-dark .newsletter input[type="text"] {
-  border: none;
-}
+
+
 .share-social {
   margin-top: 23px;
 
@@ -110,9 +90,10 @@
     color: $color_shark;
   }
 }
-.footer-dark .copyright {
-  @extend %text-right;
-}
+
+
+
+
 #footer .copyright a:hover {
   color: $color_dusty-gray;
 }
@@ -240,53 +221,62 @@
 }
 
 // footer-dark
-.footer {
-  &.footer-dark {
-    background: $color_cod-gray none repeat scroll 0 0;
+.footer.footer-dark {
+  background: $color_cod-gray none repeat scroll 0 0;
+  color: $color_white;
+
+  .logo-footer .sub-title {
     color: $color_white;
+  }
+  .download p {
+    border-color: rgba($color_white, 0.1);
+    color: $color_dusty-gray;
+  }
+  .newsletter > p {
+    color: $color_dusty-gray;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba($color_white, 0.1);
+    margin-top: 25px;
+  }
+  .footer-nav {
+    border-color: rgba($color_white, 0.1);
+  }
+  a:hover {
+    color: $color_white;
+  }
+  .newsletter {
+    border-color: rgba($color_white, 0.1);
 
-    .logo-footer .sub-title {
-      color: $color_white;
+    input[type="text"],
+    input[type="email"] {
+      border: none;
     }
-    .download p {
-      border-color: rgba($color_white, 0.1);
-      color: $color_dusty-gray;
-    }
-    .newsletter > p {
-      color: $color_dusty-gray;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba($color_white, 0.1);
-      margin-top: 25px;
-    }
-    .footer-nav {
-      border-color: rgba($color_white, 0.1);
-    }
-    a:hover {
-      color: $color_white;
-    }
-    .newsletter {
-      border-color: rgba($color_white, 0.1);
 
-      input[type="submit"] {
-        background: $color_golden-tainoi;
-
-        &:hover {
-          background: $color_white none repeat scroll 0 0;
-          box-shadow: 0 0 0 2px $color_golden-tainoi inset;
-          color: $color_shark;
-        }
-      }
-    }
-    .copyright a {
-      color: $color_dusty-gray;
-    }
-    .share-social a {
-      color: $color_dusty-gray;
+    input[type="submit"] {
+      background: $color_golden-tainoi;
 
       &:hover {
-        color: $color_white;
+        background: $color_white none repeat scroll 0 0;
+        box-shadow: 0 0 0 2px $color_golden-tainoi inset;
+        color: $color_shark;
       }
     }
   }
+  .copyright {
+    @extend %text-right;
+    a {
+      color: $color_dusty-gray;
+    }
+  }
+  .share-social a {
+    color: $color_dusty-gray;
+
+    &:hover {
+      color: $color_white;
+    }
+  }
+
+
 }
+
