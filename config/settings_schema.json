@@ -1338,19 +1338,19 @@
         "label": "Select footer default",
         "options": [
           {
-            "value": "footer_black",
-            "label": "Footer 1 - black"
+            "value": "footer_dark",
+            "label": "Footer 1 - Dark"
           },
           {
-            "value": "footer_white",
-            "label": "Footer 2 - white"
+            "value": "footer_light",
+            "label": "Footer 2 - Light"
           },
           {
-            "value": "footer_black_simple",
-            "label": "Footer 3 - Black simple"
+            "value": "footer_dark_simple",
+            "label": "Footer 3 - Dark simple"
           }
         ],
-        "default": "footer_black"
+        "default": "footer_dark"
       },
         {
         "type": "header",
@@ -1382,9 +1382,21 @@
       },
       {
         "type": "text",
-        "id": "footer_add",
-        "label": "Add",
-        "default": "2809 Lincoln st, Califonia, USA"
+        "id": "footer_addr",
+        "label": "Address",
+        "default": "410 Windward Drive"
+      },
+      {
+        "type": "text",
+        "id": "footer_addr_state",
+        "label": "State",
+        "default": "Newton, KS 56798"
+      },
+      {
+        "type": "text",
+        "id": "footer_addr_country",
+        "label": "Country",
+        "default": "United States"
       },
       {
         "type": "textarea",
@@ -1478,6 +1490,21 @@
         "label": "Legal link list"
       },
       {
+        "type": "link_list",
+        "id": "footer_legallinks_linklist2",
+        "label": "Legal link list 2"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_legallinks_linklist3",
+        "label": "Legal link list 3"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_legallinks_linklist4",
+        "label": "Legal link list 4"
+      },
+      {
         "type": "header",
         "content": "Copyright"
       },
@@ -1485,6 +1512,7 @@
         "type": "textarea",
         "id": "footer_copyright_text",
         "label": "Copyright text",
+        "default" : "Shop Demo by 7uptheme.com. Developed by Joomlavi",
         "info": "Use basic HTML to format text"
       }
     ]

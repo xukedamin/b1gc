@@ -1,5 +1,10 @@
 {% if handle != '' %}
   {% if linklists[handle].links.size > 0 %}
+
+    {% if linklist_show_title == true and linklists[handle].title != blank %}
+    <h2>{{ linklists[handle].title | escape }}</h2>
+    {% endif %}
+
   <ul class="{{ class }} ">
   {% for link in linklists[handle].links %}
       <li>{{ link.title | link_to: link.url }}</li>

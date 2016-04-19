@@ -1,5 +1,7 @@
 {% if handle != '' %}
   {% if linklists[handle].links.size > 0 %}
+  
+
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
       {% assign handlej = link.title | handleize %}

@@ -70,7 +70,7 @@
     "show_header_cart": true,
     "maxheight-logo-2": "70",
     "maxheight-logo-2-mobile": "35",
-    "footer_default": "footer_black",
+    "footer_default": "footer_dark_simple",
     "footer_content_enable": true,
     "footer_email": "hello123@gmail.com",
     "footer_phone": "0123 456 789",

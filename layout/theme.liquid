@@ -142,10 +142,11 @@
 	
         {{ content_for_layout }}
 
-  {% if settings.footer_default == 'footer_black' %}
-    {% include 'footer-black' %}
-  {% elsif settings.footer_default == 'footer_white'%}
-   {% include 'footer-white' %}
+  {% if settings.footer_default == 'footer_dark' or settings.footer_default == 'footer_dark_simple' %}
+    {% include 'footer-dark' %}
+  {% elsif settings.footer_default == 'footer_light'%}
+   {% include 'footer-light' %}
+
 
   {% endif %}
   
