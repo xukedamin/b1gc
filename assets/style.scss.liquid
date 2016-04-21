@@ -36,9 +36,6 @@ $preLarge: $large - $viewportIncrement;
 $colorPrimary: {{ settings.color_primary }};
 $colorSecondary: {{ settings.color_secondary }};
 
-
-
-
 // Text link colors
 $colorLink: $colorPrimary;
 $colorLinkHover: lighten($colorPrimary, 15%);
@@ -139,123 +136,6 @@ $accentFontWeight: {{ accent_weight }};
 
 
 /*============================================================================
-#Sass Mixins
-==============================================================================*/
-.clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@mixin clearfix() {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@mixin visuallyHidden {
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-  position: absolute;
-  height: 1px;
-  width: 1px;
-}
-
-@mixin prefix($property, $value) {
-  -webkit-#{$property}: #{$value};
-  -moz-#{$property}: #{$value};
-  -ms-#{$property}: #{$value};
-  -o-#{$property}: #{$value};
-  #{$property}: #{$value};
-}
-
-
-@mixin transition() {
-  transition: all 0.3s ease-in-out 0s;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-}
-
-@mixin translateName($value) {
-  animation-name: $value;  
-  -webkit-animation-name: $value;
-}
-
-@mixin translateDuration($value) {
-  animation-duration: $value;  
-  -webkit-animation-duration: $value;
-}
-
-
-@mixin translate($x,$y) {
-  transform: translate($x,$y);
-  -webkit-transform: translate($x,$y);
-}
-
-
-@mixin gradient($from, $to, $fallback) {
-  background: $fallback;
-  background: -moz-linear-gradient(top, $from 0%, $to 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
-  background: -webkit-linear-gradient(top, $from 0%,$to 100%);
-  background: -o-linear-gradient(top, $from 0%,$to 100%);
-  background: -ms-linear-gradient(top, $from 0%,$to 100%);
-  background: linear-gradient(top bottom, $from 0%,$to 100%);
-}
-
-@mixin backface($visibility: hidden) {
-  @include prefix('backface-visibility', #{$visibility});
-}
-
-@mixin box-sizing($box-sizing: border-box) {
-  -webkit-box-sizing: #{$box-sizing};
-  -moz-box-sizing: #{$box-sizing};
-  box-sizing: #{$box-sizing};
-}
-
-@function color-control($color) {
-  @if (lightness( $color ) > 48) {
-    @return $headerText;
-  }
-  @else {
-    @return #fff;
-  }
-}
-
-@function em($target, $context: $baseFontSize) {
-  @if $target == 0 {
-    @return 0;
-  }
-  @return $target / $context + 0em;
-}
-
-/*============================================================================
-Dependency-free breakpoint mixin
-// http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
-==============================================================================*/
-$min: min-width;
-$max: max-width;
-@mixin at-query ($constraint, $viewport1, $viewport2:null) {
-  @if $constraint == $min {
-    @media screen and ($min: $viewport1) {
-      @content;
-    }
-  } @else if $constraint == $max {
-    @media screen and ($max: $viewport1) {
-      @content;
-    }
-  } @else {
-    @media screen and ($min: $viewport1) and ($max: $viewport2) {
-      @content;
-    }
-  }
-}
-
-
-/*============================================================================
 #Dropdown Menu
 ==============================================================================*/
 
@@ -279,7 +159,11 @@ $max: max-width;
 }
 
 
-.jv-homepage-1  .banner-slider .item, .jv-homepage-1   .banner-slider .wrap-item  { height: {{ settings.home1_slide_height }}px !important; overflow: hidden; }
+.jv-homepage-1  .banner-slider .item, 
+.jv-homepage-1  .banner-slider .wrap-item  { 
+  height: {{ settings.home1_slide_height }}px !important; 
+  overflow: hidden; 
+}
 .jv-homepage-2  .banner-slider .item { height: {{ settings.home2_slide_height }}px !important; }
 .jv-homepage-3  .banner-slider .item { height: {{ settings.home3_slide_height }}px !important; }
 .jv-homepage-4  .banner-slider .item { height: {{ settings.home4_slide_height }}px !important; }

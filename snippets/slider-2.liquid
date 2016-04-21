@@ -62,3 +62,25 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
 {% endif %}
 
 
+{% if settings.slider_home_enable %}
+<div class="banner-slider-circle-vertical">
+  <div class="wrap-item">
+    {% for i in (1..4) %}
+      {% capture slide %}slide_{{ i }}{% endcapture %}
+      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+       {% if settings[slide] %}
+        <div class="item">
+          <div class="content-banner-slider">
+            <a href="#" class="banner-thumb-link">
+              <img src="{{ slide_img | asset_url  }}" alt="" />
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    <!-- End Item -->
+     {% endfor %}
+  </div>
+</div>
+
+
+{% endif %}
