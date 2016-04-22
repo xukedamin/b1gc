@@ -1,17 +1,17 @@
 {% if settings.slider_home_enable %}
-<div class="banner-slider header-slider default-paginav">
+<div class="header-slider default-paginav">
   <div class="wrap-item">
   {% for i in (1..4) %}
   {% capture slide %}slide_sm_{{ i }}{% endcapture %}
   {% capture slide_img %}slide_sm_{{ i }}.jpg{% endcapture %}
   
-  {% capture slide_link %}slide_sm_{{ i }}_link{% endcapture %}
+  {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
 
 
     {% if settings[slide] %}
       <div class="item">
         <div class="item-home-slider">
-          <a href="{{slide_link}}">{{ slide_img | asset_url | img_tag: slide_img }}</a>
+          <a href="{{settings[slide_link]}}">{{ slide_img | asset_url | img_tag: slide_img }}</a>
         </div>
       </div>
     {% endif %}

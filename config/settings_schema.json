@@ -1585,7 +1585,7 @@
       {
         "type": "select",
         "id": "home1_slide_style",
-        "label": "Select Style",
+        "label": "Select Slider Style",
         "options": [
           {
             "value": "1",
@@ -1952,7 +1952,7 @@
       {
         "type": "select",
         "id": "home2_slide_style",
-        "label": "Select Style",
+        "label": "Select Slider Style",
         "options": [
           {
             "value": "1",
@@ -2211,7 +2211,7 @@
       {
         "type": "select",
         "id": "home3_slide_style",
-        "label": "Select Style",
+        "label": "Select Slider Style",
         "options": [
           {
             "value": "1",
