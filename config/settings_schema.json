@@ -2693,6 +2693,62 @@
         "max-width": 300,
         "max-height": 100
       },
+       {
+        "type": "header",
+        "content": "Slideshow"
+      },
+      {
+        "type": "header",
+        "content": "Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_home4_enable",
+        "label": "Enable slideshow"
+      },
+      {
+        "type": "select",
+        "id": "home4_slide_style",
+        "label": "Select Slider Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "6",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "text",
+        "id": "home4_slide_height",
+        "label": "Slideshow Height (px)",
+        "default": "470"
+      },
       {
         "type": "header",
         "content": "Scroll Effects"
@@ -3347,6 +3403,133 @@
       }
     ]
   },
+
+  {
+    "name": "Home page 6",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Block Slideshow"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_slider_enable",
+        "label": "Enable slideshow",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "home6_slider_style",
+        "label": "Select Slider Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "7",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "text",
+        "id": "home6_slider_height",
+        "label": "Slideshow Height (px)",
+        "default": "511"
+      }
+    ]
+  },
+
+  {
+    "name": "Home page 7",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Select header"
+      },
+      {
+        "type": "header",
+        "content": "Block Slideshow"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_slider_enable",
+        "label": "Enable slideshow",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "home7_slider_style",
+        "label": "Select Slider Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          },
+          {
+            "value": "6",
+            "label": "style 6"
+          },
+          {
+            "value": "7",
+            "label": "style 7"
+          }
+        ],
+        "default": "7",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+      {
+        "type": "text",
+        "id": "home7_slider_height",
+        "label": "Slideshow Height (px)",
+        "default": "511"
+      }
+    ]
+  },
+
   {
     "name": "Product page",
     "settings": [

@@ -1,19 +1,22 @@
 <main>
   <!--site header-->
   <!--end site header-->
-  <div class="homepage-slip-screen fullpage-container">
+  {% capture slider %}slider-{{settings.home4_slide_style}}{% endcapture %}
+  {% include slider  %}
+
+  <div class="homepage-slip-screen1 fullpage-container">
 
     {% comment %} ----- Home ----- {% endcomment %}        
     {% if settings.home4_home_enable %}          
-    <div id="home" class="slip-section section">
+    <div id="home" class="slip-section1 section">
       <div class="slip-home slip-wrapper">
         <div class="container-fluid slip-full-height">
           <div class="row slip-home-item-wrapper slip-full-height">
             <div class="col-md-6 slip-full-height">
-              <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="col-md-6 hidden-xs hidden-sm slip-full-height">
-              <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="overlay">
               <div class="cell-vertical-wrapper">
@@ -44,7 +47,7 @@
         <div class="container-fluid slip-full-height">
           <div class="row slip-full-height">
             <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
-              <div style="background-image: url({{ 'slip-bg-3.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-3.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="col-md-6 slip-full-height">
               <div class="row slip-full-height">
@@ -100,7 +103,7 @@
               </div>
             </div>
             <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
-              <div style="background-image: url({{ 'slip-bg-4.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-4.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
           </div>
         </div>
@@ -117,7 +120,7 @@
         <div class="container-fluid slip-full-height">
           <div class="row slip-full-height">
             <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
-              <div style="background-image: url({{ 'slip-bg-5.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-5.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="col-md-6 slip-full-height">
               <div class="row slip-full-height">
@@ -185,7 +188,7 @@
               </div>
             </div>
             <div class="col-md-6 slip-full-height hidden-xs hidden-sm">
-              <div style="background-image: url({{ 'slip-bg-6.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-6.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
           </div>
         </div>
@@ -194,15 +197,16 @@
 
     {% endif %}            
     <!-- Contact -->
-    <div id="contact" class="slip-section section">
+    </div>
+    <div id="contact1" class="slip-section1 section1">
       <div class="slip-contact slip-wrapper">
         <div class="container-fluid slip-full-height">
           <div class="row slip-contact-item-wrapper slip-full-height">
             <div class="col-md-6 slip-full-height">
-              <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-1.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="col-md-6 hidden-xs hidden-sm slip-full-height">
-              <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div>
+              <!-- <div style="background-image: url({{ 'slip-bg-2.jpg' | asset_url }});" class="row slip-bg-image"></div> -->
             </div>
             <div class="overlay">
               <div class="cell-vertical-wrapper">
@@ -211,7 +215,7 @@
 
 
                     <a href="/"  >
-                      <img src="{{ 'footer-001.png' | asset_url }}" alt="Slip contact logo" class="caption-logo">
+                      <!-- <img src="{{ 'footer-001.png' | asset_url }}" alt="Slip contact logo" class="caption-logo"> -->
                     </a>
 
                     <div class="contact-info">
@@ -305,11 +309,11 @@
           </div>
         </div>
       </div>
-    </div><!-- end - Contact -->
+
+
+    <!-- end - Contact -->
   </div>
   <!--site footer-->
 </main>
 
-{{ 'jquery.slimscroll.min.js' | asset_url | script_tag }}
-{{ 'jquery.easings.min.js' | asset_url | script_tag }}
-{{ 'jquery.fullPage.min.js' | asset_url | script_tag }}
+

@@ -464,16 +464,30 @@
 
 .banner-slider {
   .owl-theme .owl-controls .owl-buttons div {
-    .owl-prev {
+    &.owl-prev {
       left: 15px;
     }
-    .owl-next {
+    &.owl-next {
       right: 15px;
     }
   }
   &:hover .owl-theme .owl-controls .owl-buttons div {
     opacity: 1;
   }
+}
+
+//bannerslider style 6: background darker, textwhite
+
+
+.slider--background-dark .content-banner-slider:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.15);
+    z-index: 1;
 }
 
 
@@ -483,10 +497,7 @@
   position: absolute;
   top: 50%;
   width: 100%;
-  // transform: translateY(-50%);
-  // -webkit-transform: translateY(-50%);
   @include prefix(transform, translateY(-50%));
-
   z-index: 5;
 }
 

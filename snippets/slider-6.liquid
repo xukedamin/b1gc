@@ -1,6 +1,7 @@
 {% if settings.slider_home_enable %}
-<div class="home-boxed-slider style-5 caption-slider dir-nav control-nav slider-6" data-pauseonhover="{{settings.slide_pauseOnHover}}"
-data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}" >
+<div class="banner-slider owl-arrow-banner slider--background-dark"  data-pauseonhover="{{settings.slide_pauseOnHover}}"
+data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
+  <div class="wrap-item">
   {% for i in (1..4) %}
   {% capture slide %}slide_{{ i }}{% endcapture %}
   {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
@@ -14,28 +15,37 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
 
   {% if settings[slide] %}
 
-  <div class="home-slider-item">
-    <div style="background-image:url({{ slide_img | asset_url  }}); " class="item-image">
-      {% if settings[slide_video] != blank %}
-      <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
-        <source src="{{settings[slide_video]}}" type="video/mp4">
-      </video>
-      {% endif %}      
-      <div class="overlay">
-        <div class="cell-vertical-wrapper">
-          <div class="cell-middle">
-            <div class="caption-wrapper text-center">
+   <div class="item">
+    <div class="content-banner-slider">
+      <a href="{{settings[slide_link]}}" class="banner-thumb-link">
+        {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
+      </a>
+      <div class="banner-info">
+        <div class="container">
+           {% if settings[slide_video] != blank %}
+            <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
+              <source src="{{settings[slide_video]}}" type="video/mp4">
+            </video>
+            {% endif %}
+          <div class="heading-icon caption size-70 {% if settings[slide_icon] != blank  %} {{ settings[slide_icon] }} {% endif %}">
+            {% if settings[slide_icon] == blank  %}
+            <br />{{ slide_icon_img | asset_url | img_tag: settings[slide_alt] }} <br />
+            {% endif %}
+          </div>
 
-              	<div class="heading-icon caption size-70 {% if settings[slide_icon] != blank  %} {{ settings[slide_icon] }} {% endif %}">
-                {% if settings[slide_icon] == blank  %}
-                <br />{{ slide_icon_img | asset_url | img_tag: settings[slide_alt] }} <br />
-                {% endif %}
-                </div>              
-
-              {% if settings[slide_title1] != blank  %}
-              <p data-caption-animation="fadeIn" class="caption">{{ settings[slide_title1] }}</p>
-              {% endif %}
-            </div>
+          <div class="banner-info-text">
+           {% if settings[slide_title1] != blank  %}
+              <h4>{{settings[slide_title1]}}</h4>
+            {% endif %}
+            {% if settings[slide_title2] != blank  %}
+              <h2>{{settings[slide_title2]}}</h2>
+            {% endif %}
+            {% if settings[slide_text] != blank  %}
+              <h4>{{settings[slide_text]}}</h4>
+            {% endif %}
+            {% if settings[slide_button] != blank  %}
+              <a href="#" class="btn-link-default banner-link">{{settings[slide_button]}}</a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -44,8 +54,9 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
 
   {% endif %}
   {% endfor %}
-</div>
-
+        
+   </div>
+  </div>
 
 {% endif %}
 

@@ -1,62 +1,61 @@
 {% if settings.slider_home_enable %}
-<div class="home-fw-slider style-6 caption-slider dir-nav parents-height slider-7" data-pauseonhover="{{settings.slide_pauseOnHover}}"
-data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}" >
-  
 
-  {% for i in (1..4) %}
-  {% capture slide %}slide_{{ i }}{% endcapture %}
-  {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
-  {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
-  {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}  
-  {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
-  {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
-  {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
-  {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
-  {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
-  {% capture slide_video %}slide_{{ i }}_video{% endcapture %}
+<div class="banner-home7">
+  <div class="banner-slider-circle-hoztical background-transparent" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
+    <div class="wrap-item">
 
-  
+      {% for i in (1..4) %}
+      {% capture slide %}slide_{{ i }}{% endcapture %}
+      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+      {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
+      {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}  
+      {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
+      {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
+      {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
+      {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
+      {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
+      {% capture slide_video %}slide_{{ i }}_video{% endcapture %}
 
   {% if settings[slide] %}
 
-  <div class="home-slider-item">
-    <div style="background-image:url({{ slide_img | asset_url  }});" class="item-image">
 
-      {% if settings[slide_video] != blank %}
-      <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
-        <source src="{{settings[slide_video]}}" type="video/mp4">
-      </video>
-      {% endif %}
-      
-<div class="overlay">
-                <div class="cell-vertical-wrapper">
-                  <div class="cell-middle">
-                    <div class="container">
-                      <div class="caption-wrapper">
-                {% if settings[slide_title1] != blank  %}
-                <h1 class="caption">{{ settings[slide_title1] }}</h1>
-                {% endif %}
-                {% if settings[slide_title2] != blank %}
-                <h1 class="caption">{{ settings[slide_title2] }}</h1>
-                {% endif %} 
-                {% if settings[slide_text]  != blank %}
-                <p class="caption">{{ settings[slide_text] }}</p>
-                {% endif %}
-                {% if settings[slide_button]  != blank %}
-                <a href="{{ settings[slide_link] }}" class="caption border-btn border-btn-light btn-size-5">{{ settings[slide_button] }}</a>                            
-                {% endif %}                        
-                      </div>
+          <div class="item">
+            {% if settings[slide_video] != blank %}
+          <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
+            <source src="{{settings[slide_video]}}" type="video/mp4">
+          </video>
+          {% endif %}
+            <div class="content-banner-slider">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="banner-rect-info">
+                    {% if settings[slide_title1] != blank  %}
+                      <h4>{{ settings[slide_title1] }}</h4>
+                    {% endif %}
+                    {% if settings[slide_title2] != blank %}
+                      <h2>{{ settings[slide_title2] }}</h2>
+                     {% endif %}
+                      {% if settings[slide_button]  != blank %}
+                      <a href="#" class="btn-link-default"> {{ settings[slide_button] }}</a>
+                       {% endif %}
                     </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <a href="#" class="banner-thumb-link">
+                      <!-- <img src="images/slider/sl1.png" alt="" /> -->
+                    </a>
                   </div>
                 </div>
               </div>
-      
-
-    </div>
-  </div>
+            </div>
+          </div>
 
   {% endif %}
   {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% endif %}
