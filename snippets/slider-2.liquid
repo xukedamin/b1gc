@@ -1,9 +1,8 @@
-{% if settings.slider_home_enable %}
+
 <div class="banner-slider banner-slider-circle-vertical">
   <div class="wrap-item">
     {% for i in (1..4) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
-      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
 
       {% if settings.slider2_img_set %}
         {% capture slide_img %}slide_{{settings.slider2_img_set}}_{{ i }}.jpg{% endcapture %}
@@ -51,4 +50,3 @@
   </div>
 </div>
 
-{% endif %}

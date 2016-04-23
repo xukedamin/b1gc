@@ -1,3 +1,5 @@
-{% include 'header-7' %}
-{% capture slider %}slider-{{settings.home7_slider_style}}{% endcapture %}
-{% include slider  %}
+{% if settings.slider_home_enable %}
+	{% include 'header-7' %}
+	{% capture slider %}slider-{{settings.home7_slider_style}}{% endcapture %}
+	{% include slider  %}
+{% endif %}

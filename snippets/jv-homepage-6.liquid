@@ -1,3 +1,4 @@
-
-{% capture slider %}slider-{{settings.home6_slider_style}}{% endcapture %}
-{% include slider  %}
+{% if settings.slider_home_enable %}
+	{% capture slider %}slider-{{settings.home6_slider_style}}{% endcapture %}
+	{% include slider  %}
+{% endif %}

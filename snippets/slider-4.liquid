@@ -1,4 +1,4 @@
-{% if settings.slider_home_enable %}
+
 <div class="banner-slider home-slider" data-pauseonhover="{{settings.slide_pauseOnHover}}"
 data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
   <div class="container">
@@ -40,7 +40,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
       {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
        {% if settings[slide] %}
 
-        <a data-slide-index="{{ i }}" href="">
+        <a data-slide-index="{{ i | minus:1 }}" href="">
           {% if settings[slide_title1] != blank  %}
             {{ settings[slide_title1] }}
           {% endif %}
@@ -53,4 +53,3 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
   </div>
 </div>
 
-{% endif %}

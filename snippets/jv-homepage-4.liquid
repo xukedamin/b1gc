@@ -1,8 +1,10 @@
 <main>
   <!--site header-->
   <!--end site header-->
-  {% capture slider %}slider-{{settings.home4_slide_style}}{% endcapture %}
-  {% include slider  %}
+  {% if settings.slider_home_enable %}
+    {% capture slider %}slider-{{settings.home4_slide_style}}{% endcapture %}
+    {% include slider  %}
+  {% endif %}
 
   <div class="homepage-slip-screen1 fullpage-container">
 

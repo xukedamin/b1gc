@@ -1,9 +1,11 @@
 <main class="page-home-home3">
   <header class="home-sticky-nav-trigger">
     <div class="home-fw-slider style-6 caption-slider dir-nav parents-height">
-
-      {% capture slider %}slider-{{settings.home3_slide_style}}{% endcapture %}
-      {% include slider  %}
+      
+      {% if settings.slider_home_enable %}
+        {% capture slider %}slider-{{settings.home3_slide_style}}{% endcapture %}
+        {% include slider  %}
+      {% endif %}
 
     </div>
   </header>

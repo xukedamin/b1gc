@@ -8,8 +8,17 @@
   </div>
   <hr>
   {% endunless %}
+  
+  {% if settings.slider_home_enable %}
     {% capture slider %}slider-{{settings.home2_slide_style}}{% endcapture %}
     {% include slider  %}
+  {% endif %}
+
+  {% comment %} ----- Banner  ----- {% endcomment %}
+  {% if settings.home2_banner_enable %}
+    {% capture banner %}banner-{{settings.home2_banner_style}}{% endcapture %}
+    {% include banner  %}
+  {%endif %}
    
 
   <section class="pt-50 pb-50">
