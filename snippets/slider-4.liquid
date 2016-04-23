@@ -6,7 +6,12 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
     <ul class="bxslider">
       {% for i in (1..4) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
-      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+      
+
+       {% if settings.slider4_img_set %}
+        {% capture slide_img %}slide_{{settings.slider4_img_set}}_{{ i }}.jpg{% endcapture %}
+      {% endif %}
+
       {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
       {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}    
       {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
@@ -16,8 +21,6 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
       {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
 
       {% if settings[slide] %}
-
-     
         <li>
          {% if settings[slide_video] != blank %}
           <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
@@ -26,11 +29,10 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
           {% endif %}  
           {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
         </li>
-     
+     {% endif %}
 
-    {% endif %}
     {% endfor %}
-     </ul>
+    </ul>
     
     <div id="bx-pager">
      {% for i in (1..4) %}
@@ -38,7 +40,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
       {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
        {% if settings[slide] %}
 
-        <a data-slide-index="{{ i | minus }}" href="">
+        <a data-slide-index="{{ i }}" href="">
           {% if settings[slide_title1] != blank  %}
             {{ settings[slide_title1] }}
           {% endif %}

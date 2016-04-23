@@ -6,19 +6,22 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
     <div class="wrap-item">
 
       {% for i in (1..4) %}
-      {% capture slide %}slide_{{ i }}{% endcapture %}
-      {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
-      {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
-      {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}  
-      {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
-      {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
-      {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
-      {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
-      {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
-      {% capture slide_video %}slide_{{ i }}_video{% endcapture %}
+        {% capture slide %}slide_{{ i }}{% endcapture %}
 
-  {% if settings[slide] %}
+        {% if settings.slider7_img_set %}
+         {% capture slide_img %}slide_{{settings.slider7_img_set}}_{{ i }}.png{% endcapture %}
+        {% endif %}
+        
+        {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
+        {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}  
+        {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
+        {% capture slide_title2 %}slide_{{ i }}_title_2{% endcapture %}
+        {% capture slide_text %}slide_{{ i }}_text{% endcapture %}
+        {% capture slide_button %}slide_{{ i }}_button{% endcapture %}
+        {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
+        {% capture slide_video %}slide_{{ i }}_video{% endcapture %}
 
+        {% if settings[slide] %}
 
           <div class="item">
             {% if settings[slide_video] != blank %}
@@ -44,7 +47,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <a href="#" class="banner-thumb-link">
-                      <!-- <img src="images/slider/sl1.png" alt="" /> -->
+                      {{ slide_img | asset_url | img_tag: settings[slide_alt] }} 
                     </a>
                   </div>
                 </div>
@@ -52,8 +55,8 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
             </div>
           </div>
 
-  {% endif %}
-  {% endfor %}
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>

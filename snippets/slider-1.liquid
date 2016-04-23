@@ -2,11 +2,16 @@
 <div class="header-slider default-paginav">
   <div class="wrap-item">
   {% for i in (1..4) %}
-  {% capture slide %}slide_sm_{{ i }}{% endcapture %}
+  
+  {%comment %} {% capture slide %}slide_sm_{{ i }}{% endcapture %} {% endcomment%}
+
+  {% if settings.slider1_img_set %}
+    {% capture slide_img %}slide_{{settings.slider1_img_set}}_{{ i }}.jpg{% endcapture %}
+  {% endif %}
+
   {% capture slide_img %}slide_sm_{{ i }}.jpg{% endcapture %}
   
   {% capture slide_link %}slide_{{ i }}_link{% endcapture %}
-
 
     {% if settings[slide] %}
       <div class="item">

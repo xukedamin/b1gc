@@ -4,6 +4,11 @@
     {% for i in (1..4) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
       {% capture slide_img %}slide_{{ i }}.jpg{% endcapture %}
+
+      {% if settings.slider2_img_set %}
+        {% capture slide_img %}slide_{{settings.slider2_img_set}}_{{ i }}.jpg{% endcapture %}
+      {% endif %}
+
       {% capture slide_icon %}slide_{{ i }}_icon{% endcapture %}
       {% capture slide_icon_img %}slide_{{ i }}_icon_img.png{% endcapture %}    
       {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}

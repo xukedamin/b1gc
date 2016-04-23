@@ -1620,12 +1620,6 @@
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
       {
-        "type": "text",
-        "id": "home1_slide_height",
-        "label": "Slideshow Height (px)",
-        "default": "750"
-      },
-      {
         "type": "header",
         "content": "Special Offers"
       },
@@ -1983,15 +1977,10 @@
             "label": "style 7"
           }
         ],
-        "default": "6",
+        "default": "2",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
-      {
-        "type": "text",
-        "id": "home2_slide_height",
-        "label": "Slideshow Height (px)",
-        "default": "510"
-      },
+     
       {
         "type": "header",
         "content": "Featured Products"
@@ -2242,7 +2231,7 @@
             "label": "style 7"
           }
         ],
-        "default": "1",
+        "default": "3",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
       {
@@ -2740,14 +2729,8 @@
             "label": "style 7"
           }
         ],
-        "default": "6",
+        "default": "4",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
-      },
-      {
-        "type": "text",
-        "id": "home4_slide_height",
-        "label": "Slideshow Height (px)",
-        "default": "470"
       },
       {
         "type": "header",
@@ -3054,7 +3037,7 @@
             "label": "style 7"
           }
         ],
-        "default": "7",
+        "default": "5",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
       {
@@ -3457,12 +3440,6 @@
         ],
         "default": "7",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
-      },
-      {
-        "type": "text",
-        "id": "home6_slider_height",
-        "label": "Slideshow Height (px)",
-        "default": "511"
       }
     ]
   },
@@ -3520,12 +3497,6 @@
         ],
         "default": "7",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
-      },
-      {
-        "type": "text",
-        "id": "home7_slider_height",
-        "label": "Slideshow Height (px)",
-        "default": "511"
       }
     ]
   },
@@ -4469,7 +4440,6 @@
   },
 
 
-
   {
     "name": "Material Slideshow",
     "settings": [
@@ -4532,11 +4502,7 @@
         "id": "slide_1",
         "label": "Enable"
       },
-      {
-        "type": "image",
-        "id": "slide_1.jpg",
-        "label": "Image"
-      },
+   
       {
         "type": "text",
         "id": "slide_1_video",
@@ -4590,11 +4556,7 @@
         "id": "slide_2",
         "label": "Enable"
       },
-      {
-        "type": "image",
-        "id": "slide_2.jpg",
-        "label": "Image"
-      },
+     
       {
         "type": "text",
         "id": "slide_2_video",
@@ -4648,11 +4610,7 @@
         "id": "slide_3",
         "label": "Enable"
       },
-      {
-        "type": "image",
-        "id": "slide_3.jpg",
-        "label": "Image"
-      },
+  
       {
         "type": "text",
         "id": "slide_3_video",
@@ -4706,11 +4664,7 @@
         "id": "slide_4",
         "label": "Enable"
       },
-      {
-        "type": "image",
-        "id": "slide_4.jpg",
-        "label": "Image"
-      },
+      
       {
         "type": "text",
         "id": "slide_4_video",
@@ -4758,8 +4712,255 @@
     ]
   },
 
+ {
+    "name": "Sliders settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Slider settings"
+      },
+      {
+        "type": "header",
+        "content": "Slider 1"
+      },
+      {
+        "type" : "select",
+        "id": "slider1_img_set",
+        "label": "Slider stlye 1 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_sm"
+      },
+      
+      {
+        "type": "text",
+        "id": "slider1_height",
+        "label": "Slider 1 - Height (px)",
+        "default": "750"
+      },
+       {
+        "type": "header",
+        "content": "Slider 2"
+      },
+
+      {
+        "type" : "select",
+        "id": "slider2_img_set",
+        "label": "Slider stlye 2 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_normal"
+      },
+       {
+        "type": "text",
+        "id": "slider2_height",
+        "label": "Slider 2 - Height (px)",
+        "default": "510"
+      },
+      
+       {
+        "type": "header",
+        "content": "Slider 3"
+      },
+
+      {
+        "type" : "select",
+        "id": "slider3_img_set",
+        "label": "Slider stlye 3 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_normal"
+      },
+       {
+        "type": "text",
+        "id": "slider3_height",
+        "label": "Slider 3 - Height (px)",
+        "default": "750"
+      },
+       {
+        "type": "header",
+        "content": "Slider 4"
+      },
+
+      {
+        "type" : "select",
+        "id": "slider4_img_set",
+        "label": "Slider stlye 4 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_normal"
+      },
+       {
+        "type": "text",
+        "id": "slider4_height",
+        "label": "Slider 4 - Height (px)",
+        "default": "470"
+      },
+       {
+        "type": "header",
+        "content": "Slider 6"
+      },
+
+      {
+        "type" : "select",
+        "id": "slider6_img_set",
+        "label": "Slider stlye 6 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_normal"
+      },
+      {
+        "type": "text",
+        "id": "slider6_height",
+        "label": "Slider 6 - Height (px)",
+        "default": "511"
+      },
+
+       {
+        "type": "header",
+        "content": "Slider 7"
+      },
+      {
+        "type" : "select",
+        "id": "slider7_img_set",
+        "label": "Slider stlye 7 image set",
+         "options" :[
+         {
+            "value": "img_normal",
+            "label": "Default image set"
+          },
+          {
+            "value": "img_sm",
+            "label": "Square image set"
+          },
+          {
+            "value": "img_trans",
+            "label": "Transperant image set"
+          }
+        ],
+        "default": "img_trans"
+      }
+      ,
+      {
+        "type": "text",
+        "id": "slider7_height",
+        "label": "Slider 7 - Height (px)",
+        "default": "511"
+      }
+     
+    ]
+  },
+
   {
-    "name": "Material Slideshow image Square size (smaller)",
+      "name": "Image set - Normal",
+      "settings": [
+      {
+        "type": "header",
+        "content": "Image smaller set"
+      },
+      
+      {
+          "type": "header",
+          "content": "Item #1"
+        },
+       {
+       "type": "image",
+       "id": "slide_img_normal_1.jpg",
+       "label": "Image"
+      },
+       {
+          "type": "header",
+          "content": "Item #2"
+        },
+      {
+        "type": "image",
+        "id": "slide_img_normal_2.jpg",
+        "label": "Image"
+      },
+      {
+          "type": "header",
+          "content": "Item #3"
+      },
+
+      {
+        "type": "image",
+        "id": "slide_img_normal_3.jpg",
+        "label": "Image"
+      },
+      {
+          "type": "header",
+          "content": "Item #3"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_normal_4.jpg",
+        "label": "Image"
+      }
+    ]
+  },
+
+  {
+    "name": "Image set - Square size (smaller)",
     "settings": [
       {
         "type": "header",
@@ -4771,12 +4972,12 @@
       },
       {
         "type": "checkbox",
-        "id": "slide_sm_1",
+        "id": "slide_img_sm_1",
         "label": "Enable"
       },
       {
         "type": "image",
-        "id": "slide_sm_1.jpg",
+        "id": "slide_img_sm_1.jpg",
         "label": "Item Image 1 (sm)"
       },
 
@@ -4786,12 +4987,12 @@
       },
       {
         "type": "checkbox",
-        "id": "slide_sm_2",
+        "id": "slide_img_sm_2",
         "label": "Enable"
       },
       {
         "type": "image",
-        "id": "slide_sm_2.jpg",
+        "id": "slide_img_sm_2.jpg",
         "label": "Item Image 2 (sm)"
       },
 
@@ -4801,12 +5002,12 @@
       },
       {
         "type": "checkbox",
-        "id": "slide_sm_3",
+        "id": "slide_img_sm_3",
         "label": "Enable"
       },
       {
         "type": "image",
-        "id": "slide_sm_3.jpg",
+        "id": "slide_img_sm_3.jpg",
         "label": "Item Image 3 (sm)"
       },
 
@@ -4816,13 +5017,82 @@
       },
       {
         "type": "checkbox",
-        "id": "slide_sm_4",
+        "id": "slide_img_sm_4",
         "label": "Enable"
       },
       {
         "type": "image",
-        "id": "slide_sm_4.jpg",
+        "id": "slide_img_sm_4.jpg",
         "label": "Item Image 4 (sm)"
+      }
+    ]
+  },
+
+  {
+    "name": "Image set - Transperant",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image Transperant set"
+      },
+       {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_1",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_1.png",
+        "label": "Item Image transperant 1"
+      },
+
+       {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_2",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_2.png",
+        "label": "Item Image transperant 2"
+      },
+
+       {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_3",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_3.png",
+        "label": "Item Image transperant 3"
+      },
+
+       {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_4",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_4.png",
+        "label": "Item Image transperant 4"
       }
     ]
   },
