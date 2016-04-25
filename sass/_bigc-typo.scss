@@ -110,6 +110,12 @@
   }
 
 }
+.box-intro.left{
+   @extend %text-left;
+   .title {
+      padding-left: 0;
+   }
+}
 
 
 .item-box-sub {

@@ -1,14 +1,63 @@
-{% for i in (1..12) %}
-{% capture logo_partner %}logo_partner_{{ i }}_enable{% endcapture %}
-{% capture logopartner_img %}brand-slider-{{ i }}.png{% endcapture %}
-{% capture logopartner_url %}logopartner{{ i }}_url{% endcapture %}
+<div class="partner-slider">
+	<div class="container">
+		{%if settings.logo_partner_title_enable %}
+			
+			  {% case settings.logo_partner_title_style %}
+		    {% when 'underline_left' %}
+		    	{% assign class_title_box = 'box-intro left' %}
+		    {% when 'underline_center' %}
+		    	{% assign class_title_box = 'box-intro' %}
+		    {% when 'background_center' %}
+		    	{% assign class_title_box = 'box-intro-background' %}
+		    {% else %}
+		   	 	{% assign class_title_box = 'box-intro-border' %}
+		    {% endcase %}
 
-{% if settings[logo_partner] %}
-<div class="brand-item ">
-  <div class="item-image"><a target="_blank" href="{% if settings[logopartner_url] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[logopartner_url] }} {% endif %}">
-    <img src="{{ logopartner_img | asset_url }}"  alt="Brand image" class="img-responsive center-block">
-    </a></div>
+		<div class="{{class_title_box}}">
+			{%if settings.logo_partner_title_enable %}
+			<h2><span class="title">{{ settings.logo_partner_title}}</span></h2>
+			{% endif %}
+			{%if settings.logo_partner_title_enable %}
+				<span class="desc-title">{{ settings.logo_partner_subtitle}}</span>
+			{% endif %}
+		</div>
+		
+		{% endif %}
+
+		{%if settings.logo_partner_button_enable and settings.logo_partner_navigation_enable %}
+				{% assign class_slider = 'partner-slider-paginav-buttonnav' %}
+		{%elsif settings.logo_partner_button_enable %}
+				{% assign class_slider = 'partner-slider-directnav' %}
+		{% else %}
+			{% assign class_slider = 'partner-slider-paginav' %}
+		{% endif %}
+
+
+		<div class="row">
+			<div class="paginav-slider {{ class_slider }}">
+				<div class="wrap-item">
+			{% for i in (1..12) %}
+			{% capture logo_partner %}logo_partner_{{ i }}_enable{% endcapture %}
+			{% capture logopartner_img %}brand-slider-{{ i }}.png{% endcapture %}
+			{% capture logopartner_url %}logopartner{{ i }}_url{% endcapture %}
+
+			{% if settings[logo_partner] %}
+			
+					<div class="item">
+						<div class="partner-item">
+							<a href="{% if settings[logopartner_url] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[logopartner_url] }} {% endif %}">
+							<img src="{{ logopartner_img | asset_url }}" alt="" />
+							</a>
+						</div>
+					</div>
+
+			{% endif %}
+			{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-{% endif %}
-{% endfor %}
+

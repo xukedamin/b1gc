@@ -368,29 +368,6 @@
   }
 }
 
-.home-directnav {
-  .owl-theme .owl-controls .owl-buttons div {
-    background: transparent none repeat scroll 0 0;
-    border-radius: 0;
-    color: $color_dusty-gray;
-    display: inline-block;
-    font-size: 30px;
-    margin: 0 0 0 10px;
-    opacity: 1;
-    padding: 0;
-
-    &:hover {
-      color: $color_casablanca;
-    }
-  }
-
-  .owl-buttons {
-      position: absolute;
-      right: 0;
-      top: -50px;
-  }
-
-}
 
 // .product-featured-thumb
 

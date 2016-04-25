@@ -2248,6 +2248,16 @@
         "id": "home2_blog_link",
         "label": "Blog link",
         "default": "\/blogs\/news"
+      },
+      {
+        "type": "header",
+        "content": "Block Logo Partner"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_partner_enable",
+        "label": "Show?",
+        "default": true
       }
     ]
   },
@@ -5697,9 +5707,76 @@
       }
     ]
   },
-  {
+ 
+ {
     "name": "Material Logo Partner",
     "settings": [
+      {
+        "type": "header",
+        "content": "General settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "logo_partner_title_enable",
+        "label": "Show title",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "logo_partner_title",
+        "label": "Partner title",
+        "default":"Partners"
+      },
+    {
+        "type": "select",
+        "id": "logo_partner_title_style",
+        "label": "Partner title Align",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+      {
+            "value": "underline_left",
+            "label": "Underline Left"
+          },
+          {
+            "value": "underline_center",
+            "label": "Underline Center"
+          }
+      ,
+          {
+            "value": "background_center",
+            "label": "Background Center"
+          }
+        ],
+    "default" : "underline_center"
+    },
+       {
+        "type": "checkbox",
+        "id": "logo_partner_subtitle_enable",
+        "label": "Show subtitle",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "logo_partner_subtitle",
+        "label": "Partner subtitle",
+        "default":"Our Partners"
+      },
+    {
+        "type": "checkbox",
+        "id": "logo_partner_button_enable",
+        "label": "Show Button Nav",
+        "default": true
+      },
+    {
+        "type": "checkbox",
+        "id": "logo_partner_navigation_enable",
+        "label": "Show Paging nav",
+        "default": true
+      },
+
       {
         "type": "header",
         "content": "Item #1"
@@ -5942,6 +6019,7 @@
       }
     ]
   },
+  
   {
     "name": "Material Team",
     "settings": [

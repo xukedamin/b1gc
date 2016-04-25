@@ -20,9 +20,20 @@
     {% include banner  %}
     {% include 'banner-1' %}
     {% include 'banner-2' %}
+    {% include 'banner-3' %}
     {% include 'banner-adv' %}
     {% include 'banner-adv-product' %}
   {%endif %}
+
+
+  {% comment %} ----- Block Partner ----- {% endcomment %}
+  
+  {% if settings.home2_partner_enable %}  
+      
+   {% include 'jv-logopartner' %}
+
+  {% endif %}  
+
    
 
   <section class="pt-50 pb-50">
@@ -182,6 +193,8 @@
    
 
   {% endif %}     
+
+
 
 
 </main>     
