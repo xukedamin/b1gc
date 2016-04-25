@@ -7,8 +7,18 @@
         {% include slider  %}
       {% endif %}
 
+
+
     </div>
   </header>
+
+  {% comment %} ----- Banner  ----- {% endcomment %}
+  {% if settings.home3_banner_enable %}
+    {% capture banner %}banner-{{settings.home3_banner_style}}{% endcapture %}
+    {% include banner  %}
+  {%endif %}
+
+
   {% comment %} ----- Block Who We Are ----- {% endcomment %}
   {% if settings.home3_who_we_are %}   
   <section>

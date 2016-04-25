@@ -2313,8 +2313,43 @@
           }
         ],
         "default": "3",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "The Slideshows configuration stays at tabs  'Material Banner'  below."
       },
+        {
+        "type": "checkbox",
+        "id": "home3_banner_enable",
+        "label": "Enable banner"
+      },
+      {
+        "type": "select",
+        "id": "home3_banner_style",
+        "label": "Select Banner Style",
+        "options": [
+          {
+            "value": "1",
+            "label": "style 1"
+          },
+          {
+            "value": "2",
+            "label": "style 2"
+          },
+          {
+            "value": "3",
+            "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
+          }
+        ],
+        "default": "1",
+        "info": "The Banner style at 'Material Banner  below."
+      },
+
       {
         "type": "header",
         "content": "Block Who We Are"
