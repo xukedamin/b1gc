@@ -1,0 +1,61 @@
+
+<div class="banner advert">
+  <div class="container">
+   
+      {% for i in (1..4) %}
+
+        {% capture banner_img %}banner_item_{{ i }}_img.png{% endcapture %}
+        {% capture banner_title %}banner_item_{{ i }}_title{% endcapture %}
+        {% capture banner_subtitle %}banner_item_{{ i }}_subtitle{% endcapture %}
+        {% capture banner_text %}banner_item_{{ i }}_text{% endcapture %}
+        {% capture banner_btn %}banner_item_{{ i }}_btn{% endcapture %}
+        {% capture banner_link %}banner_item_{{ i }}_link{% endcapture %}
+
+        {% assign class_item = i | modulo:2 %}
+          {% if class_item == 0 %}
+            {% assign class_item = 'right'%}
+          {% else %}
+            {% assign class_item = 'left'%}
+        {% endif %}
+    
+    {%if i == 1 or i == 3%}
+    <div class="row">
+    {% endif %}
+
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="item-advert {{ class_item }}">
+          <div class="thumb-adv">
+            <a href="#"><img class="img-responsive" src=" {{ banner_img | asset_url}}" alt="{{banner_img}}">
+            </a>
+          </div>
+          <div class="text-adv">
+           
+          {% if settings[banner_subtitle] != blank %}
+          <h3 class="sub-title">{{ settings[banner_subtitle] }}</h3>
+          {% endif %} 
+          
+          {% if settings[banner_title] != blank  %}
+            <h2 class="title">{{ settings[banner_title] }}</h2>
+          {% endif %}
+
+          {% if settings[banner_text]  != blank %}
+          <p class="text">{{ settings[banner_text] }}</p>
+          {% endif %}
+
+          {% if settings[banner_btn]  != blank %}
+          <a href="{{ settings[banner_link] }}" class="btn-link-default">{{ settings[banner_btn] }}</a>                            
+          {% endif %}         
+          
+          </div>
+
+        </div>
+      </div>
+    
+    {%if i == 2 or i == 4%}
+    </div>
+    {%endif %}
+
+      {% endfor %}
+  </div>
+</div>
+<!-- End Advert -->

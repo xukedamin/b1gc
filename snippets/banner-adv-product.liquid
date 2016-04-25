@@ -1,0 +1,75 @@
+
+<div class="container">
+{% assign i = 1 %}
+{% capture banner_img %}banner_item_{{ i }}_img.png{% endcapture %}
+{% capture banner_title %}banner_item_{{ i }}_title{% endcapture %}
+{% capture banner_subtitle %}banner_item_{{ i }}_subtitle{% endcapture %}
+{% capture banner_text %}banner_item_{{ i }}_text{% endcapture %}
+{% capture banner_btn %}banner_item_{{ i }}_btn{% endcapture %}
+{% capture banner_link %}banner_item_{{ i }}_link{% endcapture %}
+
+<div class="banner-adv-product">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="item-product item-product-leading">
+				<div class="item-product-thumb">
+					<a class="product-thumb-link" href="#"><img alt="" src="{{ banner_img | asset_url}}" class="img-responsive"></a>
+				</div>
+				<div class="item-product-info">
+					<div class="info-price">
+						<span>$539</span>
+					</div>
+					<div class="info-sale">
+						<span>-20%</span>
+					</div>
+
+					{% if settings[banner_subtitle] != blank %}
+          <h3 class="sub-title">{{ settings[banner_subtitle] }}</h3>
+          {% endif %} 
+
+					{% if settings[banner_btn]  != blank %}
+          <a href="{{ settings[banner_link] }}" class="readmore">{{ settings[banner_btn] }}</a>                            
+          {% endif %}         
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="item-product item-product-leading">
+				<div class="item-product-thumb">
+					<a class="product-thumb-link" href="#"><img alt="" src="{{ banner_img | asset_url}}" class="img-responsive"></a>
+				</div>
+				<div class="item-product-info">
+						<div class="info-price">
+						<span>$539</span>
+					</div>
+					<div class="info-sale">
+						<span>-20%</span>
+					</div>
+					
+					{% if settings[banner_subtitle] != blank %}
+          <h3 class="sub-title">{{ settings[banner_subtitle] }}</h3>
+          {% endif %} 
+
+					<div data-date="6/15/2016" class="hotdeal-countdown">
+						<div class="time_circles">
+							<canvas width="272" height="68"></canvas>
+							<div class="textDiv_Days"><span class="number">172</span><span class="text">DAY</span></div>
+							<div class="textDiv_Hours"><span class="number">6</span><span class="text">HOUR</span></div>
+							<div class="textDiv_Minutes"><span class="number">43</span><span class="text">MIN</span></div>
+							<div class="textDiv_Seconds"><span class="number">29</span><span class="text">SEC</span></div>
+						</div>
+					</div>
+
+
+					{% if settings[banner_btn]  != blank %}
+          <a href="{{ settings[banner_link] }}" class="readmore">{{ settings[banner_btn] }}</a>                            
+          {% endif %}         
+          
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
