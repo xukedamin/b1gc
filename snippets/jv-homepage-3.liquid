@@ -1,10 +1,11 @@
-<main class="page-home-home3">
+<main class="page-home-home3 TTT">
   <header class="home-sticky-nav-trigger">
     <div class="home-fw-slider style-6 caption-slider dir-nav parents-height">
       
       {% if settings.slider_home_enable %}
         {% capture slider %}slider-{{settings.home3_slide_style}}{% endcapture %}
         {% include slider  %}
+
       {% endif %}
 
 
@@ -16,6 +17,13 @@
   {% if settings.home3_banner_enable %}
     {% capture banner %}banner-{{settings.home3_banner_style}}{% endcapture %}
     {% include banner  %}
+  {%endif %}
+
+
+  {% comment %} ----- Banner 2 ----- {% endcomment %}
+  {% if settings.home3_banner_bottom_enable %}
+    {% capture banner_bottom %}banner-{{settings.home3_banner_bottom_style}}{% endcapture %}
+    {% include banner_bottom  %}
   {%endif %}
 
 

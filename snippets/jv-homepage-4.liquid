@@ -6,7 +6,16 @@
     {% include slider  %}
   {% endif %}
 
+  {% comment %} ----- Banner  ----- {% endcomment %}
+  {% if settings.home4_banner_enable %}
+    {% capture banner %}banner-{{settings.home4_banner_style}}{% endcapture %}
+    {% include banner  %}
+  {%endif %}
+
+
   <div class="homepage-slip-screen1 fullpage-container">
+
+
 
     {% comment %} ----- Home ----- {% endcomment %}        
     {% if settings.home4_home_enable %}          

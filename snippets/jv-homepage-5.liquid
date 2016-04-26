@@ -1,11 +1,21 @@
 <main class="page-home-home5 ">
   <header class="home-sticky-nav-trigger">
 
-
+ {% comment %} ----- Banner  ----- {% endcomment %}
+  {%if settings.home5_slide_enable %}
       {% capture slider %}slider-{{settings.home5_slide_style}}{% endcapture %}
       {% include slider  %}
+  {%endif %}
 
   </header>
+
+  {% comment %} ----- Banner  ----- {% endcomment %}
+  
+  {% if settings.home5_banner_enable %}
+    {% capture banner %}banner-{{settings.home5_banner_style}}{% endcapture %}
+    {% include banner  %}
+  {%endif %}
+
 
   {% comment %} ----- Block Who We Are ----- {% endcomment %}
   {% if settings.home5_who_we_are %}   
@@ -22,7 +32,7 @@
           </div>
         </div>
       </div>
-    </header>
+  </header>
     <div class="container section-block-p">
 
       {% for i in (1..3) %}

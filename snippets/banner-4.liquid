@@ -1,15 +1,15 @@
 
 <div class="banner advert">
   <div class="container">
-   
-      {% for i in (1..4) %}
+    <div class="row">
+      {% for i in (1..2) %}
 
-        {% capture banner_img %}banner_item_{{ i }}_img.png{% endcapture %}
-        {% capture banner_title %}banner_item_{{ i }}_title{% endcapture %}
-        {% capture banner_subtitle %}banner_item_{{ i }}_subtitle{% endcapture %}
-        {% capture banner_text %}banner_item_{{ i }}_text{% endcapture %}
-        {% capture banner_btn %}banner_item_{{ i }}_btn{% endcapture %}
-        {% capture banner_link %}banner_item_{{ i }}_link{% endcapture %}
+        {% capture banner_img %}banner4_item_{{ i }}_img.png{% endcapture %}
+        {% capture banner_title %}banner4_item_{{ i }}_title{% endcapture %}
+        {% capture banner_subtitle %}banner4_item_{{ i }}_subtitle{% endcapture %}
+        {% capture banner_text %}banner4_item_{{ i }}_text{% endcapture %}
+        {% capture banner_btn %}banner4_item_{{ i }}_btn{% endcapture %}
+        {% capture banner_link %}banner4_item_{{ i }}_link{% endcapture %}
 
         {% assign class_item = i | modulo:2 %}
           {% if class_item == 0 %}
@@ -18,9 +18,7 @@
             {% assign class_item = 'left'%}
         {% endif %}
     
-    {%if i == 1 or i == 3%}
-    <div class="row">
-    {% endif %}
+   
 
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="item-advert {{ class_item }}">
@@ -51,11 +49,9 @@
         </div>
       </div>
     
-    {%if i == 2 or i == 4%}
-    </div>
-    {%endif %}
 
       {% endfor %}
+    </div>
   </div>
 </div>
 <!-- End Advert -->
