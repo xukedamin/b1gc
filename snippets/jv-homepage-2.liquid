@@ -14,29 +14,60 @@
     {% include slider  %}
   {% endif %}
 
-  {% comment %} ----- Banner  ----- {% endcomment %}
-  {% if settings.home2_banner_enable %}
-    {% capture banner %}banner-{{settings.home2_banner_style}}{% endcapture %}
-    {% include banner  %}
-    {% include 'banner-1' %}
-    {% include 'banner-2' %}
-    {% include 'banner-3' %}
-    {% include 'banner-adv' %}
-    {% include 'banner-adv-product' %}
-  {%endif %}
-
-
-  {% comment %} ----- Block Partner ----- {% endcomment %}
-  
-  {% if settings.home2_partner_enable %}  
+  {% comment %} ----- Block Product locator jv-feature-locator ----- {% endcomment %}
+  <section id="position--content-top" class="pt-70 pb-50">
+    {% if settings.home2_position_content_top_enable %}
       
-   {% include 'jv-logopartner' %}
+      {% assign heading_enable =  settings.home2_position_content_top_title  %}
+      {% assign heading_style = settings.home2_position_content_top_title_style %}
+      {% assign heading_title_enable =  settings.home2_position_content_top_title %}
+      {% assign heading_title =  settings.home2_position_content_top_title %}
+      {% assign heading_subtitle_enable =  settings.home2_position_content_top_subtitle %}
+      {% assign heading_subtitle =  settings.home2_position_content_top_subtitle %}
+      {% include 'jv-heading-box' %}
 
+
+      {% capture file %}{{settings.home2_position_content_top}}{% endcapture %}
+      {% include file  %}
+    {% endif %}
+  </section>
+
+  {% comment %} ----- Block Feature ----- {% endcomment %}
+  <section id="position--content-middle-1" class="pt-70 pb-50">
+  </section>
+
+  {% comment %} ----- Block Banner jv-banner-4 ----- {% endcomment %}
+  <section id="position--content-middle-2" class="pt-70 pb-50">
+    {% if settings.home2_position_content_middle_2_enable %}
+      {% capture banner %}{{settings.home2_position_content_middle_2}}{% endcapture %}
+      {% include banner  %}
+  {% endif %}
+  </section>
+  
+
+  {% comment %} ----- Block News Product ----- {% endcomment %}
+  <section id="position--content-middle-3" class="pt-70 pb-50">
+  </section>
+
+  {% comment %} ----- Block Friends Brands ----- {% endcomment %}
+  <section id="position--content-middle-4" class="pt-70 pb-50">
+  </section>
+
+
+  {% comment %} ----- Block Popular blog ----- {% endcomment %}
+  <section id="position--content-middle-5" class="pt-70 pb-50">
+  </section>
+
+  {% comment %} ----- Block Partner - jv-logopartner----- {% endcomment %}
+  {% if settings.home2_position_content_bottom_enable %}
+  <section id="position--content-bottom" class="pt-70 pb-50">
+    {% capture file %}{{settings.home2_position_content_bottom}}{% endcapture %}
+    {% include file  %}
+  </section>
   {% endif %}  
-
    
 
-  <section class="pt-50 pb-50">
+  <section class="pt-70 pb-50">
     <div class="container">
       <div class="row">
         <div class="col-md-12 hidden-sm hidden-xs">

@@ -26,8 +26,6 @@
 /*Popular Post*/
 .popular-post {
   margin-top: 35px;
-
-
   .item {
     padding: 0 10px;
   }
@@ -124,64 +122,7 @@
   }
 }
 
-.locator {
-  margin-top: 80px;
-  @extend %text-center;
-  .title {
-    margin-bottom: 20px;
-  }
-}
 
-
-
-.locator-thumb {
-  background: rgba($color_black, 0) url('{{ "sbg-icon.png" | asset_url }}') no-repeat scroll center center;
-  height: 200px;
-  width: 200px;
-  position: relative;
-  margin: auto auto 20px;
-  padding: 65px;
-
-  .locator-thumb-link {
-    color: $color_shark;
-    font-size: 60px;
-    position: relative;
-    @extend %jv-transition-easeout;
-    z-index: 9;
-  }
-  &:hover {
-    &:after {
-      // transform: translate(10px, 10px);
-      @include prefix(transform, translate(10px, 10px));
-    }
-    .locator-thumb-link {
-      color: $color_casablanca;
-    }
-  }
-  &:after {
-    background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
-    content: "";
-    height: 100%;
-    left: 0px;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    @extend %jv-transition-easeout;
-  }
-}
-
-.locator-info {
-  p {
-    margin-top: 10px;
-    color: $color_dove-gray;
-  }
-  .sub-title a {
-    color: $color_shark;
-    &:hover {
-      color: $color_casablanca;
-    }
-  }
-}
 
 
 .partner-slider-paginav .box-intro {

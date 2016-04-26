@@ -1,145 +1,65 @@
-/*Advert*/
-.advert {
-  margin-top: 10px;
-}
 
-.item-advert {
-  position: relative;
-  overflow: hidden;
+/***********************************************************************
+            Locator         
+************************************************************************/
 
-  &.left {
-    margin-right: -10px;
-  }
-  &.right {
-    margin-left: -10px;
-  }
-
-  .thumb-adv img {
-    @extend %jv-transition-easeout;
-  }
-
-  &:hover .thumb-adv img {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    
-    @extend %jv-transform-scale-115;
-  }
-
-}
-
-
-.text-adv {
-  background: rgba(246, 246, 246, 0.65) none repeat scroll 0 0;
-  border-bottom: 1px solid rgba($color_black, 0.1);
-  border-top: 1px solid rgba($color_black, 0.1);
-  bottom: 0;
-  height: 215px;
-  left: 0;
-  margin: auto;
-  max-width: 370px;
-  padding: 45px 0;
-  position: absolute;
-  right: 0;
-  @extend %text-center;
-  top: 0;
-  width: 100%;
-
-  .btn-link-default {
-    margin-top: 25px;
-  }
-}
-
-
-/*Featured*/
-.sub-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-  @extend %text-up;
-}
-.title {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0;
-  @extend %text-up;
-}
-
-
-
-
-.desc-title {
-  color: $color_dusty-gray;
-  @extend %text-up;
-}
-
-.leading-text-adv {
-  bottom: 0;
-  color: $color_white;
-  height: 85px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  @extend %text-center;
-  @extend %text-up;
-  top: 0;
-  width: 100%;
-}
-
-.item-text-adv {
-  top: 100%;
-  color: $color_white;
-  font-size: 30px;
-  left: 100%;
-  margin: 16px 0 0;
-  position: absolute;
-  @extend %text-center;
-  @extend %text-up;
-  width: 100%;
-  opacity: 0;
-  @extend %jv-transition-easeout;
-  font-weight: 700;
-  z-index: 999;
-}
-
-//NOTE:home4
-.item-box-adv {
-  .btn-link-default span {
-    position: absolute;
-    width: 130px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    @extend %text-center;
-    right: 0;
-    bottom: 0;
-    @extend %jv-transition-easeout;
-    text-decoration: underline;
-
-    &:hover{
-      text-decoration: none;
-    }
-  }
+.locator {
+  margin-top: 80px;
   
-  &:hover{
-    .btn-link-default span {
-      width: 100%;
-    }
-    .item-text-adv {
-      opacity: 1;
-      top: 50%;
-      left: 0;
-      margin: -16px 0 0;
-    }
-    .btn-link-default {
-      background: transparent;
-      color: $color_white;
-      background: rgba(27, 29, 31, 0.5);
-      width: 100%;
-      height: 100%;
-    }
+  .title {
+    margin-bottom: 20px;
+  }
+}
 
+.locator-item{
+  @extend %text-center;
+}
+
+.locator-thumb {
+  background: rgba($color_black, 0) url('{{ "sbg-icon.png" | asset_url }}') no-repeat scroll center center;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: auto auto 20px;
+  padding: 65px;
+
+  .locator-thumb-link {
+    color: $color_shark;
+    font-size: 60px;
+    position: relative;
+    @extend %jv-transition-easeout;
+    z-index: 9;
+  }
+  &:hover {
+    &:after {
+      @include prefix(transform, translate(10px, 10px));
+    }
+    .locator-thumb-link {
+      color: $color_casablanca;
+    }
+  }
+  &:after {
+    background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    @extend %jv-transition-easeout;
+  }
+}
+
+.locator-info {
+  p {
+    margin-top: 10px;
+    color: $color_dove-gray;
+  }
+  .sub-title a {
+    color: $color_shark;
+    &:hover {
+      color: $color_casablanca;
+    }
   }
 }
 
@@ -147,6 +67,8 @@
 /***********************************************************************
             Feature Boxes           
 ************************************************************************/
+
+
 .list-feature-boxes {
 
   .item-feature-box {

@@ -1,28 +1,15 @@
 <div class="partner-slider">
+		{% assign heading_enable =  settings.logo_partner_title_enable %}
+		{% assign heading_style = settings.logo_partner_title_style %}
+		{% assign heading_title_enable =  settings.logo_partner_title_enable %}
+		{% assign heading_title =  settings.logo_partner_title %}
+		{% assign heading_subtitle_enable =  settings.logo_partner_subtitle_enable %}
+		{% assign heading_subtitle =  settings.logo_partner_subtitle %}
+		{% include 'jv-heading-box' %}
 	<div class="container">
-		{%if settings.logo_partner_title_enable %}
-			
-			  {% case settings.logo_partner_title_style %}
-		    {% when 'underline_left' %}
-		    	{% assign class_title_box = 'box-intro left' %}
-		    {% when 'underline_center' %}
-		    	{% assign class_title_box = 'box-intro' %}
-		    {% when 'background_center' %}
-		    	{% assign class_title_box = 'box-intro-background' %}
-		    {% else %}
-		   	 	{% assign class_title_box = 'box-intro-border' %}
-		    {% endcase %}
 
-		<div class="{{class_title_box}}">
-			{%if settings.logo_partner_title_enable %}
-			<h2><span class="title">{{ settings.logo_partner_title}}</span></h2>
-			{% endif %}
-			{%if settings.logo_partner_title_enable %}
-				<span class="desc-title">{{ settings.logo_partner_subtitle}}</span>
-			{% endif %}
-		</div>
-		
-		{% endif %}
+
+
 
 		{%if settings.logo_partner_button_enable and settings.logo_partner_navigation_enable %}
 				{% assign class_slider = 'partner-slider-paginav-buttonnav' %}
