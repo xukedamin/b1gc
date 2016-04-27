@@ -1,40 +1,35 @@
-<div class="locator">
-	<div class="container">
-		<h2 class="title">Product Locator</h2>
-		<div class="row">
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="locator-item">
-					<div class="locator-thumb">
-						<a href="#" class="locator-thumb-link"><span class="lnr lnr-store"></span></a>
-					</div>
-					<div class="locator-info">
-						<h3 class="sub-title"><a href="#">Types</a></h3>
-						<p>Masagni dolores eoquie voluptate quines ciuntera. Nique squames </p>
-					</div>
+<div class="locator container">
+	<div class="row">
+	 {% for i in (1..3) %}
+
+	 		{% capture item_enable %}feature_locator_item_{{ i }}_enable{% endcapture %}
+	   {% capture item_icon %}feature_locator_item_{{ i }}_icon{% endcapture %}
+     {% capture item_title %}feature_locator_item_{{ i }}_title{% endcapture %}
+     {% capture item_desc %}feature_locator_item_{{ i }}_desc{% endcapture %}
+     {% capture item_link %}feature_locator_item_{{ i }}_link{% endcapture %}
+		
+		{% if settings[item_enable] %}
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="locator-item">
+				<div class="locator-thumb">
+					<a href="{{settings[item_link]}}" class="locator-thumb-link">
+						<span class="{{settings[item_icon]}}"></span>
+					</a>
 				</div>
-			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="locator-item">
-					<div class="locator-thumb">
-						<a href="#" class="locator-thumb-link"><span class="lnr lnr-cog"></span></a>
-					</div>
-					<div class="locator-info">
-						<h3 class="sub-title"><a href="#">finishes</a></h3>
-						<p>Nique porriqua tquises dolorem desumquia doloresamet consectet adipisci.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="locator-item">
-					<div class="locator-thumb">
-						<a href="#" class="locator-thumb-link"><span class="lnr lnr-paw"></span>	</a>
-					</div>
-					<div class="locator-info">
-						<h3 class="sub-title"><a href="#">Colors</a></h3>
-						<p>Colorem sumquies sita consectet adipisci. Masagni bera dolores eoquie</p>
-					</div>
+				<div class="locator-info">
+					{% if settings[item_title] != blank  %}
+						<h3 class="sub-title"><a href="{{settings[item_link]}}">{{settings[item_title]}}</a></h3>
+					{% endif %}
+					{% if settings[item_desc] != blank  %}
+						<p>{{settings[item_desc] }}</p>
+					{% endif %}
+
 				</div>
 			</div>
 		</div>
+		{% endif %}
+
+	 {% endfor %}
+
 	</div>
 </div>

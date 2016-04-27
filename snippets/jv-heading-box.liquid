@@ -11,25 +11,27 @@
 
 {%if heading_enable %}
 	
-	  {% case heading_style %}
-    {% when 'underline_left' %}
+	{% case heading_style %}
+		{% when 'border' %}
+			{% assign class_title_box = 'box-intro-border' %}
+    {% when 'hr_left' %}
     	{% assign class_title_box = 'box-intro left' %}
-    {% when 'underline_center' %}
+    {% when 'hr_center' %}
     	{% assign class_title_box = 'box-intro' %}
     {% when 'background_center' %}
     	{% assign class_title_box = 'box-intro-background' %}
     {% else %}
-   	 	{% assign class_title_box = 'box-intro-border' %}
-    {% endcase %}
+   	 	{% assign class_title_box = 'text-center' %} 
+  {% endcase %}
 
 <div class="container">
-	<div class="{{class_title_box}}">
+	<div class="jv-heading {{class_title_box}}">
 		{%if heading_title_enable %}
 		<h2><span class="title">{{ heading_title }}</span></h2>
 		{% endif %}
 		{%if heading_subtitle_enable %}
 			<span class="desc-title">{{ heading_subtitle }}</span>
-		{% endif %}
+		{% endif %}                                
 	</div>
 </div>
 

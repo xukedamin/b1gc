@@ -1,7 +1,5 @@
 {
-  "date_formats": {
-    "month_day_year": "%b %d, %Y"
-  },
+
   "general": {
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
@@ -41,7 +39,9 @@
     "search": {
       "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
       "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
-      "title": "Search for products on our site"
+      "title": "Search for products on our site",
+      "placeholder": "Rechercher dans la boutique",
+      "submit": "Recherche"
     },
     "social": {
       "share_on_facebook": "Share",
@@ -376,5 +376,8 @@
       "print": "Print",
       "add_to_apple_wallet": "Add to Apple Wallet"
     }
+  },
+  "date_formats":{
+    "month_day_year": "%b %d, %Y"
   }
 }

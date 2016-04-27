@@ -2078,19 +2078,23 @@
           "label": "Normal"
           },
           {
-          "value": "underline_left",
-          "label": "Underline Left"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-          "value": "underline_center",
-          "label": "Underline Center"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
           },
           {
           "value": "background_center",
           "label": "Background Center"
           }
         ],
-        "default": "underline_center"
+        "default": "hr_center"
       },
       {
         "type": "snippet",
@@ -6183,6 +6187,101 @@
       }
     ]
   },
+
+   {
+    "name": "Material Feature - Locator",
+    "settings": [
+    {
+      "type": "header",
+      "content": "Item #1"
+    }, {
+      "type": "checkbox",
+      "id": "feature_locator_item_1_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_1_title",
+      "label": "Title",
+      "default": "Title 1"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_1_desc",
+      "label": "Description",
+      "default": "Description of item"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_1_icon",
+      "label": "icon",
+      "default": "lnr lnr-store"
+    },
+    {
+      "type": "text",
+      "id": "feature_locator_item_1_link",
+      "label": "Link",
+      "default": "#"
+    },
+    {
+      "type": "header",
+      "content": "Item #2"
+    }, {
+      "type": "checkbox",
+      "id": "feature_locator_item_2_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_2_title",
+      "label": "Title",
+      "default": "Title 2"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_2_desc",
+      "label": "Description",
+      "default": "Description of item"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_2_icon",
+      "label": "icon",
+      "default": "lnr lnr-cog"
+    }, 
+    {
+      "type": "text",
+      "id": "feature_locator_item_2_link",
+      "label": "Link",
+      "default": "#"
+    },{
+      "type": "header",
+      "content": "Item #3"
+    }, {
+      "type": "checkbox",
+      "id": "feature_locator_item_3_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_3_title",
+      "label": "Title",
+      "default": "Title 3"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_3_desc",
+      "label": "Description",
+      "default": "Description of item"
+    }, {
+      "type": "text",
+      "id": "feature_locator_item_3_icon",
+      "label": "icon",
+      "default": "lnr lnr-cog"
+    },
+    {
+      "type": "text",
+      "id": "feature_locator_item_3_link",
+      "label": "Link",
+      "default": "#"
+    }]
+   },
+
   {
     "name": "Material Social media",
     "settings": [
@@ -6599,15 +6698,19 @@
         "label": "Partner title Align",
         "options": [
           {
-            "value": "normal",
-            "label": "Normal"
+          "value": "normal",
+          "label": "Normal"
           },
           {
-            "value": "underline_left",
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+            "value": "hr_left",
             "label": "Underline Left"
           },
           {
-            "value": "underline_center",
+            "value": "hr_center",
             "label": "Underline Center"
           },
           {
@@ -6615,7 +6718,7 @@
             "label": "Background Center"
           }
         ],
-        "default": "underline_center"
+        "default": "hr_center"
       },
       {
         "type": "checkbox",
@@ -7494,123 +7597,123 @@
       }
     ]
   },
-  {
-    "name": "Material Counter",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "text",
-        "id": "counter_1_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_1_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "text",
-        "id": "counter_2_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_2_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "text",
-        "id": "counter_3_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_3_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "text",
-        "id": "counter_4_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_4_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #5"
-      },
-      {
-        "type": "text",
-        "id": "counter_5_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_5_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
-        "type": "text",
-        "id": "counter_6_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_6_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
-        "type": "text",
-        "id": "counter_7_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_7_value",
-        "label": "Value"
-      },
-      {
-        "type": "header",
-        "content": "Item #8"
-      },
-      {
-        "type": "text",
-        "id": "counter_8_number",
-        "label": "Number"
-      },
-      {
-        "type": "text",
-        "id": "counter_8_value",
-        "label": "Value"
-      }
-    ]
-  },
+    {
+      "name": "Material Counter",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Item #1"
+        },
+        {
+          "type": "text",
+          "id": "counter_1_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_1_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #2"
+        },
+        {
+          "type": "text",
+          "id": "counter_2_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_2_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #3"
+        },
+        {
+          "type": "text",
+          "id": "counter_3_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_3_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #4"
+        },
+        {
+          "type": "text",
+          "id": "counter_4_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_4_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #5"
+        },
+        {
+          "type": "text",
+          "id": "counter_5_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_5_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #6"
+        },
+        {
+          "type": "text",
+          "id": "counter_6_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_6_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #7"
+        },
+        {
+          "type": "text",
+          "id": "counter_7_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_7_value",
+          "label": "Value"
+        },
+        {
+          "type": "header",
+          "content": "Item #8"
+        },
+        {
+          "type": "text",
+          "id": "counter_8_number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "counter_8_value",
+          "label": "Value"
+        }
+      ]
+    },
   {
     "name": "Material Portfolio",
     "settings": [
