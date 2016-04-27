@@ -1,0 +1,61 @@
+<div class="the-brand">
+	<div class="container">
+		<div class="paginav-slider">
+			<div class="wrap-item">
+
+			{% for i in (1..3) %}
+
+			 {% capture brand_img %}brand_item_{{ i }}_img.png{% endcapture %}
+	      {% capture brand_left_img %}brand_item_{{ i }}_product_img_left_link{% endcapture %}
+	      {% capture brand_right_img %}brand_item_{{ i }}_product_img_right_link{% endcapture %}
+
+	      {% capture brand_title %}brand_item_{{ i }}_title{% endcapture %}
+	      {% capture brand_text %}brand_item_{{ i }}_text{% endcapture %}
+	      {% capture brand_btn %}brand_item_{{ i }}_btn{% endcapture %}
+	      {% capture brand_link %}brand_item_{{ i }}_link{% endcapture %}
+
+
+				<div class="item">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="item-product">
+								<div class="item-product-thumb item-left">
+									<a href="{{settings[brand_link]}}"><img class="img-responsive" src="{{settings[brand_left_img]}}" alt="" /></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="item-brand">
+								<div class="item-brand-thumb">
+									<a href="{{settings[brand_link]}}">
+									<img class="img-responsive" src="{{brand_img | asset_url }}" alt="{{brand_img}}" />
+									</a>
+								</div>
+								<div class="item-brand-text">
+								   {% if settings[brand_title] != blank  %}
+										<h3 class="sub-title">{{settings[brand_title]}}</h3>
+									{% endif%}
+									{% if settings[brand_btn] != blank  %}
+									<a href="{{settings[brand_link]}}" class="btn-link-default brand-link">{{settings[brand_btn]}}</a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="item-product">
+								<div class="item-product-thumb item-right">
+									<a href="{{settings[brand_link]}}"><img class="img-responsive" src="{{settings[brand_right_img]}}" alt="" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End The Brand -->

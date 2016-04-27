@@ -9,7 +9,7 @@
   position: relative;
   @extend %text-center;
 
-  @include p-el(before, 100%, 40px) {
+  @include p-el(after, 100%, 40px) {
     background-image: url('{{ "bg-product-2.png" | asset_url }}');
     background-position: left top;
     background-repeat: no-repeat;
@@ -35,5 +35,19 @@
 
   &.item-right {
     margin-left: -5px;
+  }
+}
+
+.the-brand .item-product-thumb img{ 
+  min-height: 400px;
+}
+
+.item-brand-thumb {
+  overflow: hidden;
+  img {
+    @extend %jv-transition-easeout;
+  }
+  &:hover img {
+    @extend %jv-transform-scale-115;
   }
 }

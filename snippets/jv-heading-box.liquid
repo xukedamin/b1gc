@@ -2,9 +2,7 @@
 {% comment  %} -- must setting 
 {% assign heading_enable =  settings.logo_partner_title_enable %}
 {% assign heading_style = settings.logo_partner_title_style %}
-{% assign heading_title_enable =  settings.logo_partner_title_enable %}
 {% assign heading_title =  settings.logo_partner_title %}
-{% assign heading_subtitle_enable =  settings.logo_partner_subtitle_enable %}
 {% assign heading_subtitle =  settings.logo_partner_subtitle %}
 
 {% endcomment %}
@@ -26,10 +24,10 @@
 
 <div class="container">
 	<div class="jv-heading {{class_title_box}}">
-		{%if heading_title_enable %}
+		{% if heading_title != blank %}
 		<h2><span class="title">{{ heading_title }}</span></h2>
 		{% endif %}
-		{%if heading_subtitle_enable %}
+		{% if heading_subtitle != blank %}
 			<span class="desc-title">{{ heading_subtitle }}</span>
 		{% endif %}                                
 	</div>

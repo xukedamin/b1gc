@@ -112,15 +112,6 @@
   }
 }
 
-.item-brand-thumb {
-  overflow: hidden;
-  img {
-    @extend %jv-transition-easeout;
-  }
-  &:hover img {
-    @extend %jv-transform-scale-115;
-  }
-}
 
 
 

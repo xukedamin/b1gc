@@ -2108,9 +2108,122 @@
         "default": true
       },
       {
+      "type": "text",
+      "id": "home2_pos_content_2_title",
+      "label": "Title",
+      "default": "Title"
+      },
+      {
+      "type": "text",
+      "id": "home2_pos_content_2_subtitle",
+      "label": "Subtitle",
+      "default": "Subtitle"
+      },
+      {
+      "type": "select",
+      "id": "home2_pos_content_2_title_style",
+      "label": "Title Alignment",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Horizontial line Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Horizontial line Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "hr_center"
+      },
+      {
         "type": "snippet",
         "id": "home2_position_content_middle_2",
         "label": "Home2 position Content middle 2"
+      },
+       {
+        "type": "checkbox",
+        "id": "home2_position_content_middle_3_enable",
+        "label": "Home2 position Content middle 3 enable",
+        "default": true
+      },
+      {
+        "type": "snippet",
+        "id": "home2_position_content_middle_3",
+        "label": "Home2 position Content middle 3"
+      },
+       {
+        "type": "checkbox",
+        "id": "home2_position_content_middle_4_enable",
+        "label": "Home2 position Content middle 4 enable",
+        "default": true
+      },
+       {
+        "type": "text",
+        "id": "home2_position_content_middle_4_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home2_position_content_middle_4_subtitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home2_position_content_middle_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home2_position_content_middle_4",
+        "label": "Home2 position Content middle 4"
+      },
+       {
+        "type": "checkbox",
+        "id": "home2_position_content_middle_5_enable",
+        "label": "Home2 position Content middle 5 enable",
+        "default": true
+      },
+      {
+        "type": "snippet",
+        "id": "home2_position_content_middle_5",
+        "label": "Home2 position Content middle 5"
       },
       {
         "type": "checkbox",
@@ -6280,7 +6393,121 @@
       "label": "Link",
       "default": "#"
     }]
-   },
+  },
+
+  {
+  "name": "Material Brands",
+  "settings": [{
+      "type": "header",
+      "content": "Item #1"
+    }, {
+      "type": "checkbox",
+      "id": "brand_item_1_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "brand_item_1_title",
+      "label": "Title",
+      "default": "Title 1"
+    }, {
+      "type": "image",
+      "id": "brand_item_1_img.png",
+      "label": "Image"
+    }, {
+      "type": "text",
+      "id": "brand_item_1_btn",
+      "label": "Button text",
+      "default": "Discover"
+    }, {
+      "type": "text",
+      "id": "brand_item_1_link",
+      "label": "Link",
+      "default": "#"
+    }, {
+      "type": "text",
+      "id": "brand_item_1_product_img_left_link",
+      "label": "Left Product image link"
+
+    },
+    {
+      "type": "text",
+      "id": "brand_item_1_product_img_right_link",
+      "label": "Right Product image link"
+    }, {
+      "type": "header",
+      "content": "Item #2"
+    }, {
+      "type": "checkbox",
+      "id": "brand_item_2_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "brand_item_2_title",
+      "label": "Title",
+      "default": "Title 2"
+    }, {
+      "type": "image",
+      "id": "brand_item_2_img.png",
+      "label": "Image"
+    }, {
+      "type": "text",
+      "id": "brand_item_2_btn",
+      "label": "Button text",
+      "default": "Discover"
+    }, {
+      "type": "text",
+      "id": "brand_item_2_link",
+      "label": "Link",
+      "default": "#"
+    }, {
+      "type": "text",
+      "id": "brand_item_2_product_img_left_link",
+      "label": "Left Product image link"
+
+    }, {
+      "type": "text",
+      "id": "brand_item_2_product_img_right_link",
+      "label": "Right Product image link"
+    }, {
+      "type": "header",
+      "content": "Item #3"
+    }, {
+      "type": "checkbox",
+      "id": "brand_item_3_enable",
+      "label": "Item enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "brand_item_3_title",
+      "label": "Title",
+      "default": "Title 3"
+    }, {
+      "type": "image",
+      "id": "brand_item_3_img.png",
+      "label": "Image"
+    }, {
+      "type": "text",
+      "id": "brand_item_3_btn",
+      "label": "Button text",
+      "default": "Discover"
+    }, {
+      "type": "text",
+      "id": "brand_item_3_link",
+      "label": "Link",
+      "default": "#"
+    }, {
+      "type": "text",
+      "id": "brand_item_3_product_img_left_link",
+      "label": "Left Product image link"
+    }, {
+      "type": "text",
+      "id": "brand_item_3_product_img_right_link",
+      "label": "Right Product image link"
+    }
+  ]
+ },
 
   {
     "name": "Material Social media",
