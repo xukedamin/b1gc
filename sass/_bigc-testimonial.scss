@@ -170,11 +170,12 @@ span.click-button {
     &:before {
       opacity: 1;
     }
+    .img,
     img {
-      
       @include prefix(transform, rotate(30deg));
     }
   }
+  .img,
   > img {
     height: 170px;
     width: 170px;
@@ -259,6 +260,7 @@ span.click-button {
 .testimo-avatar {
   border: 3px solid $color_mine-shaft;
   width: 150px;
+  height: 150px;
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -286,12 +288,15 @@ span.click-button {
     &:before {
       opacity: 1;
     }
+    .img,
     img {
       @include prefix(transform, rotate(30deg));
     }
   }
+  .img,
   img {
     width: 100%;
+    height: 100%;
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
   }

@@ -29,8 +29,8 @@
     opacity: 0;
     padding: 0;
     position: absolute;
-    @extend %text-center;
     top: 50%;
+    @extend %text-center;
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
     

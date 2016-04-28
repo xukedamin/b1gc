@@ -1,12 +1,48 @@
-{% for i in (1..10) %}
-{% capture testimonials_title %}testimonials{{ i }}_title{% endcapture %}
-{% capture testimonials_text %}testimonials{{ i }}_text{% endcapture %}
-{% if settings[testimonials_text] != blank %}
-            <div class="testimonial-item">
-              <div class="item-content">
-                <p class="comment">&quot; {{ settings[testimonials_text] }} &quot;</p>
-                <p class="name text-right">{{ settings[testimonials_title] }}</p>
-              </div>
-            </div>
-{% endif %}   
-{% endfor %}  
+<div class="container">
+	<div class="testimonial-slider">
+		<div class="paginav-slider">
+			<div class="wrap-item">
+				
+				{% for i in (1..5) %}
+				{% capture testi_name %}testimonial{{ i }}_name{% endcapture %}
+				{% capture testi_title %}testimonial{{ i }}_title{% endcapture %}
+				{% capture testi_text %}testimonial{{ i }}_text{% endcapture %}
+				{% capture testi_img %}testimonial{{ i }}_img.png{% endcapture %}
+				{% capture testi_date %}testimonial{{ i }}_date{% endcapture %}
+				{% capture testi_link %}testimonial{{ i }}_link{% endcapture %}
+				{% if settings[testi_text] != blank %}
+
+				<div class="item">
+					<div class="testimo-item">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="testimo-content-left">
+									<img class="testimo-thumb" src="{{testi_img | asset_url}}" alt="" />
+									<div class="info-testimo-author">
+										<a href="{{settings[testi_link]}}" class="testimo-avatar">
+											<div class="img" style="background-image: url({{testi_img | asset_url}}); background-size: cover; background-position: center center">
+											</div>
+										</a>
+										<h3 class="testimo-name"><a href="#">{{ settings[testi_name] }}</a></h3>
+										<p class="testimo-job">{{settings[testi_title]}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="testimo-content-right">
+									<p class="testimo-desc">{{ settings[testi_text] }}</p>
+									<span class="testimo-date">{{ settings[testi_date] }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{% endif %}   
+			{% endfor %}
+
+			</div>
+		</div>
+	</div>
+		<!-- End Testimonial -->
+</div>

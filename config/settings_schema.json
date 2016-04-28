@@ -2216,14 +2216,56 @@
       },
        {
         "type": "checkbox",
-        "id": "home2_position_content_middle_5_enable",
-        "label": "Home2 position Content middle 5 enable",
+        "id": "home2_position_content_5_enable",
+        "label": "Home2 position Content 5 enable",
         "default": true
       },
       {
+      "type": "text",
+      "id": "home2_pos_content_5_title",
+      "label": "Title",
+      "default": "Title"
+      },
+      {
+      "type": "text",
+      "id": "home2_pos_content_5_subtitle",
+      "label": "Subtitle",
+      "default": "Subtitle"
+      },
+      {
+      "type": "select",
+      "id": "home2_pos_content_5_title_style",
+      "label": "Title Alignment",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Horizontial line Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Horizontial line Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "hr_center"
+      },
+
+
+      {
         "type": "snippet",
-        "id": "home2_position_content_middle_5",
-        "label": "Home2 position Content middle 5"
+        "id": "home2_position_content_5",
+        "label": "Home2 position Content 5"
       },
       {
         "type": "checkbox",
@@ -6755,151 +6797,208 @@
       }
     ]
   },
+
   {
-    "name": "Material Testimonials",
+    "name": "Material testimonials",
     "settings": [
       {
         "type": "header",
-        "content": "Item #1"
+        "content": "Item #1--------"
+      },
+    {
+        "type": "text",
+        "id": "testimonial1_name",
+        "label": "Name",
+    "default": "Davit Lockhard"
+      },
+     {
+        "type": "image",
+        "id": "testimonial1_img.png",
+        "label": "Avatar"
       },
       {
         "type": "text",
-        "id": "testimonials1_title",
-        "label": "Title"
+        "id": "testimonial1_title",
+        "label": "Title",
+    "default":"NVD india"
       },
-      {
+    {
         "type": "textarea",
-        "id": "testimonials1_text",
-        "label": "Content"
+        "id": "testimonial1_text",
+        "label": "Content",
+    "default" : "This is content"
       },
-      {
+    {
+        "type": "text",
+        "id": "testimonial1_date",
+        "label": "Date",
+    "default": "Dec 07 2016"
+      },
+     {
+        "type": "text",
+        "id": "testimonial1_link",
+        "label": "Link",
+    "default": "http:\/\/joomlavi.com"
+      },
+    {
         "type": "header",
-        "content": "Item #2"
+        "content": "Item #2--------"
+      },
+    {
+        "type": "text",
+        "id": "testimonial2_name",
+        "label": "Name"
+      },
+     {
+        "type": "image",
+        "id": "testimonial2_img.png",
+        "label": "Avatar"
       },
       {
         "type": "text",
-        "id": "testimonials2_title",
-        "label": "Title"
+        "id": "testimonial2_title",
+        "label": "Title",
+    "default":"NVD india"
       },
-      {
+    {
         "type": "textarea",
-        "id": "testimonials2_text",
-        "label": "Content"
+        "id": "testimonial2_text",
+        "label": "Content",
+    "default" : "This is content"
+    
+      },
+    {
+        "type": "text",
+        "id": "testimonial2_date",
+        "label": "Date",
+    "default": "Dec 07 2016"
       },
       {
+        "type": "text",
+        "id": "testimonial2_link",
+        "label": "Link",
+    "default": "http:\/\/joomlavi.com"
+      },
+     {
         "type": "header",
-        "content": "Item #3"
+        "content": "Item #3--------"
+      },
+    {
+        "type": "text",
+        "id": "testimonial3_name",
+        "label": "Name"
+      },
+     {
+        "type": "image",
+        "id": "testimonial3_img.png",
+        "label": "Avatar"
       },
       {
         "type": "text",
-        "id": "testimonials3_title",
-        "label": "Title"
+        "id": "testimonial3_title",
+        "label": "Title",
+    "default":"NVD india"
       },
-      {
+    {
         "type": "textarea",
-        "id": "testimonials3_text",
-        "label": "Content"
+        "id": "testimonial3_text",
+        "label": "Content",
+    "default" : "This is content"
+    
+      },
+    {
+        "type": "text",
+        "id": "testimonial3_date",
+        "label": "Date",
+    "default": "Dec 07 2016"
       },
       {
+        "type": "text",
+        "id": "testimonial3_link",
+        "label": "Link",
+    "default": "http:\/\/joomlavi.com"
+      },
+     {
         "type": "header",
-        "content": "Item #4"
+        "content": "Item #4--------"
+      },
+    {
+        "type": "text",
+        "id": "testimonial4_name",
+        "label": "Name"
+      },
+     {
+        "type": "image",
+        "id": "testimonial4_img.png",
+        "label": "Avatar"
       },
       {
         "type": "text",
-        "id": "testimonials4_title",
-        "label": "Title"
+        "id": "testimonial4_title",
+        "label": "Title",
+    "default":"NVD india"
       },
-      {
+    {
         "type": "textarea",
-        "id": "testimonials4_text",
-        "label": "Content"
+        "id": "testimonial4_text",
+        "label": "Content",
+    "default" : "This is content"
+    
+      },
+    {
+        "type": "text",
+        "id": "testimonial4_date",
+        "label": "Date",
+    "default": "Dec 07 2016"
       },
       {
+        "type": "text",
+        "id": "testimonial4_link",
+        "label": "Link",
+    "default": "http:\/\/joomlavi.com"
+      },
+     {
         "type": "header",
-        "content": "Item #5"
+        "content": "Item #5--------"
+      },
+    {
+        "type": "text",
+        "id": "testimonial5_name",
+        "label": "Name"
+      },
+     {
+        "type": "image",
+        "id": "testimonial5_img.png",
+        "label": "Avatar"
       },
       {
         "type": "text",
-        "id": "testimonials5_title",
-        "label": "Title"
+        "id": "testimonial5_title",
+        "label": "Title",
+    "default":"NVD india"
       },
-      {
+    {
         "type": "textarea",
-        "id": "testimonials5_text",
-        "label": "Content"
+        "id": "testimonial5_text",
+        "label": "Content",
+    "default" : "This is content"
+    
       },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
+    {
         "type": "text",
-        "id": "testimonials6_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "testimonials6_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
+        "id": "testimonial5_date",
+        "label": "Date",
+    "default": "Dec 07 2016"
+      }
+    ,{
         "type": "text",
-        "id": "testimonials7_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "testimonials7_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #8"
-      },
-      {
-        "type": "text",
-        "id": "testimonials8_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "testimonials8_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #9"
-      },
-      {
-        "type": "text",
-        "id": "testimonials9_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "testimonials9_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #10"
-      },
-      {
-        "type": "text",
-        "id": "testimonials10_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "testimonials10_text",
-        "label": "Content"
+        "id": "testimonial5_link",
+        "label": "Link",
+    "default": "http:\/\/joomlavi.com"
       }
     ]
   },
+
   {
     "name": "Material Logo Partner",
     "settings": [

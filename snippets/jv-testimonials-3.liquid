@@ -1,0 +1,80 @@
+
+<div class="home-testimonial">
+	<div class="container">
+		{% comment %}
+	  {% assign heading_enable =  settings.home2_pos_content_5_title != blank  %}
+    {% assign heading_style = settings.home2_pos_content_5_title_style %}
+    {% assign heading_title =  settings.home2_pos_content_5_title %}
+    {% assign heading_subtitle =  settings.home2_pos_content_5_subtitle %}
+    {% endcomment %}
+
+    {% assign heading_enable =  section_title != blank  %}
+    {% assign heading_style = section_title_style %}
+    {% assign heading_title =  section_title %}
+    {% assign heading_subtitle =  section_subtitle %}
+
+    {% include 'jv-heading-box' %}
+
+		<div class="home-testimonial-slider home-directnav slider-directnav">
+			<div class="wrap-item">
+
+			{% for i in (1..4) %}
+				{% capture testi_name %}testimonial{{ i }}_name{% endcapture %}
+				{% capture testi_title %}testimonial{{ i }}_title{% endcapture %}
+				{% capture testi_text %}testimonial{{ i }}_text{% endcapture %}
+				{% capture testi_img %}testimonial{{ i }}_img.png{% endcapture %}
+				{% capture testi_date %}testimonial{{ i }}_date{% endcapture %}
+
+			{% if settings[testi_text] != blank %}
+
+				{%if forloop.index == 1 or forloop.index == 3 %}
+	      <div class="item">
+	      {%endif%}
+
+				{% assign class_item = i | modulo:2 %}
+          {% if class_item == 0 %}
+            {% assign class_item = 'right'%}
+          {% else %}
+            {% assign class_item = 'left'%}
+        {% endif %}
+					
+					{% if forloop.index == 1 or forloop.index == 3 %}
+					<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
+						<span class="click-button {{class_item}}-close"></span>
+						<h2>{{ settings[testi_name] }}</h2>
+						<p>{{ settings[testi_text] }}</p>
+					</div>
+					{% endif %}
+
+					<div class="side-testimonial side-{{class_item}}">
+						<div class="item-testimonial item-{{class_item}}">
+							<a href="{{settings[testi_link]}}" class="testimonial-thumb-link {{class_item}}-open">
+							
+								<div class="img" style="background-image: url({{testi_img | asset_url}}); background-size: cover; background-position: center center"></div>
+							</a>
+							<h2 class="testimonial-title"><a href="{{settings[testi_link]}}">{{ settings[testi_name] }}</a></h2>
+							<span class="testimonial-job">{{settings[testi_title]}}</span>                                
+						</div>
+					</div>
+
+					{% if forloop.index == 2 or forloop.index == 4 %}
+					<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
+						<span class="click-button {{class_item}}-close"></span>
+						<h2>{{ settings[testi_name] }}</h2>
+						<p>{{ settings[testi_text] }}</p>
+					</div>
+					{% endif %}
+
+				{%if forloop.index == 2 or forloop.index == 4%}
+	        </div>
+	      {% endif %} 
+
+					{% endif %}   
+				<!-- End Item -->
+				{% endfor %}  
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Testimonial -->

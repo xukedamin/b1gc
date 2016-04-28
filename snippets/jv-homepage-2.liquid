@@ -31,17 +31,17 @@
   {% endif %}
 
   {% comment %} ----- Block Feature ----- {% endcomment %}
-  <section id="position--content-middle-1" class="pt-70">
+  <section id="position--content-1" class="pt-70">
   </section>
 
   {% comment %} ----- Block Banner jv-banner-4 ----- {% endcomment %}
   {% if settings.home2_position_content_middle_2_enable %}
-  <section id="position--content-middle-2" class="pt-70">
+  <section id="position--content-2" class="pt-70">
       {% assign heading_enable =  settings.home2_pos_content_2_title != blank  %}
       {% assign heading_style = settings.home2_pos_content_2_title_style %}
       {% assign heading_title =  settings.home2_pos_content_2_title %}
       {% assign heading_subtitle =  settings.home2_pos_content_2_subtitle %}
-      {% include 'jv-heading-box' %}
+       <div class="container">{% include 'jv-heading-box' %}</div>
 
       {% capture banner %}{{settings.home2_position_content_middle_2}}{% endcapture %}
       {% include banner  %}
@@ -50,17 +50,17 @@
   
 
   {% comment %} ----- Block News Product ----- {% endcomment %}
-  <section id="position--content-middle-3" class="pt-70">
+  <section id="position--content-3" class="pt-70">
   </section>
 
   {% comment %} ----- Block Friends Brands ----- {% endcomment %}
   {% if settings.home2_position_content_middle_4_enable %}
-  <section id="position--content-middle-4" class="pt-70">
+  <section id="position--content-4" class="pt-70">
      {% assign heading_enable =  settings.home2_position_content_middle_4_title  %}
       {% assign heading_style = settings.home2_position_content_middle_4_title_style %}
       {% assign heading_title =  settings.home2_position_content_middle_4_title %}
       {% assign heading_subtitle =  settings.home2_position_content_middle_4_subtitle %}
-      {% include 'jv-heading-box' %}
+      <div class="container">{% include 'jv-heading-box' %}</div>
 
       {% capture brand %}{{settings.home2_position_content_middle_4}}{% endcapture %}
       {% include brand  %}
@@ -69,8 +69,24 @@
 
 
   {% comment %} ----- Block Popular blog ----- {% endcomment %}
-  <section id="position--content-middle-5" class="pt-70">
+  {% if settings.home2_position_content_5_enable %}
+  <section id="position--content-5" class="pt-70">
+  
+      {% assign heading_enable =  settings.home2_pos_content_5_title != blank  %}
+      {% assign heading_style = settings.home2_pos_content_5_title_style %}
+      {% assign heading_title =  settings.home2_pos_content_5_title %}
+      {% assign heading_subtitle =  settings.home2_pos_content_5_subtitle %}
+      <div class="container">
+      {% include 'jv-heading-box' %}
+      </div>
+
+    {% capture file %}{{settings.home2_position_content_5}}{% endcapture %}
+    {% include file  %}
+    <div class="container"> {% include 'jv-testimonials-1' %} </div>
+    <div class="container"> {% include 'jv-testimonials-3' %} </div>
   </section>
+
+  {% endif %}
 
   {% comment %} ----- Block Partner - jv-logopartner----- {% endcomment %}
   {% if settings.home2_position_content_bottom_enable %}
