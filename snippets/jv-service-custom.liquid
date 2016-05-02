@@ -6,73 +6,60 @@
 		</div>
 		<div class="content-custom-service">
 			<div class="row">
+
+			   {% for i in (1..6) %}
+
+      {% capture service_img %}services_bgimg.jpg{% endcapture %}
+      {% capture service_title %}service_item_{{ i }}_title{% endcapture %}
+      {% capture service_desc %}service_item_{{ i }}_desc{% endcapture %}
+      {% capture service_icon %}service_item_{{ i }}_icon{% endcapture %}
+      {% capture service_color %}service_item_{{ i }}_color{% endcapture %}
+      {% capture service_link %}service_item_{{ i }}_link{% endcapture %}
+
+      {% assign class_box = 'box-left' %}
+      {% if i == 4 %}
+        {% assign class_box = 'box-right'%}
+      {% endif %}
+			
+			{% if i == 1 or i == 4 %}
 				<div class="col-md-4 col-sm-4 col-sx-12">
-					<div class="box-left">
-						<div class="item-custom-service sv-green">
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">Creative Ideas</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
+					<div class="{{class_box}}">
+			{% endif %}
+
+						<div class="item-custom-service {{settings[service_color]}}">
+							<div class="item-service-icon">
+								{% if settings[service_title] != blank  %}
+									<h2 class="sub-title"><a href="{{settings[service_link]}}">{{settings[service_title]}}</a></h2>
+								{% endif %}
+								{% if settings[service_desc] != blank  %}
+									<p>{{settings[service_desc]}}</p>
+								{% endif %}
 							</div>
 							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-highlight"></span></a>
+								<a href="{{settings[service_link]}}">
+								{% if settings[service_icon] != blank  %}
+									<span class="{{settings[service_icon]}}"></span>
+								{% endif %}
+								</a>
 							</div>
 						</div>
-						<div class="item-custom-service sv-blue">
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">Customer Support</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
-							</div>
-							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-layers"></span></a>
-							</div>
-						</div>
-						<div class="item-custom-service sv-yellow">
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">Guide Theme</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
-							</div>
-							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-book"></span></a>
-							</div>
-						</div>
-					</div>
+				
+				{% if i == 3 or i == 6 %}
 				</div>
+				</div>
+				{% endif %}
+
+				{% if i == 3 %}
 				<div class="col-md-4 col-sm-4 col-sx-12">
 					<div class="service-thumb">
-						<img src="images/index2/bg-girl.jpg" alt="" />
+						{{ services_bgimg | asset_url |  img_tag: services_bgimg }}
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-4 col-sx-12">
-					<div class="box-right">
-						<div class="item-custom-service sv-orange">
-							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-cog"></span></a>
-							</div>
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">Setting theme</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
-							</div>
-						</div>
-						<div class="item-custom-service sv-red">
-							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-laptop-phone"></span></a>
-							</div>
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">responsive</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
-							</div>
-						</div>
-						<div class="item-custom-service sv-pink">
-							<div class="item-service-thumb">
-								<a href="#"><span class="lnr lnr-gift"></span></a>
-							</div>
-							<div class="item-service-text">
-								<h2 class="sub-title"><a href="#">Membership</a></h2>
-								<p>Colernonse qeramagni as dolores asoertayse badrem eos et accumsan et iusto odio </p>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endif %}
+
+
+		 {% endfor %}
+
 			</div>
 		</div>
 	</div>

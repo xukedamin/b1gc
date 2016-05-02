@@ -6346,100 +6346,103 @@
    {
     "name": "Material Feature - Locator",
     "settings": [
-    {
-      "type": "header",
-      "content": "Item #1"
-    }, {
-      "type": "checkbox",
-      "id": "feature_locator_item_1_enable",
-      "label": "Item enable",
-      "default": true
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_1_title",
-      "label": "Title",
-      "default": "Title 1"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_1_desc",
-      "label": "Description",
-      "default": "Description of item"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_1_icon",
-      "label": "icon",
-      "default": "lnr lnr-store"
-    },
-    {
-      "type": "text",
-      "id": "feature_locator_item_1_link",
-      "label": "Link",
-      "default": "#"
-    },
-    {
-      "type": "header",
-      "content": "Item #2"
-    }, {
-      "type": "checkbox",
-      "id": "feature_locator_item_2_enable",
-      "label": "Item enable",
-      "default": true
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_2_title",
-      "label": "Title",
-      "default": "Title 2"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_2_desc",
-      "label": "Description",
-      "default": "Description of item"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_2_icon",
-      "label": "icon",
-      "default": "lnr lnr-cog"
-    }, 
-    {
-      "type": "text",
-      "id": "feature_locator_item_2_link",
-      "label": "Link",
-      "default": "#"
-    },{
-      "type": "header",
-      "content": "Item #3"
-    }, {
-      "type": "checkbox",
-      "id": "feature_locator_item_3_enable",
-      "label": "Item enable",
-      "default": true
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_3_title",
-      "label": "Title",
-      "default": "Title 3"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_3_desc",
-      "label": "Description",
-      "default": "Description of item"
-    }, {
-      "type": "text",
-      "id": "feature_locator_item_3_icon",
-      "label": "icon",
-      "default": "lnr lnr-cog"
-    },
-    {
-      "type": "text",
-      "id": "feature_locator_item_3_link",
-      "label": "Link",
-      "default": "#"
-    }]
+      {
+        "type": "header",
+        "content": "Item #1"
+      }, 
+      {
+        "type": "checkbox",
+        "id": "feature_locator_item_1_enable",
+        "label": "Item enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_1_title",
+        "label": "Title",
+        "default": "Title 1"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_1_desc",
+        "label": "Description",
+        "default": "Description of item"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_1_icon",
+        "label": "icon",
+        "default": "lnr lnr-store"
+      },
+      {
+        "type": "text",
+        "id": "feature_locator_item_1_link",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      }, {
+        "type": "checkbox",
+        "id": "feature_locator_item_2_enable",
+        "label": "Item enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_2_title",
+        "label": "Title",
+        "default": "Title 2"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_2_desc",
+        "label": "Description",
+        "default": "Description of item"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_2_icon",
+        "label": "icon",
+        "default": "lnr lnr-cog"
+      }, 
+      {
+        "type": "text",
+        "id": "feature_locator_item_2_link",
+        "label": "Link",
+        "default": "#"
+      },{
+        "type": "header",
+        "content": "Item #3"
+      }, {
+        "type": "checkbox",
+        "id": "feature_locator_item_3_enable",
+        "label": "Item enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_3_title",
+        "label": "Title",
+        "default": "Title 3"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_3_desc",
+        "label": "Description",
+        "default": "Description of item"
+      }, {
+        "type": "text",
+        "id": "feature_locator_item_3_icon",
+        "label": "icon",
+        "default": "lnr lnr-cog"
+      },
+      {
+        "type": "text",
+        "id": "feature_locator_item_3_link",
+        "label": "Link",
+        "default": "#"
+      }
+    ]
   },
 
   {
   "name": "Material Brands",
-  "settings": [{
+  "settings": [
+    {
       "type": "header",
       "content": "Item #1"
     }, {
@@ -6550,6 +6553,409 @@
     }
   ]
  },
+
+{
+    "name": "Material Service",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General setting"
+      },
+      {
+        "type": "checkbox",
+        "id": "services_show_img",
+        "label": "Show service image?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "services_bgimg.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "services_style",
+        "label": "Service style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Item #1 -----------"
+      },
+     {
+        "type": "text",
+        "id": "service_item_1_title",
+        "label": "Title",
+        "default":"Title 1"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_1_desc",
+        "label": "Content",
+        "default": "Content 1"
+      },
+    {
+        "type": "text",
+        "id": "service_item_1_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_1_icon",
+        "label": "Content",
+        "default": "lnr lnr-highlight"
+      },
+      {
+        "type": "select",
+        "id": "service_item_1_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_green"
+      },
+    
+      {
+        "type": "header",
+        "content": "Item #2 -----------"
+      },
+     {
+        "type": "text",
+        "id": "service_item_2_title",
+        "label": "Title",
+        "default":"Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_2_desc",
+        "label": "Content",
+        "default": "Content 2"
+      },
+     {
+        "type": "text",
+        "id": "service_item_2_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_2_icon",
+        "label": "Content",
+        "default": "lnr lnr-layers"
+      },
+     {
+        "type": "select",
+        "id": "service_item_2_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_blue"
+      },
+      {
+        "type": "header",
+        "content": "Item #3 -----------"
+      },
+      {
+        "type": "text",
+        "id": "service_item_3_title",
+        "label": "Title",
+        "default":"Title 3"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_3_desc",
+        "label": "Content",
+        "default": "Content 3"
+      },
+    {
+        "type": "text",
+        "id": "service_item_3_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_3_icon",
+        "label": "Content",
+        "default": "lnr lnr-book"
+      },
+      {
+        "type": "select",
+        "id": "service_item_3_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_yellow"
+      },
+    
+     {
+        "type": "header",
+        "content": "Item #4 -----------"
+      },
+     {
+        "type": "text",
+        "id": "service_item_4_title",
+        "label": "Title",
+        "default":"Title 4"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_4_desc",
+        "label": "Content",
+        "default": "Content 4"
+      },
+    {
+        "type": "text",
+        "id": "service_item_4_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_4_icon",
+        "label": "Content",
+        "default": "lnr lnr-cog"
+      },
+      {
+        "type": "select",
+        "id": "service_item_4_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_orange"
+      },
+      {
+        "type": "header",
+        "content": "Item #5 -----------"
+      },
+      {
+        "type": "text",
+        "id": "service_item_5_title",
+        "label": "Title",
+        "default":"Title 5"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_5_desc",
+        "label": "Content",
+        "default": "Content 5"
+      },
+    {
+        "type": "text",
+        "id": "service_item_5_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_5_icon",
+        "label": "Content",
+        "default": "lnr lnr-laptop-phone"
+      },
+      {
+        "type": "select",
+        "id": "service_item_5_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+       {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_red"
+      },
+      {
+        "type": "header",
+        "content": "Item #6 -----------"
+      },
+     {
+        "type": "text",
+        "id": "service_item_6_title",
+        "label": "Title",
+        "default":"Title 6"
+      },
+      {
+        "type": "textarea",
+        "id": "service_item_6_desc",
+        "label": "Content",
+        "default": "Content 6"
+      },
+    {
+        "type": "text",
+        "id": "service_item_6_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "service_item_6_icon",
+        "label": "Content",
+        "default": "lnr lnr-gift"
+      },
+      {
+        "type": "select",
+        "id": "service_item_6_color",
+        "label": "Service icon color",
+        "options": [
+          {
+            "value": "sv_green",
+            "label": "Green"
+          },
+          {
+            "value": "sv_blue",
+            "label": "Blue"
+          },
+          {
+            "value": "sv_yellow",
+            "label": "Yellow"
+          },
+       {
+            "value": "sv_orange",
+            "label": "Orange"
+          },
+          {
+            "value": "sv_red",
+            "label": "Red"
+          },
+          {
+            "value": "sv_pink",
+            "label": "Pink"
+          }
+        ],
+        "default" : "sv_pink"
+      }
+    ]
+  },
+
 
   {
     "name": "Material Social media",
