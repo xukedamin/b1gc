@@ -6956,6 +6956,213 @@
     ]
   },
 
+{
+    "name": "Material Features",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General setting"
+      },
+      {
+        "type": "select",
+        "id": "feature_shape",
+        "label": "Feature style",
+        "options": [
+          {
+            "value": "i-circle",
+            "label": "Cirlce"
+          },
+          {
+            "value": "i-square",
+            "label": "Square"
+          }
+        ]
+      },
+    {
+        "type": "select",
+        "id": "feature_alignment",
+        "label": "Feature Alignment",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          }
+        ],
+        "default": "text-left"
+      },
+    {
+        "type": "select",
+        "id": "feature_color",
+        "label": "Feature Color",
+        "options": [
+          {
+            "value": "color-dark",
+            "label": "Dark"
+          },
+          {
+            "value": "color-yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "color-white",
+            "label": "White"
+          }
+          ,
+          {
+            "value": "color-darkblue",
+            "label": "Dark blue"
+          }
+        ],
+        "default" : "color-dark"
+      },
+    {
+        "type": "select",
+        "id": "feature_bgcolor",
+        "label": "Feature Background Color",
+        "options": [
+          {
+            "value": "bg-gray",
+            "label": "Dark"
+          },
+          {
+            "value": "bg-dark",
+            "label": "Dark"
+          },
+          {
+            "value": "bg-yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "bg-white",
+            "label": "White"
+          },
+          {
+            "value": "bg-darkblue",
+            "label": "Dark blue"
+          }
+        ],
+        "default" : "bg-white"
+      },
+    {
+        "type": "select",
+        "id": "feature_bordercolor",
+        "label": "Feature Border Color",
+        "options": [
+          {
+            "value": "border-dark",
+            "label": "Dark"
+          },
+          {
+            "value": "border-yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "border-white",
+            "label": "White"
+          },
+          {
+            "value": "border-darkblue",
+            "label": "Dark blue"
+          }
+        ],
+        "default" : "border-white"
+      },
+      {
+        "type": "header",
+        "content": "Item #1 -----------"
+      },
+     {
+        "type": "text",
+        "id": "feature_item_1_title",
+        "label": "Title",
+        "default":"Title 1"
+      },
+      {
+        "type": "textarea",
+        "id": "feature_item_1_desc",
+        "label": "Content",
+        "default": "Content 1"
+      },
+      {
+        "type": "text",
+        "id": "feature_item_1_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "feature_item_1_icon",
+        "label": "Content",
+        "default": "lnr lnr-highlight"
+      },
+    
+      {
+        "type": "header",
+        "content": "Item #2 -----------"
+      },
+     {
+        "type": "text",
+        "id": "feature_item_2_title",
+        "label": "Title",
+        "default":"Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "feature_item_2_desc",
+        "label": "Content",
+        "default": "Content 2"
+      },
+     {
+        "type": "text",
+        "id": "feature_item_2_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "feature_item_2_icon",
+        "label": "Content",
+        "default": "lnr lnr-layers"
+      },
+      {
+        "type": "header",
+        "content": "Item #3 -----------"
+      },
+      {
+        "type": "text",
+        "id": "feature_item_3_title",
+        "label": "Title",
+        "default":"Title 3"
+      },
+      {
+        "type": "textarea",
+        "id": "feature_item_3_desc",
+        "label": "Content",
+        "default": "Content 3"
+      },
+    {
+        "type": "text",
+        "id": "feature_item_3_link",
+        "label": "Link",
+        "default":"#"
+      },
+      {
+        "type": "text",
+        "id": "feature_item_3_icon",
+        "label": "Content",
+        "default": "lnr lnr-book"
+      }
+    ]
+  },
+
 
   {
     "name": "Material Social media",

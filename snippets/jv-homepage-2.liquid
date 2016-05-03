@@ -87,6 +87,22 @@
 
     {% include 'jv-service-custom' %}
     <div class="container">{% include 'jv-feature-box' %}</div>
+
+    <div class="container">
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-left', feature_color: 'color-dark',feature_bgcolor:'bg-gray', feature_bordercolor:''  %}
+    </div>
+    <div class="container">
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-left', feature_color: 'color-dark',feature_bgcolor:'', feature_bordercolor:'border-gray'  %}
+    
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-left', feature_color: 'color-white',feature_bgcolor:'bg-yellow', feature_bordercolor:''  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-left', feature_color: 'color-yellow',feature_bgcolor:'', feature_bordercolor:'border-yellow'  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-right', feature_color: 'color-white',feature_bgcolor:'bg-dark', feature_bordercolor:''  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-right', feature_color: 'color-yellow',feature_bgcolor:'bg-dark', feature_bordercolor:''  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-center', feature_color: 'color-dark',feature_bgcolor:'', feature_bordercolor:'border-dark'  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-center', feature_color: 'color-dark',feature_bgcolor:'bg-yellow', feature_bordercolor:'border-dark'  %}
+      {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-center', feature_color: 'color-white',feature_bgcolor:'bg-dark', feature_bordercolor:''  %}
+       {% include 'jv-feature-box' with limit_count:1, feature_shape:'i-square', feature_alignment:'text-center', feature_color: 'color-white',feature_bgcolor:'bg-darkblue', feature_bordercolor:''  %}
+    </div>
   </section>
 
   {% endif %}

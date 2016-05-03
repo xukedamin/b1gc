@@ -1,6 +1,92 @@
 <div class="list-feature-boxes">
 	<div class="row">
-		<div class="col-md-3">
+      {% capture feature_shape %}feature_shape{% endcapture %}
+      {% capture feature_alignment %}feature_alignment{% endcapture %}
+     	{% capture feature_color %}feature_color{% endcapture %}
+      {% capture feature_bgcolor %}feature_bgcolor{% endcapture %}
+      {% capture feature_bordercolor %}feature_bordercolor{% endcapture %}
+
+			
+      {%if {{settings[feature_shape]}} != blank %}
+				{%capture class_shape %}{{settings[feature_shape]}}{% endcapture %}
+			{% else %}
+				{%capture class_shape %}{{feature_shape}}{% endcapture %}
+      {% endif %}
+
+       {%if {{settings[feature_alignment]}} != blank %}
+				{%capture class_alignment %}{{settings[feature_alignment]}}{% endcapture %}
+			{% else %}
+				{%capture class_alignment %}{{feature_alignment}}{% endcapture %}
+      {% endif %}
+
+       {%if {{settings[feature_color]}} != blank %}
+				{%capture class_color %}{{settings[feature_color]}}{% endcapture %}
+			{% else %}
+				{%capture class_color %}{{feature_color}}{% endcapture %}
+      {% endif %}
+
+       {%if {{settings[feature_bgcolor]}} != blank %}
+				{%capture class_bgcolor %}{{settings[feature_bgcolor]}}{% endcapture %}
+			{% else %}
+				{%capture class_bgcolor %}{{feature_bgcolor}}{% endcapture %}
+      {% endif %}
+
+        {%if {{settings[feature_bordercolor]}} != blank %}
+				{%capture class_bordercolor %}{{settings[feature_bordercolor]}}{% endcapture %}
+			{% else %}
+				{%capture class_bordercolor %}{{feature_bordercolor}}{% endcapture %}
+      {% endif %}
+
+	{%if limit_count != blank %}
+		{% assign length = limit_count %}
+	{% else %}
+		{% assign length = 3 %}
+	{% endif %}
+
+	{% for i in (1..length) %}
+
+
+
+      {% capture feature_title %}feature_item_{{ i }}_title{% endcapture %}
+      {% capture feature_desc %}feature_item_{{ i }}_desc{% endcapture %}
+      {% capture feature_icon %}feature_item_{{ i }}_icon{% endcapture %}
+      {% capture feature_link %}feature_item_{{ i }}_link{% endcapture %}
+
+
+		<div class="col-md-4">
+
+
+			<div class="item-feature-box {{class_alignment}}">
+				<div class="feature-box-icon">
+					<a href="{{settings[feature_link]}}" class="feature-box-link {{class_shape}} {{class_color}} {{class_bgcolor}} {{class_bordercolor}}">
+						<span class="{{settings[feature_icon]}}"></span>
+					</a>
+				</div>
+				<div class="feature-box-info">
+					{% if settings[feature_title] != blank  %}
+					<h3><a href="{{settings[feature_link]}}">{{settings[feature_title]}}</a></h3>
+					{% endif %}
+
+					{% if settings[feature_desc] != blank  %}
+					<p>{{settings[feature_desc]}}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		{% endfor %}
+	
+	</div>
+
+</div>
+
+
+
+
+
+<div class="list-feature-boxes">
+	<div class="row">
+	<!-- 	<div class="col-md-3">
 			<div class="item-feature-box text-left">
 				<div class="feature-box-icon">
 					<a href="#" class="feature-box-link bg-gray color-dark">
@@ -119,6 +205,9 @@
 				</div>
 			</div>
 		</div>
+ -->
+
+
 		<div class="col-md-3">
 			<div class="item-feature-box text-center ">
 				<div class="feature-box-icon">

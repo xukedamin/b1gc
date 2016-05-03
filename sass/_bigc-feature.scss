@@ -19,7 +19,7 @@
 }
 
 .locator-thumb {
-  background: rgba($color_black, 0) url('{{ "sbg-icon.png" | asset_url }}') no-repeat scroll center center;
+  background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
   height: 200px;
   width: 200px;
   position: relative;
