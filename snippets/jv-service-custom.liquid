@@ -27,14 +27,8 @@
 			{% endif %}
 
 						<div class="item-custom-service {{settings[service_color]}}">
-							<div class="item-service-icon">
-								{% if settings[service_title] != blank  %}
-									<h2 class="sub-title"><a href="{{settings[service_link]}}">{{settings[service_title]}}</a></h2>
-								{% endif %}
-								{% if settings[service_desc] != blank  %}
-									<p>{{settings[service_desc]}}</p>
-								{% endif %}
-							</div>
+
+							{% if i >=4 and i <= 6 %}
 							<div class="item-service-thumb">
 								<a href="{{settings[service_link]}}">
 								{% if settings[service_icon] != blank  %}
@@ -42,6 +36,27 @@
 								{% endif %}
 								</a>
 							</div>
+							{% endif %}
+
+							<div class="item-service-text">
+								{% if settings[service_title] != blank  %}
+									<h2 class="sub-title"><a href="{{settings[service_link]}}">{{settings[service_title]}}</a></h2>
+								{% endif %}
+								{% if settings[service_desc] != blank  %}
+									<p>{{settings[service_desc]}}</p>
+								{% endif %}
+							</div>
+
+							{% if i <= 3 %}
+							<div class="item-service-thumb">
+								<a href="{{settings[service_link]}}">
+								{% if settings[service_icon] != blank  %}
+									<span class="{{settings[service_icon]}}"></span>
+								{% endif %}
+								</a>
+							</div>
+							{% endif %}
+
 						</div>
 				
 				{% if i == 3 or i == 6 %}
@@ -52,7 +67,7 @@
 				{% if i == 3 %}
 				<div class="col-md-4 col-sm-4 col-sx-12">
 					<div class="service-thumb">
-						{{ services_bgimg | asset_url |  img_tag: services_bgimg }}
+						{{ service_img | asset_url |  img_tag: services_bgimg }}
 					</div>
 				</div>
 				{% endif %}
