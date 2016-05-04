@@ -6625,31 +6625,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
           {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_green"
+        "default" : "bg-green"
       },
     
       {
@@ -6686,31 +6686,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
           {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_blue"
+        "default" : "bg-blue"
       },
       {
         "type": "header",
@@ -6746,31 +6746,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
           {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_yellow"
+        "default" : "bg-yellow"
       },
     
      {
@@ -6807,31 +6807,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
           {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_orange"
+        "default" : "bg-orange"
       },
       {
         "type": "header",
@@ -6867,31 +6867,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
        {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_red"
+        "default" : "bg-red"
       },
       {
         "type": "header",
@@ -6927,31 +6927,31 @@
         "label": "Service icon color",
         "options": [
           {
-            "value": "sv_green",
+            "value": "bg-green",
             "label": "Green"
           },
           {
-            "value": "sv_blue",
+            "value": "bg-blue",
             "label": "Blue"
           },
           {
-            "value": "sv_yellow",
+            "value": "bg-yellow",
             "label": "Yellow"
           },
        {
-            "value": "sv_orange",
+            "value": "bg-orange",
             "label": "Orange"
           },
           {
-            "value": "sv_red",
+            "value": "bg-red",
             "label": "Red"
           },
           {
-            "value": "sv_pink",
+            "value": "bg-pink",
             "label": "Pink"
           }
         ],
-        "default" : "sv_pink"
+        "default" : "bg-pink"
       }
     ]
   },

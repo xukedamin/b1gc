@@ -56,11 +56,11 @@
       {% capture feature_link %}feature_item_{{ i }}_link{% endcapture %}
 
 
-		<div class="col-xs-1 col-sm-6 col-md-{{12 |  divided_by : length}}">
+		<div class="col-xs-12 col-sm-6 col-md-{{12 |  divided_by : length}}">
 
 			<div class="item-feature-box {{class_alignment}}">
 				<div class="feature-box-icon">
-					<a href="{{settings[feature_link]}}" class="feature-box-link {{class_shape}} {{class_color}} {{class_bgcolor}} {{class_bordercolor}}">
+					<a href="{{settings[feature_link]}}" class="i-wrap feature-box-link {{class_shape}} {{class_color}} {{class_bgcolor}} {{class_bordercolor}}">
 						<span class="{{settings[feature_icon]}}"></span>
 					</a>
 				</div>

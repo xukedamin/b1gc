@@ -26,11 +26,11 @@
 					<div class="{{class_box}}">
 			{% endif %}
 
-						<div class="item-custom-service {{settings[service_color]}}">
+						<div class="item-custom-service eff-hover-rotate">
 
 							{% if i >=4 and i <= 6 %}
 							<div class="item-service-thumb">
-								<a href="{{settings[service_link]}}">
+								<a href="{{settings[service_link]}}" class="i-wrap i-circle {{settings[service_color]}} ">
 								{% if settings[service_icon] != blank  %}
 									<span class="{{settings[service_icon]}}"></span>
 								{% endif %}
@@ -49,7 +49,7 @@
 
 							{% if i <= 3 %}
 							<div class="item-service-thumb">
-								<a href="{{settings[service_link]}}">
+								<a href="{{settings[service_link]}}" class="i-wrap i-circle {{settings[service_color]}}">
 								{% if settings[service_icon] != blank  %}
 									<span class="{{settings[service_icon]}}"></span>
 								{% endif %}

@@ -2,16 +2,14 @@
 /***********************************************************************
             Locator         
 ************************************************************************/
+.jv-heading h2{
+  margin-bottom: 20px;
+}
 
 .locator {
-  // margin-top: 80px;
   .title {
     margin-bottom: 20px;
   }
-}
-
-.jv-heading h2{
-  margin-bottom: 20px;
 }
 
 .locator-item{
@@ -19,7 +17,7 @@
 }
 
 .locator-thumb {
-  background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
+ 
   height: 200px;
   width: 200px;
   position: relative;
@@ -34,12 +32,21 @@
     z-index: 9;
   }
   &:hover {
-    &:after {
-      @include prefix(transform, translate(10px, 10px));
-    }
+
     .locator-thumb-link {
       color: $color_casablanca;
     }
+  }
+
+}
+
+.eff-border-translate{
+   background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
+   &:hover {
+    &:after {
+      @include prefix(transform, translate(10px, 10px));
+    }
+  
   }
   &:after {
     background: rgba($color_black, 0) url('{{ "bg-icon.png" | asset_url }}') no-repeat scroll center center;
@@ -89,9 +96,6 @@
 }
 
 .feature-box-info {
-  // display: table-cell;
-  // vertical-align: top;
-
   padding: 0 0 0 30px;
 
   h3 {
@@ -112,9 +116,6 @@
 }
 
 
-.feature-box-icon {
-  // display: table-cell;
-}
 .feature-box-link {
   display: block;
   height: 70px;
@@ -332,18 +333,99 @@
     width: 70px;
     margin: 0 10px;
     position: relative;
-    box-shadow: 0 0 0 10px transparent;
+    
     @extend %text-center;
-    @extend %jv-transition-easeout;
-    @extend %jv-border-radius-50;
+  }
+}
 
-    &:hover {
-      @include prefix(transform, rotate(45deg));
-    }
+//effect hover border
+.eff-hover-rotate a.i-wrap{
+   @extend %jv-transition-easeout;
+   box-shadow: 0 0 0 10px transparent;
+   margin: 10px;
+  &:hover{
+    @include prefix(transform, rotate(45deg));
+  }
+}
+
+.eff-hover-rotate a.i-square{
+  margin: 25px 0 0 25px;
+}
+
+.bg-green{
+  background: $color_aquamarine-blue;
+}
+.bg-blue{
+  background: $color_viking;
+}
+.bg-orange{
+  background: $color_my-sin;
+}
+.bg-red{
+  background: $color_outrageous-orange;
+}
+.bg-pink{
+  background: $color_amaranth;
+}
+
+.eff-hover-rotate {
+  a.bg-green:hover {
+    box-shadow: 0 0 0 10px rgba($color_aquamarine-blue, 0.2);
+  }
+}
+.eff-hover-rotate {
+  a.bg-blue:hover {
+    box-shadow: 0 0 0 10px rgba($color_viking, 0.2);
+  }
+}
+.eff-hover-rotate {
+  a.bg-yellow:hover {
+    box-shadow: 0 0 0 10px rgba($color_bright-sun, 0.2);
+  }
+}
+.eff-hover-rotate {
+  a.bg-orange:hover {
+    box-shadow: 0 0 0 10px rgba($color_my-sin, 0.2);
+  }
+}
+.eff-hover-rotate {
+  a.bg-red:hover {
+    box-shadow: 0 0 0 10px rgba($color_outrageous-orange, 0.2);
+  }
+}
+.eff-hover-rotate {
+  a.bg-pink:hover {
+    box-shadow: 0 0 0 10px rgba($color_amaranth, 0.2);
   }
 }
 
 
+// .eff-hover-rotate.sv_blue {
+//   a:hover {
+//     box-shadow: 0 0 0 10px rgba($color_viking, 0.2);
+//   }
+// }
+// .eff-hover-rotate.sv_yellow {
+//   a:hover {
+//      box-shadow: 0 0 0 10px rgba($color_bright-sun, 0.2);
+//   }
+// }
+// .eff-hover-rotate.sv_orange {
+//   a:hover {
+//     box-shadow: 0 0 0 10px rgba($color_my-sin, 0.2);
+//   }
+// }
+// .eff-hover-rotate.sv_red {
+//   a:hover {
+//     box-shadow: 0 0 0 10px rgba($color_outrageous-orange, 0.2);
+//   }
+// }
+
+// .eff-hover-rotate.sv_pink {
+//   a:hover {
+//     box-shadow: 0 0 0 10px rgba($color_amaranth, 0.2);
+//   }
+// }
 //box left
 
 .box-left {
@@ -366,80 +448,57 @@
 
 
 
-.sv_green {
-  .item-service-thumb > a {
-    background-color: rgba($color_aquamarine-blue, 1);
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_aquamarine-blue, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_aquamarine-blue, 1);
-  }
-}
+// .sv_green {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_aquamarine-blue, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_aquamarine-blue, 1);
+//   }
+// }
 
-.sv_blue {
-  .item-service-thumb > a {
-    background-color: rgba($color_viking, 1);
+// .sv_blue {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_viking, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_viking, 1);
+//   }
+// }
 
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_viking, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_viking, 1);
-  }
-}
-
-.sv_yellow {
-  .item-service-thumb > a {
-    background-color: rgba($color_bright-sun, 1);
-
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_bright-sun, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_bright-sun, 1);
-  }
-}
+// .sv_yellow {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_bright-sun, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_bright-sun, 1);
+//   }
+// }
 
 
-.sv_orange {
-  .item-service-thumb > a {
-    background-color: rgba($color_my-sin, 1);
+// .sv_orange {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_my-sin, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_my-sin, 1);
+//   }
+// }
 
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_my-sin, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_my-sin, 1);
-  }
-}
+// .sv_red {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_outrageous-orange, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_outrageous-orange, 1);
+//   }
+// }
 
-.sv_red {
-  .item-service-thumb > a {
-    background-color: rgba($color_outrageous-orange, 1);
-
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_outrageous-orange, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_outrageous-orange, 1);
-  }
-}
-
-.sv_pink {
-  .item-service-thumb > a {
-    background-color: rgba($color_amaranth, 1);
-
-    &:hover {
-      box-shadow: 0 0 0 10px rgba($color_amaranth, 0.2);
-    }
-  }
-  .item-service-text .sub-title a:hover {
-    color: rgba($color_amaranth, 1);
-  }
-}
+// .sv_pink {
+//   .item-service-thumb > a {
+//     background-color: rgba($color_amaranth, 1);
+//   }
+//   .item-service-text .sub-title a:hover {
+//     color: rgba($color_amaranth, 1);
+//   }
+// }
