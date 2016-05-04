@@ -139,19 +139,45 @@
   .readmore {
     display: inline-block;
     margin-top: 15px;
+
+    &.i-before,
+    &.i-after{
+      position: relative;
+      &:before{
+        content: "\e87a";
+        @extend %jv-font-Linearicons;
+        position: absolute;
+        line-height: 20px;
+      }
+    }
+    &.i-before{
+      padding-left: 15px;
+      &:before{
+        left: 0;
+      }
+    }
+    &.i-after{
+      padding-right: 15px;
+      &:before{
+        right: 0;
+      }
+    }
   }
 
   &.text-left .feature-box-info {
     padding: 0;
+    overflow: hidden;
   }
   &.text-left .feature-box-icon{
     float: left;
     margin-right: 30px;
+
   }
 
   &.text-right .feature-box-info {
     padding: 0;
     @extend %text-right;
+    overflow: hidden;
   }
 
   &.text-right .feature-box-icon{
@@ -193,15 +219,6 @@
 .color-white { color: $color_white; }
 .color-darkblue { color: $color_currious-blue-darker; }
 
-// .feature-box-style-01 .feature-box-link { @extend .bg-gray; @extend .color-dark; }
-// .feature-box-style-02 .feature-box-link { @extend .border-gray; @extend .color-dark; }
-// .feature-box-style-03 .feature-box-link { @extend .bg-yellow; @extend .color-white; }
-// .feature-box-style-04 .feature-box-link { @extend .border-yellow; @extend .color-yellow; }
-// .feature-box-style-05 .feature-box-link, .feature-box-style-09 .feature-box-link { @extend .bg-dark; @extend .color-white; }
-// .feature-box-style-06 .feature-box-link { @extend .bg-dark; @extend .color-yellow; }
-// .feature-box-style-07 .feature-box-link { @extend .border-dark; @extend .color-dark; }
-// .feature-box-style-08 .feature-box-link { @extend .border-dark; @extend .color-dark; @extend .bg-yellow; }
-
 .i-circle{
    @extend %jv-border-radius-50;
    &.feature-box-link{
@@ -238,20 +255,21 @@
     @extend .bg-white;
   }
 }
+
 .box-border .feature-box-link.bg-darkblue{
    @extend .bg-darkblue;
 }
-.box-icon-top .feature-box-link.bg-white{
+
+.box-icon-top .feature-box-link.color-white{
   @extend .color-white;
 }
 
 .box-wrap{
-  border-radius: 4px;
+  @include prefix(border-radius, 4px);
   padding: 40px 30px;
 }
 
 .box-bg-darkblue{
- 
   @extend .bg-darkblue;
   .feature-box-link {
     @extend .color-darkblue;

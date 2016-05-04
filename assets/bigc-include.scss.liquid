@@ -208,7 +208,7 @@ Dependency-free breakpoint mixin
 }
 
 /* line 200, ../sass/_bigc-utilities.scss */
-[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .accordion-box.style1 .item-accordion .title-accordion:after, .main-nav > ul > li.menu-item-has-childrent:after, .main-nav .sub-menu .menu-item-has-childrent:after, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
+[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .accordion-box.style1 .item-accordion .title-accordion:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .main-nav > ul > li.menu-item-has-childrent:after, .main-nav .sub-menu .menu-item-has-childrent:after, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .language-box::after,
 .currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .content-catelog ul li a:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before, .item-popular-thumb:after {
   font-family: Linearicons-Free;
@@ -4133,103 +4133,131 @@ span.click-button {
   display: inline-block;
   margin-top: 15px;
 }
-/* line 144, ../sass/_bigc-feature.scss */
+/* line 143, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-before, .item-feature-box .readmore.i-after {
+  position: relative;
+}
+/* line 146, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before {
+  content: "\e87a";
+  position: absolute;
+  line-height: 20px;
+}
+/* line 153, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-before {
+  padding-left: 15px;
+}
+/* line 155, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-before:before {
+  left: 0;
+}
+/* line 159, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-after {
+  padding-right: 15px;
+}
+/* line 161, ../sass/_bigc-feature.scss */
+.item-feature-box .readmore.i-after:before {
+  right: 0;
+}
+/* line 167, ../sass/_bigc-feature.scss */
 .item-feature-box.text-left .feature-box-info {
   padding: 0;
+  overflow: hidden;
 }
-/* line 147, ../sass/_bigc-feature.scss */
+/* line 171, ../sass/_bigc-feature.scss */
 .item-feature-box.text-left .feature-box-icon {
   float: left;
   margin-right: 30px;
 }
-/* line 152, ../sass/_bigc-feature.scss */
+/* line 177, ../sass/_bigc-feature.scss */
 .item-feature-box.text-right .feature-box-info {
   padding: 0;
+  overflow: hidden;
 }
-/* line 157, ../sass/_bigc-feature.scss */
+/* line 183, ../sass/_bigc-feature.scss */
 .item-feature-box.text-right .feature-box-icon {
   float: right;
   margin-left: 30px;
 }
-/* line 162, ../sass/_bigc-feature.scss */
+/* line 188, ../sass/_bigc-feature.scss */
 .item-feature-box.text-center {
   display: block;
 }
-/* line 165, ../sass/_bigc-feature.scss */
+/* line 191, ../sass/_bigc-feature.scss */
 .item-feature-box.text-center .feature-box-icon {
   display: block;
 }
-/* line 168, ../sass/_bigc-feature.scss */
+/* line 194, ../sass/_bigc-feature.scss */
 .item-feature-box.text-center .feature-box-icon .feature-box-link {
   margin: 0 auto 25px;
 }
-/* line 172, ../sass/_bigc-feature.scss */
+/* line 198, ../sass/_bigc-feature.scss */
 .item-feature-box.text-center .feature-box-info {
   display: block;
   padding: 0;
 }
 
-/* line 180, ../sass/_bigc-feature.scss */
+/* line 206, ../sass/_bigc-feature.scss */
 .bg-dark {
   background: #1b1d1f;
 }
 
-/* line 181, ../sass/_bigc-feature.scss */
+/* line 207, ../sass/_bigc-feature.scss */
 .bg-gray {
   background-color: #e5e5e5;
 }
 
-/* line 182, ../sass/_bigc-feature.scss */
+/* line 208, ../sass/_bigc-feature.scss */
 .bg-yellow {
   background: #fec64d;
 }
 
-/* line 183, ../sass/_bigc-feature.scss */
+/* line 209, ../sass/_bigc-feature.scss */
 .bg-white, .box-border .feature-box-link, .box-bg-darkblue .feature-box-link {
   background: #fff;
 }
 
-/* line 184, ../sass/_bigc-feature.scss */
+/* line 210, ../sass/_bigc-feature.scss */
 .bg-darkblue, .i-border-double:before, .box-border .feature-box-link.bg-darkblue, .box-bg-darkblue {
   background: #1b8dbf;
 }
 
-/* line 186, ../sass/_bigc-feature.scss */
+/* line 212, ../sass/_bigc-feature.scss */
 .border-dark {
   border: 1px solid #1b1d1f;
 }
 
-/* line 187, ../sass/_bigc-feature.scss */
+/* line 213, ../sass/_bigc-feature.scss */
 .border-gray, .box-border, .box-border .feature-box-link {
   border: 1px solid #e5e5e5;
 }
 
-/* line 188, ../sass/_bigc-feature.scss */
+/* line 214, ../sass/_bigc-feature.scss */
 .border-yellow {
   border: 1px solid #fec64d;
 }
 
-/* line 189, ../sass/_bigc-feature.scss */
+/* line 215, ../sass/_bigc-feature.scss */
 .border-darkblue {
   border: 1px solid #1b8dbf;
 }
 
-/* line 191, ../sass/_bigc-feature.scss */
+/* line 217, ../sass/_bigc-feature.scss */
 .color-dark, .box-icon-top .feature-box-link {
   color: #1b1d1f;
 }
 
-/* line 192, ../sass/_bigc-feature.scss */
+/* line 218, ../sass/_bigc-feature.scss */
 .color-yellow {
   color: #fec64d;
 }
 
-/* line 193, ../sass/_bigc-feature.scss */
-.color-white, .box-icon-top .feature-box-link.bg-white, .box-icon-top .box-border .feature-box-link, .box-border .box-icon-top .feature-box-link, .box-icon-top .box-bg-darkblue .feature-box-link, .box-bg-darkblue .box-icon-top .feature-box-link, .box-bg-darkblue .feature-box-info h3 a, .box-bg-darkblue .feature-box-info p {
+/* line 219, ../sass/_bigc-feature.scss */
+.color-white, .box-icon-top .feature-box-link.color-white, .box-bg-darkblue .feature-box-info h3 a, .box-bg-darkblue .feature-box-info p {
   color: #fff;
 }
 
-/* line 194, ../sass/_bigc-feature.scss */
+/* line 220, ../sass/_bigc-feature.scss */
 .color-darkblue, .box-bg-darkblue .feature-box-link {
   color: #1b8dbf;
 }
@@ -4243,56 +4271,60 @@ span.click-button {
   display: block;
 }
 
-/* line 223, ../sass/_bigc-feature.scss */
+/* line 240, ../sass/_bigc-feature.scss */
 .box-icon-top {
   border-radius: 4px;
   padding: 0 50px 45px;
 }
-/* line 227, ../sass/_bigc-feature.scss */
+/* line 244, ../sass/_bigc-feature.scss */
 .box-icon-top .feature-box-link {
   margin-top: -35px !important;
 }
 
-/* line 248, ../sass/_bigc-feature.scss */
+/* line 267, ../sass/_bigc-feature.scss */
 .box-wrap {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   padding: 40px 30px;
 }
 
 /*Custom Service*/
-/* line 276, ../sass/_bigc-feature.scss */
+/* line 294, ../sass/_bigc-feature.scss */
 .custom-service {
   background: #f5f5f5;
   padding-top: 70px;
 }
 
-/* line 287, ../sass/_bigc-feature.scss */
+/* line 305, ../sass/_bigc-feature.scss */
 .item-service-text {
   display: table-cell;
   vertical-align: top;
 }
-/* line 290, ../sass/_bigc-feature.scss */
+/* line 308, ../sass/_bigc-feature.scss */
 .item-service-text .sub-title {
   margin: 0 0 17px;
 }
-/* line 292, ../sass/_bigc-feature.scss */
+/* line 310, ../sass/_bigc-feature.scss */
 .item-service-text .sub-title a {
   color: #1b1d1f;
 }
 
-/* line 299, ../sass/_bigc-feature.scss */
+/* line 317, ../sass/_bigc-feature.scss */
 .item-custom-service {
   display: table;
   margin-top: 75px;
   width: 100%;
 }
 
-/* line 305, ../sass/_bigc-feature.scss */
+/* line 323, ../sass/_bigc-feature.scss */
 .item-service-thumb {
   display: table-cell;
   width: 90px;
 }
-/* line 309, ../sass/_bigc-feature.scss */
+/* line 327, ../sass/_bigc-feature.scss */
 .item-service-thumb > a {
   color: #fff;
   display: block;
@@ -4303,7 +4335,7 @@ span.click-button {
   position: relative;
   box-shadow: 0 0 0 10px transparent;
 }
-/* line 322, ../sass/_bigc-feature.scss */
+/* line 340, ../sass/_bigc-feature.scss */
 .item-service-thumb > a:hover {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -4312,103 +4344,103 @@ span.click-button {
   transform: rotate(45deg);
 }
 
-/* line 331, ../sass/_bigc-feature.scss */
+/* line 349, ../sass/_bigc-feature.scss */
 .box-left {
   margin-right: -15px;
 }
-/* line 333, ../sass/_bigc-feature.scss */
+/* line 351, ../sass/_bigc-feature.scss */
 .box-left .item-service-text {
   padding-right: 15px;
 }
 
-/* line 338, ../sass/_bigc-feature.scss */
+/* line 356, ../sass/_bigc-feature.scss */
 .box-right {
   margin-left: -15px;
 }
-/* line 340, ../sass/_bigc-feature.scss */
+/* line 358, ../sass/_bigc-feature.scss */
 .box-right .item-service-text {
   padding-left: 15px;
 }
 
-/* line 345, ../sass/_bigc-feature.scss */
+/* line 363, ../sass/_bigc-feature.scss */
 .item-service-thumb > a span {
   line-height: 70px;
 }
 
-/* line 352, ../sass/_bigc-feature.scss */
+/* line 370, ../sass/_bigc-feature.scss */
 .sv_green .item-service-thumb > a {
   background-color: #5ee3a8;
 }
-/* line 354, ../sass/_bigc-feature.scss */
+/* line 372, ../sass/_bigc-feature.scss */
 .sv_green .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(94, 227, 168, 0.2);
 }
-/* line 358, ../sass/_bigc-feature.scss */
+/* line 376, ../sass/_bigc-feature.scss */
 .sv_green .item-service-text .sub-title a:hover {
   color: #5ee3a8;
 }
 
-/* line 364, ../sass/_bigc-feature.scss */
+/* line 382, ../sass/_bigc-feature.scss */
 .sv_blue .item-service-thumb > a {
   background-color: #4cd6d6;
 }
-/* line 367, ../sass/_bigc-feature.scss */
+/* line 385, ../sass/_bigc-feature.scss */
 .sv_blue .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(76, 214, 214, 0.2);
 }
-/* line 371, ../sass/_bigc-feature.scss */
+/* line 389, ../sass/_bigc-feature.scss */
 .sv_blue .item-service-text .sub-title a:hover {
   color: #4cd6d6;
 }
 
-/* line 377, ../sass/_bigc-feature.scss */
+/* line 395, ../sass/_bigc-feature.scss */
 .sv_yellow .item-service-thumb > a {
   background-color: #fdd932;
 }
-/* line 380, ../sass/_bigc-feature.scss */
+/* line 398, ../sass/_bigc-feature.scss */
 .sv_yellow .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(253, 217, 50, 0.2);
 }
-/* line 384, ../sass/_bigc-feature.scss */
+/* line 402, ../sass/_bigc-feature.scss */
 .sv_yellow .item-service-text .sub-title a:hover {
   color: #fdd932;
 }
 
-/* line 391, ../sass/_bigc-feature.scss */
+/* line 409, ../sass/_bigc-feature.scss */
 .sv_orange .item-service-thumb > a {
   background-color: #ffa823;
 }
-/* line 394, ../sass/_bigc-feature.scss */
+/* line 412, ../sass/_bigc-feature.scss */
 .sv_orange .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(255, 168, 35, 0.2);
 }
-/* line 398, ../sass/_bigc-feature.scss */
+/* line 416, ../sass/_bigc-feature.scss */
 .sv_orange .item-service-text .sub-title a:hover {
   color: #ffa823;
 }
 
-/* line 404, ../sass/_bigc-feature.scss */
+/* line 422, ../sass/_bigc-feature.scss */
 .sv_red .item-service-thumb > a {
   background-color: #ff5736;
 }
-/* line 407, ../sass/_bigc-feature.scss */
+/* line 425, ../sass/_bigc-feature.scss */
 .sv_red .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(255, 87, 54, 0.2);
 }
-/* line 411, ../sass/_bigc-feature.scss */
+/* line 429, ../sass/_bigc-feature.scss */
 .sv_red .item-service-text .sub-title a:hover {
   color: #ff5736;
 }
 
-/* line 417, ../sass/_bigc-feature.scss */
+/* line 435, ../sass/_bigc-feature.scss */
 .sv_pink .item-service-thumb > a {
   background-color: #e3374e;
 }
-/* line 420, ../sass/_bigc-feature.scss */
+/* line 438, ../sass/_bigc-feature.scss */
 .sv_pink .item-service-thumb > a:hover {
   box-shadow: 0 0 0 10px rgba(227, 55, 78, 0.2);
 }
-/* line 424, ../sass/_bigc-feature.scss */
+/* line 442, ../sass/_bigc-feature.scss */
 .sv_pink .item-service-text .sub-title a:hover {
   color: #e3374e;
 }

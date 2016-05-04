@@ -6,7 +6,12 @@
       {% capture feature_bgcolor %}feature_bgcolor{% endcapture %}
       {% capture feature_bordercolor %}feature_bordercolor{% endcapture %}
 
-			
+      {% capture feature_readmore %}feature_readmore{% endcapture %}
+      {% capture feature_readmore_color %}feature_readmore_color{% endcapture %}
+
+			{% capture feature_readmore_pos %}feature_readmore_pos{% endcapture %}
+
+
       {%if {{settings[feature_shape]}} != blank %}
 				{%capture class_shape %}{{settings[feature_shape]}}{% endcapture %}
 			{% else %}
@@ -45,16 +50,13 @@
 
 	{% for i in (1..length) %}
 
-
-
       {% capture feature_title %}feature_item_{{ i }}_title{% endcapture %}
       {% capture feature_desc %}feature_item_{{ i }}_desc{% endcapture %}
       {% capture feature_icon %}feature_item_{{ i }}_icon{% endcapture %}
       {% capture feature_link %}feature_item_{{ i }}_link{% endcapture %}
 
 
-		<div class="col-md-4">
-
+		<div class="col-xs-1 col-sm-6 col-md-{{12 |  divided_by : length}}">
 
 			<div class="item-feature-box {{class_alignment}}">
 				<div class="feature-box-icon">
@@ -70,6 +72,10 @@
 					{% if settings[feature_desc] != blank  %}
 					<p>{{settings[feature_desc]}}</p>
 					{% endif %}
+
+					{%if settings[feature_readmore] != blank %}
+					<a href="{{settings[feature_link]}}" class="readmore {{settings[feature_readmore_color]}} {{settings[feature_readmore_pos]}}">{{settings[feature_readmore]}}</a>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -82,198 +88,3 @@
 
 
 
-
-
-<div class="list-feature-boxes">
-	<div class="row">
-	<!-- 	<div class="col-md-3">
-			<div class="item-feature-box text-left">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-gray color-dark">
-						<span class="lnr lnr-apartment"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 01</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-left">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link border-gray color-dark">
-						<span class="lnr lnr-cart"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 02</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-left">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-yellow color-white">
-						<span class="lnr lnr-gift"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 03</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-left">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link border-yellow color-yellow">
-						<span class="lnr lnr-home"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 04</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-right">
-					<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-dark color-white">
-						<span class="lnr lnr-heart"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 05</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-right">
-					<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-dark color-yellow">
-						<span class="lnr lnr-user"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 06</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-center">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link border-dark color-dark">
-						<span class="lnr lnr-heart"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 07</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-center ">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link border-dark bg-yellow">
-						<span class="lnr lnr-phone-handset"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 08</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-center">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-dark color-white">
-						<span class="lnr lnr-bullhorn"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 09</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
- -->
-
-
-		<div class="col-md-3">
-			<div class="item-feature-box text-center ">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link border-darkblue color-white i-circle i-border-double">
-						<span class="lnr lnr-envelope"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 10</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-center box-icon-top box-border">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link i-circle">
-						<span class="lnr lnr-star"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 11</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-				<a href="#" class="readmore color-yellow">Read more <span class="lnr lnr-arrow-right"></span></a>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-center box-icon-top box-border">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-darkblue color-white">
-						<span class="lnr lnr-magnifier"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 12</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-				<a href="#" class="readmore color-darkblue"><span class="lnr lnr-arrow-right"></span> Read more </a>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-left box-wrap box-bg-darkblue">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link i-circle">
-						<span class="lnr lnr-clock"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 13</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item-feature-box text-left box-wrap box-border">
-				<div class="feature-box-icon">
-					<a href="#" class="feature-box-link bg-darkblue color-white">
-						<span class="lnr lnr-camera-video"></span>
-					</a>
-				</div>
-				<div class="feature-box-info">
-					<h3><a href="#">Icon Style box 14</a></h3>
-					<p>Freegan lomo master cleanse, bitters hoodie gastropub cardigan synth sus tainable PBR next level semiotics.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>

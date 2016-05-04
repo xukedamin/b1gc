@@ -6956,6 +6956,7 @@
     ]
   },
 
+
 {
     "name": "Material Features",
     "settings": [
@@ -7075,6 +7076,57 @@
         ],
         "default" : "border-white"
       },
+    {
+        "type": "text",
+        "id": "feature_readmore",
+        "label": "Readmore text",
+        "default": "Readmore"
+      },
+     {
+        "type": "select",
+        "id": "feature_readmore_color",
+        "label": "Readmore color",
+         "options": [
+          {
+            "value": "color-dark",
+            "label": "Dark"
+          },
+          {
+            "value": "color-yellow",
+            "label": "Yellow"
+          },
+          {
+            "value": "color-white",
+            "label": "White"
+          },
+          {
+            "value": "color-darkblue",
+            "label": "Dark blue"
+          }
+        ],
+        "default" : "color-yellow"
+      },
+    {
+        "type": "select",
+        "id": "feature_readmore_pos",
+        "label": "Readmore icon position",
+         "options": [
+          {
+            "value": "i-before",
+            "label": "Before text"
+          },
+          {
+            "value": "i-after",
+            "label": "After text"
+          }
+      ,
+          {
+            "value": "none",
+            "label": "Not show"
+          }
+        ],
+        "default" : "i-before"
+      },
       {
         "type": "header",
         "content": "Item #1 -----------"
@@ -7132,6 +7184,7 @@
         "label": "Content",
         "default": "lnr lnr-layers"
       },
+    
       {
         "type": "header",
         "content": "Item #3 -----------"
@@ -7160,9 +7213,9 @@
         "label": "Content",
         "default": "lnr lnr-book"
       }
+     
     ]
   },
-
 
   {
     "name": "Material Social media",
