@@ -78,7 +78,6 @@
             Feature Boxes           
 ************************************************************************/
 
-
 .list-feature-boxes {
   .item-feature-box {
     margin: 40px 0;
@@ -210,6 +209,13 @@
 .bg-white { background: $color_white; }
 .bg-darkblue { background: $color_currious-blue-darker; }
 
+.bg-green { background: $color_aquamarine-blue; }
+.bg-blue { background: $color_viking; }
+.bg-orange { background: $color_my-sin; }
+.bg-red { background: $color_outrageous-orange; }
+.bg-pink { background: $color_amaranth; }
+
+
 .border-dark { border: 1px solid $color_shark; }
 .border-gray { border: 1px solid $color_mercury; }
 .border-yellow { border: 1px solid $color_golden-tainoi; }
@@ -286,9 +292,6 @@
   }
 }
 
-
-
-
 /*Custom Service*/
 
 //HOME 6
@@ -352,82 +355,29 @@
   margin: 25px 0 0 25px;
 }
 
-.bg-green{
-  background: $color_aquamarine-blue;
-}
-.bg-blue{
-  background: $color_viking;
-}
-.bg-orange{
-  background: $color_my-sin;
-}
-.bg-red{
-  background: $color_outrageous-orange;
-}
-.bg-pink{
-  background: $color_amaranth;
-}
-
 .eff-hover-rotate {
+
   a.bg-green:hover {
     box-shadow: 0 0 0 10px rgba($color_aquamarine-blue, 0.2);
   }
-}
-.eff-hover-rotate {
   a.bg-blue:hover {
     box-shadow: 0 0 0 10px rgba($color_viking, 0.2);
   }
-}
-.eff-hover-rotate {
   a.bg-yellow:hover {
     box-shadow: 0 0 0 10px rgba($color_bright-sun, 0.2);
   }
-}
-.eff-hover-rotate {
   a.bg-orange:hover {
     box-shadow: 0 0 0 10px rgba($color_my-sin, 0.2);
   }
-}
-.eff-hover-rotate {
   a.bg-red:hover {
     box-shadow: 0 0 0 10px rgba($color_outrageous-orange, 0.2);
   }
-}
-.eff-hover-rotate {
   a.bg-pink:hover {
     box-shadow: 0 0 0 10px rgba($color_amaranth, 0.2);
   }
 }
 
-
-// .eff-hover-rotate.sv_blue {
-//   a:hover {
-//     box-shadow: 0 0 0 10px rgba($color_viking, 0.2);
-//   }
-// }
-// .eff-hover-rotate.sv_yellow {
-//   a:hover {
-//      box-shadow: 0 0 0 10px rgba($color_bright-sun, 0.2);
-//   }
-// }
-// .eff-hover-rotate.sv_orange {
-//   a:hover {
-//     box-shadow: 0 0 0 10px rgba($color_my-sin, 0.2);
-//   }
-// }
-// .eff-hover-rotate.sv_red {
-//   a:hover {
-//     box-shadow: 0 0 0 10px rgba($color_outrageous-orange, 0.2);
-//   }
-// }
-
-// .eff-hover-rotate.sv_pink {
-//   a:hover {
-//     box-shadow: 0 0 0 10px rgba($color_amaranth, 0.2);
-//   }
-// }
 //box left
-
 .box-left {
   margin-right: -15px;
   .item-service-text {
@@ -445,60 +395,3 @@
 .item-service-thumb > a span {
     line-height: 70px;
 }
-
-
-
-// .sv_green {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_aquamarine-blue, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_aquamarine-blue, 1);
-//   }
-// }
-
-// .sv_blue {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_viking, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_viking, 1);
-//   }
-// }
-
-// .sv_yellow {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_bright-sun, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_bright-sun, 1);
-//   }
-// }
-
-
-// .sv_orange {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_my-sin, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_my-sin, 1);
-//   }
-// }
-
-// .sv_red {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_outrageous-orange, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_outrageous-orange, 1);
-//   }
-// }
-
-// .sv_pink {
-//   .item-service-thumb > a {
-//     background-color: rgba($color_amaranth, 1);
-//   }
-//   .item-service-text .sub-title a:hover {
-//     color: rgba($color_amaranth, 1);
-//   }
-// }

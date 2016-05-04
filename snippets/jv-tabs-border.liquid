@@ -1,0 +1,30 @@
+<div class="nav-tabs-border ">
+		<ul class="nav nav-tabs" role="tablist">
+		{% for i in (1..4) %}
+			{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
+			{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
+			{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+
+			{% if settings[tab_item_title] != blank %}
+			<li role="presentation" class="{% if i == 1 %} active {% endif %}"><a href="#tab-border-item{{i}}" aria-controls="tab-border-item{{i}}" role="tab" data-toggle="tab">{{settings[tab_item_title]}}</a></li>
+				{% endif %}  
+			{% endfor %}
+		</ul>
+	</div>
+
+<!-- Tab panes -->
+<div class="tab-content tab-content-border">
+{% for i in (1..4) %}
+	{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
+	{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
+	{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+
+	{% if settings[tab_item_title] != blank %}
+	
+			<div role="tabpanel" class="tab-pane {% if i == 1 %} active {% endif %}" id="tab-border-item{{i}}">
+				<p>{{settings[tab_item_text]}}</p>
+			</div>
+	{% endif %}  
+{% endfor %}
+
+</div>
