@@ -7978,7 +7978,8 @@
       }
     ]
   },
-  {
+
+ {
     "name": "Material Team",
     "settings": [
       {
@@ -7987,44 +7988,56 @@
       },
       {
         "type": "checkbox",
-        "id": "team_1_enable",
-        "label": "Show people ?",
+        "id": "team_item_1_enable",
+        "label": "Enable",
         "default": true
       },
       {
         "type": "image",
-        "id": "team-1.jpg",
+        "id": "team_item_1_img.png",
         "label": "Image"
       },
       {
         "type": "text",
-        "id": "team1_name",
-        "label": "Name"
+        "id": "team_item_1_name",
+        "label": "Name",
+        "default": "Name 1"
       },
       {
         "type": "text",
-        "id": "team1_job",
-        "label": "Job"
+        "id": "team_item_1_job",
+        "label": "Job",
+        "default": "Job 1"
+      },
+       {
+        "type": "textarea",
+        "id": "team_item_1_desc",
+        "label": "Description",
+        "default": "Description 1"
       },
       {
         "type": "text",
-        "id": "team1_twitter",
-        "label": "Twitter"
+        "id": "team_item_1_twitter",
+        "label": "Twitter",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team1_facebook",
-        "label": "Facebook"
+        "id": "team_item_1_facebook",
+        "label": "Facebook",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team1_gplus",
-        "label": "Gplus"
+        "id": "team_item_1_gplus",
+        "label": "Gplus",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team1_pinterest",
-        "label": "Pinterest"
+        "id": "team_item_1_pinterest",
+        "label": "Pinterest",
+        "default":"#"
       },
       {
         "type": "header",
@@ -8032,44 +8045,56 @@
       },
       {
         "type": "checkbox",
-        "id": "team_2_enable",
-        "label": "Show people ?",
+        "id": "team_item_2_enable",
+        "label": "Enable",
         "default": true
       },
       {
         "type": "image",
-        "id": "team-2.jpg",
+        "id": "team_item_2_img.png",
         "label": "Image"
       },
       {
         "type": "text",
-        "id": "team2_name",
-        "label": "Name"
+        "id": "team_item_2_name",
+        "label": "Name",
+        "default": "Name 2"
       },
       {
         "type": "text",
-        "id": "team2_job",
-        "label": "Job"
+        "id": "team_item_2_job",
+        "label": "Job",
+        "default": "Job 2"
+      },
+      {
+        "type": "textarea",
+        "id": "team_item_2_desc",
+        "label": "Description",
+        "default": "Description 2"
       },
       {
         "type": "text",
-        "id": "team2_twitter",
-        "label": "Twitter"
+        "id": "team_item_2_twitter",
+        "label": "Twitter",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team2_facebook",
-        "label": "Facebook"
+        "id": "team_item_2_facebook",
+        "label": "Facebook",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team2_gplus",
-        "label": "Gplus"
+        "id": "team_item_2_gplus",
+        "label": "Gplus",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team2_pinterest",
-        "label": "Pinterest"
+        "id": "team_item_2_pinterest",
+        "label": "Pinterest",
+        "default":"#"
       },
       {
         "type": "header",
@@ -8077,44 +8102,56 @@
       },
       {
         "type": "checkbox",
-        "id": "team_3_enable",
-        "label": "Show people ?",
+        "id": "team_item_3_enable",
+        "label": "Enable",
         "default": true
       },
       {
         "type": "image",
-        "id": "team-3.jpg",
+        "id": "team_item_3_img.png",
         "label": "Image"
       },
       {
         "type": "text",
-        "id": "team3_name",
-        "label": "Name"
+        "id": "team_item_3_name",
+        "label": "Name",
+        "default": "Name 3"
       },
       {
         "type": "text",
-        "id": "team3_job",
-        "label": "Job"
+        "id": "team_item_3_job",
+        "label": "Job",
+        "default": "Job 3"
+      },
+      {
+        "type": "textarea",
+        "id": "team_item_3_desc",
+        "label": "Description",
+        "default": "Description 3"
       },
       {
         "type": "text",
-        "id": "team3_twitter",
-        "label": "Twitter"
+        "id": "team_item_3_twitter",
+        "label": "Twitter",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team3_facebook",
-        "label": "Facebook"
+        "id": "team_item_3_facebook",
+        "label": "Facebook",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team3_gplus",
-        "label": "Gplus"
+        "id": "team_item_3_gplus",
+        "label": "Gplus",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team3_pinterest",
-        "label": "Pinterest"
+        "id": "team_item_3_pinterest",
+        "label": "Pinterest",
+        "default":"#"
       },
       {
         "type": "header",
@@ -8122,263 +8159,56 @@
       },
       {
         "type": "checkbox",
-        "id": "team_4_enable",
-        "label": "Show people ?"
+        "id": "team_item_4_enable",
+        "label": "Enable"
       },
       {
         "type": "image",
-        "id": "team-4.jpg",
+        "id": "team_item_4_img.png",
         "label": "Image"
       },
       {
         "type": "text",
-        "id": "team4_name",
-        "label": "Name"
+        "id": "team_item_4_name",
+        "label": "Name",
+        "default": "Name 4"
+
       },
       {
         "type": "text",
-        "id": "team4_job",
-        "label": "Job"
+        "id": "team_item_4_job",
+        "label": "Job",
+        "default": "Job 4"
+      },
+      {
+        "type": "textarea",
+        "id": "team_item_4_desc",
+        "label": "Description",
+        "default": "Description 4"
       },
       {
         "type": "text",
-        "id": "team4_twitter",
-        "label": "Twitter"
+        "id": "team_item_4_twitter",
+        "label": "Twitter",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team4_facebook",
-        "label": "Facebook"
+        "id": "team_item_4_facebook",
+        "label": "Facebook",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team4_gplus",
-        "label": "Gplus"
+        "id": "team_item_4_gplus",
+        "label": "Gplus",
+        "default":"#"
       },
       {
         "type": "text",
-        "id": "team4_pinterest",
-        "label": "Pinterest"
-      },
-      {
-        "type": "header",
-        "content": "Item #5"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_5_enable",
-        "label": "Show people ?"
-      },
-      {
-        "type": "image",
-        "id": "team-5.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team5_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "team5_job",
-        "label": "Job"
-      },
-      {
-        "type": "text",
-        "id": "team5_twitter",
-        "label": "Twitter"
-      },
-      {
-        "type": "text",
-        "id": "team5_facebook",
-        "label": "Facebook"
-      },
-      {
-        "type": "text",
-        "id": "team5_gplus",
-        "label": "Gplus"
-      },
-      {
-        "type": "text",
-        "id": "team5_pinterest",
-        "label": "Pinterest"
-      },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_6_enable",
-        "label": "Show people ?"
-      },
-      {
-        "type": "image",
-        "id": "team-6.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team6_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "team6_job",
-        "label": "Job"
-      },
-      {
-        "type": "text",
-        "id": "team6_twitter",
-        "label": "Twitter"
-      },
-      {
-        "type": "text",
-        "id": "team6_facebook",
-        "label": "Facebook"
-      },
-      {
-        "type": "text",
-        "id": "team6_gplus",
-        "label": "Gplus"
-      },
-      {
-        "type": "text",
-        "id": "team6_pinterest",
-        "label": "Pinterest"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_7_enable",
-        "label": "Show people ?"
-      },
-      {
-        "type": "image",
-        "id": "team-7.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team7_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "team7_job",
-        "label": "Job"
-      },
-      {
-        "type": "text",
-        "id": "team7_twitter",
-        "label": "Twitter"
-      },
-      {
-        "type": "text",
-        "id": "team7_facebook",
-        "label": "Facebook"
-      },
-      {
-        "type": "text",
-        "id": "team7_gplus",
-        "label": "Gplus"
-      },
-      {
-        "type": "text",
-        "id": "team7_pinterest",
-        "label": "Pinterest"
-      },
-      {
-        "type": "header",
-        "content": "Item #8"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_8_enable",
-        "label": "Show people ?"
-      },
-      {
-        "type": "image",
-        "id": "team-8.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team8_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "team8_job",
-        "label": "Job"
-      },
-      {
-        "type": "text",
-        "id": "team8_twitter",
-        "label": "Twitter"
-      },
-      {
-        "type": "text",
-        "id": "team8_facebook",
-        "label": "Facebook"
-      },
-      {
-        "type": "text",
-        "id": "team8_gplus",
-        "label": "Gplus"
-      },
-      {
-        "type": "text",
-        "id": "team8_pinterest",
-        "label": "Pinterest"
-      },
-      {
-        "type": "header",
-        "content": "Item #9"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_9_enable",
-        "label": "Show people ?"
-      },
-      {
-        "type": "image",
-        "id": "team-9.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team9_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "team9_job",
-        "label": "Job"
-      },
-      {
-        "type": "text",
-        "id": "team9_twitter",
-        "label": "Twitter"
-      },
-      {
-        "type": "text",
-        "id": "team9_facebook",
-        "label": "Facebook"
-      },
-      {
-        "type": "text",
-        "id": "team9_gplus",
-        "label": "Gplus"
-      },
-      {
-        "type": "text",
-        "id": "team9_pinterest",
-        "label": "Pinterest"
+        "id": "team_item_4_pinterest",
+        "label": "Pinterest",
+        "default":"#"
       }
     ]
   },

@@ -89,7 +89,9 @@
   
   @extend %jv-border-radius-50;
   @extend %jv-transition-easeout;
-  width:100%;
+  // width:100%;
+  width: 270px;
+  height: 270px;
 }
 
 .team-circle-thumb {
@@ -200,6 +202,11 @@
   }
   &:hover .team-circle-info {
     bottom: 0;
+  }
+  .desc{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 

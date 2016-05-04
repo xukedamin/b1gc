@@ -1,0 +1,53 @@
+<div class="team-gallery">
+  <div class="row">
+
+  {% for i in (1..4) %}
+{% capture team %}team_item_{{ i }}_enable{% endcapture %}
+{% capture team_img %}team_item_{{ i }}_img.png{% endcapture %}            
+{% capture team_name %}team_item_{{ i }}_name{% endcapture %}
+{% capture team_job %}team_item_{{ i }}_job{% endcapture %}
+{% capture team_desc %}team_item_{{ i }}_desc{% endcapture %}
+
+{% capture team_twitter %}team_item_{{ i }}_twitter{% endcapture %}
+{% capture team_pinterest %}team_item_{{ i }}_pinterest{% endcapture %}
+{% capture team_facebook %}team_item_{{ i }}_facebook{% endcapture %}
+{% capture team_gplus %}team_item_{{ i }}_gplus{% endcapture %}
+
+
+{% if settings[team] %}
+
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="item-team-gallery">
+      <h3><a href="#">{{ settings[team_name] }}</a></h3>
+      <a class="team-gallery-thumb fancybox" href="{{ team_img | asset_url }}" data-fancybox-group="gallery" title="{{ settings[team_name] }}">
+         <img src="{{ team_img | asset_url }}"   alt="{{ settings[team_name] }}">
+      </a>
+      <span>{{ settings[team_job] }}</span>
+      <p class="desc">{{settings[team_desc]}}</p>
+
+       {% if settings[team_twitter] != blank or settings[team_facebook]  != blank or settings[team_gplus]  != blank or settings[team_pinterest]  != blank %}
+      <ul class="team-social-network list-inline">
+        
+         {% if settings[team_twitter] != blank %}
+            <li><a target="_blank" href="{{ settings[team_twitter] }}"><i class="fa fa-twitter"></i></a></li>
+            {% endif %}
+            {% if settings[team_facebook] != blank %}
+            <li><a target="_blank" href="{{ settings[team_facebook] }}"><i class="fa fa-facebook"></i></a></li>
+            {% endif %}
+            {% if settings[team_gplus] != blank %}
+            <li><a target="_blank" href="{{ settings[team_gplus] }}"><i class="fa fa-google-plus"> </i></a></li>
+            {% endif %}
+            {% if settings[team_pinterest] != blank %}
+            <li><a target="_blank" href="{{ settings[team_pinterest] }}"><i class="fa fa-pinterest"></i></a></li>
+            {% endif %}
+      </ul>
+       {% endif %}
+    </div>
+  </div>
+
+{% endif %}
+{% endfor %}
+   
+  </div>
+</div>
+<!-- End Team Gallery -->
