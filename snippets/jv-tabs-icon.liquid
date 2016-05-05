@@ -1,32 +1,49 @@
-<div class="nav-tabs-icon">
-		<ul class="nav nav-tabs" role="tablist">
-		{% for i in (1..4) %}
-			{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
-			{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
-			{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+<div class="nav-tabs-icon-wrap">
+	<div class="nav-tabs-icon">
+			<ul class="nav nav-tabs" role="tablist">
+			{% for i in (1..4) %}
+				{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
+				{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
+				{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
 
-			{% if settings[tab_item_title] != blank %}
-			<li role="presentation" class="{% if i == 1 %} active {% endif %}">
-				<a href="#tab-icon-item{{i}}" aria-controls="tab-icon-item{{i}}" role="tab" data-toggle="tab"><span class="{{settings[tab_item_icon]}}"></span>{{settings[tab_item_title]}}</a>
-			</li>
-				{% endif %}  
-			{% endfor %}
-		</ul>
+				{% if settings[tab_item_title] != blank %}
+				<li role="presentation" class="{% if i == 1 %} active {% endif %}">
+					<a href="#tab-icon-item{{i}}" aria-controls="tab-icon-item{{i}}" role="tab" data-toggle="tab"><span class="{{settings[tab_item_icon]}}"></span>{{settings[tab_item_title]}}</a>
+				</li>
+					{% endif %}  
+				{% endfor %}
+			</ul>
+	</div>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+	{% for i in (1..4) %}
+		{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
+		{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
+		{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+
+		{% if settings[tab_item_title] != blank %}
+		
+				<div role="tabpanel" class="tab-pane {% if i == 1 %} active {% endif %}" id="tab-icon-item{{i}}">
+					<p>{{settings[tab_item_text]}}</p>
+				</div>
+		{% endif %}  
+	{% endfor %}
+
+	</div>
 </div>
+<script>
+	function randomID() {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
 
-<!-- Tab panes -->
-<div class="tab-content tab-content-border">
-{% for i in (1..4) %}
-	{% capture tab_item_title %}tab_item_{{ i }}_title{% endcapture %}
-	{% capture tab_item_icon %}tab_item_{{ i }}_icon{% endcapture %}
-	{% capture tab_item_text %}tab_item_{{ i }}_text{% endcapture %}
+var list = jQuery('.nav-tabs-icon-wrap .nav a[role=tab]');
+var panels = jQuery('.nav-tabs-icon-wrap .tab-content .tab-pane');
 
-	{% if settings[tab_item_title] != blank %}
-	
-			<div role="tabpanel" class="tab-pane {% if i == 1 %} active {% endif %}" id="tab-icon-item{{i}}">
-				<p>{{settings[tab_item_text]}}</p>
-			</div>
-	{% endif %}  
-{% endfor %}
+for (var i = list.length - 1; i >= 0; i--) {
+	var random =  randomID();
+	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
+	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+}
 
-</div>
+</script>
