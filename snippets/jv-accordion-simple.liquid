@@ -1,0 +1,38 @@
+	{%if accor_style != blank %}
+		{% assign css_style = accor_style %}
+	{% else %}
+		{% assign css_style = 'style1' %}
+	{% endif %}
+
+<div class="panel-group accordion {{css_style}}" id="{{id}}">
+
+	{% if settings[accor_heading] != blank %}
+		<h2>{{settings[accor_heading]}}</h2>
+	{% endif %}
+
+	{%if limit_count != blank %}
+		{% assign length = limit_count %}
+	{% else %}
+		{% assign length = 6 %}
+	{% endif %}
+
+	{% for i in (1..length) %}
+		{% capture accor_item_title %}accor_item_{{ i }}_title{% endcapture %}
+		{% capture accor_item_text %}accor_item_{{ i }}_text{% endcapture %}
+	
+	{% if settings[accor_item_title] != blank %}
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#{{id}}" href="#{{id}}_accor_item{{i}}">{{settings[accor_item_title]}}</a>
+			</h4>
+		</div>
+		<div id="{{id}}_accor_item{{i}}" class="panel-collapse collapse {% if i == 1 %} in {% endif %}">
+			<div class="panel-body">{{settings[accor_item_text]}}</div>
+		</div>
+	</div>
+
+	{% endif %}  
+	{% endfor %}
+
+</div>

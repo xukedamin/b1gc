@@ -114,16 +114,22 @@
             });
         }
         //Accordions
-        if ($('.accordion-box').length > 0) {
-            $('.accordion-box').each(function() {
-                $('.title-accordion').click(function() {
-                    $(this).parent().parent().find('.item-accordion').removeClass('active');
-                    $(this).parent().addClass('active');
-                    $(this).parent().parent().find('.desc-accordion').stop(true, true).slideUp();
-                    $(this).next().stop(true, true).slideDown();
-                });
-            });
-        }
+        // if ($('.accordion-box').length > 0) {
+        //     $('.accordion-box').each(function() {
+        //         $('.title-accordion').click(function() {
+        //             $(this).parent().parent().find('.item-accordion').removeClass('active');
+        //             $(this).parent().addClass('active');
+        //             $(this).parent().parent().find('.desc-accordion').stop(true, true).slideUp();
+        //             $(this).next().stop(true, true).slideDown();
+        //         });
+        //     });
+        // }
+
+     
+
+
+
+
         //Menu Responsive
         if ($(window).width() < 1025) {
             $('body').click(function() {

@@ -7464,6 +7464,121 @@
     ]
   },
 
+    {
+    "name": "Material Accordion",
+    "settings": [
+      
+    {
+        "type": "header",
+        "content": "General settings"
+      },
+    {
+        "type": "text",
+        "id": "accor_heading",
+        "label": "Heading",
+    "default": "Heading"
+      },
+    {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_1_title",
+        "label": "Title",
+    "default" : "Title"
+      },
+    {
+        "type": "textarea",
+        "id": "accor_item_1_text",
+        "label": "Content",
+    "default" : "Content 1"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_2_title",
+        "label": "Title",
+    "default" : "Title 2"
+      },
+     
+      {
+        "type": "textarea",
+        "id": "accor_item_2_text",
+        "label": "Content",
+    "default" : "Content 2"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_3_title",
+        "label": "Title",
+    "default" : "Title 3"
+      },
+      {
+        "type": "textarea",
+        "id": "accor_item_3_text",
+        "label": "Content",
+    "default" : "Content 3"
+
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_4_title",
+        "label": "Title",
+    "default" : "Title 4"
+      },
+      {
+        "type": "textarea",
+        "id": "accor_item_4_text",
+        "label": "Content",
+    "default" : "Content 4"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_5_title",
+        "label": "Title",
+    "default" : "Title 4"
+      },
+      {
+        "type": "textarea",
+        "id": "accor_item_5_text",
+        "label": "Content",
+    "default" : "Content 5"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "text",
+        "id": "accor_item_6_title",
+        "label": "Title",
+    "default" : "Title 5"
+      },
+      {
+        "type": "textarea",
+        "id": "accor_item_6_text",
+        "label": "Content",
+    "default" : "Content 6"
+      }
+    ]
+  },
+
   {
     "name": "Material testimonials",
     "settings": [
