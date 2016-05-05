@@ -1,0 +1,64 @@
+{% unless grid_item_width %}
+{% assign grid_item_width = 'large--one-quarter medium-down--one-half' %}
+{% endunless %}
+
+{% unless current_collection %}
+{% assign current_collection = collection %}
+{% endunless %}
+
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+{% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available  %}
+{% assign sold_out = false %}
+{% endif %}
+
+{% comment %}
+Select the product image size from settings.
+{% endcomment %}
+{% assign image_size = settings.collection_prod_image_sizes %}
+
+<div class="col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0">
+  <div class="product-featured-thumb">
+    <ul class="bxslider">
+
+    {% for image in product.images %}
+    <li> <img src="{{ image.src  | img_url: image_size }}"> </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6 col-sm-7 col-xs-12">               
+  <div class="product-featured-info">
+    <h3><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
+     <div class="info-price">
+        <div class="product-item--price price">
+          <span class=" medium--left">
+            {% include 'price' with product.price %}
+          </span>
+          {% if on_sale %}
+            <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+            {% assign compare_price = product.compare_at_price %}
+            {% assign product_price = product.price %}
+            {% include 'price-sale' %}
+            </del>
+          {% endif %}
+          
+        </div>
+      </div>
+    <p class="desc">{{ product.content | strip_html | truncatewords: 30 }}</p>
+    <div class="bx-pager">
+      {% assign index = 0 %}
+      {% for image in product.images %}
+      <a data-slide-index="{{index}}" href=""><img src="{{ image.src  | img_url: thumb }}"> </a>
+       {% assign index = index | plus: 1 %}
+      {% endfor %}
+
+    </div>
+    {% include 'product-list-item--add-to-cart' %}
+  </div>
+</div>

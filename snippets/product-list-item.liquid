@@ -74,52 +74,8 @@ Select the product image size from settings.
             {% endif %}
           </div>
           <p class="desc"> <p>{{ product.content | strip_html | truncatewords: 30 }}</p></p>
-          <div class="wrap-cart-qty">
-            <div class="info-price">
-              <div class="product-item--price price">
-                <span class=" medium--left">
-                  {% include 'price' with product.price %}
-                </span>
-                {% if on_sale %}
-                  <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-                  {% assign compare_price = product.compare_at_price %}
-                  {% assign product_price = product.price %}
-                  {% include 'price-sale' %}
-                  </del>
-                {% endif %}
-                
-              </div>
-            </div>
-            <div class="info-extra">
-              <a href="#" class="link-wishlist"><span class="lnr lnr-heart"></span></a>
-              <a href="#" class="link-compare"><span class="lnr lnr-sync"></span></a>
-            </div>
-            
-       
-            <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
-            <select name="id"  class="product-variants hidden">
-              {% for variant in product.variants %}
-                {% if variant.available %}
-                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
-                {% else %}
-                  <option disabled="disabled">
-                    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
-                  </option>
-                {% endif %}
-              {% endfor %}
-            </select>
-           
-
-              {% if settings.product_quantity_enable %}
-                <div class="quantity-wrapper info-qty">
-                  <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
-                  <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
-                </div>
-                {% endif %}
-
-              <button type="submit" name="add" class="btn-link-default add-to-cart"><span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
-            </form>
-
+         
+          {% include 'product-list-item--add-to-cart' %}
 
           </div>
         </div>

@@ -42,8 +42,6 @@ var panels = jQuery('.tabs-border-wrap .tab-content .tab-pane');
 
 for (var i = list.length - 1; i >= 0; i--) {
 	var random =  randomID();
-	// var temp = jQuery(list[i]).attr('href') + random;
-	// var ids = jQuery(panels[i]).attr('id') + random;
 	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
 	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
 }

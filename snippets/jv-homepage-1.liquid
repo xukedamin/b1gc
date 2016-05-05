@@ -9,48 +9,18 @@
     <h2 class="title title-home">best sellers</h2>
 
     <div class="home-bestsale-slider">
-      <div class="nav-tabs-icon tab-section-01 style-2 pt-30" id="tab-2">
-        
-          <ul class="nav nav-tabs" role="tablist" >      
-            {% for i in (1..6) %}
-              {% capture featured_row_enable %}home1_featured_row{{ i }}_enable{% endcapture %}
-              {% capture featured_row %}home1_featured_row{{ i }}{% endcapture %}
-              {% capture row_limit_setting %}home1_featured_row{{ i }}_number{% endcapture %}
-
-              {% if settings[featured_row_enable] and settings[featured_row] != blank %}
-                {% assign featured_row = settings[featured_row] %}
-                {% assign row_limit_setting = settings[row_limit_setting] %}
-                
-                {% unless collections[featured_row].all_products_count == 0 %}
-                  <li class="{% if i == 1 %} active {% endif %} "><a href="#tab{{ i }}tab-2" data-toggle="tab">{% include 'featured-row-title' %}</a></li>
-                {% endunless %}
-
-              {% endif %}
-            {% endfor %} 
-          </ul>      
-      </div>
-      <div class="tab-content">
-          {% for i in (1..6) %}
-            {% capture featured_row_enable %}home1_featured_row{{ i }}_enable{% endcapture %}
-            {% capture featured_row %}home1_featured_row{{ i }}{% endcapture %}
-            {% capture row_limit_setting %}home1_featured_row{{ i }}_number{% endcapture %}
-
-            {% if settings[featured_row_enable] and settings[featured_row] != blank %}
-              {% assign featured_row = settings[featured_row] %}
-              {% assign row_limit_setting = settings[row_limit_setting] %}
-
-              {% unless collections[featured_row].all_products_count == 0 %}
-                <div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tab{{ i }}tab-2">
-                  {% include 'featured-row-content' %}
-                </div>    
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
-
-      </div>
+      {%include 'jv-tabs-product' %}
     </div>
   </div>
   {% endif %}       
+
+  {%include 'jv-slider-product-feature' %}
+
+  <div class="container"> {% include 'jv-testimonials-3' %} </div>
+
+  <div class="container"> {% include 'jv-logopartner' %} </div>
+
+
 
     {% unless settings.home_content == blank or pages[settings.home_content].empty? or pages[settings.home_content].content == blank %}
     {% assign page = pages[settings.home_content] %}
