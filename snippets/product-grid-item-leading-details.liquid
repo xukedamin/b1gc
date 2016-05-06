@@ -1,0 +1,56 @@
+<div class='product-grid-item col-md-6 col-sm-6 col-xs-12  style="max-height: 374px; overflow: hidden;" '>
+
+	<div class="item-product item-product-leading">
+		<div class="item-product-thumb">
+			<a class="product-thumb-link" href="#">
+			 {% if product.featured_image %}
+          <img src="{{ product.featured_image.src | img_url: image_size }}" alt="{{ product.featured_image.alt | escape }}" class="img-responsive">
+        {% else %}
+          <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">
+        {% endif %}
+			</a>
+		</div>
+		<div class="item-product-info">
+			<div class="info-price product-item--price price">
+        <span class="">
+          {% include 'price' with product.price %}
+        </span>
+         {% if on_sale %}
+          <del class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
+          {% assign compare_price = product.compare_at_price %}
+          {% assign product_price = product.price %}
+          {% include 'price-sale' %}
+          </del>
+        {% endif %}
+      </div>
+			
+			<h3 class="sub-title"> <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
+			<div data-date="6/15/2016" class="hotdeal-countdown">
+				<div class="time_circles">
+					<canvas width="272" height="68"></canvas>
+					<div class="textDiv_Days"><span class="number">172</span><span class="text">DAY</span></div>
+					<div class="textDiv_Hours"><span class="number">6</span><span class="text">HOUR</span></div>
+					<div class="textDiv_Minutes"><span class="number">43</span><span class="text">MIN</span></div>
+					<div class="textDiv_Seconds"><span class="number">29</span><span class="text">SEC</span></div>
+				</div>
+			</div>
+		
+			<a href="{{ settings[banner_link] }}" class="readmore">Shop now</a>
+			<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
+        <select name="id"  class="product-variants hidden">
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+            {% else %}
+              <option disabled="disabled">
+                {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+              </option>
+            {% endif %}
+          {% endfor %}
+        </select>
+        <button type="submit" name="add" class="action product-add-cart readmore"></button>
+      </form>
+			
+		</div>
+	</div>
+</div>

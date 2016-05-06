@@ -27,8 +27,15 @@
     {% endif %}
 
     {% assign current_collection = collections[featured_row] %}
+    
+    {% if leading_product != blank and forloop.index == 2%}
+      
+        {% include 'product-grid-item-leading-details' %}
+      
+    {% else %}
+      {% include 'product-grid-item' %}
+    {% endif %}
 
-    {% include 'product-grid-item' %}
   {% endfor %}
   {% if more_link %}
   <div class="{{grid_item_width}}">
