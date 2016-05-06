@@ -6347,9 +6347,10 @@
 
  {
     "name": "Material Products shortcode",
-    "settings": [{
+    "settings": [
+    {
       "type": "header",
-      "content": "Featured products slider"
+      "content": "Featured products slider------"
     }, {
       "type": "text",
       "id": "sc_product_feature_slider_heading",
@@ -6368,7 +6369,7 @@
     }, 
     {
       "type": "header",
-      "content": "Products tabs"
+      "content": "Products tabs------------------"
     }, {
       "type": "text",
       "id": "sc_product_tab_heading",
@@ -6493,7 +6494,67 @@
       "id": "sc_product_tab_6_icon",
       "label": "Icon",
       "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "SC Products slider grid--------------"
+    }, {
+      "type": "text",
+      "id": "sc_product_slider_grid_heading",
+      "label": "Heading",
+      "default": "New products"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_slider_grid_subheading",
+      "label": "SubHeading",
+      "default": "SubHeading New products CONSECTETUR ADIPISCI"
+    }, {
+      "type": "collection",
+      "id": "sc_product_slider_grid_1",
+      "label": "Select products tab 1"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_slider_grid_1_enable",
+      "label": "Enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "sc_product_slider_grid_1_limit",
+      "label": "Limit",
+      "default": "6"
+    },{
+      "type": "collection",
+      "id": "sc_product_slider_grid_2",
+      "label": "Select products tab 2"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_slider_grid_2_enable",
+      "label": "Enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "sc_product_slider_grid_2_limit",
+      "label": "Limit",
+      "default": "6"
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_slider_grid_3",
+      "label": "Select products tab 3"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_slider_grid_3_enable",
+      "label": "Enable",
+      "default": true
+    }, {
+      "type": "text",
+      "id": "sc_product_slider_grid_3_limit",
+      "label": "Limit",
+      "default": "6"
     }
+
+
     ]
   },
 

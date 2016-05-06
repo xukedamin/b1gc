@@ -343,7 +343,8 @@
   .product-extra-link {
     background: rgba($color_white, 0.9) none repeat scroll 0 0;
 
-    a {
+    // a,
+    .action {
       background: $color_shark;
       color: $color_white;
 

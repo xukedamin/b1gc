@@ -4,6 +4,8 @@
   Required variables are:
     - featured_row, row_limit_setting
 
+    - 
+
   If this snippet is used multiple times on a page, make sure to
   reset or send empty variables so a previous definition isn't used.
 {% endcomment %}
@@ -17,13 +19,19 @@
 
 <div class="row">
   {% for product in collections[featured_row].products limit: row_limit %}
+    
+    {%if class_col == blank %}
+      {% assign grid_item_width = 'col-md-3 col-sm-6 col-xs-12' %}
+    {%else %}
+     {% assign grid_item_width = class_col %}
+    {% endif %}
 
-    {% assign grid_item_width = 'col-md-3 col-sm-6 col-xs-12' %}
     {% assign current_collection = collections[featured_row] %}
+
     {% include 'product-grid-item' %}
   {% endfor %}
   {% if more_link %}
-  <div class="col-md-3 col-sm-6 col-xs-12 ">
+  <div class="{{grid_item_width}}">
     <div class="shop-product-1 next-page">
          {% assign header_title = header_title | downcase %}
           
