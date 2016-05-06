@@ -1,8 +1,9 @@
-{% assign listProduct = "home1_featured_row1" %}
+{% assign listProduct = "sc_product_feature_slider" %}
+
 
 <div class="home-featured-product slider-directnav">
 	<div class="container">
-		<h2 class="title title-home">Featured Products</h2>
+		<h2 class="title title-home">{{settings.sc_product_feature_slider_heading}}</h2>
 	</div>
 	<div class="home-featured-slider">
 		<div class="container">
@@ -10,29 +11,30 @@
 				<div class="wrap-item">
 
 				{% capture featured_row %}{{listProduct}}{% endcapture %}
-				{% capture row_limit_setting %}20{% endcapture %}
+				{% capture row_limit_setting %}{{listProduct}}_limit{% endcapture %}
+				
 				{% if settings[featured_row] != blank %}
+
 					{% assign featured_row = settings[featured_row] %}
-					{% assign row_limit_setting = 20 %}
+					
 				
 					{% unless collections[featured_row].all_products_count == 0 %}
 						{% assign header_title = collections[featured_row].title %}
 						{% assign more_link = collections[featured_row].url %}
-						{% capture row_limit %}{{ row_limit_setting}}{% endcapture %}
+						{% assign row_limit = settings[row_limit_setting] | plus: 0 %}
 
 					 	{% for product in collections[featured_row].products limit: row_limit %}
 						<div class="item">
 							<div class="item-product-featured">
 								<div class="row">
-
 										{% include 'product-list-item-more-details' %}
 								</div>
 							</div>
 						</div>
+						<!-- End Item -->
 							{% endfor %}
 						{% endunless %}
 					{% endif %}
-					<!-- End Item -->
 				</div>
 				<div class="control-paginav-featured-slider">
 					<span id="amount"></span>

@@ -1,4 +1,6 @@
 <div class="wrap-cart-qty">
+	
+	{%if show_price == 'yes' %}
 	<div class="info-price">
 		<div class="product-item--price price">
 			<span class=" medium--left">
@@ -14,6 +16,8 @@
 			
 		</div>
 	</div>
+	{% endif %}
+
 	<div class="info-extra">
 		<a href="#" class="link-wishlist"><span class="lnr lnr-heart"></span></a>
 		<a href="#" class="link-compare"><span class="lnr lnr-sync"></span></a>

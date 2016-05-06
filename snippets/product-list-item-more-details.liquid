@@ -1,5 +1,5 @@
 {% unless grid_item_width %}
-{% assign grid_item_width = 'large--one-quarter medium-down--one-half' %}
+{% assign grid_item_width = 'col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0' %}
 {% endunless %}
 
 {% unless current_collection %}
@@ -59,6 +59,6 @@ Select the product image size from settings.
       {% endfor %}
 
     </div>
-    {% include 'product-list-item--add-to-cart' %}
+    {% include 'product-list-item--add-to-cart' with show_price:'no' %}
   </div>
 </div>

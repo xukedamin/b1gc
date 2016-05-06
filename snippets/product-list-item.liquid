@@ -75,7 +75,7 @@ Select the product image size from settings.
           </div>
           <p class="desc"> <p>{{ product.content | strip_html | truncatewords: 30 }}</p></p>
          
-          {% include 'product-list-item--add-to-cart' %}
+          {% include 'product-list-item--add-to-cart' with with show_price:'yes' %}
 
           </div>
         </div>

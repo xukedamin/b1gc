@@ -1,23 +1,31 @@
+{% comment %}
+- required : multiple of listProduct for each tab
+- theme setting required format:
+	+ {{row}}_enable
+	+ {{row}}_limit
 
-{% assign listProduct = "home1_featured_row" %}
+{% endcomment %}
+
+{% assign listProduct = "sc_product_tab_" %}
 
 
 <div class="nav-tabs-icon tab-section-01 style-2 pt-30" id="tab-2">
 	
 	<ul class="nav nav-tabs" role="tablist" >
 		{% for i in (1..6) %}
-			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-
 			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
+			{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+			{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
-				{% capture row_limit_setting %}{{listProduct}}{{ i }}_number{% endcapture %}
 				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 				{% assign featured_row = settings[featured_row] %}
-				{% assign row_limit_setting = settings[row_limit_setting] %}
+
+				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
 				
 				{% unless collections[featured_row].all_products_count == 0 %}
 					<li class="{% if i == 1 %} active {% endif %} ">
-						<a href="#tab{{ i }}tab-2" data-toggle="tab">{% include 'featured-row-title' %}</a>
+						<a href="#tab{{ i }}tab-2" data-toggle="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
 					</li>
 				{% endunless %}
 			{% endif %}
@@ -29,11 +37,11 @@
 	{% for i in (1..6) %}
 		{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 		{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
-		{% capture row_limit_setting %}{{listProduct}}{{ i }}_number{% endcapture %}
+		{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
 		{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 			{% assign featured_row = settings[featured_row] %}
-			{% assign row_limit_setting = settings[row_limit_setting] %}
+			{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
 			{% unless collections[featured_row].all_products_count == 0 %}
 				<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tab{{ i }}tab-2">
