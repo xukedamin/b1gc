@@ -2,9 +2,12 @@
 
 	<div class="item-product item-product-leading">
 		<div class="item-product-thumb">
-			<a class="product-thumb-link" href="#">
-			 {% if product.featured_image %}
-          <img src="{{ product.featured_image.src | img_url: image_size }}" alt="{{ product.featured_image.alt | escape }}" class="img-responsive">
+			<a class="product-thumb-link" href="{{settings[leading_product].url}}">
+
+
+       {% if leading_product_image %}
+          {{ leading_product_image | asset_url | img_tag: leading_product_image }}
+          <!-- <img src="{{ leading_product_image | img_url: image_size }}" alt="{{ product.featured_image.alt | escape }}" class="img-responsive"> -->
         {% else %}
           <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">
         {% endif %}

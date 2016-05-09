@@ -7,7 +7,7 @@
 
 {% endcomment %}
 
-{% assign listProduct = "sc_product_tab_" %}
+{% assign listProduct = "sc_product_tab_grid_" %}
 
 
 <div class="nav-tabs-default pt-30" id="tab-2">
@@ -40,6 +40,17 @@
 		{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 		{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
+		{%capture leading_product_image %}{{listProduct}}{{i}}_product_lead_img.png {%endcapture%}
+		{%capture leading_product %}{{listProduct}}{{i}}_product {%endcapture%}
+		
+		{{leading_product}}
+		{{settings[leading_product]}}
+		{% assign handlep = settings[leading_product] %}
+		{{handlep}}
+		
+		{{all_products[handlep].title}}
+
+
 		{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 			{% assign featured_row = settings[featured_row] %}
 			{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
@@ -48,7 +59,7 @@
 				<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tabgrid_tab{{ i }}">
 				
 				{% unless collections[featured_row].all_products_count == 0 %}
-					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product:'5465302275' %}
+					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product:leading_product, leading_product_image:leading_product_image  %}
 				{% endunless %}
 
 				</div>
