@@ -42,14 +42,18 @@
 
 		{%capture leading_product_image %}{{listProduct}}{{i}}_product_lead_img.png {%endcapture%}
 		{%capture leading_product %}{{listProduct}}{{i}}_product {%endcapture%}
+
+		{%capture leading_time%}{{listProduct}}{{i}}_product_time{%endcapture%}
 		
-		{{leading_product}}
-		{{settings[leading_product]}}
+		
 		{% assign handlep = settings[leading_product] %}
 		{{handlep}}
 		
-		{{all_products[handlep].title}}
-
+		{%comment %}
+		temp
+		{%endcomment%}
+		{% assign leading_product = 'example-t-shirt' %}
+		
 
 		{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 			{% assign featured_row = settings[featured_row] %}
@@ -59,7 +63,7 @@
 				<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tabgrid_tab{{ i }}">
 				
 				{% unless collections[featured_row].all_products_count == 0 %}
-					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product:leading_product, leading_product_image:leading_product_image  %}
+					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product, leading_product_image:leading_product_image, leading_time: leading_time  %}
 				{% endunless %}
 
 				</div>

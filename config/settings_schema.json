@@ -6497,7 +6497,7 @@
     },
     {
       "type": "header",
-      "content": "Products tabs grid------------------"
+      "content": "Products tabs grid-------------"
     }, {
       "type": "text",
       "id": "sc_product_tab_grid_heading",
@@ -6508,7 +6508,7 @@
   {
       "type": "collection",
       "id": "sc_product_tab_grid_1",
-      "label": "Select products tab 1"
+      "label": "TAB 1 - Select products tab 1"
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_1_enable",
@@ -6525,29 +6525,19 @@
       "id": "sc_product_tab_grid_1_product_lead_img.png",
       "label": "Select products leading image"
     }, 
+
     {
       "type": "text",
-      "id": "sc_product_tab_grid_1_product_day",
+      "id": "sc_product_tab_grid_1_product_time",
       "label": "Day",
-      "default": "9"
+      "info":"Format MM/DD/YYY",
+      "default": "6/15/2016"
     }, 
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_1_product_minute",
-        "label": "Minute",
-        "default": "30"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_1_product_second",
-        "label": "Second",
-        "default": "30"
-      },
     {
       "type": "text",
       "id": "sc_product_tab_grid_1_limit",
       "label": "Limit",
-      "default": "20"
+      "default": "6"
     }, {
       "type": "text",
       "id": "sc_product_tab_grid_1_icon",
@@ -6557,17 +6547,36 @@
     {
       "type": "collection",
       "id": "sc_product_tab_grid_2",
-      "label": "Select products tab 2"
+      "label": "TAB 2 - Select products tab 2"
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_2_enable",
       "label": "Enable",
        "default": true
-    }, {
+    }, 
+        {
+      "type": "product",
+      "id": "sc_product_tab_grid_2_product",
+      "label": "Select products leading to"
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_2_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_2_product_time",
+      "label": "Day",
+      "info":"Format MM/DD/YYY",
+      "default": "6/15/2016"
+    }, 
+
+    {
       "type": "text",
       "id": "sc_product_tab_grid_2_limit",
       "label": "Limit",
-      "default": "20"
+      "default": "6"
     }, 
     {
       "type": "text",
@@ -6577,17 +6586,35 @@
     }, {
       "type": "collection",
       "id": "sc_product_tab_grid_3",
-      "label": "Select products tab 3"
+      "label": "TAB 3 - Select products tab 3"
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_3_enable",
       "label": "Enable",
        "default": true
-    }, {
+    }, 
+    {
+      "type": "product",
+      "id": "sc_product_tab_grid_3_product",
+      "label": "Select products leading to"
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_3_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_3_product_time",
+      "label": "Day",
+      "info":"Format MM/DD/YYY",
+      "default": "6/15/2016"
+    }, 
+    {
       "type": "text",
       "id": "sc_product_tab_grid_3_limit",
       "label": "Limit",
-      "default": "20"
+      "default": "6"
     }, 
      {
       "type": "text",
@@ -6597,17 +6624,36 @@
     }, {
       "type": "collection",
       "id": "sc_product_tab_grid_4",
-      "label": "Select products tab 4"
+      "label": "TAB 4 - Select products tab 4"
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_4_enable",
       "label": "Enable",
        "default": true
-    }, {
+    }, 
+        {
+      "type": "product",
+      "id": "sc_product_tab_grid_4_product",
+      "label": "Select products leading to"
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_4_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_4_product_time",
+      "label": "Day",
+      "info":"Format MM/DD/YYY",
+      "default": "6/15/2016"
+    }, 
+
+    {
       "type": "text",
       "id": "sc_product_tab_grid_4_limit",
       "label": "Limit",
-      "default": "20"
+      "default": "6"
     }, {
       "type": "text",
       "id": "sc_product_tab_grid_4_icon",

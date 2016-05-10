@@ -29,8 +29,8 @@
     {% assign current_collection = collections[featured_row] %}
     
     {% if leading_product != blank and forloop.index == 2%}
-      
         {% include 'product-grid-item-leading-details' %}
+        {% include 'product-grid-item' %}
       
     {% else %}
       {% include 'product-grid-item' %}

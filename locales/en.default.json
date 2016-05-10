@@ -361,7 +361,8 @@
       "shares": "Shares",
       "vendor": "Vendor",
       "description": "Description",
-      "reviews": "Reviews"
+      "reviews": "Reviews",
+      "shop_now":"Shop now"
     }
   },
   "gift_cards": {
@@ -379,5 +380,12 @@
   },
   "date_formats":{
     "month_day_year": "%b %d, %Y"
+  },
+  "time":{
+    "day": "day",
+    "hour": "hour",
+    "min" : "min",
+    "sec":"sec"
   }
+
 }
