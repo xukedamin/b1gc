@@ -10,29 +10,11 @@
 {% assign listProduct = "sc_product_tab_grid_" %}
 
 
-<div class="nav-tabs-default pt-30" id="tab-2">
-	
-	<ul class="nav nav-tabs" role="tablist" >
-		{% for i in (1..4) %}
-			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
-			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-			{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
-			{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+{% capture listProduct_heading %}{{listProduct}}heading{% endcapture %}
+{% capture listProduct_style %}{{listProduct}}style{% endcapture %}
 
-				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
-				{% assign featured_row = settings[featured_row] %}
+{%include 'jv-sc-product-tabs-grid--header-navtab' with listProduct_heading: listProduct_heading, listProduct_style: listProduct_style %}
 
-				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
-				
-				{% unless collections[featured_row].all_products_count == 0 %}
-					<li class="{% if i == 1 %} active {% endif %} ">
-						<a href="#tabgrid_tab{{ i }}" data-toggle="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
-					</li>
-				{% endunless %}
-			{% endif %}
-	{% endfor %}
-	</ul>
-</div>
 
 <div class="product-grid tab-content">
 	{% for i in (1..4) %}
@@ -49,9 +31,7 @@
 		{% assign handlep = settings[leading_product] %}
 		{{handlep}}
 		
-		{%comment %}
-		temp
-		{%endcomment%}
+		{%comment %}TODO: temp{%endcomment%}
 		{% assign leading_product = 'example-t-shirt' %}
 		
 
@@ -63,7 +43,7 @@
 				<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tabgrid_tab{{ i }}">
 				
 				{% unless collections[featured_row].all_products_count == 0 %}
-					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product, leading_product_image:leading_product_image, leading_time: leading_time  %}
+					{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: leading_product, leading_product_image:leading_product_image, leading_time: leading_time  %}
 				{% endunless %}
 
 				</div>
@@ -72,3 +52,7 @@
 		{% endif %}
 	{% endfor %}
 </div>
+
+
+
+

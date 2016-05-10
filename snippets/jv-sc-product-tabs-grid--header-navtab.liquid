@@ -1,0 +1,47 @@
+{% comment %}
+{% capture listProduct_heading %}{{listProduct}}heading{% endcapture %}
+{% capture listProduct_style %}{{listProduct}}style{% endcapture %}
+
+{% endcomment %}
+
+{% if settings[listProduct_style] == 'inline' %}
+<div class="header-product-tab">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+			<h2 class="title">{{settings[listProduct_heading]}}</h2>
+		</div>
+		<div class="col-md-9 col-sm-9 col-xs-12">
+			<div class="list-tab-title">
+{% endif %}
+
+<div class="nav-tabs-default pt-30" id="tab-2">
+	
+	<ul class="nav nav-tabs" role="tablist" >
+		{% for i in (1..4) %}
+			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
+			{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+			{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+
+				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+				{% assign featured_row = settings[featured_row] %}
+
+				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
+				
+				{% unless collections[featured_row].all_products_count == 0 %}
+					<li class="{% if i == 1 %} active {% endif %} ">
+						<a href="#tabgrid_tab{{ i }}" data-toggle="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
+					</li>
+				{% endunless %}
+			{% endif %}
+	{% endfor %}
+	</ul>
+</div>
+
+
+{% if settings[listProduct_style] == 'inline' %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}

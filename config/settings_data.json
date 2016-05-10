@@ -666,6 +666,7 @@
     "sc_product_tab_6_limit": "20",
     "sc_product_tab_6_icon": "lnr lnr-page-break",
     "sc_product_tab_grid_heading": "Product tab grid",
+    "sc_product_tab_grid_style": "default",
     "sc_product_tab_grid_1": "fashions",
     "sc_product_tab_grid_1_enable": true,
     "sc_product_tab_grid_1_product": "example-t-shirt",

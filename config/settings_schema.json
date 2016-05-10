@@ -6504,6 +6504,22 @@
       "label": "Heading",
       "default": "Product tab grid"
     }, 
+    {
+      "type": "select",
+      "id": "sc_product_tab_grid_style",
+      "label": "Tab title style",
+      "options":[
+        {
+          "value":"default",
+          "label": "Default"
+        },
+        {
+          "value":"inline",
+          "label":"Inline"
+        }
+      ],
+      "default": "default"
+    }, 
  
   {
       "type": "collection",
