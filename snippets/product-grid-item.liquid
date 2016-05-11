@@ -16,13 +16,16 @@
   {% assign sold_out = false %}
 {% endif %}
 
+{% if quickview_enable %}
+{% endif %}
+
 {% comment %}
   Select the product image size from settings.
 {% endcomment %}
 {% assign image_size = settings.collection_prod_image_sizes %}
 
-<div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %}">
-  <div class="item-product">
+<div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
+  <div class="item-product  {% if quickview_enable %}item-product-loadmore{% endif%}">
     <div class="item-product-thumb">
       <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
         {% if product.featured_image %}
@@ -31,33 +34,20 @@
           <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">
         {% endif %}
       </a>
+
+      {% if quickview_enable == blank %}
       <div class="product-extra-mask">
         <div class="product-extra-link">
-          <a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
-          
-          <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
-            <select name="id"  class="product-variants hidden">
-              {% for variant in product.variants %}
-                {% if variant.available %}
-                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
-                {% else %}
-                  <option disabled="disabled">
-                    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
-                  </option>
-                {% endif %}
-              {% endfor %}
-            </select>
-            <button type="submit" name="add" class="action product-add-cart"><span class="lnr lnr-cart"></span></button>
-          </form>
-
-          <a class="action product-wishlist" href="#"><span class="lnr lnr-heart"></span></a>
-          
-          {% if settings.product_quickview_enable %}
-          <a class="action product-quick-view" href="{{ product.url | within: current_collection }}"><span class="lnr lnr-magnifier"></span></a>
-          {% endif %}
-
+            {%include 'product-grid-item--product-action' %}
+          </div>
+      </div>
+      {%elsif settings.product_quickview_enable%}
+        <div class="sca-qv-button-wrap" >
+         <!-- <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style=""><span class="lnr lnr-magnifier"></span></a> -->
+          <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style="">QUICK VIEW</a>
         </div>
-      </div><!-- product-extra-mask -->
+      {% endif %}
+
       
       <div class="product-box-promotion">
 
@@ -98,9 +88,21 @@
         {% endif %}
         
       </div>
+      
+      <div class="desc">
+        {{product.description | truncate: 90 }}
+      </div>
+
        {% if settings.product_reviews_enable %}
           <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
         {% endif %}
+
+        {% if quickview_enable == true %}
+        <div class="cart-wishlist-compare">
+            {%include 'product-grid-item--product-action' %}
+        </div>
+        {% endif %}
+
     </div>
   </div>
 

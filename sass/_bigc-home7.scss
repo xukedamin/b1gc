@@ -172,27 +172,7 @@
 
 
 
-.cart-wishlist-compare2 {
-  margin-top: 17px;
 
-  a {
-    color: $color_dusty-gray;
-    line-height: 36px;
-    @extend %jv-transition-easeout;
-
-    &:hover {
-      color: $color_shark;
-    }
-  }
-  .product-add-cart {
-    border: 1px solid $color_mercury-darker;
-    border-radius: 4px;
-    display: inline-block;
-    height: 36px;
-    margin: 0 17px;
-    padding: 0 20px;
-  }
-}
 
 
 

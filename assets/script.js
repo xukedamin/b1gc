@@ -76,9 +76,9 @@
             $('.box-attr-filter').slideToggle();
         });
         //Product Quick View
-        $('.product-quick-view').each(function() {
-                $(this).fancybox();
-            })
+        // $('.product-quick-view').each(function() {
+        //         $(this).fancybox();
+        //     })
             //Control Homme Extra Box
         $('.icon-extra-sub').click(function(event) {
             event.preventDefault();

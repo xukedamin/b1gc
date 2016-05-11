@@ -1,0 +1,19 @@
+<a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
+
+<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
+  <select name="id"  class="product-variants hidden">
+    {% for variant in product.variants %}
+      {% if variant.available %}
+        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  <button type="submit" name="add" class="action product-add-cart"><span class="lnr lnr-cart"></span><span class="text">{{'products.product.add_to_cart' | t}}</span></button>
+</form>
+
+<a class="action product-wishlist" href="#"><span class="lnr lnr-heart"></span></a>
+

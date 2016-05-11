@@ -1,0 +1,122 @@
+
+{%assign class_tab = "nav-tabs-bestsale" %}
+
+{% if tab_style == '2' %}
+	{%assign class_tab = "nav-tabs-filter" %}
+{% endif %}
+
+<div class="title-product-best-sale">
+	<div class="row">
+		<div class="heading-row-wrapper">
+			<h2 class="title-normal">best sellers</h2>
+			
+			<div class="filter-product">
+				<a href="#" class="btn-filter style-border-left">Filter</a>
+			</div>
+
+			<div class="{{class_tab}}">
+				<ul role="tablist" class="nav nav-tabs">
+
+
+				{% for i in (1..4) %}
+					{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+					{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
+					{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+					{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+
+					{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+						{% assign featured_row = settings[featured_row] %}
+
+						{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
+					
+						{% unless collections[featured_row].all_products_count == 0 %}
+						<li class="{% if i == 1 %} active {% endif %}" role="presentation">
+							<a data-toggle="tab" role="tab" aria-controls="furniture" href="#product-grid-simple--tab{{ i }}">{% include 'featured-row-title' %}</a>
+						</li>
+						{% endunless %}
+					{% endif %}
+				{% endfor %}
+
+				</ul>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="box-attr-filter">
+		<div class="item-box-attr">
+			<div class="item-attr-title">
+				<label>Categories</label>
+			</div>
+			<div class="item-attr-content">
+				<ul class="attr-category list-inline">
+					<li><a href="#">Dresses</a></li>
+					<li><a href="#">Jeans & Trousers</a></li>
+					<li><a href="#">Blouses & Shirts </a></li>
+					<li><a href="#">Tops & T-Shirts</a></li>
+					<li><a href="#">Jackets & Coats</a></li>
+					<li><a href="#">Skirts</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item-box-attr">
+			<div class="item-attr-title">
+				<label>Price</label>
+			</div>
+			<div class="item-attr-content">
+				<div id="slider-range-price"></div>
+				<div class="attr-price-filter">
+					<p>
+						<label for="amount-price">Filter By Price: </label>
+						<input type="text" id="amount-price" readonly />
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="item-box-attr">
+			<div class="item-attr-title">
+				<label>Color</label>
+			</div>
+			<div class="item-attr-content">
+				<ul class="attr-color list-inline">
+					<li><a href="#"><span class="blue"></span></a></li>
+					<li><a class="selected" href="#"><span class="blue-air"></span></a></li>
+					<li><a href="#"><span class="yellow"></span></a></li>
+					<li><a href="#"><span class="green"></span></a></li>
+					<li><a href="#"><span class="red"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item-box-attr">
+			<div class="item-attr-title">
+				<label>Size</label>
+			</div>
+			<div class="item-attr-content">
+				<ul class="attr-size list-inline">
+					<li><a href="#">S</a></li>
+					<li><a href="#">M</a></li>
+					<li><a href="#">L</a></li>
+					<li><a href="#">XL</a></li>
+					<li><a href="#">2XL</a></li>
+					<li><a href="#">3XL</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="item-box-attr">
+			<div class="item-attr-title">
+				<label>Brand</label>
+			</div>
+			<div class="item-attr-content">
+				<ul class="attr-brand list-inline">
+					<li><a href="#">Brand 01 </a></li>
+					<li><a href="#">Brand 02 </a></li>
+					<li><a href="#">Brand 03 </a></li>
+					<li><a href="#">Brand 04 </a></li>
+					<li><a href="#">Brand 05 </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Attribute Filter -->
+</div>

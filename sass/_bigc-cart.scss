@@ -292,61 +292,70 @@
 }
 
 
-//HOME 5
 .cart-wishlist-compare {
   margin-top: 20px;
 
   a span {
     line-height: 38px;
   }
+
+  > :not(:last-child){
+    margin-right: 7px;
+  }
+
+  .action{
+     border: 1px solid $color_mercury;
+    color: $color_currious-blue-darker;
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    width: 38px;
+    @extend %jv-border-radius-50;
+    @extend %jv-transition-easeout;
+      &:hover {
+      background: $color_currious-blue-darker;
+      color: $color_white;
+      border-color: $color_currious-blue-darker;
+    }
+  }
+
   .product-add-cart {
     background: $color_currious-blue-darker url('{{ "icon-cart.png" | asset_url }}') no-repeat scroll center center;
-    @extend %jv-border-radius-50;
-    display: inline-block;
     height: 48px;
-    margin-right: 10px;
-    vertical-align: middle;
     width: 48px;
-    @extend %jv-transition-easeout;
+    margin-right: 10px;
 
     &:hover {
       background-color: $color_bright-sun;
     }
   }
-  .product-wishlist {
-    border: 1px solid $color_mercury;
-    @extend %jv-border-radius-50;
-    color: $color_currious-blue-darker;
-    display: inline-block;
-    height: 38px;
-    margin-right: 7px;
-    @extend %text-center;
-    vertical-align: middle;
-    width: 38px;
+  .product-wishlist,
+  .product-compare {
+     @extend %text-center;
+  }
+ 
+}
+
+//home 7
+.cart-wishlist-compare2 {
+  margin-top: 17px;
+
+  a {
+    color: $color_dusty-gray;
+    line-height: 36px;
     @extend %jv-transition-easeout;
 
     &:hover {
-      background: $color_currious-blue-darker;
-      color: $color_white;
-      border-color: $color_currious-blue-darker;
+      color: $color_shark;
     }
   }
-  .product-compare {
-    border: 1px solid $color_mercury;
-    @extend %jv-border-radius-50;
-    color: $color_currious-blue-darker;
+  .product-add-cart {
+    border: 1px solid $color_mercury-darker;
+    border-radius: 4px;
     display: inline-block;
-    height: 38px;
-    @extend %text-center;
-    vertical-align: middle;
-    width: 38px;
-    @extend %jv-transition-easeout;
-
-    &:hover {
-      background: $color_currious-blue-darker;
-      color: $color_white;
-      border-color: $color_currious-blue-darker;
-    }
+    height: 36px;
+    margin: 0 17px;
+    padding: 0 20px;
   }
 }
 

@@ -1,8 +1,6 @@
 /***********************************************************************
 								Home 5						
 ************************************************************************/
-
-
 .inner-cart-info5.inner-cart-info .link-cart {
    a, button {
     background: $color_currious-blue-darker;
@@ -110,6 +108,7 @@
       }
     }
   }
+  
   .info-price span {
     color: $color_currious-blue-darker;
     font-family: georgia;
@@ -121,11 +120,7 @@
   }
 }
 
-.item-product.item-product-loadmore {
-  background: $color_white none repeat scroll 0 0;
-  box-shadow: 1px 3px 2px 0 rgba($color_black, 0.1);
-  margin: 0 -5px 20px;
-}
+
 
 
 

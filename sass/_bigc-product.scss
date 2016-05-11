@@ -1,5 +1,25 @@
 // _bigc-product.scss
 
+
+.product-grid-item.col-md-3:nth-child(4n+1){
+  clear: left;
+}
+
+.product-grid.tab-content .product-grid-item.col-md-3:nth-child(4n+1){
+  clear: none;
+}
+.product-grid.tab-content .product-grid-item.col-md-3:nth-child(4),.product-grid.tab-content .product-grid-item.col-md-3:nth-child(7){
+  clear: left;
+}
+
+.heading-row-wrapper{
+  overflow: hidden;
+  .filter-product{
+    float: right;
+  }
+}
+
+
 .toggle-search-category {
   display: block;
   height: 100%;
