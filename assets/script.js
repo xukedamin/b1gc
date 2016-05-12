@@ -22,24 +22,46 @@
             });
         }
         //Product Load More
+        // $('.list-product-loadmore').each(function() {
+        //     var size_li = $(this).find(".list-product li").size();
+        //     var x = $(this).find('.btn-link-loadmore').attr('data-num');
+        //     var y = parseInt($(this).find('.btn-link-loadmore').attr('data-num')) - 1;
+        //     $(this).find('.list-product li:lt(' + x + ')').show();
+        //     $(this).find('.list-product li:gt(' + y + ')').hide();
+        //     $(this).find('.btn-link-loadmore').click(function() {
+        //         var size_li = $(this).prev().find("li").size();
+        //         var x = $(this).attr('data-num');
+        //         var x = parseInt($(this).attr('data-num'));
+        //         $(this).attr('data-num', x + 4);
+        //         var x = $(this).attr('data-num');
+        //         $(this).prev().find('li:lt(' + x + ')').show();
+        //         if ($(this).attr('data-num') > size_li) {
+        //             $(this).hide();
+        //         }
+        //     });
+        // });
+
+                //Product Load More
         $('.list-product-loadmore').each(function() {
-            var size_li = $(this).find(".list-product li").size();
+            var size_li = $(this).find(".product-grid-item").size();
             var x = $(this).find('.btn-link-loadmore').attr('data-num');
             var y = parseInt($(this).find('.btn-link-loadmore').attr('data-num')) - 1;
-            $(this).find('.list-product li:lt(' + x + ')').show();
-            $(this).find('.list-product li:gt(' + y + ')').hide();
+            $(this).find('.product-grid-item:lt(' + x + ')').show();
+            $(this).find('.product-grid-item:gt(' + y + ')').hide();
             $(this).find('.btn-link-loadmore').click(function() {
                 var size_li = $(this).prev().find("li").size();
                 var x = $(this).attr('data-num');
                 var x = parseInt($(this).attr('data-num'));
                 $(this).attr('data-num', x + 4);
                 var x = $(this).attr('data-num');
-                $(this).prev().find('li:lt(' + x + ')').show();
+                $(this).prev().find('.product-grid-item:lt(' + x + ')').show();
                 if ($(this).attr('data-num') > size_li) {
                     $(this).hide();
                 }
             });
         });
+
+
         //Testimonial
         if ($(window).width() >= 768) {
             $('.left-open').on('click', function(event) {

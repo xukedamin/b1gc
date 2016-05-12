@@ -66,7 +66,7 @@
     }
   }
   .product-quick-view {
-    background: rgba($color_curious-blue, 0.9) none repeat scroll 0 0;
+    background: rgba($color_curious-blue, 0.9) none repeat scroll 0 0 !important;
     bottom: 0;
     color: $color_white;
     display: block;
@@ -76,12 +76,12 @@
     margin: auto;
     position: absolute;
     right: 0;
-    @extend %text-center;
-    @extend %text-up;
     top: 0;
     width: 130px;
     opacity: 0;
     
+    @extend %text-center;
+    @extend %text-up;
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
     @extend %jv-transform-scale-05;
@@ -109,11 +109,13 @@
     }
   }
   
-  .info-price span {
+  .info-price {
+    .money {
     color: $color_currious-blue-darker;
     font-family: georgia;
+    }
 
-    del {
+    del .money {
       color: $color_dusty-gray;
       font-size: 16px;
     }

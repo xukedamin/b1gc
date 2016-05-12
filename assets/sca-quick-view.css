@@ -212,28 +212,28 @@ input.disabled.sca-qv-cartbtn:hover {
 	// background-color: #555 ;
 	/* width:122px; */
 	/* height:42px; */
-	padding: 8px 18px !important;
-	display:inline-block !important;
 	// border-radius:3px;
-	text-align:center ;
 	/* line-height:42px;  	 */
-	font-size: 16px ; 
-	color: #fff ;
-	position:absolute !important;
-  	top:50% ;
-	left:50%;
-	margin-top:-21px !important;
-	margin-left:-61px !important;
+ //  padding: 8px 18px !important;
+ //  display:inline-block !important;
+ //  text-align:center ;
+	// font-size: 16px ; 
+	// color: #fff ;
+	// position:absolute !important;
+ //  	top:50% ;
+	// left:50%;
+	// margin-top:-21px !important;
+	// margin-left:-61px !important;
   
-    transition:all 0.3s ease-in-out 0s;
-    -moz-transition:all 0.3s ease-in-out 0s;
-    -webkit-transition:all 0.3s ease-in-out 0s;
-    -o-transition:all 0.3s ease-in-out 0s;
-    -ms-transition:all 0.3s ease-in-out 0s;
+ //    transition:all 0.3s ease-in-out 0s;
+ //    -moz-transition:all 0.3s ease-in-out 0s;
+ //    -webkit-transition:all 0.3s ease-in-out 0s;
+ //    -o-transition:all 0.3s ease-in-out 0s;
+ //    -ms-transition:all 0.3s ease-in-out 0s;
   
-  	opacity:0; 
-  	filter:alpha(opacity=0); 
-    border:none;
+ //  	opacity:0; 
+ //  	filter:alpha(opacity=0); 
+ //    border:none;
     z-index: 70999 !important;
 }
 .sca-qv-image:hover .sca-qv-button{

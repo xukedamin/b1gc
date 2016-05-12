@@ -1,10 +1,13 @@
 
 {% assign listProduct = "sc_product_tab_" %}
 
+
 {% if tab_style == '1'%}
 	{%assign class_wrap = 'product-best-sale'%}
-{% else %}
+{% elsif tab_style == '2' %}
 	{%assign class_wrap ='product-list-filter' %}
+{% elsif tab_style == '3' %}
+	{%assign class_wrap ='product-best-sale style2' %}
 {% endif %}
 
 <div class="{{class_wrap}}">
@@ -24,9 +27,11 @@
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
 					{% unless collections[featured_row].all_products_count == 0 %}
-					<div id="product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} " role="tabpanel">
+					<div id="product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
 						{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: '', leading_product_image:'', leading_time: '', quickview_enable: true %}
 					{% endunless %}
+					
+					{%if product_paginav == true %}
 						<div class="paginav-best-seller">
 							<ul class="list-inline">
 								<li><a href="#" class="active">1</a></li>
@@ -34,11 +39,16 @@
 								<li><a href="#">3</a></li>
 							</ul>
 						</div>
+					{%endif%}
+
+					{%if product_loadmore == true %}
+						<button class="btn-link-default btn-link-loadmore" data-num="16">load more</button>
+					{%endif%}
+
 					</div>
 
 				{% endif %}
 			{% endfor %}
-
 		
 			<!-- End tab-content 1-->
 		</div>

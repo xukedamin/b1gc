@@ -16,8 +16,14 @@
   {% assign sold_out = false %}
 {% endif %}
 
-{% if quickview_enable %}
-{% endif %}
+
+{% unless quickview_enable %}
+   {% assign quickview_enable = false %}
+{% endunless %}
+
+{% unless product_desc_enable %}
+   {% assign product_desc_enable = false %}
+{% endunless %}
 
 {% comment %}
   Select the product image size from settings.
@@ -41,11 +47,11 @@
             {%include 'product-grid-item--product-action' %}
           </div>
       </div>
-      {%elsif settings.product_quickview_enable%}
-        <div class="sca-qv-button-wrap" >
-         <!-- <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style=""><span class="lnr lnr-magnifier"></span></a> -->
-          <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style="">QUICK VIEW</a>
-        </div>
+      {%elsif quickview_enable and settings.product_quickview_enable %}
+        <!-- <div class="sca-qv-button-wrap" >
+          <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style="">{{'products.product.quick_shop'| t }}</a>
+        </div> -->
+        {%include 'sca-quick-view'%}
       {% endif %}
 
       
@@ -89,9 +95,11 @@
         
       </div>
       
+      {%if product_desc_enable %}
       <div class="desc">
         {{product.description | truncate: 90 }}
       </div>
+      {% endif %}
 
        {% if settings.product_reviews_enable %}
           <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
