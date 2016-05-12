@@ -1677,11 +1677,7 @@
         "label": "1st offer image --------------------",
         "max-width": 400
       },
-      {
-        "type": "text",
-        "id": "home_offer_caption_1",
-        "label": "1st offer caption"
-      },
+      
       {
         "type": "text",
         "id": "home_offer_link_1",
@@ -1693,11 +1689,7 @@
         "label": "2nd offer image --------------------",
         "max-width": 400
       },
-      {
-        "type": "text",
-        "id": "home_offer_caption_2",
-        "label": "2nd offer caption"
-      },
+     
       {
         "type": "text",
         "id": "home_offer_link_2",
@@ -1709,11 +1701,7 @@
         "label": "3rd offer image --------------------",
         "max-width": 400
       },
-      {
-        "type": "text",
-        "id": "home_offer_caption_3",
-        "label": "3rd offer caption"
-      },
+  
       {
         "type": "text",
         "id": "home_offer_link_3",
@@ -1729,28 +1717,10 @@
         "label": "Show?",
         "default": true
       },
-      {
-        "type": "text",
-        "id": "home_latest_products_heading",
-        "label": "Heading",
-        "default": "Latest Products"
-      },
-      {
-        "type": "textarea",
-        "id": "home_latest_content",
-        "label": "Content"
-      },
-      {
-        "type": "text",
-        "id": "home_latest_products_num",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
-        "type": "collection",
-        "id": "home_latest_products_collection",
-        "label": "Collection to use:"
-      },
+     
+     
+   
+     
       {
         "type": "header",
         "content": "Featured Products"

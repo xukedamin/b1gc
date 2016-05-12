@@ -111,7 +111,7 @@
   {{ 'script.js' | asset_url | script_tag }}
 
 
-
+{% include 'sca-quick-view-init' %} 
 </head>
 
 <body id="{{ page_title | handle }}" class="jv-homepage-{{settings.homepage_option}} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}  " >
@@ -137,7 +137,7 @@
     {% else %}
     {% include 'header-1' %}
     {% endcase %}
-	
+  
         {{ content_for_layout }}
 
   {% if settings.footer_default == 'footer_dark' or settings.footer_default == 'footer_dark_simple' %}
@@ -155,7 +155,7 @@
   {% endif %}
 
   
- </div>	 
+ </div>  
   
   
   {{ 'fastclick.min.js' | asset_url | script_tag }}
@@ -203,17 +203,17 @@
  <a id="back-top" class=" icon-up-open" href="#"></a>
   
   <div id="overlays-loading" class=" show-loading">
-				<span class="loading-ball ">
-					<span class="ball"></span>
-					<span class="ball1"></span>
-				</span> 
-			</div>
+        <span class="loading-ball ">
+          <span class="ball"></span>
+          <span class="ball1"></span>
+        </span> 
+      </div>
 
   
   <script>
     jQuery( function( $ ) {
       $('ul.mega-menu-content.double-sub').each( function() {
-      	var a = []
+        var a = []
         ,b = $('<ul>')
         ,w = $(this)
         ;
@@ -267,5 +267,6 @@
     });
 </script>
 
-</body>
+{% include 'sca-quick-view-template' %} 
+ </body>
 </html>

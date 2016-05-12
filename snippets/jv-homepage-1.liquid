@@ -1,5 +1,5 @@
 <main class="wrapper main-content " role="main">
-  <div class="container">
+ 
 
   {% comment %} ----- Featured Collections Tabs ----- {% endcomment %}
 
@@ -13,14 +13,19 @@
     </div>
   </div>
   {% endif %}       
-  {%include 'jv-sc-product-tabs-grid' %}
+
+  <div class="container">{%include 'jv-sc-product-tabs-grid' %}  </div>
   
   {%include 'jv-sc-product-slider-single' %}
   {%include 'jv-sc-product-slider-grid' %}
+  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'1',product_paginav:true, product_loadmore:false, product_desc_enable: false %}
+  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true %}
+  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
 
   <div class="container"> {% include 'jv-testimonials-3' %} </div>
-
   <div class="container"> {% include 'jv-logopartner' %} </div>
+
+  {%include 'jv-banner-product-adv'%}
 
 
 
@@ -34,218 +39,21 @@
 
 
     {% comment %} ----- Spceial Offers ----- {% endcomment %}
-    {% if settings.special_offers %}
-    <section class="no-padding-bottom pt-40">
 
-      {% if settings.home_special_offers_heading != blank  or settings.home_special_offers_content != blank %}
-      <header class="section-header-shop-homepage pb-75">    
-        {% if settings.home_special_offers_heading != blank %}
-
-        <h4 class="heading-border-1"><span>{{ settings.home_special_offers_heading }}</span></h4>
-        {% endif %}
-
-        {% if settings.home_special_offers_content != blank %}
-        <p class="font-serif header-caption text-center">{{ settings.home_special_offers_content }}</p>  
-        {% endif %}  
-      </header> 
-      {% endif %} 
-      
-      
-      <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="shop-homepage-banner-wrapper"><a href="{{settings.home_offer_link_1}}">
-            <div class="shop-homepage-banner"><!-- <img src="{{'shop-hp-banner-1.jpg' | asset_url}}" alt="{{settings.home_offer_caption_1}}"> -->
-              <div class="overlay">
-                <div class="cell-vertical-wrapper">
-                  <div class="cell-middle overlay-content text-center"><i class="icon-indians-icons-05"></i>
-                    <h5>{{settings.home_offer_caption_1}}</h5>
-                  </div>
-                </div>
-              </div>
-            </div></a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <div class="shop-homepage-banner-wrapper"><a href="{{settings.home_offer_link_2}}">
-            <div class="shop-homepage-banner"><!-- <img src="{{'shop-hp-banner-2.jpg' | asset_url}}" alt="{{settings.home_offer_caption_2}}"> -->
-              <div class="overlay">
-                <div class="cell-vertical-wrapper">
-                  <div class="cell-middle overlay-content text-center"><i class="icon-indians-icons-08"></i>
-                    <h5>{{settings.home_offer_caption_2}}</h5>
-                  </div>
-                </div>
-              </div>
-            </div></a></div>
-        </div>
-        <div class="col-md-4 col-xs-12">
-          <div class="shop-homepage-banner-wrapper"><a href="{{settings.home_offer_link_3}}">
-            <div class="shop-homepage-banner"><!-- <img src="{{'shop-hp-banner-3.jpg' | asset_url}}" alt="{{settings.home_offer_caption_3}}"> -->
-              <div class="overlay">
-                <div class="cell-vertical-wrapper">
-                  <div class="cell-middle overlay-content text-center"><i class="icon-indians-icons-02"></i>
-                    <h5>{{settings.home_offer_caption_3}}</h5>
-                  </div>
-                </div>
-              </div>
-            </div></a></div>
-        </div>
-      </div>
-
-    </section>
-    {% endif %}
 
 
     {% comment %} ----- Latest Products ----- {% endcomment %}
-    {% if settings.home_latest_products %}
-    <div class=" latest-products no-padding-bottom pt-55">
-      <header class="section-header-shop-homepage pb-75">    
-        {% if settings.home_latest_products_heading != blank %}
-
-        <h4 class="heading-border-1"><span>{{ settings.home_latest_products_heading }}</span></h4>
-        {% endif %}
-
-        {% if settings.home_latest_content != blank %}
-        <p class="font-serif header-caption text-center">{{ settings.home_latest_content }}</p>  
-        {% endif %}  
-      </header> 
-      
-      <div id="latest-products" class="row  masonry-container">
-        {% assign collection = collections[settings.home_latest_products_collection] %}
-        {% for product in collection.products limit: settings.home_latest_products_num %}
-
-        {% include 'product-item' %}
-
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}      
     
     {% comment %} ----- Featured Products ----- {% endcomment %}
-    {% if settings.home_featured_products %}
-    <div class=" featured-products no-padding-bottom pt-55">
-      <header class="section-header-shop-homepage pb-75">    
-        {% if settings.home_featured_products_heading != blank %}
-
-        <h4 class="heading-border-1"><span>{{ settings.home_featured_products_heading }}</span></h4>
-        {% endif %}
-
-        {% if settings.home_featured_content != blank %}
-        <p class="font-serif header-caption text-center">{{ settings.home_featured_content }}</p>  
-        {% endif %}  
-      </header>  
-      <div id="featured-products" class="row  masonry-container">
-        {% assign collection = collections[settings.home_featured_products_collection] %}
-        {% for product in collection.products limit: settings.home_featured_products_num %}
-
-        {% include 'product-item' %}
-
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}         
-
-
-    {% comment %} ----- Featured Collections ----- {% endcomment %}
-    {% if settings.home_featured_collections_enable %}
-
-    <header class="section-header-shop-homepage pb-75">    
-      <h4 class="heading-border-1">
-        <span>{{ 'homepage.featured_collections.heading' | t }}</span>
-      </h4>
-      {% if settings.home_featured_collections_content != blank %}
-        <p class="font-serif header-caption text-center">{{ settings.home_featured_collections_content }}</p>  
-      {% endif %}  
-    </header> 
-    
-
-    <div class="OsSlider{{ settings.home_featured_collections_column }} space30 dir-nav ">
-
-      {% comment %}
-      {% assign index = 0 %}
-
      
-      
-      {% if settings.home_featured_collections_sort == 'manual' %}
-        {% for i in (1..12) %}
-          {% capture featured_collection %}collection_{{ i }}{% endcapture %}
 
-          {% unless settings[featured_collection] == blank %}
-            {% assign index = index | plus: 1 %}
-            {% increment index %}
-          {% endunless %}
-
-        {% endfor %}
-
-      {% else %}
-        {% for collection in collections limit:13 %}
-          {% unless index >= 12 %}
-            {% unless collection.handle == 'frontpage' %}
-              {% assign index = index | plus: 1 %}
-            {% endunless %}
-          {% endunless %}
-        {% endfor %}
-      {% endif %}
-      
-
-
-
-      {% if settings.home_featured_collections_sort == 'manual' %}
-        {% for i in (1..12) %}
-          {% capture featured_collection %}collection_{{ i }}{% endcapture %}
-          
-          {% unless settings[featured_collection] == blank %}
-            {% assign featured = settings[featured_collection] %}
-            {% include 'featured-collection' %}
-          {% endunless %}
-
-        {% endfor %}
-
-        {% else %}
-        {% assign index = 0 %}
-        {% for collection in collections limit:13 %}
-          
-          {% unless index >= 12 %}
-            {% unless collection.handle == 'frontpage' %}
-              {% assign featured = collection.handle %}
-              {% include 'featured-collection' %}
-
-               {% comment %}{% assign index = index | plus: 1 %}{% endcomment %}
-                {% increment index %}
-            {% endunless %}
-          {% endunless %}
-
-        {% endfor %}
-      {% endif %}
-
-      {% endcomment %}
-
-      {% if index == 0 %}
-      <div class="grid-item text-center">
-        <p>{{ 'homepage.featured_collections.no_collections_html' | t }}</p>
-      </div>
-      <div class="grid-item">
-        <div class="portfolio-box-slider simple-slider dir-nav">
-          {% for i in (1..6) %}
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
-            </div>
-            <p><a href="/admin/collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-    </div>
-    {% endif %}
-
+ 
  
     {% comment %} ----- Home Blog ----- {% endcomment %}
     {% if settings.home_blog_enable %}   
     <div class="blog-lastest-post pt-30">
-
           <header class="section-header-shop-homepage pb-75">    
             {% if settings.home_blog_title != blank %}
-
             <h4 class="heading-border-1"><span>{{ settings.home_blog_title }}</span></h4>
             {% endif %}
 
@@ -294,7 +102,7 @@
 
     {% endif %}     
 
-  </div>
+
 
 </main>     
 

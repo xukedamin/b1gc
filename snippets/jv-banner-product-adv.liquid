@@ -1,0 +1,49 @@
+
+{% assign listBanner = "banner3_item_" %}
+
+<div class="product-advert">
+	<div class="container-fluid">
+		<div class="row">
+
+		 {% for i in (1..4) %}
+
+	      {% capture banner_img %}{{listBanner}}{{ i }}_img.png{% endcapture %}
+	      {% capture banner_title %}{{listBanner}}{{ i }}_title{% endcapture %}
+	      {% capture banner_subtitle %}{{listBanner}}{{ i }}_subtitle{% endcapture %}
+	      {% capture banner_text %}{{listBanner}}{{ i }}_text{% endcapture %}
+	      {% capture banner_btn %}{{listBanner}}{{ i }}_btn{% endcapture %}
+	      {% capture banner_link %}{{listBanner}}{{ i }}_link{% endcapture %}
+
+	      {% if i == 1 %}
+	      {% assign class_item_adv = 'leading' %}
+	      	{%else%}
+	      {% assign class_item_adv = 'item' %}
+	      {% endif %}
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="{{class_item_adv}}-box-adv product-box-adv">
+					<a href="{{settings[banner_link]}}" class="product-thumb-link">
+						<img class="img-responsive" src="{{banner_img | asset_url }}" alt="" /></a>
+					
+
+					{% if i == 1 %}
+					<div class="{{class_item_adv}}-text-adv">
+						<h3>{{settings[banner_title]}}</h3>
+						<h2>{{settings[banner_subtitle]}}</h2>
+						<a href="#">{{settings[banner_btn]}}</a>
+					</div>
+					{% else %}
+							<h2 class="item-text-adv">{{settings[banner_title]}}</h2>
+							<a href="#" class="btn-link-default"><span>{{settings[banner_btn]}}</span></a>
+					{% endif %}
+
+
+				</div>
+			</div>
+
+	  {% endfor %}
+		
+		</div>
+	</div>
+</div>
+<!-- End Product Advert -->
