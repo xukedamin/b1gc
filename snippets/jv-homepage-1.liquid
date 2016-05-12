@@ -5,11 +5,13 @@
 
   {% if settings.home1_featured_collection_tabs_enable %}
 
-  <div class="home-bestsale-product">
-    <h2 class="title title-home">best sellers</h2>
+  <div class="container">
+    <div class="home-bestsale-product">
+      <h2 class="title title-home">best sellers</h2>
 
-    <div class="home-bestsale-slider">
-      {%include 'jv-sc-product-tabs' %}
+      <div class="home-bestsale-slider">
+        {%include 'jv-sc-product-tabs' %}
+      </div>
     </div>
   </div>
   {% endif %}       
@@ -26,6 +28,7 @@
   <div class="container"> {% include 'jv-logopartner' %} </div>
 
   {%include 'jv-banner-product-adv'%}
+  {%include 'jv-banner-catalog'%}
 
 
 
@@ -40,15 +43,11 @@
 
     {% comment %} ----- Spceial Offers ----- {% endcomment %}
 
-
-
     {% comment %} ----- Latest Products ----- {% endcomment %}
     
     {% comment %} ----- Featured Products ----- {% endcomment %}
      
 
- 
- 
     {% comment %} ----- Home Blog ----- {% endcomment %}
     {% if settings.home_blog_enable %}   
     <div class="blog-lastest-post pt-30">
@@ -101,8 +100,6 @@
     </div>      
 
     {% endif %}     
-
-
 
 </main>     
 

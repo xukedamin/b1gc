@@ -94,6 +94,7 @@
     }
   }
 }
+
 .item-product-info {
   margin-top: 27px;
   @extend %text-center;
@@ -102,6 +103,7 @@
     color: $color_dove-gray;
   }
 }
+
 .info-price {
   del {
     color: $color_dusty-gray;
@@ -114,6 +116,7 @@
     font-size: 24px;
   }
 }
+
 .item-product-thumb {
   background: $color_wild-sand none repeat scroll 0 0;
   position: relative;

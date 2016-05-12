@@ -1,0 +1,36 @@
+{% assign banner_catalog = "banner3_item_1" %}
+
+{% capture banner_img %}{{banner_catalog}}_img.png{% endcapture %}
+{% capture banner_title %}{{banner_catalog}}_title{% endcapture %}
+{% capture banner_text %}{{banner_catalog}}_text{% endcapture %}
+{% capture banner_btn %}{{banner_catalog}}_btn{% endcapture %}
+{% capture banner_link %}{{banner_catalog}}_link{% endcapture %}
+
+
+<div class="catalog" style="background-image: url({{banner_img | asset_url}}); background-size: cover; background-position: center center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="content-empty"></div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="content-catelog">
+					<h2>{{settings[banner_title]}}</h2>
+
+					{{settings[banner_text]}}
+					
+					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conse.</p>
+					<ul class="list-unstyled">
+						<li><a href="#">Lorem ipsum dolor sit amet, </a></li>
+						<li><a href="#">Consectetur adipiscing elit</a></li>
+					</ul>
+
+					<p>Pel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat vel illum.</p>
+					
+					<a href="{{settings[banner_link]}}" class="download-catalog"><span class="lnr lnr-download"></span> {{settings[banner_btn]}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Catalog -->

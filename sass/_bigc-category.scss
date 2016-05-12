@@ -80,6 +80,19 @@
     }
   }
 }
+.catalog{
+  overflow: hidden;
+}
+
+.content-catelog:before {
+  content: "";
+  background: $color_primary;
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: 0;
+}
 
 /******************************************
 Page Grid
