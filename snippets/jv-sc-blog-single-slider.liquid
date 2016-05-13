@@ -1,0 +1,75 @@
+{% assign blog_title = settings.home_blog_title %}
+{% assign blog_text = settings.home_blog_text %}
+
+{% assign blogs_list_grids = settings.home_blog %}
+{% assign limit_item = settings.home_blog_number | plus: 0 %}
+
+{% assign blog = blogs[blogs_list_grids] %}
+
+<div class="home-latest-news">
+  <div class="container">
+   {% if blog_title != blank %}
+    <h2 class="title title-home">{{ blog_title }}</h2>
+    {% endif %}
+  </div>
+  <div class="wrap-latest-news-slider">
+    <div class="container">
+      <div class="default-directnav home-directnav">
+        <div class="wrap-item">
+        
+        {% for article in blog.articles limit:limit_item %}
+        
+           {%if forloop.index == 1 or forloop.index == 5 %}
+          <div class="item">
+          {% endif %}
+
+            <div class="item-home-latest-news">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="home-latest-news-thumb">
+                    <a href="#"> {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="home-latest-news-info">
+                    <h3><a href="#">{{ article.title }}</a></h3>
+                    <div class="latest-post-info">
+                      <ul class="list-inline">
+                        <li>
+                          <a href="#"><span class="lnr lnr-calendar-full"></span></a>
+                          <span>Dec 07 2015</span>
+                          <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'mm_dd_yy' }}</time>
+                        </li>
+                        <li>
+                          <a href="#"><span class="lnr lnr-bubble"></span></a>
+                          <span>{{ article.comments_count }} Comment</span>
+                        </li>
+                        <li>
+                          <a href="#"><span class="lnr lnr-user"></span></a>
+                          <span>{{'blogs.article.postedby'| t}} : {{ article.author }}</span>
+                        </li>
+                        <li>
+                          <a href="#"><span class="lnr lnr-heart"></span></a>
+                          <span>29 Like</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="desc">{{ article.excerpt | truncate: 90 }}</p>
+                    <a href="{{ article.url }}" class="btn-link-default">{{'blogs.article.read_more' | t}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           {% if forloop.index == 4 or forloop.index == 8 %}
+          </div>
+          {% endif %}
+
+          {% endfor %}
+          <!-- End Item -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Latest-news -->

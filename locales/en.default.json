@@ -59,7 +59,7 @@
       "comment_meta_html": "{{ author }} on {{ date }}",
       "read_more": "Read more",
       "share": "SHARE",
-      "postedby": "Posted by : "
+      "postedby": "Posted by"
     },
     "comments": {
       "title": "Leave a comment",
@@ -379,7 +379,8 @@
     }
   },
   "date_formats":{
-    "month_day_year": "%b %d, %Y"
+    "month_day_year": "%b %d, %Y",
+    "mm_dd_yy":"%D"
   },
   "time":{
     "day": "day",

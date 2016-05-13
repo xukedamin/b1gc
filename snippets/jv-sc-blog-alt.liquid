@@ -1,0 +1,88 @@
+{% assign blog_title = settings.home_blog_title %}
+{% assign blog_text = settings.home_blog_text %}
+
+{% assign blogs_list_grids = settings.home_blog %}
+{% assign limit_item = settings.home_blog_number | plus: 0 %}
+
+{% assign blog = blogs[blogs_list_grids] %}
+
+<div class="latest-post">
+  <div class="container">
+    <div class="box-title">
+    {% if blog_title != blank %}
+      <h2>{{ blog_title }}</h2>
+      {% endif %}
+      {% if blog_text != blank %}
+      <p>{{ blog_text }}</p>
+       {% endif %}
+    </div>
+  </div>
+
+  {% for article in blog.articles limit:limit_item %}
+
+  {% assign class_item = forloop.index | modulo:2 %}
+      {% if class_item == 0 %}
+        {% assign class_item = 'right'%}
+      {% else %}
+        {% assign class_item = 'left'%}
+    {% endif %}
+
+<div class="item-latest-post item-{{class_item}}" >
+    <div class="container">
+      <div class="row">
+
+       {% if class_item == 'right'%}
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="content-empty">
+            <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="latest-post-content">
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p>{{ article.excerpt | truncate: 200 }}</p>
+            <div class="latest-post-info">
+              <ul class="list-inline">
+                <li>
+                  <a href="#"><span class="lnr lnr-calendar-full"></span></a>
+                  <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
+                </li>
+                <li>
+                  <a href="#"><span class="lnr lnr-bubble"></span></a>
+                  <span>{{ article.comments_count }} Comment</span>
+                </li>
+                <li>
+                  <a href="#"><span class="lnr lnr-user"></span></a>
+                  <span>{{'blogs.article.postedby'| t}} : {{ article.author }}</span>
+                </li>
+                <li>
+                  <a href="#"><span class="lnr lnr-heart"></span></a>
+                  <span>29 Like</span>
+                </li>
+              </ul>
+            </div>
+            <a href="{{ article.url }}" class="readmore"><span class="lnr lnr-arrow-right-circle"></span> {{'blogs.article.read_more' | t}}</a>
+          </div>
+        </div>
+
+        {% if class_item == 'left'%}
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="content-empty"> 
+            <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+  <!-- End Item -->
+
+
+  {% endfor %}
+</div>
+<!-- End Latest Post -->

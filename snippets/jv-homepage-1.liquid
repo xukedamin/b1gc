@@ -50,55 +50,9 @@
 
     {% comment %} ----- Home Blog ----- {% endcomment %}
     {% if settings.home_blog_enable %}   
-    <div class="blog-lastest-post pt-30">
-          <header class="section-header-shop-homepage pb-75">    
-            {% if settings.home_blog_title != blank %}
-            <h4 class="heading-border-1"><span>{{ settings.home_blog_title }}</span></h4>
-            {% endif %}
-
-            {% if settings.home_blog_text != blank %}
-            <p class="font-serif header-caption text-center">{{ settings.home_blog_text }}</p>  
-            {% endif %}  
-          </header>  
-        <div class="row">
-
-          {% assign tmp = settings.home_blog %}
-          {% assign blog = blogs[tmp] %}
-          {% for article in blog.articles limit:settings.home_blog_number %}
-
-          <div class="col-md-4 col-xs-12">
-            <div class="blog-item section-block-p">
-
-              {% if article.excerpt.size > 0 %}
-
-              <div class="item-image">
-                {{ article.excerpt }}
-              </div>
-              {% else %}
-              {% if article.image %}
-              {% assign image_alt = article.title | escape %}
-
-              <div class="item-image">
-
-                {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-
-              </div>
-
-              {% endif %}    
-              {% endif %} 
-
-
-              <p><a href="{{ blog.url }}">{{ blog.title }}</a>&nbsp;/&nbsp;<time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></p>
-              <h5><a href="{{ article.url }}">{{ article.title }}</a></h5>
-            </div>
-          </div>
-
-          {% endfor %}
-
-
-        </div>
-    </div>      
-
+      {%include 'jv-sc-blog-grid-slider'%}
+      {%include 'jv-sc-blog-single-slider'%}
+      {%include 'jv-sc-blog-alt'%}
     {% endif %}     
 
 </main>     

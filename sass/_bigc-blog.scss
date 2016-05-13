@@ -580,3 +580,139 @@
     width: 100%;
   }
 }
+
+/*blog template shortcode*/
+
+.latest-post {
+    background: $color_wild-sand none repeat scroll 0 0;
+    margin-top: 15px;
+    padding: 70px 0 0;
+}
+
+.item-latest-post {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background: rgba($color_shark, 0.5);
+    top: 0;
+    opacity: 0;
+    @extend %jv-transition-easeout;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+
+.item-latest-post.item-left {
+  background-image: url('{{ "index2_bg-box2.jpg" | asset_url }}');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  &:after {
+    left: 50%;
+  }
+  .latest-post-content {
+    padding-right: 45px;
+    @extend %text-right;
+  }
+}
+
+.item-latest-post.item-right {
+  background-image: url('{{ "index2_bg-box3.jpg" | asset_url }}');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  &:after {
+    left: 0;
+  }
+  .latest-post-content {
+    padding-left: 45px;
+    @extend %text-left;
+  }
+}
+
+
+.latest-post-thumb {
+    display: block;
+    margin: 0 -15px;
+}
+
+
+.latest-post-content {
+  color: $color_white;
+
+  > h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    @extend %text-up;
+  }
+  a {
+    color: $color_white;
+
+    &:hover {
+      text-shadow: 1px 1px 1px rgba($color_black, 0.3);
+    }
+  }
+}
+
+.latest-post-info {
+  border-top: 1px solid rgba($color_white, 0.5);
+  margin-top: 23px;
+  padding-top: 26px;
+
+  li {
+    margin-left: 15px;
+    @extend %text-center;
+
+    a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.latest-post-content .readmore {
+  background: $color_white none repeat scroll 0 0;
+  color: $color_shark;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 15px;
+  padding: 0 20px;
+  @extend %text-up;
+  @extend %jv-transition-easeout;
+
+  &:hover {
+    background: $color_shark none repeat scroll 0 0;
+    color: $color_white;
+  }
+}
+
+.item-latest-post .col-md-6{
+  height: 400px;
+}
+.content-empty .img {
+    position: absolute;
+    left: 0;
+    right: -100%;
+    top: -80px;
+    bottom: -80px;
+}
+
+.item-latest-post.item-right{
+  .content-empty .img{
+    left: -100%;
+    right: 0;
+  }
+}
+

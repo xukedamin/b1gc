@@ -42,6 +42,10 @@
   color: $color_white;
   padding-left: 45px;
 
+  >*{
+    position: relative;
+  }
+
   > h2 {
     font-size: 30px;
     font-weight: 700;
@@ -54,13 +58,10 @@
     font-style: italic;
     padding: 0 0 0 30px;
     position: relative;
-
-    &:before {
-      @extend %jv-font-Linearicons;
-      left: 0;
-      position: absolute;
-      top: 0;
+    span{
+      margin-right: 10px;
     }
+
   }
 
   .download-catalog {
@@ -84,15 +85,34 @@
   overflow: hidden;
 }
 
+.latest-post-content:before,
 .content-catelog:before {
   content: "";
-  background: $color_primary;
+  background-color: rgba($color_primary,0.7);
   position: absolute;
   top: -100%;
   right: -100%;
   bottom: -100%;
   left: 0;
 }
+
+.latest-post-content:before{
+  background-color: rgba($color_primary,1);
+}
+
+.item-latest-post.item-left .latest-post-content:before{
+  left: -100%;
+  right: 0;
+}
+
+.item-latest-post .latest-post-content *{
+  position: relative;
+}
+
+.content-empty .img{
+  
+}
+
 
 /******************************************
 Page Grid

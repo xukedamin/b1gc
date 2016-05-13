@@ -127,15 +127,17 @@
 
 //cart index
 @media only screen and (min-width: 768px) {
-.shop-cart-total .shipping h5 {
-  float: left;
-  display: block;
-  width: 20%
-}
-.shop-cart-total .shipping .content {
-  float: left;
-  width: 80%
-}
+  .shop-cart-total .shipping h5 {
+    float: left;
+    display: block;
+    width: 20%
+  }
+  .shop-cart-total .shipping .content {
+    float: left;
+    width: 80%
+  }
+
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -157,6 +159,9 @@
   .shop-cart-total .button-wrapper a.border-btn {
       padding-left:50px;
       padding-right: 50px
+  }
+   .content-catelog:before{
+     background-color: rgba($color_black,0.3);
   }
 }
 
