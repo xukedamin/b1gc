@@ -16,76 +16,74 @@
       <span class="desc-title">{{ blog_text }}</span>
       {% endif %}
     </div>
-    <div class="paginav-slider ">
+    <div class="paginav-slider">
 
-<div class="wrap-item">
+      <div class="wrap-item">
 
-{% paginate blog.articles by 6 %}
-      <div class="item masonry-container">
+           {% assign offset = 0 %}
+           {% assign item_per_slide = 6 %}
+           {% assign slides = blog.articles_count| divide: item_per_slide %}
 
-       {% assign offset = 0 %}
-       {% assign item_per_slide = 6 %}
-       {% for i in (1..item_per_slide) %}
-       {%if offset < blog.articles_count and  offset < 20 %}
-          {% assign j = 1 %}
-          {% for article in blog.articles limit:item_per_slide offset:offset %}
-                {% assign class_col = 'col-md-3' %}
-                {% if j == 3 or j == 4  %}
-                  {% assign class_col = 'col-md-6' %}
-                {% endif %}
-          
-          <div class="itemMasonry {{class_col}}">
+          {% for i in (1..slides) %}
+      
+          {%if i == 1 or i == item_per_slide + 1 %}
+          <div class="item masonry-container">
+          {%endif %}
 
-            <div class="popular-box mini-box 1OR_large-box ">
-              <div class="popular-box-thumb">
-                <a href="#">
-                   {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-                </a>
+
+           {% for i in (1..item_per_slide) %}
+           {%if offset < blog.articles_count and  offset < 20 %}
+              {% assign j = 1 %}
+              
+              {% for article in blog.articles limit:item_per_slide offset:offset %}
+                  {% assign class_col = 'col-md-3' %}
+                  {% if j == 3 or j == 4  %}
+                    {% assign class_col = 'col-md-6' %}
+                  {% endif %}
+              
+                  <div class="itemMasonry {{class_col}}">
+
+                    <div class="popular-box mini-box 1OR_large-box ">
+                      <div class="popular-box-thumb">
+                        <a href="#">
+                           {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+                        </a>
+                      </div>
+                      <div class="popular-box-text">
+                        <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
+                        <div class="desc-popular-box"><span>{{ article.excerpt | truncate: 40 }}</span></div>
+                      </div>
+                    </div>
+                      
+
+                {% assign j = j | plus:1 %}
               </div>
-              <div class="popular-box-text">
-                <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
-                <div class="desc-popular-box"><span>{{ article.excerpt | truncate: 40 }}</span></div>
-              </div>
-            </div>
-                  
+            <!-- end itemMasonry -->
 
-            {% assign j = j | plus:1 %}
+               {% endfor %}
+             {% endif %}
+             
+              {% assign offset = offset | plus:item_per_slide %}
+              {% endfor %}
+       
+          {% if i == item_per_slide or forloop.last %}
           </div>
-        <!-- end item -->
-           {% endfor %}
-         {% endif %}
-         
-          {% assign offset = offset | plus:item_per_slide %}
+          {% endif %}
+          <!-- item masonry-container -->
+          
           {% endfor %}
-   
-      </div>
-
-       {% if paginate.pages > 1 %}
-      <hr>
-      <div class="pagination">
-        {{ paginate | default_pagination }}
-      </div>
-    {% endif %}
+         
 
 
 
-{% endpaginate %}
-</div> 
-<!-- wrap-item -->
-
+      </div> 
+      <!-- wrap-item -->
       
     </div>
   </div>
 </div>
 <!-- End Popular Post -->
 
-
-<style type="text/css">
-  /* fluid 5 columns */
-
-
-
-</style>
 
 <script language="javascript">
 jQuery(function($){
