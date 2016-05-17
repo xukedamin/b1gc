@@ -763,6 +763,41 @@
                 });
             });
         }
+
+                //Popular Post
+        if ($('.slider-4-items').length > 0) {
+            $('.slider-4-items').each(function() {
+                $(this).find('.wrap-item').owlCarousel({
+                    items: 4,
+                    itemsCustom: [
+                        [0, 1],
+                        [480, 1],
+                        [768, 1],
+                        [992, 1],
+                        [1200, 4]
+                    ],
+                    pagination: true,
+                    navigation: false,
+                });
+            });
+        }
+
+        if ($('.slider-5-items').length > 0) {
+            $('.slider-5-items').each(function() {
+                $(this).find('.wrap-item').owlCarousel({
+                    items: 1,
+                    itemsCustom: [
+                        [0, 1],
+                        [480, 1],
+                        [768, 1],
+                        [992, 1],
+                        [1200, 1]
+                    ],
+                    pagination: true,
+                    navigation: false,
+                });
+            });
+        }
         //Header Slider
         if ($('.header-slider').length > 0) {
             $('.header-slider').each(function() {

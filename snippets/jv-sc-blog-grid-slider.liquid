@@ -6,7 +6,7 @@
 
 {% assign blog = blogs[blogs_list_grids] %}
 
-<div class="popular-post">
+<div class="popular-post-grid slider-4-items">
   <div class="container">
     <div class="box-intro">
      {% if blog_title != blank %}
@@ -18,13 +18,14 @@
     </div>
     <div class="paginav-slider">
       <div class="wrap-item">
- {% paginate blog.articles by 5 %}
-   {% for article in blog.articles limit:limit_item %}
         
-        <div class="item">
-          <div class="row">
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
+        {% assign offset = 0 %}
+        {% assign item_per_slide = 4 %}
+        {% for i in (1..item_per_slide) %}
+          
+          {%if offset < blog.articles_count and  offset < limit_item %}
+          {% for article in blog.articles limit:item_per_slide offset:offset %}
+            <div class="item {{offset}}">
               <div class="item-popular">
                 <div class="item-popular-thumb">
                     <a href="{{ article.url }}" class="item-popular-thumb-link">
@@ -49,12 +50,13 @@
               </div>
             </div>
 
-          </div>
-        </div>
-        
         <!-- end item -->
-      {% endfor %}
-{% endpaginate %}
+          {% endfor %}
+         {% endif %}
+
+          {% assign offset = offset | plus:item_per_slide %}
+        {% endfor %}
+
       </div>
       <!-- end wrap-item -->
     </div>

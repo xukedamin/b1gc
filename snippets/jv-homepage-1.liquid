@@ -50,9 +50,10 @@
 
     {% comment %} ----- Home Blog ----- {% endcomment %}
     {% if settings.home_blog_enable %}   
+     <div class="container"> {%include 'jv-sc-blog-masonry-slider'%} </div>
+      {%include 'jv-sc-blog-alt'%}
       {%include 'jv-sc-blog-grid-slider'%}
       {%include 'jv-sc-blog-single-slider'%}
-      {%include 'jv-sc-blog-alt'%}
     {% endif %}     
 
 </main>     
