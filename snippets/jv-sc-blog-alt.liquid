@@ -6,7 +6,7 @@
 
 {% assign blog = blogs[blogs_list_grids] %}
 
-<div class="latest-post">
+<div class="latest-post alt">
   <div class="container">
     <div class="box-title">
     {% if blog_title != blank %}
@@ -28,11 +28,14 @@
     {% endif %}
 
 <div class="item-latest-post item-{{class_item}}" >
+
     <div class="container">
       <div class="row">
+       <div class="img-xs col-xs-12" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
+        </div>
 
        {% if class_item == 'right'%}
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
           <div class="content-empty">
             <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
             </div>
@@ -40,7 +43,7 @@
         </div>
         {% endif %}
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12" >
           <div class="latest-post-content">
             <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
             <p>{{ article.excerpt | truncate: 200 }}</p>
@@ -69,7 +72,7 @@
         </div>
 
         {% if class_item == 'left'%}
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
           <div class="content-empty"> 
             <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
             </div>

@@ -163,6 +163,31 @@
    .content-catelog:before{
      background-color: rgba($color_black,0.3);
   }
+
+  .item-latest-post{
+    padding: 40px 0;
+  }
+
+  .item-latest-post .col-md-6{
+    height: auto;
+  }
+
+  .latest-post.alt{
+    .img-xs{
+      display: block; 
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      visibility: visible;
+    }
+    .latest-post-content:before{
+      background-color: rgba($color_black, 0.6);
+    }
+  }
+
+
 }
 
 @media (max-width: 550px) {
