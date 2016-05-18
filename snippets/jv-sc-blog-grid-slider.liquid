@@ -16,50 +16,45 @@
       <span class="desc-title">{{ blog_text }}</span>
        {% endif %}
     </div>
-    <div class="paginav-slider">
+  
+     <div class="paginav-slider">
       <div class="wrap-item">
-        
-        {% assign offset = 0 %}
-        {% assign item_per_slide = 4 %}
-        {% for i in (1..item_per_slide) %}
-          
-          {%if offset < blog.articles_count and  offset < limit_item %}
-          {% for article in blog.articles limit:item_per_slide offset:offset %}
-            <div class="item {{offset}}">
-              <div class="item-popular">
-                <div class="item-popular-thumb">
-                    <a href="{{ article.url }}" class="item-popular-thumb-link">
-                       {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-                    </a>
-                </div>
-                <div class="item-popular-info">
-                  <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-                  <p> {{ article.excerpt | truncate: 90 }}</p>
-                  <div class="popular-post-date">
-                    <div class="row">
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <span class="lnr lnr-calendar-full"></span>
-                        <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'mm_dd_yy' }}</time>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <a href="{{ article.url }}" class="readmore"><span class="lnr lnr-arrow-right-circle"></span> {{'blogs.article.read_more' | t}}</a>
-                      </div>
+
+          {% for article in blog.articles limit:limit_item %}
+          <div class="item">
+            <div class="item-popular">
+              <div class="item-popular-thumb">
+                  <a href="{{ article.url }}" class="item-popular-thumb-link">
+                     {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+                  </a>
+              </div>
+              <div class="item-popular-info">
+                <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+                <p> {{ article.excerpt | truncate: 90 }}</p>
+                <div class="popular-post-date">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      <span class="lnr lnr-calendar-full"></span>
+                      <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'mm_dd_yy' }}</time>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      <a href="{{ article.url }}" class="readmore"><span class="lnr lnr-arrow-right-circle"></span> {{'blogs.article.read_more' | t}}</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
+        </div>
         <!-- end item -->
-          {% endfor %}
-         {% endif %}
-
-          {% assign offset = offset | plus:item_per_slide %}
         {% endfor %}
 
       </div>
       <!-- end wrap-item -->
     </div>
+
+
+
+
   </div>
 </div>
 <!-- End Popular Post -->
