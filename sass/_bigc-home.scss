@@ -700,16 +700,18 @@
     margin: 0 80px;
   }
   &:nth-child(2) {
-    margin: 35px 40px 0;
-    // transform: translate(0px, -100%);
+    margin: 25px 40px 0;
     @include prefix(transform, translate(0px, -100%));
   }
-  &:nth-child(3) {
-    background: $color_white none repeat scroll 0 0;
-    margin-top: 55px;
-    // transform: translate(0px, -200%);
+  &:nth-child(3)
+   {
+    margin-top: 85px;
     @include prefix(transform, translate(0px, -200%));
   }
+  &:last-child{
+    background: $color_white none repeat scroll 0 0;
+   }
+
   .home-latest-news-info {
     font-weight: normal;
 

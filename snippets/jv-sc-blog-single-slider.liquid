@@ -4,9 +4,11 @@
 {% assign blogs_list_grids = settings.home_blog %}
 {% assign limit_item = settings.home_blog_number | plus: 0 %}
 
+{% assign limit_item = 9 %}
+
 {% assign blog = blogs[blogs_list_grids] %}
 
-<div class="home-latest-news">
+<div class="home-latest-news ">
   <div class="container">
    {% if blog_title != blank %}
     <h2 class="title title-home">{{ blog_title }}</h2>
@@ -14,22 +16,22 @@
   </div>
   <div class="wrap-latest-news-slider">
     <div class="container">
-      <div class="default-directnav home-directnav">
+      <div class="default-directnav home-directnav slider-directnav">
         <div class="wrap-item">
         
+         <div class="item">
+          
         {% for article in blog.articles limit:limit_item %}
-        
-           {%if forloop.index == 1 or forloop.index == 5 %}
-          <div class="item">
-          {% endif %}
 
-            <div class="item-home-latest-news">
+            <div class="item-home-latest-news {%if forloop.last%} last {%endif%}">
               <div class="row">
+                
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <div class="home-latest-news-thumb">
-                    <a href="#"> {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}</a>
+                    <a href="{{ article.url }}"> {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}</a>
                   </div>
                 </div>
+
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <div class="home-latest-news-info">
                     <h3><a href="#">{{ article.title }}</a></h3>
@@ -37,11 +39,10 @@
                       <ul class="list-inline">
                         <li>
                           <a href="#"><span class="lnr lnr-calendar-full"></span></a>
-                          <span>Dec 07 2015</span>
-                          <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'mm_dd_yy' }}</time>
+                          <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
                         </li>
                         <li>
-                          <a href="#"><span class="lnr lnr-bubble"></span></a>
+                          <a href="{{ article.url }}#comments"><span class="lnr lnr-bubble"></span></a>
                           <span>{{ article.comments_count }} Comment</span>
                         </li>
                         <li>
@@ -54,20 +55,30 @@
                         </li>
                       </ul>
                     </div>
-                    <p class="desc">{{ article.excerpt | truncate: 90 }}</p>
+                    {% if article.excerpt != blank %}
+                    <p class="desc">{{ article.excerpt | truncate: 90 | remove: '<span>' | remove: '</span>' | remove: '<p>' | remove: '</p>'}}</p>
+                    {% endif %}
                     <a href="{{ article.url }}" class="btn-link-default">{{'blogs.article.read_more' | t}}</a>
                   </div>
                 </div>
               </div>
             </div>
-
-           {% if forloop.index == 4 or forloop.index == 8 %}
-          </div>
-          {% endif %}
+          
+            {%assign test =  forloop.index | modulo:3 %}
+            {% if test == 0 %}
+              </div>
+              {%if forloop.last == false %}
+              <!-- open new item -->
+                <div class="item">
+              {% endif %}
+            {% endif %}
 
           {% endfor %}
-          <!-- End Item -->
+          
+        </div><!-- End Item -->
+
         </div>
+        <!-- wrap-item -->
       </div>
     </div>
   </div>
