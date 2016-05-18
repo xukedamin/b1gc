@@ -1,0 +1,21 @@
+<ul class="blog-related">
+	{% for article in blog.articles limit:6 %}
+	
+		<li class="blog-related-item">
+			{% if article.image %}
+				{% assign image_alt = article.title | escape %}
+				<div class="widget-recent-post-thumb">
+					<a href="{{article.url}}" class="widget-recent-post-link">	{{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' }}</a>
+				</div>
+			{% endif %}
+
+			<div class="content widget-recent-post-info">
+				<h3 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+				<time class="post-date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+					<em class="text-light">{{ article.published_at | date: format: 'month_day_year' }}</em>
+				</time>
+			</div>
+
+		</li>
+	{% endfor %}
+</ul>

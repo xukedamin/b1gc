@@ -1,9 +1,9 @@
 
 
   {% if paginate.previous %}
-    <a class="item-paginate" href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}"><i class="icon-left-open-big"></i></a>
+    <a class="item-paginate" href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}"><i class="lnr-chevron-left"></i></a>
   {% else %}
-   <span  class="item-paginate disabled"><i class="icon-left-open-big"></i></span>
+   <span  class="item-paginate disabled"><i class="lnr-chevron-left"></i></span>
   {% endif %}
 
   {% for part in paginate.parts %}
@@ -21,9 +21,9 @@
   {% endfor %}
 
   {% if paginate.next %}
-    <a class="item-paginate" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><i class="icon-right-open-big"></i></a>
+    <a class="item-paginate" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><i class="lnr-chevron-right"></i></a>
   {% else %}
-    <span class="item-paginate disabled"><i class="icon-right-open-big"></i></span>
+    <span class="item-paginate disabled"><i class="lnr-chevron-right"></i></span>
   {% endif %}
 
 

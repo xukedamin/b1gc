@@ -1,0 +1,8 @@
+{% if article.tags.size > 0 %}
+<div class="tag">
+    <label class="tag-title">{{ 'blogs.article.tags' | t }}:</label>
+    {% for tag in article.tags %}
+      <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }} </a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+ </div>
+{% endif %}

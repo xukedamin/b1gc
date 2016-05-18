@@ -30,7 +30,10 @@
               </div>
               <div class="item-popular-info">
                 <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-                <p> {{ article.excerpt | truncate: 90 }}</p>
+                {% if article.content != blank %}
+                <p> {{ article.content| strip_html | truncate: 90 }}</p>
+                {% endif %}
+                
                 <div class="popular-post-date">
                   <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
@@ -51,10 +54,6 @@
       </div>
       <!-- end wrap-item -->
     </div>
-
-
-
-
   </div>
 </div>
 <!-- End Popular Post -->

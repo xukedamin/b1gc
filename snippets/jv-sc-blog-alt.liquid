@@ -48,7 +48,7 @@
           <div class="col-md-6 col-sm-6 col-xs-12" >
             <div class="latest-post-content">
               <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-              <p>{{ article.excerpt | truncate: 200 }}</p>
+              <p>{{ article.content| strip_html  | truncate: 200 }}</p>
               <div class="latest-post-info">
                 <ul class="list-inline">
                   <li>

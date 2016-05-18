@@ -55,8 +55,8 @@
                         </li>
                       </ul>
                     </div>
-                    {% if article.excerpt != blank %}
-                    <p class="desc">{{ article.excerpt | truncate: 90 | remove: '<span>' | remove: '</span>' | remove: '<p>' | remove: '</p>'}}</p>
+                    {% if article.content != blank %}
+                    <p class="desc">{{ article.content | strip_html | truncate: 90 }}</p>
                     {% endif %}
                     <a href="{{ article.url }}" class="btn-link-default">{{'blogs.article.read_more' | t}}</a>
                   </div>

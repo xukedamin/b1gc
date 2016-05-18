@@ -31,14 +31,23 @@
 
                   <div class="popular-box">
                     <div class="popular-box-thumb">
-                      <a href="{{article.url}}">
-                         {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-                      </a>
+
+                      {% if article.image %}
+                        {% assign image_alt = article.title | escape %}
+                        <a href="{{article.url}}">
+                           {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+                        </a>
+                      {% else  %}
+                       <a href="{{article.url}}">
+                        {{ 'sca-qv-no-image.jpg' | asset_url }}
+                       </a>
+                      {% endif %}
+
                     </div>
                     <div class="popular-box-text">
                       <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
-                      {% if article.excerpt != blank %}
-                      <div class="desc-popular-box">{{ article.excerpt | truncate: 40 | remove: '<span>' | remove: '</span>' | remove: '<p>' | remove: '</p>'}}</div>
+                      {% if article.content != blank %}
+                      <div class="desc-popular-box">{{ article.content | strip_html  | truncate: 40 }}</div>
                       {% endif %}
                     </div>
                   </div>

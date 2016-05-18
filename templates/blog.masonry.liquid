@@ -26,11 +26,9 @@
   <section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
     <div class="container">
 
-
       {% paginate blog.articles by 6 %}
       <div class="row">
         <div class="col-md-9 col-md-offset-3  ">
-
           <div class="row masonry-container">
 
             {% for article in blog.articles %}

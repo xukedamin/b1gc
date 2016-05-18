@@ -1,30 +1,37 @@
-{% comment %} ----- Blog Search ----- {% endcomment %}
-{% if settings.blog_search %}
-<div class="widget-wrapper widget-search">
-  <h3 class="widget-title ">
-    <span>{{ 'blogs.sidebar.search' | t }}</span>
-  </h3>  
-  <form action="/search" method="get" class="search-box">
-    <input type="hidden" name="type" value="article" />
-    <input type="search" name="q" accesskey="4" autocomplete="off" placeholder="{{ 'blogs.sidebar.searcharticle' | t }}" />
-    <button type="submit"><i class="icon-search"></i></button>
+{% comment %} -----BLog  Sidebar textwidget ----- {% endcomment %}
+{% if settings.textwidget2_visible %}
+  <div class="widget widget-post-adv">
 
-  </form>
-</div>
+    {% if settings.textwidget2_heading != blank %}
+    <h3 class="widget-title ">
+      <span>{{ settings.textwidget2_heading }}</span>
+    </h3>
+    {% endif %}
+
+    {% if settings.textwidget2_image %}
+    <p><a href="{{ settings.textwidget2_link }}"><img src="{{'textwidget2_image.jpg' | asset_url}}" alt="{{settings.textwidget2_heading}}" /></a></p>
+    {% endif %}
+
+    {% if settings.textwidget2_content %}
+    <div class="widget-post-adv-text">
+      {{ settings.textwidget2_content }}
+    </div>
+    {% endif %}
+
+  </div>
 {% endif %}
 
 
 {% comment %} ----- Blog Categories ----- {% endcomment %}
 {% if blog.all_tags.size > 0 and settings.blog_categories %}
 
-<div class="widget-wrapper widget-blog-categories">
+<div class="widget widget-post-list widget-blog-categories ">
 
-  <h3 class="widget-title ">
+  <h3 class="widget-title title-sidebar-blog">
     <span>{{ 'blogs.sidebar.categories' | t }}</span>
   </h3>
 
-
-  <ul class="blog-categories">
+  <ul class="blog-categories list-unstyled">
     {% for tag in blog.all_tags %}
     {% if current_tags contains tag %}
     <li>{{ tag }}</li>
@@ -40,60 +47,26 @@
 
 {% comment %} ----- BLog Recent Articles ----- {% endcomment %}  
 {% if settings.blog_recent %}
-<div class="widget-wrapper">
+  <div class="widget widget-recent-post">
+    <h3 class="widget-title title-sidebar-blog">
+      <span>{{ 'blogs.sidebar.recent_articles' | t }}</span>
+    </h3>
+    {%include 'jv-sc-blog-mini' %}
 
-  <h3 class="widget-title ">
-    <span>{{ 'blogs.sidebar.recent_articles' | t }}</span>
-  </h3>
-
-
-
-  <div class="blog-related">  
-
-    {% for article in blog.articles limit:6 %}
-    <div class="blog-related-item">
-      {% if article.image %}
-      {% assign image_alt = article.title | escape %}
-      <div class="image">
-        {{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-      </div>
-      {% endif %}  
-      <div class="content">
-        <p class="title">
-          <a href="{{ article.url }}">{{ article.title }}</a>
-        </p>
-
-
-        <span>    <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
-          <em class="text-light">{{ article.published_at | date: format: 'month_day_year' }}</em>
-          </time></span>
-      </div>  
-    </div>
-    {% endfor %}
-  </div> 
-
-</div>
+  </div>
 {% endif %}
 
-{% comment %} -----BLog  Sidebar textwidget ----- {% endcomment %}
-{% if settings.textwidget2_visible %}
-<div class="widget-wrapper">
 
-  {% if settings.textwidget2_heading != blank %}
-  <h3 class="widget-title ">
-    <span>{{ settings.textwidget2_heading }}</span>
-  </h3>
-  {% endif %}
+{% comment %} ----- Tags ----- {% endcomment %}  
 
-
-  {% if settings.textwidget2_image %}
-  <p><a href="{{ settings.textwidget2_link }}"><img src="{{'textwidget2_image.jpg' | asset_url}}" alt="{{settings.textwidget2_heading}}" /></a></p>
-  {% endif %}
-
-  {% if settings.textwidget2_content %}
-  {{ settings.textwidget2_content }}
-  {% endif %}
-
+<div class="widget widget-post-tag">
+<h2 class="title-sidebar-blog">Tags</h2>
+  <div class="tagcloud">
+  {% for tag in blog.all_tags %}
+      {{ tag | link_to_tag: tag }}
+  {% endfor %}
+  </div>
+  
 </div>
-{% endif %}
+
 
