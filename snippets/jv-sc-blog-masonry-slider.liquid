@@ -17,64 +17,7 @@
       <span class="desc-title">{{ blog_text }}</span>
       {% endif %}
     </div>
-    <div class="paginav-slider">
-      <div class="wrap-item">
 
-         {% assign offset = 0 %}
-         {% assign item_per_slide = 6 %}
-
-          <div class="item masonry-container">
-
-
-           {% for i in (1..item_per_slide) %}
-           {%if offset < blog.articles_count and  offset < limit_item %}
-              {% assign j = 1 %}
-              
-              {% for article in blog.articles limit:item_per_slide offset:offset %}
-
-                  {% assign class_col = 'col-md-3' %}
-                  {% if j == 3 or j == 4  %}
-                    {% assign class_col = 'col-md-6' %}
-                  {% endif %}
-              
-                  <div class="itemMasonry {{class_col}}">
-
-                    <div class="popular-box">
-                      <div class="popular-box-thumb">
-                        <a href="{{article.url}}">
-                           {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-                        </a>
-                      </div>
-                      <div class="popular-box-text">
-                        <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
-                        {% if article.excerpt != blank %}
-                        <div class="desc-popular-box">{{ article.excerpt | truncate: 40 | remove: '<span>' | remove: '</span>' | remove: '<p>' | remove: '</p>'}}</div>
-                        {% endif %}
-                      </div>
-                    </div>
-                      
-
-                {% assign j = j | plus:1 %}
-              </div>
-            <!-- end itemMasonry -->
-
-               {% endfor %}
-             {% endif %}
-             
-              {% assign offset = offset | plus:item_per_slide %}
-              {% endfor %}
-       
-          </div>
-          <!-- item masonry-container -->
-          
-
-      </div> 
-      <!-- wrap-item -->
-      
-    </div>
-
-
-    <!-- TEST -->
     <div class="paginav-slider">
       <div class="wrap-item">
 
@@ -83,13 +26,8 @@
           <div class="item masonry-container">
 
               {% for article in blog.articles limit:limit_item %}
-                {% assign j = 1 %}
-                {% assign class_col = 'col-md-3' %}
-                {% if forloop.index == 3 or forloop.index == 4 or forloop.index == 9 or forloop.index == 10  %}
-                  {% assign class_col = 'col-md-6' %}
-                {% endif %}
             
-                <div class="itemMasonry {{class_col}} {%if forloop.last%} last {%endif%}">
+                <div class="itemMasonry col-md-3 {%if forloop.last%} last {%endif%}">
 
                   <div class="popular-box">
                     <div class="popular-box-thumb">
@@ -105,35 +43,34 @@
                     </div>
                   </div>
 
-                  {% assign j = j | plus:1 %}
                 </div>
-            <!-- end itemMasonry -->
+                <!-- end itemMasonry -->
 
-               {%assign test =  forloop.index | modulo:6 %}
+              {%assign test =  forloop.index | modulo:item_per_slide %}
               {% if test == 0 %}
-                </div>
+                {{'</div>'}}
                 {%if forloop.last == false %}
                 <!-- open new item -->
-                  <div class="item masonry-container">
+                  {{'<div class="item masonry-container">'}}
                 {% endif %}
               {% endif %}
-
 
               {% endfor %}
        
           </div>
           <!-- item masonry-container -->
-          
-
       </div> 
       <!-- wrap-item -->
-      
     </div>
-
-
   </div>
 </div>
 <!-- End Popular Post -->
+<style type="text/css">
+  .popular-post-masonry .itemMasonry:nth-child(3),
+  .popular-post-masonry .itemMasonry:nth-child(4) {
+    width: 50%;
+  }
+</style>
 
 
 <script language="javascript">
