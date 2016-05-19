@@ -726,6 +726,10 @@
       }
     }
   }
+
+  .home-latest-news-thumb img {
+    max-height: 327px;
+  }
 }
 
 .item-home-latest-news.active {
@@ -742,7 +746,6 @@
   top: 0;
   width: 100%;
   z-index: 99999;
-  // transform: translate(0px, 0px);
    @include prefix(transform, translate(0px, 0px));
 
   .home-latest-news-thumb img {

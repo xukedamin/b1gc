@@ -1,6 +1,9 @@
 <main class="wrapper main-content " role="main">
  
 
+ {%include 'jv-sc-product-slider-single' %}
+
+
   {% comment %} ----- Featured Collections Tabs ----- {% endcomment %}
 
   {% if settings.home1_featured_collection_tabs_enable %}
@@ -14,18 +17,26 @@
       </div>
     </div>
   </div>
-  {% endif %}       
+  {% endif %}
+
+  <div class="container"> {% include 'jv-testimonials-3' %} </div>
+
+  {%include 'jv-sc-blog-single-slider'%}
+
+  <div class="container"> {% include 'jv-logopartner' %} </div>
+
+  
 
   <div class="container">{%include 'jv-sc-product-tabs-grid' %}  </div>
   
-  {%include 'jv-sc-product-slider-single' %}
+ 
   {%include 'jv-sc-product-slider-grid' %}
   {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'1',product_paginav:true, product_loadmore:false, product_desc_enable: false %}
   {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true %}
   {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
 
-  <div class="container"> {% include 'jv-testimonials-3' %} </div>
-  <div class="container"> {% include 'jv-logopartner' %} </div>
+
+  
 
   {%include 'jv-banner-product-adv'%}
   {%include 'jv-banner-catalog'%}
@@ -51,7 +62,7 @@
     {% comment %} ----- Home Blog ----- {% endcomment %}
     {% if settings.home_blog_enable %}   
      <div class="container"> {%include 'jv-sc-blog-masonry-slider'%} </div>
-      {%include 'jv-sc-blog-single-slider'%}
+     
       {%include 'jv-sc-blog-alt'%}
       {%include 'jv-sc-blog-grid-slider'%}
     {% endif %}     

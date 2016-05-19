@@ -25,21 +25,16 @@
 {% comment %} ----- Blog Categories ----- {% endcomment %}
 {% if blog.all_tags.size > 0 and settings.blog_categories %}
 
+
+<!-- blog-menu -->
+
 <div class="widget widget-post-list widget-blog-categories ">
 
   <h3 class="widget-title title-sidebar-blog">
     <span>{{ 'blogs.sidebar.categories' | t }}</span>
   </h3>
 
-  <ul class="blog-categories list-unstyled">
-    {% for tag in blog.all_tags %}
-    {% if current_tags contains tag %}
-    <li>{{ tag }}</li>
-    {% else %}
-    <li>{{ tag | link_to_tag: tag }}</li>
-    {% endif %}
-    {% endfor %}
-  </ul>
+  {% include 'nav-simple' class: 'blog-categories list-unstyled', handle: 'blog-menu', linklist_show_title: false %}
 
 </div>
 {% endif %}

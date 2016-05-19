@@ -1,8 +1,4 @@
-// _bigc-blog.scss
 
-
-
-// .popular-box
 .popular-box {
   margin: 0 -10px 10px;
   position: relative;
@@ -56,16 +52,17 @@
     padding: 16px 20px;
   }
 }
+
+
 .desc-popular-box {
   font-size: 13px;
   margin: 0;
 
-  // span {
-    background: #f9f9f9 none repeat scroll 0 0;
-    display: inline-block;
-    padding: 8px 20px;
-  // }
+  background: #f9f9f9 none repeat scroll 0 0;
+  display: inline-block;
+  padding: 8px 20px;
 }
+
 
 /*******************************************************************
               Page Blog
@@ -89,7 +86,7 @@
   width: 100%;
 }
 
-//masonry
+//--------------masonry
 
 .masonry-container {
   .post-thumbnail{
@@ -139,8 +136,6 @@
   margin-bottom: 50px;
   margin-left: 15px;
 }
-
-
 
 .content-single {
   border-top: 1px solid $color_mercury;
@@ -210,6 +205,7 @@
 .single-post-thumb.img-responsive {
   margin-bottom: 50px;
 }
+
 .post-gallery {
   margin: 25px auto auto;
   max-width: 940px;
@@ -218,6 +214,7 @@
     padding: 0 10px;
   }
 }
+
 .item-post-gallery {
   margin-bottom: 25px;
 
@@ -241,8 +238,8 @@
       left: 50%;
       top: 50%;
       opacity: 0;
-      @extend %jv-transition-easeout;
       z-index: 9;
+      @extend %jv-transition-easeout;
     }
     &:hover:before {
       height: 100%;
@@ -685,7 +682,7 @@
 
 
 .item-latest-post.item-left {
-  background-image: url('{{ "index2_bg-box2.jpg" | asset_url }}');
+  // background-image: url('{{ "index2_bg-box2.jpg" | asset_url }}');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -700,7 +697,7 @@
 }
 
 .item-latest-post.item-right {
-  background-image: url('{{ "index2_bg-box3.jpg" | asset_url }}');
+  // background-image: url('{{ "index2_bg-box3.jpg" | asset_url }}');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto 100%;

@@ -28,7 +28,7 @@
                 
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <div class="home-latest-news-thumb">
-                    <a href="{{ article.url }}"> {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}</a>
+                    {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
                   </div>
                 </div>
 

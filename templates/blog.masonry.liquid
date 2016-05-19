@@ -27,7 +27,7 @@
 <section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
 <div class="container">
 
-  {% paginate blog.articles by 12 %}
+  {% paginate blog.articles by 8 %}
 
   <div class="row">
     <div class="col-md-9 col-md-offset-3 content-blog-page">
@@ -50,7 +50,7 @@
                 {% endif %}
                 <div class="popular-box-text">
                   <div class="desc-popular-box date"><time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></div>
-                  <h2 class="title-popular-box"><a href="#"><span>{{ article.title }}</span></a></h2>
+                  <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
                   <p class="desc-popular-box"><span>{{ article.content | strip_html | truncatewords: 6 }}</span></p>
 
                   </div>
@@ -155,7 +155,7 @@
       });
 
       </script>
-      <aside class="sidebar col-md-3 col-md-jvoffset-12">
+      <aside class="sidebar-blog col-md-3 col-md-jvoffset-12">
         {% include 'blog-sidebar' %}
       </aside>
     </div>
