@@ -1,6 +1,6 @@
 <main class="main-content">
 {% if page.metafields.jvpage.breadcrumb != 'hide'  %}
-  {% include 'breadcrumb' %}
+  <div class="container"> {% include 'breadcrumb' %} </div>
 {% endif %}
   <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
 
@@ -12,7 +12,7 @@
 
       <div class="row">
         <div class="col-md-9 col-md-offset-3">
-          <div class="post-detail-01 style-02">
+          <div class="post-detail">
             
             {% if article.excerpt.size > 0 %}
               <div class="video-container post-thumbnail col-md-7 col-sm-6 col-xs-12 pull-right">
@@ -25,19 +25,19 @@
                 </div>
             {% endif %}
 
-            <h2 class="post-tile">{{ article.title }}</h2>
+            <h2 class="post-title">{{ article.title }}</h2>
             <div class="post-info">
               <label> {{ 'blogs.article.postedby' | t }}</label> <a href="#" class="post-author"> {{ article.author }} </a> 
               <time class="post-date" pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
-            </div>
+            
 
             {% if settings.social_sharing_blog %}
               <div class="share-social">
-                <p>{{ 'blogs.article.share' | t }}</p>
+                <label>{{ 'blogs.article.share' | t }}</label>
                 {% include 'social-sharing-ul' %}
               </div>
             {% endif %}
-
+            </div>
 
             <div class="content">
               {{ article.content }}
@@ -64,8 +64,10 @@
             {% endif %}
 
             {% if blog.comments_enabled? %}
+            <div class="post-comment">
               <h4 class="post-title"><a href="#write-comment">{{ 'blogs.comments.comments_with_count' | t: count: number_of_comments }}</a></h4>
               {%include 'article--comments'%} 
+            </div>
             {% endif %}
           </div>
         </div>

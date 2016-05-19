@@ -1,10 +1,8 @@
-<div class="post-comments-style style-02">
-
-
-<div class="comment content"> 
-  <p class="name">{{ comment.author }}</p><time datetime="{{ comment.created_at | date: '%Y-%m-%d' }}">{{ comment.created_at | date: format: 'month_day_year' }}</time>
- {{ comment.content }}
-  
+<div class="post-comments-style comment-info">
+	<div class="comment content"> 
+	  <h3 class="comment-author">{{ comment.author }}</h3>
+	  <p class="comment-time"><time  datetime="{{ comment.created_at | date: '%Y-%m-%d' }}">{{ comment.created_at | date: format: 'month_day_year' }}</time> </p>
+	 	<p class="comment-text">{{ comment.content }} </p>
+	 	<a href="#write-comment" class="comment-reply">Reply</a>
+	</div>
 </div>
-  
-  </div>

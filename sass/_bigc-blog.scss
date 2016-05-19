@@ -121,6 +121,8 @@
   color: $color_dove-gray;
   margin: 0 0 25px;
 }
+
+
 .post-info {
   
   color: $color_dusty-gray;
@@ -129,6 +131,10 @@
   label {
     font-weight: 400;
   }
+  .social-sharing-ul{
+    display: inline-block;
+  }
+
   .share-social {
     margin-bottom: 20px;
     margin-top: 0;
@@ -140,7 +146,7 @@
     }
     a {
       color: $color_dusty-gray;
-      margin-right: 20px;
+      margin-right: 10px;
       line-height: 24px;
 
       &:hover {
@@ -250,12 +256,12 @@
   border-bottom: 1px solid $color_mercury;
   padding: 25px 0 8px;
 
-  .prev-post, .next-post {
+  a {
     color: $color_dusty-gray;
     display: inline-block;
     margin-bottom: 15px;
   }
-  .prev-post:hover, .next-post:hover {
+  a:hover {
     color: $color_mine-shaft;
   }
 }
@@ -313,31 +319,36 @@
 .comment-form {
   margin-top: 40px;
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="email"] {
     border: 1px solid $color_mercury;
     color: $color_dusty-gray;
     height: 50px;
     padding: 0 15px;
     width: 100%;
+    margin-bottom: 30px;
   }
   textarea {
     border: 1px solid $color_mercury;
     color: $color_dusty-gray;
     padding: 15px;
     width: 100%;
-  }
-  p {
     margin-bottom: 30px;
   }
-  > p {
-    margin-bottom: 0;
-  }
+
 }
 .post-comment .comment-form ol {
   margin-top: 50px;
 }
 .post-comment ol {
   margin-top: 45px;
+}
+
+.form-error{
+  ul{
+    padding-left: 20px;
+    color: $color_amaranth;
+  }
 }
 
 /*******************************************************************
@@ -369,7 +380,7 @@
     position: relative;
 
     &:before {
-      content: "";
+      content: "\e87a";
       @extend %jv-font-Linearicons;
       left: 0;
       position: absolute;
@@ -415,8 +426,7 @@
     width: 100%;
   }
 }
-
-.video-container iframe{ 
+.item-blog-list .video-container iframe{ 
   height: 183px;
 }
 
