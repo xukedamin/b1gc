@@ -1,5 +1,9 @@
 <main class="main-content">
 
+ {% if page.metafields.jvpage.breadcrumb != 'hide'  %}  
+  <div class="container"> {% include 'breadcrumb' %} </div>
+  {% endif %}  
+
 {% if page.metafields.jvpage.titlePage != 'hide'  %}
   <div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25"

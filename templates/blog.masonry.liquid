@@ -1,88 +1,165 @@
 <main class="main-content">
 
-  {% if page.metafields.jvpage.titlePage != 'hide'  %}  
+  {% if page.metafields.jvpage.breadcrumb != 'hide'  %}  
+  <div class="container"> {% include 'breadcrumb' %} </div>
+  {% endif %}  
+
+{% if page.metafields.jvpage.titlePage != 'hide'  %}
   <div class="common-static-header">
-    <div class="parallax-bg" data-stellar-background-ratio="0.25" 
-         {% if page.metafields.jvpage.titleBackground != blank %}         
-         style="background-image:url({{ page.metafields.jvpage.titleBackground }})"         
-         {% endif %}          
-         ></div>
+    <div class="parallax-bg" data-stellar-background-ratio="0.25"
+      {% if page.metafields.jvpage.titleBackground != blank %}
+        style="background-image:url({{ page.metafields.jvpage.titleBackground }})"
+      {% endif %}
+    ></div>
     <div class="container">
       <h1 >
-        <span>
-          {% if current_tags %}
+      <span>
+        {% if current_tags %}
           {{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}
-          {% else %}
+        {% else %}
           {{ blog.title }}
-          {% endif %}
-        </span>
-      </h1>      
-
-
-    </div>  
+        {% endif %}
+      </span>
+      </h1>
+    </div>
   </div>
-  {% endif %}    
+{% endif %}
+<section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+<div class="container">
 
-  <section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
-    <div class="container">
+  {% paginate blog.articles by 12 %}
 
-      {% paginate blog.articles by 6 %}
-      <div class="row">
-        <div class="col-md-9 col-md-offset-3  ">
-          <div class="row masonry-container">
-
-            {% for article in blog.articles %}
-
-            <div class="col-md-6">
-              <article class="masonry-post-index masonry-post-index-style-1 standard">
-                <header class="entry-header">
-                  {% if article.excerpt.size > 0 %}
-                  <div class="video-container">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-3 content-blog-page">
+      <div class="row masonry-container">
+        {% for article in blog.articles %}
+          <div class="col-md-6 itemMasonry">
+            <article class="popular-box">
+              
+                {% if article.excerpt.size > 0 %}
+                  <div class="video-container popular-box-thumb">
                     {{ article.excerpt }}
                   </div>
-                  {% else %}
+                {% else %}
                   {% if article.image %}
-                  {% assign image_alt = article.title | escape %}
-                  <div class="post-thumbnail">
-                    {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-                  </div>
-                  {% endif %}    
-                  {% endif %}                        
-                  <h4 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h4>
-                </header>
-                <div class="entry-content">{{ article.content | strip_html | truncatewords: 30 }}</div>
-                <footer class="entry-footer">
-                  <div class="date font-serif color-main pull-left"><time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></div>
+                    {% assign image_alt = article.title | escape %}
+                    <div class="post-thumbnail popular-box-thumb">
+                      {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+                <div class="popular-box-text">
+                  <div class="desc-popular-box date"><time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></div>
+                  <h2 class="title-popular-box"><a href="#"><span>{{ article.title }}</span></a></h2>
+                  <p class="desc-popular-box"><span>{{ article.content | strip_html | truncatewords: 6 }}</span></p>
 
-                  <div class="share pull-right">              {% if settings.social_sharing_blog %}
-                    {% include 'social-sharing-ul' %}
-                    {% endif %}</div>
-                </footer>
+                  </div>
+                  <div class="share pull-right">
+                      {% if settings.social_sharing_blog %}
+                        {% include 'social-sharing-ul' %}
+                      {% endif %}
+                  </div>
               </article>
             </div>
 
-            {% endfor %}
-          </div>
-          {% if paginate.pages > 1 %}
+          {% endfor %}
+        </div>
+        
+        <div id="product-list-foot"></div>
+
+        {% if paginate.pages > 1 %}
+        <div class="post-pagi-nav">
           <div class="pagination">
             {% include 'pagination-custom' %}
           </div>
-          {% endif %}
-
         </div>
+        {% endif %}
 
-        <aside class=" sidebar   col-md-3  col-md-jvoffset-12">
-          {% include 'blog-sidebar' %}
-        </aside>
+
+        {% if paginate.current_page < paginate.pages %}
+        <div class="news-load-more">
+          <a class="addmore btn-link-default" href="{{ paginate.next.url }}">Load More</a>
+        </div>
+        {% endif %}
+
       </div>
+      <script language="javascript">
+      
+      jQuery(function($){
+      //Work 1
+      // var $container = $('.masonry-container').imagesLoaded(function(){
+      //     $container.masonry({      
+      //       itemSelector: '.itemMasonry'
+      //     });
+      //   });
 
-      {% endpaginate %}
+        var grid = document.querySelector('.masonry-container');
+          var msnry = new Masonry( grid, {
+            itemSelector: '.itemMasonry'
+          });
 
-    </div>  
-  </section>
+          grid.addEventListener( 'click', function( event ) {
+            if ( !matchesSelector( event.target, '.popular-box' )  ) {
+              return;
+            }
+            var itemElem = event.target.parentNode;
+            itemElem.classList.toggle('is-expanded');
 
-</main>  
+            msnry.layout();
+          });
 
+          //load more
+          var pInfScrLoading = false;
+          var pInfScrDelay = 250;
+          attachClickEvent();
 
+          function pInfScrExecute() {
+            pInfScrNode = $('.addmore').last();  
+            pInfScrURL = $('.addmore').last().attr("href");
+            if(pInfScrNode.length > 0 && pInfScrNode.css('display') != 'none') {
+              $.ajax({
+                type: 'GET',
+                url: pInfScrURL,
+                beforeSend: function() {
+                  pInfScrLoading = true;
+                  pInfScrNode.clone().empty().insertAfter(pInfScrNode).append('<img src=\"http://cdn.shopify.com/s/files/1/0068/2162/assets/loading.gif?105791\" />');
+                  pInfScrNode.hide();
+                },
+                success: function(data) {
+                  // remove loading feedback
 
+                  pInfScrNode.next().remove();
+                  pInfScrNode.remove();
+                  var filteredData = $(data).find(".masonry-container");
 
+                  console.log($(data));
+
+                  filteredData.insertBefore( $("#product-list-foot") );         
+                  pInfScrLoading = false;
+                  attachClickEvent();
+                },
+                dataType: "html"
+              });
+
+            }
+          }
+
+          function attachClickEvent(){
+            $('.addmore').click(function(event){
+              pInfScrExecute();
+              event.stopPropagation();
+              return false;
+            });
+          }
+
+      });
+
+      </script>
+      <aside class="sidebar col-md-3 col-md-jvoffset-12">
+        {% include 'blog-sidebar' %}
+      </aside>
+    </div>
+  {% endpaginate %}
+</div>
+</section>
+</main>

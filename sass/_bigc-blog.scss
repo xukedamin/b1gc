@@ -89,6 +89,47 @@
   width: 100%;
 }
 
+//masonry
+
+.masonry-container {
+  .post-thumbnail{
+    margin: 0;
+  }
+  .post-format-gallery{
+    margin-bottom: 0;
+  }
+
+  .share{
+    opacity: 0;
+    @extend %jv-transition-easeout;
+
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+  .desc-popular-box.date{
+    background-color: rgba($color_dove-gray,0.6);
+    color : $color_primary;
+  }
+
+  .itemMasonry:hover{
+    .share{
+      opacity: 1;
+      .share-social a{
+        color: $color_white;
+      }
+    }
+  }
+
+  .itemMasonry.is-expanded{
+    width: 100%;
+  }
+
+
+}
+
 /*******************************************************************
               Single 
 ********************************************************************/
@@ -98,6 +139,8 @@
   margin-bottom: 50px;
   margin-left: 15px;
 }
+
+
 
 .content-single {
   border-top: 1px solid $color_mercury;
