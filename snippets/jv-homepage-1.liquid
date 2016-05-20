@@ -24,15 +24,15 @@
   {% comment %} ----- pos--content-2 ----- {% endcomment %}
   <section id="pos--content-2" class="mt-70">
 
-    <div class="container"> 
-      {% include 'jv-sc-heading-box' with heading_enable: settings.home1_pos_content_2_title ,heading_style: settings.home1_pos_content_2_style ,heading_title: settings.home1_pos_content_2_title , heading_subtitle: settings.home1_pos_content_2_stitle  %} 
-    </div>
-
     {% capture file %}{{settings.home1_pos_content_2}}{% endcapture %}
-    {% if settings.home1_pos_content_2_fullwidth %}
-      {% include file  %}
-    {%else%}
-        <div class="container">{% include file  %}</div>
+    {% if settings.home1_pos_content_2_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+      {% include file with heading_enable: settings.home1_pos_content_2_title ,heading_style: settings.home1_pos_content_2_style ,heading_title: settings.home1_pos_content_2_title , heading_subtitle: settings.home1_pos_content_2_stitle%}
+
+     {% if settings.home1_pos_content_2_fullwidth == false %}
+    </div>
     {% endif %}
 
     {% comment %} {%include 'jv-sc-product-tabs' %}{% endcomment %}
@@ -78,15 +78,18 @@
 
   
   {% comment %} ----- pos--content-5 ----- {% endcomment %}
-  <section id="pos--content-4" class="mt-70">
- <div class="container"> 
-      {% include 'jv-sc-heading-box' with heading_enable: settings.home1_pos_content_5_title ,heading_style: settings.home1_pos_content_5_style ,heading_title: settings.home1_pos_content_5_title , heading_subtitle: settings.home1_pos_content_5_stitle  %} 
-    </div>
+  <section id="pos--content-5" class="mt-70">
+ 
       {% capture file %}{{settings.home1_pos_content_5}}{% endcapture %}
-      {% if settings.home1_pos_content_5_fullwidth %}
-        {% include file %}
-      {%else%}
-        <div class="container">{% include file  %}</div>
+
+      {% if settings.home1_pos_content_5_fullwidth == false %}
+        <div class="container">
+      {% endif %}
+      
+        {% include file with heading_enable: settings.home1_pos_content_5_title ,heading_style: settings.home1_pos_content_5_style ,heading_title: settings.home1_pos_content_5_title , heading_subtitle: settings.home1_pos_content_5_stitle %}
+      
+      {% if settings.home1_pos_content_5_fullwidth == false %}
+        </div>
       {% endif %}
 
 

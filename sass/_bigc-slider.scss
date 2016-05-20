@@ -120,8 +120,8 @@
 
 
 .partner-slider {
-  margin-bottom: 53px;
-  margin-top: 70px;
+  // margin-bottom: 53px;
+  // margin-top: 70px;
 
   .item {
     padding: 0 15px;
@@ -156,7 +156,9 @@
     @extend %jv-transition-easeout;
   }
   &:hover {
-    opacity: 1;
+    &:after{
+      opacity: 1;
+    }
 
     a {
       border: 1px solid $color_mercury;
@@ -177,9 +179,19 @@
   }
 }
 
-.home-partner-slider .partner-slider-directnav .owl-buttons {
+.partner-slider .partner-slider-directnav .owl-buttons {
   margin-right: 15px;
   margin-top: -30px;
+}
+
+.home-bestsale-product .home-directnav .owl-buttons {
+  margin-top: -125px;
+}
+.home-featured-product .home-directnav .owl-buttons {
+  margin-top: -103px;
+}
+.home-testimonial .home-directnav .owl-buttons {
+  margin-top: -26px;
 }
 .home-latest-news .home-directnav .owl-buttons {
     margin-top: -125px;

@@ -1,47 +1,44 @@
+{% comment %}
+	need to set variables for jv-sc-heading-box
+{% endcomment %}
+
 <div class="partner-slider">
-		{% assign heading_enable =  settings.logo_partner_title_enable %}
-		{% assign heading_style = settings.logo_partner_title_style %}
-		{% assign heading_title_enable =  settings.logo_partner_title_enable %}
-		{% assign heading_title =  settings.logo_partner_title %}
-		{% assign heading_subtitle_enable =  settings.logo_partner_subtitle_enable %}
-		{% assign heading_subtitle =  settings.logo_partner_subtitle %}
-		{% include 'jv-sc-heading-box' %}
-	<div class="container">
+
+	{%if settings.logo_partner_button_enable and settings.logo_partner_navigation_enable %}
+			{% assign class_slider = 'partner-slider-paginav-buttonnav' %}
+	{%elsif settings.logo_partner_button_enable %}
+			{% assign class_slider = 'partner-slider-directnav' %}
+	{% else %}
+		{% assign class_slider = 'partner-slider-paginav' %}
+	{% endif %}
 
 
+	<div class="row">
+	<!-- paginav-slider  -->
+		<div class="{{ class_slider }}">
 
+			<div class="container"> {% include 'jv-sc-heading-box' %} </div>
 
-		{%if settings.logo_partner_button_enable and settings.logo_partner_navigation_enable %}
-				{% assign class_slider = 'partner-slider-paginav-buttonnav' %}
-		{%elsif settings.logo_partner_button_enable %}
-				{% assign class_slider = 'partner-slider-directnav' %}
-		{% else %}
-			{% assign class_slider = 'partner-slider-paginav' %}
-		{% endif %}
+			<div class="wrap-item">
+			{% for i in (1..12) %}
 
-
-		<div class="row">
-			<div class="paginav-slider {{ class_slider }}">
-				<div class="wrap-item">
-			{% for i in (1..6) %}
 			{% capture logo_partner %}logo_partner_{{ i }}_enable{% endcapture %}
 			{% capture logopartner_img %}brand-slider-{{ i }}.png{% endcapture %}
 			{% capture logopartner_url %}logopartner{{ i }}_url{% endcapture %}
 
-			{% if settings[logo_partner] %}
-			
-					<div class="item">
-						<div class="partner-item">
-							<a href="{% if settings[logopartner_url] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[logopartner_url] }} {% endif %}">
-							<img src="{{ logopartner_img | asset_url }}" alt="" />
-							</a>
+				{% if settings[logo_partner] %}
+				
+						<div class="item">
+							<div class="partner-item">
+								<a href="{% if settings[logopartner_url] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[logopartner_url] }} {% endif %}">
+								<img src="{{ logopartner_img | asset_url }}" alt="" />
+								</a>
+							</div>
 						</div>
-					</div>
 
-			{% endif %}
+				{% endif %}
 			{% endfor %}
 
-				</div>
 			</div>
 		</div>
 	</div>

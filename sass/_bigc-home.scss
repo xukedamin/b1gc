@@ -567,29 +567,6 @@
 
 
 
-.home-bestsale-product {
-  margin-top: 90px;
-
-  .home-directnav .owl-buttons {
-    margin-top: -125px;
-  }
-}
-
-
-
-.partner-slider.home-partner-slider {
-    margin-bottom: 70px;
-}
-
-//home featured product 
-
-.home-featured-product {
-  
-  .home-directnav .owl-buttons {
-      margin-top: -103px;
-  }
-}
-
 
 .home-featured-slider .owl-pagination {
   display: inline-block;
@@ -650,14 +627,15 @@
 
 
 .wrap-latest-news-slider {
-    background: $color_shark none repeat scroll 0 0;
-    padding: 100px 0;
-    position: relative;
+  background: $color_shark none repeat scroll 0 0;
+  padding: 100px 0;
+  position: relative;
 }
+
 .home-latest-news .item {
-    position: relative;
-	height:505px;
-	overflow:hidden;
+  position: relative;
+  height: 505px;
+  overflow: hidden;
 }
 
 .item-home-latest-news {
