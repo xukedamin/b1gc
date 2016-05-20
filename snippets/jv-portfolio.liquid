@@ -4,31 +4,23 @@
 {% capture portfolio_link %}portfolio{{ i }}_link{% endcapture %}
 {% capture portfolio_img %}portfolio-special-2-{{ i }}.jpg{% endcapture %}
 
-
-
-
 {% if settings[portfolio_title] != blank %}
-
-
-<div class="grid-item portfolio-column col-lg-4 col-md-4 col-sm-6 col-xs-12 art photography">
+  <div class="grid-item portfolio-column col-lg-4 col-md-4 col-sm-6 col-xs-12 art photography">
   <a href="{% if settings[portfolio_link] == blank %} http://themeforest.net/user/joomlavi/portfolio {% else %} {{ settings[portfolio_link] }} {% endif %}" class="portfolio-item portfolio-text">
+  <img src="{{ portfolio_img | asset_url }}"   alt="{{ settings[portfolio_title] }}" >
 
-     <img src="{{ portfolio_img | asset_url }}"   alt="{{ settings[portfolio_title] }}" >
-
-    
-    <div class="overlay dark-overlay">
-    <div class="cell-vertical-wrapper">
-      <div class="cell-bottom">
-        <div class="overlay-content">
-          <h5 class="color-main">{{ settings[portfolio_title] }}</h5>
-          <p>{{ settings[portfolio_text] }}</p>
-        </div>
+  <div class="overlay dark-overlay">
+  <div class="cell-vertical-wrapper">
+    <div class="cell-bottom">
+      <div class="overlay-content">
+        <h5 class="color-main">{{ settings[portfolio_title] }}</h5>
+        <p>{{ settings[portfolio_text] }}</p>
       </div>
     </div>
   </div>
+  </div>
   </a>
-</div>
+  </div>
+{% endif %}
 
-
-{% endif %}   
-{% endfor %} 
+{% endfor %}

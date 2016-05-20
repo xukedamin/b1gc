@@ -110,6 +110,12 @@ $paddings: 20,25,30, 35, 40, 50, 60, 70, 80;
   .pb-#{$padding} {
       padding-bottom: #{$padding}px;
   }
+  .mt-#{$padding} {
+      margin-top: #{$padding}px;
+  }
+  .mb-#{$padding} {
+      margin-bottom: #{$padding}px;
+  }
 }
 
 /*============================================================================

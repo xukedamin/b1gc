@@ -575,34 +575,6 @@
   }
 }
 
-.home-testimonial {
-  background: $color_wild-sand none repeat scroll 0 0;
-  margin-top: 60px;
-  padding: 50px 0 100px;
-  position: relative;
-
-  &:before {
-    background: $color_shark none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 50%;
-  }
-  .title.title-home {
-    color: $color_white;
-    position: relative;
-  }
-  .home-directnav .owl-buttons {
-    margin-top: -26px;
-  }
-}
-
-
-.home-latest-news {
-    margin-top: 90px;
-}
 
 
 .partner-slider.home-partner-slider {
@@ -612,7 +584,6 @@
 //home featured product 
 
 .home-featured-product {
-    margin-top: 90px;
   
   .home-directnav .owl-buttons {
       margin-top: -103px;

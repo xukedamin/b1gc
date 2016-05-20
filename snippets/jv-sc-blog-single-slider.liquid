@@ -1,4 +1,12 @@
-{% assign blog_title = settings.home_blog_title %}
+{% comment  %} -- must setting for jv-sc-heading-box
+{% assign heading_enable =  settings.logo_partner_title_enable %}
+{% assign heading_style = settings.logo_partner_title_style %}
+{% assign heading_title =  settings.logo_partner_title %}
+{% assign heading_subtitle =  settings.logo_partner_subtitle %}
+
+{% endcomment %}
+
+
 {% assign blog_text = settings.home_blog_text %}
 
 {% assign blogs_list_grids = settings.home_blog %}
@@ -9,11 +17,11 @@
 {% assign blog = blogs[blogs_list_grids] %}
 
 <div class="home-latest-news ">
+  
   <div class="container">
-   {% if blog_title != blank %}
-    <h2 class="title title-home">{{ blog_title }}</h2>
-    {% endif %}
+    {% include 'jv-sc-heading-box' %}
   </div>
+
   <div class="wrap-latest-news-slider">
     <div class="container">
       <div class="default-directnav home-directnav slider-directnav">

@@ -1,71 +1,106 @@
 <main class="wrapper main-content " role="main">
- 
 
- {%include 'jv-sc-product-slider-single' %}
+  {% comment %} ----- pos--content-1 ----- {% endcomment %}
+  <section id="pos--content-1" class="mt-70">
 
+    {% comment %} {%include 'jv-sc-product-slider-single' %} {% endcomment %}
 
-  {% comment %} ----- Featured Collections Tabs ----- {% endcomment %}
-
-  {% if settings.home1_featured_collection_tabs_enable %}
-
-  <div class="container">
-    <div class="home-bestsale-product">
-      <h2 class="title title-home">best sellers</h2>
-
-      <div class="home-bestsale-slider">
-        {%include 'jv-sc-product-tabs' %}
-      </div>
+    <div class="container"> 
+      {% include 'jv-sc-heading-box' with heading_enable: settings.home1_pos_content_1_title ,heading_style: settings.home1_pos_content_1_style ,heading_title: settings.home1_pos_content_1_title , heading_subtitle: settings.home1_pos_content_1_stitle  %} 
     </div>
-  </div>
-  {% endif %}
 
-  <div class="container"> {% include 'jv-testimonials-3' %} </div>
 
-  {%include 'jv-sc-blog-single-slider'%}
+    {% capture file %}{{settings.home1_pos_content_1}}{% endcapture %}
 
-  <div class="container"> {% include 'jv-logopartner' %} </div>
+    {% if settings.home1_pos_content_1_fullwidth %}
+      {% include file  %}
+    {%else%}
+    <div class="container">{% include file  %}</div>
+    {% endif %}
+
+
+  </section>
+
+  {% comment %} ----- pos--content-2 ----- {% endcomment %}
+  <section id="pos--content-2" class="mt-70">
+
+    <div class="container"> 
+      {% include 'jv-sc-heading-box' with heading_enable: settings.home1_pos_content_2_title ,heading_style: settings.home1_pos_content_2_style ,heading_title: settings.home1_pos_content_2_title , heading_subtitle: settings.home1_pos_content_2_stitle  %} 
+    </div>
+
+    {% capture file %}{{settings.home1_pos_content_2}}{% endcapture %}
+    {% if settings.home1_pos_content_2_fullwidth %}
+      {% include file  %}
+    {%else%}
+        <div class="container">{% include file  %}</div>
+    {% endif %}
+
+    {% comment %} {%include 'jv-sc-product-tabs' %}{% endcomment %}
+  </section>
+
+
+
+
+  {% comment %} ----- pos--content-3 ----- {% endcomment %}
+  <section id="pos--content-3" class="mt-70">
+
+    {% capture file %}{{settings.home1_pos_content_3}}{% endcapture %}
+
+    {% if settings.home1_pos_content_3_fullwidth == false %}
+      <div class="container">
+    {% endif %}
+      {% include file with heading_enable: settings.home1_pos_content_3_title ,heading_style: settings.home1_pos_content_3_style ,heading_title: settings.home1_pos_content_3_title , heading_subtitle: settings.home1_pos_content_3_stitle %}
+    
+    {% if settings.home1_pos_content_3_fullwidth == false %}
+    </div>
+    {% endif %}
+
+    {% comment %}{% include 'jv-sc-testimonials-3' %}{% endcomment %}
+  </section>
+
 
   
+  {% comment %} ----- pos--content-4 ----- {% endcomment %}
+  <section id="pos--content-4" class="mt-70">
 
-  <div class="container">{%include 'jv-sc-product-tabs-grid' %}  </div>
+    {% capture file %}{{settings.home1_pos_content_4}}{% endcapture %}
+
+    {% if settings.home1_pos_content_4_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+      {% include file with heading_enable: settings.home1_pos_content_4_title ,heading_style: settings.home1_pos_content_4_style ,heading_title: settings.home1_pos_content_4_title , heading_subtitle: settings.home1_pos_content_4_stitle  %}
+    {% if settings.home1_pos_content_4_fullwidth == false %}
+    </div>
+    {% endif %}
+
+    {% comment %} {%include 'jv-sc-blog-single-slider' %}{% endcomment %}
+  </section>
+
   
- 
-  {%include 'jv-sc-product-slider-grid' %}
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'1',product_paginav:true, product_loadmore:false, product_desc_enable: false %}
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true %}
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
+  {% comment %} ----- pos--content-5 ----- {% endcomment %}
+  <section id="pos--content-4" class="mt-70">
+ <div class="container"> 
+      {% include 'jv-sc-heading-box' with heading_enable: settings.home1_pos_content_5_title ,heading_style: settings.home1_pos_content_5_style ,heading_title: settings.home1_pos_content_5_title , heading_subtitle: settings.home1_pos_content_5_stitle  %} 
+    </div>
+      {% capture file %}{{settings.home1_pos_content_5}}{% endcapture %}
+      {% if settings.home1_pos_content_5_fullwidth %}
+        {% include file %}
+      {%else%}
+        <div class="container">{% include file  %}</div>
+      {% endif %}
 
 
+    {% comment %} <div class="container"> {% include 'jv-sc-logopartner' %} </div>{% endcomment %}
+  </section>
   
 
-  {%include 'jv-banner-product-adv'%}
-  {%include 'jv-banner-catalog'%}
-
-
-
-    {% unless settings.home_content == blank or pages[settings.home_content].empty? or pages[settings.home_content].content == blank %}
+  {% unless settings.home_content == blank or pages[settings.home_content].empty? or pages[settings.home_content].content == blank %}
     {% assign page = pages[settings.home_content] %}
     <div class="rte">
       {{ page.content }}
     </div>
-    <hr>
-    {% endunless %}
-
-
-    {% comment %} ----- Spceial Offers ----- {% endcomment %}
-
-    {% comment %} ----- Latest Products ----- {% endcomment %}
-    
-    {% comment %} ----- Featured Products ----- {% endcomment %}
-     
-
-    {% comment %} ----- Home Blog ----- {% endcomment %}
-    {% if settings.home_blog_enable %}   
-     <div class="container"> {%include 'jv-sc-blog-masonry-slider'%} </div>
-     
-      {%include 'jv-sc-blog-alt'%}
-      {%include 'jv-sc-blog-grid-slider'%}
-    {% endif %}     
+  <hr>
+  {% endunless %}
 
 </main>     
 

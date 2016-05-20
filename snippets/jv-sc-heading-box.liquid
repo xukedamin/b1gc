@@ -10,7 +10,7 @@
 {%if heading_enable %}
 	
 	{% case heading_style %}
-		{% when 'border' %}
+	{% when 'border' %}
 			{% assign class_title_box = 'box-intro-border' %}
     {% when 'hr_left' %}
     	{% assign class_title_box = 'box-intro left' %}
@@ -18,8 +18,10 @@
     	{% assign class_title_box = 'box-intro' %}
     {% when 'background_center' %}
     	{% assign class_title_box = 'box-intro-background' %}
-    {% else %}
+    {% when 'center' %}
    	 	{% assign class_title_box = 'text-center' %} 
+    {% else %}
+   	 	{% assign class_title_box = 'text-left' %} 
   {% endcase %}
 
 

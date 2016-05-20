@@ -353,3 +353,36 @@ span.click-button {
     width: 24px;
   }
 }
+
+
+//home 1
+.home-testimonial {
+  background: $color_wild-sand none repeat scroll 0 0;
+  margin-top: 60px;
+  padding: 50px 0 100px;
+  position: relative;
+
+  &:before {
+    background: $color_shark none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+  }
+  .title.title-home {
+    color: $color_white;
+    position: relative;
+  }
+  .home-directnav .owl-buttons {
+    margin-top: -26px;
+  }
+}
+
+.testimonial.two-sides{
+  .jv-heading{ 
+    position: relative;
+    color: $color_white;
+  }
+}
