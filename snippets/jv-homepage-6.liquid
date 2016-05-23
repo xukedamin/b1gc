@@ -1,4 +1,105 @@
+<main>
 {% if settings.slider_home_enable %}
 	{% capture slider %}slider-{{settings.home6_slider_style}}{% endcapture %}
 	{% include slider  %}
 {% endif %}
+
+
+  {% comment %} ----- 'jv-sc-product-tabs-grid' %} khac title ----- {% endcomment %}
+
+  {% if settings.home6_pos_content_1_enable %}
+  <section id="pos--content-1" class="pt-70">
+
+    {% if settings.home6_pos_content_1_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+    {% capture file %}{{settings.home6_pos_content_1 }}{% endcapture %}
+    {% include file  with heading_enable: settings.home6_pos_content_1_title ,heading_style: settings.home6_pos_content_1_title_style ,heading_title: settings.home6_pos_content_1_title , heading_subtitle: settings.home6_pos_content_1_stitle %}
+
+    {% if settings.home6_pos_content_1_fullwidth == false %}
+     </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
+  {% if settings.home6_pos_content_2_enable %}
+  <section id="pos--content-2" class="pt-70">
+
+    {% if settings.home6_pos_content_2_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+    {% capture file %}{{settings.home6_pos_content_2 }}{% endcapture %}
+    {% include file with heading_enable: settings.home6_pos_content_2_title ,heading_style: settings.home6_pos_content_2_title_style ,heading_title: settings.home6_pos_content_2_title , heading_subtitle: settings.home6_pos_content_2_stitle %}
+
+    {% if settings.home6_pos_content_2_fullwidth == false %}
+     </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
+
+  {% comment %} -----  ----- {% endcomment %}
+  {% if settings.home6_pos_content_3_enable %}
+  <section id="pos--content-3" class="pt-70">
+    
+    {% if settings.home6_pos_content_3_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+    {% capture file %}{{settings.home6_pos_content_3 }}{% endcapture %}
+    {% include file  with heading_enable: settings.home6_pos_content_3_title ,heading_style: settings.home6_pos_content_3_title_style ,heading_title: settings.home6_pos_content_3_title , heading_subtitle: settings.home6_pos_content_3_stitle%}
+
+    {% if settings.home6_pos_content_3_fullwidth == false %}
+     </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+  
+
+  {% comment %} -----  ----- {% endcomment %}
+   {% if settings.home6_pos_content_4_enable %}
+  <section id="pos--content-4" class="pt-70">
+
+    {% if settings.home6_pos_content_4_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+    {% capture file %}{{settings.home6_pos_content_4 }}{% endcapture %}
+    {% include file  with heading_enable: settings.home6_pos_content_4_title ,heading_style: settings.home6_pos_content_4_title_style ,heading_title: settings.home6_pos_content_4_title , heading_subtitle: settings.home6_pos_content_4_stitle%}
+
+    {% if settings.home6_pos_content_4_fullwidth == false %}
+     </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
+
+
+  {% comment %} -----  ----- {% endcomment %}
+
+  {% if settings.home6_pos_content_5_enable %}
+
+  <section id="pos--content-5">
+    
+    {% if settings.home6_pos_content_5_fullwidth == false %}
+     <div class="container">
+    {% endif %}
+
+    {% capture file %}{{settings.home6_pos_content_5 }}{% endcapture %}
+    {% include file with heading_enable: settings.home6_pos_content_5_title ,heading_style: settings.home6_pos_content_5_title_style ,heading_title: settings.home6_pos_content_5_title , heading_subtitle: settings.home6_pos_content_5_stitle %}
+
+    {% if settings.home6_pos_content_5_fullwidth == false %}
+     </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
+
+</main>

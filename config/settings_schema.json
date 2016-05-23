@@ -3689,12 +3689,73 @@
         "id": "home5_pos_content_4_fullwidth",
         "label": "Fullwidth?",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home5_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home5_pos_content_5",
+        "label": "---Position 5---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
   }
   ,
 
-  {
+ {
     "name": "Home page 6",
     "settings": [
       {
@@ -3747,11 +3808,322 @@
         ],
         "default": "7",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+    {
+        "type": "header",
+        "content": "Position and Content"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_1_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_1_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home6_pos_content_1_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home6_pos_content_1",
+        "label": "---Position 1---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    
+    {
+        "type": "checkbox",
+        "id": "home6_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_2_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_2_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home6_pos_content_2_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home6_pos_content_2",
+        "label": "---Position 2---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home6_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home6_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home6_pos_content_3",
+        "label": "---Position 3---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home6_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home6_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home6_pos_content_4",
+        "label": "---Position 4---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home6_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home6_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home6_pos_content_5",
+        "label": "---Position 5---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
   },
-  {
-    "name": "Home page 7",
+
+{
+    "name": "Homepage 7",
     "settings": [
       {
         "type": "header",
@@ -3803,9 +4175,321 @@
         ],
         "default": "7",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+      },
+    {
+        "type": "header",
+        "content": "Position and Content"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_1_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_1_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home7_pos_content_1_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home7_pos_content_1",
+        "label": "---Position 1---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    
+    {
+        "type": "checkbox",
+        "id": "home7_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_2_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_2_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home7_pos_content_2_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home7_pos_content_2",
+        "label": "---Position 2---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home7_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home7_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home7_pos_content_3",
+        "label": "---Position 3---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home7_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home7_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home7_pos_content_4",
+        "label": "---Position 4---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home7_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home7_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home7_pos_content_5",
+        "label": "---Position 5---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
+    
     ]
-  },
+  }
+  ,
   {
     "name": "Product page",
     "settings": [
