@@ -1937,7 +1937,7 @@
   },
 
 
-  {
+ {
     "name": "Home page 2",
     "settings": [
       {
@@ -2007,7 +2007,7 @@
           }
         ],
         "default": "2",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Material Slideshow'  below to configure."
       },
       {
         "type": "checkbox",
@@ -2041,7 +2041,7 @@
           }
         ],
         "default": "2",
-        "info": "The Banner style  'Material Slideshow'  below."
+        "info": "The Banner style 'Material Slideshow'  below."
       },
       {
         "type": "header",
@@ -2049,30 +2049,34 @@
       },
       {
         "type": "checkbox",
-        "id": "home2_position_content_top_enable",
-        "label": "Home2 position top enable",
+        "id": "home2_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
         "default": true
       },
       {
         "type": "text",
-        "id": "home2_position_content_top_title",
+        "id": "home2_pos_content_1_title",
         "label": "Title",
         "default": "Title"
       },
       {
         "type": "text",
-        "id": "home2_position_content_top_subtitle",
+        "id": "home2_pos_content_1_stitle",
         "label": "Subtitle",
         "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home2_position_content_top_title_style",
+        "id": "home2_pos_content_1_title_style",
         "label": "Title Alignment",
         "options": [
           {
           "value": "normal",
           "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
           },
           {
           "value": "border",
@@ -2095,97 +2099,46 @@
       },
       {
         "type": "snippet",
-        "id": "home2_position_content_top",
-        "label": "Home2 position top"
+        "id": "home2_pos_content_1",
+        "label": "---Position 1---"
       },
-       {
+      {
         "type": "checkbox",
-        "id": "home2_position_content_middle_2_enable",
-        "label": "Home2 position Content middle 2 enable",
+        "id": "home2_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    
+    {
+        "type": "checkbox",
+        "id": "home2_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
         "default": true
       },
       {
-      "type": "text",
-      "id": "home2_pos_content_2_title",
-      "label": "Title",
-      "default": "Title"
-      },
-      {
-      "type": "text",
-      "id": "home2_pos_content_2_subtitle",
-      "label": "Subtitle",
-      "default": "Subtitle"
-      },
-      {
-      "type": "select",
-      "id": "home2_pos_content_2_title_style",
-      "label": "Title Alignment",
-      "options": [
-        {
-        "value": "normal",
-        "label": "Normal"
-        },
-        {
-        "value": "border",
-        "label": "border bottom"
-        },
-        {
-        "value": "hr_left",
-        "label": "Horizontial line Left"
-        },
-        {
-        "value": "hr_center",
-        "label": "Horizontial line Center"
-        },
-        {
-        "value": "background_center",
-        "label": "Background Center"
-        }
-      ],
-      "default": "hr_center"
-      },
-      {
-        "type": "snippet",
-        "id": "home2_position_content_middle_2",
-        "label": "Home2 position Content middle 2"
-      },
-       {
-        "type": "checkbox",
-        "id": "home2_position_content_middle_3_enable",
-        "label": "Home2 position Content middle 3 enable",
-        "default": true
-      },
-      {
-        "type": "snippet",
-        "id": "home2_position_content_middle_3",
-        "label": "Home2 position Content middle 3"
-      },
-       {
-        "type": "checkbox",
-        "id": "home2_position_content_middle_4_enable",
-        "label": "Home2 position Content middle 4 enable",
-        "default": true
-      },
-       {
         "type": "text",
-        "id": "home2_position_content_middle_4_title",
+        "id": "home2_pos_content_2_title",
         "label": "Title",
         "default": "Title"
       },
       {
         "type": "text",
-        "id": "home2_position_content_middle_4_subtitle",
+        "id": "home2_pos_content_2_stitle",
         "label": "Subtitle",
         "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home2_position_content_middle_4_title_style",
+        "id": "home2_pos_content_2_title_style",
         "label": "Title Alignment",
         "options": [
           {
           "value": "normal",
           "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
           },
           {
           "value": "border",
@@ -2208,282 +2161,323 @@
       },
       {
         "type": "snippet",
-        "id": "home2_position_content_middle_4",
-        "label": "Home2 position Content middle 4"
-      },
-       {
-        "type": "checkbox",
-        "id": "home2_position_content_5_enable",
-        "label": "Home2 position Content 5 enable",
-        "default": true
-      },
-      {
-      "type": "text",
-      "id": "home2_pos_content_5_title",
-      "label": "Title",
-      "default": "Title"
-      },
-      {
-      "type": "text",
-      "id": "home2_pos_content_5_subtitle",
-      "label": "Subtitle",
-      "default": "Subtitle"
-      },
-      {
-      "type": "select",
-      "id": "home2_pos_content_5_title_style",
-      "label": "Title Alignment",
-      "options": [
-        {
-        "value": "normal",
-        "label": "Normal"
-        },
-        {
-        "value": "border",
-        "label": "border bottom"
-        },
-        {
-        "value": "hr_left",
-        "label": "Horizontial line Left"
-        },
-        {
-        "value": "hr_center",
-        "label": "Horizontial line Center"
-        },
-        {
-        "value": "background_center",
-        "label": "Background Center"
-        }
-      ],
-      "default": "hr_center"
-      },
-
-
-      {
-        "type": "snippet",
-        "id": "home2_position_content_5",
-        "label": "Home2 position Content 5"
+        "id": "home2_pos_content_2",
+        "label": "---Position 2---"
       },
       {
         "type": "checkbox",
-        "id": "home2_position_content_bottom_enable",
-        "label": "Home2 position Content bottom enable",
+        "id": "home2_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home2_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "home2_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home2_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home2_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
         "type": "snippet",
-        "id": "home2_position_content_bottom",
-        "label": "Home2 position Content bottom"
-      },
-      {
-        "type": "header",
-        "content": "Featured Products"
+        "id": "home2_pos_content_3",
+        "label": "---Position 3---"
       },
       {
         "type": "checkbox",
-        "id": "home2_featured_products",
-        "label": "Show?",
+        "id": "home2_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home2_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
         "default": true
       },
       {
-        "type": "color",
-        "id": "home2_featured_background",
-        "label": "Background color",
-        "default": "#f4f4f4"
+        "type": "text",
+        "id": "home2_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home2_featured_products_num",
-        "label": "Number of products to display",
-        "default": "8"
+        "id": "home2_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "collection",
-        "id": "home2_featured_products_collection",
-        "label": "Collection to use:"
+        "type": "select",
+        "id": "home2_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "header",
-        "content": "Latest Products"
+        "type": "snippet",
+        "id": "home2_pos_content_4",
+        "label": "---Position 4---"
       },
       {
         "type": "checkbox",
-        "id": "home2_latest_products",
-        "label": "Show?",
+        "id": "home2_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home2_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
         "default": true
       },
       {
-        "type": "textarea",
-        "id": "home2_latest_content",
-        "label": "Content"
+        "type": "text",
+        "id": "home2_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home2_latest_products_heading",
-        "label": "Heading",
-        "default": "Latest Products"
+        "id": "home2_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home2_latest_products_num",
-        "label": "Number of products to display",
-        "default": "8"
+        "type": "select",
+        "id": "home2_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "collection",
-        "id": "home2_latest_products_collection",
-        "label": "Collection to use:"
-      },
-      {
-        "type": "header",
-        "content": "Featured collection tabs"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_featured_collection_tabs_enable",
-        "label": "Enable collection tabs"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_featured_row1_enable",
-        "label": "Enable tabs 1"
-      },
-      {
-        "type": "collection",
-        "id": "home2_featured_row1",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row1_number",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_featured_row2_enable",
-        "label": "Enable tabs 2"
-      },
-      {
-        "type": "collection",
-        "id": "home2_featured_row2",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row2_number",
-        "label": "Number of products to display",
-        "default": "8"
+        "type": "snippet",
+        "id": "home2_pos_content_5",
+        "label": "---Position 5---"
       },
       {
         "type": "checkbox",
-        "id": "home2_featured_row3_enable",
-        "label": "Enable tabs 3"
+        "id": "home2_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       },
-      {
-        "type": "collection",
-        "id": "home2_featured_row3",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row3_number",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
+          {
         "type": "checkbox",
-        "id": "home2_featured_row4_enable",
-        "label": "Enable tabs 4"
-      },
-      {
-        "type": "collection",
-        "id": "home2_featured_row4",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row4_number",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_featured_row5_enable",
-        "label": "Enable tabs 5"
-      },
-      {
-        "type": "collection",
-        "id": "home2_featured_row5",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row5_number",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_featured_row6_enable",
-        "label": "Enable tabs 6"
-      },
-      {
-        "type": "collection",
-        "id": "home2_featured_row6",
-        "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "home2_featured_row6_number",
-        "label": "Number of products to display",
-        "default": "8"
-      },
-      {
-        "type": "header",
-        "content": "Blog Block"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_blog_enable",
-        "label": "Show?",
+        "id": "home2_pos_content_6_enable",
+        "label": "--Position content 6 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "home2_blog_bg.jpg",
-        "label": "Background Image"
+        "type": "text",
+        "id": "home2_pos_content_6_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home2_blog_text_1",
-        "label": "Blog text 1",
-        "default": "GO TO OUR BLOG"
+        "id": "home2_pos_content_6_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home2_blog_text_2",
-        "label": "Blog text 2",
-        "default": "Click here to take a look"
+        "type": "select",
+        "id": "home2_pos_content_6_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home2_blog_link",
-        "label": "Blog link",
-        "default": "\/blogs\/news"
-      },
-      {
-        "type": "header",
-        "content": "Block Logo Partner"
+        "type": "snippet",
+        "id": "home2_pos_content_6",
+        "label": "---Position 6---"
       },
       {
         "type": "checkbox",
-        "id": "home2_partner_enable",
-        "label": "Show?",
+        "id": "home2_pos_content_6_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    {
+        "type": "checkbox",
+        "id": "home2_pos_content_7_enable",
+        "label": "--Position content 7 -- enable -- ",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "home2_pos_content_7_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home2_pos_content_7_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home2_pos_content_7_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home2_pos_content_7",
+        "label": "---Position 7---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_7_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
   },
+
   {
     "name": "Home page 3",
     "settings": [
