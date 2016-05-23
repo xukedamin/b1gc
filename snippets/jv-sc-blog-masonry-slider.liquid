@@ -9,14 +9,18 @@
 
 <div class="popular-post-masonry slider-5-items">
   <div class="container">
-    <div class="box-intro">
-      {% if blog_title != blank %}
-      <h2><span class="title">{{ blog_title }}</span></h2>
-      {% endif %}
-      {% if blog_text != blank %}
-      <span class="desc-title">{{ blog_text }}</span>
-      {% endif %}
-    </div>
+
+    {% unless heading_enable %}
+      <div class="box-intro">
+        {% if blog_title != blank %}
+        <h2><span class="title">{{ blog_title }}</span></h2>
+        {% endif %}
+        {% if blog_text != blank %}
+        <span class="desc-title">{{ blog_text }}</span>
+        {% endif %}
+      </div>
+    {% endunless%}
+    {% include 'jv-sc-heading-box' %}
 
     <div class="paginav-slider">
       <div class="wrap-item">

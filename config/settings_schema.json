@@ -2478,7 +2478,7 @@
     ]
   },
 
-  {
+   {
     "name": "Home page 3",
     "settings": [
       {
@@ -2529,10 +2529,10 @@
             "label": "style 7"
           }
         ],
-        "default": "1",
-        "info": "The Slideshows configuration stays at tabs  'Material Banner'  below."
+        "default": "3",
+        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
-      {
+    {
         "type": "checkbox",
         "id": "home3_banner_enable",
         "label": "Enable banner"
@@ -2553,466 +2553,334 @@
           {
             "value": "3",
             "label": "style 3"
+          },
+          {
+            "value": "4",
+            "label": "style 4"
+          },
+          {
+            "value": "5",
+            "label": "style 5"
           }
         ],
         "default": "1",
         "info": "The Banner style at 'Material Banner  below."
       },
+       {
+        "type": "header",
+        "content": "Position and Content"
+      },
       {
         "type": "checkbox",
-        "id": "home3_banner_bottom_enable",
-        "label": "Enable bottom banner"
+        "id": "home3_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_1_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_1_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home3_banner_bottom_style",
-        "label": "Select Banner Style",
+        "id": "home3_pos_content_1_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "style 1"
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
           },
           {
-            "value": "2",
-            "label": "style 2"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-            "value": "3",
-            "label": "style 3"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "2",
-        "info": "The Banner style at 'Material Banner  below."
+        "default": "hr_center"
       },
       {
-        "type": "header",
-        "content": "Block Who We Are"
+        "type": "snippet",
+        "id": "home3_pos_content_1",
+        "label": "---Position 1---"
       },
       {
         "type": "checkbox",
-        "id": "home3_who_we_are",
-        "label": "Show?",
+        "id": "home3_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    {
+        "type": "checkbox",
+        "id": "home3_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
         "default": true
       },
       {
         "type": "text",
-        "id": "home3_who_we_are_heading_1",
-        "label": "Heading 1",
-        "default": "WHO WE ARE"
+        "id": "home3_pos_content_2_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home3_who_we_are_heading_2",
-        "label": "Heading 2",
-        "default": "A STORY ABOUT US"
-      },
-      {
-        "type": "text",
-        "id": "home3_who_we_are_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-03"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_who_we_are_text",
-        "label": "Content",
-        "default": "Wolverine Creative is an award winning digital media, web design and PR agency. In 2012, Wolverine Creative was recognized as one of the top 3 Advertising Agencies in Wisconsin by readers of Corporate Report Wisconsin."
-      },
-      {
-        "type": "image",
-        "id": "about_01.jpg",
-        "label": "1st offer image --------------------",
-        "max-width": 400
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_1_1",
-        "label": "1st offer caption 1",
-        "default": "WE ARE"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_1_2",
-        "label": "1st offer caption 2",
-        "default": "FULLY RESPONSIVE & RETINA READY"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_offer_text_1",
-        "label": "1rd offer content"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_link_1",
-        "label": "1st offer link"
-      },
-      {
-        "type": "image",
-        "id": "about_02.jpg",
-        "label": "2nd offer image --------------------",
-        "max-width": 400
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_2_1",
-        "label": "2st offer caption 1",
-        "default": "WE ARE"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_2_2",
-        "label": "2st offer caption 2",
-        "default": "30 USEFUL SHORTCODES"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_offer_text_2",
-        "label": "2rd offer content"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_link_2",
-        "label": "2nd offer link"
-      },
-      {
-        "type": "image",
-        "id": "about_03.jpg",
-        "label": "3rd offer image --------------------",
-        "max-width": 400
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_3_1",
-        "label": "3st offer caption 1",
-        "default": "WE OFFERS"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_caption_3_2",
-        "label": "3st offer caption 2",
-        "default": "FAST SUPPORT & FREE UPDATES"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_offer_text_3",
-        "label": "3rd offer content"
-      },
-      {
-        "type": "text",
-        "id": "home3_offer_link_3",
-        "label": "3rd offer link"
-      },
-      {
-        "type": "header",
-        "content": "Block Quote"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_quote",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "home3_quote.jpg",
-        "label": "Background Image"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_quote_text",
-        "label": "Content",
-        "default": "Success or failure depends more upon attitude than upon capacity successful men act as though they have accomplished or are enjoying something. Soon it becomes a reality. Act, look, feel successful, conduct yourself accordingly, and you will be amazed at the positive results."
-      },
-      {
-        "type": "text",
-        "id": "home3_quote_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "header",
-        "content": "Block Portfolio"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_portfolio_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home3_portfolio_heading_1",
-        "label": "Heading 1",
-        "default": "WHAT WE WORK"
-      },
-      {
-        "type": "text",
-        "id": "home3_portfolio_heading_2",
-        "label": "Heading 2",
-        "default": "ENJOY OUR PORTFOLIO"
-      },
-      {
-        "type": "text",
-        "id": "home3_portfolio_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_portfolio_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_portfolio",
-        "label": "Show portfolio item?",
-        "default": true,
-        "info": "The Portfolio configuration stays at tabs 'Material Portfolio' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Purchase"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_purchase_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "textarea",
-        "id": "home3_purchase_text",
-        "label": "Content",
-        "default": "Start now with this demo or check out our other demos to find what you need."
-      },
-      {
-        "type": "text",
-        "id": "home3_purchase_button",
-        "label": "Button",
-        "default": "PURCHASE"
-      },
-      {
-        "type": "text",
-        "id": "home3_purchase_link",
-        "label": "Link",
-        "default": "http:\/\/themeforest.net\/user\/joomlavi\/portfolio"
-      },
-      {
-        "type": "header",
-        "content": "Block Creativity & Darings"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_creativity_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home3_creativity_heading_1",
-        "label": "Heading 1",
-        "default": "CREATIVITY & DARINGS"
-      },
-      {
-        "type": "text",
-        "id": "home3_creativity_heading_2",
-        "label": "Heading 2",
-        "default": "CHECK OUT OUR SERVICES"
-      },
-      {
-        "type": "text",
-        "id": "home3_creativity_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-03"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_creativity_text",
-        "label": "Content",
-        "default": "Design is our art and our passion. Our goal is to create the best products with a pixel-perfect eye for detail and a high standard for aesthetic excellence. Let us help you make your website simple, beautiful and professional."
-      },
-      {
-        "type": "image",
-        "id": "service_01.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_creativity",
-        "label": "Show Tabs content?",
-        "default": true,
-        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
-      },
-      {
-        "type": "text",
-        "id": "home3_creativity_button",
-        "label": "Button",
-        "default": "JOIN NOW"
-      },
-      {
-        "type": "text",
-        "id": "home3_creativity_link",
-        "label": "Link",
-        "default": "http:\/\/themeforest.net\/user\/joomlavi\/portfolio"
-      },
-      {
-        "type": "header",
-        "content": "Block Testimonial"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_testimonial_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home3_testimonial_heading",
-        "label": "Heading",
-        "default": "TESTIMONIALS"
-      },
-      {
-        "type": "image",
-        "id": "home3_testimonial.jpg",
-        "label": "Background Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_testimonial",
-        "label": "Show Testimonial?",
-        "default": true,
-        "info": "The Testimonial configuration stays at tabs 'Material Testimonial' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Meet Our Team"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_team_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home3_team_heading_1",
-        "label": "Heading 1",
-        "default": "MEET OUR TEAM"
-      },
-      {
-        "type": "text",
-        "id": "home3_team_heading_2",
-        "label": "Heading 2",
-        "default": "WHAT MAKES US SUCCESSFUL"
-      },
-      {
-        "type": "text",
-        "id": "home3_team_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-03"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_team_text",
-        "label": "Content",
-        "default": "Most businesses think that product is the most important thing, but without great leadership, mission and a team that deliver results at a high level, even the best product won't make a company successful."
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_team",
-        "label": "Show Team ?",
-        "default": true,
-        "info": "The Team configuration stays at tabs 'Material Team' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Logo Partner"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_partner_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "home3_partner_bg",
-        "label": "Background Color",
-        "default": "#f4f4f4",
-        "info": "The Logo Partner configuration stays at tabs 'Material Logo Partner' below."
-      },
-      {
-        "type": "header",
-        "content": "Blog Block"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_blog_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home3_blog_heading_1",
-        "label": "Heading 1",
-        "default": "BLOG UPDATES"
-      },
-      {
-        "type": "text",
-        "id": "home3_blog_heading_2",
-        "label": "Heading 2",
-        "default": "LASTED POSTS FROM OUR BLOG"
-      },
-      {
-        "type": "text",
-        "id": "home3_blog_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-03"
-      },
-      {
-        "type": "textarea",
-        "id": "home3_blog_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
-      },
-      {
-        "type": "blog",
-        "id": "home3_blog",
-        "label": "Choose blog:"
+        "id": "home3_pos_content_2_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home3_blog_number",
-        "label": "Number of",
+        "id": "home3_pos_content_2_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "1"
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
           },
           {
-            "value": "2",
-            "label": "2"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-            "value": "3",
-            "label": "3"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
           },
           {
-            "value": "4",
-            "label": "5"
+          "value": "hr_center",
+          "label": "Horizontial line Center"
           },
           {
-            "value": "6",
-            "label": "6"
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "3"
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home3_pos_content_2",
+        "label": "---Position 2---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home3_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home3_pos_content_3",
+        "label": "---Position 3---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home3_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home3_pos_content_4",
+        "label": "---Position 4---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home3_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home3_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+      {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home3_pos_content_5",
+        "label": "---Position 5---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
   },
-  {
-    "name": "Home page 4",
+
+
+{
+    "name": "Homepage 4",
     "settings": [
       {
         "type": "header",
@@ -3032,7 +2900,7 @@
         "max-width": 300,
         "max-height": 100
       },
-      {
+       {
         "type": "header",
         "content": "Slideshow"
       },
@@ -3082,299 +2950,444 @@
         "default": "4",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
+    
       {
         "type": "header",
-        "content": "Scroll Effects"
+        "content": "Position and Content"
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home4_pos_content_1_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home4_pos_content_1_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home4_scroll_effects",
-        "label": "Enable Scroll Effects",
+        "id": "home4_pos_content_1_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "Yes"
+          "value": "normal",
+          "label": "Normal"
           },
           {
-            "value": "2",
-            "label": "No"
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "1"
+        "default": "hr_center"
       },
       {
-        "type": "header",
-        "content": "Banner"
+        "type": "snippet",
+        "id": "home4_pos_content_1",
+        "label": "---Position 1---"
       },
       {
         "type": "checkbox",
-        "id": "home4_banner_enable",
-        "label": "Enable banner"
+        "id": "home4_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home4_pos_content_2_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home4_pos_content_2_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home4_banner_style",
-        "label": "Select Banner Style",
+        "id": "home4_pos_content_2_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "style 1"
+          "value": "normal",
+          "label": "Normal"
           },
           {
-            "value": "2",
-            "label": "style 2"
+          "value": "center",
+          "label": "Center"
           },
           {
-            "value": "3",
-            "label": "style 3"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-            "value": "4",
-            "label": "adv_product"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
           },
           {
-            "value": "5",
-            "label": "Product"
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "4",
-        "info": "The Banner style  'Material Banner'  below."
+        "default": "hr_center"
       },
       {
-        "type": "header",
-        "content": "Block Home"
+        "type": "snippet",
+        "id": "home4_pos_content_2",
+        "label": "---Position 2---"
       },
       {
         "type": "checkbox",
-        "id": "home4_home_enable",
-        "label": "Show ?",
+        "id": "home4_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home4_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "slip-bg-1.jpg",
-        "label": "Background Image 1"
-      },
-      {
-        "type": "image",
-        "id": "slip-bg-2.jpg",
-        "label": "Background Image 2"
+        "type": "text",
+        "id": "home4_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home4_home_heading_1",
-        "label": "Heading 1",
-        "default": "WELCOME TO"
+        "id": "home4_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home4_home_heading_2",
-        "label": "Heading 2",
-        "default": "WOLVERINE THEME"
+        "type": "select",
+        "id": "home4_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home4_home_heading_icon",
-        "label": "Icon",
-        "default": "indians-icons-07"
-      },
-      {
-        "type": "image",
-        "id": "home4_home_img_icon.png",
-        "label": "Image Icon",
-        "max-width": 500,
-        "max-height": 200,
-        "info": "If you use images here. Please empty input text of *Icon* box above"
-      },
-      {
-        "type": "header",
-        "content": "Block About Us"
+        "type": "snippet",
+        "id": "home4_pos_content_3",
+        "label": "---Position 3---"
       },
       {
         "type": "checkbox",
-        "id": "home4_about_enable",
-        "label": "Show ?",
+        "id": "home4_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home4_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "slip-bg-3.jpg",
-        "label": "Background Image"
+        "type": "text",
+        "id": "home4_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home4_about_heading_1",
-        "label": "Heading 1",
-        "default": "WELCOME TO"
+        "id": "home4_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home4_about_heading_2",
-        "label": "Heading 2",
-        "default": "WOLVERINE THEME"
+        "type": "select",
+        "id": "home4_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home4_about_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "textarea",
-        "id": "home4_about_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt"
-      },
-      {
-        "type": "text",
-        "id": "home4_about_name",
-        "label": "Author",
-        "default": "Elena Lincoln"
-      },
-      {
-        "type": "header",
-        "content": "Block Our Works"
+        "type": "snippet",
+        "id": "home4_pos_content_4",
+        "label": "---Position 4---"
       },
       {
         "type": "checkbox",
-        "id": "home4_works_enable",
-        "label": "Show ?",
+        "id": "home4_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home4_pos_content_5_enable",
+        "label": "--Position content 5 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "slip-bg-4.jpg",
-        "label": "Background Image"
+        "type": "text",
+        "id": "home4_pos_content_5_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home4_works_heading_1",
-        "label": "Heading 1",
-        "default": "WELCOME TO"
+        "id": "home4_pos_content_5_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home4_works_heading_2",
-        "label": "Heading 2",
-        "default": "WOLVERINE THEME"
+        "type": "select",
+        "id": "home4_pos_content_5_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home4_works_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "textarea",
-        "id": "home4_works_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt."
-      },
-      {
-        "type": "text",
-        "id": "home4_works_button",
-        "label": "Button",
-        "default": "PORTFOLIO"
-      },
-      {
-        "type": "text",
-        "id": "home4_works_link",
-        "label": "Link"
-      },
-      {
-        "type": "header",
-        "content": "Block Services"
+        "type": "snippet",
+        "id": "home4_pos_content_5",
+        "label": "---Position 5---"
       },
       {
         "type": "checkbox",
-        "id": "home4_service_enable",
-        "label": "Show ?",
+        "id": "home4_pos_content_5_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home4_pos_content_6_enable",
+        "label": "--Position content 6 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "slip-bg-5.jpg",
-        "label": "Background Image"
+        "type": "text",
+        "id": "home4_pos_content_6_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home4_services_heading_1",
-        "label": "Heading 1",
-        "default": "CREATIVITY & DARINGS"
+        "id": "home4_pos_content_6_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home4_services_heading_2",
-        "label": "Heading 2",
-        "default": "CHECK OUT OUR SERVICES"
+        "type": "select",
+        "id": "home4_pos_content_6_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home4_services_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
+        "type": "snippet",
+        "id": "home4_pos_content_6",
+        "label": "---Position 6---"
       },
       {
         "type": "checkbox",
-        "id": "home4_services_tabs",
-        "label": "Show Tabs content?",
-        "default": true,
-        "info": "The Tabs Services configuration stays at tabs 'Material Tabs content' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Blog"
+        "id": "home4_pos_content_6_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       },
       {
         "type": "checkbox",
-        "id": "home4_blog_enable",
-        "label": "Show ?",
+        "id": "home4_pos_content_7_enable",
+        "label": "--Position content 7 -- enable -- ",
         "default": true
       },
       {
-        "type": "image",
-        "id": "slip-bg-6.jpg",
-        "label": "Background Image"
+        "type": "text",
+        "id": "home4_pos_content_7_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home4_blog_heading_1",
-        "label": "Heading 1",
-        "default": "FROM OUR BLOG"
+        "id": "home4_pos_content_7_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
-        "type": "text",
-        "id": "home4_blog_heading_2",
-        "label": "Heading 2",
-        "default": "I LOVE MY LIFE VERY MUCH"
+        "type": "select",
+        "id": "home4_pos_content_7_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
       },
       {
-        "type": "text",
-        "id": "home4_blog_heading_icon",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
+        "type": "snippet",
+        "id": "home4_pos_content_7",
+        "label": "---Position 7---"
       },
       {
-        "type": "textarea",
-        "id": "home4_blog_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate, sed diam nonummy nibh euismod tincidunt."
-      },
-      {
-        "type": "text",
-        "id": "home4_blog_button",
-        "label": "Button",
-        "default": "READ MORE"
-      },
-      {
-        "type": "text",
-        "id": "home4_blog_link",
-        "label": "Link",
-        "default": "https:\/\/bigc-1.myshopify.com\/blogs\/news"
+        "type": "checkbox",
+        "id": "home4_pos_content_7_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
   },
-  {
+
+
+{
     "name": "Home page 5",
     "settings": [
       {
@@ -3428,386 +3441,259 @@
         "default": "5",
         "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
       },
+    {
+        "type": "header",
+        "content": "Position and Content"
+      },
       {
         "type": "checkbox",
-        "id": "home5_banner_enable",
-        "label": "Enable banner"
+        "id": "home5_pos_content_1_enable",
+        "label": "--Position content 1 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_1_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_1_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home5_banner_style",
-        "label": "Select Banner Style",
+        "id": "home5_pos_content_1_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "style 1"
+          "value": "normal",
+          "label": "Normal"
           },
           {
-            "value": "2",
-            "label": "style 2"
+          "value": "center",
+          "label": "Center"
           },
           {
-            "value": "3",
-            "label": "style 3"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-            "value": "4",
-            "label": "adv_product"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
           },
           {
-            "value": "5",
-            "label": "Product"
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "3",
-        "info": "The Banner style  'Material Banner'  below."
+        "default": "hr_center"
       },
       {
-        "type": "header",
-        "content": "Block We Are Good At"
+        "type": "snippet",
+        "id": "home5_pos_content_1",
+        "label": "---Position 1---"
       },
       {
         "type": "checkbox",
-        "id": "home5_who_we_are",
-        "label": "Show?",
+        "id": "home5_pos_content_1_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_2_enable",
+        "label": "--Position content 2 -- enable -- ",
         "default": true
       },
       {
         "type": "text",
-        "id": "home5_who_we_are_heading",
-        "label": "Heading",
-        "default": "WE ARE GOOD AT"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_who_we_are_text",
-        "label": "Content",
-        "default": "Wolverine Creative are an independent , one-stop creative specialist with the experience & the know how to come up with great business solutions and make them happen"
-      },
-      {
-        "type": "image",
-        "id": "home5_about_01.jpg",
-        "label": "1st offer image --------------------",
-        "max-width": 400
+        "id": "home5_pos_content_2_title",
+        "label": "Title",
+        "default": "Title"
       },
       {
         "type": "text",
-        "id": "home5_offer_caption_1",
-        "label": "1st offer caption",
-        "default": "CHECK OUT OUR FEATURES"
-      },
-      {
-        "type": "text",
-        "id": "home5_who_we_are_offer_icon_1",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "text",
-        "id": "home5_offer_link_1",
-        "label": "1st offer link"
-      },
-      {
-        "type": "image",
-        "id": "home5_about_02.jpg",
-        "label": "2nd offer image --------------------",
-        "max-width": 400
-      },
-      {
-        "type": "text",
-        "id": "home5_offer_caption_2",
-        "label": "2st offer caption",
-        "default": "CHECK OUT OUR FEATURES"
-      },
-      {
-        "type": "text",
-        "id": "home5_who_we_are_offer_icon_2",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "text",
-        "id": "home5_offer_link_2",
-        "label": "2nd offer link"
-      },
-      {
-        "type": "image",
-        "id": "home5_about_03.jpg",
-        "label": "3rd offer image --------------------",
-        "max-width": 400
-      },
-      {
-        "type": "text",
-        "id": "home5_offer_caption_3",
-        "label": "3st offer caption",
-        "default": "CHECK OUT OUR FEATURES"
-      },
-      {
-        "type": "text",
-        "id": "home5_who_we_are_offer_icon_3",
-        "label": "Icon",
-        "default": "icon-indians-icons-04"
-      },
-      {
-        "type": "text",
-        "id": "home5_offer_link_3",
-        "label": "3rd offer link"
-      },
-      {
-        "type": "header",
-        "content": "Block About Us"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_about_enable",
-        "label": "Show About ?",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "home5_about_bg",
-        "label": "Background Color",
-        "default": "#f4f4f4"
-      },
-      {
-        "type": "text",
-        "id": "home5_about_title_1",
-        "label": "Title column 1"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_about_text_1",
-        "label": "Text column 1"
-      },
-      {
-        "type": "text",
-        "id": "home5_about_name_1",
-        "label": "Name column 1"
-      },
-      {
-        "type": "text",
-        "id": "home5_about_title_2",
-        "label": "Title column 2"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_about_text_2",
-        "label": "Text column 2"
-      },
-      {
-        "type": "header",
-        "content": "Block Testimonial"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_testimonial_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home5_testimonial_heading",
-        "label": "Heading",
-        "default": "TESTIMONIALS"
-      },
-      {
-        "type": "image",
-        "id": "home5_testimonial.jpg",
-        "label": "Background Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_testimonial",
-        "label": "Show Testimonial?",
-        "default": true,
-        "info": "The Testimonial configuration stays at tabs 'Material Testimonial' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Services"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_services_enable",
-        "label": "Show Services ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home5_services_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_services_text",
-        "label": "Text"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_services_img",
-        "label": "Show images ?",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "home5_our-service-1.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_services_tabs",
-        "label": "Show Tabs content  ?",
-        "default": true,
-        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Meet Our Team"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_team_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home5_team_heading",
-        "label": "Heading",
-        "default": "MEET OUR TEAM"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_team_text",
-        "label": "Content",
-        "default": "Most businesses think that product is the most important thing, but without great leadership, mission and a team that deliver results at a high level, even the best product won't make a company successful."
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_team",
-        "label": "Show Team ?",
-        "default": true,
-        "info": "The Team configuration stays at tabs 'Material Team' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Counter"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_counter_enable",
-        "label": "Show Counter ?",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "home5_counter_bg",
-        "label": "Background Color",
-        "default": "#f4f4f4"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_counter",
-        "label": "Show Counter  ?",
-        "default": true,
-        "info": "The Counter configuration stays at tabs 'Material Counter' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Portfolio"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_portfolio_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home5_portfolio_heading",
-        "label": "Heading",
-        "default": "WHAT WE WORK"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_portfolio_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_portfolio",
-        "label": "Show portfolio item?",
-        "default": true,
-        "info": "The Portfolio configuration stays at tabs 'Material Portfolio' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Logo Partner"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_partner_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Blog Block"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_blog_enable",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "home5_blog_heading",
-        "label": "Heading",
-        "default": "BLOG UPDATES"
-      },
-      {
-        "type": "textarea",
-        "id": "home5_blog_text",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
-      },
-      {
-        "type": "blog",
-        "id": "home5_blog",
-        "label": "Choose blog:"
+        "id": "home5_pos_content_2_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
       },
       {
         "type": "select",
-        "id": "home5_blog_number",
-        "label": "Number of",
+        "id": "home5_pos_content_2_title_style",
+        "label": "Title Alignment",
         "options": [
           {
-            "value": "1",
-            "label": "1"
+          "value": "normal",
+          "label": "Normal"
           },
           {
-            "value": "2",
-            "label": "2"
+          "value": "center",
+          "label": "Center"
           },
           {
-            "value": "3",
-            "label": "3"
+          "value": "border",
+          "label": "border bottom"
           },
           {
-            "value": "4",
-            "label": "5"
+          "value": "hr_left",
+          "label": "Horizontial line Left"
           },
           {
-            "value": "6",
-            "label": "6"
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
           }
         ],
-        "default": "3"
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home5_pos_content_2",
+        "label": "---Position 2---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_2_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+          {
+        "type": "checkbox",
+        "id": "home5_pos_content_3_enable",
+        "label": "--Position content 3 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_3_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_3_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home5_pos_content_3_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home5_pos_content_3",
+        "label": "---Position 3---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_3_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
+      },
+    {
+        "type": "checkbox",
+        "id": "home5_pos_content_4_enable",
+        "label": "--Position content 4 -- enable -- ",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_4_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_4_stitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "select",
+        "id": "home5_pos_content_4_title_style",
+        "label": "Title Alignment",
+        "options": [
+          {
+          "value": "normal",
+          "label": "Normal"
+          },
+          {
+          "value": "center",
+          "label": "Center"
+          },
+          {
+          "value": "border",
+          "label": "border bottom"
+          },
+          {
+          "value": "hr_left",
+          "label": "Horizontial line Left"
+          },
+          {
+          "value": "hr_center",
+          "label": "Horizontial line Center"
+          },
+          {
+          "value": "background_center",
+          "label": "Background Center"
+          }
+        ],
+        "default": "hr_center"
+      },
+      {
+        "type": "snippet",
+        "id": "home5_pos_content_4",
+        "label": "---Position 4---"
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_4_fullwidth",
+        "label": "Fullwidth?",
+        "default": false
       }
     ]
-  },
+  }
+  ,
+
   {
     "name": "Home page 6",
     "settings": [
