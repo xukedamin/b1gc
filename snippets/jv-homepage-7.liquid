@@ -79,26 +79,56 @@
   {% endif %}
 
 
+   {% if settings.home7_pos_content_5_enable %}
 
-  {% comment %} ----- Block Friends Brands ----- {% endcomment %}
+	  <section id="pos--content-5" class="pt-70">
+	    
+	    {% if settings.home7_pos_content_5_fullwidth == false %}
+	     <div class="container">
+	    {% endif %}
 
-  {% if settings.home7_pos_content_5_enable %}
+	    {% capture file %}{{settings.home7_pos_content_5 }}{% endcapture %}
+	    {% include file with heading_enable: settings.home7_pos_content_5_title ,heading_style: settings.home7_pos_content_5_title_style ,heading_title: settings.home7_pos_content_5_title , heading_subtitle: settings.home7_pos_content_5_stitle %}
 
-  <section id="pos--content-5" class="pt-70">
-    
-    {% if settings.home7_pos_content_5_fullwidth == false %}
-     <div class="container">
-    {% endif %}
+	    {% if settings.home7_pos_content_5_fullwidth == false %}
+	     </div>
+	    {% endif %}
 
-    {% capture file %}{{settings.home7_pos_content_5 }}{% endcapture %}
-    {% include file with heading_enable: settings.home7_pos_content_5_title ,heading_style: settings.home7_pos_content_5_title_style ,heading_title: settings.home7_pos_content_5_title , heading_subtitle: settings.home7_pos_content_5_stitle %}
+	  </section>
+	  {% endif %}
 
-    {% if settings.home7_pos_content_5_fullwidth == false %}
-     </div>
-    {% endif %}
 
-  </section>
-  {% endif %}
+
+	{% assign homenum = 'home7' %}
+
+	{% for i in (1..5) %}
+
+	{% capture fullwidth %}{{homenum}}_pos_content_{{i}}_fullwidth{% endcapture %}
+	{% capture code %}{{homenum}}_pos_content_{{i}}{% endcapture %}
+	{% capture title %}{{homenum}}_pos_content_{{i}}_title{% endcapture %}
+	{% capture title_style %}{{homenum}}_pos_content_{{i}}_title_style{% endcapture %}
+	{% capture stitle %}{{homenum}}_pos_content_{{i}}_title_stitle{% endcapture %}
+
+	  {% if settings.home7_pos_content_5_enable %}
+
+	  <section id="pos--content-5" class="pt-70">
+	    
+	    {% if settings.fullwidth == false %}
+	     <div class="container">
+	    {% endif %}
+
+	    {% capture file %}{{settings.code }}{% endcapture %}
+	    {% include file with heading_enable: settings.title ,heading_style: settings.title_style ,heading_title: settings.title , heading_subtitle: settings.stitle %}
+
+	    {% if settings.fullwidth == false %}
+	     </div>
+	    {% endif %}
+
+	  </section>
+	  {% endif %}
+
+	{% endfor %}
+
 
 
 </main>
