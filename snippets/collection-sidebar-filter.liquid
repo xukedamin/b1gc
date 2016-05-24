@@ -8,11 +8,13 @@ breadcrumbs you need to include this:
 {% endcomment %}
 
 {% comment %} ----- Sidebar linklist 1 ----- {% endcomment %}
+
 {% if settings.show_widget_linklist1 %}
 {% assign list_temp = settings.widget_linklist1 %}
 {% if linklists[list_temp] != empty %}
 {% assign list = linklists[list_temp] %}
-<div class="item-box-attr 111111111">
+
+<div class="item-box-attr">
 
   {% if list.title != blank %}
  <div class="item-attr-title ">
@@ -20,7 +22,7 @@ breadcrumbs you need to include this:
   </div>
   {% endif %}
   <div class="item-attr-content category-product">
-    <ul >
+    <ul class="attr-category list-inline">
       {% for link in list.links %}
       {% if linklists[child_list_handle].links != blank %}
       <li class="advanced-filter site-nav--has-dropdown{% if link.active %} active{% endif %}" aria-haspopup="true">
@@ -52,12 +54,12 @@ breadcrumbs you need to include this:
 
 
 {% if settings.sidebar_type_enable and shop.types.size > 0 %}
-<div class="item-box-attr 22222222222">
+<div class="item-box-attr">
   <div class="item-attr-title ">
     <span>{{ 'collections.sidebar.shop_by_type' | t }}</span>
   </div>
   <div class="item-attr-content">  
-    <ul class="sidebar-module__list category-product">
+    <ul class="sidebar-module__list category-product list-inline">
       {% for type in shop.types %}
       <li class="{% if forloop.index > 8 %} sidebar-module__hidden-item{% endif %} {% if collection.current_type == type %} active{% endif %}"><a href="{{ type | url_for_type }}">{{ type }}</a></li>
       {% if forloop.index > 8 %}
@@ -78,12 +80,12 @@ breadcrumbs you need to include this:
 {% endif %}
 
 {% if settings.sidebar_vendor_enable and shop.vendors.size > 0 %}
-<div class="item-box-attr 333333333333">
+<div class="item-box-attr">
   <div class="item-attr-title ">
     {{ 'collections.sidebar.shop_by_vendor' | t }}
   </div>
   <div class="item-attr-content">    
-    <ul class="sidebar-module__list category-product">
+    <ul class="sidebar-module__list category-product list-inline">
       {% for vendor in shop.vendors %}
       <li class="{% if forloop.index > 8 %}sidebar-module__hidden-item{% endif %} {% if collection.current_vendor == vendor %} active {% endif %}"><a href="{{ vendor | url_for_vendor }}">{{ vendor }}</a></li>
 
@@ -107,31 +109,39 @@ breadcrumbs you need to include this:
 {% if settings.collection_sidebar_filters == 'groups' %}
   {% if collection.all_tags.size > 0 %}
 
-
   {% comment %}
   Loop through tag categories
   {% endcomment %}
+
   {% for cat_item in cat_array %}
-  <div class="item-box-attr 4444444444">
+  <div class="item-box-attr">
     <div class="item-attr-title ">{{ cat_item }}</div>
     <div class="item-attr-content">  
+      
       <ul class="advanced-filters attr-brand list-inline">
+        
         {% comment %}
         Loop through collection tags
         {% endcomment %}
+
         {% for tag in collection.all_tags %}
-        {% assign cat = tag | split: '_' | first %}              
-        {% if cat != tag and cat_item == cat %}
-        {% comment %}
-        Strip out tag category prefix and add/remove link for tag filtering
-        {% endcomment %}
-        {% if current_tags contains tag %}
-        <li class="advanced-filter active-filter " data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
-        {% else %}
-        <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
-        {% endif %}
-        {% endif %}
+          {% assign cat = tag | split: '_' | first %}              
+            {% if cat != tag and cat_item == cat %}
+            
+            {% comment %}
+            Strip out tag category prefix and add/remove link for tag filtering
+            {% endcomment %}
+
+            {% if current_tags contains tag %}
+              <li class="advanced-filter active-filter " data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
+              {% else %}
+              <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
+            {% endif %}
+
+          {% endif %}
+
         {% endfor %}
+
       </ul>
     </div>
   </div>
@@ -162,75 +172,87 @@ breadcrumbs you need to include this:
 
   {% endif %}
   {% else %}
-  <div class="item-box-attr 5555555555555">
-  <div class="item-attr-title ">{{ 'collections.sidebar.shop_by' | t }}</div>
-  {% if template contains 'collection' and collection.all_tags.size > 0 %}
 
-  {% comment %}
-  Provide a 'catch-all' link at the top of the list,
-  we'd check against the collection.handle, product type, and vendor.
-  {% endcomment %}
-  <ul>
-    {% if current_tags %}
-    <li class="active-filter">
-      {% comment %}
-      Good for /collections/all collection and regular collections
-      {% endcomment %}
-      {% if collection.handle %}
-      <a href="/collections/{{ collection.handle }}">
-        {{ 'collections.sidebar.all' | t }}
-        {% unless collection.title == 'Products' %}
-        {{ collection.title }}
-        {% endunless %}
-      </a>
-
-      {% comment %}
-      Good for automatic type collections
-      {% endcomment %}
-      {% elsif collection.current_type %}
-      <a href="{{ collection.current_type | url_for_type }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
-
-      {% comment %}
-      Good for automatic vendor collections
-      {% endcomment %}
-      {% elsif collection.current_vendor %}
-      <a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
-      {% endif %}
-    </li>
-    {% endif %}
+  <div class="item-box-attr">
+    <div class="item-attr-title ">{{ 'collections.sidebar.shop_by' | t }}</div>
+    {% if template contains 'collection' and collection.all_tags.size > 0 %}
 
     {% comment %}
-    And for the good stuff, loop through the tags themselves.
-    Strip the prepended categories if they happen to exist.
+    Provide a 'catch-all' link at the top of the list,
+    we'd check against the collection.handle, product type, and vendor.
     {% endcomment %}
-    {% for tag in collection.all_tags %}
-    {% assign is_advanced_tag = false %}
-    {% assign cat = tag | split: '_' | first %}
-    {% unless cat == tag %}
-    {% if cat_array contains cat %}
-    {% assign is_advanced_tag = true %}
-    {% if current_tags contains tag %}
-    <li class="active-filter">{{ tag | remove_first: cat | remove_first: '_' }}</li>
+
+    <ul class="list-inline">
+      {% if current_tags %}
+      <li class="active-filter">
+       
+        {% comment %}
+        Good for /collections/all collection and regular collections
+        {% endcomment %}
+        
+        {% if collection.handle %}
+          <a href="/collections/{{ collection.handle }}">
+            {{ 'collections.sidebar.all' | t }}
+            {% unless collection.title == 'Products' %}
+            {{ collection.title }}
+            {% endunless %}
+          </a>
+
+        {% comment %}
+        Good for automatic type collections
+        {% endcomment %}
+
+        {% elsif collection.current_type %}
+          <a href="{{ collection.current_type | url_for_type }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
+
+        {% comment %}
+        Good for automatic vendor collections
+        {% endcomment %}
+        
+        {% elsif collection.current_vendor %}
+          <a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
+        
+        {% endif %}
+
+      </li>
+      {% endif %}
+
+      {% comment %}
+      And for the good stuff, loop through the tags themselves.
+      Strip the prepended categories if they happen to exist.
+      {% endcomment %}
+
+      {% for tag in collection.all_tags %}
+        {% assign is_advanced_tag = false %}
+        {% assign cat = tag | split: '_' | first %}
+
+        {% unless cat == tag %}
+          {% if cat_array contains cat %}
+            {% assign is_advanced_tag = true %}
+            {% if current_tags contains tag %}
+              <li class="active-filter">{{ tag | remove_first: cat | remove_first: '_' }}</li>
+              {% else %}
+              <li>{{ tag | remove_first: cat | remove_first: '_' | link_to_tag: tag }}</li>
+            {% endif %}
+          {% endif %}
+        {% endunless %}
+
+        {% if is_advanced_tag == false %}
+          {% if current_tags contains tag %}
+            <li class="active-filter">{{ tag }}</li>
+          {% else %}
+            <li>{{ tag | link_to_tag: tag }}</li>
+          {% endif %}
+        {% endif %}
+
+      {% endfor %}
+
+    </ul>
+
     {% else %}
-    <li>{{ tag | remove_first: cat | remove_first: '_' | link_to_tag: tag }}</li>
+    <p>{{ 'collections.sidebar.no_tags' | t }}</p>
     {% endif %}
-    {% endif %}
-    {% endunless %}
 
-    {% if is_advanced_tag == false %}
-    {% if current_tags contains tag %}
-    <li class="active-filter">{{ tag }}</li>
-    {% else %}
-    <li>{{ tag | link_to_tag: tag }}</li>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-
-  </ul>
-
-  {% else %}
-  <p>{{ 'collections.sidebar.no_tags' | t }}</p>
-  {% endif %}
   </div>  
 {% endif %}
 
