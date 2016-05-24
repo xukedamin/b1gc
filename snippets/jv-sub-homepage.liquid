@@ -1,0 +1,35 @@
+{%comment %}
+  - assign homenum 
+  - assign pos_length
+{%endcomment %}
+
+  {% for i in (1..pos_length) %}
+
+    {% capture enable %}{{homenum}}_pos_content_{{i}}_enable{% endcapture %}
+    {% capture fullwidth %}{{homenum}}_pos_content_{{i}}_fullwidth{% endcapture %}
+    {% capture code %}{{homenum}}_pos_content_{{i}}{% endcapture %}
+    {% capture title %}{{homenum}}_pos_content_{{i}}_title{% endcapture %}
+    {% capture title_style %}{{homenum}}_pos_content_{{i}}_title_style{% endcapture %}
+    {% capture stitle %}{{homenum}}_pos_content_{{i}}_title_stitle{% endcapture %}
+
+    {% capture extra_class %}{{homenum}}_pos_content_{{i}}_class{% endcapture %}
+
+    {% if settings[enable] %}
+
+    <section id="pos--content-{{i}}" class="{% if extra_class != blank %}{{settings[extra_class]}}{%endif%}">
+      
+      {% if settings[fullwidth] == false %}
+       <div class="container">
+      {% endif %}
+
+      {% capture file %}{{settings[code] }}{% endcapture %}
+      {% include file with heading_enable: settings[title] ,heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
+
+      {% if settings[fullwidth] == false %}
+       </div>
+      {% endif %}
+
+    </section>
+    {% endif %}
+
+  {% endfor %}

@@ -1,99 +1,18 @@
-<main class="wrapper main-content " role="main">
+]<main class="wrapper main-content homepage1" role="main">
 
-  {% comment %} ----- pos--content-1 ----- {% endcomment %}
-  <section id="pos--content-1" class="mt-70">
+  {% comment %} 
+    jv-sc-product-slider-single
+    jv-sc-product-tabs
+    jv-sc-testimonials-3
+    jv-sc-blog-single-slider
+    jv-sc-logopartner
 
-    {% capture file %}{{settings.home1_pos_content_1}}{% endcapture %}
+  {% endcomment %}
 
-    {% if settings.home1_pos_content_1_fullwidth == false %}
-     <div class="container">
-    {% endif %}
+  {% assign homenum = 'home1' %}
+  {%assign pos_length = 5 %}
 
-      {% include file with heading_enable: settings.home1_pos_content_1_title ,heading_style: settings.home1_pos_content_1_style ,heading_title: settings.home1_pos_content_1_title , heading_subtitle: settings.home1_pos_content_1_stitle %}
-
-    {% if settings.home1_pos_content_1_fullwidth == false %}
-     </div>
-    {% endif %}
-
-    {% comment %} {%include 'jv-sc-product-slider-single' %} {% endcomment %}
-
-  </section>
-
-  {% comment %} ----- pos--content-2 ----- {% endcomment %}
-  <section id="pos--content-2" class="mt-70">
-
-    {% capture file %}{{settings.home1_pos_content_2}}{% endcapture %}
-    {% if settings.home1_pos_content_2_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-      {% include file with heading_enable: settings.home1_pos_content_2_title ,heading_style: settings.home1_pos_content_2_style ,heading_title: settings.home1_pos_content_2_title , heading_subtitle: settings.home1_pos_content_2_stitle %}
-
-     {% if settings.home1_pos_content_2_fullwidth == false %}
-    </div>
-    {% endif %}
-
-    {% comment %} {%include 'jv-sc-product-tabs' %}{% endcomment %}
-  </section>
-
-
-
-
-  {% comment %} ----- pos--content-3 ----- {% endcomment %}
-  <section id="pos--content-3" class="mt-70">
-
-    {% capture file %}{{settings.home1_pos_content_3}}{% endcapture %}
-
-    {% if settings.home1_pos_content_3_fullwidth == false %}
-      <div class="container">
-    {% endif %}
-      {% include file with heading_enable: settings.home1_pos_content_3_title ,heading_style: settings.home1_pos_content_3_style ,heading_title: settings.home1_pos_content_3_title , heading_subtitle: settings.home1_pos_content_3_stitle %}
-    
-    {% if settings.home1_pos_content_3_fullwidth == false %}
-    </div>
-    {% endif %}
-
-    {% comment %}{% include 'jv-sc-testimonials-3' %}{% endcomment %}
-  </section>
-
-
-  
-  {% comment %} ----- pos--content-4 ----- {% endcomment %}
-  <section id="pos--content-4" class="mt-70">
-
-    {% capture file %}{{settings.home1_pos_content_4}}{% endcapture %}
-
-    {% if settings.home1_pos_content_4_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-      {% include file with heading_enable: settings.home1_pos_content_4_title ,heading_style: settings.home1_pos_content_4_style ,heading_title: settings.home1_pos_content_4_title , heading_subtitle: settings.home1_pos_content_4_stitle  %}
-    {% if settings.home1_pos_content_4_fullwidth == false %}
-    </div>
-    {% endif %}
-
-    {% comment %} {%include 'jv-sc-blog-single-slider' %}{% endcomment %}
-  </section>
-
-  
-  {% comment %} ----- pos--content-5 ----- {% endcomment %}
-  <section id="pos--content-5" class="mt-70">
- 
-      {% capture file %}{{settings.home1_pos_content_5}}{% endcapture %}
-
-      {% if settings.home1_pos_content_5_fullwidth == false %}
-        <div class="container">
-      {% endif %}
-      
-        {% include file with heading_enable: settings.home1_pos_content_5_title ,heading_style: settings.home1_pos_content_5_style ,heading_title: settings.home1_pos_content_5_title , heading_subtitle: settings.home1_pos_content_5_stitle %}
-      
-      {% if settings.home1_pos_content_5_fullwidth == false %}
-        </div>
-      {% endif %}
-
-
-    {% comment %} <div class="container"> {% include 'jv-sc-logopartner' %} </div>{% endcomment %}
-  </section>
-  
+  {%include 'jv-sub-homepage' %}
 
   {% unless settings.home_content == blank or pages[settings.home_content].empty? or pages[settings.home_content].content == blank %}
     {% assign page = pages[settings.home_content] %}

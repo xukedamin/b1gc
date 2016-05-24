@@ -1,4 +1,4 @@
-<main class="page-home-home5 ">
+<main class="wrapper main-content homepage5" role="main">
   <header class="home-sticky-nav-trigger">
 
  {% comment %} ----- Banner  ----- {% endcomment %}
@@ -9,85 +9,14 @@
 
   </header>
 
-
-
   {% comment %} jv-sc-banner-3 {% endcomment %}
- {% if settings.home5_pos_content_1_enable %}
-  <section id="pos--content-1" class="pt-70">
-
-    {% if settings.home5_pos_content_1_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home5_pos_content_1 }}{% endcapture %}
-    {% include file with heading_enable: settings.home5_pos_content_1_title ,heading_style: settings.home5_pos_content_1_title_style ,heading_title: settings.home5_pos_content_1_title , heading_subtitle: settings.home5_pos_content_1_stitle %}
-
-    {% if settings.home5_pos_content_1_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-  
   {% comment %}  'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true  {% endcomment %}
-  {% if settings.home5_pos_content_2_enable %}
-  <section id="pos--content-2" class="pt-70">
-
-    {% if settings.home5_pos_content_2_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home5_pos_content_2 }}{% endcapture %}
-    {% include file with heading_enable: settings.home5_pos_content_2_title ,heading_style: settings.home5_pos_content_2_title_style ,heading_title: settings.home5_pos_content_2_title , heading_subtitle: settings.home5_pos_content_2_stitle %}
-
-    {% if settings.home5_pos_content_2_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-
   {% comment %} jv-sc-logopartner  {% endcomment %}
-  {% if settings.home5_pos_content_3_enable %}
-  <section id="pos--content-3" class="pt-70">
-    
-    {% if settings.home5_pos_content_3_fullwidth == false %}
-     <div class="container">
-    {% endif %}
+  {% comment %} -----jv-sc-newsletter ----- {% endcomment %}
 
-    {% capture file %}{{settings.home5_pos_content_3 }}{% endcapture %}
-    {% include file  with heading_enable: settings.home5_pos_content_3_title ,heading_style: settings.home5_pos_content_3_title_style ,heading_title: settings.home5_pos_content_3_title , heading_subtitle: settings.home5_pos_content_3_stitle%}
+  {% assign homenum = 'home5' %}
+  {%assign pos_length = 5 %}
 
-    {% if settings.home5_pos_content_3_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-
-    {% comment %} -----jv-sc-newsletter ----- {% endcomment %}
-   {% if settings.home5_pos_content_4_enable %}
-  <section id="pos--content-4" class="pt-70">
-
-    {% if settings.home5_pos_content_4_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home5_pos_content_4 }}{% endcapture %}
-    {% include file  with heading_enable: settings.home5_pos_content_4_title ,heading_style: settings.home5_pos_content_4_title_style ,heading_title: settings.home5_pos_content_4_title , heading_subtitle: settings.home5_pos_content_4_stitle%}
-
-    {% if settings.home5_pos_content_4_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-  
-
-
+  {%include 'jv-sub-homepage' %}
 
 </main>

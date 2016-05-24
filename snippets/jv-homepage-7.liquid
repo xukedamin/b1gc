@@ -1,134 +1,18 @@
-<main>	
+<main class="wrapper main-content homepage7" role="main">
 {% if settings.slider_home_enable %}
 	{% include 'header-7' %}
 	{% capture slider %}slider-{{settings.home7_slider_style}}{% endcapture %}
 	{% include slider  %}
 {% endif %}
-  {% comment %} ----- Block Product locator jv-sc-feature-locator ----- {% endcomment %}
 
-  {% if settings.home7_pos_content_1_enable %}
-  <section id="pos--content-1" class="pt-70">
-
-    {% if settings.home7_pos_content_1_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home7_pos_content_1 }}{% endcapture %}
-    {% include file  with heading_enable: settings.home7_pos_content_1_title ,heading_style: settings.home7_pos_content_1_title_style ,heading_title: settings.home7_pos_content_1_title , heading_subtitle: settings.home7_pos_content_1_stitle %}
-
-    {% if settings.home7_pos_content_1_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-  {% if settings.home7_pos_content_2_enable %}
-  <section id="pos--content-2" class="pt-70">
-
-    {% if settings.home7_pos_content_2_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home7_pos_content_2 }}{% endcapture %}
-    {% include file with heading_enable: settings.home7_pos_content_2_title ,heading_style: settings.home7_pos_content_2_title_style ,heading_title: settings.home7_pos_content_2_title , heading_subtitle: settings.home7_pos_content_2_stitle %}
-
-    {% if settings.home7_pos_content_2_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-
-  {% comment %} ----- Block Banner jv-sc-banner-4 ----- {% endcomment %}
-  {% if settings.home7_pos_content_3_enable %}
-  <section id="pos--content-3" class="pt-70">
-    
-    {% if settings.home7_pos_content_3_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home7_pos_content_3 }}{% endcapture %}
-    {% include file  with heading_enable: settings.home7_pos_content_3_title ,heading_style: settings.home7_pos_content_3_title_style ,heading_title: settings.home7_pos_content_3_title , heading_subtitle: settings.home7_pos_content_3_stitle%}
-
-    {% if settings.home7_pos_content_3_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-  
-
-  {% comment %} ----- Block News Product ----- {% endcomment %}
-   {% if settings.home7_pos_content_4_enable %}
-  <section id="pos--content-4" class="pt-70">
-
-    {% if settings.home7_pos_content_4_fullwidth == false %}
-     <div class="container">
-    {% endif %}
-
-    {% capture file %}{{settings.home7_pos_content_4 }}{% endcapture %}
-    {% include file  with heading_enable: settings.home7_pos_content_4_title ,heading_style: settings.home7_pos_content_4_title_style ,heading_title: settings.home7_pos_content_4_title , heading_subtitle: settings.home7_pos_content_4_stitle%}
-
-    {% if settings.home7_pos_content_4_fullwidth == false %}
-     </div>
-    {% endif %}
-
-  </section>
-  {% endif %}
-
-
-   {% if settings.home7_pos_content_5_enable %}
-
-	  <section id="pos--content-5" class="pt-70">
-	    
-	    {% if settings.home7_pos_content_5_fullwidth == false %}
-	     <div class="container">
-	    {% endif %}
-
-	    {% capture file %}{{settings.home7_pos_content_5 }}{% endcapture %}
-	    {% include file with heading_enable: settings.home7_pos_content_5_title ,heading_style: settings.home7_pos_content_5_title_style ,heading_title: settings.home7_pos_content_5_title , heading_subtitle: settings.home7_pos_content_5_stitle %}
-
-	    {% if settings.home7_pos_content_5_fullwidth == false %}
-	     </div>
-	    {% endif %}
-
-	  </section>
-	  {% endif %}
-
-
+{% comment %}
+'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false Load more 
+jv-sc-newsletter
+{% endcomment %}
 
 	{% assign homenum = 'home7' %}
+  {%assign pos_length = 5 %}
 
-	{% for i in (1..5) %}
-
-	{% capture fullwidth %}{{homenum}}_pos_content_{{i}}_fullwidth{% endcapture %}
-	{% capture code %}{{homenum}}_pos_content_{{i}}{% endcapture %}
-	{% capture title %}{{homenum}}_pos_content_{{i}}_title{% endcapture %}
-	{% capture title_style %}{{homenum}}_pos_content_{{i}}_title_style{% endcapture %}
-	{% capture stitle %}{{homenum}}_pos_content_{{i}}_title_stitle{% endcapture %}
-
-	  {% if settings.home7_pos_content_5_enable %}
-
-	  <section id="pos--content-5" class="pt-70">
-	    
-	    {% if settings.fullwidth == false %}
-	     <div class="container">
-	    {% endif %}
-
-	    {% capture file %}{{settings.code }}{% endcapture %}
-	    {% include file with heading_enable: settings.title ,heading_style: settings.title_style ,heading_title: settings.title , heading_subtitle: settings.stitle %}
-
-	    {% if settings.fullwidth == false %}
-	     </div>
-	    {% endif %}
-
-	  </section>
-	  {% endif %}
-
-	{% endfor %}
-
-
+  {%include 'jv-sub-homepage' %}
 
 </main>
