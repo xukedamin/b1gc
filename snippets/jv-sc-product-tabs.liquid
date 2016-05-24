@@ -9,49 +9,69 @@
 
 {% assign listProduct = "sc_product_tab_" %}
 
-<div class="container"> {% include 'jv-sc-heading-box' %} </div>
+<div class="product-tab-wrapper">
+
+	<div class="container"> {% include 'jv-sc-heading-box' %} </div>
 
 
-<div class="nav-tabs-icon tab-section-01 style-2 pt-30" id="tab-2">
-	
-	<ul class="nav nav-tabs" role="tablist" >
+	<div class="nav-tabs-icon tab-section-01 style-2 pt-30" id="tab-2">
+		
+		<ul class="nav nav-tabs" role="tablist" >
+			{% for i in (1..6) %}
+				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
+				{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+
+					{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+					{% assign featured_row = settings[featured_row] %}
+
+					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
+					
+					{% unless collections[featured_row].all_products_count == 0 %}
+						<li class="{% if i == 1 %} active {% endif %} ">
+							<a href="#product-tab-tab_{{ i }}" data-toggle="tab" role="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
+						</li>
+					{% endunless %}
+				{% endif %}
+		{% endfor %}
+		</ul>
+	</div>
+
+	<div class="tab-content">
 		{% for i in (1..6) %}
-			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-			{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 			{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
-				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+			{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 				{% assign featured_row = settings[featured_row] %}
+				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
-				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
-				
 				{% unless collections[featured_row].all_products_count == 0 %}
-					<li class="{% if i == 1 %} active {% endif %} ">
-						<a href="#tab{{ i }}tab-2" data-toggle="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
-					</li>
+					<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="product-tab-tab_{{ i }}">
+					{% include 'featured-row-content' %}
+					</div>
 				{% endunless %}
+
 			{% endif %}
-	{% endfor %}
-	</ul>
+		{% endfor %}
+	</div>
+
 </div>
 
-<div class="tab-content">
-	{% for i in (1..6) %}
-		{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-		{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
-		{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+<script>
+	function randomID() {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
 
-		{% if settings[featured_row_enable] and settings[featured_row] != blank %}
-			{% assign featured_row = settings[featured_row] %}
-			{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
+var list = jQuery('.product-tab-wrapper .nav a[role=tab]');
+var panels = jQuery('.product-tab-wrapper .tab-content .tab-pane');
 
-			{% unless collections[featured_row].all_products_count == 0 %}
-				<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="tab{{ i }}tab-2">
-				{% include 'featured-row-content' %}
-				</div>
-			{% endunless %}
+for (var i = list.length - 1; i >= 0; i--) {
+	var random =  randomID();
+	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
+	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+}
 
-		{% endif %}
-	{% endfor %}
-</div>
+</script>
