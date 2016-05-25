@@ -21,9 +21,13 @@ Select the product image size from settings.
 {% endcomment %}
 {% assign image_size = settings.collection_prod_image_sizes %}
 
-<div class="col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0">
+
+
+
+<!-- <div class="col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0"> -->
+<div class="col-md-6">
   <div class="product-featured-thumb">
-    <ul class="bxslider">
+    <ul class="bxslider1">
 
     {% for image in product.images %}
     <li> <img src="{{ image.src  | img_url: image_size }}"> </li>
@@ -37,7 +41,7 @@ Select the product image size from settings.
     <h3><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
      <div class="info-price">
         <div class="product-item--price price">
-          <span class=" medium--left">
+          <span class="medium--left">
             {% include 'price' with product.price %}
           </span>
           {% if on_sale %}

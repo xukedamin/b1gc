@@ -4,8 +4,10 @@
 
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
+
       {% assign handlej = link.title | handleize %}
       {% assign style ='nav' %}
+      
       {% for i in (1..10) %}
         {% capture pick_name %}nav{{i}}{% endcapture %}
         {% capture pick_name %}{{settings[pick_name] | remove: "jvsub-" }}{% endcapture %}
@@ -20,12 +22,16 @@
       {% endfor %}
 
       {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
-      <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-childrent{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">
+      <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-children{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">
         <a  href="{{ link.url }}">{{ link.title }}</a>
         {% include style class:' sub-menu', handle: handlei %}
       </li>
+
+
     {% endfor%}
   </ul>
+
+
   {% endif %}
 {% endif %}
 

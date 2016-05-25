@@ -41,19 +41,17 @@
         {% endif %}
       </a>
 
-      {% if quickview_enable == blank %}
       <div class="product-extra-mask">
         <div class="product-extra-link">
             {%include 'product-grid-item--product-action' %}
+            <a href="#" class="product-quick-view"><span class="lnr lnr-magnifier"></span></a>
+            
+            {%if settings.product_quickview_enable %}
+              {%include 'product-quick-view' %}
+            {% endif %}
+
           </div>
       </div>
-      {%elsif quickview_enable and settings.product_quickview_enable %}
-        <!-- <div class="sca-qv-button-wrap" >
-          <a class="sca-qv-button action product-quick-view" handle="{{product.handle}}" href="#sca-qv-showqv" style="">{{'products.product.quick_shop'| t }}</a>
-        </div> -->
-        {%include 'sca-quick-view'%}
-      {% endif %}
-
       
       <div class="product-box-promotion">
 

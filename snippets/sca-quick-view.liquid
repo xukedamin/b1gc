@@ -1,4 +1,4 @@
-<div style="display: none !important" >
+<div >
 	<a class="action product-quick-view sca-qv-button"  href="#sca-qv-showqv"title="{{'products.product.quick_shop'| t }}" handle="{{product.handle}}" >
 	<span class="lnr lnr-magnifier"></span>
 </a></div>
@@ -8,3 +8,11 @@
 {% assign is_loaded_settings = true  %}
 <div id='sca-qv-metadata' style="display: none !important" jsondata='{{ shop.metafields.sca-np-qv.settings}}' moneyFormat="{{ shop.money_format }}" noimage="{{ 'sca-qv-no-image.jpg' | asset_url }}"></div>
 {% endif %}
+
+<script type="text/javascript">
+   $(".sca-qv-button").fancybox({
+        'titleShow'   : false,
+        'padding'   : 0
+      });
+	
+</script>

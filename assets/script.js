@@ -171,7 +171,7 @@
                 $(this).prev().show();
                 $('.main-menu').removeClass('active');
             });
-            $('.main-nav li.menu-item-has-childrent>a').click(function(event) {
+            $('.main-nav li.menu-item-has-children>a').click(function(event) {
                 event.stopPropagation();
                 $(this).toggleClass('active');
                 if ($(this).hasClass('active')) {
