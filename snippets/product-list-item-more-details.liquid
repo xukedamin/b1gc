@@ -27,7 +27,7 @@ Select the product image size from settings.
 <!-- <div class="col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0"> -->
 <div class="col-md-6">
   <div class="product-featured-thumb">
-    <ul class="bxslider1">
+    <ul class="bxslider">
 
     {% for image in product.images %}
     <li> <img src="{{ image.src  | img_url: image_size }}"> </li>

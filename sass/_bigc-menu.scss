@@ -18,6 +18,7 @@ $menu__sub__color: #{'{{ settings.mega_sub_color }}'};
 $menu__sub__font-weight:  #{'{{ settings.mega_sub_weight }}'};
 $menu__sub__font-size: #{'{{ settings.mega_sub_size }}px'} ;
 
+$menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
 
 //MENU
 .dropdownMenu {
@@ -174,6 +175,8 @@ $menu__sub__font-size: #{'{{ settings.mega_sub_size }}px'} ;
 
 }
 
+
+
 //megamenu
 .dropdownMenu .menu-item-has-children.mega-menu {
   position: static !important;
@@ -241,6 +244,22 @@ $menu__sub__font-size: #{'{{ settings.mega_sub_size }}px'} ;
   &.menu-5-col  .mega-menu-content > li {
     width: 20%;
   }
+}
+
+.main-nav .mega-menu.menu-item-has-children .sub-menu li>a{ 
+  border: none; 
+}
+
+.main-nav .mega-menu.menu-item-has-children .sub-menu .menu-title >a {
+    margin-bottom: 15px;
+}
+
+.dropdownMenu .mega-menu .mega-menu-content.sub-menu{
+ 
+  background-image: url($menu__mega__bg__img);
+  background-color: $color_white;
+  background-position: right bottom;
+  background-repeat: no-repeat; 
 }
 
 ul.dropdownMenu__ li:nth-child(3) > ul { display:block;}
@@ -435,6 +454,10 @@ ul.dropdownMenu__ li:nth-child(3) > ul { display:block;}
       border-bottom: 1px solid $color_mercury;
     }
   }
+}
+
+.main-nav .mega-menu.menu-item-has-children .sub-menu a{
+    padding: 10px 0;
 }
 
 .main-nav > ul > li > a > sup {

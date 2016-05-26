@@ -356,6 +356,12 @@
         ],
         "default": "'Open Sans', sans-serif"
       },
+        {
+        "type": "text",
+        "id": "mega_bg_img",
+        "label": "Mega background image"
+        
+      },
       {
         "type": "color",
         "id": "mega_main_color",
