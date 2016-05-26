@@ -1,86 +1,37 @@
 // bigc-responsive.scss
 
 @media (min-width: 992px) {
-.col-md-jvoffset-12 {
-    margin-left: -100%;
+  .col-md-jvoffset-12 { margin-left: -100%; }
+  .col-md-jvoffset-11 { margin-left: -91.6667%; }
+  .col-md-jvoffset-10 { margin-left: -83.3333%; }
+  .col-md-jvoffset-9 { margin-left: -75%; }
+  .col-md-jvoffset-8 { margin-left: -66.6667%; }
+  .col-md-jvoffset-7 { margin-left: -58.3333%; }
+  .col-md-jvoffset-6 { margin-left: -50%; }
+  .col-md-jvoffset-5 { margin-left: -41.6667%; }
+  .col-md-jvoffset-4 { margin-left: -33.3333%; }
+  .col-md-jvoffset-3 { margin-left: -25%; }
+  .col-md-jvoffset-2 { margin-left: -16.6667%; }
+  .col-md-jvoffset-1 { margin-left: -8.33333%; }
+  .col-md-jvoffset-0 { margin-left: 0; }
+
 }
-.col-md-jvoffset-11 {
-    margin-left: -91.6667%;
-}
-.col-md-jvoffset-10 {
-    margin-left: -83.3333%;
-}
-.col-md-jvoffset-9 {
-    margin-left: -75%;
-}
-.col-md-jvoffset-8 {
-    margin-left: -66.6667%;
-}
-.col-md-jvoffset-7 {
-    margin-left: -58.3333%;
-}
-.col-md-jvoffset-6 {
-    margin-left: -50%;
-}
-.col-md-jvoffset-5 {
-    margin-left: -41.6667%;
-}
-.col-md-jvoffset-4 {
-    margin-left: -33.3333%;
-}
-.col-md-jvoffset-3 {
-    margin-left: -25%;
-}
-.col-md-jvoffset-2 {
-    margin-left: -16.6667%;
-}
-.col-md-jvoffset-1 {
-    margin-left: -8.33333%;
-}
-.col-md-jvoffset-0 {
-    margin-left: 0;
-}
-}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
-.col-sm-jvoffset-12 {
-    margin-left: -100%;
-}
-.col-sm-jvoffset-11 {
-    margin-left: -91.6667%;
-}
-.col-sm-jvoffset-10 {
-    margin-left: -83.3333%;
-}
-.col-sm-jvoffset-9 {
-    margin-left: -75%;
-}
-.col-sm-jvoffset-8 {
-    margin-left: -66.6667%;
-}
-.col-sm-jvoffset-7 {
-    margin-left: -58.3333%;
-}
-.col-sm-jvoffset-6 {
-    margin-left: -50%;
-}
-.col-sm-jvoffset-5 {
-    margin-left: -41.6667%;
-}
-.col-sm-jvoffset-4 {
-    margin-left: -33.3333%;
-}
-.col-sm-jvoffset-3 {
-    margin-left: -25%;
-}
-.col-sm-jvoffset-2 {
-    margin-left: -16.6667%;
-}
-.col-sm-jvoffset-1 {
-    margin-left: -8.33333%;
-}
-.col-sm-jvoffset-0 {
-    margin-left: 0;
-}
+  .col-sm-jvoffset-12 { margin-left: -100%; }
+  .col-sm-jvoffset-11 { margin-left: -91.6667%; }
+  .col-sm-jvoffset-10 { margin-left: -83.3333%; }
+  .col-sm-jvoffset-9 { margin-left: -75%; }
+  .col-sm-jvoffset-8 { margin-left: -66.6667%; }
+  .col-sm-jvoffset-7 { margin-left: -58.3333%; }
+  .col-sm-jvoffset-6 { margin-left: -50%; }
+  .col-sm-jvoffset-5 { margin-left: -41.6667%; }
+  .col-sm-jvoffset-4 { margin-left: -33.3333%; }
+  .col-sm-jvoffset-3 { margin-left: -25%; }
+  .col-sm-jvoffset-2 { margin-left: -16.6667%; }
+  .col-sm-jvoffset-1 { margin-left: -8.33333%; }
+  .col-sm-jvoffset-0 { margin-left: 0; }
 }
 
 
@@ -96,7 +47,6 @@
     max-height: #{'{{ settings.maxheight-logo-2-mobile }}px'};
     }
 
-  
     .div-product-grid-item .col-md-6:nth-child(2n+1),
     .div-product-grid-item .col-md-4:nth-child(3n+1),
     .div-product-grid-item .col-md-3:nth-child(4n+1),
@@ -141,18 +91,12 @@
 }
 
 @media only screen and (min-width: 992px) {
-.shop-cart-total h3.title {
-  text-align: right
-}
-.shop-cart-total .shipping h5 {
-  width: 25%
-}
-.shop-cart-total .shipping .content {
-  width: 75%
-}
-.shop-cart-total .button-wrapper {
-  text-align:right
-  }
+
+  .shop-cart-total h3.title { text-align: right; }
+  .shop-cart-total .shipping h5 { width: 25%; }
+  .shop-cart-total .shipping .content { width: 75%; }
+  .shop-cart-total .button-wrapper { text-align: right; }
+
 }
 
 @media (max-width: 767px) {
@@ -186,52 +130,6 @@
       background-color: rgba($color_black, 0.6);
     }
   }
-
-//menu
-
-  .mobile-menu {
-    display:block;
-  }
-
-  .main-nav3 .mobile-menu {
-      top: 15px;
-      z-index: 99;
-  }
-
-  .main-nav-home .mobile-menu a {
-      color: #fff;
-  }
-  .main-nav-home  .mobile-menu {
-      right: 1px;
-      top: -31px;
-  }
-
-  .main-nav.main-nav-home .main-menu {
-      margin-top: 20px;
-  }
-  .main-nav .main-menu.active {
-      right: 0;
-  }
-  .main-nav.main-nav-home .main-menu {
-      margin-top: 50px;
-  }
-
-
-  .main-nav .main-menu {
-      background: #fff none repeat scroll 0 0;
-      border: 1px solid #e5e5e5;
-      box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
-      margin: 0;
-      padding: 15px 15px 30px;
-      position: absolute;
-      right: -320px;
-      top: 0;
-      transition: all 0.5s ease-out 0s;
-      width: 290px;
-      z-index: 9999;
-  }
-
-
 
 }
 
@@ -290,4 +188,10 @@
   .shop-cart-list table .product-total {
     width: 120px;
   }
+}
+
+
+@media (max-width: 360px)
+.top-left .language-link, .top-left .currency-link {
+    padding: 0 40px 0 10px;
 }

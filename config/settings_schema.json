@@ -1242,6 +1242,36 @@
         "content": "Header #1"
       },
       {
+          "type":      "radio",
+          "id":        "logo_type",
+          "label":     "Logo type",
+          "options": [
+            { "value": "logo_type_image", "label": "Image" },
+            { "value": "logo_type_text", "label": "Text" }
+          ],
+          "default":   "logo_type_image"
+      }
+      ,
+        {
+        "type": "checkbox",
+        "id": "logo_text_enable",
+        "label": "logo_text_enable"
+      },
+      {
+        "type": "text",
+        "id": "logo_text_title",
+        "label": "Logo text title",
+        "default": "Big"
+        
+      },
+       {
+        "type": "text",
+        "id": "logo_text_stitle",
+        "label": "Logo text subtitle",
+        "default": "C"
+      },
+
+      {
         "type": "checkbox",
         "id": "logo_use_image",
         "label": "Use a custom logo"
@@ -7344,7 +7374,7 @@
       "type": "text",
       "id": "sc_product_tab_grid_1_product_time",
       "label": "Day",
-      "info":"Format MM/DD/YYY",
+      "info":"Format MM/DD/YYYY",
       "default": "6/15/2016"
     }, 
     {

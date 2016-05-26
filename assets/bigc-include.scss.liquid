@@ -311,7 +311,8 @@ Dependency-free breakpoint mixin
   font-weight: normal;
 }
 
-.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .panel-group.accordion .h2, .panel-group.accordion.style2 .panel-heading, .panel-group.accordion.style3 .panel-heading .panel-title, .dropdownMenu > li > a, .dropdownMenu li ul li a, .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a, .main-nav > ul > li > a, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-footer3 > a, .box-menu-footer3 > h2, .title-product a, .item-product-leading .readmore, .related-product .item-product a, .title-product-detail, .selector-wrapper.attr-size,
+.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .panel-group.accordion .h2, .panel-group.accordion.style2 .panel-heading, .panel-group.accordion.style3 .panel-heading .panel-title, .dropdownMenu > li > a, .dropdownMenu li ul li a, .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a, .main-nav > ul > li > a, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-text h1,
+.logo-header3 h1, .logo-footer3 > a, .box-menu-footer3 > h2, .title-product a, .item-product-leading .readmore, .related-product .item-product a, .title-product-detail, .selector-wrapper.attr-size,
 .attr-product.attr-size, .selector-wrapper label,
 .attr-product label, .info-qty > label, .info-qty .quantity-selector, .swatch .header, .swatch label, .item-collections .inner .info-collections .title, .content-catelog > h2, .content-catelog .download-catalog, .product-sort a, .product-filter .ui-selectmenu-button, .product-filter .filter-selected, .item-product-info .product-readmore, .title-popular-box, .post-title, .blog-list-title, .widget-post-adv-text, .title-sidebar-blog, .latest-post-content > h3, .latest-post-content .readmore, .title-post-leading, .banner-box, .banner-box.banner-style3 .banner-box-info, .sub-title, .title, .desc-title, .leading-text-adv, .item-text-adv, .slider-tab #bx-pager a, .banner-rect-info, .banner-info-text, .page-register form label, .nav-tabs-filter .nav-tabs > li > a, .filter-product .btn-filter, .advanced-filters a, .home-extra-sub .close-extra-sub, .header-banner-title, .category-lightbox > h2, .category-lightbox .close-category-lightbox, .product-featured-info > h3, .item-popular-info > h3 a, .logo.logo-footer2 a, .list-tab-title .nav > li > a, .hotdeal-countdown .text, .box-title h2, .title-normal, .item-product-loadmore .product-quick-view, .item-product-loadmore .title-product a, .register-box a {
   text-transform: uppercase;
@@ -5368,6 +5369,13 @@ a.jvlogo {
   margin: 0;
 }
 
+.header-1 .logo-img-1 {
+  display: none;
+}
+.header-1 .logo-text {
+  display: none;
+}
+
 /*Header*/
 .header {
   padding: 20px 0;
@@ -5540,7 +5548,6 @@ a.jvlogo {
   top: 100%;
   opacity: 0;
   content: '\e873';
-  /*chevron up*/
 }
 
 .currency-box:hover:after {
@@ -5569,7 +5576,6 @@ a.jvlogo {
 }
 .top-left .language-link:after {
   content: '\e874';
-  /*chevron down*/
   position: absolute;
   right: 20px;
   top: 0;
@@ -5755,11 +5761,13 @@ a.jvlogo {
   padding: 0;
 }
 
+.logo-text h1,
 .logo-header3 h1 {
   color: #1b8dbf;
   font-size: 48px;
   margin: 0;
 }
+.logo-text h1 span,
 .logo-header3 h1 span {
   color: #fdd932;
 }
@@ -5851,11 +5859,6 @@ a.jvlogo {
   margin-bottom: 14px;
 }
 
-.list-unstyled.language-list {
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-}
-
 .language-list img {
   margin-right: 15px;
 }
@@ -5868,6 +5871,11 @@ a.jvlogo {
 }
 .language-list li.active a {
   color: #2caae1;
+}
+
+.list-unstyled.language-list {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
 }
 
 .box-info-user .currency-list li {

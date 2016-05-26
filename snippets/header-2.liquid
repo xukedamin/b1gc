@@ -1,36 +1,39 @@
 {% include 'header-top-black' %}
-<div class="header">
+
+<div class="header header-2">
   <div class="container">
     <div class="row">
+      
       <div class="col-md-2 col-sm-12 col-xs-12">
-          <a  title="{{ shop.name }}" alt="{{ shop.name }}" href="/" rel="home">
-            <span class="logo-table">
-              <span class="logo-table-cell">
-                <img src="{{ 'logo-1.png' | asset_url }}" alt="{{ shop.name }}"  >
-              </span>
-            </span>
-          </a>
-        </div>
+        
+        {% include 'header-logo' %}
+
+      </div>
+      
       <div class="col-md-8 col-sm-11 col-xs-12">
         <div class="main-nav">
-        {% include 'nav' class: 'dropdownMenu main-menu', handle: 'main-menu' %}
-        <div class="mobile-menu">
-          <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
-          <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
-        </div>
+          {% include 'nav' class: 'dropdownMenu main-menu', handle: 'main-menu' %}
+          <div class="mobile-menu">
+            <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
+            <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+          </div>
         </div>
       </div>
+
       <div class="col-md-2 col-sm-1 col-xs-12">
         <div class="info-header info-header2">
           <ul class="info-total">
             <li class="info-search">
               <a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
+
               {% include 'search-bar-2' %}
+
             </li>
           </ul>
         </div>
       </div>
-  </div>
+
+    </div>
   </div>
 </div>
 

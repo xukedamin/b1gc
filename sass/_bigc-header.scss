@@ -34,6 +34,27 @@ a.jvlogo {
   }
 }
 
+
+.header-1 {
+  .logo-img-1{
+    display: none;
+  }
+  .logo-text{
+    display: none;
+  }
+}
+
+.header-2{
+  // .logo-img-2{
+  //   display: none;
+  // }
+  // .logo-text{
+  //   display: none;
+  // }
+}
+
+
+
 /*Header*/
 .header{
   padding:20px 0;
@@ -241,7 +262,7 @@ a.jvlogo {
   position: absolute;
   top: 100%;
   opacity: 0;
-  content: '\e873';/*chevron up*/
+  content: '\e873';
   @extend %jv-font-Linearicons;
   @extend %jv-transition-easeout;
 }
@@ -282,7 +303,6 @@ a.jvlogo {
 
     &:after {
       content: '\e874';
-      /*chevron down*/
       @extend %jv-font-Linearicons;
       position: absolute;
       right: 20px;
@@ -513,16 +533,19 @@ a.jvlogo {
   }
 }
 
-
+.logo-text h1,
 .logo-header3 h1 {
   color: $color_currious-blue-darker;
   font-size: 48px;
   margin: 0;
+  @extend %text-up;
 
   span {
     color: $color_bright-sun;
   }
 }
+
+
 
 .header.header3 {
   background: $color_alabaster none repeat scroll 0 0;
@@ -623,10 +646,7 @@ a.jvlogo {
 }
 
 
-.list-unstyled.language-list {
-  border-left: 1px solid $color_mercury;
-  border-right: 1px solid $color_mercury;
-}
+
 
 .language-list {
   img {
@@ -644,6 +664,11 @@ a.jvlogo {
       }
     }
   }
+}
+
+.list-unstyled.language-list {
+  border-left: 1px solid $color_mercury;
+  border-right: 1px solid $color_mercury;
 }
 
 
