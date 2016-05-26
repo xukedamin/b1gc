@@ -153,7 +153,7 @@
 
 
         //Menu Responsive
-        if ($(window).width() < 1025) {
+        if ($(window).width() < 1025) { 
             $('body').click(function() {
                 $('.main-menu').removeClass('active');
             });
@@ -173,6 +173,10 @@
             });
             $('.main-nav li.menu-item-has-children>a').click(function(event) {
                 event.stopPropagation();
+                event.preventDefault();
+
+                
+
                 $(this).toggleClass('active');
                 if ($(this).hasClass('active')) {
                     event.preventDefault();
@@ -184,6 +188,7 @@
                 }
             });
         }
+
         //Post Gallery
         $('.item-post-gallery .fancybox').fancybox();
         $('.item-team-gallery .fancybox').fancybox();
