@@ -1,110 +1,61 @@
-<div class="header header3">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5 col-sm-12 col-xs-12">
-				<div class="main-nav main-nav3">
-					{% include 'nav' class: 'dropdownMenu main-menu', handle: 'menu-short-1' %}
-					
-					<div class="mobile-menu">
-						<a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
-						<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+{% include 'header-top-bar--welcome' %}
+{% include 'header-top-bar--setting' with top_bar_myaccount_show:false %}
+
+<div id="header">
+	<div class="header header7">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<div class="logo-header7">
+						{%include 'header-logo' %}
+					</div>
+									
+					{% if settings.header_search_enable %}
+					<div class="search-form7">
+						{% include 'search-bar' %}
+					</div>
+					{% endif %}
+
+				</div>
+				<div class="col-md-5 col-sm-8 col-xs-12">
+					<div class="main-nav main-nav7">
+					<!-- menu-short-1 -->
+					 {% include 'nav' class: 'dropdownMenu main-menu', handle: settings.header_main_menu_short %}
+						<div class="mobile-menu">
+							<a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
+							<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-12">
+					<div class="register-box">
+				
+							{% if shop.customer_accounts_enabled %}
+		          	{% if customer %}
+		             <a class="link-login account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
+		                {{ 'layout.customer.my_account' | t }}
+		              </a>
+		           	{% else %}
+		           		<a href="/account/login" class="link-signin account-link">
+		                {{ 'layout.customer.my_account' | t }}
+		              </a>
+		           {% endif %}
+		      		{% endif %}
+
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				<div class="logo-header3">
-					<a href="index.html"><h1>BIG<span>C</span></h1></a>
-				
-					<a  title="{{ shop.name }}" alt="{{ shop.name }}" href="/" class="" rel="home">
-				<!-- 	<span class="logo-table">
-						<span class="logo-table-cell">
-							<img src="{{ 'logo-2.png' | asset_url }}" alt="{{ shop.name }}" class="logo-img-1" >
-							<img src="{{ 'logo-2-mobile.png' | asset_url }}" alt="{{ shop.name }}" class="logo-img-2" >
-						</span>
-					</span> -->
-				</a>
-			</div>
-			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12">
-				<div class="info-header info-header3">
-					<ul class="info-total">
-						<li class="info-user info-user3">
-							
-							{% if shop.customer_accounts_enabled %}
-								{% if customer %}
+		</div>
 
-								<a href="#" class="info-icon icon-user"><span class="lnr lnr-user"></span></a>
-								  <a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
-			                  <span class="lnr lnr-user"></span> <!-- {{ 'layout.customer.my_account' | t }} -->
-			                </a>
-			            {% else %}
-			            	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
-			                <span class="lnr lnr-user"></span><!--  {{ 'layout.customer.my_account' | t }} -->
-			              </a>
-
-								{% endif %}
-					    {% endif %}
-
-							<div class="box-info-user">
-
-								{% if shop.customer_accounts_enabled %}
-			          {% if customer %}
-
-	                <ul class="list-unstyled  user-info-list">
-	                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
-	                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
-	                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-	                </ul>
-
-			          {% else %}
-
-			              <ul class="list-unstyled  user-info-list">
-			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
-			                {% if shop.customer_accounts_optional %}
-			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
-			                {% endif %}
-			                <li><a href="#"><span class="lnr lnr-heart"></span> Wishlist</a></li>
-											<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
-											<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
-			              </ul>
-
-					        {% endif %}
-					      {% endif %}
-
-								<ul class="list-unstyled language-list">
-									<li  class="active"><a href="#"><img src='{{ "flag-fr.png" | asset_url }}' alt="" />French</a></li>
-									<li><a href="#"><img src='{{ "flag-en.png" | asset_url }}' alt="" />English</a></li>
-									<li><a href="#"><img src='{{ "flag-gm.png" | asset_url }}' alt="" />German</a></li>
-								</ul>
-								<!-- <ul class="list-unstyled currency-list"> -->
-									<!-- <li class="active"><a href="#">$ USD</a></li> -->
-									<!-- <li><a href="#">€ EUR</a></li> -->
-									{{ settings.default_currency }}
-
-								{% if settings.show_multiple_currencies %}
-				            {% include 'currency-picker' %}
-				        {% endif %}
-
-								<!-- </ul> -->
-							</div>
-
-
-						</li>
-						<li class="info-search">
-							<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
-							<div class="search-form search-form3">
-								{% include 'search-bar' %}
-							</div>
-						</li>
-						<li class="info-cart info-cart3">
-							<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span>  <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
-							<div class="inner-cart-info inner-cart-info5">
-								{% include 'mini-cart' %}
-							</div>
-						</li>
-					</ul>
-				</div>
+		{%if settings.header_cart_enable %}
+		<div class="info-cart info-cart7">
+			<a class="info-icon icon-cart" href="#"><span class="lnr lnr-cart"></span> <sup>0</sup></a>
+			<div class="inner-cart-info">
+				{% include 'mini-cart' %}
 			</div>
 		</div>
+		{% endif %}
+
 	</div>
 </div>
+<!-- End Header -->

@@ -131,10 +131,6 @@
     {% include 'header-4' %}
     {% when '5' %}
     {% include 'header-5' %}
-    {% when '6' %}
-    {% include 'header-6' %}
-    {% when '7' %}
-    {% include 'header-7' %}
     {% else %}
     {% include 'header-1' %}
     {% endcase %}
@@ -151,7 +147,7 @@
   
   
   {% if settings.footer_newsletter_enable == true %}
-    <a id="newsletter-btn" href="#mc_embed_signup"><span class="hidden">Try now<span></a>
+    <a id="newsletter-btn" href="#mc_embed_signup"><span class="hidden">Try now</span></a>
     {% include 'newsletter-popup' %}
   {% endif %}
 

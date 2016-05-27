@@ -30,8 +30,8 @@
   .col-sm-jvoffset-4 { margin-left: -33.3333%; }
   .col-sm-jvoffset-3 { margin-left: -25%; }
   .col-sm-jvoffset-2 { margin-left: -16.6667%; }
-  .col-sm-jvoffset-1 { margin-left: -8.33333%; }
-  .col-sm-jvoffset-0 { margin-left: 0; }
+  .col-sm-jvoffset-1 { margin-left: -8.33333%; 
+}  .col-sm-jvoffset-0 { margin-left: 0; }
 }
 
 
@@ -191,7 +191,8 @@
 }
 
 
-@media (max-width: 360px)
-.top-left .language-link, .top-left .currency-link {
-    padding: 0 40px 0 10px;
+@media (max-width: 360px){
+  .top-left .language-link, .top-left .currency-link {
+      padding: 0 40px 0 10px;
+  }
 }

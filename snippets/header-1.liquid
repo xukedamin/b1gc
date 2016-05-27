@@ -1,7 +1,8 @@
-
+{% include 'header-top-bar--welcome' %}
 <div id="header">
 
-  {% include 'header-top-black-1' %}
+  {% include 'header-top-bar--setting' with top_bar_header_cart_show:false %}
+
   <div class="header header-home clearfix header-1">
     <div class="container">
       
@@ -15,7 +16,7 @@
           
 
           <div class="main-nav main-nav-home">
-            {% include 'nav' class: 'mainmenu ', handle: 'main-menu' %}
+            {% include 'nav' class: 'mainmenu ', handle: settings.header_main_menu %}
             <div class="mobile-menu">
               <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
               <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
@@ -30,8 +31,6 @@
             {% include slider  %}
 
           {% endif %}
-         
-          
           
           {% include 'header-1_banner' %}
         </div>

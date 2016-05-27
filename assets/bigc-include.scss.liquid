@@ -311,7 +311,7 @@ Dependency-free breakpoint mixin
   font-weight: normal;
 }
 
-.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .panel-group.accordion .h2, .panel-group.accordion.style2 .panel-heading, .panel-group.accordion.style3 .panel-heading .panel-title, .dropdownMenu > li > a, .dropdownMenu li ul li a, .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a, .main-nav > ul > li > a, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-text h1,
+.loading-ball .ball2, .bt-link, .title-bittons, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > label, .contact-form > h2, .btn-submit-form, .btn-reset-form, .title-popup, .newsletter-popup-info > h3, .newsletter-popup-info input[type="submit"], .box-header-intro label, .newsletter-form label, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a, .panel-group.accordion .h2, .panel-group.accordion.style2 .panel-heading, .panel-group.accordion.style3 .panel-heading .panel-title, .dropdownMenu > li > a, .dropdownMenu li ul li a, .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a, .main-nav > ul > li > a, .main-nav .label-sub, .inner-cart-info h2, .inner-cart-info .close-cart-info, .total-cart, .link-cart > *, .widget.widget-category h3, .widget-compare-link .clear-compare, .top-left .language-link, .top-left .currency-link, .top-header .container > div > ul > li > a, .top-right .top-header__menu-title, .logo-text h1,
 .logo-header3 h1, .logo-footer3 > a, .box-menu-footer3 > h2, .title-product a, .item-product-leading .readmore, .related-product .item-product a, .title-product-detail, .selector-wrapper.attr-size,
 .attr-product.attr-size, .selector-wrapper label,
 .attr-product label, .info-qty > label, .info-qty .quantity-selector, .swatch .header, .swatch label, .item-collections .inner .info-collections .title, .content-catelog > h2, .content-catelog .download-catalog, .product-sort a, .product-filter .ui-selectmenu-button, .product-filter .filter-selected, .item-product-info .product-readmore, .title-popular-box, .post-title, .blog-list-title, .widget-post-adv-text, .title-sidebar-blog, .latest-post-content > h3, .latest-post-content .readmore, .title-post-leading, .banner-box, .banner-box.banner-style3 .banner-box-info, .sub-title, .title, .desc-title, .leading-text-adv, .item-text-adv, .slider-tab #bx-pager a, .banner-rect-info, .banner-info-text, .page-register form label, .nav-tabs-filter .nav-tabs > li > a, .filter-product .btn-filter, .advanced-filters a, .home-extra-sub .close-extra-sub, .header-banner-title, .category-lightbox > h2, .category-lightbox .close-category-lightbox, .product-featured-info > h3, .item-popular-info > h3 a, .logo.logo-footer2 a, .list-tab-title .nav > li > a, .hotdeal-countdown .text, .box-title h2, .title-normal, .item-product-loadmore .product-quick-view, .item-product-loadmore .title-product a, .register-box a {
@@ -3983,7 +3983,6 @@ span.click-button {
   height: {{ settings.header_height }}px;
   outline: none;
   text-decoration: none;
-  overflow: hidden;
   display: block;
 }
 .dropdownMenu > li > a:before {
@@ -4322,17 +4321,19 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
   padding: 10px 0;
 }
 
-.main-nav > ul > li > a > sup {
+.main-nav .label-sub {
   font-size: 10px;
   left: 50%;
   margin-left: -8px;
   position: absolute;
   top: -10px;
 }
-.main-nav > ul > li > a > sup.title-hot {
+
+.title-hot {
   color: #fbb450;
 }
-.main-nav > ul > li > a > sup.title-new {
+
+.title-new {
   color: #2caae1;
 }
 
@@ -5369,13 +5370,6 @@ a.jvlogo {
   margin: 0;
 }
 
-.header-1 .logo-img-1 {
-  display: none;
-}
-.header-1 .logo-text {
-  display: none;
-}
-
 /*Header*/
 .header {
   padding: 20px 0;
@@ -5785,7 +5779,7 @@ a.jvlogo {
   position: absolute;
   right: 0;
   top: 100%;
-  width: 400px;
+  width: auto;
   margin-top: 35px;
   opacity: 0;
   visibility: hidden;
@@ -12072,50 +12066,6 @@ Page Detail
   .latest-post.alt .latest-post-content:before {
     background-color: rgba(0, 0, 0, 0.6);
   }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  .main-nav3 .mobile-menu {
-    top: 15px;
-    z-index: 99;
-  }
-
-  .main-nav-home .mobile-menu a {
-    color: #fff;
-  }
-
-  .main-nav-home .mobile-menu {
-    right: 1px;
-    top: -31px;
-  }
-
-  .main-nav.main-nav-home .main-menu {
-    margin-top: 20px;
-  }
-
-  .main-nav .main-menu.active {
-    right: 0;
-  }
-
-  .main-nav.main-nav-home .main-menu {
-    margin-top: 50px;
-  }
-
-  .main-nav .main-menu {
-    background: #fff none repeat scroll 0 0;
-    border: 1px solid #e5e5e5;
-    box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    padding: 15px 15px 30px;
-    position: absolute;
-    right: -320px;
-    top: 0;
-    transition: all 0.5s ease-out 0s;
-    width: 290px;
-    z-index: 9999;
-  }
 }
 @media (max-width: 550px) {
   .shop-cart-coupon input {
@@ -12180,5 +12130,10 @@ Page Detail
 
   .shop-cart-list table .product-total {
     width: 120px;
+  }
+}
+@media (max-width: 360px) {
+  .top-left .language-link, .top-left .currency-link {
+    padding: 0 40px 0 10px;
   }
 }

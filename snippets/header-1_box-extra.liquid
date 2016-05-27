@@ -1,5 +1,5 @@
 <div class="home-box-extra">
-  {% if settings.show_header_cart %}
+  {% if settings.header_cart_enable %}
   <div class="home-cart-box">
     <a href="#" class="icon-extra-sub icon-home-cart">
       <span class="lnr lnr-cart"></span>
@@ -8,9 +8,7 @@
 
     <div class="home-extra-sub">
       <a href="#" class="close-extra-sub">Close</a>
-   <!--    <a href="/cart" class="mycart-link">
-        <span class="lnr-cart"></span> {{ 'cart.general.mycart' | t }}  
-      </a> -->
+  
       <div class="inner-cart-info">
         {% include 'mini-cart' %}
       </div>
@@ -24,14 +22,13 @@
     </a>
     <div class="home-extra-sub">
       <a href="#" class="close-extra-sub">Close</a>
-      <ul class="list-unstyled share-social">
-        <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-        <li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-        <li><a href="#"><i class="fa fa-pinterest-square"></i> Pinterest</a></li>
-        <li><a href="#"><i class="fa fa-youtube-square"></i> Youtube</a></li>
-      </ul>
+
+      {%include 'social-sharing-ul' %}
+
     </div>
   </div>
+
+  {% if settings.header_search_enable %}
   <div class="home-search-box">
     <a href="#" class="icon-extra-sub icon-home-search">
       <span class="lnr lnr-magnifier"></span>
@@ -43,4 +40,6 @@
       </div>
     </div>
   </div>
+  {%endif %}
+
 </div>

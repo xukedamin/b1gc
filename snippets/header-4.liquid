@@ -1,19 +1,18 @@
+{% include 'header-top-bar--welcome' %}
+{% include 'header-top-bar--setting' with top_bar_myaccount_show:false %}
 
 <div class="header">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-sm-12 col-xs-12">
-				<a  title="{{ shop.name }}" alt="{{ shop.name }}" href="/" class="jvlogo" rel="home">
-		      <span class="logo-table">
-		        <span class="logo-table-cell">
-		          <img src="{{ 'logo-1.png' | asset_url }}" alt="{{ shop.name }}"  >
-		        </span>
-		      </span>
-		    </a>
+				
+				{% include 'header-logo' %}
+
 			</div>
 			<div class="col-md-8 col-sm-12 col-xs-12">
 				<div class="main-nav">
-					  {% include 'nav' class: 'dropdownMenu main-menu', handle: 'main-menu' %}
+					  {% include 'nav' class: 'dropdownMenu main-menu', handle: settings.header_main_menu %}
+			    
 			    <div class="mobile-menu">
 			      <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
 			      <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
@@ -22,59 +21,67 @@
 			</div>
 			<div class="col-md-2 col-sm-12 col-xs-12">
 				<div class="info-header">
-							<ul class="info-total">
-								<li class="info-search">
-									<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
-									
+						<ul class="info-total">
+
+						{% if settings.header_search_enable %}
+							<li class="info-search">
+								<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
 									 {% include 'search-bar-2' %}
-									
-								</li>
-								<li class="info-user">
+							</li>
+							{% endif %}
 
+							<li class="info-user">
 									{% if shop.customer_accounts_enabled %}
-			          {% if customer %}
-			            <ul class="dropdownMenu subrtl">
-			              <li>
-			                <a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
-			                  <span class="lnr lnr-user"></span> <!-- {{ 'layout.customer.my_account' | t }} -->
-			                </a>
-			                <ul class="hidden-xs inner-user-info">
-			                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
-			                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
-			                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-			                </ul>
-			              </li>
-			            </ul>
-			          {% else %}
-			            <ul class="dropdownMenu subrtl">
-			              <li> 
-			              	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
-			                <span class="lnr lnr-user"></span><!--  {{ 'layout.customer.my_account' | t }} -->
-			              </a>
-			              <ul class="hidden-xs inner-user-info">
-			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
-			                {% if shop.customer_accounts_optional %}
-			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
-			                {% endif %}
-			                <li><a href="#"><span class="lnr lnr-heart"></span> Wishlist</a></li>
-											<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
-											<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
-			              </ul>
-			            </li>
-			          </ul>
-			        {% endif %}
-			      {% endif %}
-
+					          {% if customer %}
+					            <ul class="dropdownMenu subrtl">
+					              <li>
+					                <a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
+					                  <span class="lnr lnr-user"></span> 
+					                  <!-- {{ 'layout.customer.my_account' | t }} -->
+					                </a>
+					                <ul class="hidden-xs inner-user-info">
+					                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
+					                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+					                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+					                </ul>
+					              </li>
+					            </ul>
+					          {% else %}
+					            <ul class="dropdownMenu subrtl">
+					              <li> 
+					              	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
+						                <span class="lnr lnr-user"></span>
+						                <!--  {{ 'layout.customer.my_account' | t }} -->
+						              </a>
+					              <ul class="hidden-xs inner-user-info">
+					                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
+					                {% if shop.customer_accounts_optional %}
+					                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
+					                {% endif %}
+					                <li><a href="#"><span class="lnr lnr-heart"></span> Wishlist</a></li>
+													<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
+													<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
+					              </ul>
+					            </li>
+					          </ul>
+					        {% endif %}
+					      {% endif %}
 
 								</li>
+
+								{%if settings.header_cart_enable %}
 								<li class="info-cart">
-									<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span> <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
+									<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span> 
+										<sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
+									</a>
 									<div class="inner-cart-info">
 										{% include 'mini-cart' %}
 									</div>
 								</li>
-							</ul>
-						</div>
+								{% endif %}
+								
+						</ul>
+				</div>
 			</div>
 		</div>
 	</div>

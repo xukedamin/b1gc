@@ -40,7 +40,7 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
       height: $menu__height;
       outline: none;
       text-decoration: none;
-      overflow: hidden;
+      // overflow: hidden;
       display: block;
       @extend %text-up;
 
@@ -460,20 +460,23 @@ ul.dropdownMenu__ li:nth-child(3) > ul { display:block;}
     padding: 10px 0;
 }
 
-.main-nav > ul > li > a > sup {
+.main-nav .label-sub {
   font-size: 10px;
   left: 50%;
   margin-left: -8px;
   position: absolute;
   top: -10px;
-
-  &.title-hot {
-    color: $color_casablanca;
-  }
-  &.title-new {
-    color: $color_curious-blue;
-  }
+   @extend %text-up;
 }
+
+.title-hot {
+    color: $color_casablanca;
+}
+
+.title-new {
+    color: $color_curious-blue;
+}
+
 
 
 

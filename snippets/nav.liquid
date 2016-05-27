@@ -2,16 +2,21 @@
   {% if linklists[handle].links.size > 0 %}
   
 
+ {% capture sticker %}nav{{i}}_sticker_label{% endcapture %}
+
+
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
 
       {% assign handlej = link.title | handleize %}
       {% assign style ='nav' %}
-      
+
       {% for i in (1..10) %}
         {% capture pick_name %}nav{{i}}{% endcapture %}
         {% capture pick_name %}{{settings[pick_name] | remove: "jvsub-" }}{% endcapture %}
         {% capture pick %}nav{{i}}_style{% endcapture %}
+
+       
 
         {% if pick_name == handlej %}
           {% capture stylei %}nav-{{settings[pick]}}{% endcapture %}
@@ -23,8 +28,20 @@
 
       {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
       <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-children{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">
-        <a  href="{{ link.url }}">{{ link.title }}</a>
+        
+        <a  href="{{ link.url }}">{{ link.title }} 
+        
+         {% if link.handle == 'featured' %}
+         <sup class="label-sub title-hot hidden-xs">Hot</sup>
+         {% endif %}
+          {% if link.handle == 'shop' %}
+         <sup class="label-sub title-new hidden-xs">New</sup>
+         {% endif %}
+
+        </a>
+
         {% include style class:' sub-menu', handle: handlei %}
+
       </li>
 
 

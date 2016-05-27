@@ -35,24 +35,6 @@ a.jvlogo {
 }
 
 
-.header-1 {
-  .logo-img-1{
-    display: none;
-  }
-  .logo-text{
-    display: none;
-  }
-}
-
-.header-2{
-  // .logo-img-2{
-  //   display: none;
-  // }
-  // .logo-text{
-  //   display: none;
-  // }
-}
-
 
 
 /*Header*/
@@ -560,7 +542,8 @@ a.jvlogo {
   position: absolute;
   right: 0;
   top: 100%;
-  width: 400px;
+  // width: 400px;
+  width: auto;
   margin-top: 35px;
   @extend %jv-transition-easeout;
   opacity: 0;

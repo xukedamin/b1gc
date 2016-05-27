@@ -1,4 +1,5 @@
-{% include 'header-top-black' %}
+{% include 'header-top-bar--welcome' %}
+{% include 'header-top-bar--setting' %}
 
 <div class="header header-2">
   <div class="container">
@@ -12,7 +13,9 @@
       
       <div class="col-md-8 col-sm-11 col-xs-12">
         <div class="main-nav">
-          {% include 'nav' class: 'dropdownMenu main-menu', handle: 'main-menu' %}
+
+        <!-- main-menu -->
+          {% include 'nav' class: 'dropdownMenu main-menu', handle: settings.header_main_menu %}
           <div class="mobile-menu">
             <a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
             <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
@@ -23,12 +26,15 @@
       <div class="col-md-2 col-sm-1 col-xs-12">
         <div class="info-header info-header2">
           <ul class="info-total">
+            {% if settings.header_search_enable %}
             <li class="info-search">
               <a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
 
               {% include 'search-bar-2' %}
 
             </li>
+            {% endif %}
+
           </ul>
         </div>
       </div>
@@ -36,6 +42,3 @@
     </div>
   </div>
 </div>
-
-<!-- End Header -->
-<!-- same for header 6 -->

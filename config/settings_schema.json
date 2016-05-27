@@ -31,6 +31,25 @@
       },
       {
         "type": "select",
+        "id": "nav1_sticker_label",
+        "label": "Sticker label",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "hot",
+            "label": "Hot"
+          },
+          {
+            "value": "new",
+            "label": "New"
+          }
+        ]
+      },
+      {
+        "type": "select",
         "id": "nav1_style",
         "label": "Mega style",
         "options": [
@@ -1218,15 +1237,8 @@
           {
             "value": "5",
             "label": "Header 5"
-          },
-          {
-            "value": "6",
-            "label": "Header 6"
-          },
-          {
-            "value": "7",
-            "label": "Header 7"
           }
+       
         ],
         "default": "1"
       },
@@ -1239,50 +1251,50 @@
       },
       {
         "type": "header",
-        "content": "Header #1"
-      },
-      {
-          "type":      "radio",
-          "id":        "logo_type",
-          "label":     "Logo type",
-          "options": [
-            { "value": "logo_type_image", "label": "Image" },
-            { "value": "logo_type_text", "label": "Text" }
-          ],
-          "default":   "logo_type_image"
-      }
-      ,
-        {
-        "type": "checkbox",
-        "id": "logo_text_enable",
-        "label": "logo_text_enable"
-      },
-      {
-        "type": "text",
-        "id": "logo_text_title",
-        "label": "Logo text title",
-        "default": "Big"
-        
-      },
-       {
-        "type": "text",
-        "id": "logo_text_stitle",
-        "label": "Logo text subtitle",
-        "default": "C"
+        "content": "II - Logo"
       },
 
       {
-        "type": "checkbox",
-        "id": "logo_use_image",
-        "label": "Use a custom logo"
+        "type": "select",
+        "id": "logo_type_use",
+        "label": "Select logo type",
+        "options": [
+            { "value": "logo-dark.png", "label": "1 - Dark Logo" },
+            { "value": "logo-white.png", "label": "2- White Logo" },
+            { "value": "logo_type_text", "label": "3- Text Logo" }
+        ],
+        "default" :"logo-dark.png"
       },
+
       {
         "type": "image",
-        "id": "logo-1.png",
-        "label": "Custom logo",
+        "id": "logo-dark.png",
+        "label": "1. Logo dark",
         "max-height": 150,
         "info": " .png recommended"
       },
+      {
+        "type": "image",
+        "id": "logo-white.png",
+        "label": "2. Logo white",
+        "max-height": 150,
+        "info": " .png recommended"
+      },
+      
+      {
+        "type": "text",
+        "id": "logo_text_title",
+        "label": "3.1  Text Logo title",
+        "default": "Big"
+      },
+      
+      {
+        "type": "text",
+        "id": "logo_text_stitle",
+        "label": "3.2 Text Logo subtitle",
+        "default": "C"
+      },
+
       {
         "type": "text",
         "id": "maxheight-logo-1",
@@ -1296,6 +1308,7 @@
         "label": "Logo Mobile",
         "max-height": 120
       },
+
       {
         "type": "text",
         "id": "maxheight-logo-1-mobile",
@@ -1303,65 +1316,87 @@
         "default": "35",
         "info": "in px"
       },
+
       {
         "type": "header",
-        "content": "Message"
+        "content": "III. Header menu"
       },
+        {
+        "type": "link_list",
+        "id": "header_main_menu",
+        "label": "Header main menu"
+      },
+     
+      {
+        "type": "link_list",
+        "id": "header_main_menu_short",
+        "label": "Header main menu short",
+        "info": "Used for header style 3"
+      },
+
+      {
+        "type": "header",
+        "content": "III. Header top bar welcome"
+      },
+       {
+        "type": "checkbox",
+        "id": "header_top_bar_welcome",
+        "label": "Enable top bar - Welcome"
+      },
+
       {
         "type": "text",
-        "id": "header_welcome",
+        "id": "header_top_bar_welcome_text",
         "label": "Text",
         "default": "Welcome to BigC Store"
       },
       {
         "type": "text",
-        "id": "header_hotline",
+        "id": "header_top_bar_welcome_hotline",
         "label": "Hotline",
         "default": "Call Us: 0800 266 966"
       },
-      {
-        "type": "text",
-        "id": "skype",
-        "label": "Skype",
-        "default": "SkypeName"
+
+       {
+        "type": "link_list",
+        "id": "header_top_bar_welcome_menu",
+        "label": "Menu"
       },
+       {
+        "type": "header",
+        "content": "IV. Header top bar Menu"
+      },
+       {
+        "type": "checkbox",
+        "id": "header_top_bar_setting",
+        "label": "Enable top bar - setting"
+      },
+       {
+        "type": "checkbox",
+        "id": "header_top_bar_setting_lang",
+        "label": "Enable top bar setting language"
+      },
+        {
+        "type": "checkbox",
+        "id": "header_top_bar_setting_currency",
+        "label": "Enable top bar setting Currency"
+      },
+     
       {
         "type": "checkbox",
-        "id": "show_header_cart",
-        "label": "Show header Cart ?"
+        "id": "header_cart_enable",
+        "label": "Show header Cart ?",
+        "default": true
       },
-      {
-        "type": "header",
-        "content": "Header #2"
-      },
-      {
-        "type": "image",
-        "id": "logo-2.png",
-        "label": "Logo",
-        "max-height": 150,
-        "info": " .png recommended"
-      },
-      {
-        "type": "text",
-        "id": "maxheight-logo-2",
-        "label": "Max height Logo",
-        "default": "70",
-        "info": "in px"
-      },
-      {
-        "type": "image",
-        "id": "logo-2-mobile.png",
-        "label": "Logo Mobile",
-        "max-height": 120,
-        "info": " .png recommended"
-      },
-      {
-        "type": "text",
-        "id": "maxheight-logo-2-mobile",
-        "label": "Max height Logo Mobile",
-        "default": "35",
-        "info": "in px"
+       {
+        "type": "checkbox",
+        "id": "header_search_enable",
+        "label": "Show header search ?",
+        "default": true
       }
+
+   
+     
     ]
   },
   {
