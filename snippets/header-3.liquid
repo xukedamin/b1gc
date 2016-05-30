@@ -104,3 +104,104 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="header header3">
+	<div class="container">
+		<div class="mainmenu main-nav3 pull-left">
+		<!-- 'menu-short-1' -->
+			{% include 'nav' class: 'dropdownMenu', handle: settings.header_main_menu_short %}
+			
+			<div class="mobile-menu">
+				<a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
+				<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
+			</div>
+		</div>
+		<div style="position:absolute;left: 50%; transform: translateX(-50%);bottom: 0; top:0;">
+			{%include 'header-logo' %}
+		
+		</div>
+		<div class="pull-right">
+			<div class="info-header info-header3">
+				<ul class="info-total">
+					<li class="info-user info-user3">
+						
+						{% if shop.customer_accounts_enabled %}
+							{% if customer %}
+								<a href="#" class="info-icon icon-user"><span class="lnr lnr-user"></span></a>
+								<a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} ">
+		            	  <span class="lnr lnr-user"></span> 
+		          	</a>
+		          {% else %}
+		          	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
+		              <span class="lnr lnr-user"></span>
+		            </a>
+							{% endif %}
+				    {% endif %}
+
+						<div class="box-info-user">
+
+							{% if shop.customer_accounts_enabled %}
+		          {% if customer %}
+
+                <ul class="list-unstyled user-info-list">
+                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
+                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+                </ul>
+
+		          {% else %}
+
+		              <ul class="list-unstyled  user-info-list">
+		                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
+		                {% if shop.customer_accounts_optional %}
+		                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
+		                {% endif %}
+		                <li><a href="#"><span class="lnr lnr-heart"></span> Wishlist</a></li>
+										<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
+										<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
+		              </ul>
+
+				        {% endif %}
+				      {% endif %}
+
+							{% if settings.header_top_bar_setting_lang %}
+							<ul class="list-unstyled language-list">
+								<li  class="active"><a href="#"><img src='{{ "flag-fr.png" | asset_url }}' alt="" />French</a></li>
+								<li><a href="#"><img src='{{ "flag-en.png" | asset_url }}' alt="" />English</a></li>
+								<li><a href="#"><img src='{{ "flag-gm.png" | asset_url }}' alt="" />German</a></li>
+							</ul>
+							{% endif %}
+
+
+							{% if settings.show_multiple_currencies and settings.header_top_bar_setting_currency %}
+			            {% include 'currency-picker' %}
+			        {% endif %}
+
+						</div>
+
+					</li>
+
+					{% if settings.header_search_enable %}
+					<li class="info-search">
+						<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
+						<div class="search-form search-form3">
+							{% include 'search-bar' %}
+						</div>
+					</li>
+					{% endif %}
+
+					{%if settings.header_cart_enable %}
+					<li class="info-cart info-cart3">
+						<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span>  <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
+						<div class="inner-cart-info inner-cart-info5">
+							{% include 'mini-cart' %}
+						</div>
+					</li>
+					{% endif %}
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
