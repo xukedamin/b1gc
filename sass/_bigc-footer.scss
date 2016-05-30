@@ -242,6 +242,11 @@
   }
   .footer-nav {
     border-color: rgba($color_white, 0.1);
+    h2{
+      @extend %text-up;
+      font-size: 16px;
+      margin-top: 0;
+    }
   }
   a:hover {
     color: $color_white;

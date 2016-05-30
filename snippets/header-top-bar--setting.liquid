@@ -29,17 +29,9 @@
 					</div>
 					{%endif %}
 					
-					{%if settings.header_top_bar_setting_currency %}
-					<div class="currency-box">
-						<a href="#" class="currency-link">{{ 'layout.header.currency' | t }} {{ settings.default_currency }} </a>
-							<div class="currency-inner-box item-box-sub">
-					      {% if settings.show_multiple_currencies %}
-					        {% include 'currency-picker' %}
-					      {% endif %}
-				      </div><!-- currency-inner-box item-box-sub -->
-					</div><!-- currency-box -->
+					{%if settings.header_top_bar_setting_currency and settings.show_multiple_currencies%}
+						{% include 'currency-picker' %}
 					{% endif %}
-
 
 				</div>
 			</div>

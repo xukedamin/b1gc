@@ -135,7 +135,6 @@ a.jvlogo {
         color: $color_dusty-gray;
       }
       span {
-        // color: $color_dusty-gray;
         margin-right: 9px;
       }
     }
@@ -170,17 +169,10 @@ a.jvlogo {
   .currency-picker__wrapper {
     margin: 0;
   }
-  select {
-    background-position: right 0;
-    border: medium none;
-    color: $color_white !important;
-    display: inline;
-    height: 40px;
-    padding: 0 20px 0 15px;
-    vertical-align: inherit;
-    width: auto;
-    font-weight: normal;
-    background-color: transparent;
+  .currency-picker{
+   height: 40px;
+   border-right: 1px solid rgba($color_white ,0.1);
+    
   }
 }
 

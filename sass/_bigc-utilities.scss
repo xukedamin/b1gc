@@ -445,7 +445,7 @@ select {
   background: rgba(0, 0, 0, 0) url('{{ "arrow-down.png" | asset_url }}') no-repeat scroll right 13px center;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  color: #444 !important;
+ 
   font-size: 13px;
   height: 38px;
   line-height: 22px;
@@ -459,6 +459,7 @@ select {
 }
 select option {
   padding: 5px;
+  color: #444 !important;
 }
 
 .tab-pane {

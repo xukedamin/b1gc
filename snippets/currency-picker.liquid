@@ -1,66 +1,10 @@
-<!-- <label class="currency-picker__wrapper">
-  <span class="currency-picker__label">{{ 'layout.header.currency' | t }}</span>
-</label> -->
-
-  {% assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' %}
+{% assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' %}
   {% assign supported_codes = settings.supported_currencies | split: ' ' %}
-
-<!-- ==TODO -->
-<ul class="currency-picker list-unstyled currency-list" name="currencies">
+<select class="currency-picker" name="currencies" style="display: inline; width: auto; vertical-align: inherit;border: medium none;">
+  <option value="{{ shop.currency }}" selected="selected">{{ shop.currency }}</option>
   {% for code in supported_codes %}
     {% if code != shop.currency and codes contains code %}
-    <li ><a href="#{{ code }}" value="{{ code }}" data-currency = "{{ code }}" >{{ code }}</a></li>
+    <option value="{{ code }}">{{ code }}</option>
     {% endif %}
   {% endfor %}
-</ul>
-
-
-<span id="currencies">
-  <span data-currency="EUR" class="left">&euro;</span>
-  <span data-currency="GBP" class="right">&pound;</span>
-</span>
-
-<style>
-#currencies {
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    color: #bbbbbb;
-    font-size: 0; /* to eliminate space between buttons */
-    line-height: 1.5;
-    cursor: pointer;
-}
-#currencies span {
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    padding: 5px 10px;
-    border: 1px solid #D6D6D6;
-    background: none #F6F6F6;
-    font-size: 13px;
-}
-#currencies .left  {
-    -webkit-border-top-left-radius: 7px;
-    -webkit-border-bottom-left-radius: 7px;
-    -moz-border-radius-topleft: 7px;
-    -moz-border-radius-bottomleft: 7px;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-}
-#currencies .right  {
-    -webkit-border-top-right-radius: 7px;
-    -webkit-border-bottom-right-radius: 7px;
-    -moz-border-radius-topright: 7px;
-    -moz-border-radius-bottomright: 7px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    border-left: none;
-}
-#currencies .selected {
-    font-weight: normal;
-    color: #666666;
-    background: none #eeeeee;
-}
-</style>
+  </select>
