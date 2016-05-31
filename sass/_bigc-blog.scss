@@ -1,4 +1,142 @@
 
+/*home 2*/
+.item-popular-info {
+  @extend %text-center;
+
+  > p {
+    color: $color_dove-gray;
+  }
+  > h3 {
+    margin: 28px 0 17px;
+
+    a {
+      color: $color_shark;
+      font-size: 13px;
+      @extend %text-up;
+    }
+    &:hover {
+      color: $color_dove-gray;
+    }
+  }
+}
+
+
+/*Popular Post*/
+.popular-post {
+  margin-top: 35px;
+  .item {
+    padding: 0 10px;
+  }
+}
+
+
+.popular-post-date {
+  border: 1px solid $color_mercury;
+  margin-top: 40px;
+  padding: 10px 15px;
+  position: relative;
+
+  &:before {
+    background: $color_mercury none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+  }
+  .lnr {
+    color: $color_dusty-gray;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px;
+    vertical-align: text-top;
+  }
+  span,
+  time {
+    color: $color_dusty-gray;
+  }
+  .readmore {
+    color: $color_dusty-gray;
+
+    &:hover {
+      color: $color_dove-gray;
+    }
+  }
+}
+
+
+.item-popular-thumb {
+  position: relative;
+  
+  &:after {
+    background: $color_white none repeat scroll 0 0;
+    @extend %jv-border-radius-50;
+    bottom: -20px;
+    color: $color_shark;
+    display: block;
+    font-size: 16px;
+    left: 50%;
+    margin-left: -13px;
+    padding: 10px;
+    position: absolute;
+    content: '\e83f';
+    @extend %jv-font-Linearicons;
+
+  }
+}
+
+
+.item-popular-thumb-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba($color_shark, 0.5);
+    opacity: 0;
+    @extend %jv-transition-easeout;
+  }
+  > img {
+    width: 100%;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/*Latest Post*/
+.box-title {
+  margin-bottom: 42px;
+  @extend %text-center;
+
+  h2 {
+    color: $color_shark;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    @extend %text-up;
+  }
+  p {
+    color: $color_dove-gray;
+    margin: 0;
+  }
+}
+
+
+
+
+
 .popular-box {
   margin: 0 -10px 10px;
   position: relative;

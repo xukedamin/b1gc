@@ -1,6 +1,109 @@
 /***********************************************************************
 								Home 5						
 ************************************************************************/
+
+//home 5
+.item-product.item-product-loadmore {
+  background: $color_white none repeat scroll 0 0;
+  box-shadow: 1px 3px 2px 0 rgba($color_black, 0.1);
+  margin: 0 -5px 20px;
+}
+
+.product-list-filter .cart-wishlist-compare {
+  .addToCartForm{
+    display: inline-block;
+  }
+ }
+.product-list-filter .cart-wishlist-compare .product-add-cart span{
+    display: none;
+ }
+
+.product-best-sale .cart-wishlist-compare {
+
+  .addToCartForm{
+    display: inline-block;
+  }
+
+  .product-add-cart{
+    span{
+      display: none;
+    }
+  }
+
+  .product-wishlist {
+    background: $color_currious-blue-darker;
+    border-color: $color_currious-blue-darker;
+    color: $color_white;
+
+    &:hover {
+      background: $color_candlelight;
+      border-color: $color_candlelight;
+    }
+  }
+  .product-compare {
+    display: none;
+    background: $color_currious-blue-darker;
+    border-color: $color_currious-blue-darker;
+    color: $color_white;
+
+    &:hover {
+      background: $color_candlelight;
+      border-color: $color_candlelight;
+    }
+  }
+}
+
+.product-best-sale .item-product:hover .item-product-thumb {
+    
+    @include prefix(box-shadow, 0 5px 5px 0 rgba($color_black, 0.2));
+}
+
+
+
+.paginav-best-seller {
+  border-top: 1px solid $color_mercury-darker;
+  margin-top: 20px;
+  padding-top: 30px;
+  @extend %text-center;
+
+  a {
+    background: $color_wild-sand none repeat scroll 0 0;
+    
+    box-shadow: 0 2px 2px 0 rgba($color_black, 0.1);
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 3px;
+    opacity: 1;
+    padding: 0;
+    width: 36px;
+    color: $color_shark;
+    @extend %jv-border-radius-50;
+
+    &.active {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: $color_currious-blue-darker;
+        content: "";
+        top: 0px;
+        left: 14px;
+        @extend %jv-border-radius-50;
+      }
+    }
+    &.active, &:hover {
+      opacity: 1;
+      background: $color_white none repeat scroll 0 0;
+      color: $color_currious-blue-darker;
+      
+      @include prefix(box-shadow, 0 3px 3px 0 rgba($color_black, 0.2));
+    }
+  }
+}
+
 .inner-cart-info5.inner-cart-info .link-cart {
    a, button {
     background: $color_currious-blue-darker;

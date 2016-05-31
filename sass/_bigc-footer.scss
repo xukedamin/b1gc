@@ -286,3 +286,8 @@
 
 }
 
+.logo.logo-footer2 a {
+    color: $color_white;
+    font-size: 30px;
+    @extend %text-up;
+}

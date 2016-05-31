@@ -988,6 +988,47 @@ Page Detail Mr
 }
 
 
+
+//hot deal
+
+
+.hotdeal-countdown {
+  margin-top: -50px;
+  width: 272px;
+  margin-bottom: 15px;
+
+  .time_circles > div {
+    background: $color_mid-gray none repeat scroll 0 0;
+    @extend %jv-border-radius-50;
+    color: $color_white;
+    display: inline-block;
+    height: 64px;
+    margin: 0 2px;
+    padding-top: 12px;
+    @extend %text-center;
+    width: 64px !important;
+  }
+  canvas {
+    left: 0px;
+    position: relative;
+    top: 70px;
+    z-index: 9;
+  }
+  .number {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: -4px;
+  }
+  .text {
+    color: $color_silver-darker;
+    font-size: 13px;
+    @extend %text-up;
+  }
+}
+
+
+
 ///swatch color size
 
 $width : 32px;
