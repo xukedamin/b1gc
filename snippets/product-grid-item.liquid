@@ -31,7 +31,7 @@
 {% assign image_size = settings.collection_prod_image_sizes %}
 
 <div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
-  <div class="item-product  {% if quickview_enable %}item-product-loadmore{% endif%}">
+  <div class="item-product  {% if quickview_enable %}item-product-loadmore{% endif%}" id="product-{{ product.id }}">
     <div class="item-product-thumb">
       <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
         {% if product.featured_image %}
@@ -47,7 +47,7 @@
             <a href="#" class="product-quick-view"><span class="lnr lnr-magnifier"></span></a>
             
             {%if settings.product_quickview_enable %}
-              {%include 'product-quick-view' %}
+              <!-- include 'product-quick-view' -->
             {% endif %}
 
           </div>

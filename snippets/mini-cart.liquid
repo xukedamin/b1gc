@@ -4,13 +4,13 @@
 <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
 {%else %}
 
-<form action="/cart" method="post" class="cart-page-form" novalidate>
-  <h2><span class="cart-count">{{ cart.item_count }}</span> {{ 'cart.general.items' | t }}</h2>
+<form action="/cart" method="post" class="cart-page-form" novalidate id="mini-cart">
+  <h2><span class="cart-count" id="cart-count">{{ cart.item_count }}</span> {{ 'cart.general.items' | t }}</h2>
   <div class="shop-cart-list" data-line="{{ forloop.index }}">
 
     <ul class="info-list-cart">
       {% for item in cart.items %}
-      <li class="item-info-cart">
+      <li class="mini_cart_item item-info-cart" id="cart-item-{{ item.id }}">
         <div class="cart-thumb product-img">
           <a href="{{ item.url }}" class="cart-thumb cart-image"> 
             <img src="{{ item | img_url: 'medium' }}"  alt="{{ item.title | escape }}">
@@ -25,6 +25,7 @@
           <a  class="remove-product product-remove remove" href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-line="{{ forloop.index }}" > </a>
           <span class="cart-price">{% include 'price' with item.price %} </span>
         </div>	
+         <a  class="btn-remove " href="javascript:void(0)"  ><i class="lnr lnr-cross"></i></a> 
       </li>
       {% endfor %} 
 
@@ -33,7 +34,7 @@
   </div>
 
   <div class="total-cart">
-    <label>{{ 'cart.general.subtotal' | t }}</label> <span class="right">{% include 'price' with cart.total_price %}</span>
+    <label>{{ 'cart.general.subtotal' | t }}</label> <span class="right price">{% include 'price' with cart.total_price %}</span>
   </div>
   <div class="link-cart">
     <a href="/cart" class="cart-edit">edit cart</a>

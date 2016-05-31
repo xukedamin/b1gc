@@ -23,7 +23,7 @@
 		<a href="#" class="link-compare"><span class="lnr lnr-sync"></span></a>
 	</div>
 	
-	<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart ">
+	<form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm1 form-add-to-cart " id="product-actions-{{ product.id }}">
 		<select name="id"  class="product-variants hidden">
 			{% for variant in product.variants %}
 				{% if variant.available %}
@@ -41,6 +41,6 @@
 				<input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
 			</div>
 		{% endif %}
-		<button type="submit" name="add" class="btn-link-default add-to-cart"><span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
+		<button type="submit" name="add" class="btn-link-default add-to-cart product-add-cart"><span id="addToCartText">{{ 'products.product.add_to_cart' | t }}</span></button>
 	</form>
 </div>
