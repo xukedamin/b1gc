@@ -51,6 +51,7 @@
 			                <ul class="hidden-xs inner-user-info">
 			                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
 			                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+			                  <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span> {{ 'wishlist.title' | t }}</a></li>
 			                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
 			                </ul>
 			              </li>
@@ -66,9 +67,9 @@
 			                {% if shop.customer_accounts_optional %}
 			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
 			                {% endif %}
-			                <li><a href="#"><span class="lnr lnr-heart"></span> Wishlist</a></li>
-											<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
-											<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
+			               
+								<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
+									<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
 			              </ul>
 			            </li>
 			          </ul>

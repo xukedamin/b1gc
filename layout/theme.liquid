@@ -115,7 +115,7 @@
   {{ 'slick.min.js' | asset_url | script_tag }}
   {{ 'jquery.currencies.min.js' | asset_url | script_tag }}
   {{ 'jquery.bxslider.js' | asset_url | script_tag }}
-  {{ 'wish-list.js' | asset_url | script_tag }}
+  
 
 
   {{ 'script.js' | asset_url | script_tag }}
@@ -212,7 +212,7 @@
   {% include 'currencies' %}
   {% endif %}    
   
-  <a id="back-top" class="lnr-chevron-up" href="#"></a>
+  <a id="back-top" class="lnr-chevron-up-circle" href="#"></a>
   
   <div id="overlays-loading" class=" show-loading">
     <span class="loading-ball ">
@@ -224,9 +224,9 @@
   <div class="ajax-error-cbox ajax-box-message animated ">
     <div class="ajax-error-message message notice icon-notice2"></div>
   </div>
-  <div class="ajax-success-cbox ajax-box-message  animated ">
+  <div class="ajax-success-cbox ajax-box-message animated">
     <div class="success-message show-wishlist">
-     <span class="color-main">  {{ 'cart.general.success_wishlist' | t }}</span> - <a href="/pages/wishlist" >  {{ 'cart.general.view_wishlist' | t }}</a>
+     <span class="color-main">  {{ 'wishlist.success_wishlist' | t }}</span> - <a href="/pages/wishlist" >  {{ 'wishlist.view_wishlist' | t }}</a>
     </div>    
     <div class="success-message show-cart">
       <span class="color-main"> {{ 'cart.general.added_cart' | t }}</span> - <a  href="/cart"> {{ 'cart.general.view_cart' | t }}</a>

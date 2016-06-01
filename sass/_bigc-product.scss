@@ -863,8 +863,23 @@
 
   a {
     color: $color_shark;
+    &:not(:last-child){
+      margin-right: 15px;  
+    }
+  }
+  .wishlist-wrap{
+    display: inline-block;
     margin-right: 15px;
   }
+}
+
+
+.btn.link-wishlist{
+  color: $color_shark;
+  padding: 0;
+}
+.info-extra button.btn.link-wishlist{
+  background: transparent;
 }
 
 .content-product-detail.none-sidebar 

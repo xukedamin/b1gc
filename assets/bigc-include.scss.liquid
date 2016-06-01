@@ -318,7 +318,7 @@ Dependency-free breakpoint mixin
   text-transform: uppercase;
 }
 
-.glyphs.character-mapping input, .loading-ball .ball2, .box-intro-background, .box-intro, .bt-link, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > a, .newsletter-popup-thumb, .newsletter-form, .nav-tabs-default .nav.nav-tabs, .nav-tabs-icon .nav-tabs, .info-sale, .item-testimonial, .testimo-content-left, .locator-item, .feature-box-link, .item-service-thumb > a, .link-cart > *, .cart-wishlist-compare .product-wishlist,
+.glyphs.character-mapping input, .loading-ball .ball2, .box-intro-background, .box-intro, .bt-link, .btn-circle-box a, .btn-link-default, .btn-link-hidden, .item-contact-box > a, .ajax-box-message, .newsletter-popup-thumb, .newsletter-form, .nav-tabs-default .nav.nav-tabs, .nav-tabs-icon .nav-tabs, .info-sale, .item-testimonial, .testimo-content-left, .locator-item, .feature-box-link, .item-service-thumb > a, .link-cart > *, .cart-wishlist-compare .product-wishlist,
 .cart-wishlist-compare .product-compare, .shop-cart-list table .product-size, .shop-cart-list table .product-price, .shop-cart-list table .product-quantity, .shop-cart-list table .product-total, .shop-cart-list table .product-remove, .shop-cart-list table tbody .cart-item td.product-quantity input[type='number'], .shop-cart-total h3.title, .shop-cart-total .button-wrapper, .logo-home, .info-header2 .info-icon.icon-search, .info-header3 .info-total .info-icon, .toggle-search-category .toggle-category, .item-product-info, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button, .product-extra-link .action, .product-box-promotion span, .product-box-adv .btn-link-default, .product-gallery .bx-pager, .qty-val, .hotdeal-countdown .time_circles > div, .swatch .tooltip, .item-collections .inner .info-collections, .product-pagi-nav .item-paginate > *, .info-price-filter, .item-popular-info, .box-title, .item-post-gallery h3, .list-post-tags, .post-pagi-nav .item-paginate, .widget-post-adv-text, .latest-post-info li, .post-format-gallery #bx-pager, .deal-countdown, .post-banner-text, .about-box-text, .about-big-text, .about-big-icon, .post-slider .owl-theme .owl-controls .owl-buttons div, .post-social-network a, .team-social-network a, .info-circle-thumb, .team-circle-social-network a, .team-circle-info, .item-team-rectang, .item-brand, .banner-style2 .banner-box-title.banner-box-title-blue, .banner-style2 .banner-box-info, .text-adv, .leading-text-adv, .item-text-adv, .item-box-adv .btn-link-default span, .slider-tab #bx-pager, .banner-slider-circle-hoztical .banner-thumb-link, .page-login-wrapper .page-login, .page-register form .button, .page-register form h3, .advanced-filter.active-filter a:hover::after, .control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all, .product-featured-info .js--add,
 .product-featured-info .qty-up, .product-featured-info .js--minus,
 .product-featured-info .qty-down, .home-featured-slider .owl-pagination .owl-theme .owl-controls .owl-page, .paginav-best-seller, .partner-home5 .owl-theme .owl-controls .owl-buttons div, .item-product-loadmore .product-quick-view, .register-box a, .info-cart7 .info-icon.icon-cart, .product-best-sale.style2 .item-product-loadmore .item-product-info, .box-attr-filter .attr-size a {
@@ -2746,6 +2746,26 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #fec64d;
 }
 
+.ajax-box-message {
+  display: none;
+  position: fixed;
+  bottom: 0 !important;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.ajax-box-message.slideInUp {
+  display: block;
+}
+.ajax-box-message .message {
+  margin: 0;
+  padding: 20px 0;
+}
+.ajax-box-message .success-message {
+  padding: 20px 0;
+  margin: 0;
+}
+
 /*******************************************************************
             Newsletter Popup
 ********************************************************************/
@@ -4600,14 +4620,15 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
   display: inline-block;
   margin: 0;
 }
-.info-cart .inner-cart-info .js-qty .js--num {
+.info-cart .inner-cart-info input[type="number"],
+.info-cart .inner-cart-info .js--num {
   border: medium none;
   display: inline-block;
   padding: 0;
   width: 20px;
   height: auto;
 }
-.info-cart .inner-cart-info .js-qty span {
+.info-cart .inner-cart-info span {
   display: none;
 }
 
@@ -4850,7 +4871,6 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
 }
 
 .shop-cart-list table * {
-  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.05em;
   font-size: 14px;
   color: #333;
@@ -7017,7 +7037,22 @@ a.jvlogo {
 }
 .info-extra a {
   color: #1b1d1f;
+}
+.info-extra a:not(:last-child) {
   margin-right: 15px;
+}
+.info-extra .wishlist-wrap {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.btn.link-wishlist {
+  color: #1b1d1f;
+  padding: 0;
+}
+
+.info-extra button.btn.link-wishlist {
+  background: transparent;
 }
 
 .content-product-detail.none-sidebar

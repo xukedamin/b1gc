@@ -92,7 +92,7 @@
               <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
               {% include 'product--addtocart' %}
-              {% include 'wishlist-product' %}
+             
               {% include 'product--detail-others' %}
 
             </div>
@@ -226,22 +226,22 @@
         }
 
         //Update wishlist form
-        var $wishList = $(".js-wish-list");
-        var currentURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
-        var newURL = currentURL + "?variant=" + variant.id;
+        // var $wishList = $(".js-wish-list");
+        // var currentURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        // var newURL = currentURL + "?variant=" + variant.id;
 
-        $.ajax({
-          type: 'GET',
-          url: newURL,
-          success:function(data){
-            $wishList.empty();
-            var newData = $(data).find(".js-wish-list").html();
-            $wishList.html(newData);
+        // $.ajax({
+        //   type: 'GET',
+        //   url: newURL,
+        //   success:function(data){
+        //     $wishList.empty();
+        //     var newData = $(data).find(".js-wish-list").html();
+        //     $wishList.html(newData);
 
-            // reset event listener for posting to wish list
-            postToWishlist();
-          }
-        });
+        //     // reset event listener for posting to wish list
+        //     postToWishlist();
+        //   }
+        // });
         //end Update wishlist form
 
 

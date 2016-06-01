@@ -103,11 +103,24 @@
       "items": "Items",
       "qty": "Qty",
       "mycart": "My Cart",
-      "price": "PRICE",
+      "price": "PRICE", 
       "quantity": "QUANTITY",
       "total": "TOTAL",
-      "continueshopping": "CONTINUE SHOPPING"
+      "continueshopping": "CONTINUE SHOPPING",
+      "added_cart":"Added to cart success"
     }
+  },
+  "wishlist": {
+    "title":"Wishlist",
+    "success_wishlist":"Added to wishlist success",
+    "add_wishlist":"Add to wishlist",
+    "added_wishlist":"Added to wishlist",
+    "goto_wishlist":"Go to wishlist",
+    "view_wishlist":"View wishlist",
+    "remove":"Remove from wishlist",
+    "share_email":"Share my wish list via email",
+    "info_list":"To create a wish list you must",
+    "or":"or"
   },
   "collections": {
     "general": {

@@ -36,6 +36,9 @@
               this.goMiniCart();//add cart
               this.goAddToCart();
               // this.goProductAddToCart();
+               // this.goWishlist();
+                this.goProductWishlist();
+                this.goWishlistRemove();
             },
 
             goMiniCart: function() {
@@ -54,7 +57,10 @@
             // end goMiniCart
 
             doUpdateMiniCart: function(n) {
-              var cart = '<li class="mini_cart_item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-inner"><a href="javascript:void(0)" title="Remove Item" class="btn-remove"><i class=" icon-delete-outline"></i></a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral"><span class="price">{PRICE}</span>(x {QUANTITY})</div></div></li>';
+              //var cart = '<li class="mini_cart_item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-inner"><a href="javascript:void(0)" title="Remove Item" class="btn-remove"><i class=" icon-delete-outline"></i></a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral"><span class="price">{PRICE}</span>(x {QUANTITY})</div></div></li>';
+
+              var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb product-img"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><label>Qty</label> <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"> </a><span class="cart-price"><span class="price">{PRICE}</span></span></div></li>';        
+
               $("#cart-count").text(n.item_count);
               $(".info-cart .number-cart-total.cart-count").text(n.item_count);
 
@@ -97,8 +103,8 @@
             ,
 
             goAddToCart: function() {
-              if ($(".product-add-cart").length > 0) {
-                $(".product-add-cart").click(function(n) {
+              if ($(".product-add-cart.btn-ajax").length > 0) {
+                $(".product-add-cart.btn-ajax").click(function(n) {
                   console.log('click');
                   n.preventDefault();
                  
@@ -107,7 +113,7 @@
                     var cart = $(this).parents(".item-product");
                     var i = $(cart).attr("id");
                     i = i.match(/\d+/g);
-                    alert(!window.ajax_cart );
+                    
                     if (!window.ajax_cart) {
                       $("#product-actions-" + i).submit()
                     } else {
@@ -140,7 +146,7 @@
                   t.showLoading()
                 },
                 success: function(n) {
-                   alert('success');
+                   
                   t.hideLoading();
                   $(".ajax-success-cbox").find(".ajax-product-title").text(i);
                   $(".ajax-success-cbox").find(".show-wishlist").hide();
@@ -174,30 +180,50 @@
                 t.doUpdateMiniCart(e)
               })
             }
+            ,
+             goProductWishlist: function() {
+              // $(".grid-item button.wishlist").click(function(n) {
+                $("button.action.product-wishlist").click(function(n) {
+                n.preventDefault();
+                var r = $(this).parent();
+                // var i = r.parents(".grid-item");
+                $.ajax({
+                  type: "POST",
+                  url: "/contact",
+                  data: r.serialize(),
+                  beforeSend: function() {
+                    t.showLoading()
+                  },
+                  success: function(n) {
+                    t.hideLoading();
+                    r.html('<a class="action product-wishlist wishlist-added wishlist" href="/pages/wishlist" data-toggle="tooltip" data-placement="bottom" title="Go to wishlist"><span class="fa fa-heart"></span></a>');
+                    $(".ajax-success-cbox").find(".show-wishlist").show();
+                    $(".ajax-success-cbox").find(".show-cart").hide();
+                    t.showBox(".ajax-success-cbox")
+                  },
+                  error: function(n, r) {
+                    t.hideLoading();
+                    $("body").removeClass('ajaxing')
+                    $(".ajax-error-message").text($.parseJSON(n.responseText).description);
+                    t.showBox(".ajax-error-cbox")
+                  }
+                })
+              })
+            },
+
+            goWishlistRemove: function(){
+              $('.btn-remove-wishlist').click(function() {
+                var value = $(this).attr('data');
+                $('.remove-value').val(value);
+                $('.contact-form').submit();
+              });
+            }
 
         }
           
         t.go();
 
-        //Product Load More
-        // $('.list-product-loadmore').each(function() {
-        //     var size_li = $(this).find(".list-product li").size();
-        //     var x = $(this).find('.btn-link-loadmore').attr('data-num');
-        //     var y = parseInt($(this).find('.btn-link-loadmore').attr('data-num')) - 1;
-        //     $(this).find('.list-product li:lt(' + x + ')').show();
-        //     $(this).find('.list-product li:gt(' + y + ')').hide();
-        //     $(this).find('.btn-link-loadmore').click(function() {
-        //         var size_li = $(this).prev().find("li").size();
-        //         var x = $(this).attr('data-num');
-        //         var x = parseInt($(this).attr('data-num'));
-        //         $(this).attr('data-num', x + 4);
-        //         var x = $(this).attr('data-num');
-        //         $(this).prev().find('li:lt(' + x + ')').show();
-        //         if ($(this).attr('data-num') > size_li) {
-        //             $(this).hide();
-        //         }
-        //     });
-        // });
+
 
                 //Product Load More
         $('.list-product-loadmore').each(function() {
@@ -293,17 +319,7 @@
                 });
             });
         }
-        //Accordions
-        // if ($('.accordion-box').length > 0) {
-        //     $('.accordion-box').each(function() {
-        //         $('.title-accordion').click(function() {
-        //             $(this).parent().parent().find('.item-accordion').removeClass('active');
-        //             $(this).parent().addClass('active');
-        //             $(this).parent().parent().find('.desc-accordion').stop(true, true).slideUp();
-        //             $(this).next().stop(true, true).slideDown();
-        //         });
-        //     });
-        // }
+
 
      
 

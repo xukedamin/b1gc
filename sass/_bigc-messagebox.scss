@@ -35,3 +35,25 @@
     color: $color_golden-tainoi;
   }
 }
+
+
+.ajax-box-message  {
+  @extend %text-center;
+  display: none;  
+  position: fixed;
+  bottom: 0 !important;
+  width: 100%;
+  z-index: 9999;
+  background-color: $color_white;
+
+  &.slideInUp {  display: block;  }
+
+  .message  {
+    margin: 0;
+    padding: 20px 0;
+  }
+  .success-message {
+    padding: 20px 0;
+    margin: 0;
+  }
+}

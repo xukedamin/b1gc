@@ -4793,8 +4793,14 @@
   }
   ,
   {
-    "name": "Product page",
-    "settings": [
+    "name": "Product",
+    "settings": [ 
+      {
+        "type": "checkbox",
+        "id": "enable_wishlist",
+        "label": "Enable Wishlist",
+        "default": true
+      },
       {
         "type": "checkbox",
         "id": "product_masonry_effect",

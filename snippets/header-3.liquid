@@ -45,6 +45,7 @@
 	                <ul class="list-unstyled user-info-list">
 	                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
 	                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+	                  <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span> {{ 'wishlist.title' | t }}</a></li>
 	                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
 	                </ul>
 
