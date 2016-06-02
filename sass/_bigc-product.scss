@@ -1,4 +1,10 @@
-// _bigc-product.scss
+//product review
+
+$product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
+
+.spr-badge-starrating .spr-icon{
+  color: $product__review__star_color;
+}
 
 
 .product-grid-item.col-md-3:nth-child(4n+1){
@@ -659,11 +665,11 @@
   margin-top: 0;
   @extend %text-up;
 }
-.wrap-star-rating {
-  background: transparent url('{{ "rate-bg.png" | asset_url }}') repeat-x scroll left top;
-  height: 12px;
-  width: 80px;
-}
+// .wrap-star-rating {
+//   background: transparent url('{{ "rate-bg.png" | asset_url }}') repeat-x scroll left top;
+//   height: 12px;
+//   width: 80px;
+// }
 .inner-star-rating {
   background: transparent url('{{ "rate-star.png" | asset_url }}') repeat-x scroll left center;
   height: 12px;
@@ -1042,6 +1048,12 @@ Page Detail Mr
   }
 }
 
+
+.list-product .product-list.has-sidebar  .contact-form{
+      display: inline-block;
+    margin-right: 15px;
+    margin-top: 0;
+}
 
 
 ///swatch color size

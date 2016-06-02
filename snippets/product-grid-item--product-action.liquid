@@ -1,3 +1,9 @@
+{% assign sold_out = true %}
+{% if product.available  %}
+  {% assign sold_out = false %}
+{% endif %}
+
+
 <a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
 
 {% comment %}
@@ -21,11 +27,11 @@
 {% include 'wishlist-product' %}
 
 {% assign variantCount = product.variants | size %}
-<form action="/cart/add" method="post" class="addToCartForm1 form-add-to-cart"  id="product-actions-{{ product.id }}" enctype="multipart/form-data" >    
+<form action="/cart/add" method="post" class="addToCartForm1 form-add-to-cart" data-id="product-actions-{{ product.id }}"  enctype="multipart/form-data" >    
   {% if sold_out %}
     <button class="action product-add-cart" type="submit"  disabled="disabled" data-toggle="tooltip" data-placement="top" title="{{ 'products.product.unavailable' | t }}" ><span class="text"> {{'products.product.unavailable' | t}}</span> </button>
   {% elsif variantCount > 1 %}
-      <button class="action product-add-cart" type="button" onclick="window.location.href='{{product.url}}'" data-toggle="tooltip" data-placement="top" title="{{'products.product.select_options' | t }}"><span class="lnr lnr-cart"></span><span class="text"> {{'products.product.add_to_cart' | t}}</span></button>
+      <button class="action product-add-cart" type="button" onclick="window.location.href='{{product.url}}'" data-toggle="tooltip" data-placement="top" title="{{'products.product.select_options' | t }}"><span class="lnr lnr-cart"></span><span class="text"> {{'products.product.select_options' | t}}</span></button>
   {% else %}
       <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
       <button class="action product-add-cart btn-ajax" type="submit"  data-toggle="tooltip" data-placement="top" title="{{'products.product.add_to_cart' | t}}"><span class="lnr lnr-cart"></span><span class="text">{{'products.product.add_to_cart' | t}}</button>

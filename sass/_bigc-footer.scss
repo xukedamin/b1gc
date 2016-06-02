@@ -297,7 +297,7 @@
   color: $color_white;
   cursor: pointer;
   display: block;
-  font-size: 16px;
+  font-size: 50px;
   font-weight: 700;
   height: 50px;
   line-height: 50px;
@@ -307,14 +307,9 @@
   text-decoration: none;
   @include prefix(transform, translate(150%, 0px));
   @extend %jv-transition-easeout;
-  // transform: translate(150%, 0px);
-  // -webkit-transform: translate(150%, 0px);
-  // transition: all 0.3s ease-in-out 0s;
-  // -webkit-transition: all 0.3s ease-in-out 0s;
   width: 50px;
   z-index: 1040;
-  border: 2px solid $color_white;
-  background-color: rgba($color_primary,0.2);
+  color: $color_primary;
 }
 
 #back-top.show {

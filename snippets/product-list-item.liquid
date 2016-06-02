@@ -67,21 +67,21 @@ Select the product image size from settings.
 
         <div class="item-product-info">
           <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
-          <div class="wrap-star-rating">
+          <!-- <div class="wrap-star-rating"> -->
             <!-- <div class="inner-star-rating" style="width:80%"></div> -->
             {% if settings.product_reviews_enable %}
               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
             {% endif %}
-          </div>
-          <p class="desc"> <p>{{ product.content | strip_html | truncatewords: 30 }}</p></p>
+          <!-- </div> -->
+          <div class="desc"> {{ product.content | strip_html | truncatewords: 30 }}</div>
          
           {% include 'product-list-item--add-to-cart' with with show_price:'yes' %}
 
           </div>
         </div>
 
-      </div>
-    </div>
+  </div>
+</div>
   
 
-</div>
+

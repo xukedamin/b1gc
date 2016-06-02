@@ -1,6 +1,6 @@
 {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
 <div class="col-sm-4 item item-collections">
-  <a class="inner thumb-link-default" href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" class="featured-box">
+  <a class="inner thumb-link-default featured-box" href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}">
       {% if collection.image %}
       <img src="{{ collection.image.src | collection_img_url: 'large' }}" alt="{{ collection_title }}" />
       {% else %}

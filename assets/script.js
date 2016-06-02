@@ -22,13 +22,6 @@
             });
         }
 
-
-
-
-
-        
-
-
          var t = window.initAjaxProduct = {
             atTimeout: null,
             isSidebarAjaxClick: false,
@@ -59,7 +52,7 @@
             doUpdateMiniCart: function(n) {
               //var cart = '<li class="mini_cart_item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-inner"><a href="javascript:void(0)" title="Remove Item" class="btn-remove"><i class=" icon-delete-outline"></i></a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral"><span class="price">{PRICE}</span>(x {QUANTITY})</div></div></li>';
 
-              var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb product-img"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><label>Qty</label> <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"> </a><span class="cart-price"><span class="price">{PRICE}</span></span></div></li>';        
+              var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><span class="price">{PRICE}</span> x <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price"></span></div></li>';        
 
               $("#cart-count").text(n.item_count);
               $(".info-cart .number-cart-total.cart-count").text(n.item_count);
@@ -105,29 +98,52 @@
             goAddToCart: function() {
               if ($(".product-add-cart.btn-ajax").length > 0) {
                 $(".product-add-cart.btn-ajax").click(function(n) {
-                  console.log('click');
+                  
                   n.preventDefault();
                  
 
                   if ($(this).attr("disabled") != "disabled") {
                     var cart = $(this).parents(".item-product");
-                    var i = $(cart).attr("id");
-                    i = i.match(/\d+/g);
                     
-                    if (!window.ajax_cart) {
-                      $("#product-actions-" + i).submit()
-                    } else {
-                      var s = $("#product-actions-" + i + " select[name=id]").val();
-                      if (!s) {
-                        s = $("#product-actions-" + i + " input[name=id]").val()
+                    // var i = $(cart).attr("id");
+                    // i = i.match(/\d+/g);
+                    
+                    // if (!window.ajax_cart) {
+                    //   $("#product-actions-" + i).submit()
+                    // } 
+                    // else {
+                    //   var s = $("#product-actions-" + i + " select[name=id]").val();
+                    //   if (!s) {
+                    //     s = $("#product-actions-" + i + " input[name=id]").val()
+                    //   }
+                    //   var o = $("#product-actions-" + i + " input[name=quantity]").val();
+                    //   if (!o) {
+                    //     o = 1
+                    //   }
+                    //   var u = $(cart).find(".product-title").text();
+                    //   t.doAjaxAddToCart(s, o, u)
+                    // }
+
+                     // var i = $(cart).data("id");
+                    var form = $(this).parents('form');
+                      
+                      
+                     // i = i.match(/\d+/g);
+                      if (!window.ajax_cart) {
+                        form.submit();
+                      } 
+                      else {
+                        var s = form.find("select[name=id]").val();
+                        if (!s) {
+                          s = form.find("input[name=id]").val();
+                        }
+                        var o = form.find("input[name=quantity]").val();
+                        if (!o) {
+                          o = 1
+                        }
+                        var u = $(cart).find(".product-title").text();
+                        t.doAjaxAddToCart(s, o, u)
                       }
-                      var o = $("#product-actions-" + i + " input[name=quantity]").val();
-                      if (!o) {
-                        o = 1
-                      }
-                      var u = $(cart).find(".product-title").text();
-                      t.doAjaxAddToCart(s, o, u)
-                    }
 
                   }
                   return false

@@ -4,14 +4,14 @@
 <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
 {%else %}
 
-<form action="/cart" method="post" class="cart-page-form" novalidate id="mini-cart">
+<form action="/cart" method="post" class="cart-page-form mini-cart" novalidate id="mini-cart">
   <h2><span class="cart-count" id="cart-count">{{ cart.item_count }}</span> {{ 'cart.general.items' | t }}</h2>
   <div class="shop-cart-list" data-line="{{ forloop.index }}">
 
     <ul class="info-list-cart">
       {% for item in cart.items %}
       <li class="mini_cart_item item-info-cart" id="cart-item-{{ item.id }}">
-        <div class="cart-thumb product-img">
+        <div class="cart-thumb">
           <a href="{{ item.url }}" class="cart-thumb cart-image"> 
             <img src="{{ item | img_url: 'medium' }}"  alt="{{ item.title | escape }}">
           </a>
@@ -19,15 +19,17 @@
 
         <div class="wrap-cart-title">
           <h3 class="cart-title"><a href="{{ item.url }}"> {{ item.product.title }} </a></h3>
-          <div class="product-quantity cart-qty"><label>{{ 'cart.general.qty' | t }} :</label> 
+          
+          <div class="product-quantity cart-qty">
+            <!-- <label>{{ 'cart.general.qty' | t }} :</label>  -->
             <!-- <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}"> -->
-            <span class="cart-qty--number">{{ item.quantity }}</span>
+            <span class="cart-price">{% include 'price' with item.price %} </span> x <span class="cart-qty--number">{{ item.quantity }}</span>
           </div>
         </div>	
         <div class="wrap-cart-remove">
           <!-- <a class="remove-product product-remove remove " href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-line="{{ forloop.index }}" > </a> -->
           <a class="btn-remove remove-product product-remove remove" href="javascript:void(0)"  ><i class="lnr lnr-cross"></i></a> 
-          <span class="cart-price">{% include 'price' with item.price %} </span>
+         
         </div>  
       </li>
       {% endfor %} 

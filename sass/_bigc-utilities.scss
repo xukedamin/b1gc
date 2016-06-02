@@ -225,6 +225,12 @@ $max: max-width;
  text-align: right;
 }
 
+%text-ellipsis{
+  @include prefix(text-overflow, ellipsis);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /*============================================================================
 #Normalize
 ==============================================================================*/
