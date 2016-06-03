@@ -1,9 +1,9 @@
 
-<div class="header-slider default-paginav">
+<div class="header-slider slider-owl-single-item-paging default-paginav">
   <div class="wrap-item">
   {% for i in (1..4) %}
   
-  {%comment %} {% capture slide %}slide_sm_{{ i }}{% endcapture %} {% endcomment%}
+  {% capture slide %}slide_sm_{{ i }}{% endcapture %}
 
   {% if settings.slider1_img_set %}
     {% capture slide_img %}slide_{{settings.slider1_img_set}}_{{ i }}.jpg{% endcapture %}

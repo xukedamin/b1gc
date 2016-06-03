@@ -283,7 +283,7 @@ Dependency-free breakpoint mixin
   border-radius: 50%;
 }
 
-.list-chart-processbar #progressbar-1.ui-progressbar, .list-chart-processbar #progressbar-1.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-2.ui-progressbar, .list-chart-processbar #progressbar-2.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-3.ui-progressbar, .list-chart-processbar #progressbar-3.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-4.ui-progressbar, .list-chart-processbar #progressbar-4.ui-progressbar .ui-progressbar-value, .owl-arrow-banner .owl-theme .owl-controls .owl-buttons div {
+.progress.sm .progress-bar, .owl-arrow-banner .owl-theme .owl-controls .owl-buttons div {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -291,7 +291,7 @@ Dependency-free breakpoint mixin
   border-radius: 0;
 }
 
-.list-chart-processbar #progressbar-5.ui-progressbar, .list-chart-processbar #progressbar-5.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-6.ui-progressbar, .list-chart-processbar #progressbar-6.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-7.ui-progressbar, .list-chart-processbar #progressbar-7.ui-progressbar .ui-progressbar-value, .list-chart-processbar #progressbar-8.ui-progressbar, .list-chart-processbar #progressbar-8.ui-progressbar .ui-progressbar-value, .btn-submit-form, .btn-reset-form {
+.progress .progress-bar, .btn-submit-form, .btn-reset-form {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -2451,14 +2451,14 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 #chart-4 {
-  background: #2ea0d7;
+  background: #2caae1;
 }
 #chart-4 .circles-text {
   color: #fff;
 }
 
 #chart-5 {
-  background: #fec942;
+  background: #fdd932;
 }
 #chart-5 .circles-text {
   color: #fff;
@@ -2485,92 +2485,55 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #ffd21e;
 }
 
-/*Progressbar*/
-.item-progressbar label {
-  display: block;
-  width: 100%;
+.progress-item span {
   font-weight: 400;
   font-size: 16px;
   color: #494a4c;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
-.list-chart-processbar .item-progressbar {
-  max-width: 470px;
-  width: 100%;
-}
-.list-chart-processbar .ui-progressbar .ui-progressbar-value {
-  float: right;
-  margin: 0;
-  border: none;
-}
-.list-chart-processbar .ui-progressbar.ui-widget-content {
+.progress {
+  height: 11px;
   background: #e5e5e5;
   border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
-.list-chart-processbar #progressbar-1.ui-progressbar {
+.progress .progress-bar {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.progress.sm {
   height: 5px;
 }
-.list-chart-processbar #progressbar-1.ui-progressbar .ui-progressbar-value {
-  background: #fec942;
+
+.progress .progress-bar.progress-bar-warning {
+  background: #fdd932;
 }
-.list-chart-processbar #progressbar-2.ui-progressbar {
-  height: 5px;
+.progress .progress-bar.progress-bar-info {
+  background: #2caae1;
 }
-.list-chart-processbar #progressbar-2.ui-progressbar .ui-progressbar-value {
-  background: #2ea0d7;
-}
-.list-chart-processbar #progressbar-3.ui-progressbar {
-  height: 5px;
-}
-.list-chart-processbar #progressbar-3.ui-progressbar .ui-progressbar-value {
+.progress .progress-bar.progress-bar-black {
   background: #494a4c;
-}
-.list-chart-processbar #progressbar-4.ui-progressbar {
-  height: 5px;
-}
-.list-chart-processbar #progressbar-4.ui-progressbar .ui-progressbar-value {
-  background: #ffd21e;
-}
-.list-chart-processbar #progressbar-5.ui-progressbar {
-  height: 11px;
-}
-.list-chart-processbar #progressbar-5.ui-progressbar .ui-progressbar-value {
-  background: #fec942;
-}
-.list-chart-processbar #progressbar-6.ui-progressbar {
-  height: 11px;
-}
-.list-chart-processbar #progressbar-6.ui-progressbar .ui-progressbar-value {
-  background: #2ea0d7;
-}
-.list-chart-processbar #progressbar-7.ui-progressbar {
-  height: 11px;
-}
-.list-chart-processbar #progressbar-7.ui-progressbar .ui-progressbar-value {
-  background: #494a4c;
-}
-.list-chart-processbar #progressbar-8.ui-progressbar {
-  height: 11px;
-}
-.list-chart-processbar #progressbar-8.ui-progressbar .ui-progressbar-value {
-  background: #ffd21e;
-}
-.list-chart-processbar #progressbar-2, .list-chart-processbar #progressbar-2, .list-chart-processbar #progressbar-5, .list-chart-processbar #progressbar-6 {
-  margin-bottom: 50px;
-}
-.list-chart-processbar #progressbar-3, .list-chart-processbar #progressbar-4 {
-  margin-bottom: 100px;
 }
 
 /*Pie Chart*/
-.pie-chart {
+.pieChart-target {
   float: left;
   height: 210px;
   margin-left: -8px;
   margin-right: 52px;
   max-width: 200px;
 }
-.pie-chart:last-child {
+.pieChart-target:last-child {
   margin-right: 0;
 }
 
@@ -2578,47 +2541,38 @@ input[type="text"], input[type="email"], input[type="password"] {
   display: none;
 }
 
-#target1 .pie0 {
-  background-color: #2ea0d7;
-  fill: #2ea0d7;
+.pieChart-blue .pie0 {
+  background-color: #2caae1;
+  fill: #2caae1;
 }
-#target1 .pie1 {
+.pieChart-blue .pie1 {
   background-color: #2a86b2;
   fill: #2a86b2;
 }
 
-#target2 .pie0 {
-  background-color: #fec942;
-  fill: #fec942;
+.pieChart-yellow .pie0 {
+  background-color: #fdd932;
+  fill: #fdd932;
 }
-#target2 .pie1 {
+.pieChart-yellow .pie1 {
   background-color: #d1a73b;
   fill: #d1a73b;
 }
 
-#target3 .pie0 {
+.pieChart-gray .pie0 {
   background-color: #a9a9a9;
   fill: #a9a9a9;
 }
-#target3 .pie1 {
+.pieChart-gray .pie1 {
   background-color: #ccc;
   fill: #ccc;
 }
 
-#target4 .pie0 {
-  background-color: #d1ae1e;
-  fill: #d1ae1e;
-}
-#target4 .pie1 {
-  background-color: #ffd21e;
-  fill: #ffd21e;
-}
-
-#target5 .pie0 {
+.pieChart-black .pie0 {
   background-color: #494a4c;
   fill: #494a4c;
 }
-#target5 .pie1 {
+.pieChart-black .pie1 {
   background-color: #1b1d1f;
   fill: #1b1d1f;
 }
@@ -9936,13 +9890,13 @@ Page Product List Mr
   color: #fbb450;
 }
 
+/***********************************************************************
+						Arrow Style Slider						
+************************************************************************/
 .product-slider.arrow-style .owl-theme .owl-controls .owl-buttons div {
   margin-top: -55px;
 }
 
-/***********************************************************************
-						Arrow Style Slider						
-************************************************************************/
 .arrow-style .owl-theme .owl-controls .owl-buttons div {
   background: transparent none repeat scroll 0 0;
   border-radius: 0;

@@ -1,0 +1,31 @@
+
+{% for i in (1..5) %}
+	{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+	{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
+	{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
+	{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+
+	<div class="pieChart-wrapper clearfix">
+		<div id="pieChart_source{{i}}" data-id="{{i}}" class="pieChart_source">
+			<input type="hidden" class="pieChart" value="65" /> <input type="hidden" class="pieChart" value="35" />
+		</div>
+		<div id="pieChart_target{{i}}" class="pieChart-target pieChart-blue "></div>
+	</div>
+
+{% endfor %}
+
+<script type="text/javascript">
+	
+  if( $('.pieChart').length > 0 && $('.pieChart-target').length > 0){
+  	
+  	$('.pieChart_source').each(function(){
+
+  		var id = $(this).attr('data-id');
+  		$(this).pieChart('#pieChart_target'+ id);
+  	});
+
+
+    // $('#pieChart_source1').pieChart('#pieChart_target1');
+  } 
+
+</script>
