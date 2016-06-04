@@ -634,12 +634,7 @@
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
                 });
             });
-          
         }
-
-
-
-
 
         //Partner Slider
         if ($('.partner-slider-paginav').length > 0) {
@@ -707,7 +702,6 @@
                 });
             });
         }
-
 
         //.testimonial-slider
         //.the-brand
@@ -922,140 +916,133 @@ jQuery(function($) {
 
     $(window).load(function() {
 
-        Circles.create({
-            id: 'chart-1',
-            radius: 150,
-            value: 47,
-            maxValue: 100,
-            width: 3,
-            colors: ['#e5e5e5', '#ffd21e'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-1',
+        //     radius: 150,
+        //     value: 47,
+        //     maxValue: 100,
+        //     width: 3,
+        //     colors: ['#e5e5e5', '#ffd21e'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
 
-        Circles.create({
-            id: 'chart-2',
-            radius: 150,
-            value: 68,
-            maxValue: 100,
-            width: 3,
-            colors: ['#e5e5e5', '#2ea0d7'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-2',
+        //     radius: 150,
+        //     value: 68,
+        //     maxValue: 100,
+        //     width: 3,
+        //     colors: ['#e5e5e5', '#2ea0d7'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
 
-        Circles.create({
-            id: 'chart-3',
-            radius: 150,
-            value: 93,
-            maxValue: 100,
-            width: 3,
-            colors: ['#e5e5e5', '#1b1d1f'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-3',
+        //     radius: 150,
+        //     value: 93,
+        //     maxValue: 100,
+        //     width: 3,
+        //     colors: ['#e5e5e5', '#1b1d1f'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
 
-        Circles.create({
-            id: 'chart-4',
-            radius: 62,
-            value: 75,
-            maxValue: 100,
-            width: 2,
-            colors: ['#2ea0d7', '#fff'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-4',
+        //     radius: 62,
+        //     value: 75,
+        //     maxValue: 100,
+        //     width: 2,
+        //     colors: ['#2ea0d7', '#fff'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
 
-        Circles.create({
-            id: 'chart-5',
-            radius: 62,
-            value: 50,
-            maxValue: 100,
-            width: 2,
-            colors: ['#ffd56a', '#fff'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-5',
+        //     radius: 62,
+        //     value: 50,
+        //     maxValue: 100,
+        //     width: 2,
+        //     colors: ['#ffd56a', '#fff'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
 
-        Circles.create({
-            id: 'chart-6',
-            radius: 62,
-            value: 95,
-            maxValue: 100,
-            width: 3,
-            colors: ['#fff', '#1b1d1f'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
-        Circles.create({
-            id: 'chart-7',
-            radius: 62,
-            value: 67,
-            maxValue: 100,
-            width: 2,
-            colors: ['#fff', '#1b1d1f'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
-        Circles.create({
-            id: 'chart-8',
-            radius: 62,
-            value: 18,
-            maxValue: 100,
-            width: 2,
-            colors: ['#424242', '#ffd21e'],
-            duration: 800,
-            wrpClass: 'circles-wrp',
-            textClass: 'circles-text',
-            valueStrokeClass: 'circles-valueStroke',
-            maxValueStrokeClass: 'circles-maxValueStroke',
-            styleWrapper: true,
-            styleText: true
-        });
+        // Circles.create({
+        //     id: 'chart-6',
+        //     radius: 62,
+        //     value: 95,
+        //     maxValue: 100,
+        //     width: 3,
+        //     colors: ['#fff', '#1b1d1f'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
+        // Circles.create({
+        //     id: 'chart-7',
+        //     radius: 62,
+        //     value: 67,
+        //     maxValue: 100,
+        //     width: 2,
+        //     colors: ['#fff', '#1b1d1f'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
+        // Circles.create({
+        //     id: 'chart-8',
+        //     radius: 62,
+        //     value: 18,
+        //     maxValue: 100,
+        //     width: 2,
+        //     colors: ['#424242', '#ffd21e'],
+        //     duration: 800,
+        //     wrpClass: 'circles-wrp',
+        //     textClass: 'circles-text',
+        //     valueStrokeClass: 'circles-valueStroke',
+        //     maxValueStrokeClass: 'circles-maxValueStroke',
+        //     styleWrapper: true,
+        //     styleText: true
+        // });
     });
 
-    // if( $('.pieChart').length > 0 && $('.pie-chart').length > 0){
-    //     $('#source1').pieChart('#target1');
-    //     $('#source2').pieChart('#target2');
-    //     $('#source3').pieChart('#target3');
-    //     $('#source4').pieChart('#target4');
-    //     $('#source5').pieChart('#target5');
-    // } 
 
 
     //wishlist

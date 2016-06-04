@@ -7606,7 +7606,7 @@
     }
 
 
-    ]
+   ]
   },
 
    {
@@ -8482,6 +8482,317 @@
      
     ]
   },
+
+  {
+    "name": "Material Progressbar",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Progressbar"
+      },
+      {
+        "type": "text",
+        "id": "pbar_item_1_title",
+        "label": "Title",
+        "default":"Progressbar 1"
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_1_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_1_small",
+        "label": "Small",
+        "default":false
+      }, 
+      {
+        "type": "text",
+        "id": "pbar_item_1_value",
+        "label": "Value",
+        "default":"65"
+      },
+      {
+        "type": "color",
+        "id": "pbar_item_1_color",
+        "label": "Color",
+        "default" : "#fec942"
+      },
+       {
+        "type": "text",
+        "id": "pbar_item_2_title",
+        "label": "Title",
+        "default":"Progressbar 2"
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_2_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_2_small",
+        "label": "Small",
+        "default":false
+      }, 
+      {
+        "type": "text",
+        "id": "pbar_item_2_value",
+        "label": "Value",
+        "default":"25"
+      },
+      
+      {
+        "type": "color",
+        "id": "pbar_item_2_color",
+        "label": "Color",
+        "default" : "#2ea0d7"
+      },
+       {
+        "type": "text",
+        "id": "pbar_item_3_title",
+        "label": "Title",
+        "default":"Progressbar 3"
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_3_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_3_small",
+        "label": "Small",
+        "default":false
+      }, 
+      {
+        "type": "text",
+        "id": "pbar_item_3_value",
+        "label": "Value",
+        "default":"75"
+      },
+      {
+        "type": "color",
+        "id": "pbar_item_3_color",
+        "label": "Color",
+        "default" : "#494a4c"
+      },
+             {
+        "type": "text",
+        "id": "pbar_item_4_title",
+        "label": "Title",
+        "default":"Progressbar 3"
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_4_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+       {
+        "type": "checkbox",
+        "id": "pbar_item_4_small",
+        "label": "Small",
+        "default":true
+      }, 
+      {
+        "type": "text",
+        "id": "pbar_item_4_value",
+        "label": "Value",
+        "default":"95"
+      },
+      {
+        "type": "color",
+        "id": "pbar_item_4_color",
+        "label": "Color",
+        "default" : "#494a4c"
+      }
+
+    ]
+  },
+
+  {
+    "name": "Material PieChart",
+    "settings": [
+      {
+        "type": "header",
+        "content": "PieChart"
+      },
+      {
+        "type": "text",
+        "id": "piechart_item_1_title",
+        "label": "Title",
+        "default":"Piechart 1"
+      }, 
+       {
+        "type": "checkbox",
+        "id": "piechart_item_1_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+      {
+        "type": "text",
+        "id": "piechart_item_1_value",
+        "label": "Value",
+        "default":"65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_1_color",
+        "label": "Color",
+         "options": [
+          {
+            "label": "color-blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "color-yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "color-gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "color-black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default" : "pieChart-blue"
+      },
+        {
+        "type": "text",
+        "id": "piechart_item_2_title",
+        "label": "Title",
+        "default":"Piechart 2"
+      },
+         {
+        "type": "checkbox",
+        "id": "piechart_item_2_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+      {
+        "type": "text",
+        "id": "piechart_item_2_value",
+        "label": "Value",
+        "default":"65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_2_color",
+        "label": "Color",
+         "options": [
+          {
+            "label": "color-blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "color-yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "color-gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "color-black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default" : "pieChart-blue"
+      },
+        {
+        "type": "text",
+        "id": "piechart_item_3_title",
+        "label": "Title",
+        "default":"Piechart 3"
+      },
+         {
+        "type": "checkbox",
+        "id": "piechart_item_3_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+      {
+        "type": "text",
+        "id": "piechart_item_3_value",
+        "label": "Value",
+        "default":"65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_3_color",
+        "label": "Color",
+          "options": [
+          {
+            "label": "color-blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "color-yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "color-gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "color-black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default" : "pieChart-blue"
+      },
+        {
+        "type": "text",
+        "id": "piechart_item_4_title",
+        "label": "Title",
+        "default":"Piechart 4"
+      }, 
+         {
+        "type": "checkbox",
+        "id": "piechart_item_4_enable",
+        "label": "Enable",
+        "default":true
+      }, 
+      {
+        "type": "text",
+        "id": "piechart_item_4_value",
+        "label": "Value",
+        "default":"65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_4_color",
+        "label": "Color",
+         "options": [
+          {
+            "label": "color-blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "color-yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "color-gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "color-black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default" : "pieChart-blue"
+      }
+    ]
+  }
+  ,
 
   {
     "name": "Material Social media",

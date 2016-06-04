@@ -1,16 +1,31 @@
+{% assign var_piechart = "piechart" %}
+{% assign var_piechart_length = 4 %}
 
-{% for i in (1..5) %}
-	{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
-	{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-	{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
-	{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+{% for i in (1..var_piechart_length) %}
+	
+	{% capture penable %}{{var_piechart}}_item_{{ i }}_enable{% endcapture %}
 
-	<div class="pieChart-wrapper clearfix">
-		<div id="pieChart_source{{i}}" data-id="{{i}}" class="pieChart_source">
-			<input type="hidden" class="pieChart" value="65" /> <input type="hidden" class="pieChart" value="35" />
+	{%if settings[penable]%}
+	
+		{% capture ptitle %}{{var_piechart}}_item_{{ i }}_title{% endcapture %}
+		{% capture pcolor %}{{var_piechart}}_item_{{ i }}_color{% endcapture %}
+		{% capture pvalue %}{{var_piechart}}_item_{{ i }}_value{% endcapture %}
+
+		
+		{% assign main_value = settings[pvalue] | downcase  | plus:0 %}
+		{% assign remain_value = 100 | minus: main_value %}
+		{% assign class_col = 12 | divided_by : var_piechart_length %}
+
+
+		<div class="pieChart-wrapper col-md-{{class_col}}">
+			<h3>{{settings[ptitle]}}</h3>
+			<div id="pieChart_source{{i}}" data-id="{{i}}" class="pieChart_source">
+				<input type="hidden" class="pieChart" value="{{main_value}}" /> <input type="hidden" class="pieChart" value="{{remain_value}}" />
+			</div>
+			<div id="pieChart_target{{i}}" class="pieChart-target {{settings[pcolor]}}"></div>
 		</div>
-		<div id="pieChart_target{{i}}" class="pieChart-target pieChart-blue "></div>
-	</div>
+
+	{% endif %}
 
 {% endfor %}
 
@@ -23,9 +38,7 @@
   		var id = $(this).attr('data-id');
   		$(this).pieChart('#pieChart_target'+ id);
   	});
-
-
-    // $('#pieChart_source1').pieChart('#pieChart_target1');
+    
   } 
 
 </script>

@@ -1,0 +1,64 @@
+{% assign var_progress = "pbar" %}
+{% assign var_progress_length = 8 %}
+	<div class="list-chart-processbar clearfix">
+{% for i in (1..var_progress_length) %}
+	
+	{% capture penable %}{{var_progress}}_item_{{ i }}_enable{% endcapture %}
+
+	{%if settings[penable]%}
+	
+		{% capture ptitle %}{{var_progress}}_item_{{ i }}_title{% endcapture %}
+		{% capture pcolor %}{{var_progress}}_item_{{ i }}_color{% endcapture %}
+		{% capture pvalue %}{{var_progress}}_item_{{ i }}_value{% endcapture %}
+		
+		{% capture psmall %}{{var_progress}}_item_{{ i }}_small{% endcapture %}
+		
+
+
+
+<div class="progress-circle circle1" id="chart-{{i}}" data-radius="150" data-value="{{settings[pvalue]}}" data-max="100" data-width="3" data-color1="#e5e5e5" data-color2="#ffd21e" data-duration="800" data-wrpClass="circles-wrp" data-textClass="circles-text" data-valueStrokeClass="circles-valueStroke" data-maxValueStrokeClass="circles-maxValueStroke" data-styleWrapper="true" data-styleText="true"></div>
+			
+		
+
+	{% endif %}
+
+{% endfor %}
+</div>
+<script type="text/javascript">
+if($('.progress-circle').length > 0) {
+	$('.progress-circle').each(function(){
+
+		var id = $(this).attr('id'),
+							radius =   $(this).data('radius'),
+							value = $(this).data('value'),
+							maxValue = $(this).data('maxValue'),
+							width = $(this).data('width'),
+							colors = [$(this).data('color1'), $(this).data('color2')],
+							duration = $(this).data('duration'),
+							wrpClass = $(this).data('wrpClass'),
+							textClass = $(this).data('textClass'),
+							valueStrokeClass = $(this).data('valueStrokeClass'),
+							maxValueStrokeClass = $(this).data('maxValueStrokeClass'),
+							styleWrapper = $(this).data('styleWrapper')
+							styleText = $(this).data('styleText');
+
+		Circles.create({
+							id,
+							radius,
+							value,
+							maxValue,
+							width,
+							colors,
+							duration,
+							wrpClass,
+							textClass,
+							valueStrokeClass,
+							maxValueStrokeClass,
+							styleWrapper,
+							styleText
+						});
+
+	});
+}
+		
+</script>
