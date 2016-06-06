@@ -7214,6 +7214,119 @@
     ]
   },
 
+  {
+  "name": "Countdown",
+  "settings": [{
+    "type": "header",
+    "content": "General Countdown settings",
+    "info": "[View configuration](http:\/\/git.wimbarelds.nl\/TimeCircles)"
+  }, {
+    "type": "checkbox",
+    "id": "countdown_enable",
+    "label": "Enabel Hotdeal",
+    "default": true
+  },  {
+    "type": "radio",
+    "id": "countdown_animation",
+    "label": "Choose Layout",
+    "options": [{
+      "value": "smooth",
+      "label": "Smooth"
+    }, {
+      "value": "ticks",
+      "label": "Ticks:"
+    }],
+    "default": "smooth"
+  }, 
+  {
+    "type": "color",
+    "id": "countdown_canvas_color",
+    "label": "Canvas color",
+    "default": "#1b1d1f"
+  },
+  {
+    "type": "checkbox",
+    "id": "countdown_date",
+    "label": "1. Enable Date",
+    "default": true
+  }, {
+    "type": "text",
+    "id": "countdown_date_text",
+    "label": "Format text dates",
+    "default": "d"
+  }, {
+    "type": "color",
+    "id": "countdown_date_color",
+    "label": "Dates color",
+    "default": "#fbb450"
+  },{
+    "type": "checkbox",
+    "id": "countdown_hour",
+    "label": "2. Enable Hour",
+    "default": true
+  },  {
+    "type": "text",
+    "id": "countdown_hour_text",
+    "label": "Format text hours",
+    "default": "h"
+  }, {
+    "type": "color",
+    "id": "countdown_hour_color",
+    "label": "Hours color",
+    "default": "#fbb450"
+  },
+  {
+    "type": "checkbox",
+    "id": "countdown_minute",
+    "label": "Enable Minute",
+    "default": true
+  }, {
+    "type": "text",
+    "id": "countdown_minute_text",
+    "label": "Format text minutes",
+    "default": "m"
+  }, {
+    "type": "color",
+    "id": "countdown_minute_color",
+    "label": "Minutes color",
+    "default": "#fbb450"
+  }, {
+    "type": "checkbox",
+    "id": "countdown_second",
+    "label": "Enable Second",
+    "default": true
+  },
+    {
+    "type": "text",
+    "id": "countdown_second_text",
+    "label": "Format text second",
+    "default": "s"
+  }, {
+    "type": "color",
+    "id": "countdown_second_color",
+    "label": "Seconds color",
+    "default": "#fbb450"
+  }, {
+    "type": "header",
+    "content": "Product #1"
+  }, {
+    "type": "product",
+    "id": "countdown_product_1",
+    "label": "Select products hotdeal"
+  }, {
+    "type": "text",
+    "id": "countdown_product_1_time",
+    "label": "Day",
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019"
+  }, {
+    "type": "color",
+    "id": "countdown_product_1_color",
+    "label": "Background color",
+    "default": "#fbb450"
+  }
+]
+},
+
  {
     "name": "Material Products shortcode",
     "settings": [

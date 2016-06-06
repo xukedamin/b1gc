@@ -1,0 +1,115 @@
+{% comment %}
+
+countdown_enable
+countdown_animation
+countdown_circle_width
+countdown_bg_width
+countdown_canvas_color
+
+countdown_date
+countdown_date_text
+countdown_date_color
+
+countdown_hour
+countdown_hour_text
+countdown_hour_color
+
+countdown_minute
+countdown_minute_text
+countdown_minute_color
+
+countdown_second
+countdown_second_text
+countdown_second_color
+
+{% endcomment %}
+
+{%assign var_count_down = 'countdown' %}
+
+{% capture cd_enable %}{{var_count_down}}_enable{% endcapture %}
+
+{%if cd_enable %}
+
+	{% capture cd_animation %}{{var_count_down}}_animation{% endcapture %}
+
+	{% capture cd_canvas_color %}{{var_count_down}}_canvas_color{% endcapture %}
+
+	{% capture cd_date %}{{var_count_down}}_date{% endcapture %}
+	{% capture cd_date_text %}{{var_count_down}}_date_text{% endcapture %}
+	{% capture cd_date_color %}{{var_count_down}}_date_color{% endcapture %}
+
+	{% capture cd_hour %}{{var_count_down}}_hour{% endcapture %}
+	{% capture cd_hour_text %}{{var_count_down}}_hour_text{% endcapture %}
+	{% capture cd_hour_color %}{{var_count_down}}_hour_color{% endcapture %}
+
+	{% capture cd_minute %}{{var_count_down}}_minute{% endcapture %}
+	{% capture cd_minute_text %}{{var_count_down}}_minute_text{% endcapture %}
+	{% capture cd_minute_color %}{{var_count_down}}_minute_color{% endcapture %}
+
+	{% capture cd_second %}{{var_count_down}}_second{% endcapture %}
+	{% capture cd_second_text %}{{var_count_down}}_second_text{% endcapture %}
+	{% capture cd_second_color %}{{var_count_down}}_second_color{% endcapture %}
+
+	<div data-date="10/31/2016" class="jv-countdown hotdeal-countdown" data-circlegbcolor="{{settings[cd_canvas_color]}}" data-ani="{{settings[cd_animation]}}" data-dateshow="{{settings[cd_date]}}" data-datetext="{{settings[cd_date_text]}}" data-hourcolor="{{settings[cd_date_color]}}" data-hourshow="{{settings[cd_hour]}}" data-hourtext="{{settings[cd_hour_text]}}" data-hourcolor="{{settings[cd_hour_color]}}"  data-minshow="{{settings[cd_minute]}}" data-mintext="{{settings[cd_minute_text]}}" data-mincolor="{{settings[cd_minute_color]}}" data-secshow="{{settings[cd_second]}}" data-sectext="{{settings[cd_second_text]}}" data-seccolor="{{settings[cd_second_color]}}">
+	</div>
+
+	<script type="text/javascript">
+		
+	if ($('.jv-countdown').length > 0) {
+
+		$('.jv-countdown').each(function(){
+
+			var id = $(this).attr('id'),
+				circlegbcolor = $(this).data('circlegbcolor'),
+				ani = $(this).data('ani'),
+
+				dateshow = $(this).data('dateshow'),
+				datetext = $(this).data('datetext'),
+				datecolor = $(this).data('datecolor'),
+
+				hourshow = $(this).data('hourshow'),
+				hourtext = $(this).data('hourtext'),
+				hourcolor = $(this).data('hourcolor'),
+
+				minshow = $(this).data('minshow'),
+				mintext = $(this).data('mintext'),
+				mincolor = $(this).data('mincolor'),
+
+				secshow = $(this).data('secshow'),
+				sectext = $(this).data('sectext'),
+				seccolor = $(this).data('seccolor');
+
+			$(this).TimeCircles({
+				 	animation: ani,
+			    fg_width: 0.03,
+			    bg_width: 0,
+			    text_size: 0,
+			    circle_bg_color: circlegbcolor,
+			    time: {
+			        Days: {
+			            show: dateshow,
+			            text: datetext,
+			            color: datecolor
+			        },
+			        Hours: {
+			            show: hourshow,
+			            text: hourtext,
+			            color: hourcolor
+			        },
+			        Minutes: {
+			            show: minshow,
+			            text: mintext,
+			            color: mincolor
+			        },
+			        Seconds: {
+			            show: secshow,
+			            text: sectext,
+			            color: seccolor
+			        }
+			    }
+			});
+		});
+	}
+	</script>
+
+{% endif %}
