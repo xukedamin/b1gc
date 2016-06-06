@@ -1,6 +1,6 @@
-{% assign var_progress = "pbar" %}
+{% assign var_progress = "pbarcircle" %}
 {% assign var_progress_length = 8 %}
-	<div class="list-chart-processbar clearfix">
+	<div class="list-chart-processbar row">
 {% for i in (1..var_progress_length) %}
 	
 	{% capture penable %}{{var_progress}}_item_{{ i }}_enable{% endcapture %}
@@ -8,15 +8,26 @@
 	{%if settings[penable]%}
 	
 		{% capture ptitle %}{{var_progress}}_item_{{ i }}_title{% endcapture %}
-		{% capture pcolor %}{{var_progress}}_item_{{ i }}_color{% endcapture %}
+
+		{% capture pcolor_stroke %}{{var_progress}}_item_{{ i }}_color_stroke{% endcapture %}
+		{% capture pcolor_main %}{{var_progress}}_item_{{ i }}_color_main{% endcapture %}
+
+		{% capture textcolor %}{{var_progress}}_item_{{ i }}_textcolor{% endcapture %}
+
 		{% capture pvalue %}{{var_progress}}_item_{{ i }}_value{% endcapture %}
 		
-		{% capture psmall %}{{var_progress}}_item_{{ i }}_small{% endcapture %}
-		
+		{% capture pbackground %}{{var_progress}}_item_{{ i }}_background{% endcapture %}
+
+		{% assign circle_class = 'circle1' %}
+		{% assign radius_value = 150 %}
+		{%if settings[pbackground] != 'rgba(0,0,0,0)' %}
+			{% assign circle_class = 'circle2' %}
+			{% assign radius_value = 62 %}
+		{%endif %}
 
 
 
-<div class="progress-circle circle1" id="chart-{{i}}" data-radius="150" data-value="{{settings[pvalue]}}" data-max="100" data-width="3" data-color1="#e5e5e5" data-color2="#ffd21e" data-duration="800" data-wrpClass="circles-wrp" data-textClass="circles-text" data-valueStrokeClass="circles-valueStroke" data-maxValueStrokeClass="circles-maxValueStroke" data-styleWrapper="true" data-styleText="true"></div>
+<div class="progress-circle {{circle_class}} col-md-4" id="chart-{{i}}" style="background:{{settings[pbackground]}};color:{{settings[textcolor]}}" data-radius="{{radius_value}}" data-value="{{settings[pvalue]}}" data-max="100" data-width="2" data-color1="{{settings[pcolor_stroke]}}" data-color2="{{settings[pcolor_main]}}" data-duration="800" data-wrpClass="circles-wrp" data-textClass="circles-text" data-valueStrokeClass="circles-valueStroke" data-maxValueStrokeClass="circles-maxValueStroke" data-styleWrapper="true" data-styleText="true"></div>
 			
 		
 
@@ -29,34 +40,34 @@ if($('.progress-circle').length > 0) {
 	$('.progress-circle').each(function(){
 
 		var id = $(this).attr('id'),
-							radius =   $(this).data('radius'),
-							value = $(this).data('value'),
-							maxValue = $(this).data('maxValue'),
-							width = $(this).data('width'),
-							colors = [$(this).data('color1'), $(this).data('color2')],
-							duration = $(this).data('duration'),
-							wrpClass = $(this).data('wrpClass'),
-							textClass = $(this).data('textClass'),
-							valueStrokeClass = $(this).data('valueStrokeClass'),
-							maxValueStrokeClass = $(this).data('maxValueStrokeClass'),
-							styleWrapper = $(this).data('styleWrapper')
-							styleText = $(this).data('styleText');
+				radius =   $(this).data('radius'),
+				value = $(this).data('value'),
+				maxValue = $(this).data('maxValue'),
+				width = $(this).data('width'),
+				colors = [$(this).data('color1'), $(this).data('color2')],
+				duration = $(this).data('duration'),
+				wrpClass = $(this).data('wrpClass'),
+				textClass = $(this).data('textClass'),
+				valueStrokeClass = $(this).data('valueStrokeClass'),
+				maxValueStrokeClass = $(this).data('maxValueStrokeClass'),
+				styleWrapper = $(this).data('styleWrapper')
+				styleText = $(this).data('styleText');
 
 		Circles.create({
-							id,
-							radius,
-							value,
-							maxValue,
-							width,
-							colors,
-							duration,
-							wrpClass,
-							textClass,
-							valueStrokeClass,
-							maxValueStrokeClass,
-							styleWrapper,
-							styleText
-						});
+			id,
+			radius,
+			value,
+			maxValue,
+			width,
+			colors,
+			duration,
+			wrpClass,
+			textClass,
+			valueStrokeClass,
+			maxValueStrokeClass,
+			styleWrapper,
+			styleText
+		});
 
 	});
 }

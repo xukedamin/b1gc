@@ -12,8 +12,8 @@
 }
 .circle1 {
 	float: left;
-	margin-right: 135px;
-	width: 300px;
+	// margin-right: 135px;
+	// width: 300px;
 
 	&:last-child {
 		margin-right: 0;
@@ -33,42 +33,9 @@
 }
 .circle2 .circles-text {
 	font-size: 30px !important;
+	color: inherit;
 }
-#chart-4 {
-	background: $color_curious-blue;
 
-	.circles-text {
-		color: $color_white;
-	}
-}
-#chart-5 {
-	background: $color_bright-sun;
-
-	.circles-text {
-		color: $color_white;
-	}
-}
-#chart-6 {
-	background: $color_silver-darker;
-
-	.circles-text {
-		color: $color_shark;
-	}
-}
-#chart-7 {
-	background: $color_candlelight;
-
-	.circles-text {
-		color: $color_shark;
-	}
-}
-#chart-8 {
-	background: $color_shark;
-
-	.circles-text {
-		color: $color_candlelight;
-	}
-}
 
 
 //boostrap progressbar
@@ -81,9 +48,11 @@
 	   display: inline-block;
 	}
 
-	.pb_label{}
+	.pb_label{
+		font-weight: 600;
+	}
 	.pb_unit{
-
+		float: right;
 	}
 }
 
