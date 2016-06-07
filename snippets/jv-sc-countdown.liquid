@@ -2,8 +2,6 @@
 
 countdown_enable
 countdown_animation
-countdown_circle_width
-countdown_bg_width
 countdown_canvas_color
 
 countdown_date
@@ -50,66 +48,17 @@ countdown_second_color
 	{% capture cd_second_text %}{{var_count_down}}_second_text{% endcapture %}
 	{% capture cd_second_color %}{{var_count_down}}_second_color{% endcapture %}
 
+
+	{%if settings[cd_date] and settings[cd_hour] and settings[cd_minute] and settings[cd_second] %}
+		{%assign wrap_width = "273px" %}
+	{%else%}
+		{%assign wrap_width = "200px" %}
+	{% endif %}
+
+<div class="countdown-wrap" style="width:{{wrap_width}};">
 	<div data-date="10/31/2016" class="jv-countdown hotdeal-countdown" data-circlegbcolor="{{settings[cd_canvas_color]}}" data-ani="{{settings[cd_animation]}}" data-dateshow="{{settings[cd_date]}}" data-datetext="{{settings[cd_date_text]}}" data-hourcolor="{{settings[cd_date_color]}}" data-hourshow="{{settings[cd_hour]}}" data-hourtext="{{settings[cd_hour_text]}}" data-hourcolor="{{settings[cd_hour_color]}}"  data-minshow="{{settings[cd_minute]}}" data-mintext="{{settings[cd_minute_text]}}" data-mincolor="{{settings[cd_minute_color]}}" data-secshow="{{settings[cd_second]}}" data-sectext="{{settings[cd_second_text]}}" data-seccolor="{{settings[cd_second_color]}}">
 	</div>
+</div>
 
-	<script type="text/javascript">
-		
-	if ($('.jv-countdown').length > 0) {
-
-		$('.jv-countdown').each(function(){
-
-			var id = $(this).attr('id'),
-				circlegbcolor = $(this).data('circlegbcolor'),
-				ani = $(this).data('ani'),
-
-				dateshow = $(this).data('dateshow'),
-				datetext = $(this).data('datetext'),
-				datecolor = $(this).data('datecolor'),
-
-				hourshow = $(this).data('hourshow'),
-				hourtext = $(this).data('hourtext'),
-				hourcolor = $(this).data('hourcolor'),
-
-				minshow = $(this).data('minshow'),
-				mintext = $(this).data('mintext'),
-				mincolor = $(this).data('mincolor'),
-
-				secshow = $(this).data('secshow'),
-				sectext = $(this).data('sectext'),
-				seccolor = $(this).data('seccolor');
-
-			$(this).TimeCircles({
-				 	animation: ani,
-			    fg_width: 0.03,
-			    bg_width: 0,
-			    text_size: 0,
-			    circle_bg_color: circlegbcolor,
-			    time: {
-			        Days: {
-			            show: dateshow,
-			            text: datetext,
-			            color: datecolor
-			        },
-			        Hours: {
-			            show: hourshow,
-			            text: hourtext,
-			            color: hourcolor
-			        },
-			        Minutes: {
-			            show: minshow,
-			            text: mintext,
-			            color: mincolor
-			        },
-			        Seconds: {
-			            show: secshow,
-			            text: sectext,
-			            color: seccolor
-			        }
-			    }
-			});
-		});
-	}
-	</script>
 
 {% endif %}

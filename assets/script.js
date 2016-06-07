@@ -811,67 +811,71 @@
             $(".control-paginav-featured-slider #amount").appendTo($(".control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all"));
         }
 
-        //Time Circle
-        if ($('.deal-countdown').length > 0) {
-            $(".deal-countdown").TimeCircles({
-                fg_width: 0.05,
-                bg_width: 0,
-                text_size: 0,
-                circle_bg_color: "#5f6062",
-                time: {
-                    Days: {
-                        show: true,
-                        text: "",
-                        color: "#fff"
-                    },
-                    Hours: {
-                        show: true,
-                        text: "",
-                        color: "#fff"
-                    },
-                    Minutes: {
-                        show: true,
-                        text: "",
-                        color: "#fff"
-                    },
-                    Seconds: {
-                        show: true,
-                        text: "",
-                        color: "#fff"
-                    }
-                }
-            });
-        }
-        // if ($('.hotdeal-countdown').length > 0) {
-        //     $(".hotdeal-countdown").TimeCircles({
-        //         fg_width: 0.03,
-        //         bg_width: 0,
-        //         text_size: 0,
-        //         circle_bg_color: "#1b1d1f",
-        //         time: {
-        //             Days: {
-        //                 show: true,
-        //                 text: "DAY",
-        //                 color: "#fbb450"
-        //             },
-        //             Hours: {
-        //                 show: true,
-        //                 text: "HOUR",
-        //                 color: "#fbb450"
-        //             },
-        //             Minutes: {
-        //                 show: true,
-        //                 text: "MIN",
-        //                 color: "#fbb450"
-        //             },
-        //             Seconds: {
-        //                 show: true,
-        //                 text: "SEC",
-        //                 color: "#fbb450"
-        //             }
-        //         }
-        //     });
-        // }
+
+        if ($('.jv-countdown').length > 0) {
+
+        $('.jv-countdown').each(function(){
+
+          var id = $(this).attr('id'),
+            circlegbcolor = $(this).data('circlegbcolor'),
+            ani = $(this).data('ani'),
+
+            dateshow = $(this).data('dateshow'),
+            datetext = $(this).data('datetext'),
+            datecolor = $(this).data('datecolor'),
+
+            hourshow = $(this).data('hourshow'),
+            hourtext = $(this).data('hourtext'),
+            hourcolor = $(this).data('hourcolor'),
+
+            minshow = $(this).data('minshow'),
+            mintext = $(this).data('mintext'),
+            mincolor = $(this).data('mincolor'),
+
+            secshow = $(this).data('secshow'),
+            sectext = $(this).data('sectext'),
+            seccolor = $(this).data('seccolor');
+
+          $(this).TimeCircles({
+              animation: ani,
+              fg_width: 0.03,
+              bg_width: 0,
+              text_size: 0,
+              circle_bg_color: circlegbcolor,
+              time: {
+                  Days: {
+                      show: dateshow,
+                      text: datetext,
+                      color: datecolor
+                  },
+                  Hours: {
+                      show: hourshow,
+                      text: hourtext,
+                      color: hourcolor
+                  },
+                  Minutes: {
+                      show: minshow,
+                      text: mintext,
+                      color: mincolor
+                  },
+                  Seconds: {
+                      show: secshow,
+                      text: sectext,
+                      color: seccolor
+                  }
+              }
+          });
+
+          $( ".time_circles div[class^='textDiv_']").each(function(){
+             var w = $(this).width();
+            $(this).height(w);
+          });
+
+        });
+      }
+
+
+       
     });
 
  /////////////////////// to top

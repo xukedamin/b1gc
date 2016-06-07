@@ -29,9 +29,13 @@
       </div>
 			
 			<h3 class="sub-title"> <a href="{{ thisproduct.url | within: current_collection }}" class="product-title">{{ thisproduct.title }}</a></h3>
+
+      
+      {%include 'product--countdown' %}
+
       {%if settings[time] != blank %}
-			<div data-date="{{settings[time]}}" class="hotdeal-countdown">
-			</div>
+		<!-- 	<div data-date="{{settings[time]}}" class="hotdeal-countdown">
+			</div> -->
       {% endif %}
 		
 			<a href="{{ thisproduct.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>

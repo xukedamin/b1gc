@@ -7317,10 +7317,87 @@
     "type": "text",
     "id": "countdown_product_1_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019"
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
+    "default": "6/15/2016"
   }, {
     "type": "color",
     "id": "countdown_product_1_color",
+    "label": "Background color",
+    "default": "#fbb450"
+  },
+  {
+    "type": "header",
+    "content": "Product #2"
+  }, {
+    "type": "product",
+    "id": "countdown_product_2",
+    "label": "Select products hotdeal"
+  }, {
+    "type": "text",
+    "id": "countdown_product_2_time",
+    "label": "Day",
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
+    "default": "6/15/2016"
+  }, {
+    "type": "color",
+    "id": "countdown_product_2_color",
+    "label": "Background color",
+    "default": "#fbb450"
+  },
+  {
+    "type": "header",
+    "content": "Product #3"
+  }, {
+    "type": "product",
+    "id": "countdown_product_3",
+    "label": "Select products hotdeal"
+  }, {
+    "type": "text",
+    "id": "countdown_product_3_time",
+    "label": "Day",
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
+    "default": "6/15/2016"
+  }, {
+    "type": "color",
+    "id": "countdown_product_3_color",
+    "label": "Background color",
+    "default": "#fbb450"
+  },
+  {
+    "type": "header",
+    "content": "Product #4"
+  }, {
+    "type": "product",
+    "id": "countdown_product_4",
+    "label": "Select products hotdeal"
+  }, {
+    "type": "text",
+    "id": "countdown_product_4_time",
+    "label": "Day",
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
+    "default": "6/15/2016"
+  }, {
+    "type": "color",
+    "id": "countdown_product_4_color",
+    "label": "Background color",
+    "default": "#fbb450"
+  },
+  {
+    "type": "header",
+    "content": "Product #5"
+  }, {
+    "type": "product",
+    "id": "countdown_product_5",
+    "label": "Select products hotdeal"
+  }, {
+    "type": "text",
+    "id": "countdown_product_5_time",
+    "label": "Day",
+    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
+    "default": "6/15/2016"
+  }, {
+    "type": "color",
+    "id": "countdown_product_5_color",
     "label": "Background color",
     "default": "#fbb450"
   }
