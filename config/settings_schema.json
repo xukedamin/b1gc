@@ -7214,6 +7214,58 @@
     ]
   },
 
+   {
+    "name": "Shortcode Banner catalog",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Setting"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_catalog",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "banner_catalog_img.png",
+        "label": "Banner Image",
+        "info": "Recommended size: 580 x 470 px"
+      },
+      {
+        "type": "text",
+        "id": "banner_catalog_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "banner_catalog_subtitle",
+        "label": "Subtitle",
+        "default": "Subtitle 1"
+      },
+      {
+        "type": "textarea",
+        "id": "banner_catalog_text",
+        "label": "Banner Text",
+        "default": "Banner Text"
+      },
+      {
+        "type": "text",
+        "id": "banner_catalog_btn",
+        "label": "Button",
+        "default": "Shop now"
+      },
+    
+      {
+        "type": "text",
+        "id": "banner_catalog_link",
+        "label": "Banner link",
+        "default": "http:\/\/bigc-1.myshopify.com\/"
+      }
+    ]
+  },
+
   {
   "name": "Countdown",
   "settings": [{

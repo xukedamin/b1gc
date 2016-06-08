@@ -1,4 +1,4 @@
-{% assign banner_catalog = "banner3_item_1" %}
+{% assign banner_catalog = "banner_catalog" %}
 
 {% capture banner_img %}{{banner_catalog}}_img.png{% endcapture %}
 {% capture banner_title %}{{banner_catalog}}_title{% endcapture %}
@@ -18,14 +18,6 @@
 					<h2>{{settings[banner_title]}}</h2>
 
 					<div class="text"> {{settings[banner_text]}} </div>
-					
-					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie conse.</p>
-					<ul class="list-unstyled">
-						<li><a href="#"><span class="lnr-highlight"></span>Lorem ipsum dolor sit amet, </a></li>
-						<li><a href="#"><span class="lnr-highlight"></span>Consectetur adipiscing elit</a></li>
-					</ul>
-
-					<p>Pel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat vel illum.</p>
 					
 					<a href="{{settings[banner_link]}}" class="download-catalog"><span class="lnr lnr-download"></span> {{settings[banner_btn]}}</a>
 				</div>
