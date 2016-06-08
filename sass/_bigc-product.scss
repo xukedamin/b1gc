@@ -156,15 +156,15 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     // .product-extra-link a
     .product-extra-link .action
      {
-      // transform: scale(1);
        @extend %jv-transform-scale-1;
     }
     //NOTE: EDIT
-    // .list-product .item-product-thumb:hover .product-thumb-link img 
     .product-thumb-link img 
     {
-      // transform: scale(1.15);
       @extend %jv-transform-scale-115;
+    }
+    .countdown-wrap{
+      opacity: 0;
     }
   }
 }
@@ -298,6 +298,22 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 
 
+.countdown-wrap{
+  @extend %jv-transition-easeout;
+}
+.countdown--small{
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  @include prefix(transform,translateX(-50%));
+
+  .time_circles .number{
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+
 .item-product.item-product-leading {
   position: relative;
 }
@@ -312,6 +328,12 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   .countdown-wrap{
     margin-top: 20px;
   }
+
+  .countdown--big{
+    width: 273px;
+  }
+
+
   .info-price  span {
     color: #e6e6e6;
     display: block;
@@ -1017,49 +1039,11 @@ Page Detail Mr
 //hot deal countdown
 
 
-// .hotdeal-countdown {
-//   margin-top: -50px;
-//   width: 272px;
-//   margin-bottom: 15px;
-
-//   .time_circles > div {
-//     background: $color_mid-gray none repeat scroll 0 0;
-//     color: $color_white;
-//     display: inline-block;
-//     height: 64px;
-//     margin: 0 2px;
-//     padding-top: 12px;
-//     @extend %text-center;
-//     @extend %jv-border-radius-50;
-//     width: 64px !important;
-//   }
-//   canvas {
-//     left: 0px;
-//     position: relative;
-//     top: 70px;
-//     z-index: 9;
-//   }
-//   .number {
-//     display: block;
-//     font-size: 16px;
-//     font-weight: bold;
-//     margin-bottom: -4px;
-//   }
-//   .text {
-//     color: $color_silver-darker;
-//     font-size: 13px;
-//     @extend %text-up;
-//   }
-// }
-
 .hotdeal-countdown canvas {
     z-index: 9;
     position: relative;
 }
 
-/**
- *  FROM timecircle
- **/
 
 .time_circles {
     position: relative;
@@ -1067,6 +1051,8 @@ Page Detail Mr
     height: 100%;
 }
 
+$canvas_color: #{'{{ settings.countdown_background_color }}'};
+$canvas__text_color: #{'{{ settings.countdown_text_color }}'};
 
 .time_circles > div {
     position: absolute;
@@ -1076,9 +1062,10 @@ Page Detail Mr
     display: inline-block;
     bottom: 0;
     
-    border-radius: 50%;
-    background: $color_mid-gray none repeat scroll 0 0;
-    color: $color_white;
+    @extend %jv-border-radius-50;
+    @extend %text-center;
+    background: $canvas_color none repeat scroll 0 0;
+    color: $canvas__text_color;
 }
 
 .time_circles > div > h4 {

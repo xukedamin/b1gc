@@ -11,7 +11,7 @@ required: product
 
   {% if settings[countdown] ==  product.handle and settings[countdown_time] != blank %}
 
-  {% include 'jv-sc-countdown' %}
+  {% include 'jv-sc-countdown' with countdown_time:settings[countdown_time] %}
   {% endif %}     
 
 {% endfor %}      

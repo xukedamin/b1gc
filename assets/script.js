@@ -817,6 +817,7 @@
         $('.jv-countdown').each(function(){
 
           var id = $(this).attr('id'),
+            canvascolor = $(this).data('canvascolor'),
             circlegbcolor = $(this).data('circlegbcolor'),
             ani = $(this).data('ani'),
 
@@ -836,35 +837,77 @@
             sectext = $(this).data('sectext'),
             seccolor = $(this).data('seccolor');
 
-          $(this).TimeCircles({
-              animation: ani,
-              fg_width: 0.03,
-              bg_width: 0,
-              text_size: 0,
-              circle_bg_color: circlegbcolor,
-              time: {
-                  Days: {
-                      show: dateshow,
-                      text: datetext,
-                      color: datecolor
-                  },
-                  Hours: {
-                      show: hourshow,
-                      text: hourtext,
-                      color: hourcolor
-                  },
-                  Minutes: {
-                      show: minshow,
-                      text: mintext,
-                      color: mincolor
-                  },
-                  Seconds: {
-                      show: secshow,
-                      text: sectext,
-                      color: seccolor
-                  }
+            //check date
+            var var_date = new Date($(this).data('date'));
+
+            var today_date = new Date();
+
+            if(var_date > today_date){
+              
+              if($(this).parent().hasClass('countdown--small')){
+                    $(this).TimeCircles({
+                    animation: ani,
+                    fg_width: 0.03,
+                    bg_width: 0,
+                    text_size: 0,
+                    circle_bg_color: canvascolor,
+                    time: {
+                        Days: {
+                            show: dateshow,
+                            text: "",
+                            color: datecolor
+                        },
+                        Hours: {
+                            show: hourshow,
+                            text: "",
+                            color: hourcolor
+                        },
+                        Minutes: {
+                            show: minshow,
+                            text: "",
+                            color: mincolor
+                        },
+                        Seconds: {
+                            show: secshow,
+                            text: "",
+                            color: seccolor
+                        }
+                    }
+                });
               }
-          });
+              else{
+                $(this).TimeCircles({
+                    animation: ani,
+                    fg_width: 0.03,
+                    bg_width: 0,
+                    text_size: 0,
+                    circle_bg_color: canvascolor,
+                    time: {
+                        Days: {
+                            show: dateshow,
+                            text: datetext,
+                            color: datecolor
+                        },
+                        Hours: {
+                            show: hourshow,
+                            text: hourtext,
+                            color: hourcolor
+                        },
+                        Minutes: {
+                            show: minshow,
+                            text: mintext,
+                            color: mincolor
+                        },
+                        Seconds: {
+                            show: secshow,
+                            text: sectext,
+                            color: seccolor
+                        }
+                    }
+                });
+              }
+          }
+
 
           $( ".time_circles div[class^='textDiv_']").each(function(){
              var w = $(this).width();

@@ -7244,6 +7244,18 @@
     "label": "Canvas color",
     "default": "#1b1d1f"
   },
+   {
+    "type": "color",
+    "id": "countdown_background_color",
+    "label": "Background color",
+    "default": "#5f6062"
+  },
+  {
+    "type": "color",
+    "id": "countdown_text_color",
+    "label": "Text color",
+    "default": "#fff"
+  },
   {
     "type": "checkbox",
     "id": "countdown_date",
@@ -7252,12 +7264,12 @@
   }, {
     "type": "text",
     "id": "countdown_date_text",
-    "label": "Format text dates",
+    "label": "Text date",
     "default": "d"
   }, {
     "type": "color",
     "id": "countdown_date_color",
-    "label": "Dates color",
+    "label": "Date color",
     "default": "#fbb450"
   },{
     "type": "checkbox",
@@ -7267,12 +7279,12 @@
   },  {
     "type": "text",
     "id": "countdown_hour_text",
-    "label": "Format text hours",
+    "label": "Text hour",
     "default": "h"
   }, {
     "type": "color",
     "id": "countdown_hour_color",
-    "label": "Hours color",
+    "label": "Hour color",
     "default": "#fbb450"
   },
   {
@@ -7283,12 +7295,12 @@
   }, {
     "type": "text",
     "id": "countdown_minute_text",
-    "label": "Format text minutes",
+    "label": "Text minute",
     "default": "m"
   }, {
     "type": "color",
     "id": "countdown_minute_color",
-    "label": "Minutes color",
+    "label": "Minute color",
     "default": "#fbb450"
   }, {
     "type": "checkbox",
@@ -7299,7 +7311,7 @@
     {
     "type": "text",
     "id": "countdown_second_text",
-    "label": "Format text second",
+    "label": "Text seconds",
     "default": "s"
   }, {
     "type": "color",
@@ -7317,13 +7329,8 @@
     "type": "text",
     "id": "countdown_product_1_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
-    "default": "6/15/2016"
-  }, {
-    "type": "color",
-    "id": "countdown_product_1_color",
-    "label": "Background color",
-    "default": "#fbb450"
+    "info": "Format YYYY\/MM\/DD hh:mm:ss. EX : 2016\/06\/08 23:59:59",
+    "default": "2016\/08\/08 23:59:59"
   },
   {
     "type": "header",
@@ -7336,14 +7343,9 @@
     "type": "text",
     "id": "countdown_product_2_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
-    "default": "6/15/2016"
-  }, {
-    "type": "color",
-    "id": "countdown_product_2_color",
-    "label": "Background color",
-    "default": "#fbb450"
-  },
+    "info": "Format YYYY\/MM\/DD hh:mm:ss. EX : 2016\/06\/08 23:59:59",
+    "default": "2016\/08\/08 23:59:59"
+  }, 
   {
     "type": "header",
     "content": "Product #3"
@@ -7355,14 +7357,9 @@
     "type": "text",
     "id": "countdown_product_3_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
-    "default": "6/15/2016"
-  }, {
-    "type": "color",
-    "id": "countdown_product_3_color",
-    "label": "Background color",
-    "default": "#fbb450"
-  },
+    "info": "Format YYYY\/MM\/DD hh:mm:ss. EX : 2016\/06\/08 23:59:59",
+    "default": "2016\/08\/08 23:59:59"
+  }, 
   {
     "type": "header",
     "content": "Product #4"
@@ -7374,14 +7371,9 @@
     "type": "text",
     "id": "countdown_product_4_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
-    "default": "6/15/2016"
-  }, {
-    "type": "color",
-    "id": "countdown_product_4_color",
-    "label": "Background color",
-    "default": "#fbb450"
-  },
+     "info": "Format YYYY\/MM\/DD hh:mm:ss. EX : 2016\/06\/08 23:59:59",
+    "default": "2016\/08\/08 23:59:59"
+  }, 
   {
     "type": "header",
     "content": "Product #5"
@@ -7393,13 +7385,8 @@
     "type": "text",
     "id": "countdown_product_5_time",
     "label": "Day",
-    "info": "Format MM\/DD\/YYYY. EX : 09\/15\/2019",
-    "default": "6/15/2016"
-  }, {
-    "type": "color",
-    "id": "countdown_product_5_color",
-    "label": "Background color",
-    "default": "#fbb450"
+     "info": "Format YYYY\/MM\/DD hh:mm:ss. EX : 2016\/06\/08 23:59:59",
+    "default": "2016\/08\/08 23:59:59"
   }
 ]
 },
@@ -7601,13 +7588,7 @@
       "label": "Select products leading image"
     }, 
 
-    {
-      "type": "text",
-      "id": "sc_product_tab_grid_1_product_time",
-      "label": "Day",
-      "info":"Format MM/DD/YYYY",
-      "default": "6/15/2016"
-    }, 
+
     {
       "type": "text",
       "id": "sc_product_tab_grid_1_limit",
@@ -7639,13 +7620,7 @@
       "id": "sc_product_tab_grid_2_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_grid_2_product_time",
-      "label": "Day",
-      "info":"Format MM/DD/YYY",
-      "default": "6/15/2016"
-    }, 
+  
 
     {
       "type": "text",
@@ -7678,13 +7653,7 @@
       "id": "sc_product_tab_grid_3_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_grid_3_product_time",
-      "label": "Day",
-      "info":"Format MM/DD/YYY",
-      "default": "6/15/2016"
-    }, 
+
     {
       "type": "text",
       "id": "sc_product_tab_grid_3_limit",
@@ -7716,13 +7685,7 @@
       "id": "sc_product_tab_grid_4_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_grid_4_product_time",
-      "label": "Day",
-      "info":"Format MM/DD/YYY",
-      "default": "6/15/2016"
-    }, 
+
 
     {
       "type": "text",
@@ -7749,7 +7712,7 @@
       "type": "text",
       "id": "sc_product_slider_grid_subheading",
       "label": "SubHeading",
-      "default": "SubHeading New products CONSECTETUR ADIPISCI"
+      "default": "SubHeading New products"
     }, {
       "type": "collection",
       "id": "sc_product_slider_grid_1",

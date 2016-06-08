@@ -31,7 +31,7 @@
 			<h3 class="sub-title"> <a href="{{ thisproduct.url | within: current_collection }}" class="product-title">{{ thisproduct.title }}</a></h3>
 
       
-      {%include 'product--countdown' %}
+      {%include 'product--countdown' with countdown_wrap:"countdown--big" %}
 
       {%if settings[time] != blank %}
 		<!-- 	<div data-date="{{settings[time]}}" class="hotdeal-countdown">

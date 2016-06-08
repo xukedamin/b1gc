@@ -20,6 +20,8 @@ countdown_second
 countdown_second_text
 countdown_second_color
 
+countdown_wrap
+
 {% endcomment %}
 
 {%assign var_count_down = 'countdown' %}
@@ -31,6 +33,7 @@ countdown_second_color
 	{% capture cd_animation %}{{var_count_down}}_animation{% endcapture %}
 
 	{% capture cd_canvas_color %}{{var_count_down}}_canvas_color{% endcapture %}
+	{% capture cd_background_color %}{{var_count_down}}_background_color{% endcapture %}
 
 	{% capture cd_date %}{{var_count_down}}_date{% endcapture %}
 	{% capture cd_date_text %}{{var_count_down}}_date_text{% endcapture %}
@@ -48,15 +51,23 @@ countdown_second_color
 	{% capture cd_second_text %}{{var_count_down}}_second_text{% endcapture %}
 	{% capture cd_second_color %}{{var_count_down}}_second_color{% endcapture %}
 
+	{%if countdown_wrap == 'countdown--big' %}
 
-	{%if settings[cd_date] and settings[cd_hour] and settings[cd_minute] and settings[cd_second] %}
-		{%assign wrap_width = "273px" %}
-	{%else%}
-		{%assign wrap_width = "200px" %}
+		{%if settings[cd_date] and settings[cd_hour] and settings[cd_minute] and settings[cd_second] %}
+			{% assign countdown_wrap = "countdown--big" %}
+		{% else %}
+			{% assign countdown_wrap = "countdown--small" %}
+		{% endif %}
 	{% endif %}
 
-<div class="countdown-wrap" style="width:{{wrap_width}};">
-	<div data-date="10/31/2016" class="jv-countdown hotdeal-countdown" data-circlegbcolor="{{settings[cd_canvas_color]}}" data-ani="{{settings[cd_animation]}}" data-dateshow="{{settings[cd_date]}}" data-datetext="{{settings[cd_date_text]}}" data-hourcolor="{{settings[cd_date_color]}}" data-hourshow="{{settings[cd_hour]}}" data-hourtext="{{settings[cd_hour_text]}}" data-hourcolor="{{settings[cd_hour_color]}}"  data-minshow="{{settings[cd_minute]}}" data-mintext="{{settings[cd_minute_text]}}" data-mincolor="{{settings[cd_minute_color]}}" data-secshow="{{settings[cd_second]}}" data-sectext="{{settings[cd_second_text]}}" data-seccolor="{{settings[cd_second_color]}}">
+	{% assign countdown_wrap = "countdown--small" %}
+
+	{%unless countdown_time %}
+		{%assign countdown_time = "10/31/2016" %}
+	{%endunless %}
+
+<div class="countdown-wrap {{countdown_wrap}}">
+	<div data-date="{{countdown_time}}" class="jv-countdown hotdeal-countdown" data-canvascolor="{{settings[cd_canvas_color]}}" data-circlegbcolor="{{settings[cd_background_color]}}" data-ani="{{settings[cd_animation]}}" data-dateshow="{{settings[cd_date]}}" data-datetext="{{settings[cd_date_text]}}" data-hourcolor="{{settings[cd_hour_color]}}" data-hourshow="{{settings[cd_hour]}}" data-hourtext="{{settings[cd_hour_text]}}" data-hourcolor="{{settings[cd_hour_color]}}"  data-minshow="{{settings[cd_minute]}}" data-mintext="{{settings[cd_minute_text]}}" data-mincolor="{{settings[cd_minute_color]}}" data-secshow="{{settings[cd_second]}}" data-sectext="{{settings[cd_second_text]}}" data-seccolor="{{settings[cd_second_color]}}">
 	</div>
 </div>
 

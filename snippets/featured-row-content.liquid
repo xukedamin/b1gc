@@ -28,14 +28,11 @@
     {% assign current_collection = collections[featured_row] %}
     
     {% if forloop.index == 2%}
-    <div class='col-md-6 col-sm-6 col-xs-12  style="max-height: 374px; overflow: hidden;" '>
-       <!-- include 'product-grid-item-leading-details' -->
-    {% endif %}
+       {% include 'product-grid-item-leading-details' %}
+
+    {% else %}
 
       {% include 'product-grid-item' %}
-
-      {% if forloop.index == 2%}
-   </div>
     {% endif %}
       
   {% endfor %}
