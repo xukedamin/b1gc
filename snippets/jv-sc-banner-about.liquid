@@ -1,0 +1,60 @@
+<div class="about-banner">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="about-box">
+				<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-banner.png" alt="" /></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="about-box about-box-text blue-box"><a href="#"><i class="fa fa-briefcase"></i></a>
+			<p>Business</p>
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="about-box about-box-text yellow-box"><a href="#"><span class="lnr lnr-bullhorn"></span></a>
+			<p>Deals &amp; Promotions</p>
+		</div>
+	</div>
+	<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="about-box about-box-image">
+			<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-cup.png" alt="" />
+			<p class="about-big-text">Mugs &amp; Cups</p>
+			<p class="about-big-icon"><span class="lnr lnr-apartment"></span> BigC</p>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="about-box about-box-image">
+			<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-light.png" alt="" />
+			<p class="about-small-text">Light</p>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="about-box about-box-text dark-yellow-box"><a href="#"><span class="lnr lnr-gift"></span></a>
+		<p>Gift Card</p>
+	</div>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="about-box about-box-text violet-box"><a href="#"><span class="lnr lnr-store"></span></a>
+		<p>Store</p>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+{% for i in (1..7) %}
+
+    {% capture banner_img %}banner1_item_{{ i }}_img.png{% endcapture %}
+    {% capture banner_title %}banner1_item_{{ i }}_title{% endcapture %}
+    {% capture banner_subtitle %}banner1_item_{{ i }}_subtitle{% endcapture %}
+    {% capture banner_text %}banner1_item_{{ i }}_text{% endcapture %}
+    {% capture banner_btn %}banner1_item_{{ i }}_btn{% endcapture %}
+    {% capture banner_link %}banner1_item_{{ i }}_link{% endcapture %}
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="about-box about-box-text dark-yellow-box"><a href="#"><span class="lnr lnr-gift"></span></a>
+		<p>{{settings[banner_title]}}</p>
+	</div>
+	</div>
+
+{% endfor %}

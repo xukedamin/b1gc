@@ -6239,6 +6239,160 @@
       }
     ]
   },
+
+ {
+    "name": "Material Banner About",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Row #1"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_1_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_1_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_1_icon",
+        "label": "ICon",
+        "default": "fa fa-briefcase"
+      },
+       {
+        "type": "header",
+        "content": "Row #2"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_2_img.png",
+        "label": "Banner item 2 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_2_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_2_icon",
+        "label": "ICon",
+        "default": "fa fa-briefcase"
+      },
+       {
+        "type": "header",
+        "content": "Row #3"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_3_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_3_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_3_icon",
+        "label": "ICon",
+        "default": "lnr lnr-bullhorn"
+      },
+       {
+        "type": "header",
+        "content": "Row #4"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_4_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_4_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_4_icon",
+        "label": "ICon",
+        "default": "lnr lnr-apartment"
+      },
+       {
+        "type": "header",
+        "content": "Row #5"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_5_img.png",
+        "label": "Banner item 5 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_5_title",
+        "label": "Title",
+        "default": "Title 5"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_5_icon",
+        "label": "ICon",
+        "default": "fa fa-briefcase"
+      },
+       {
+        "type": "header",
+        "content": "Row #6"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_6_img.png",
+        "label": "Banner item 6 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_6_title",
+        "label": "Title",
+        "default": "Title 6"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_6_icon",
+        "label": "ICon",
+        "default": "lnr lnr-gift"
+      },
+       {
+        "type": "header",
+        "content": "Row #7"
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_7_img.png",
+        "label": "Banner item 7 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_7_title",
+        "label": "Title",
+        "default": "Title 7"
+      },
+       {
+        "type": "text",
+        "id": "banner_about_item_7_icon",
+        "label": "ICon",
+        "default": "lnr lnr-store"
+      }
+    ]
+  },
+
   {
     "name": "Material Banner 1",
     "settings": [
