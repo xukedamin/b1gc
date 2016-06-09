@@ -646,95 +646,7 @@
       }
     ]
   },
-  {
-    "name": " Background Parallax Title",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Defult Theme"
-      },
-      {
-        "type": "image",
-        "id": "header-parallax.jpg",
-        "label": "Background image"
-      },
-      {
-        "type": "header",
-        "content": "Page Shop"
-      },
-      {
-        "type": "checkbox",
-        "id": "bg_page_shop_enable",
-        "label": "Use Background ?",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "bg_page_shop.jpg",
-        "label": "Background image"
-      },
-      {
-        "type": "header",
-        "content": "Page Contact"
-      },
-      {
-        "type": "checkbox",
-        "id": "bg_page_contact_enable",
-        "label": "Use Background ?",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "bg_page_contact.jpg",
-        "label": "Background image"
-      },
-      {
-        "type": "header",
-        "content": "Page About Us"
-      },
-      {
-        "type": "checkbox",
-        "id": "bg_page_about_enable",
-        "label": "Use Background ?",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "bg_page_about.jpg",
-        "label": "Background image"
-      },
-      {
-        "type": "header",
-        "content": "Page Blog"
-      },
-      {
-        "type": "checkbox",
-        "id": "bg_page_blog_enable",
-        "label": "Use Background ?",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "bg_page_blog.jpg",
-        "label": "Background image"
-      },
-      {
-        "type": "header",
-        "content": "Page FAQs"
-      },
-      {
-        "type": "checkbox",
-        "id": "bg_page_faqs_enable",
-        "label": "Use Background ?",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "bg_page_faqs.jpg",
-        "label": "Background image"
-      }
-    ]
-  },
+ 
   {
     "name": "Colors",
     "settings": [
@@ -5635,7 +5547,7 @@
       },
       {
         "type": "text",
-        "id": "contact_map_heading-2",
+        "id": "contact_map_heading_2",
         "label": "Heading H3",
         "default": "SEND EMAIL FOR US"
       },
@@ -5645,9 +5557,35 @@
         "label": "Show contact map",
         "default": true
       },
+       {
+        "type": "text",
+        "id": "contact_address_text",
+        "label": "Heading H3",
+        "default": "The Company Name Inc. 4320 St Vincent Place, Glasgow, DC 28"
+      },
+       {
+        "type": "text",
+        "id": "contact_address_phone",
+        "label": "Heading H3",
+        "default": "800-6688-999, 800-8866-404",
+        "info": "Separate phone number par (,) "
+      },
+      {
+        "type": "text",
+        "id": "contact_address_fax",
+        "label": "Heading H3",
+        "default": "800-6969-0044, 800-6969-0055 ",
+        "info": "Separate phone number par (,) "
+      },
+       {
+        "type": "text",
+        "id": "contact_address_email",
+        "label": "Heading H3",
+        "default": "bigcshop@domain.com"
+      },
       {
         "type": "textarea",
-        "id": "contact_address",
+        "id": "contact_address_map",
         "label": "Map address",
         "default": "https:\/\/www.google.com\/maps\/embed\/v1\/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
       },
@@ -5666,73 +5604,8 @@
           }
         ],
         "default": "full-width"
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_show",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_facebook_show",
-        "label": "Facebook",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_twitter_show",
-        "label": "Twitter",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_pinterest_show",
-        "label": "Pinterest",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_google_show",
-        "label": "Google+",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_youtube_show",
-        "label": "Youtube",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_vimeo_show",
-        "label": "Vimeo",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_flickr_show",
-        "label": "Flickr",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_instagram_show",
-        "label": "Instagram",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_tumblr_show",
-        "label": "Tumblr",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_social_rss_show",
-        "label": "RSS",
-        "default": true
       }
+      
     ]
   },
 

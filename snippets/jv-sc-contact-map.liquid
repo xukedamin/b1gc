@@ -1,45 +1,75 @@
-<div class="contact-map"><img src="https://cdn.shopify.com/s/files/1/1184/2838/files/map.png" alt="" /></div>
+<div class="contact-map">
+	{% if settings.contact_map %}
+		<iframe src=" {{ settings.contact_address_map }} " class="map-iframe"></iframe>
+	{% endif %}
+</div>
+
+
 <div class="contact-info-box">
 	<div class="row">
 		<div class="col-md-4 col-sm-4 col-xs-12">
-			<div class="item-contact-box"><a href="#"><span class="lnr lnr-apartment"></span></a> <label>ADDRESS:</label></div>
-			<p>The Company Name Inc. 4320 St Vincent Place, <br />Glasgow, DC 28</p>
+			<div class="item-contact-box"><a href="#"><span class="lnr lnr-apartment"></span></a> <label>{{'customer.addresses.title' | t}}</label></div>
+			<p>{{settings.contact_address_text}}</p>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div>
-				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone-handset"></span></a> <label>Phones:</label></div>
+				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone-handset"></span></a> <label>{{'contact.form.phone' | t}}</label></div>
 				<div class="phone-box">
-					<h2>800-6688-999</h2>
-					<h2>800-8866-404</h2>
+
+				{% assign phones = {{settings.contact_address_phone}} | split: ',' %}
+
+					{% for phone in phones %}
+						<h2>{{ phone }}</h2>
+					{% endfor %}
 				</div>
 			</div>
 			<div>
-				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone"></span></a> <label>Fax:</label></div>
+				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone"></span></a> <label>{{'contact.form.fax' | t}}</label></div>
 				<div class="phone-box">
-					<h2>800-6969-0044</h2>
+					{% assign faxes = {{settings.contact_address_fax}} | split: ',' %}
+
+					{% for fax in faxes %}
+						<h2>{{ fax }}</h2>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
-			<div class="item-contact-box"><a href="#"><span class="lnr lnr-envelope"></span></a> <label>e-mail:</label></div>
-			<div class="mail-box"><a href="mailto:bigcshop@gmail.com">bigcshop@gmail.com</a></div>
+			<div class="item-contact-box"><a href="#"><span class="lnr lnr-envelope"></span></a> <label>{{'contact.form.email' | t}}</label></div>
+			<div class="mail-box"><a href="mailto:{{settings.contact_address_email}}">{{settings.contact_address_email}}</a></div>
 		</div>
 	</div>
 </div>
+
+
 <div class="contact-form">
-	<h2>Contact From:</h2>
-	<form class="comment-form">
-		<div class="row">
+	<h2>{{'contact.form.title'| t }}</h2>
+
+{% form 'contact' %}
+  {% include 'form-errors-custom' %}
+
+		<div class="row comment-form">
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<p><input type="text" value="Your name *" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" /></p>
+				<p><input type="text" name="contact[name]"  placeholder="{{'contact.form.name' | t}}*" required  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" /></p>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<p><input type="text" value="Your email *" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" /></p>
+				<p><input type="email" name="contact[email]" placeholder="{{'contact.form.email' | t}} *" required  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"/></p>
 			</div>
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<p><textarea cols="30" rows="10" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue">Your message *</textarea></p>
+				<p>
+					<textarea required name="contact[body]" placeholder="{{'contact.form.message' | t}} *" cols="30" rows="10">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+				</p>
 			</div>
 		</div>
-		<p><input type="submit" value="Submit" class="btn-submit-form" /> <input type="reset" value="Reset" class="btn-reset-form" /></p>
-	</form>
+		<p>
+		{% if form.posted_successfully? %}
+		<div class="successForm feedback">
+		  <p>{{ 'contact.form.post_success' | t }}</p>
+		</div>
+
+		{% endif %}        
+		<input type="submit" value="{{'contact.form.send' | t}}" class="btn-submit-form" /> <input name="reset" type="reset" value="{{'contact.form.reset' | t}}" class="btn-reset-form" /></p>
+
+{% endform %}
 </div>
+

@@ -39,9 +39,9 @@
     "search": {
       "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
       "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
-      "title": "Search for products on our site",
-      "placeholder": "Rechercher dans la boutique",
-      "submit": "Recherche"
+      "title": "Search",
+      "placeholder": "Search for products on our site",
+      "submit": "Search"
     },
     "social": {
       "share_on_facebook": "Share",
@@ -164,11 +164,14 @@
   },
   "contact": {
     "form": {
+      "title":"Contact form",
       "name": "Name",
       "email": "Email",
-      "phone": "Phone Number",
+      "phone": "Phone",
+      "fax":"Fax",
       "message": "Message",
       "send": "Send",
+      "reset": "Reset",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
     },
     "text": {
