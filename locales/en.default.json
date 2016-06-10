@@ -131,6 +131,8 @@
       "grid": "Grid",
       "list": "List",
       "products": "products",
+      "hot":"Hot",
+      "new":"New",
       "items_with_count": {
         "zero": "0 item",
         "one": "1 item",

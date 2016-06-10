@@ -366,8 +366,11 @@ ul.dropdownMenu__ li:nth-child(3) > ul { display:block;}
     color: $color_curious-blue;
 }
 
-
-
+.mega-menu .sub-menu .label-sub{
+    display: inline-block;
+    position: static;
+    margin-left: 10px;
+}
 
 
 //HOME 1 style

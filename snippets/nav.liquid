@@ -2,9 +2,6 @@
   {% if linklists[handle].links.size > 0 %}
   
 
- {% capture sticker %}nav{{i}}_sticker_label{% endcapture %}
-
-
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
 
@@ -13,7 +10,7 @@
 
       {% for i in (1..10) %}
         {% capture pick_name %}nav{{i}}{% endcapture %}
-        {% capture pick_name %}{{settings[pick_name] | remove: "jvsub-" }}{% endcapture %}
+        {% capture pick_name %}{{settings[pick_name]}}{% endcapture %}
         {% capture pick %}nav{{i}}_style{% endcapture %}
 
        
@@ -26,17 +23,29 @@
 
       {% endfor %}
 
-      {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
+      {% capture handlei %}{{handlej}}{% endcapture %}
       <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-children{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">
         
-        <a  href="{{ link.url }}">{{ link.title }} 
-        
-         {% if link.handle == 'featured' %}
-         <sup class="label-sub title-hot hidden-xs">Hot</sup>
-         {% endif %}
-          {% if link.handle == 'shop' %}
-         <sup class="label-sub title-new hidden-xs">New</sup>
-         {% endif %}
+        <a href="{{ link.url }}">{{ link.title }} 
+
+          {%if hot_label_enable %}
+            {% assign hots = {{settings.main_menu_hot_items}} | split: ',' %}
+
+            {%for hot in hots %}
+               {% if link.handle == hot %}
+               <sup class="label-sub title-hot hidden-xs"> {{'collections.general.hot' | t}}</sup>
+               {% endif %}
+            {% endfor %}
+          
+          {% assign news = {{settings.main_menu_new_items}} | split: ',' %}
+
+           {% for n in news %}
+               {% if link.handle == n %}
+               <sup class="label-sub title-new hidden-xs">{{'collections.general.new' | t}}</sup>
+               {% endif %}
+            {% endfor %}
+
+          {% endif %}
 
         </a>
 

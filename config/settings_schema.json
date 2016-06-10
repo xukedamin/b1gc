@@ -18,7 +18,7 @@
     ]
   },
   {
-    "name": "Mega Menu",
+    "name": "Main Menu",
     "settings": [
       {
         "type": "header",
@@ -29,25 +29,7 @@
         "id": "nav1",
         "label": "Select Mega Menu"
       },
-      {
-        "type": "select",
-        "id": "nav1_sticker_label",
-        "label": "Sticker label",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "hot",
-            "label": "Hot"
-          },
-          {
-            "value": "new",
-            "label": "New"
-          }
-        ]
-      },
+      
       {
         "type": "select",
         "id": "nav1_style",
@@ -219,6 +201,25 @@
         ],
         "default": "4"
       },
+        {
+        "type": "header",
+        "content": "Hot items"
+      },
+       {
+        "type": "text",
+        "id": "main_menu_hot_items",
+        "label": "Main Menu hot items",
+        "default": "featured",
+        "info": "Separate handles with comma(,) without any whitespace"
+      },
+        {
+        "type": "text",
+        "id": "main_menu_new_items",
+        "label": "Main Menu new items",
+        "default": "shop",
+        "info": "Separate handles with comma(,) without any whitespace"
+      },
+
       {
         "type": "header",
         "content": "Style Mainmenu"
@@ -4759,10 +4760,15 @@
         "default": "#e5c649",
         "info": "This selection overrides your product review app settings."
       },
+        {
+        "type": "image",
+        "id": "product_size_chart.png",
+        "label": "Product size chart"
+      },
       {
         "type": "select",
         "id": "product_style_option",
-        "label": "Style Product detail ",
+        "label": "Default Style Product detail ",
         "options": [
           {
             "value": "product_style_option_nosidebar",

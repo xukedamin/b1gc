@@ -10,7 +10,7 @@
         <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">{{ 'products.product.description' | t }}</a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Shipping and Returns</a></li>
         <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">{{ 'products.product.reviews' | t }} </a></li>
-        <li role="presentation"><a href="#tags" aria-controls="tags" role="tab" data-toggle="tab">Size Chart</a></li>
+        <li role="presentation"><a href="#size_chart" aria-controls="tags" role="tab" data-toggle="tab">Size Chart</a></li>
       </ul>
     </div>
     <!-- Tab panes -->
@@ -22,12 +22,16 @@
       <div role="tabpanel" class="tab-pane" id="profile">
       
       </div>
+
       <div role="tabpanel" class="tab-pane" id="reviews">
       <h5>{{ 'products.product.reviews' | t }}</h5>
        <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
       </div>
-      <div role="tabpanel" class="tab-pane" id="tags">
-       
+      <div role="tabpanel" class="tab-pane" id="size_chart">
+       {{ product_size_chart.png | asset_url | img_tag: banner_img }}
       </div>
     </div>
+
+
+
   </div>
