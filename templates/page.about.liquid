@@ -11,11 +11,9 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12">
-					<!-- <div class="post-slider">
-							<div class="wrap-item">
-							</div>
-					</div> -->
-					{% include 'jv-sc-team-rectang' %}
+					<div class="slider-owl-2-items slider-btn-shadow">
+						{% include 'jv-sc-team-rectang' with class_item: 'col-md-12 col-sm-12 col-xs-12' %}
+					</div>
 					
 				</div>
 				
@@ -25,7 +23,7 @@
 			<h2>What people are saying</h2>
 			{% include 'jv-sc-testimonials-1' %}
 		</div>
-		{%include 'jv-sc-newsletter' %}
 	</div>
+	{%include 'jv-sc-newsletter' %}
 
 </main>

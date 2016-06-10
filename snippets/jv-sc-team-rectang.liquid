@@ -1,8 +1,15 @@
-<div class="team-rectang">
+{%unless class_item %}
+{%assign class_item = 'col-md-3 col-sm-6 col-xs-12' %}
+{%endunless%}
+
+
+<div class="team-rectang wrap-item">
 
 {%include 'jv-sc-heading-box'%}
 
+{%if class_item == 'col-md-3 col-sm-6 col-xs-12' %}
 	<div class="row">
+{% endif %}
 		  {% for i in (1..4) %}
 {% capture team %}team_item_{{ i }}_enable{% endcapture %}
 {% capture team_img %}team_item_{{ i }}_img.png{% endcapture %}            
@@ -16,7 +23,7 @@
 
 
 {% if settings[team] %}
-		<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="{{class_item}}">
 			<div class="item-team-rectang">
 				<div class="team-rectang-thumb">
 					 <img src="{{ team_img | asset_url }}"   alt="{{ settings[team_name] }}">
@@ -50,5 +57,7 @@
 {% endif %}
 {% endfor %}
 
+{%if class_item == 'col-md-3 col-sm-6 col-xs-12' %}
 	</div>
+{% endif %}
 </div>

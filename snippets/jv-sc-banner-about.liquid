@@ -1,60 +1,92 @@
+{%assign var_banner = 'banner_about' %}
+
 <div class="about-banner">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="about-box">
-				<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-banner.png" alt="" /></div>
+			<div class="about-box {%if settings['banner_about_item_1_img_enable'] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings['banner_about_item_1_color_bg']}} ">
+				<a class="about-text about-icon" href="{{settings['banner_about_item_1_url']}}">
+					{%if settings['banner_about_item_1_img_enable']  %}
+						{{'banner_about_item_1_img.png' | asset_url | img_tag: '1'}}
+					{% endif %}
+
+					<span class="{{settings['banner_about_item_1_icon']}}"></span>
+					<p class="about-text">{{settings['banner_about_item_1_title']}}</p>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="row">
+{% for i in (2..7) %}
+
+
+    {% capture banner_img %}{{var_banner}}_item_{{ i }}_img.png{% endcapture %}
+    {% capture banner_img_enable %}{{var_banner}}_item_{{ i }}_img_enable{% endcapture %}
+
+    {% capture banner_title %}{{var_banner}}_item_{{ i }}_title{% endcapture %}
+    {% capture banner_icon %}{{var_banner}}_item_{{ i }}_icon{% endcapture %}
+    {% capture banner_url %}{{var_banner}}_item_{{ i }}_url{% endcapture %}	
+    {% capture banner_color_bg %}{{var_banner}}_item_{{ i }}_color_bg{% endcapture %}	
+    {% capture banner_color %}{{var_banner}}_item_{{ i }}_color{% endcapture %}	
+
+
+		{%if forloop.index == 1 or forloop.index == 2  %}
+
 		<div class="col-md-3 col-sm-6 col-xs-12">
-			<div class="about-box about-box-text blue-box"><a href="#"><i class="fa fa-briefcase"></i></a>
-			<p>Business</p>
+				<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}} "> 
+					<a href="{{settings[banner_url]}}">
+						<i class="{{settings[banner_icon]}}"></i>
+
+						<p>{{settings[banner_title]}}</p>
+						{%if settings[banner_img_enable] %}
+						 {{ banner_img | asset_url | img_tag: banner_title }}
+						{% endif %}
+					</a>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-3 col-sm-6 col-xs-12">
-		<div class="about-box about-box-text yellow-box"><a href="#"><span class="lnr lnr-bullhorn"></span></a>
-			<p>Deals &amp; Promotions</p>
+
+		{% endif %}
+
+
+		{% if forloop.index == 3 %}
+
+			<div class="col-md-6 col-sm-12 col-xs-12">
+			<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}} ">
+				<a href="{{settings[banner_url]}}">
+				{%if settings[banner_img_enable]  %}
+				 {{ banner_img | asset_url | img_tag: banner_title }}
+				{% endif %}
+
+				<span class="about-big-text about-icon {{settings[banner_icon]}}"></span>
+				<p class="about-big-text">{{settings[banner_title]}}</p>
+				</a>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-6 col-sm-12 col-xs-12">
-		<div class="about-box about-box-image">
-			<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-cup.png" alt="" />
-			<p class="about-big-text">Mugs &amp; Cups</p>
-			<p class="about-big-icon"><span class="lnr lnr-apartment"></span> BigC</p>
+		{% endif %}
+
+
+	{%if forloop.index >= 4 %}
+
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}}">
+		
+		<a class="" href="{{settings[banner_url]}}">
+			{%if settings[banner_img_enable]  %}
+			<div class="img" style="background-image: url({{ banner_img | asset_url }});"></div>
+			{% endif %}
+
+			<span class="about-text about-icon {{settings[banner_icon]}}"></span>
+			<p class="about-text">{{settings[banner_title]}}</p>
+
+			</a>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12">
-		<div class="about-box about-box-image">
-			<img src="https://cdn.shopify.com/s/files/1/1184/2838/files/about-light.png" alt="" />
-			<p class="about-small-text">Light</p>
-		</div>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12">
-		<div class="about-box about-box-text dark-yellow-box"><a href="#"><span class="lnr lnr-gift"></span></a>
-		<p>Gift Card</p>
-	</div>
-	</div>
-	<div class="col-md-4 col-sm-4 col-xs-12">
-		<div class="about-box about-box-text violet-box"><a href="#"><span class="lnr lnr-store"></span></a>
-		<p>Store</p>
-		</div>
-	</div>
+	{% endif %}
+
+{% endfor %}
+
+
 	</div>
 </div>
 
 
-{% for i in (1..7) %}
 
-    {% capture banner_img %}banner1_item_{{ i }}_img.png{% endcapture %}
-    {% capture banner_title %}banner1_item_{{ i }}_title{% endcapture %}
-    {% capture banner_subtitle %}banner1_item_{{ i }}_subtitle{% endcapture %}
-    {% capture banner_text %}banner1_item_{{ i }}_text{% endcapture %}
-    {% capture banner_btn %}banner1_item_{{ i }}_btn{% endcapture %}
-    {% capture banner_link %}banner1_item_{{ i }}_link{% endcapture %}
-	<div class="col-md-4 col-sm-4 col-xs-12">
-		<div class="about-box about-box-text dark-yellow-box"><a href="#"><span class="lnr lnr-gift"></span></a>
-		<p>{{settings[banner_title]}}</p>
-	</div>
-	</div>
-
-{% endfor %}

@@ -576,6 +576,26 @@
                 });
             });
         }
+
+           //Post Slider
+        if ($('.slider-owl-2-items').length > 0) {
+            $('.slider-owl-2-items').each(function() {
+                $(this).find('.wrap-item').owlCarousel({
+                    items: 2,
+                    itemsCustom: [
+                        [0, 1],
+                        [480, 2],
+                        [768, 2],
+                        [992, 2],
+                        [1200, 2]
+                    ],
+                    pagination: false,
+                    navigation: true,
+                    navigationText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>']
+                });
+            });
+        }
+
         //Customer Slider
         if ($('.customer-saying').length > 0) {
             $('.customer-saying').each(function() {

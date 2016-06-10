@@ -11,14 +11,13 @@
 
 }
 
-.about-box-image > img {
-  width: 100%;
-}
+
 
 .about-box {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+   height: 292px;
 
   &:before {
     background: rgba($color_shark, 0.1) none repeat scroll 0 0;
@@ -38,46 +37,44 @@
     width: 100%;
   }
 
+  div.img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover; background-position: center center
+  }
+
 }
 
 .about-box-text {
   @extend %text-center;
   padding-top: 55px;
-  height: 292px;
+ 
 
   p {
     font-size: 30px;
     margin: 25px 0 0;
-    color: $color_white;
+    // color: $color_white;
+    color: inherit;
   }
 
   a {
     font-size: 90px;
-    color: $color_white;
+    // color: $color_white;
+    color: inherit;
   }
 
 }
 
-.blue-box {
-  background: $color_currious-blue-darker none repeat scroll 0 0;
-}
-
-.dark-yellow-box {
-  background: $color_saffron none repeat scroll 0 0;
-}
-
-.violet-box {
-  background: $color_rhino none repeat scroll 0 0;
-}
-
-.yellow-box {
-  background: $color_bright-sun none repeat scroll 0 0;
-}
-
-.about-box.yellow-box p,
-.about-box.yellow-box a {
-  color: $color_black;
-}
+.blue-box { background: $color_currious-blue-darker none repeat scroll 0 0; }
+.dark-yellow-box { background: $color_saffron none repeat scroll 0 0; }
+.violet-box { background: $color_rhino none repeat scroll 0 0; }
+.yellow-box { background: $color_bright-sun none repeat scroll 0 0; }
+.about-box.yellow-box p, .about-box.yellow-box a { color: $color_black; }
 
 .about-big-text {
   color: $color_black;
@@ -105,22 +102,35 @@
 }
 
 .about-big-icon {
+  @extend %text-center;
   bottom: 60px;
-  color: $color_white;
+  // color: $color_white;
+  color: inherit;
   font-size: 60px;
   line-height: 60px;
   position: absolute;
   right: 30px;
-  @extend %text-center;
   width: 120px;
 }
 
-.about-small-text {
+
+.about-big-text.about-icon{
+  top: 20px;
+}
+
+
+.about-box-image .about-text {
   font-size: 30px;
   left: 50px;
   position: absolute;
   top: 120px;
+  color: inherit;
 }
+
+.about-box-image .about-text.about-icon{
+  top: 70px;
+}
+
 
 .about-intro {
   > h2 {
@@ -138,6 +148,9 @@
 .about-content {
   margin-top: 20px;
 }
+
+
+
 
 .item-post-slider {
   padding: 0 10px;
@@ -168,10 +181,15 @@
 
 }
 
-.post-slider {
+.post-slider
+ {
   border: 1px solid $color_mercury;
   padding: 25px 50px;
+}
 
+.post-slider,
+.slider-btn-shadow{
+  
   .owl-theme .owl-controls .owl-buttons {
     div {
       background: $color_white none repeat scroll 0 0;
@@ -215,7 +233,6 @@
 
   }
 
-  // owl-buttons
 }
 
 .post-slider-thumb {

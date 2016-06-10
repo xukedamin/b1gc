@@ -6247,6 +6247,12 @@
         "type": "header",
         "content": "Row #1"
       },
+        {
+        "type": "checkbox",
+        "id": "banner_about_item_1_img_enable",
+        "label": "Use image background",
+        "default": true
+      },
       {
         "type": "image",
         "id": "banner_about_item_1_img.png",
@@ -6260,13 +6266,38 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_1_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_1_icon",
         "label": "ICon",
         "default": "fa fa-briefcase"
       },
+      {
+        "type": "color",
+        "id": "banner_about_item_1_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+        {
+        "type": "color",
+        "id": "banner_about_item_1_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+
        {
         "type": "header",
         "content": "Row #2"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_2_img_enable",
+        "label": "Use image background",
+        "default": false
       },
       {
         "type": "image",
@@ -6281,13 +6312,37 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_2_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_2_icon",
         "label": "ICon",
         "default": "fa fa-briefcase"
+      },    
+      {
+        "type": "color",
+        "id": "banner_about_item_2_color_bg",
+        "label": "Background color",
+        "default": "#1997d4"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_2_color",
+        "label": "Text color",
+        "default": "#fff"
       },
        {
         "type": "header",
         "content": "Row #3"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_3_img_enable",
+        "label": "Use image background",
+        "default": false
       },
       {
         "type": "image",
@@ -6302,13 +6357,37 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_3_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_3_icon",
         "label": "ICon",
         "default": "lnr lnr-bullhorn"
       },
        {
+        "type": "color",
+        "id": "banner_about_item_3_color_bg",
+        "label": "Background color",
+        "default": "#fdd932"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_3_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+       {
         "type": "header",
         "content": "Row #4"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_4_img_enable",
+        "label": "Use image background",
+        "default": true
       },
       {
         "type": "image",
@@ -6323,13 +6402,37 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_4_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_4_icon",
         "label": "ICon",
         "default": "lnr lnr-apartment"
       },
        {
+        "type": "color",
+        "id": "banner_about_item_4_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_4_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+       {
         "type": "header",
         "content": "Row #5"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_5_img_enable",
+        "label": "Use image background",
+        "default": true
       },
       {
         "type": "image",
@@ -6344,13 +6447,37 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_5_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_5_icon",
         "label": "ICon",
         "default": "fa fa-briefcase"
       },
        {
+        "type": "color",
+        "id": "banner_about_item_5_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_5_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+       {
         "type": "header",
         "content": "Row #6"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_6_img_enable",
+        "label": "Use image background",
+        "default": false
       },
       {
         "type": "image",
@@ -6365,13 +6492,37 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_6_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_6_icon",
         "label": "ICon",
         "default": "lnr lnr-gift"
       },
+      {
+        "type": "color",
+        "id": "banner_about_item_6_color_bg",
+        "label": "Background color",
+        "default": "#f3b929"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_6_color",
+        "label": "Text color",
+        "default": "#fff"
+      },
        {
         "type": "header",
         "content": "Row #7"
+      },
+            {
+        "type": "checkbox",
+        "id": "banner_about_item_7_img_enable",
+        "label": "Use image background",
+        "default": false
       },
       {
         "type": "image",
@@ -6386,9 +6537,27 @@
       },
        {
         "type": "text",
+        "id": "banner_about_item_7_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+       {
+        "type": "text",
         "id": "banner_about_item_7_icon",
         "label": "ICon",
         "default": "lnr lnr-store"
+      },
+       {
+        "type": "color",
+        "id": "banner_about_item_7_color_bg",
+        "label": "Background color",
+        "default": "#37436d"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_7_color",
+        "label": "Text color",
+        "default": "#fff"
       }
     ]
   },
