@@ -380,7 +380,8 @@
       "vendor": "Vendor",
       "description": "Description",
       "reviews": "Reviews",
-      "shop_now":"Shop now"
+      "shop_now":"Shop now",
+      "show_details" :"Details"
     }
   },
   "gift_cards": {

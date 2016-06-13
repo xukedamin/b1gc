@@ -45,12 +45,8 @@ breadcrumbs you need to include this:
     </h3>
     {% endif %}
 
-    {% assign featuredCollection = collections[settings.featured_prod_collection] %}
-    <div class="featured-products shop-recently-viewed">
-      {% for product in featuredCollection.products limit: settings.featured_prod_num %}
-      {% include 'product-item-small' %}
-      {% endfor %}
-    </div>
+
+   {% include 'recently-viewed' %}
   </div>
 </div>
 {% endif %}

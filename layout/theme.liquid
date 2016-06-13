@@ -124,7 +124,7 @@
   {{ 'script.js' | asset_url | script_tag }}
 
 
-{% include 'sca-quick-view-init' %} 
+
 </head>
 
 <body id="{{ page_title | handle }}" class="jv-homepage-{{settings.homepage_option}} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}  " >
@@ -236,6 +236,8 @@
     </div>
   </div>  
 
+<div class="quickview-product engo-popup"></div>
+{%include 'quick-view' %}
   
   <script>
     jQuery( function( $ ) {
@@ -292,16 +294,26 @@
           .trigger('change');
       });
     });
+
+
+
+
+
 </script>
 
 
-<script type="text/javascript">
-   jQuery(".sca-qv-button").fancybox({
-        'titleShow'   : false,
-        'padding'   : 20
-      });
-  
+<!-- Begin Recently Viewed Products -->
+
+
+{% if template contains 'product' %}
+
+<script>
+Shopify.Products.recordRecentlyViewed();
 </script>
+
+{% endif %}
+
+<!-- End Recently Viewed Products -->
 
 
 

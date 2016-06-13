@@ -1,0 +1,116 @@
+
+
+ <div id="quick-view" class="hidden-label">
+  <div class="overlay no-background"></div>
+  <div class="content product-single">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="product-media thumbnai-left">
+          <div class="featured-image product-single-photos"></div>
+          <div class="more-views owl-carousel-play margin-top-10">
+            <div class="owl-carousel"  data-items="4" data-dots="false" data-lazyLoad="true" data-nav="false" data-autoHeight="false"></div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-xs-6">
+        <div class="product-shop product-info-main">
+          <div class="product-item">
+            <h2 class="product-name"><a>&nbsp;</a></h2>
+            <div class="product-category">
+              Table
+            </div>
+
+            <div class="details clearfix">
+              <form action="/cart/add" method="post" class="variants">
+                <div class="prices product-price hidden">                  
+                  <span class="price"></span>
+                  <del class="compare-price"></del> 
+                </div>
+                <p class="des description"></p>    
+                <select name='id' style="display:none;">
+
+                </select>
+                <div>
+                  <p class="hethang margin-top-5"></p>
+                </div>
+
+                <div class="product-actions">
+                  <div class="product-quantity">
+                    <label>Qty</label>
+                    <div class="quantity-all">
+                      <span  class='qtyminus' data-field='quantity'><i class="fa  fa-caret-down"></i></span>
+                      <input type="text" name="quantity" value="1" class="qty quantity form-control">
+                      <span class='qtyplus' data-field='quantity'><i class="fa fa-caret-up"></i></span>
+                    </div>
+                    <div class="total-price product-price f-left margin-right-20">
+                      <span></span>
+                    </div>
+                  </div>
+
+
+                  <div class=" actions">
+                    <button type="button" class=" btn-addToCart btn btn-lg btn-primary">Add to Cart</button>                  
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="close-window">x</a>
+     
+    </div>
+
+    <!-- HERE -->
+		<div class="col-md-6">
+			<div class="product-featured-thumb">
+				<ul class="bxslider">
+				<!-- 	{% for image in product.images %}
+						<li> <img src="{{ image.src  | img_url: image_size }}"> </li>
+					{% endfor %} -->
+
+
+
+
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-7 col-xs-12">
+			<div class="product-featured-info">
+				<h3><a href="{{ product.url | within: current_collection }}" >
+				{TITLE}
+				</a></h3>
+				<div class="info-price">
+					<div class="product-item--price price">
+						<span class="medium--left">
+							<!-- {% include 'price' with product.price %} -->
+						</span>
+						{% if on_sale %}
+							<del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+							{% assign compare_price = product.compare_at_price %}
+							{% assign product_price = product.price %}
+							{% include 'price-sale' %}
+							</del>
+						{% endif %}
+						
+					</div>
+				</div>
+				<p class="desc">{{ product.content | strip_html | truncatewords: 30 }}</p>
+				<div class="bx-pager">
+					{% assign index = 0 %}
+					{% for image in product.images %}
+						<a data-slide-index="{{index}}" href=""><img src="{{ image.src  | img_url: thumb }}"> </a>
+						{% assign index = index | plus: 1 %}
+					{% endfor %}
+				</div>
+				{% include 'product-list-item--add-to-cart' with show_price:'no' %}
+			</div>
+		</div>
+		<!-- END -->
+  </div>
+</div>

@@ -92,7 +92,18 @@
 {% if settings.related_products_enable %}
   {% assign grid_item_width = 'col-xs-12' %}
   {% include 'related-products' %}
+
+
 {% endif %}
+  'FEATURED PRODUCTS'
+  {% assign featuredCollection = collections[settings.featured_prod_collection] %}
+    <div class="featured-products">
+      {% for product in featuredCollection.products limit: settings.featured_prod_num %}
+      {% include 'product-grid-item' with grid_item_width: 'col-md-3 col-sm-6 col-xs-12'  %}
+      {% endfor %}
+    </div>
+
+
 
 {% include 'product--bottom-nav' %}
 

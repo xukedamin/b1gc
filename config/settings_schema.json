@@ -4747,6 +4747,18 @@
         "id": "related_products_enable",
         "label": "Show related products"
       },
+       {
+        "type": "checkbox",
+        "id": "viewed_enable",
+        "label": "Show recently products",
+        "default" :true
+      },
+      {
+        "type": "text",
+        "id":"viewed_number_of",
+        "label": "Number of recently products",
+        "default" : "4"
+      },
       {
         "type": "checkbox",
         "id": "product_reviews_enable",

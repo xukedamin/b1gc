@@ -136,6 +136,9 @@ breadcrumbs you need to include this:
               <li class="advanced-filter active-filter " data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
               {% else %}
               <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
+
+            
+
             {% endif %}
 
           {% endif %}
@@ -167,6 +170,7 @@ breadcrumbs you need to include this:
           location.href = location.href.replace(activeTagInGroup.data('handle'), elHandle);
         }
       });
+
     });
   </script>
 
