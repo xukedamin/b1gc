@@ -26,7 +26,7 @@
             isSidebarAjaxClick: false,
             go: function() {
 
-              this.goQuickview();
+              //this.goQuickview();
 
               this.goMiniCart();//add cart
               this.goAddToCart();
@@ -46,6 +46,7 @@
                     var rating = (($(this).closest('.item-product').find('.spr-badge').attr('data-rating')) * 20)+"%";
 
                     Shopify.getProduct(id, function(product) {
+
                       console.log(product);
                       var template = $('#quick-view').html();
                       $('.quickview-product').html(template);

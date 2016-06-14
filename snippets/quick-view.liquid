@@ -1,6 +1,4 @@
-
-
- <div id="quick-view" class="hidden-label">
+<div id="quick-view1" style="display:none; width: 782px">
   <div class="overlay no-background"></div>
   <div class="content product-single">
     <div class="row">
@@ -65,52 +63,96 @@
       <a href="javascript:void(0)" class="close-window">x</a>
      
     </div>
-
-    <!-- HERE -->
-		<div class="col-md-6">
-			<div class="product-featured-thumb">
-				<ul class="bxslider">
-				<!-- 	{% for image in product.images %}
-						<li> <img src="{{ image.src  | img_url: image_size }}"> </li>
-					{% endfor %} -->
-
-
-
-
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-6 col-sm-7 col-xs-12">
-			<div class="product-featured-info">
-				<h3><a href="{{ product.url | within: current_collection }}" >
-				{TITLE}
-				</a></h3>
-				<div class="info-price">
-					<div class="product-item--price price">
-						<span class="medium--left">
-							<!-- {% include 'price' with product.price %} -->
-						</span>
-						{% if on_sale %}
-							<del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-							{% assign compare_price = product.compare_at_price %}
-							{% assign product_price = product.price %}
-							{% include 'price-sale' %}
-							</del>
-						{% endif %}
-						
-					</div>
-				</div>
-				<p class="desc">{{ product.content | strip_html | truncatewords: 30 }}</p>
-				<div class="bx-pager">
-					{% assign index = 0 %}
-					{% for image in product.images %}
-						<a data-slide-index="{{index}}" href=""><img src="{{ image.src  | img_url: thumb }}"> </a>
-						{% assign index = index | plus: 1 %}
-					{% endfor %}
-				</div>
-				{% include 'product-list-item--add-to-cart' with show_price:'no' %}
-			</div>
-		</div>
-		<!-- END -->
   </div>
 </div>
+
+
+<!-- HERE -->
+<script id="quick-view-template"  type="text/x-handlebars-template">
+    <div id="quick-view-template-row" class="row" style="width: 782px" >
+    {% raw %}
+
+  
+  		<div class="col-md-6">
+  			<div class="product-featured-thumb">
+  				<ul class="bxslider">
+  		
+            <img src="{{featured_image}}" alt="">
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="col-md-6 col-sm-7 col-xs-12">
+  			<div class="product-featured-info">
+  				<h3><a href="{{ url }}" >{{title}}</a></h3>
+  				<div class="info-price">
+  					<div class="product-item--price price">
+  						<span class="medium--left">{{price}}</span>
+  						
+              {{# if on_sale }}
+  							<del class="sale-tag medium--right has-reviews">
+  							{{compare_at_price }}
+  							</del>
+  						{{/if}}
+  						
+  					</div>
+  				</div>
+  				<p class="desc">{{ content}}</p>
+  				<div class="bx-pager">
+  				
+  				</div>
+
+            
+            <form action="/cart/add" method="post" class="addToCartForm form-add-to-cart" data-id="product-actions-{{id}}"  enctype="multipart/form-data" >    
+              {{#if sold_out }}
+                <button class="btn-link-default add-to-cart product-add-cart" type="submit"  disabled="disabled" data-toggle="tooltip" data-placement="top" title="products.product.unavailable'" ><span class="addToCartText"> products.product.unavailable </span> </button>
+             
+              {{ else }}
+                  <input type="hidden" name="id" value="{{ variants[0].id }}" />
+                  <button class="btn-link-default add-to-cart product-add-cart btn-ajax" type="submit"  data-toggle="tooltip" data-placement="top" title="Add to cart">
+                  <span class="addToCartText">Add to cart</span></button>
+              {{/if }}
+            </form>  
+
+  				 
+  			</div>
+  		</div>
+    
+		
+      {% endraw %}
+  </div>
+</script>
+
+<script type="text/javascript">
+
+ jQuery('.action.product-quick-view').click(function() { 
+    
+     jQuery("#quick-view-template-row").show();
+
+    var id = $(this).attr('data-id');
+    var rating = (($(this).closest('.item-product').find('.spr-badge').attr('data-rating')) * 20)+"%";
+
+    console.log( jQuery(this));
+
+    Shopify.getProduct(id, function(product) {
+      
+      console.log(product);
+      var template = jQuery('#quick-view-template'),
+        wrapper = jQuery('.quickview-product'),
+        template_compiled = Handlebars.compile(template.html());
+
+      jQuery(wrapper).html(template_compiled(product));
+
+
+      });
+
+  }).fancybox({
+        'titleShow'   : false,
+        'onClosed'    : function() {
+              jQuery("#quick-view-template-row").hide();
+        }
+        
+      });
+
+</script>
+
+

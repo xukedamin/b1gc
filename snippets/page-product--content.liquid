@@ -184,12 +184,14 @@
           }
 
           // Regardless of stock, update the product price
-          var customPriceFormat = timber.formatMoney( Shopify.formatMoney(variant.price, "{{ shop.money_format }}") );
+          // var customPriceFormat = timber.formatMoney( Shopify.formatMoney(variant.price, "{{ shop.money_format }}") );
+          var customPriceFormat = Shopify.formatMoney(variant.price, "{{ shop.money_format }}") ;
           $productPrice.html(customPriceFormat);
 
           // Also update and show the product's compare price if necessary
           if ( variant.compare_at_price > variant.price ) {
-          var priceSaving = timber.formatSaleTag( Shopify.formatMoney(variant.compare_at_price - variant.price, "{{ shop.money_format }}") );
+          // var priceSaving = timber.formatSaleTag( Shopify.formatMoney(variant.compare_at_price - variant.price, "{{ shop.money_format }}") );
+          var priceSaving = Shopify.formatMoney(variant.compare_at_price - variant.price, "{{ shop.money_format }}") ;
           {% comment %}
             priceSaving += ' (' + ( (variant.compare_at_price - variant.price)*100/(variant.compare_at_price) ).toFixed(0) + '%)';
           {% endcomment %}

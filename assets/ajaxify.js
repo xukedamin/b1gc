@@ -639,6 +639,7 @@ var ajaxifyShopify = (function(module, $) {
   formOverride = function () {
     $formContainer.submit(function(e) {
       e.preventDefault();
+      console.log('HERE');
       $formContainer.removeClass( 'process' );
       $( this ).addClass( 'process' );
 
@@ -649,6 +650,7 @@ var ajaxifyShopify = (function(module, $) {
       $('.qty-error').remove();
 
       Shopify.addItemFromForm(e.target, itemAddedCallback, itemErrorCallback);
+
 
       // Set the flip button to a loading state
       switch (settings.method) {
@@ -669,7 +671,10 @@ var ajaxifyShopify = (function(module, $) {
           $flipContainer.removeClass('flip--is-loading').addClass('is-flipped');
         }, 600);
         break;
-    }Shopify.getCart(cartUpdateCallback);
+    }
+    
+    Shopify.getCart(cartUpdateCallback);
+
     //cartTemplate([]);
     return;
     
@@ -831,6 +836,8 @@ var ajaxifyShopify = (function(module, $) {
       btnClass: $btnClass
     }
     $cartContainer.append(template(data));
+
+    console.log(data);
 
     // With new elements we need to relink the adjust cart functions
     adjustCart();
