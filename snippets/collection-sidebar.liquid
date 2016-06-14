@@ -214,22 +214,16 @@ breadcrumbs you need to include this:
 
 
 
-{% comment %} ----- Featured Products ----- {% endcomment %}
-{% if settings.featured_prod_visible and collections[settings.featured_prod_collection].products != empty %}
+{% comment %} ----- Recently viewed Products ----- {% endcomment %}
+{% if settings.viewed_enable %}
 <div class="widget-wrapper">
   <div class="widget widget-default">  
-    {% if settings.featured_prod_heading != blank %}
     <h3 class="widget-title sub-title">
-      <span>{{ settings.featured_prod_heading }}</span>
+      <span>{{ 'collections.sidebar.recent_products' | t }}</span>
     </h3>
-    {% endif %}
 
-    {% assign featuredCollection = collections[settings.featured_prod_collection] %}
-    <div class="featured-products shop-recently-viewed">
-      {% for product in featuredCollection.products limit: settings.featured_prod_num %}
-      {% include 'product-item-small' %}
-      {% endfor %}
-    </div>
+   {% include 'recently-viewed' %}
+
   </div>
 </div>
 {% endif %}
