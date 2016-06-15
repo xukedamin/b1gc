@@ -34,7 +34,6 @@
 
       doUpdateMiniCart: function(n) {
 
-        console.log('doUpdateMiniCart');
 
         var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><span class="price">{PRICE}</span> x <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price"></span></div></li>';        
 
@@ -44,6 +43,7 @@
         $("#mini-cart .total-cart .price").html(Shopify.formatMoney(n.total_price, window.money_format));
 
         $("#mini-cart .shop-cart-list").html("");
+
         if (n.item_count > 0) {
           for (var i = 0; i < n.items.length; i++) {
             var s = cart;
@@ -72,11 +72,19 @@
 
         t.checkItemsInMiniCart();
 
+        //TEST
+        var carttemplate = $("#jvMiniCart");
+        var wrapper = jQuery('#mini-cart .shop-cart-list'),
+        template_compiled = Handlebars.compile(carttemplate.html());
+        jQuery(wrapper).append(template_compiled(n));
+        
+
+
       },
 
       checkNeedToConvertCurrency: function() {
-            return window.show_multiple_currencies && Currency.currentCurrency != shopCurrency;
-       },
+        return window.show_multiple_currencies && Currency.currentCurrency != shopCurrency;
+      },
 
 
       checkItemsInMiniCart: function() {
@@ -211,56 +219,36 @@
         });
       }
 
-  }
-    
-  jQuery(document).ready(function() {
-        
-        //Select UI
-        $('.orderby').selectmenu();
-        
-        //Button Mobile
-        if ($(window).width() < 768) {
-            $('.language-link,.currency-link,.account-link,.icon-search,.icon-user,.icon-cart').click(function(event) {
-                event.preventDefault();
-                $(this).next().slideToggle();
-            });
-        }
-
-        //Fixed Latest News 
-        if ($(window).width() > 768) {
-            $('.item-home-latest-news').click(function() {
-              $(this).toggleClass('active');
-            });
-        }
+  };
 
 
-          
-        window.t.go();
+  var jvbigC = {
 
-
+    btnLoadMore : function(){
 
         //Product Load More
-        $('.list-product-loadmore').each(function() {
-            var size_li = $(this).find(".product-grid-item").size();
-            var x = $(this).find('.btn-link-loadmore').attr('data-num');
-            var y = parseInt($(this).find('.btn-link-loadmore').attr('data-num')) - 1;
-            $(this).find('.product-grid-item:lt(' + x + ')').show();
-            $(this).find('.product-grid-item:gt(' + y + ')').hide();
-            $(this).find('.btn-link-loadmore').click(function() {
-                var size_li = $(this).prev().find("li").size();
-                var x = $(this).attr('data-num');
-                var x = parseInt($(this).attr('data-num'));
-                $(this).attr('data-num', x + 4);
-                var x = $(this).attr('data-num');
-                $(this).prev().find('.product-grid-item:lt(' + x + ')').show();
-                if ($(this).attr('data-num') > size_li) {
-                    $(this).hide();
-                }
-            });
-        });
+      $('.list-product-loadmore').each(function() {
+          var size_li = $(this).find(".product-grid-item").size();
+          var x = $(this).find('.btn-link-loadmore').attr('data-num');
+          var y = parseInt($(this).find('.btn-link-loadmore').attr('data-num')) - 1;
+          $(this).find('.product-grid-item:lt(' + x + ')').show();
+          $(this).find('.product-grid-item:gt(' + y + ')').hide();
+          $(this).find('.btn-link-loadmore').click(function() {
+              var size_li = $(this).prev().find("li").size();
+              var x = $(this).attr('data-num');
+              var x = parseInt($(this).attr('data-num'));
+              $(this).attr('data-num', x + 4);
+              var x = $(this).attr('data-num');
+              $(this).prev().find('.product-grid-item:lt(' + x + ')').show();
+              if ($(this).attr('data-num') > size_li) {
+                  $(this).hide();
+              }
+          });
+      });
+    },
 
-
-        //Testimonial
+    goTestimonialLeftRight : function(){
+      //Testimonial
         if ($(window).width() >= 768) {
             $('.left-open').on('click', function(event) {
                 event.preventDefault();
@@ -286,7 +274,36 @@
             })
         }
         //End
+    }
 
+  };
+    
+  jQuery(document).ready(function() {
+        
+        //Select UI
+        $('.orderby').selectmenu();
+        
+        //Button Mobile
+        if ($(window).width() < 768) {
+            $('.language-link,.currency-link,.account-link,.icon-search,.icon-user,.icon-cart').click(function(event) {
+                event.preventDefault();
+                $(this).next().slideToggle();
+            });
+        }
+
+        //Fixed Latest News 
+        if ($(window).width() > 768) {
+            $('.item-home-latest-news').click(function() {
+              $(this).toggleClass('active');
+            });
+        }
+
+
+        //call
+        window.t.go();
+
+        jvbigC.btnLoadMore();
+        jvbigC.goTestimonialLeftRight();
 
         //Box Filter
         $('body').click(function() {
