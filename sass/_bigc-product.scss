@@ -282,21 +282,24 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 }
 
 //quickview popup fancy
-  .item-product-featured{
-    width: 700px;
-    height: 500px;
-  }
+//   .item-product-featured{
+//     width: 700px;
+//     height: 500px;
+//   }
 
-  .product_quickview .item-product-featured .bx-viewport,
-  .product_quickview .item-product-featured .bx-wrapper,
-  .product_quickview .item-product-featured .bx-wrapper img {
-    height: 368px !important;
-  }
+//   .product_quickview .item-product-featured .bx-viewport,
+//   .product_quickview .item-product-featured .bx-wrapper,
+//   .product_quickview .item-product-featured .bx-wrapper img {
+//     height: 368px !important;
+//   }
 
-  .product_quickview .item-product-featured .bxslider li{
-    width: 368px !important;
-  }
+//   .product_quickview .item-product-featured .bxslider li{
+//     width: 368px !important;
+//   }
 
+// .item-product-featured{
+  
+// }
 
 .countdown-wrap{
   @extend %jv-transition-easeout;

@@ -117,11 +117,7 @@
 
   {{ 'slick.min.js' | asset_url | script_tag }}
   {{ 'jquery.currencies.min.js' | asset_url | script_tag }}
-  {{ 'jquery.bxslider.js' | asset_url | script_tag }}
-  
 
-
-  {{ 'script.js' | asset_url | script_tag }}
 
 
 
@@ -216,7 +212,7 @@
   {% include 'currencies' %}
   {% endif %}    
   
-  <a id="back-top" class="lnr-chevron-up-circle" href="#"></a>
+
   
   <div id="overlays-loading" class=" show-loading">
     <span class="loading-ball ">
@@ -237,9 +233,13 @@
     </div>
   </div>  
 
-<div class="quickview-product engo-popup1" id="popupid"></div>
+<div class="quickview-product" id="popupid"></div>
 {%include 'quick-view' %}
 
+  {{ 'jquery.bxslider.js' | asset_url | script_tag }}
+  {{ 'script.js' | asset_url | script_tag }}
+
+<a id="back-top" class="lnr-chevron-up-circle" href="#"></a>
   
   <script>
     jQuery( function( $ ) {
@@ -297,10 +297,6 @@
       });
     });
 
-
-
-
-
 </script>
 
 
@@ -316,8 +312,6 @@ Shopify.Products.recordRecentlyViewed();
 {% endif %}
 
 <!-- End Recently Viewed Products -->
-
-
 
 
  </body>

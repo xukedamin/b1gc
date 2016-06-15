@@ -1,126 +1,80 @@
-<div id="quick-view1" style="display:none; width: 782px">
-  <div class="overlay no-background"></div>
-  <div class="content product-single">
+<!-- HERE -->
+<script id="quick-view-template"  type="text/x-handlebars-template">
+<h2 class="title-popup">{{'products.product.quick_shop'| t }}</h2>
+
+<div class="content-popup">
+
+    <div id="quick-view-template-row" class="item-product-featured" style="width: 782px" >
     <div class="row">
-      <div class="col-xs-6">
-        <div class="product-media thumbnai-left">
-          <div class="featured-image product-single-photos"></div>
-          <div class="more-views owl-carousel-play margin-top-10">
-            <div class="owl-carousel"  data-items="4" data-dots="false" data-lazyLoad="true" data-nav="false" data-autoHeight="false"></div>
-          </div>
-        </div>
-      </div> 
-
-      <div class="col-xs-6">
-        <div class="product-shop product-info-main">
-          <div class="product-item">
-            <h2 class="product-name"><a>&nbsp;</a></h2>
-            <div class="product-category">
-              Table
-            </div>
-
-            <div class="details clearfix">
-              <form action="/cart/add" method="post" class="variants">
-                <div class="prices product-price hidden">                  
-                  <span class="price"></span>
-                  <del class="compare-price"></del> 
-                </div>
-                <p class="des description"></p>    
-                <select name='id' style="display:none;">
-
-                </select>
-                <div>
-                  <p class="hethang margin-top-5"></p>
-                </div>
-
-                <div class="product-actions">
-                  <div class="product-quantity">
-                    <label>Qty</label>
-                    <div class="quantity-all">
-                      <span  class='qtyminus' data-field='quantity'><i class="fa  fa-caret-down"></i></span>
-                      <input type="text" name="quantity" value="1" class="qty quantity form-control">
-                      <span class='qtyplus' data-field='quantity'><i class="fa fa-caret-up"></i></span>
-                    </div>
-                    <div class="total-price product-price f-left margin-right-20">
-                      <span></span>
-                    </div>
-                  </div>
-
-
-                  <div class=" actions">
-                    <button type="button" class=" btn-addToCart btn btn-lg btn-primary">Add to Cart</button>                  
-                  </div>
-                </div>
-
-              </form>
-            </div>
-
-
-
-          </div>
+    {% raw %}
+  
+      <div class="col-md-6">
+        <div class="product-featured-thumb">
+          <ul class="bxslider">
+            {{#each product.images}}
+            <li> <img src="{{this}}" alt="{{this}}"></li>
+            {{/each}}
+          </ul>
         </div>
       </div>
-      <a href="javascript:void(0)" class="close-window">x</a>
-     
+      <div class="col-md-6 col-sm-7 col-xs-12">
+        <div class="product-featured-info">
+          <h3><a href="{{ product.url }}" >{{product.title}}</a></h3>
+          <div class="info-price">
+            <div class="product-item--price price">
+              <span class="medium--left">{{price_format}}</span>
+              
+              {{# if product.on_sale }}
+                <del class="sale-tag medium--right has-reviews">
+                {{compare_at_price_format }}
+                </del>
+              {{/if}}
+              
+            </div>
+          </div>
+          <p class="desc">{{ content}}</p>
+
+          <div class="bx-pager">
+            {{#each product.images}}
+                <a data-slide-index="{{@index}}" href=""><img src={{this}}'> </a>
+            {{/each}}
+          </div>
+
+
+
+          <div class="mt-20">
+            <form action="/cart/add" method="post" class="addToCartForm form-add-to-cart" data-id="product-actions-{{product.id}}"  enctype="multipart/form-data" >    
+              {{#if sold_out }}
+                <button class="btn-link-default add-to-cart product-add-cart" type="submit"  disabled="disabled" ><span class="addToCartText unavailableText"> Unavailable </span> </button>
+             
+              {{ else }}
+                  
+                  {{#if variantCount}}
+                    <button class="btn-link-default add-to-cart product-add-cart" type="button" onclick="window.location.href='{{product.url}}'" ><span class="text selectoptionText">Options </span></button>
+
+                   {{ else }}
+                  
+                    <input type="hidden" name="id" value="{{product.variants.0.id }}" />
+                    <button class="btn-link-default add-to-cart product-add-cart btn-ajax" type="submit">
+                    <span class="addToCartText">Add to cart</span></button>
+
+                  {{/if}}
+
+              {{/if }}
+            </form>  
+          </div>
+           
+        </div>
+      </div>
+    
+    
+      {% endraw %}
     </div>
   </div>
 </div>
-
-
-<!-- HERE -->
-<script id="quick-view-template"  type="text/x-handlebars-template">
-    <div id="quick-view-template-row" class="row" style="width: 782px" >
-    {% raw %}
-
-  
-  		<div class="col-md-6">
-  			<div class="product-featured-thumb">
-  				<ul class="bxslider">
-  		
-            <img src="{{featured_image}}" alt="">
-  				</ul>
-  			</div>
-  		</div>
-  		<div class="col-md-6 col-sm-7 col-xs-12">
-  			<div class="product-featured-info">
-  				<h3><a href="{{ url }}" >{{title}}</a></h3>
-  				<div class="info-price">
-  					<div class="product-item--price price">
-  						<span class="medium--left">{{price}}</span>
-  						
-              {{# if on_sale }}
-  							<del class="sale-tag medium--right has-reviews">
-  							{{compare_at_price }}
-  							</del>
-  						{{/if}}
-  						
-  					</div>
-  				</div>
-  				<p class="desc">{{ content}}</p>
-  				<div class="bx-pager">
-  				
-  				</div>
-
-            
-            <form action="/cart/add" method="post" class="addToCartForm form-add-to-cart" data-id="product-actions-{{id}}"  enctype="multipart/form-data" >    
-              {{#if sold_out }}
-                <button class="btn-link-default add-to-cart product-add-cart" type="submit"  disabled="disabled" data-toggle="tooltip" data-placement="top" title="products.product.unavailable'" ><span class="addToCartText"> products.product.unavailable </span> </button>
-             
-              {{ else }}
-                  <input type="hidden" name="id" value="{{ variants[0].id }}" />
-                  <button class="btn-link-default add-to-cart product-add-cart btn-ajax" type="submit"  data-toggle="tooltip" data-placement="top" title="Add to cart">
-                  <span class="addToCartText">Add to cart</span></button>
-              {{/if }}
-            </form>  
-
-  				 
-  			</div>
-  		</div>
-    
-		
-      {% endraw %}
-  </div>
 </script>
+
+{{ 'jquery.products.js' | asset_url | script_tag }}
 
 <script type="text/javascript">
 
@@ -131,27 +85,63 @@
     var id = $(this).attr('data-id');
     var rating = (($(this).closest('.item-product').find('.spr-badge').attr('data-rating')) * 20)+"%";
 
-    console.log( jQuery(this));
+
 
     Shopify.getProduct(id, function(product) {
       
       console.log(product);
+    
+      var is_compare_at_price = false;
+          if(product.compare_at_price > product.price){
+            is_compare_at_price = true;
+          }
+      var content = product.description.replace(/(<([^>]+)>)/ig, "");        
+          content = content.split(" ").splice(0, 20).join(" ") + "...";
+
+      var variantCount = (product.variants.length) > 1 ? true: false ;
+         
+
+      var  data = {
+          featured_image: Shopify.Products.resizeImage(product.featured_image, "medium"),
+          price_format: Shopify.formatMoney(product.price, window.money_format),
+          compare_at_price_format: Shopify.formatMoney(product.compare_at_price, window.money_format),
+          is_compare_at_price: is_compare_at_price,
+          content: content,
+          variantCount: variantCount,
+          product: product
+      };
+
+
       var template = jQuery('#quick-view-template'),
         wrapper = jQuery('.quickview-product'),
         template_compiled = Handlebars.compile(template.html());
 
-      jQuery(wrapper).html(template_compiled(product));
+      jQuery(wrapper).html(template_compiled(data));
 
+      //bxslide
+      jQuery('.item-product-featured').find('.bxslider').bxSlider({
+          pagerCustom: '.bx-pager',
+          nextText: '',
+          prevText: ''
+        });
 
-      });
+      jQuery("#quick-view-template-row .addToCartText").html("{{ 'products.product.add_to_cart' | t }}");
+      jQuery("#quick-view-template-row .unavailableText").html("{{ 'products.product.unavailable' | t }}");
+      jQuery("#quick-view-template-row .selectoptionText").html("{{ 'products.product.select_options' | t }}");
+
+      window.t.goAddToCart();
+
+    });
 
   }).fancybox({
         'titleShow'   : false,
+        'padding'   : 0,
         'onClosed'    : function() {
-              jQuery("#quick-view-template-row").hide();
+          jQuery("#quick-view-template-row").hide();
+          jQuery('.quickview-product').html('');
         }
         
-      });
+  });
 
 </script>
 

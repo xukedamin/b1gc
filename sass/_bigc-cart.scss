@@ -400,6 +400,16 @@
   display: inline-block;
 }
 
+
+
+#mini-cart.mini_cart_hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: -1000 !important;
+    display: none !important;
+}
+
+
 //Cart index
 .shop-cart-list {
   width: 100%;
