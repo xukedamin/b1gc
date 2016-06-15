@@ -21,8 +21,7 @@
         <div class="product-featured-info">
           <h3><a href="{{ product.url }}" >{{product.title}}</a></h3>
           <div class="info-price">
-            <div class="product-item--price price">
-              <span class="medium--left">{{price_format}}</span>
+            <div class="product-item--price price">{{{price_format}}}
               
               {{# if product.on_sale }}
                 <del class="sale-tag medium--right has-reviews">
@@ -89,7 +88,7 @@
 
     Shopify.getProduct(id, function(product) {
       
-      console.log(product);
+      
     
       var is_compare_at_price = false;
           if(product.compare_at_price > product.price){
@@ -110,7 +109,7 @@
           variantCount: variantCount,
           product: product
       };
-
+      console.log(data);
 
       var template = jQuery('#quick-view-template'),
         wrapper = jQuery('.quickview-product'),
@@ -130,6 +129,11 @@
       jQuery("#quick-view-template-row .selectoptionText").html("{{ 'products.product.select_options' | t }}");
 
       window.t.goAddToCart();
+
+      {% if settings.show_multiple_currencies %}
+        Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
+      {% endif %}
+        
 
     });
 

@@ -27,8 +27,8 @@
 
         <div class="price info-price">
         {{#if product.available}}
-          <span class="price"><span class="money">{{price_format}}</span></span>
-          
+          {{{price_format}}}
+
           {{#if is_compare_at_price}}
             <del class="price_compare"> <span class="money">{{compare_at_price_format}}</del></span>
           {{/if}}
@@ -48,17 +48,23 @@
 
   
 <script type="text/javascript">
-  Shopify.Products.showRecentlyViewed( { 
+  Shopify.Products.showRecentlyViewed( 
+  { 
     howManyToShow: {{settings.viewed_number_of}},
     onComplete: function() {
 
+      {% if settings.show_multiple_currencies %}
+        Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
+      {% endif %}
+
       jQuery("#recently-viewed-products .sold_out").html("{{'products.product.sold_out' | t}}");
-      //jQuery("#recently-viewed-products .product-btn span").html("{{'products.product.show_details' | t}}");
       
-      if(window.show_multiple_currencies)
-        currenciesCallbackSpecial('#recently-viewed-products span.money');
-    } 
+      // if(window.show_multiple_currencies){
+      //   currenciesCallbackSpecial('#recently-viewed-products span.money');
+      // } 
+    }
   });
+
 </script>
 {% endif %}
 

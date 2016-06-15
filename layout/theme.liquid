@@ -161,6 +161,15 @@
 
   
  </div>  
+
+ <script>
+Shopify.money_format = "{{ shop.money_format }}";
+
+window.shop_currency = "{{ shop.currency }}";
+window.show_multiple_currencies = {{settings.show_multiple_currencies}};
+
+</script>
+
   
   
   {{ 'fastclick.min.js' | asset_url | script_tag }}
@@ -208,9 +217,7 @@
   </script>
 
 
-  {% if settings.show_multiple_currencies %}              
-  {% include 'currencies' %}
-  {% endif %}    
+  
   
 
   
@@ -238,6 +245,11 @@
 
   {{ 'jquery.bxslider.js' | asset_url | script_tag }}
   {{ 'script.js' | asset_url | script_tag }}
+
+
+{% if settings.show_multiple_currencies %}              
+  {% include 'currencies' %}
+{% endif %}  
 
 <a id="back-top" class="lnr-chevron-up-circle" href="#"></a>
   
