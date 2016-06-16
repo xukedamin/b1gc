@@ -698,7 +698,9 @@ var ajaxifyShopify = (function(module, $) {
 
   cartUpdateCallback = function (cart) {
     // Update quantity and price
-    updateCountPrice(cart);return;
+    updateCountPrice(cart);
+
+    // return;
 
     switch (settings.method) {
       case 'flip':

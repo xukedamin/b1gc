@@ -8,6 +8,7 @@
       isSidebarAjaxClick: false,
       go: function() {
 
+        this.checkItemsInMiniCart();
         this.goMiniCart();//add cart
         this.goAddToCart();
 
@@ -34,6 +35,8 @@
 
       doUpdateMiniCart: function(n) {
 
+        console.log('update Minicart');
+
 
         var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><span class="price">{PRICE}</span> x <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price"></span></div></li>';        
 
@@ -42,7 +45,7 @@
 
         $("#mini-cart .total-cart .price").html(Shopify.formatMoney(n.total_price, window.money_format));
 
-        $("#mini-cart .shop-cart-list").html("");
+        $("#mini-cart .shop-cart-list .info-list-cart").html("");
 
         if (n.item_count > 0) {
           for (var i = 0; i < n.items.length; i++) {
@@ -53,7 +56,7 @@
             s = s.replace(/\{QUANTITY\}/g, n.items[i].quantity);
             s = s.replace(/\{IMAGE\}/g, Shopify.resizeImage(n.items[i].image, "small"));
             s = s.replace(/\{PRICE\}/g, Shopify.formatMoney(n.items[i].price, window.money_format));
-            $("#mini-cart .shop-cart-list").append(s)
+            $("#mini-cart .shop-cart-list .info-list-cart").append(s);
           }
 
           $("#mini-cart .btn-remove").click(function(n) {
@@ -74,7 +77,7 @@
 
         //TEST
         var carttemplate = $("#jvMiniCart");
-        var wrapper = jQuery('#mini-cart .shop-cart-list'),
+        var wrapper = jQuery('#mini-cart .shop-cart-list .info-list-cart'),
         template_compiled = Handlebars.compile(carttemplate.html());
         jQuery(wrapper).append(template_compiled(n));
         
@@ -88,11 +91,12 @@
 
 
       checkItemsInMiniCart: function() {
-        
-        if ($("#mini-cart .shop-cart-list").children().length > 0) {
+
+        console.log($("#mini-cart .shop-cart-list .info-list-cart").children().length);
+        if ($("#mini-cart .shop-cart-list .info-list-cart").children().length > 0) {
           $("#mini-cart").removeClass('mini_cart_hidden');
           $("#mini-cart").parent().removeClass('hidden');
-          console.log('checkItemsInMiniCart');
+          
         } 
         else {
           $("#mini-cart").addClass('mini_cart_hidden');

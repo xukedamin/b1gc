@@ -522,6 +522,8 @@ var ajaxifyShopify = (function(module, $) {
     toggleCallback({
       'is_visible': false
     });
+
+    window.t.updateMiniCart();
   };
 
   drawerSetup = function () {
@@ -693,7 +695,9 @@ var ajaxifyShopify = (function(module, $) {
 
   cartUpdateCallback = function (cart) {
     // Update quantity and price
-    updateCountPrice(cart);return;
+    updateCountPrice(cart);
+
+    //return;
 
     switch (settings.method) {
       case 'flip':
@@ -857,7 +861,7 @@ var ajaxifyShopify = (function(module, $) {
   };
 
   cartTemplate = function (cart) {
-    $cartContainer.load('/cart form[action="/cart"]', function() {
+    $cartContainer.load('/cart form[action="/cart"]:not(.mini-cart)', function() {
 
       // With new elements we need to relink the adjust cart functions
       adjustCart();

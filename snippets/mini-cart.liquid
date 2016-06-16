@@ -1,8 +1,6 @@
 <!-- =TODO -->
-{% if cart.item_count == 0 %}
-<h2 class="cart--empty">{{ 'cart.general.empty' | t }}</h2>
-<p>{{ 'cart.general.continue_browsing_html' | t }}</p>
-{%else %}
+{% if template != 'cart' %}
+
 
 <form action="/cart" method="post" class="cart-page-form mini-cart" novalidate id="mini-cart">
   <h2><span class="cart-count" id="cart-count">{{ cart.item_count }}</span> {{ 'cart.general.items' | t }}</h2>
@@ -46,6 +44,8 @@
     <button type="submit" name="checkout" class="cart-checkout"> {{ 'cart.general.checkout' | t }} </button>
   </div>
 </form>
+
+
 
 {% endif %}
 
