@@ -1,9 +1,11 @@
 {% if settings.show_multiple_currencies %}
 
-{{ "//cdn.shopify.com/s/javascripts/currencies.js" | script_tag }}
-{{ "jquery.currencies.min.js" | asset_url | script_tag }}
+
 
 <script>
+
+console.log('selectCallback');
+
 
 Currency.format = '{{ settings.currency_format | default: 'money_with_currency_format' }}';
 
@@ -59,11 +61,14 @@ jQuery('[name=currencies]').val(Currency.currentCurrency).change(function() {
 var original_selectCallback = window.selectCallback;
 var selectCallback = function(variant, selector) {
   original_selectCallback(variant, selector);
+
+
   Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());
   jQuery('.selected-currency').text(Currency.currentCurrency);
 };
 
 $('body').on('ajaxCart.afterCartLoad', function(cart) {
+
   Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());
   jQuery('.selected-currency').text(Currency.currentCurrency);  
 });

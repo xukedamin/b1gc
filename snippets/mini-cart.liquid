@@ -2,6 +2,9 @@
 {% if template != 'cart' %}
 
 
+
+<div class="inner-cart-info {{inner_cart_info_class}}">
+
 <form action="/cart" method="post" class="cart-page-form mini-cart" novalidate id="mini-cart">
   <h2><span class="cart-count" id="cart-count">{{ cart.item_count }}</span> {{ 'cart.general.items' | t }}</h2>
   <div class="shop-cart-list" data-line="{{ forloop.index }}">
@@ -19,13 +22,10 @@
           <h3 class="cart-title"><a href="{{ item.url }}"> {{ item.product.title }} </a></h3>
           
           <div class="product-quantity cart-qty">
-            <!-- <label>{{ 'cart.general.qty' | t }} :</label>  -->
-            <!-- <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}"> -->
             <span class="cart-price">{% include 'price' with item.price %} </span> x <span class="cart-qty--number">{{ item.quantity }}</span>
           </div>
         </div>	
         <div class="wrap-cart-remove">
-          <!-- <a class="remove-product product-remove remove " href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-line="{{ forloop.index }}" > </a> -->
           <a class="btn-remove remove-product product-remove remove" href="javascript:void(0)"  ><i class="lnr lnr-cross"></i></a> 
          
         </div>  
@@ -45,6 +45,7 @@
   </div>
 </form>
 
+</div>
 
 
 {% endif %}

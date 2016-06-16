@@ -1,65 +1,6 @@
 {% include 'header-top-bar--welcome' %}
 {% include 'header-top-bar--setting' with top_bar_myaccount_show:false %}
 
-<div id="header">
-	<div class="header header7">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-12 col-xs-12">
-					<div class="logo-header7">
-						{%include 'header-logo' %}
-					</div>
-									
-					{% if settings.header_search_enable %}
-					<div class="search-form7">
-						{% include 'search-bar' %}
-					</div>
-					{% endif %}
-
-				</div>
-				<div class="col-md-5 col-sm-8 col-xs-12">
-					<div class="main-nav main-nav7">
-					<!-- menu-short-1 -->
-					 {% include 'nav' class: 'dropdownMenu main-menu', handle: settings.header_main_menu_short, hot_label_enable: true %}
-						<div class="mobile-menu">
-							<a href="#" class="show-menu"><span class="lnr lnr-indent-decrease"></span></a>
-							<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4 col-xs-12">
-					<div class="register-box">
-				
-							{% if shop.customer_accounts_enabled %}
-		          	{% if customer %}
-		             <a class="link-login account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
-		                {{ 'layout.customer.my_account' | t }}
-		              </a>
-		           	{% else %}
-		           		<a href="/account/login" class="link-signin account-link">
-		                {{ 'layout.customer.my_account' | t }}
-		              </a>
-		           {% endif %}
-		      		{% endif %}
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		{%if settings.header_cart_enable %}
-		<div class="info-cart info-cart7">
-			<a class="info-icon icon-cart" href="#"><span class="lnr lnr-cart"></span> <sup>0</sup></a>
-			<div class="inner-cart-info">
-				{% include 'mini-cart' %}
-			</div>
-		</div>
-		{% endif %}
-
-	</div>
-</div>
-<!-- End Header -->
-
 
 <div id="header">
 	<div class="header header7">
@@ -106,14 +47,18 @@
 
 		</div>
 
-		{%if settings.header_cart_enable %}
+		
+		{%if settings.header_cart_enable and settings.header_top_bar_setting == false %}
 		<div class="info-cart info-cart7">
-			<a class="info-icon icon-cart" href="#"><span class="lnr lnr-cart"></span> <sup>0</sup></a>
-			<div class="inner-cart-info">
-				{% include 'mini-cart' %}
-			</div>
+			<a href="#" class="info-icon icon-cart">
+				<span class="lnr lnr-cart"></span> <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
+			</a>
+			
+			{% include 'mini-cart' %}
+			
 		</div>
 		{% endif %}
+		
 
 	</div>
 </div>

@@ -83,9 +83,8 @@
 		            <a href="#" class="top-header__menu-title mycart-link ">
 		            	<span class="lnr-cart"></span> {{ 'cart.general.mycart' | t }}  <span class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
 		            </a>
-		            <div class="inner-cart-info">
-		              {% include 'mini-cart' %}
-		            </div>
+		            
+		            {% include 'mini-cart' %}
 					        
 						</li>
 					    {% endif %}

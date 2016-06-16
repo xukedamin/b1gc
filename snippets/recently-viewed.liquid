@@ -30,7 +30,7 @@
           {{{price_format}}}
 
           {{#if is_compare_at_price}}
-            <del class="price_compare"> <span class="money">{{compare_at_price_format}}</del></span>
+            <del class="price_compare"> <span class="money">{{{compare_at_price_format}}}</del></span>
           {{/if}}
 
           {{else}}
@@ -54,7 +54,10 @@
     onComplete: function() {
 
       {% if settings.show_multiple_currencies %}
-        Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
+        if (window.t.checkNeedToConvertCurrency()){
+          console.log('HERE');
+          Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
+        }
       {% endif %}
 
       jQuery("#recently-viewed-products .sold_out").html("{{'products.product.sold_out' | t}}");

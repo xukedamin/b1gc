@@ -68,7 +68,7 @@
             })
           });
           if (t.checkNeedToConvertCurrency()) {
-             Currency.convertAll(window.shop_currency, jQuery('[name=currencies]').val());
+            Currency.convertAll(window.shop_currency, jQuery('[name=currencies]').val());
           }
         }
 
@@ -86,7 +86,8 @@
       },
 
       checkNeedToConvertCurrency: function() {
-        return window.show_multiple_currencies && Currency.currentCurrency != shopCurrency;
+     
+        return (jQuery('[name=currencies]') .length > 0) && window.show_multiple_currencies && Currency.currentCurrency != shopCurrency;
       },
 
 
