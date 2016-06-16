@@ -82,9 +82,7 @@ timber.init = function () {
   });
 
   
-  timber.socialSharing();
-  
-
+ // timber.socialSharing();
   
   timber.sortFilters();
   

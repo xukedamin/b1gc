@@ -35,11 +35,6 @@
 
       doUpdateMiniCart: function(n) {
 
-        console.log('update Minicart');
-
-
-        var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><span class="price">{PRICE}</span> x <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price"></span></div></li>';        
-
         $("#cart-count").text(n.item_count);
         $(".info-cart .number-cart-total.cart-count").text(n.item_count);
 
@@ -47,19 +42,32 @@
 
         $("#mini-cart .shop-cart-list .info-list-cart").html("");
 
-        if (n.item_count > 0) {
-          for (var i = 0; i < n.items.length; i++) {
-            var s = cart;
-            s = s.replace(/\{ID\}/g, n.items[i].id);
-            s = s.replace(/\{URL\}/g, n.items[i].url);
-            s = s.replace(/\{TITLE\}/g, n.items[i].title);
-            s = s.replace(/\{QUANTITY\}/g, n.items[i].quantity);
-            s = s.replace(/\{IMAGE\}/g, Shopify.resizeImage(n.items[i].image, "small"));
-            s = s.replace(/\{PRICE\}/g, Shopify.formatMoney(n.items[i].price, window.money_format));
-            $("#mini-cart .shop-cart-list .info-list-cart").append(s);
-          }
+        // var cart = '<li class="mini_cart_item item-info-cart" id="cart-item-{ID}"><div class="cart-thumb"><a href="{URL}" title="{TITLE}" class="cart-thumb cart-image">  <img src="{IMAGE}"  alt="{TITLE}"></a></div> <div class="wrap-cart-title"><h3 class="cart-title"><a href="{URL}"> {TITLE} </a></h3><div class="product-quantity cart-qty"><span class="price">{PRICE}</span> x <span class="cart-qty--number">{QUANTITY}</span></div></div><div class="wrap-cart-remove"><a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price"></span></div></li>';        
+        // if (n.item_count > 0) {
+        //   for (var i = 0; i < n.items.length; i++) {
+        //     var s = cart;
+        //     s = s.replace(/\{ID\}/g, n.items[i].id);
+        //     s = s.replace(/\{URL\}/g, n.items[i].url);
+        //     s = s.replace(/\{TITLE\}/g, n.items[i].title);
+        //     s = s.replace(/\{QUANTITY\}/g, n.items[i].quantity);
+        //     s = s.replace(/\{IMAGE\}/g, Shopify.resizeImage(n.items[i].image, "small"));
+        //     s = s.replace(/\{PRICE\}/g, Shopify.formatMoney(n.items[i].price, window.money_format));
+        //     $("#mini-cart .shop-cart-list .info-list-cart").append(s);
+        //   }
+        // }
 
-          $("#mini-cart .btn-remove").click(function(n) {
+        //TEST
+        var carttemplate = $("#jvMiniCart");
+        var wrapper = jQuery('#mini-cart .shop-cart-list .info-list-cart'),
+        template_compiled = Handlebars.compile(carttemplate.html());
+        
+        var data = this.fetchTemplateLayout(n);
+
+        console.log(data);
+
+        jQuery(wrapper).append(template_compiled(data));
+        
+        $("#mini-cart .btn-remove").click(function(n) {
             n.preventDefault();
             var cart = $(this).parents(".mini_cart_item").attr("id");
             cart = cart.match(/\d+/g);
@@ -67,26 +75,70 @@
               t.doUpdateMiniCart(e);
             })
           });
-          if (t.checkNeedToConvertCurrency()) {
+        
+        if (t.checkNeedToConvertCurrency()) {
             Currency.convertAll(window.shop_currency, jQuery('[name=currencies]').val());
           }
-        }
 
-
-        t.checkItemsInMiniCart();
-
-        //TEST
-        var carttemplate = $("#jvMiniCart");
-        var wrapper = jQuery('#mini-cart .shop-cart-list .info-list-cart'),
-        template_compiled = Handlebars.compile(carttemplate.html());
-        jQuery(wrapper).append(template_compiled(n));
-        
+         t.checkItemsInMiniCart();
 
 
       },
 
-      checkNeedToConvertCurrency: function() {
+
+      fetchTemplateLayout: function(cart){
+      
+      // Handlebars.js cart layout
+      var items = [],
+          item = {},
+          data = {};
+
      
+      // Add each item to our handlebars.js data
+      $.each(cart.items, function(index, cartItem) {
+
+        var itemAdd = cartItem.quantity + 1,
+            itemMinus = cartItem.quantity - 1,
+            itemQty = cartItem.quantity + ' x';
+
+        /* Hack to get product image thumbnail
+         *   - Remove file extension, add _small, and re-add extension
+         *   - Create server relative link
+        */
+        var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
+        var prodName = cartItem.title.replace(/(\-[^-]*)$/, "");
+        var prodVariation = cartItem.title.replace(/^[^\-]*/, "").replace(/-/, "");
+
+        // Create item's data object and add to 'items' array
+        item = {
+          id: cartItem.variant_id,
+          title: cartItem.title,
+          line: index + 1, // Shopify uses a 1+ index in the API
+          url: cartItem.url,
+          image: prodImg,
+          name: prodName,
+          variation: prodVariation,
+          itemAdd: itemAdd,
+          itemMinus: itemMinus,
+          quantity: cartItem.quantity,
+          price: Shopify.formatMoney(cartItem.price, window.money_format)
+        };
+
+        items.push(item);
+      });
+
+      // Gather all cart data and add to DOM
+      data = {
+        items: items,
+        totalPrice: Shopify.formatMoney(cart.total_price, window.money_format)
+        
+      }
+
+      return data;
+
+    },
+
+      checkNeedToConvertCurrency: function() {
         return (jQuery('[name=currencies]') .length > 0) && window.show_multiple_currencies && Currency.currentCurrency != shopCurrency;
       },
 

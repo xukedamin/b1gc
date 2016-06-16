@@ -382,7 +382,7 @@
   width: 13px;
   height: 18px;
   top: 0;
-
+  line-height: 40px;
 }
 .js--add:before,
 .ajaxifyCart--add:before{
@@ -418,14 +418,13 @@
 .shop-cart-list .product-quantity .ajaxifyCart--qty {
   margin: 0 auto;
 }
-.shop-cart-list table * {
-  
+
+
+.shop-cart-list table {
   letter-spacing: 0.05em;
   font-size: 14px;
   color: #333;
-}
 
-.shop-cart-list table {
   .product-img {
     @extend %text-left;
     padding-right: 5px;

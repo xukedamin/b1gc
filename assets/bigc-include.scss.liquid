@@ -346,20 +346,6 @@ Dependency-free breakpoint mixin
   white-space: nowrap;
 }
 
-/*============================================================================
-#Normalize
-==============================================================================*/
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
-
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
 .glyphs.character-mapping {
   margin: 0 0 20px 0;
   color: rgba(0, 0, 0, 0.5);
@@ -701,10 +687,25 @@ html, body {
   -webit-box-shadow: none;
 }
 
+/*============================================================================
+#Normalize
+==============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 /*General*/
 body {
   color: #1b1d1f;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: inherit;
   margin: 0;
@@ -715,13 +716,12 @@ body {
   overflow: hidden;
 }
 
-* {
-  box-sizing: border-box;
-  outline: none;
-}
-
 img {
   max-width: 100%;
+}
+
+a {
+  color: inherit;
 }
 
 a:hover, a:focus {
@@ -734,9 +734,7 @@ a:hover, a:focus {
   width: 100%;
 }
 
-input,
-input:focus,
-input:hover {
+input, input:focus, input:hover {
   outline: none;
 }
 
@@ -823,24 +821,6 @@ select option {
   font-weight: 400;
   line-height: 1;
   text-transform: none;
-}
-
-.mtl .btn4 {
-  width: 13em;
-  display: inline-block;
-  font-size: 16px;
-  color: #3a3a3a;
-}
-.mtl .btn4 > span {
-  margin-right: 10px;
-  display: inline-block;
-}
-.mtl .btn4 .lnr {
-  display: inline-block;
-  fill: currentcolor;
-  height: 1em;
-  vertical-align: -0.05em;
-  width: 1em;
 }
 
 .bread-crumb {
@@ -945,14 +925,14 @@ select option {
   border-top-color: #fff !important;
   -moz-animation: spin .5s infinite linear;
   -webkit-animation: spin .5s infinite linear;
-  -ms-animation: spin .5s infinite linear;
+  -ms-animation: spin 0.5s infinite linear;
 }
 
 .show-loading .loading-ball .ball1 {
   opacity: 1;
   -moz-animation: spinoff .5s infinite linear;
   -webkit-animation: spinoff .5s infinite linear;
-  -ms-animation: spinoff .5s infinite linear;
+  -ms-animation: spinoff 0.5s infinite linear;
 }
 
 .show-loading .loading-ball .ball2 {
@@ -4802,6 +4782,7 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
   width: 13px;
   height: 18px;
   top: 0;
+  line-height: 40px;
 }
 
 .js--add:before,
@@ -4839,12 +4820,11 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
   margin: 0 auto;
 }
 
-.shop-cart-list table * {
+.shop-cart-list table {
   letter-spacing: 0.05em;
   font-size: 14px;
   color: #333;
 }
-
 .shop-cart-list table .product-img {
   padding-right: 5px;
 }
@@ -4918,7 +4898,7 @@ ul.dropdownMenu__ li:nth-child(3) > ul {
   content: "\e870";
 }
 .shop-cart-list table tbody .cart-item td.product-remove > a:hover {
-  color: #fec64d;
+  color: {{ settings.color_primary }};
 }
 .shop-cart-list table tbody .cart-item td.product-quantity input[type='number']::-webkit-inner-spin-button,
 .shop-cart-list table tbody .cart-item td.product-quantity input[type='number']::-webkit-outer-spin-button {
@@ -5197,7 +5177,7 @@ textarea {
 }
 
 textarea:focus {
-  border-color: #fec64d;
+  border-color: {{ settings.color_primary }};
 }
 
 .widget-title.sub-title {
@@ -6180,7 +6160,7 @@ a.jvlogo {
   transform: translate(150%, 0px);
   width: 50px;
   z-index: 1040;
-  color: #fec64d;
+  color: {{ settings.color_primary }};
 }
 
 #back-top.show {
@@ -7149,7 +7129,7 @@ Page Detail Mr
 .addToCartForm .variant-quantity {
   display: block;
   margin-top: 20px;
-  color: #fec64d;
+  color: {{ settings.color_primary }};
 }
 
 .hotdeal-countdown canvas {
@@ -7664,7 +7644,6 @@ ul.wishlist {
 .latest-post-content:before,
 .content-catelog:before {
   content: "";
-  background-color: rgba(254, 198, 77, 0.7);
   position: absolute;
   top: -100%;
   right: -100%;
@@ -7673,7 +7652,7 @@ ul.wishlist {
 }
 
 .latest-post-content:before {
-  background-color: #fec64d;
+  background-color: {{ settings.color_primary }};
 }
 
 .item-latest-post.item-left .latest-post-content:before {
@@ -8247,7 +8226,7 @@ Page Product List Mr
 }
 .masonry-container .desc-popular-box.date {
   background-color: rgba(102, 102, 102, 0.6);
-  color: #fec64d;
+  color: {{ settings.color_primary }};
 }
 .masonry-container .itemMasonry:hover .share {
   opacity: 1;

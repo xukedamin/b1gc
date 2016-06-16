@@ -33,7 +33,7 @@
               {% for item in cart.items %}
               <tr class="cart-item">
                 <td class="product-img"><a href="{{ item.url }}" class="cart-image"> <div class="image"> <img src="{{ item | img_url: 'medium' }}"  alt="{{ item.title | escape }}"> </div></a></td>
-                <td class="product-name"><a href="{{ item.url }}"> {{ item.product.title }} </a></td>
+                <td class="product-name"><a href="{{ item.url }}" class="color-primary"> {{ item.product.title }} </a></td>
                 <td class="product-size"> 
 
                   {% unless item.variant.title contains 'Default' %}
@@ -62,7 +62,11 @@
 
                 </td>
                 <td class="product-price"> {% include 'price' with item.price %}   </td>
-                <td class="product-quantity"><input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}"></td>
+                <td class="product-quantity">
+                  <div class="quantity-wrapper info-qty">
+                  <input type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-line="{{ forloop.index }}">
+                  </div>
+                </td>
                 <td class="product-total">{% include 'price' with item.line_price %}</td>
                 <td class="product-remove"><a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-line="{{ forloop.index }}" class="icon-fallback-text btn-secondary remove"> <span class="icon icon-x" aria-hidden="true"></span>  </a></td>
               </tr>
@@ -110,8 +114,8 @@
                 <a class="border-btn border-btn-gray" href="/collections/all"> {{ 'cart.general.continueshopping' | t }}</a>
               </div> 
               <div class="col-sm-6">
-                <input type="submit" name="update" class="btn-secondary update-cart normal-btn normal-btn-main" value="{{ 'cart.general.update' | t }}">
-                <button type="submit" name="checkout" class="normal-btn normal-btn-main"> <span class="icon icon-cart"></span> {{ 'cart.general.checkout' | t }} </button>
+                <input type="submit" name="update" class="btn update-cart bt-link bt-yellow" value="{{ 'cart.general.update' | t }}">
+                <button type="submit" name="checkout" class="btn bt-link bt-black"> <span class="icon icon-cart"></span> {{ 'cart.general.checkout' | t }} </button>
                 
               </div> 
 

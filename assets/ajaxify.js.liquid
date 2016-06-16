@@ -671,7 +671,9 @@ var ajaxifyShopify = (function(module, $) {
           $flipContainer.removeClass('flip--is-loading').addClass('is-flipped');
         }, 600);
         break;
-    }Shopify.getCart(cartUpdateCallback);
+    }
+
+    Shopify.getCart(cartUpdateCallback);
     //cartTemplate([]);
     return;
     

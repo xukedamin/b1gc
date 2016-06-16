@@ -99,10 +99,11 @@
       <div class="wrap-cart-title">
         <h3 class="cart-title">
         <a href="{{this.url}}"> {{this.title}} </a></h3>
-        <div class="product-quantity cart-qty"><span class="price">{{this.price}}</span> x <span class="cart-qty--number">{{this.quantity}}</span></div>
+        <div class="product-quantity cart-qty"><span class="price">{{{this.price}}}</span> x <span class="cart-qty--number">{{this.quantity}}</span></div>
       </div>
       <div class="wrap-cart-remove">
-        <a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a><span class="cart-price">{{this.price}}</span></div>
+        <a class="remove-product product-remove remove btn-remove" href="javascript:void(0)"><i class="lnr lnr-cross"></i></a>
+      </div>
   </li>
   {{/each}}
 

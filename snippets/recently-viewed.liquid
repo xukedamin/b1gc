@@ -55,7 +55,7 @@
 
       {% if settings.show_multiple_currencies %}
         if (window.t.checkNeedToConvertCurrency()){
-          console.log('HERE');
+      
           Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
         }
       {% endif %}
