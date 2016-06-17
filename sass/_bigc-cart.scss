@@ -226,7 +226,7 @@
     @extend %jv-transition-easeout;
   }
   *:hover {
-    background: $color_golden-tainoi;
+    @extend %jv-bg-color-primary;
   }
 }
 .wrap-cart-remove {
@@ -459,7 +459,10 @@
 }
 
 .shop-cart-list table thead th {
-  border-bottom: 2px solid $color_golden-tainoi;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      @extend %jv-border-color-primary;
+
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -511,7 +514,7 @@
       @extend %jv-font-Linearicons;
     }
     &:hover {
-      color: $color_primary;
+     @extend %jv-color-primary;
     }
   }
   .cart-item td.product-quantity input[type='number']::-webkit-inner-spin-button, 

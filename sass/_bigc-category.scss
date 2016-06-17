@@ -88,7 +88,7 @@
 .latest-post-content:before,
 .content-catelog:before {
   content: "";
-  // background-color: rgba($color_primary,0.7);
+ @extend %jv-bg-color-primary;
   position: absolute;
   top: -100%;
   right: -100%;
@@ -97,7 +97,7 @@
 }
 
 .latest-post-content:before{
-  background-color: $color_primary;
+ @extend %jv-bg-color-primary;
 }
 
 .item-latest-post.item-left .latest-post-content:before{

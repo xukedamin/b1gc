@@ -1,9 +1,8 @@
-/*bigc-include.scss*/
-$colorPrimary : #{'{{ settings.color_primary }}'};
-
-
 
 $color_primary : #{'{{ settings.color_primary }}'};
+$color_primary--alpha07 : #{'rgba(settings.color_primary,0.7)'};
+
+
 
 $color_white: #fff;
 
@@ -112,6 +111,53 @@ $color_danube : #5a88ca;
 @-ms-keyframes spinoff {
 	0% { -ms-transform: rotate(0deg); }
 	100% { -ms-transform: rotate(-360deg); }
+}
+
+$color_primary-inverse : $color_shark;
+
+$color_secondary : $color_currious-blue-darker;
+$color_secondary-inverse : $color_candlelight;
+
+%jv-bg-color-primary{
+	background-color: $color_primary;
+}
+%jv-color-primary{
+	color: $color_primary;
+}
+%jv-border-color-primary{
+	border-color: $color_primary;
+}
+
+
+%jv-bg-color-primary-inverse{
+	background-color: $color_primary-inverse;
+}
+%jv-color-primary-inverse{
+	color: $color_primary-inverse;
+}
+%jv-border-color-primary-inverse{
+	border-color: $color_primary-inverse;
+}
+
+
+%jv-bg-color-secondary{
+	background-color: $color_secondary;
+}
+%jv-color-secondary{
+	color: $color_secondary;
+}
+%jv-border-color-secondary{
+	border-color: $color_secondary;
+}
+
+%jv-bg-color-secondary-inverse{
+	background-color: $color_secondary-inverse;
+}
+%jv-color-secondary-inverse{
+	color: $color_secondary-inverse;
+}
+%jv-border-color-secondary-inverse{
+	border-color: $color_secondary-inverse;
 }
 
 @import 'bigc-utilities';

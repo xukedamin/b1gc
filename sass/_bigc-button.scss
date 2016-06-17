@@ -49,26 +49,26 @@
 
 .bt-brown {
 	background: #323436;
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 }
 .bt-blue {
-	background: $color_currious-blue-darker;
+	@extend %jv-bg-color-secondary;
 	color: $color_white;
 }
 .bt-black {
-	background: $color_shark;
+	@extend %jv-bg-color-primary-inverse;
 	color: $color_white;
 }
 .bt-yellow {
-	background: $color_golden-tainoi;
+	@extend %jv-bg-color-primary;
 	color: $color_white;
 }
 .bt-white {
 	background: $color_white;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 }
 .bt-gold {
-	background: #FFD21D;
+	@extend %jv-bg-color-secondary-inverse;
 }
 
 .title-bittons {
@@ -97,12 +97,12 @@
 .bt-style1:hover {
 	background: $color_white none repeat scroll 0 0;
 	box-shadow: 0 0 0 2px $color_shark inset;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 }
 .bt-style2:hover {
 	box-shadow: 0 2px 4px 1px rgba($color_black, 0.1);
 	background: $color_white;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 }
 .bt-style3 {
 	padding: 5px;
@@ -114,10 +114,10 @@
 	}
 }
 .bt-style4:hover {
-	background: $color_golden-tainoi;
+	@extend %jv-bg-color-primary;
 }
 .bt-style5:hover {
-	background: $color_shark;
+	@extend %jv-bg-color-primary-inverse;
 }
 .bt-style6 {
 	box-shadow: 0 0 0 2px $color_shark inset;
@@ -132,7 +132,7 @@
 	box-shadow: 0 2px 4px 1px rgba($color_black, 0.1);
 
 	&:hover {
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		color: $color_white;
 		box-shadow: none;
 	}
@@ -150,11 +150,11 @@
 }
 
 .bt-style9:hover {
-	background: $color_shark;
+	@extend %jv-bg-color-primary-inverse;
 }
 
 .bt-style10:hover {
-	background: $color_golden-tainoi;
+	@extend %jv-bg-color-primary;
 }
 
 .btn-box-shadow{
@@ -165,7 +165,7 @@
 	@extend .btn-box-shadow;
 
 	&:hover {
-		background: $color_golden-tainoi;
+		@extend %jv-bg-color-primary;
 		box-shadow: 0 0 0 2px $color_white inset;
 	}
 }
@@ -174,9 +174,9 @@
 	@extend .btn-box-shadow;
 
 	&:hover {
-		box-shadow: 0 0 0 1px $color_golden-tainoi inset;
+		box-shadow: 0 0 0 1px $color-primary inset;
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 
@@ -184,9 +184,9 @@
 	@extend .btn-box-shadow ;
 
 	&:hover {
-		box-shadow: 0 0 0 4px $color_golden-tainoi inset;
+		box-shadow: 0 0 0 4px $color-primary inset;
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 
@@ -195,41 +195,41 @@
 
 	&:hover {
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 
 .bt-style15:hover {
 	background: #323436;
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 }
 
 .bt-style16 {
 	box-shadow: 0 0 0 2px $color_white inset;
 
 	&:hover {
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		box-shadow: 0 0 0 1px $color_white inset;
 	}
 }
 .bt-style17 {
-	box-shadow: 0 0 0 1px $color_golden-tainoi inset;
+	box-shadow: 0 0 0 1px $color-primary inset;
 
 	&:hover {
 		box-shadow: 0 0 0 1px $color_white inset;
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		color: $color_white;
 	}
 }
 
 .bt-style18 {
-	box-shadow: 0 0 0 4px $color_golden-tainoi inset;
+	box-shadow: 0 0 0 4px $color-primary inset;
 	background: $color_white;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 
 	&:hover {
 		box-shadow: 0 0 0 1px $color_white inset;
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		color: $color_white;
 	}
 }
@@ -237,12 +237,12 @@
 	@extend .btn-box-shadow ;
 
 	&:hover {
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		color: $color_white;
 	}
 }
 .bt-style20:hover {
-	background: $color_golden-tainoi;
+	@extend %jv-bg-color-primary;
 	color: $color_white;
 }
 
@@ -251,28 +251,28 @@
 	padding: 0;
 
 	&:hover {
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+		box-shadow: 0 0 0 1px $color_secondary inset;
 		background: $color_white;
 
 		span {
-			background: $color_currious-blue-darker;
+			@extend %jv-bg-color-secondary;
 		}
 	}
 }
 
 .bt-style22:hover {
-	box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+	box-shadow: 0 0 0 1px $color_secondary inset;
 	background: $color_white;
-	color: $color_currious-blue-darker;
+	@extend %jv-color-secondary;
 }
 
 .bt-style23:hover {
-	background: #FFD21D;
-	color: $color_shark;
+	@extend %jv-bg-color-secondary-inverse;
+	@extend %jv-color-primary-inverse;
 	box-shadow: 0 4px 4px 0 rgba($color_black, 0.3);
 }
 .bt-style24:hover {
-	background: #FFD21D;
+	@extend %jv-bg-color-secondary-inverse;
 }
 
 .bt-style25 {
@@ -280,59 +280,59 @@
 
 	&:hover {
 		box-shadow: none;
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 	}
 }
 .bt-style26 {
 	width: 140px;
 	background: $color_white;
-	box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+	box-shadow: 0 0 0 1px $color_secondary inset;
 	padding: 0;
 
 	&:hover {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 	}
 	span {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 	}
 }
 
 .bt-style27 {
-	box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+	box-shadow: 0 0 0 1px $color_secondary inset;
 	background: $color_white;
-	color: $color_currious-blue-darker;
+	@extend %jv-color-secondary;
 
 	&:hover {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 	}
 }
 
 .bt-style28:hover {
-	background: $color_currious-blue-darker;
+	@extend %jv-bg-color-secondary;
 	color: $color_white;
 	box-shadow: none;
 }
 
 .bt-style29:hover {
-	background: $color_currious-blue-darker;
+	@extend %jv-bg-color-secondary;
 }
 .bt-style30:hover {
 	box-shadow: 0 0 0 1px $color_mercury-darker inset;
 	background: $color_white;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 }
 .bt-style31 {
 	width: 140px;
 	padding: 0;
 
 	&:hover {
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
-		background: $color_shark;
+		box-shadow: 0 0 0 1px $color_secondary inset;
+		@extend %jv-bg-color-primary-inverse;
 	}
 	.bt-style31 span {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 	}
 }
 .bt-style32 {
@@ -341,17 +341,16 @@
 	&:hover {
 		box-shadow: 0 0 0 1px $color_white inset;
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 .bt-style33 {
-	box-shadow: 0 0 0 1px #FFD21D inset;
-	color: #FFD21D;
+	box-shadow: 0 0 0 1px $color_secondary-inverse inset;
+	@extend %jv-color-secondary-inverse;
 
 	&:hover {
-		// box-shadow: 0 0 0 1px #FFD21D inset;
-		color: $color_shark;
-		background: #FFD21D;
+		@extend %jv-color-primary-inverse;
+		@extend %jv-bg-color-secondary-inverse;
 	}
 }
 .bt-style34 {
@@ -366,48 +365,48 @@
 	color: $color_white;
 
 	&:hover {
-		color: $color_currious-blue-darker;
-		background: $color_shark;
-		box-shadow: 0 0 0 2px $color_currious-blue-darker inset;
+		@extend %jv-color-secondary;
+		@extend %jv-bg-color-primary-inverse;
+		box-shadow: 0 0 0 2px $color_secondary inset;
 	}
 }
 .bt-style36 {
 	width: 140px;
 	padding: 0;
-	box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
-	background: $color_shark;
+	box-shadow: 0 0 0 1px $color_secondary inset;
+	@extend %jv-bg-color-primary-inverse;
 
 	&:hover {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 	}
 	span {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 	}
 }
 .bt-style37:hover {
 	box-shadow: 0 0 0 1px $color_gray inset;
-	background: $color_shark;
+	@extend %jv-bg-color-primary-inverse;
 	color: $color_white;
 }
 .bt-style38 {
-	box-shadow: 0 0 0 1px #FFD21D inset;
-	color: $color_shark;
-	background: #FFD21D;
+	box-shadow: 0 0 0 1px $color_secondary-inverse inset;
+	@extend %jv-color-primary-inverse;
+	@extend %jv-bg-color-secondary-inverse;
 
 	&:hover {
-		// box-shadow: 0 0 0 1px #FFD21D inset;
-		color: #FFD21D;
-		background: $color_shark;
+		
+		@extend %jv-color-secondary-inverse;
+		@extend %jv-bg-color-primary-inverse;
 	}
 }
 .bt-style39:hover {
 	box-shadow: 0 0 0 2px $color_white inset;
-	background: $color_shark;
+	@extend %jv-bg-color-primary-inverse;
 }
 .bt-style40 {
-	color: $color_currious-blue-darker;
-	background: $color_shark;
-	box-shadow: 0 0 0 2px $color_currious-blue-darker inset;
+	@extend %jv-color-secondary;
+	@extend %jv-bg-color-primary-inverse;
+	box-shadow: 0 0 0 2px $color_secondary inset;
 
 	&:hover {
 		color: $color_white;
@@ -420,7 +419,7 @@
 //btn link
 .link-black {
 	background: transparent none repeat scroll 0 0;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 	margin-right: 40px;
 	padding: 0;
 	position: relative;
@@ -435,7 +434,7 @@
 	border: 1px solid transparent;
 
 	&:hover {
-		border-color: $color_shark;
+		@extend %jv-border-color-primary-inverse;
 		text-decoration: none;
 	}
 }
@@ -444,7 +443,7 @@
 	border-bottom: 3px double transparent;
 
 	&:hover {
-		border-bottom-color: $color_shark;
+		border-bottom-color:  $color_shark;
 		text-decoration: none;
 		color: $color_dove-gray;
 	}
@@ -454,8 +453,8 @@
 	border-top: 1px solid transparent;
 
 	&:hover {
-		border-bottom-color: $color_shark;
-		border-top-color: $color_shark;
+		border-bottom-color:  $color_shark;
+		border-top-color:  $color_shark;
 		text-decoration: none;
 	}
 }
@@ -501,11 +500,11 @@
 		left: 0;
 	}
 	span {
-		transform: translate(0, 0);
+		@extend %jv-transform-translate0-0;
 	}
 	&:hover {
 		span {
-			transform: translate(0, 100%);
+			@extend %jv-transform-translate0-100;
 		}
 		&:before {
 			top: 0;
@@ -520,11 +519,11 @@
 
 	@extend .jv-btn-icon, .jv-btn-cart;
 	span {
-		transform: translate(0, 100%);
+		@extend %jv-transform-translate0-100;
 	}
 	&:hover {
 		span {
-			transform: translate(0, 0);
+			@extend %jv-transform-translate0-0;
 		}
 		&:before {
 			top: -100%;
@@ -539,19 +538,19 @@
 	@extend .jv-btn-icon, .jv-btn-cart;
 
 	&:before {
-		color: $color_golden-tainoi;
+		@extend %jv-color-primary;
 		top: -100%;
 	}
 	&:after {
 		bottom: 100%;
-		background: $color_golden-tainoi none repeat scroll 0 0;
+		@extend %jv-bg-color-primary; 
 	}
 	span {
-		transform: translate(0, 0);
+		@extend %jv-transform-translate0-0;
 	}
 	&:hover {
 		span {
-			transform: translate(0, 100%);
+			@extend %jv-transform-translate0-100;
 		}
 		&:before {
 			top: 0;
@@ -566,17 +565,17 @@
 	@extend .jv-btn-icon, .jv-btn-cart;
 
 	&:before {
-		color: $color_golden-tainoi;
+		@extend %jv-color-primary;
 	}
 	&:after {
-		background: $color_golden-tainoi none repeat scroll 0 0;
+		@extend %jv-bg-color-primary; 
 	}
 	span {
-		transform: translate(0, 100%);
+		@extend %jv-transform-translate0-100;
 	}
 	&:hover {
 		span {
-			transform: translate(0, 0);
+			@extend %jv-transform-translate0-0;
 		}
 		&:before {
 			top: -100%;
@@ -588,7 +587,7 @@
 }
 
 .link-style5:hover {
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 }
 .link-style6 {
 	padding: 0 30px;
@@ -608,7 +607,7 @@
 	&:hover {
 		border-bottom-color: transparent;
 		text-decoration: underline;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 .link-style8 {
@@ -625,10 +624,10 @@
 
 
 .link-style10 {
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 
 	&:hover {
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 }
 //btn link color
@@ -651,16 +650,19 @@
 	border: 1px solid transparent;
 
 	&:hover {
-		border: 1px solid $color_golden-tainoi;
+		border: 1px solid $color-primary;;
 		text-decoration: none;
-		color: $color_golden-tainoi;
+		@extend %jv-color-primary;
 	}
 }
 .link-style16 {
 	padding: 0 30px;
-	border: 1px solid $color_golden-tainoi;
+	
+	border-style: solid;
+	border-width: 1px;
 	text-decoration: none;
-	color: $color_golden-tainoi;
+	@extend %jv-border-color-primary; 
+	@extend %jv-color-primary;
 
 	&:hover {
 		border-color: transparent;
@@ -674,13 +676,13 @@
 	&:hover {
 		border-bottom-color: $color_dove-gray;
 		text-decoration: none;
-		color: $color_golden-tainoi;
+		@extend %jv-color-primary;
 	}
 }
 .link-style17 {
 	border-bottom: 3px double $color_dove-gray;
-	color: $color_golden-tainoi;
 	text-decoration: none;
+	@extend %jv-color-primary;
 
 	&:hover {
 		border-bottom-color: transparent;
@@ -693,17 +695,21 @@
 	border-top: 1px solid transparent;
 
 	&:hover {
-		border-bottom-color: $color_currious-blue-darker;
-		border-top-color: $color_currious-blue-darker;
+		border-bottom-color:   $color_secondary;
+		border-top-color:   $color_secondary;
 		text-decoration: none;
-		color: $color_currious-blue-darker;
+		@extend %jv-color-secondary;
 	}
 }
 .link-style18 {
 	text-decoration: none;
-	border-bottom: 1px solid $color_currious-blue-darker;
-	border-top: 1px solid $color_currious-blue-darker;
-	color: $color_currious-blue-darker;
+	border-bottom: 1px solid $color_secondary;
+	border-top: 1px solid $color_secondary;
+	@extend %jv-color-secondary;
+
+	&.link-white{
+		@extend %jv-color-secondary;
+	}
 
 	&:hover {
 		border-bottom-color: transparent;
@@ -713,10 +719,10 @@
 	}
 }
 .link-style15:hover {
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 }
 .link-style20 {
-	color: $color_golden-tainoi;
+	@extend %jv-color-primary;
 
 	&:hover {
 		color: $color_white;
@@ -735,12 +741,12 @@
 		display: inline-block;
 		margin: 0 15px;
 		vertical-align: middle;
+		overflow: hidden;
+		position: relative;
 		@extend %jv-border-radius-50;
 		@extend %text-center;
 		@extend %text-up;
-		position: relative;
 		@extend %jv-transition-easeout;
-		overflow: hidden;
 
 		span {
 			bottom: 0;
@@ -793,20 +799,20 @@
 
 .btn-circle-box1 {
 	a {
-		background: #2FA0D8;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 
 		&:hover {
-			background-color: #FFD21D;
+			@extend %jv-bg-color-secondary-inverse;
 		}
 	}
 
 	.link-add-cart {
-		background-color: #2FA0D8 ; 
+		background-color: $color_secondary ; 
 		@extend .jv-link-add-cart-img;
 	}
 	.link-wishlist:hover span {
-		transform: scale(2);
+		@extend %jv-transform-scale-2;
 	}
 	.link-compare:hover {
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
@@ -815,7 +821,7 @@
 
 .btn-circle-box2 {
 	a {
-		background: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 		color: $color_white;
 	}
 	.link-add-cart {
@@ -823,7 +829,7 @@
 		height: 56px;
 
 		&:before {
-			background: $color_golden-tainoi none repeat scroll 0 0;
+			@extend %jv-bg-color-primary;
 			@extend %jv-border-radius-50;
 			bottom: 0;
 			left: 0;
@@ -836,32 +842,30 @@
 			box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
-	.link-wishlist:hover span {
-		transform: scale(2);
-	}
+	.link-wishlist:hover span,
 	.link-compare:hover span {
-		transform: scale(2);
+		@extend %jv-transform-scale-2;
 	}
 }
 
 
 .btn-circle-box11 {
 	a {
-		background: #FFD21D;
+		@extend %jv-bg-color-secondary-inverse;
 		color: $color_white;
 
 		&:hover {
-			background-color: #2FA0D8;
+			@extend %jv-bg-color-secondary;
 		}
 	}
 
 
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: #FFD21D ;
+		@extend %jv-bg-color-secondary-inverse;
 	}
 	.link-wishlist:hover span {
-		transform: scale(2);
+		@extend %jv-transform-scale-2;
 	}
 	.link-compare:hover {
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
@@ -870,7 +874,7 @@
 
 .btn-circle-box22 {
 	a {
-		background: $color_golden-tainoi;
+		@extend %jv-bg-color-primary;
 		color: $color_white;
 	}
 	.link-add-cart {
@@ -878,7 +882,7 @@
 		height: 56px;
 
 		@include p-el(before, 48px, 48px) {
-			background: $color_golden-tainoi none repeat scroll 0 0;
+			@extend %jv-bg-color-primary;
 			@extend %jv-border-radius-50;
 			bottom: 0;
 			left: 0;
@@ -891,9 +895,7 @@
 			box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
-	.link-wishlist:hover {
-		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
-	}
+	.link-wishlist:hover,
 	.link-compare:hover {
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
 	}
@@ -901,7 +903,7 @@
 
 .btn-circle-box3 {
 	.link-quick-view {
-		background: #2FA0D8;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 
 		&:hover {
@@ -916,7 +918,7 @@
 		color: $color_white;
 
 		&:hover {
-			background: #2FA0D8;
+			@extend %jv-bg-color-secondary;
 		}
 	}
 }
@@ -924,26 +926,26 @@
 .btn-circle-box4 {
 	a {
 		background: $color_white;
-		color: #2FA0D8;
+		@extend %jv-color-secondary;
 		box-shadow: 0 0 0 1px $color_mercury inset;
 		margin: 0 5px;
 	}
 
 	.link-add-cart {
+		@extend %jv-bg-color-secondary;
 		@extend .jv-link-add-cart-img;
-		background-color: $color_currious-blue-darker ;
 		box-shadow: none;
 
 		&:hover {
-			background-color: $color_shark;
+			@extend %jv-bg-color-primary-inverse;
 		}
 	}
 	.link-wishlist:hover {
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+		box-shadow: 0 0 0 1px $color_secondary inset;
 	}
 	.link-compare:hover {
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
-		background-color: $color_currious-blue-darker;
+		box-shadow: 0 0 0 1px $color_secondary inset;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 	}
 }
@@ -958,27 +960,27 @@
 		background-color: $color_shark ;
 
 		&:hover {
-			background-color: $color_currious-blue-darker;
+			@extend %jv-bg-color-secondary;
 		}
 	}
 
 	.link-wishlist {
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+		box-shadow: 0 0 0 1px $color_secondary inset;
 		background: $color_white;
-		color: $color_currious-blue-darker;
+		@extend %jv-color-secondary;
 
 		&:hover {
 			box-shadow: 0 0 0 1px $color_mercury inset;
 		}
 	}
 	.link-compare {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 
 		&:hover {
 			box-shadow: 0 0 0 1px $color_mercury inset;
 			background: $color_white;
-			color: $color_currious-blue-darker;
+			@extend %jv-color-secondary;
 		}
 	}
 }
@@ -994,8 +996,8 @@
 
 .btn-circle-box7 {
 	.link-quick-view {
-		background: #e9e9e9;
-		color: $color_shark;
+		background: $color_mercury;
+		@extend %jv-color-primary-inverse;
 		border: 3px solid transparent;
 
 		&:hover {
@@ -1005,8 +1007,8 @@
 }
 
 .btn-circle-box77 .link-quick-view {
-	background: #e9e9e9;
-	color: $color_shark;
+	background: $color_mercury;
+	@extend %jv-color-primary-inverse;
 	border: 3px solid $color_black;
 
 	&:hover {
@@ -1020,7 +1022,7 @@
 
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: $color_currious-blue-darker ;
+		@extend %jv-bg-color-secondary;
 
 		@include p-el(before, 38px, 38px) {
 			top: 0;
@@ -1033,7 +1035,7 @@
 			@extend %jv-transition-easeout;
 		}
 		&:hover {
-			background-color: #FFD21D;
+			@extend %jv-bg-color-secondary-inverse;
 
 			&:before {
 				border: 1px solid transparent;
@@ -1044,29 +1046,29 @@
 	}
 	.link-wishlist {
 		background: $color_white;
-		box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
-		color: $color_currious-blue-darker;
+		box-shadow: 0 0 0 1px $color_secondary inset;
+		@extend %jv-color-secondary;
 
 		&:hover {
-			background: #FFD21D;
+			@extend %jv-bg-color-secondary-inverse;
 			color: $color_white;
 			box-shadow: 0 0 0 1px transparent inset;
 
 			span {
-				transform: scale(2);
+				@extend %jv-transform-scale-2;
 			}
 		}
 	}
 	.link-compare {
-		background: $color_currious-blue-darker;
+		@extend %jv-bg-color-secondary;
 		color: $color_white;
 
 		&:hover {
-			background: #FFD21D;
-			color: $color_shark;
+			@extend %jv-bg-color-secondary-inverse;
+			@extend %jv-color-primary-inverse;
 
 			span {
-				transform: rotate(225deg);
+				@extend %jv-transform-rotate-225;
 			}
 		}
 	}
@@ -1075,7 +1077,7 @@
 .btn-circle-box55 {
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: #FFD21D ;
+		@extend %jv-bg-color-secondary-inverse;
 
 		@include p-el(before, 48px, 48px) {
 			top: 0;
@@ -1088,7 +1090,7 @@
 			@extend %jv-transition-easeout;
 		}
 		&:hover {
-			background-color: $color_currious-blue-darker;
+			@extend %jv-bg-color-secondary;
 
 			&:before {
 				border: 1px solid $color_shark;
@@ -1098,30 +1100,30 @@
 		}
 	}
 	.link-wishlist {
-		background: #FFD21D;
 		color: $color_white;
 		box-shadow: 0 0 0 1px transparent inset;
+		@extend %jv-bg-color-secondary-inverse;
 
 		&:hover {
 			background: $color_white;
-			color: $color_currious-blue-darker;
-			box-shadow: 0 0 0 1px $color_currious-blue-darker inset;
+			box-shadow: 0 0 0 1px $color_secondary inset;
+			@extend %jv-color-secondary;
 
 			span {
-				transform: scale(2);
+				@extend %jv-transform-scale-2;
 			}
 		}
 	}
 	.link-compare {
-		background: #FFD21D;
-		color: $color_shark;
+		@extend %jv-bg-color-secondary-inverse;
+		@extend %jv-color-primary-inverse;
 
 		&:hover {
-			background: $color_currious-blue-darker;
+			@extend %jv-bg-color-secondary;
 			color: $color_white;
 
 			span {
-				transform: rotate(225deg);
+				@extend %jv-transform-rotate-225;
 			}
 		}
 	}
@@ -1133,7 +1135,7 @@
 	}
 	.link-wishlist:hover {
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 	}
 	.link-add-cart {
 		width: 56px;
@@ -1155,7 +1157,7 @@
 		}
 		&:hover {
 			background: $color_white;
-			color: $color_shark;
+			@extend %jv-color-primary-inverse;
 
 			&:before {
 				border: 3px solid $color_shark;
@@ -1172,7 +1174,7 @@
 .btn-circle-box66 {
 	.link-wishlist {
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 
 		&:hover {
 			background: transparent;
@@ -1183,7 +1185,7 @@
 		width: 56px;
 		height: 56px;
 		background: $color_white;
-		color: $color_shark;
+		@extend %jv-color-primary-inverse;
 
 		&:before {
 			content: "";
@@ -1211,11 +1213,11 @@
 		}
 	}
 	.link-compare {
-		transform: scale(2);
+		@extend %jv-transform-scale-2;
 		color: $color_white;
 
 		&:hover {
-			transform: rotate(225deg);
+			@extend %jv-transform-rotate-225;
 		}
 	}
 }
@@ -1305,7 +1307,7 @@
 	background:$color_bright-sun;
 }
 .btn-link-default.btn-link-loadmore {
-    background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
     border-radius: 4px;
     display: block;
     margin: 30px auto auto;
@@ -1315,7 +1317,7 @@
 
 //banners
 .btn-box-banner {
-  background: $color_currious-blue-darker none repeat scroll 0 0;
+  @extend %jv-bg-color-secondary;
   border-radius: 4px;
   color: $color_white;
   display: inline-block;
@@ -1333,7 +1335,7 @@
 }
 
 .btn-link-hidden {
-	background: $color_currious-blue-darker none repeat scroll 0 0;
+	@extend %jv-bg-color-secondary;
 	border-radius: 6px;
 	color: $color_white;
 	display: inline-block;

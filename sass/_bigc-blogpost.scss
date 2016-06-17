@@ -25,7 +25,9 @@
       position: relative;
 
       &.active {
-        border: 1px solid $color_golden-tainoi;
+         border-width: 1px;
+        border-style: solid;
+        @extend %jv-border-color-primary;
       }
       &:before {
         position: absolute;
@@ -39,7 +41,9 @@
         opacity: 0;
       }
       &:hover {
-        border: 1px solid $color_golden-tainoi;
+         border-width: 1px;
+        border-style: solid;
+        @extend %jv-border-color-primary;
 
         &:before {
           opacity: 1;
@@ -66,7 +70,7 @@
       margin-top: -15px;
 
       &:hover {
-        color: $color_golden-tainoi;
+       @extend %jv-color-primary;
       }
     }
     .bx-prev {
@@ -123,7 +127,11 @@
 						Post Format Image
 ********************************************************************/
 .title-post-leading {
-    border-bottom: 2px solid $color_golden-tainoi;
+    
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      @extend %jv-border-color-primary;
+
     font-size: 16px;
     margin-bottom: 22px;
     padding-bottom: 17px;
@@ -138,7 +146,9 @@
 }
 .post-banner-image {
     background: $color_white none repeat scroll 0 0;
-    border: 2px solid $color_golden-tainoi;
+     border-bottom-style: solid;
+      border-bottom-width: 2px;
+      @extend %jv-border-color-primary;
     margin-bottom: 30px;
     padding: 15px;
 }
@@ -146,7 +156,7 @@
     position: relative;
 }
 .post-banner-text {
-    background: $color_golden-tainoi none repeat scroll 0 0;
+    @extend %jv-bg-color-primary; 
     bottom: 0;
     color: $color_white;
     left: 0;

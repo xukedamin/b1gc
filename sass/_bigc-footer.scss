@@ -260,11 +260,11 @@
     }
 
     input[type="submit"] {
-      background: $color_golden-tainoi;
+      @extend %jv-bg-color-primary;;
 
       &:hover {
         background: $color_white none repeat scroll 0 0;
-        box-shadow: 0 0 0 2px $color_golden-tainoi inset;
+        box-shadow: 0 0 0 2px $color_primary inset;
         color: $color_shark;
       }
     }
@@ -309,7 +309,7 @@
   @extend %jv-transition-easeout;
   width: 50px;
   z-index: 1040;
-  color: $color_primary;
+ @extend %jv-color-primary;
 }
 
 #back-top.show {

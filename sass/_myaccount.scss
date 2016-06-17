@@ -52,8 +52,8 @@
   position: relative;
 }
 .page-login-wrapper .page-login .remember .checkbox [type=checkbox]:checked + span:after {
-  color: $colorPrimary;
-  font-family: "wolverine";
+ @extend %jv-color-primary;
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -98,7 +98,7 @@
 
 .page-login-wrapper .page-login form p {
   margin-bottom: 30px;
-  // font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
+  // font-family: {% if settings.font_use_other == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
 }
 .page-login-wrapper .page-login form .infor {
   position: relative;
@@ -135,7 +135,7 @@
   left: 0;
 }
 .page-login-wrapper .page-login form p {
-  color: $colorPrimary;
+ @extend %jv-color-primary;
 }
 
 
@@ -210,12 +210,12 @@
 }
 .page-register form span {
   font-style: italic;
-  // font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
+  // font-family: {% if settings.font_use_other == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
   color: $color_dusty-gray;
   display: block;
   margin-bottom: 55px;
 }
 .page-register form span a {
-  color: $colorPrimary;
+ @extend %jv-color-primary;
   text-decoration: underline;
 }

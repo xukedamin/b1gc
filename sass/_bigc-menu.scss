@@ -57,7 +57,7 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
 
     [class*="active"], &:hover {
       > a {
-        color: $colorPrimary;
+       @extend %jv-color-primary;
       }
     }
     &.sub-menu {
@@ -112,7 +112,7 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
         &[class*="active"], 
         &:hover {
           > a {
-            // color: $colorPrimary;
+            //@extend %jv-color-primary;
           }
         }
         &:hover > ul {
@@ -216,7 +216,7 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
         @include prefix(box-shadow, none);
       }
       &:hover > a:after {
-        border-color: $colorPrimary;
+        border-color: $color_primary;
       }
     }
   }

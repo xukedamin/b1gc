@@ -627,7 +627,7 @@
 
     &:hover, 
     &.active {
-      background: $color_golden-tainoi none repeat scroll 0 0;
+      @extend %jv-bg-color-primary;
       color: $color_white;
     }
   }
@@ -689,7 +689,7 @@
       color: $color_dove-gray;
 
       &:hover {
-        color: $color_golden-tainoi;
+       @extend %jv-color-primary;
       }
     }
   }
@@ -716,7 +716,7 @@
         top: 2px;
       }
       &:hover {
-        color: $color_golden-tainoi;
+       @extend %jv-color-primary;
       }
     }
   }
@@ -759,7 +759,9 @@
     padding: 8px 18px;
 
     &:hover {
-      border: 1px solid $color_golden-tainoi;
+      border-width: 1px;
+      border-style: solid;
+      @extend %jv-border-color-primary;
     }
   }
 }

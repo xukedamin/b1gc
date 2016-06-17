@@ -228,7 +228,7 @@
 
 .bg-dark { background: $color_shark; }
 .bg-gray { background-color: $color_mercury; }
-.bg-yellow { background: $color_golden-tainoi; }
+.bg-yellow {@extend %jv-bg-color-primary}
 .bg-white { background: $color_white; }
 .bg-darkblue { background: $color_currious-blue-darker; }
 
@@ -241,11 +241,11 @@
 
 .border-dark { border: 1px solid $color_shark; }
 .border-gray { border: 1px solid $color_mercury; }
-.border-yellow { border: 1px solid $color_golden-tainoi; }
+.border-yellow { border-width: 1px ; border-style:solid; @extend %jv-border-color-primary; }
 .border-darkblue { border: 1px solid $color_currious-blue-darker; }
 
 .color-dark { color: $color_shark; }
-.color-yellow { color: $color_golden-tainoi; }
+.color-yellow {@extend %jv-color-primary; }
 .color-white { color: $color_white; }
 .color-darkblue { color: $color_currious-blue-darker; }
 

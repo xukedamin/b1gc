@@ -32,7 +32,7 @@
   }
   &.item-message-warning {
     background: $color_white none repeat scroll 0 0;
-    color: $color_golden-tainoi;
+   @extend %jv-color-primary;
   }
 }
 

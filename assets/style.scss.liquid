@@ -33,18 +33,13 @@ $preLarge: $large - $viewportIncrement;
 ==============================================================================*/
 
 // BigC Theme Colors
-$colorPrimary: {{ settings.color_primary }};
-$colorSecondary: {{ settings.color_secondary }};
-
-.latest-post-content:before,
-.content-catelog:before {
-  background-color: rgba($color_primary,0.7);
-}
+$color_primary: {{ settings.color_primary }};
+$color_secondary: {{ settings.color_secondary }};
 
 
 // Text link colors
-$colorLink: $colorPrimary;
-$colorLinkHover: lighten($colorPrimary, 15%);
+$colorLink: $color_primary;
+$colorLinkHover: lighten($color_primary, 15%);
 
 // General colors
 $colorBody: {{ settings.color_body_bg }};
@@ -77,22 +72,9 @@ $radius: 2px;
 $passwordPageUseBgImage: true;
 
 .color-main {
-  color: $colorPrimary;
+  color: $color_primary;
 }
 
-$row-about-bg: {{ settings.about_about_bg }};
-$row-counter-bg: {{ settings.about_counter_bg }};
-$row-partner-bg: {{ settings.about_partner_bg }};
-$home3_partner_bg: {{ settings.home3_partner_bg }};
-
-$row-home2-featured-bg: {{ settings.home2_featured_background }};
-
-
-
-.home2_featured_products { background-color: $row-home2-featured-bg; }
-.page-aboutus .logo-partner,
-.page-home-home5 .logo-partner{     background-color: $row-partner-bg;}
-.page-home-home3 .logo-partner {     background-color: $home3_partner_bg;}
 
 
 /*================ Typography ================*/
@@ -100,34 +82,26 @@ $row-home2-featured-bg: {{ settings.home2_featured_background }};
 /*============================================================================
 Get font-families from theme settings
 ==============================================================================*/
-{% if settings.type_base_family contains 'Google' %}
-  {% assign type_base_parts = settings.type_base_family | split: '_' %}
+{% if settings.font_type_base_family contains 'Google' %}
+  {% assign type_base_parts = settings.font_type_base_family | split: '_' %}
   {% assign type_base_name = type_base_parts[1] %}
   
   {% capture base_family %}"{{ type_base_name | split: ':' | first | replace: '+', ' ' }}"{% if type_base_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
 {% else %}
-  {% assign base_family = settings.type_base_family %}
+  {% assign base_family = settings.font_type_base_family %}
 {% endif %}
 
-{% if settings.type_header_family contains 'Google' %}
-  {% assign type_header_parts = settings.type_header_family | split: '_' %}
+{% if settings.font_type_heading_family contains 'Google' %}
+  {% assign type_header_parts = settings.font_type_heading_family | split: '_' %}
   {% assign type_header_name = type_header_parts[1] %}
   {% capture header_family %}"{{ type_header_name | split: ':' | first | replace: '+', ' ' }}"{% if type_header_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
   {% assign header_weight = type_header_parts[2] %}
 {% else %}
-  {% assign header_family = settings.type_header_family %}
+  {% assign header_family = settings.font_type_heading_family %}
   {% assign header_weight = 700 %}
 {% endif %}
 
-{% if settings.type_accent_family contains 'Google' %}
-  {% assign type_accent_parts = settings.type_accent_family | split: '_' %}
-  {% assign type_accent_name = type_accent_parts[1] %}
-  {% capture accent_family %}"{{ type_accent_name | split: ':' | first | replace: '+', ' ' }}"{% if type_accent_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-  {% assign accent_weight = type_accent_parts[2] %}
-{% else %}
-  {% assign accent_family = settings.type_accent_family %}
-  {% assign accent_weight = 500 %}
-{% endif %}
+
 
 // Header Font
 $headerFontStack: {{ header_family }};
@@ -135,11 +109,11 @@ $headerFontWeight: {{ header_weight }};
 
 // Body Font
 $bodyFontStack: {{ base_family }};
-$baseFontSize: {{ settings.type_base_size }};
+$baseFontSize: {{ settings.font_type_base_size }};
 
-// Navigation and Button Font
-$accentFontStackBold: {{ accent_family }};
-$accentFontWeight: {{ accent_weight }};
+body{
+  font-familly : base_family;
+}
 
 
 /*============================================================================
@@ -176,23 +150,21 @@ $accentFontWeight: {{ accent_weight }};
 .jv-homepage-6  .banner-slider .item { height: {{ settings.slider6_height }}px !important; }
 .jv-homepage-7  .banner-slider .item { height: {{ settings.slider7_height }}px !important; }
 
-.product-style-detail .addToCartForm.process .addToCart  i:before {
-    color: $colorPrimary;
-}
-
-.item .inner {
-    display: block;
-}
 
 
-.page-login-wrapper .page-login form p {
+%jv-font-familly-other{
   font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %}  {{ settings.type_orther_family }} {% endif %};
 }
-.page-register form label {
+
+%jv-font-familly-heading{
   font-family: {% if settings.type_heading_use == '1'%} '{{ settings.type_heading_google }}', sans-serif; {% else %}  {{ settings.type_heading_family }} {% endif %};
 }
 
-.page-register form span {
-  font-family: {% if settings.type_orther_use == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %}  {{ settings.type_orther_family }} {% endif %};
-}
 
+.page-login-wrapper .page-login form p,
+.page-register form span {
+  @extend %jv-font-familly-other;
+}
+.page-register form label {
+  @extend %jv-font-familly-heading;
+}

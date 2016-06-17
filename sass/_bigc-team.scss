@@ -152,7 +152,7 @@
     @extend %jv-border-radius-50;
 
     &:hover {
-      background: $color_golden-tainoi;
+      @extend %jv-bg-color-primary;;
       color: $color_white;
     }
     i {
@@ -174,7 +174,7 @@
     font-size: 16px;
 
     &:hover {
-      color: $color_golden-tainoi;
+     @extend %jv-color-primary;
     }
   }
   span {

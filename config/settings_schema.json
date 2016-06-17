@@ -659,7 +659,7 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary content",
-        "default": "#204a80",
+        "default": "#fec64d",
         "info": "Text links and primary buttons"
       },
       {
@@ -720,13 +720,12 @@
     "settings": [
       {
         "type": "header",
-        "content": "Base styles",
-        "info": "This font is used for Body"
+        "content": "1. Body Base styles"
       },
       {
         "type": "select",
-        "id": "type_base_use",
-        "label": "Base Use?",
+        "id": "font_type_base_use",
+        "label": "Font base use",
         "options": [
           {
             "value": "1",
@@ -741,20 +740,20 @@
       },
       {
         "type": "text",
-        "id": "type_base_google",
-        "label": "Google Web Fonts",
-        "default": "Raleway"
+        "id": "font_type_base_google",
+        "label": "Google Web Fonts - Name",
+        "default": "Open Sans"
       },
       {
         "type": "text",
-        "id": "type_base_google_style",
-        "label": "Google Web Fonts Style",
-        "default": "100,200,300,400,500,600,700,800,900",
+        "id": "font_type_base_google_style",
+        "label": "Google Web Fonts - Style",
+        "default": "300,400,700",
         "info": "Example : 100,200,300"
       },
       {
         "type": "select",
-        "id": "type_base_family",
+        "id": "font_type_base_family",
         "label": "Font family",
         "options": [
           {
@@ -821,7 +820,7 @@
       },
       {
         "type": "select",
-        "id": "type_base_size",
+        "id": "font_type_base_size",
         "label": "Font size",
         "options": [
           {
@@ -850,7 +849,7 @@
         "type": "text",
         "id": "font_weight_body",
         "label": "Font weight",
-        "default": "400"
+        "default": "300"
       },
       {
         "type": "text",
@@ -905,7 +904,7 @@
       },
       {
         "type": "select",
-        "id": "type_heading_use",
+        "id": "font_type_heading_use",
         "label": "Heading Use?",
         "options": [
           {
@@ -921,20 +920,20 @@
       },
       {
         "type": "text",
-        "id": "type_heading_google",
+        "id": "font_type_heading_google",
         "label": "Google Web Fonts",
         "default": "Montserrat"
       },
       {
         "type": "text",
-        "id": "type_heading_google_style",
+        "id": "font_type_heading_google_style",
         "label": "Google Web Fonts Style",
         "default": "700,400",
         "info": "Example : 100,200,300"
       },
       {
         "type": "select",
-        "id": "type_heading_family",
+        "id": "font_type_heading_family",
         "label": "Font family",
         "options": [
           {
@@ -1001,13 +1000,13 @@
       },
       {
         "type": "header",
-        "content": "Orther styles",
+        "content": "Other styles",
         "info": "This font is used for: italic text, quote, notes..."
       },
       {
         "type": "select",
-        "id": "type_orther_use",
-        "label": "Orther Use?",
+        "id": "font_use_other",
+        "label": "Use Other fonts?",
         "options": [
           {
             "value": "1",
@@ -1022,20 +1021,20 @@
       },
       {
         "type": "text",
-        "id": "type_orther_google",
+        "id": "font_type_orther_google",
         "label": "Google Web Fonts",
         "default": "Playfair Display"
       },
       {
         "type": "text",
-        "id": "type_orther_google_style",
+        "id": "font_type_orther_google_style",
         "label": "Google Web Fonts Style",
         "default": "400,400italic,700,700italic,900,900italic",
         "info": "Example : 100,200,300"
       },
       {
         "type": "select",
-        "id": "type_orther_family",
+        "id": "font_type_orther_family",
         "label": "Font family",
         "options": [
           {
@@ -5353,207 +5352,8 @@
       {
         "type": "header",
         "content": "Block Introduce"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_introduce_enable",
-        "label": "Show Introduce ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "about_introduce_text_1",
-        "label": "Text 1"
-      },
-      {
-        "type": "text",
-        "id": "about_introduce_text_2",
-        "label": "Text 2"
-      },
-      {
-        "type": "header",
-        "content": "Block About Us"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_about_enable",
-        "label": "Show About ?",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "about_about_bg",
-        "label": "Background Color",
-        "default": "#f4f4f4"
-      },
-      {
-        "type": "text",
-        "id": "about_about_title_1",
-        "label": "Title column 1"
-      },
-      {
-        "type": "textarea",
-        "id": "about_about_text_1",
-        "label": "Text column 1"
-      },
-      {
-        "type": "text",
-        "id": "about_about_name_1",
-        "label": "Name column 1"
-      },
-      {
-        "type": "text",
-        "id": "about_about_title_2",
-        "label": "Title column 2"
-      },
-      {
-        "type": "textarea",
-        "id": "about_about_text_2",
-        "label": "Text column 2"
-      },
-      {
-        "type": "header",
-        "content": "Block Services"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_services_enable",
-        "label": "Show Services ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "about_services_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "about_services_text",
-        "label": "Text"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_services_img",
-        "label": "Show images ?",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "our-service-1.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_services_tabs",
-        "label": "Show Tabs content  ?",
-        "default": true,
-        "info": "The Tabs Content configuration stays at tabs 'Material Tabs content' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Counter"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_counter_enable",
-        "label": "Show Counter ?",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "about_counter_bg",
-        "label": "Background Color",
-        "default": "#f4f4f4"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_counter",
-        "label": "Show Counter  ?",
-        "default": true,
-        "info": "The Counter configuration stays at tabs 'Material Counter' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Our Team"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_team_enable",
-        "label": "Show Our Team ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "about_team_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "about_team_text",
-        "label": "Text"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_team",
-        "label": "Show Team  ?",
-        "default": true,
-        "info": "The Our Team configuration stays at tabs 'Material Team' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Testimonials"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_testimonials_enable",
-        "label": "Show Testimonials ?",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "testimonials.jpg",
-        "label": "Background Image",
-        "info": "The Testimonials configuration stays at tabs 'Material Testimonials' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Price Table"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_pricetable_enable",
-        "label": "Show  Price Table ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "about_pricetable_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "about_pricetable_text",
-        "label": "Text"
-      },
-      {
-        "type": "checkbox",
-        "id": "about_pricetable",
-        "label": "Show Table  ?",
-        "default": true,
-        "info": "The Our Team configuration stays at tabs 'Material Team' below."
-      },
-      {
-        "type": "header",
-        "content": "Block Logo Partner"
-      },
-      {
-        "type": "color",
-        "id": "about_partner_bg",
-        "label": "Background Color",
-        "default": "#444444",
-        "info": "The Logo Partner configuration stays at tabs 'Material Logo Partner' below."
       }
-    ]
+      ]
   },
   {
     "name": " Page Contact",
