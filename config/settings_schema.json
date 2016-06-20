@@ -308,73 +308,73 @@
         "id": "mega_main_family",
         "label": "Font family",
         "options": [
-          {
-            "value": "'Open Sans', sans-serif",
+           {
+            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
             "label": "Open Sans",
             "group": "Sans-serif"
           },
           {
-            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
-            "label": "Avant Garde",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
-            "label": "Gill Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            "label": "Helvetica Neue",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "value": "Arial, Helvetica, sans-serif",
             "label": "Arial",
             "group": "Sans-serif"
           },
           {
-            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
-            "label": "Candara",
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
             "group": "Sans-serif"
           },
           {
-            "value": "Geneva, Tahoma, Verdana, sans-serif",
-            "label": "Geneva",
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
             "group": "Sans-serif"
           },
           {
-            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
-            "label": "Big Calson",
-            "group": "Serif"
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
           },
           {
-            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
-            "label": "Calisto MT",
-            "group": "Serif"
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
           },
           {
-            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
-            "label": "Baskerville",
-            "group": "Serif"
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
           },
           {
-            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Garamond",
-            "group": "Serif"
-          },
-          {
-            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "value": "Georgia, serif",
             "label": "Georgia",
             "group": "Serif"
           },
           {
-            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
             "label": "Times New Roman",
             "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
           }
         ],
-        "default": "'Open Sans', sans-serif"
+        "default": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif"
       },
         {
         "type": "text",
@@ -382,7 +382,7 @@
         "label": "Mega background image"
         
       },
-      {
+     {
         "type": "color",
         "id": "mega_main_color",
         "label": "Color item",
@@ -400,6 +400,20 @@
         "default": "#fff",
         "info": "Background Submenu"
       },
+        {
+        "type": "color",
+        "id": "mega_sub_color_header",
+        "label": "Header Color  ",
+        "default": "#666",
+        "info": "Header Color "
+      },
+       {
+        "type": "color",
+        "id": "mega_sub_color",
+        "label": "Color item",
+        "default": "#ccc",
+        "info": "Color item sub menu"
+      },
       {
         "type": "color",
         "id": "mega_sub_boder_color",
@@ -407,6 +421,7 @@
         "default": "#e5e5e5",
         "info": "Border Submenu"
       },
+    
       {
         "type": "select",
         "id": "mega_sub_size_header",
@@ -443,53 +458,11 @@
         ],
         "default": "14"
       },
-      {
-        "type": "select",
-        "id": "mega_sub_weight_header",
-        "label": "Header Font weight  ",
-        "options": [
-          {
-            "value": "100",
-            "label": "100"
-          },
-          {
-            "value": "200",
-            "label": "200"
-          },
-          {
-            "value": "300",
-            "label": "300"
-          },
-          {
-            "value": "400",
-            "label": "400"
-          },
-          {
-            "value": "500",
-            "label": "500"
-          },
-          {
-            "value": "600",
-            "label": "600"
-          },
-          {
-            "value": "700",
-            "label": "700"
-          }
-        ],
-        "default": "400"
-      },
-      {
-        "type": "color",
-        "id": "mega_sub_color_header",
-        "label": "Header Color  ",
-        "default": "#666",
-        "info": "Header Color "
-      },
+
       {
         "type": "select",
         "id": "mega_sub_size",
-        "label": "Font Size ",
+        "label": "Item Font Size ",
         "options": [
           {
             "value": "10",
@@ -576,75 +549,74 @@
             "group": "inherit"
           },
           {
-            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
-            "label": "Avant Garde",
+            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
+            "label": "Open Sans",
             "group": "Sans-serif"
           },
           {
-            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
-            "label": "Gill Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            "label": "Helvetica Neue",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "value": "Arial, Helvetica, sans-serif",
             "label": "Arial",
             "group": "Sans-serif"
           },
           {
-            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
-            "label": "Candara",
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
             "group": "Sans-serif"
           },
           {
-            "value": "Geneva, Tahoma, Verdana, sans-serif",
-            "label": "Geneva",
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
             "group": "Sans-serif"
           },
           {
-            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
-            "label": "Big Calson",
-            "group": "Serif"
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
           },
           {
-            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
-            "label": "Calisto MT",
-            "group": "Serif"
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
           },
           {
-            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
-            "label": "Baskerville",
-            "group": "Serif"
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
           },
           {
-            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Garamond",
-            "group": "Serif"
-          },
-          {
-            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "value": "Georgia, serif",
             "label": "Georgia",
             "group": "Serif"
           },
           {
-            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
             "label": "Times New Roman",
             "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
           }
         ],
         "default": "0"
-      },
-      {
-        "type": "color",
-        "id": "mega_sub_color",
-        "label": "Color item",
-        "default": "#ccc",
-        "info": "Color item main menu"
       }
+     
     ]
   },
  
@@ -658,60 +630,42 @@
       {
         "type": "color",
         "id": "color_primary",
-        "label": "Primary content",
+        "label": "Primary Color",
         "default": "#fec64d",
         "info": "Text links and primary buttons"
+      },
+       {
+        "type": "color",
+        "id": "color_primary_inverse",
+        "label": "Primary Color Inverse",
+        "default": "#1b1d1f",
+        "info": "Primary buttons hover"
       },
       {
         "type": "color",
         "id": "color_secondary",
-        "label": "Secondary content",
-        "default": "#333",
+        "label": "Secondary Color",
+        "default": "#1997d4",
         "info": "Secondary buttons"
       },
       {
         "type": "color",
+        "id": "color_secondary_inverse",
+        "label": "Secondary Color inverse",
+        "default": "#ffd21e",
+        "info": "Secondary button hover"
+      },
+      {
+        "type": "color",
         "id": "color_body_bg",
-        "label": "Body background",
+        "label": "Body background color",
         "default": "#fff"
       },
       {
         "type": "color",
         "id": "color_body_text",
-        "label": "Body text",
-        "default": "#555"
-      },
-      {
-        "type": "header",
-        "content": "Menu"
-      },
-      {
-        "type": "color",
-        "id": "color_nav_bg",
-        "label": "Main menu background",
-        "default": "#eee"
-      },
-      {
-        "type": "color",
-        "id": "color_nav_text",
-        "label": "Main menu items",
-        "default": "#333"
-      },
-      {
-        "type": "header",
-        "content": "Footer"
-      },
-      {
-        "type": "color",
-        "id": "color_footer_bg",
-        "label": "Background",
-        "default": "#f4f4f4"
-      },
-      {
-        "type": "color",
-        "id": "color_footer_text",
-        "label": "Text",
-        "default": "#555"
+        "label": "Body text color",
+        "default": "#1b1d1f"
       }
     ]
   },
@@ -724,99 +678,76 @@
       },
       {
         "type": "select",
-        "id": "font_type_base_use",
-        "label": "Font base use",
-        "options": [
-          {
-            "value": "1",
-            "label": "Google Web Fonts"
-          },
-          {
-            "value": "0",
-            "label": "Family Fonts"
-          }
-        ],
-        "default": "1"
-      },
-      {
-        "type": "text",
-        "id": "font_type_base_google",
-        "label": "Google Web Fonts - Name",
-        "default": "Open Sans"
-      },
-      {
-        "type": "text",
-        "id": "font_type_base_google_style",
-        "label": "Google Web Fonts - Style",
-        "default": "300,400,700",
-        "info": "Example : 100,200,300"
-      },
-      {
-        "type": "select",
         "id": "font_type_base_family",
         "label": "Font family",
         "options": [
-          {
-            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
-            "label": "Avant Garde",
+           {
+            "value": "'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif",
+            "label": "Open Sans",
             "group": "Sans-serif"
           },
           {
-            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
-            "label": "Gill Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            "label": "Helvetica Neue",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+            "value": "Arial, Helvetica, sans-serif",
             "label": "Arial",
             "group": "Sans-serif"
           },
           {
-            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
-            "label": "Candara",
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
             "group": "Sans-serif"
           },
           {
-            "value": "Geneva, Tahoma, Verdana, sans-serif",
-            "label": "Geneva",
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
             "group": "Sans-serif"
           },
           {
-            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
-            "label": "Big Calson",
-            "group": "Serif"
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
           },
           {
-            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
-            "label": "Calisto MT",
-            "group": "Serif"
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
           },
           {
-            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
-            "label": "Baskerville",
-            "group": "Serif"
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
           },
           {
-            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Garamond",
-            "group": "Serif"
-          },
-          {
-            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
+            "value": "Georgia, serif",
             "label": "Georgia",
             "group": "Serif"
           },
           {
-            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
             "label": "Times New Roman",
             "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
           }
         ]
+        
       },
       {
         "type": "select",
@@ -843,7 +774,8 @@
             "value": "16px",
             "label": "16px"
           }
-        ]
+        ],
+        "default": "13px"
       },
       {
         "type": "text",
@@ -855,7 +787,86 @@
         "type": "text",
         "id": "line_height_body",
         "label": "Line Height",
-        "default": "2.2"
+        "default": "1.4"
+      },
+
+      {
+        "type": "header",
+        "content": "Heading  styles",
+        "info": "This font is used for: Heading, Button, Menu..."
+      },
+    
+      {
+        "type": "select",
+        "id": "font_type_heading_family",
+        "label": "Font family",
+        "options": [
+           {
+            "value": "Open Sans,'Helvetica Neue',Helvetica,Arial,sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Georgia, serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
+          }
+        ]
       },
       {
         "type": "header",
@@ -864,243 +875,120 @@
       {
         "type": "text",
         "id": "size_heading_h1",
-        "label": "H1",
+        "label": "h1",
         "default": "36"
       },
       {
         "type": "text",
         "id": "size_heading_h2",
-        "label": "H2",
+        "label": "h2",
         "default": "28"
       },
       {
         "type": "text",
         "id": "size_heading_h3",
-        "label": "H3",
+        "label": "h3",
         "default": "21"
       },
       {
         "type": "text",
-        "id": "b_heading_h4",
-        "label": "H4",
+        "id": "size_heading_h4",
+        "label": "h4",
         "default": "18"
       },
       {
         "type": "text",
         "id": "size_heading_h5",
-        "label": "H5",
+        "label": "h5",
         "default": "14"
       },
       {
         "type": "text",
         "id": "size_heading_h6",
-        "label": "H6",
+        "label": "h6",
         "default": "11"
-      },
+      }
+    ]
+  },
+
+  {
+    "name": "Selector Google Fonts",
+    "settings": [
       {
         "type": "header",
-        "content": "Heading  styles",
-        "info": "This font is used for: Heading, Button, Menu..."
-      },
-      {
-        "type": "select",
-        "id": "font_type_heading_use",
-        "label": "Heading Use?",
-        "options": [
-          {
-            "value": "1",
-            "label": "Google Web Fonts"
-          },
-          {
-            "value": "0",
-            "label": "Family Fonts"
-          }
-        ],
-        "default": "1"
+        "content": "Google font #1"
       },
       {
         "type": "text",
-        "id": "font_type_heading_google",
-        "label": "Google Web Fonts",
-        "default": "Montserrat"
+        "id": "google_font_1",
+        "label": "Input font name",
+        "default": "Open Sans"
       },
       {
         "type": "text",
-        "id": "font_type_heading_google_style",
+        "id": "google_font_1_style",
         "label": "Google Web Fonts Style",
         "default": "700,400",
         "info": "Example : 100,200,300"
       },
       {
-        "type": "select",
-        "id": "font_type_heading_family",
-        "label": "Font family",
-        "options": [
-          {
-            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
-            "label": "Avant Garde",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
-            "label": "Gill Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            "label": "Helvetica Neue",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
-            "label": "Arial",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
-            "label": "Candara",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Geneva, Tahoma, Verdana, sans-serif",
-            "label": "Geneva",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
-            "label": "Big Calson",
-            "group": "Serif"
-          },
-          {
-            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
-            "label": "Calisto MT",
-            "group": "Serif"
-          },
-          {
-            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
-            "label": "Baskerville",
-            "group": "Serif"
-          },
-          {
-            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Garamond",
-            "group": "Serif"
-          },
-          {
-            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Georgia",
-            "group": "Serif"
-          },
-          {
-            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
-            "label": "Times New Roman",
-            "group": "Serif"
-          }
-        ]
+        "type": "textarea",
+        "id": "google_font_1_css",
+        "label": "CSS Selector",
+        "default": "body",
+        "info": "Ex : body, h1, h2, .class, #id"
       },
       {
         "type": "header",
-        "content": "Other styles",
-        "info": "This font is used for: italic text, quote, notes..."
-      },
-      {
-        "type": "select",
-        "id": "font_use_other",
-        "label": "Use Other fonts?",
-        "options": [
-          {
-            "value": "1",
-            "label": "Google Web Fonts"
-          },
-          {
-            "value": "0",
-            "label": "Family Fonts"
-          }
-        ],
-        "default": "1"
+        "content": "Google font #2"
       },
       {
         "type": "text",
-        "id": "font_type_orther_google",
-        "label": "Google Web Fonts",
-        "default": "Playfair Display"
+        "id": "google_font_2",
+        "label": "Input font name",
+        "default": "Open Sans"
       },
       {
         "type": "text",
-        "id": "font_type_orther_google_style",
+        "id": "google_font_2_style",
         "label": "Google Web Fonts Style",
-        "default": "400,400italic,700,700italic,900,900italic",
+        "default": "400,700",
         "info": "Example : 100,200,300"
       },
       {
-        "type": "select",
-        "id": "font_type_orther_family",
-        "label": "Font family",
-        "options": [
-          {
-            "value": "'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif",
-            "label": "Avant Garde",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif",
-            "label": "Gill Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            "label": "Helvetica Neue",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
-            "label": "Arial",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
-            "label": "Candara",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Geneva, Tahoma, Verdana, sans-serif",
-            "label": "Geneva",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif",
-            "label": "Big Calson",
-            "group": "Serif"
-          },
-          {
-            "value": "'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif",
-            "label": "Calisto MT",
-            "group": "Serif"
-          },
-          {
-            "value": "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif",
-            "label": "Baskerville",
-            "group": "Serif"
-          },
-          {
-            "value": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Garamond",
-            "group": "Serif"
-          },
-          {
-            "value": "Georgia, 'Hoefler Text', 'Times New Roman', serif",
-            "label": "Georgia",
-            "group": "Serif"
-          },
-          {
-            "value": "TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif",
-            "label": "Times New Roman",
-            "group": "Serif"
-          }
-        ]
+        "type": "textarea",
+        "id": "google_font_2_css",
+        "label": "CSS Selector",
+        "default": "h1",
+        "info": "Ex : body, h1, h2, .class, #id"
+      },
+      {
+        "type": "header",
+        "content": "Google font #3"
+      },
+      {
+        "type": "text",
+        "id": "google_font_3",
+        "label": "Input font name",
+        "default": "Open Sans"
+      },
+      {
+        "type": "text",
+        "id": "google_font_3_style",
+        "label": "Google Web Fonts Style",
+        "default": "700,400",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "textarea",
+        "id": "google_font_3_css",
+        "label": "CSS Selector",
+        "default": "h1,h2,h3,h4,h5,h6",
+        "info": "Ex : body, h1, h2, .class, #id"
       }
     ]
   },
+
   {
     "name": "Header",
     "settings": [
@@ -1333,6 +1221,23 @@
           }
         ],
         "default": "footer_dark"
+      },
+     
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bg",
+        "label": "Background",
+        "default": "#f4f4f4"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_text",
+        "label": "Text",
+        "default": "#555"
       },
       {
         "type": "header",
@@ -5355,6 +5260,17 @@
       }
       ]
   },
+  {
+    "name": " Page Account",
+    "settings": [
+      {
+        "type": "image",
+        "id": "account_bg_image.jpg",
+        "label": "Set background image"
+      }
+    ]
+  },
+
   {
     "name": " Page Contact",
     "settings": [
@@ -10471,623 +10387,6 @@
         "id": "team_item_4_pinterest",
         "label": "Pinterest",
         "default":"#"
-      }
-    ]
-  },
-  {
-    "name": "Material Price Table",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Table #1"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_field_1",
-        "label": "Field 1"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_field_2",
-        "label": "Field 2"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_field_3",
-        "label": "Field 3"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_field_4",
-        "label": "Field 4"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_field_5",
-        "label": "Field 5"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_price",
-        "label": "Price"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_button",
-        "label": "Button"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_1_link",
-        "label": "Link"
-      },
-      {
-        "type": "header",
-        "content": "Table #2"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_field_1",
-        "label": "Field 1"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_field_2",
-        "label": "Field 2"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_field_3",
-        "label": "Field 3"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_field_4",
-        "label": "Field 4"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_field_5",
-        "label": "Field 5"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_price",
-        "label": "Price"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_button",
-        "label": "Button"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_2_link",
-        "label": "Link"
-      },
-      {
-        "type": "header",
-        "content": "Table #3"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_field_1",
-        "label": "Field 1"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_field_2",
-        "label": "Field 2"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_field_3",
-        "label": "Field 3"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_field_4",
-        "label": "Field 4"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_field_5",
-        "label": "Field 5"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_price",
-        "label": "Price"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_button",
-        "label": "Button"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_3_link",
-        "label": "Link"
-      },
-      {
-        "type": "header",
-        "content": "Table #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "pricetable_4_enable",
-        "label": "Show Table #4 ?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_name",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_field_1",
-        "label": "Field 1"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_field_2",
-        "label": "Field 2"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_field_3",
-        "label": "Field 3"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_field_4",
-        "label": "Field 4"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_field_5",
-        "label": "Field 5"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_price",
-        "label": "Price"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_button",
-        "label": "Button"
-      },
-      {
-        "type": "text",
-        "id": "pricetable_4_link",
-        "label": "Link"
-      }
-    ]
-  },
-    {
-      "name": "Material Counter",
-      "settings": [
-        {
-          "type": "header",
-          "content": "Item #1"
-        },
-        {
-          "type": "text",
-          "id": "counter_1_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_1_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #2"
-        },
-        {
-          "type": "text",
-          "id": "counter_2_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_2_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #3"
-        },
-        {
-          "type": "text",
-          "id": "counter_3_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_3_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #4"
-        },
-        {
-          "type": "text",
-          "id": "counter_4_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_4_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #5"
-        },
-        {
-          "type": "text",
-          "id": "counter_5_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_5_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #6"
-        },
-        {
-          "type": "text",
-          "id": "counter_6_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_6_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #7"
-        },
-        {
-          "type": "text",
-          "id": "counter_7_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_7_value",
-          "label": "Value"
-        },
-        {
-          "type": "header",
-          "content": "Item #8"
-        },
-        {
-          "type": "text",
-          "id": "counter_8_number",
-          "label": "Number"
-        },
-        {
-          "type": "text",
-          "id": "counter_8_value",
-          "label": "Value"
-        }
-      ]
-    },
-  {
-    "name": "Material Portfolio",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-1.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio1_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio1_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio1_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-2.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio2_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio2_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio2_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-3.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio3_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio3_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio3_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-4.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio4_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio4_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio4_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #5"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-5.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio5_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio5_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio5_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-6.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio6_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio6_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio6_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-7.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio7_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio7_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio7_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #8"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-8.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio8_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio8_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio8_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #9"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-9.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio9_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio9_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio9_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #10"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-10.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio10_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio10_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio10_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #11"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-11.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio11_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio11_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio11_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #12"
-      },
-      {
-        "type": "image",
-        "id": "portfolio-special-2-12.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "portfolio12_title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "portfolio12_link",
-        "label": "Link"
-      },
-      {
-        "type": "textarea",
-        "id": "portfolio12_text",
-        "label": "Content"
       }
     ]
   }

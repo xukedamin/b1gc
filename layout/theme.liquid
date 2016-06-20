@@ -37,15 +37,22 @@
   {% endif %}
 
   <!-- CSS ================================================== -->
-  {% if  settings.font_type_base_use == '1'  %}
-  <link href='https://fonts.googleapis.com/css?family={{ settings.font_type_base_google }}:{{ settings.font_type_base_google_style }}' rel='stylesheet' type='text/css'>
-  {% endif %}  
-  {% if settings.font_type_heading_use == '1'  %}
-  <link href='https://fonts.googleapis.com/css?family={{ settings.font_type_heading_google }}:{{ settings.font_type_heading_google_style }}' rel='stylesheet' type='text/css'>
-  {% endif %}  
-  {% if   settings.font_use_other == '1' %}
-  <link href='https://fonts.googleapis.com/css?family={{ settings.font_type_orther_google }}:{{ settings.font_type_orther_google_style }}' rel='stylesheet' type='text/css'>
-  {% endif %}  
+
+
+  <!-- google font -->
+  {% for i in (1..3) %}
+  {% capture google_font %}google_font_{{ i }}{% endcapture %}
+  {% capture google_font_style %}google_font_{{ i }}_style{% endcapture %}
+  {% capture google_font_css %}google_font_{{ i }}_css{% endcapture %}
+    {% if settings[google_font] != blank and settings[google_font_css] != blank %}
+      <link href='https://fonts.googleapis.com/css?family={{ settings[google_font] | replace: ' ', '+' }}:{{ settings[google_font_style] | replace: ' ', ',' }}' rel='stylesheet' type='text/css'>  
+        <style>
+          {{ settings[google_font_css] }} {
+          font-family:  '{{ settings[google_font] }}', sans-serif !important; 
+          }
+        </style>
+    {% endif %}
+  {% endfor %}  
   
 
 

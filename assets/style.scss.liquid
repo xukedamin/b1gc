@@ -32,20 +32,13 @@ $preLarge: $large - $viewportIncrement;
 #General Variables
 ==============================================================================*/
 
-// BigC Theme Colors
-$color_primary: {{ settings.color_primary }};
-$color_secondary: {{ settings.color_secondary }};
+
 
 
 // Text link colors
 $colorLink: $color_primary;
 $colorLinkHover: lighten($color_primary, 15%);
 
-// General colors
-$colorBody: {{ settings.color_body_bg }};
-$colorTextBody: {{ settings.color_body_text }};
-$fontWeightBody: {{ settings.font_weight_body }};
-$lineHeightBody: {{ settings.line_height_body }};
 
 
 // Nav background
@@ -79,40 +72,48 @@ $passwordPageUseBgImage: true;
 
 /*================ Typography ================*/
 
-/*============================================================================
-Get font-families from theme settings
-==============================================================================*/
-{% if settings.font_type_base_family contains 'Google' %}
-  {% assign type_base_parts = settings.font_type_base_family | split: '_' %}
-  {% assign type_base_name = type_base_parts[1] %}
-  
-  {% capture base_family %}"{{ type_base_name | split: ':' | first | replace: '+', ' ' }}"{% if type_base_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-{% else %}
-  {% assign base_family = settings.font_type_base_family %}
-{% endif %}
 
-{% if settings.font_type_heading_family contains 'Google' %}
-  {% assign type_header_parts = settings.font_type_heading_family | split: '_' %}
-  {% assign type_header_name = type_header_parts[1] %}
-  {% capture header_family %}"{{ type_header_name | split: ':' | first | replace: '+', ' ' }}"{% if type_header_parts.last == 'serif' %}, serif {% else %}, "HelveticaNeue", "Helvetica Neue", sans-serif{% endif %}{% endcapture %}
-  {% assign header_weight = type_header_parts[2] %}
-{% else %}
-  {% assign header_family = settings.font_type_heading_family %}
-  {% assign header_weight = 700 %}
-{% endif %}
 
+//body
+body{
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  background-color:{{ settings.color_body_bg }};
+  color: {{ settings.color_body_text }};
+  font-size: {{ settings.font_type_base_size }};
+  font-weight: {{ settings.font_weight_body }};
+  line-height: {{ settings.line_height_body }};
+  font-family:  {{ settings.font_type_base_family }}
+}
 
 
 // Header Font
-$headerFontStack: {{ header_family }};
-$headerFontWeight: {{ header_weight }};
 
-// Body Font
-$bodyFontStack: {{ base_family }};
-$baseFontSize: {{ settings.font_type_base_size }};
+.h1,h1 {
+    font-size: {{settings.size_heading_h1}}px
+}
 
-body{
-  font-familly : base_family;
+.h2,h2 {
+    font-size: {{settings.size_heading_h2}}px
+}
+
+.h3,h3 {
+    font-size: {{settings.size_heading_h3}}px
+}
+
+.h4,h4 {
+    font-size: {{settings.size_heading_h4}}px
+}
+
+.h5,h5 {
+    font-size: {{settings.size_heading_h5}}px
+}
+
+.h6,h6 {
+    font-size: {{settings.size_heading_h6}}px
 }
 
 

@@ -3,10 +3,10 @@
   <section class="one-child page-under-construction-3-wrapper">
     <div data-stellar-background-ratio="0.25"  class="page-common-background"></div>
     <div class="container">
-      <div class="page-account">
+      <div class="page-account row">
         <h1>{{ 'customer.account.title' | t }}</h1>
         
-        <div class="grid-item two-thirds medium-down--one-whole">
+        <div class="col-xs-12 col-md-8">
           <h4>{{ 'customer.orders.title' | t }}</h4>
           {% paginate customer.orders by 20 %}
           {% if customer.orders.size != 0 %}
@@ -43,7 +43,7 @@
           {% endif %}
         {% endpaginate %}
       </div>
-      <div class="grid-item one-third medium-down--one-whole">
+      <div class="col-xs-12 col-md-4">
         <h4>{{ 'customer.account.details' | t }}</h4>
         <h5>{{ customer.name }}</h5>
         {% if customer.default_address != nil %}
@@ -73,7 +73,7 @@
       </div>
       
     </div>
-  </div>
+    </div>
   </section>
 </div>
 </main>

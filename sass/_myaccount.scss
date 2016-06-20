@@ -1,148 +1,187 @@
-// _myaccount.scss
-/* Page Login */
+.page-common-background {
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background-image: url("{{ 'account_bg_image.jpg'  | asset_url }}");
+
+  &:after {
+    background-color: rgba(51, 51, 51, 0.6);
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+/*============================================================================
+# Login page
+==============================================================================*/
 .page-login-wrapper .page-login {
   @extend %text-center;
 }
 .page-login-wrapper .page-login .back-to-home {
   color: $color_white;
-}
-.page-login-wrapper .page-login .back-to-home:after {
-  border-color: $color_white;
-}
+  &:after {
+    border-color: $color_white;
+  }
 
-.page-login-wrapper .page-login .back-to-home a {
-    color: inherit;
-    outline: medium none;
+  a {
+      color: inherit;
+      outline: medium none;
+  }
 }
 
 .page-login-wrapper .page-login .button {
   display: block;
   margin-bottom: 0;
   padding-bottom: 0;
+
+  .normal-btn {
+    width: 100%;
+  }
 }
+
 .page-login-wrapper .page-login .signin {
   position: relative;
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid $color_silver-darker;
+  &:after {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: block;
+    padding: 5px;
+    background-color: $color_white;
+    content: "OR";
+    @include prefix(transform, translateX(-50%));
+  }
 }
-.page-login-wrapper .page-login .signin:after {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  display: block;
-  padding: 5px;
-  background-color: $color_white;
-  content: "OR";
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.page-login-wrapper .page-login .button .normal-btn {
-  width: 100%;
-}
+
 .page-login-wrapper .page-login .remember {
   margin-bottom: 25px;
+
   @extend %text-right;
+
+  .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    [type=checkbox]:checked + span {
+      position: relative;
+      
+      &:after {
+        @extend %jv-color-primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "W";
+        line-height: 14px;
+      }
+    }
+
+    input {
+      display: none;
+    }
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color_alto;
+      vertical-align: middle;
+    }
+  }
+  p {
+    display: inline-block;
+    margin: 0;
+    color: #777777;
+  }
 }
-.page-login-wrapper .page-login .remember .checkbox {
-  display: inline-block;
-}
-.page-login-wrapper .page-login .remember .checkbox [type=checkbox]:checked + span {
-  position: relative;
-}
-.page-login-wrapper .page-login .remember .checkbox [type=checkbox]:checked + span:after {
- @extend %jv-color-primary;
-  
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  content: "W";
-  line-height: 14px;
-}
-.page-login-wrapper .page-login .remember .checkbox input {
-  display: none;
-}
-.page-login-wrapper .page-login .remember .checkbox span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 1px solid $color_alto;
-  vertical-align: middle;
-}
-.page-login-wrapper .page-login .remember p {
-  display: inline-block;
-  margin: 0;
-  color: #777777;
-}
+
 .page-login-wrapper .page-login form {
   background-color: $color_white;
   position: relative;
   margin: 0 auto 75px auto;
   padding: 50px;
   max-width: 400px;
-}
-.page-login-wrapper .page-login form 
-{
+
+  a.forgotpass {
+   margin-top: 10px;
+   display: inline-block;
+  }
+
+
   h1,h2,h3
   {
     font-size: 24px;
     line-height: 28px;
     margin: 0;
   }
+
+  p {
+    margin-bottom: 30px;
+  }
+  .infor {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .infor .icon {
+    color: $color_dusty-gray;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 1;
+    @include prefix(transform, translateY(-50%));
+  }
+ 
+ .infor .icon i:before {
+    vertical-align: middle;
+    font-size: 19px;
+  }
+  .infor input {
+    display: block;
+    margin-bottom: 0;
+    padding-left: 50px;
+    width: 100%;
+    border: 1px solid $color_alto;
+    background: white;
+  }
+
+  p {
+   @extend %jv-color-primary;
+  }
+
 }
 
 
-.page-login-wrapper .page-login form p {
-  margin-bottom: 30px;
-  // font-family: {% if settings.font_use_other == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
-}
-.page-login-wrapper .page-login form .infor {
-  position: relative;
-
-  margin-bottom: 20px;
-
-}
-.page-login-wrapper .page-login form .infor .icon {
-  color: $color_dusty-gray;
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  z-index: 1;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.page-login-wrapper .page-login form .infor .icon i:before {
-  vertical-align: middle;
-  font-size: 19px;
-}
-.page-login-wrapper .page-login form .infor input {
-  display: block;
-  margin-bottom: 0;
-  padding-left: 50px;
-  width: 100%;
-  border: 1px solid $color_alto;
-  background: white;
-}
-.page-login-wrapper .page-login form a.forgotpass {
-  color: $color_white;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-.page-login-wrapper .page-login form p {
- @extend %jv-color-primary;
-}
 
 
 .page-login-wrapper .footer-foot {
   background-color: $color_wild-sand;
 }
-/* REGSITER */
+
+
+/*============================================================================
+# Register page
+==============================================================================*/
+
 .page-register-wrapper .footer-foot {
   background-color: $color_wild-sand;
 }
@@ -160,62 +199,81 @@
   margin: 0 auto;
   padding: 50px;
   max-width: 570px;
+
+  .button {
+    @extend %text-center;
+  }
+
+
+  input:not([type="submit"]) {
+    margin-bottom: 20px;
+    width: 100%;
+    border-color: $color_alto;
+  }
+  label {
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+    font-size: 11px;
+    @extend %text-up;
+  }
+  span 
+  {
+    font-style: italic;
+    color: $color_dusty-gray;
+    display: block;
+    margin-bottom: 55px;
+    
+    a {
+     @extend %jv-color-primary;
+      text-decoration: underline;
+    }
+  }
+  
+  h3 {
+    margin-bottom: 50px;
+    @extend %text-center;
+  }
+
 }
-.page-register form .button {
-  @extend %text-center;
-}
+
+
 .page-register form .name {
   position: relative;
+
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  input {
+    float: left;
+    display: block;
+    width: -webkit-calc(50% - 15px);
+    width: calc(50% - 15px);
+    &:first-of-type {
+      margin-right: 30px;
+    }
+  }
+
 }
-.page-register form .name:after {
-  clear: both;
+
+//adress page /account/addresses
+
+
+.form-vertical{ 
+  input,
+  select,
+  textarea {
+    display: block;
+    margin-bottom: 10px
+  }
 }
-.page-register form .name:before,
-.page-register form .name:after {
-  content: " ";
-  display: table;
-}
-.page-register form .name:after {
-  clear: both;
-}
-.page-register form .name:before,
-.page-register form .name:after {
-  content: " ";
-  display: table;
-}
-.page-register form .name input {
-  float: left;
-  display: block;
-  width: -webkit-calc(50% - 15px);
-  width: calc(50% - 15px);
-}
-.page-register form .name input:first-of-type {
-  margin-right: 30px;
-}
-.page-register form h3 {
-  margin-bottom: 50px;
-  @extend %text-center;
-}
-.page-register form input:not([type="submit"]) {
-  margin-bottom: 20px;
-  width: 100%;
-  border-color: $color_alto;
-}
-.page-register form label {
-  // font-family: {% if settings.type_heading_use == '1'%} '{{ settings.type_heading_google }}', sans-serif; {% else %} 	{{ settings.type_heading_family }} {% endif %};
-  letter-spacing: 0.05em;
-  margin-bottom: 5px;
-  font-size: 11px;
-  @extend %text-up;
-}
-.page-register form span {
-  font-style: italic;
-  // font-family: {% if settings.font_use_other == '1'%} '{{ settings.type_orther_google }}', sans-serif; {% else %} 	{{ settings.type_orther_family }} {% endif %};
-  color: $color_dusty-gray;
-  display: block;
-  margin-bottom: 55px;
-}
-.page-register form span a {
- @extend %jv-color-primary;
-  text-decoration: underline;
+
+input.input-full, 
+textarea.input-full, 
+select.input-full {
+    width: 100%;
 }

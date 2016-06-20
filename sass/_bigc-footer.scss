@@ -294,7 +294,6 @@
 
 #back-top {
   bottom: 15px;
-  color: $color_white;
   cursor: pointer;
   display: block;
   font-size: 50px;
@@ -305,15 +304,15 @@
   right: 15px;
   text-align: center;
   text-decoration: none;
-  @include prefix(transform, translate(150%, 0px));
-  @extend %jv-transition-easeout;
   width: 50px;
   z-index: 1040;
- @extend %jv-color-primary;
+  @include prefix(transform, translate(150%, 0px));
+  @extend %jv-transition-easeout;
+  @extend %jv-color-primary;
 }
 
 #back-top.show {
-    transform: translate(0px, 0px);
-    -webkit-transform: translate(0px, 0px);
-    display: block !important;
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  display: block !important;
 }

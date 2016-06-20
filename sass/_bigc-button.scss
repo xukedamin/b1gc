@@ -119,6 +119,9 @@
 .bt-style5:hover {
 	@extend %jv-bg-color-primary-inverse;
 }
+
+
+
 .bt-style6 {
 	box-shadow: 0 0 0 2px $color_shark inset;
 
@@ -907,14 +910,16 @@
 		color: $color_white;
 
 		&:hover {
-			background: $color_sunglow;
+			// background: $color_sunglow;
+			@extend %jv-bg-color-secondary-inverse;
 		}
 	}
 }
 
 .btn-circle-box33 {
 	.link-quick-view {
-		background: $color_sunglow;
+		// background: $color_sunglow;
+		@extend %jv-bg-color-secondary-inverse;
 		color: $color_white;
 
 		&:hover {
@@ -1167,7 +1172,8 @@
 		}
 	}
 	.link-compare:hover {
-		transform: rotate(225deg) scale(2);
+		// transform: rotate(225deg) scale(2);
+		@include prefix(transform, rotate(225deg) scale(2));
 	}
 }
 
@@ -1242,11 +1248,12 @@
 	}
 	.link-wishlist:hover {
 		color: #1698D4;
-		box-shadow: 0 0 0 1px #1698D4 inset;
+		@include prefix(box-shadow, 0 0 0 1px #1698D4 inset);
+
 	}
 	.link-compare:hover {
 		color: $color_white;
-		box-shadow: 0 0 0 1px $color_white inset;
+		@include prefix(box-shadow, 0 0 0 1px $color_white inset );
 	}
 }
 
@@ -1258,29 +1265,33 @@
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
 		background-color: transparent ;
-		box-shadow: 0 0 0 1px rgba($color_white, 0.2) inset;
+			@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
 
 		&:hover {
 			@extend .jv-link-add-cart-img;
 			background-color: $color_white ;
-			box-shadow: 0 0 0 1px transparent inset;
+			@include prefix(box-shadow, 0 0 0 1px transparent inset);
+
 		}
 	}
 	.link-wishlist {
 		color: #1698D4;
-		box-shadow: 0 0 0 1px #1698D4 inset;
+		@include prefix(box-shadow, 0 0 0 1px #1698D4 inset);
 
 		&:hover {
 			color: $color_white;
-			box-shadow: 0 0 0 1px rgba($color_white, 0.2) inset;
+			@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
+			
 		}
 	}
 	.link-compare {
 		color: $color_white;
 		box-shadow: 0 0 0 1px $color_white inset;
+		@include prefix(box-shadow,0 0 0 1px $color_white inset);
 
 		&:hover {
-			box-shadow: 0 0 0 1px rgba($color_white, 0.2) inset;
+			@include prefix(box-shadow,0 0 0 1px rgba($color_white, 0.2) inset);
+			
 		}
 	}
 }
@@ -1357,4 +1368,39 @@
 	&:hover {
 	  background: $color_bright-sun none repeat scroll 0 0;
 	}
+}
+
+//bt-link bt-blue bt-radius bt-style23
+.btn-submit-form {
+  @extend %jv-bg-color-secondary;
+  border: medium none;
+  color: $color_white;
+  height: 40px;
+  padding: 0 30px;
+  
+  @extend %text-up;
+  @extend %jv-border-radius-4;
+  @extend %jv-transition-easeout;
+
+  &:hover {
+	  @extend %jv-bg-color-secondary-inverse;
+  }
+
+}
+
+// bt-link bt-gold bt-radius bt-shadow bt-style28
+.btn-reset-form {
+
+  @extend .btn-submit-form;
+  @extend %jv-bg-color-secondary-inverse;
+
+  &:hover {
+    @extend %jv-bg-color-secondary;
+  }
+}
+
+
+
+.bt-primary{
+	@extend .bt-link, .bt-yellow, .bt-style5;
 }

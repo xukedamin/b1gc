@@ -92,31 +92,3 @@
     border: medium none;
 }
 
-//bt-link bt-blue bt-radius bt-style23
-.btn-submit-form {
-  background-color: $color_currious-blue-darker ;
-  border: medium none;
-  color: $color_white;
-  height: 40px;
-  padding: 0 30px;
-  
-  @extend %text-up;
-  @extend %jv-border-radius-4;
-  @extend %jv-transition-easeout;
-
-  &:hover {
-  background-color: $color_bright-sun ;
-  }
-
-}
-
-// bt-link bt-gold bt-radius bt-shadow bt-style28
-.btn-reset-form {
-
-  @extend .btn-submit-form;
-  background-color: $color_bright-sun ;
-
-  &:hover {
-    background-color: $color_currious-blue-darker ;
-  }
-}

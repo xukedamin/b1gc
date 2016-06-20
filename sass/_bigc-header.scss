@@ -400,7 +400,7 @@ a.jvlogo {
     position: relative;
   }
   .mycart-link .number-cart-total {
-    background: $color_casablanca none repeat scroll 0 0;
+    background: $color_primary none repeat scroll 0 0;
     color: $color_white;
     font-size: 13px;
     margin-left: 20px;
@@ -410,14 +410,6 @@ a.jvlogo {
 
 
 //header 2
-.info-header.info-header2 {
-  // margin: 0;
-  // padding: 0;
-  // position: absolute;
-  // right: 15px;
-  // top: 50%;
-  // @include prefix(transform, translateY(-50%));
-}
 
 .info-header2 {
   .info-search {
