@@ -1,22 +1,26 @@
-<main class="main-content">
+<main class="main-content search-result">
 
   {% if page.metafields.jvpage.titlePage != 'hide'  %}  
   <div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25" ></div>
-    <div class="container text-center">
-{% if search.results_count == 0 %}      
-      <h1 class="h3" ><span>{{ 'general.search.no_results_html' | t: terms: search.terms }}</span></h1>
- {% else %}   
-      <h1 class="h3" ><span>{{ 'general.search.results_for_html' | t: terms: search.terms }}</span></h1>
-{% endif %}      
-      {% include 'search-bar-2' %}
+
+       <div class="container text-center">
+    {% if search.results_count == 0 %}      
+          <h1 class="h3" ><span>{{ 'general.search.no_results_html' | t: terms: search.terms }}</span></h1>
+     {% else %}   
+          <h1 class="h3" ><span>{{ 'general.search.results_for_html' | t: terms: search.terms }}</span></h1>
+    {% endif %}   
+      <div class="search-form7 ">
+        {% include 'search-bar' %}
+      </div>
+      
     </div>  
   </div>
   {% endif %}    
 
 
 
-  <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+  <section role="main" class="wrapper-content full-content {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %} pt-70">
     <div class="container">
 
       {% assign grid_results = true %}
@@ -24,54 +28,48 @@
       {% assign respond_js_secret_key = shop.domain | md5 %}
       {% unless search.terms == respond_js_secret_key %}
 
-      {% if search.performed %}
+        {% if search.performed %}
 
-      {% paginate search.results by 20 %}
+          {% paginate search.results by 20 %}
 
-      {% if search.results_count != 0 %}
+            {% if search.results_count != 0 %}
+              {% if grid_results == false %}
 
+                {% for item in search.results %}
+                  {% include 'search-result' %}
+                {% endfor %}
 
-      {% if grid_results == false %}
+                {% else %}
 
-      {% for item in search.results %}
-      {% include 'search-result' %}
-      {% endfor %}
+                  <div class="row div-product-grid-item">
+                    {% for item in search.results %}
+                      {% assign grid_item_width = 'col-md-4 col-sm-6 col-xs-12' %}
+                      {% include 'search-result-grid' %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% endif %}
 
-      {% else %}
+              {% if paginate.pages > 1 %}
+                <div class="pagination">
+                  {% include 'pagination-custom' %}
+                </div>
+            {% endif %}
 
-      <div class="row {% if settings.product_masonry_effect %} masonry-container  {% endif %}      div-product-grid-item">
-        {% for item in search.results %}
-        {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
-        {% include 'search-result-grid' %}
-        {% endfor %}
-      </div>
+          {% endpaginate %}
 
-      {% endif %}
+          {% else %}
 
-      {% endif %}
+            {% comment %}
+            If search.performed is false, someone either accessed the page without the q parameter, or it was blank.
+            {% endcomment %}
+            <h2 class="text-center">{{ 'general.search.title' | t }}</h2>
 
-      {% if paginate.pages > 1 %}
-      <div class="pagination">
-        {% include 'pagination-custom' %}
-      </div>
-      {% endif %}
+        {% endif %}
 
-      {% endpaginate %}
-
-      {% else %}
-
-      {% comment %}
-      If search.performed is false, someone either accessed the page without the q parameter, or it was blank.
-      {% endcomment %}
-      <h2 class="text-center">{{ 'general.search.title' | t }}</h2>
-
-
-      {% endif %}
-
-
-      {% else %}
-      {% include 'respond' %}
-      {% layout none %}
+        {% else %}
+        {% include 'respond' %}
+        {% layout none %}
       {% endunless %}
 
     </div>  

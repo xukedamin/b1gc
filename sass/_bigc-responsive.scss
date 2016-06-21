@@ -1,5 +1,14 @@
 // bigc-responsive.scss
 
+@media only screen and (min-width: 1230px) {
+  .shop-cart-list table tbody .cart-item td.product-img .image {
+    width: 120px;
+  }
+  .shop-cart-list .product-img {
+    width: 190px;
+  }
+}
+
 @media (min-width: 992px) {
   .col-md-jvoffset-12 { margin-left: -100%; }
   .col-md-jvoffset-11 { margin-left: -91.6667%; }
@@ -75,7 +84,7 @@
     width: 150px;
   }
 
-  
+
 }
 
 
@@ -150,25 +159,7 @@
 
 }
 
-@media (max-width: 550px) {
-  .shop-cart-coupon input {
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-  .shop-cart-coupon br {
-    display: block;
-  }
-}
 
-
-@media only screen and (min-width: 1230px) {
-  .shop-cart-list table tbody .cart-item td.product-img .image {
-    width: 120px;
-  }
-  .shop-cart-list .product-img {
-    width: 190px;
-  }
-}
 
 @media (max-width: 991px) {
   .shop-cart-list {
@@ -188,6 +179,16 @@
   }
   .shop-cart-list table .product-total {
     width: 120px;
+  }
+}
+
+@media (max-width: 550px) {
+  .shop-cart-coupon input {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .shop-cart-coupon br {
+    display: block;
   }
 }
 

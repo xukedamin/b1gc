@@ -1404,6 +1404,30 @@
     ]
   },
   {
+    "name": "Search settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Search "
+      },
+      {
+        "type": "checkbox",
+        "id": "search_auto_complete_enabale",
+        "label": "Enable Autocomplete",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content":"page search"
+      },
+      {
+        "type": "image",
+        "id": "seach_header_bg_image.jpg",
+        "label": "Set header image"
+      }
+    ]
+  },
+  {
     "name": "Select default homepage",
     "settings": [
       {
@@ -5270,6 +5294,8 @@
       }
     ]
   },
+
+
 
   {
     "name": " Page Contact",

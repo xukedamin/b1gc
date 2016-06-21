@@ -1,5 +1,5 @@
 {% unless grid_item_width %}
-{% assign grid_item_width = 'large--one-third medium--one-half' %}
+{% assign grid_item_width = 'col-md-4 col-sm-6 col-xs-12' %}
 {% endunless %}
 
 {% unless current_collection %}
@@ -18,83 +18,64 @@
 
 {% assign image_size = settings.collection_prod_image_sizes %}
 
+<div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %}">
+  
 
+  <div class="item-product-thumb">
+    <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
 
-
-<div class="masonry-post-index  standard col-md-4 col-sm-6 col-xs-12 shop-product-2-wrapper  {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %}">
-  <div class="shop-product-2">
-    <div class="product-grid-item">
-
-
-      <div class="product-grid-image image">
-        <div class="product-grid-image--centered">
-
-          {% if item.featured_image %}
-
-
-          {% if sold_out %}
-          <div class="badge badge--sold-out saleoff"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
-
-          {% else %}
-          {% if on_sale %}
-          <span class="saleoff">-{{ item.compare_at_price | minus: item.price | times: 100.0 | divided_by: item.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
-          {% endif %}
-          {% endif %}
-
-          <img src="{{ item.featured_image.src | img_url: image_size }}" alt="{{ item.featured_image.alt | escape }}">
-          {% else %}   
-          <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">  
-          {% endif %}   
-
-
-
-          <div class="overlay text-center">
-            <ul>
-              <li class="clearfix">
-                <a class="quick-view"  href="{{ item.url | within: current_collection }}"><i class="icon-search-icon"></i></a>
-              </li>
-            </ul>
-          </div>  
-
-
-
-
-        </div>
+      {% if item.featured_image %}
+        <img src="{{ item.featured_image.src | img_url: image_size }}" alt="{{ item.featured_image.alt | escape }}">
+      {% else %}   
+        <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">  
+      {% endif %}  
+    </a>
+     
+    <div class="product-extra-mask">
+       <div class="product-extra-link">
+          <a  class="action product-quick-view"  href="{{ item.url | within: current_collection }}"><span class="lnr lnr-magnifier"></span></a>
       </div>
+    </div>  
 
-
-
-      <div class="info">
-        <a href="{{ product.url | within: current_collection }}" class="product-title">{{ item.title }}</a>
-
-        <div class="product-item--price price">
-          {% if on_sale %}
-          <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-            {% assign compare_price = item.compare_at_price %}
-            {% assign product_price = item.price %}
-            {% include 'price-sale' %}
-          </del>
-          {% endif %}
-          <span class=" medium--left">
-            {% include 'price' with item.price %}
-          </span>      
-        </div>
-        {% if item.featured_image %}
-        {% if settings.product_reviews_enable %}
-        <span class="shopify-product-reviews-badge" data-id="{{ item.id }}"></span>
+     <div class="product-box-promotion">
+       {% if sold_out %}
+          <div class="badge badge--sold-out saleoff"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
+        {% elsif on_sale %}
+            <span class="sale-item">-{{ item.compare_at_price | minus: item.price | times: 100.0 | divided_by: item.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
         {% endif %}
-        {% else %}  
+     </div>
 
+  </div>
+    
+
+    <div class="item-product-info">
+      <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" class="product-title">{{ item.title }}</a></h3>
+
+      <div class="info-price product-item--price price">
+        {% if on_sale %}
+        <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+          {% assign compare_price = item.compare_at_price %}
+          {% assign product_price = item.price %}
+          {% include 'price-sale' %}
+        </del>
+        {% endif %}
+        <span class=" medium--left">
+          {% include 'price' with item.price %}
+        </span>      
+      </div>
+      {% if item.featured_image %}
+        {% if settings.product_reviews_enable %}
+          <span class="shopify-product-reviews-badge" data-id="{{ item.id }}"></span>
+        {% endif %}
+      {% else %}  
         <div class="rte">
           {{ item.content | strip_html | truncatewords: 20 }}
         </div>        
-        {% endif %}        
-      </div>
-
+      {% endif %}        
     </div>
 
-
-
-  </div>
 </div>
+
+
+
 

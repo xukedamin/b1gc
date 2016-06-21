@@ -33,24 +33,9 @@ $preLarge: $large - $viewportIncrement;
 ==============================================================================*/
 
 
-
-
-// Text link colors
-$colorLink: $color_primary;
-$colorLinkHover: lighten($color_primary, 15%);
-
-
-
-// Nav background
-$colorNav: {{ settings.color_nav_bg }};
-$colorNavText: {{ settings.color_nav_text }};
-
 // Mobile Nav Bar
 $mobileNavBarHeight: 50px;
 
-// Site Footer
-$colorFooterBg: {{ settings.color_footer_bg }};
-$colorFooterText: {{ settings.color_footer_text }};
 
 
 // Width variables
@@ -63,10 +48,6 @@ $radius: 2px;
 
 // Password page
 $passwordPageUseBgImage: true;
-
-.color-main {
-  color: $color_primary;
-}
 
 
 
@@ -161,11 +142,3 @@ body{
   font-family: {% if settings.type_heading_use == '1'%} '{{ settings.type_heading_google }}', sans-serif; {% else %}  {{ settings.type_heading_family }} {% endif %};
 }
 
-
-.page-login-wrapper .page-login form p,
-.page-register form span {
-  @extend %jv-font-familly-other;
-}
-.page-register form label {
-  @extend %jv-font-familly-heading;
-}

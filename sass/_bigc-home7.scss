@@ -16,39 +16,7 @@
   vertical-align: top;
 }
 
-.search-form7 {
-  border-left: 1px solid $color_mercury-darker;
-  display: inline-block;
-  height: 50px;
-  margin-left: 25px;
-  padding-left: 30px;
-  width: 220px;
 
-  input[type="text"],
-  input[type="search"] {
-    border: medium none;
-    color: $color_dusty-gray;
-    max-width: 165px;
-  }
-
-  input[type="submit"],
-  button[type="submit"] {
-    background: url('{{ "icon-search.png" | asset_url }}') no-repeat center center;
-    border: medium none;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    
-    &.btn-link-default{
-      line-height: 16px;
-      text-indent: -9999px;
-      padding: 0;
-    }
-  }
-  > form {
-    padding-top: 15px;
-  }
-}
 
 .register-box {
   float: right;
@@ -76,13 +44,13 @@
 
   .info-icon.icon-cart {
     background: $color_currious-blue-darker none repeat scroll 0 0;
-    @extend %jv-border-radius-50;
     color: $color_white;
     display: block;
-    height: 56px;
     position: relative;
-    @extend %text-center;
+    height: 56px;
     width: 56px;
+    @extend %jv-border-radius-50;
+    @extend %text-center;
 
     span {
       font-size: 18px;

@@ -28,56 +28,6 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 
 
 
-.toggle-search-category {
-  display: block;
-  height: 100%;
-  position: relative;
-  width: 50px;
-
-  .toggle-category {
-    color: $color_dusty-gray;
-    display: block;
-    height: 100%;
-    position: relative;
-    @extend %text-center;
-    width: 100%;
-    z-index: 9;
-  }
-}
-.search-form .btn-link-default {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-}
-.toggle-category span {
-  line-height: 40px;
-}
-.select-category {
-  background: $color_white none repeat scroll 0 0;
-  border: 1px solid $color_mercury;
-  display: none;
-  left: -1px;
-  position: absolute;
-  top: 100%;
-  width: 180px;
-
-  li {
-    border-top: 1px solid $color_mercury;
-
-    &:first-child {
-      border-top: medium none;
-    }
-    a {
-      color: $color_dove-gray;
-      display: block;
-      padding: 5px 15px;
-
-      &:hover {
-        color: $color_dusty-gray;
-      }
-    }
-  }
-}
 // product
 .featured-product {
   margin-top: 70px;

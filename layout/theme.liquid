@@ -327,8 +327,12 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
 
 </script>
 
+{%if settings.search_auto_complete_enabale %}
+  {% include 'search-autocomplete' %}
+{% endif %}
 
 <!-- Begin Recently Viewed Products -->
+
 
 
 {% if template contains 'product' %}

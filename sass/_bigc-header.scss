@@ -657,49 +657,7 @@ a.jvlogo {
 }
 
 
-.search-form.search-form3 {
-  input[type="text"],
-  input[type="search"] {
-    border: 1px solid $color_mercury;
-    border-radius: 6px;
-    color: $color_dusty-gray;
-    height: 40px;
-    left: 15px;
-    padding: 0 15px;
-    position: absolute;
-    top: 15px;
-    width: 327px;
-  }
-  .btn-link-default {
-    background: $color_curious-blue none repeat scroll 0 0;
-    border-radius: 6px;
-    right: 15px;
-    top: 15px;
-    padding: 0 20px;
 
-    &:hover {
-      background: $color_sunglow;
-    }
-  }
-}
-
-.info-search {
-
-  .search-form3.search-form {
-    background: $color_white none repeat scroll 0 0;
-    border: medium none;
-    border-radius: 6px;
-    box-shadow: 1px 3px 3px 1px rgba($color_black, 0.1);
-    margin-right: -0px;
-    margin-top: 35px;
-    overflow: hidden;
-    right: 0;
-    width: 450px;
-  }
-  &:hover .search-form3.search-form{
-    margin-top:5px;
-  }
-}
 
 .info-total .info-cart3 .inner-cart-info {
     border: medium none;
