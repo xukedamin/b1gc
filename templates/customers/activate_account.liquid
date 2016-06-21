@@ -1,26 +1,34 @@
-<div class="container">
-  <div class="grid-item large--one-third push--large--one-third">
+<main class="main-content margin0">
+  <section class="one-child page-under-construction-3-wrapper">
+    <div data-stellar-background-ratio="0.25"  class="page-common-background"></div>
 
-    <h1>{{ 'customer.activate_account.title' | t }}</h1>
-    <p>{{ 'customer.activate_account.subtext' | t }}</p>
+    <div class="container">
+      <div class="form-vertical">
+        
 
-    {% form 'activate_customer_password' %}
+        {% form 'activate_customer_password' %}
 
-      {% include 'form-errors-custom' %}
+        <h1>{{ 'customer.activate_account.title' | t }}</h1>
+        <p>{{ 'customer.activate_account.subtext' | t }}</p>
+        
+          {% include 'form-errors-custom' %}
 
-      <label for="customer_password">{{ 'customer.activate_account.password' | t }}</label>
-      <input type="password" value="" name="customer[password]" id="customer_password">
+          <label for="customer_password">{{ 'customer.activate_account.password' | t }}</label>
+          <input type="password" value="" class="input-full" name="customer[password]" id="customer_password">
 
-      <label for="customer_password_confirmation">{{ 'customer.activate_account.password_confirm' | t }}</label>
-      <input type="password" value="" name="customer[password_confirmation]" id="customer_password_confirmation">
+          <label for="customer_password_confirmation">{{ 'customer.activate_account.password_confirm' | t }}</label>
+          <input type="password" value="" class="input-full" name="customer[password_confirmation]" id="customer_password_confirmation">
 
-      <div class="text-center">
+          <div class="text-center">
 
-          <p><input type="submit" class="btn" value="{{ 'customer.activate_account.submit' | t }}"></p>
-          <p><input type="submit" class="btn-secondary" name="decline" id="customer_decline" value="{{ 'customer.activate_account.cancel' | t }}"></p>
+              <p><input type="submit" class="bt-link bt-blue bt-radius bt-loadmore bt-style24" value="{{ 'customer.activate_account.submit' | t }}"></p>
+              <p><input type="submit" class="bt-link bt-gold bt-radius bt-loadmore bt-style29" name="decline" id="customer_decline" value="{{ 'customer.activate_account.cancel' | t }}"></p>
+
+          </div>
+        {% endform %}
 
       </div>
-    {% endform %}
+    </div>
 
-  </div>
-</div>
+  </section>
+</main>

@@ -118,6 +118,7 @@
 }
 .bt-style5:hover {
 	@extend %jv-bg-color-primary-inverse;
+	color: $color_white;
 }
 
 
@@ -1403,4 +1404,8 @@
 
 .bt-primary{
 	@extend .bt-link, .bt-yellow, .bt-style5;
+}
+
+.bt-primary-inverse{
+	@extend .bt-link, .bt-black, .bt-style4;
 }

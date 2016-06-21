@@ -2,23 +2,25 @@
   <section class="one-child page-under-construction-3-wrapper">
     <div data-stellar-background-ratio="0.25"  class="page-common-background"></div>
     <div class="container">
-      <div class="page-regsiter-wrapper">
-        <div class="page-regsiter">
+      <div class="page-register-wrapper">
+        <div class="page-register form-vertical">
           {% form 'create_customer' %}
           <h3> {{ 'customer.register.title' | t }} </h3>
 
           {% include 'form-errors-custom' %}
 
           <label for="first_name" class="hidden-label">{{ 'customer.register.first_name' | t }}</label>
-          <input type="text" value="" name="customer[first_name]" id="first_name" placeholder="{{ 'customer.register.first_name' | t }}" {% if form.errors contains "first_name" %} class="error"{% endif %} autofocus>
+          <input type="text" value="" name="customer[first_name]" id="first_name" placeholder="{{ 'customer.register.first_name' | t }}" class='input-full {% if form.errors contains "first_name" %}error{% endif %}' autofocus>
+          
           <label for="last_name" class="hidden-label">{{ 'customer.register.last_name' | t }}</label>
-          <input type="text" value="" name="customer[last_name]" id="last_name" placeholder="{{ 'customer.register.last_name' | t }}" {% if form.errors contains "last_name" %} class="error"{% endif %}>
+          <input type="text" value="" name="customer[last_name]" id="last_name" placeholder="{{ 'customer.register.last_name' | t }}" class='input-full {% if form.errors contains "last_name" %} error{% endif %}'>
 
           <label for="email" class="hidden-label">{{ 'customer.register.email' | t }}</label>
-          <input type="email" value="" name="customer[email]" id="email" placeholder="{{ 'customer.register.email' | t }}" {% if form.errors contains "email" %} class="error"{% endif %} autocorrect="off" autocapitalize="off">
+          <input type="email" value="" name="customer[email]" id="email" placeholder="{{ 'customer.register.email' | t }}" class='input-full {% if form.errors contains "email" %}error{% endif %}' autocorrect="off" autocapitalize="off">
 
           <label for="password" class="hidden-label">{{ 'customer.register.password' | t }}</label>
-          <input type="password" value="" name="customer[password]" id="create_password" placeholder="{{ 'customer.register.password' | t }}" {% if form.errors contains "password" %} class="error"{% endif %}>
+          <input type="password" value="" name="customer[password]" id="create_password" placeholder="{{ 'customer.register.password' | t }}" class='input-full {% if form.errors contains "password" %}error{% endif %}'>
+
           <div class="button">
             <input type="submit" value="{{ 'customer.register.submit' | t }}" class="bt-link bt-blue bt-radius bt-loadmore bt-style24">
           </div>
