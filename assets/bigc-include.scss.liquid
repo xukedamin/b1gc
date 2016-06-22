@@ -1035,6 +1035,24 @@ input[type="password"] {
   background: #3a3a3a none repeat scroll 0 0;
 }
 
+.mtl .btn4 {
+  width: 13em;
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+}
+.mtl .btn4 > span {
+  margin-right: 10px;
+  display: inline-block;
+}
+.mtl .btn4 .lnr {
+  display: inline-block;
+  fill: currentcolor;
+  height: 1em;
+  vertical-align: -0.05em;
+  width: 1em;
+}
+
 /***********************************************************************
 						Buttons						
 ************************************************************************/
@@ -7370,38 +7388,6 @@ Page Grid
   margin-bottom: 30px;
 }
 
-.filter-type {
-  position: absolute;
-  background: #fafafa none repeat scroll 0 0;
-  border: 1px solid #e5e5e5;
-  display: none;
-  left: 0;
-  list-style: outside none none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  z-index: 9;
-}
-.filter-type li {
-  border-bottom: 1px solid #e5e5e5;
-}
-.filter-type li:last-child {
-  border-bottom: 1px solid transparent;
-}
-.filter-type li a {
-  display: block;
-  padding: 5px 20px;
-  color: #666;
-}
-.filter-type li a.selected {
-  background: #f5f5f5 none repeat scroll 0 0;
-}
-.filter-type li a:hover {
-  color: #999;
-}
-
 .product-pagi-nav {
   margin: 0 0 0 30px;
 }
@@ -9716,6 +9702,25 @@ Page Product List Mr
   background: #fbb450 none repeat scroll 0 0;
   opacity: 1;
 }
+.banner-slider-circle-vertical .content-banner-slider {
+  position: relative;
+}
+.banner-slider-circle-vertical .caption-wrapper {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.banner-slider-circle-vertical .caption-wrapper .caption {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 10px;
+}
 
 /*Rect Vertical*/
 .banner-slider-rect-vertical .owl-pagination {
@@ -11080,6 +11085,10 @@ select.input-full {
 .product-best-sale .cart-wishlist-compare .product-compare:hover {
   background: #ffd21e;
   border-color: #ffd21e;
+}
+
+.cart-wishlist-compare form {
+  display: inline-block;
 }
 
 .product-best-sale .item-product:hover .item-product-thumb {

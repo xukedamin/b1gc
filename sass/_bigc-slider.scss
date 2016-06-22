@@ -365,6 +365,24 @@
       opacity: 1;
     }
   }
+
+  .content-banner-slider{
+    position: relative;
+  }
+
+  .caption-wrapper {
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include prefix(transform, translate(-50%, -50%));
+
+    .caption {
+      background: rgba(0, 0, 0, 0.3);
+      color: $color_white;
+      padding: 10px;
+    }
+  }
 }
 
 

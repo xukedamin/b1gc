@@ -53,6 +53,13 @@
   }
 }
 
+
+.cart-wishlist-compare form{
+    display: inline-block;
+  
+}
+
+
 .product-best-sale .item-product:hover .item-product-thumb {
     
     @include prefix(box-shadow, 0 5px 5px 0 rgba($color_black, 0.2));

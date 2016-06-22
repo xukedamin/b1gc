@@ -3,11 +3,11 @@
 
 
 {% if tab_style == '1'%}
-	{%assign class_wrap = 'product-best-sale'%}
+	{%assign class_wrap = 'product-best-sale tab_style1'%}
 {% elsif tab_style == '2' %}
-	{%assign class_wrap ='product-list-filter' %}
+	{%assign class_wrap ='product-list-filter tab_style2' %}
 {% elsif tab_style == '3' %}
-	{%assign class_wrap ='product-best-sale style2' %}
+	{%assign class_wrap ='product-best-sale style2 tab_style3' %}
 {% endif %}
 
 
@@ -85,7 +85,7 @@
 
 					{% unless collections[featured_row].all_products_count == 0 %}
 					<div id="product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
-						{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: '', leading_product_image:'', leading_time: '', quickview_enable: true %}
+						{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: '', leading_product_image:'', leading_time: '', quickview_big_enable: true %}
 					{% endunless %}
 					
 					{%if product_paginav == true %}

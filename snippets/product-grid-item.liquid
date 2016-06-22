@@ -17,8 +17,8 @@
 {% endif %}
 
 
-{% unless quickview_enable %}
-   {% assign quickview_enable = false %}
+{% unless quickview_big_enable %}
+   {% assign quickview_big_enable = false %}
 {% endunless %}
 
 {% unless product_desc_enable %}
@@ -31,7 +31,7 @@
 {% assign image_size = settings.collection_prod_image_sizes %}
 
 <div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
-  <div class="item-product  {% if quickview_enable %}item-product-loadmore{% endif%}" id="product-{{ product.id }}">
+  <div class="item-product  {% if quickview_big_enable %}item-product-loadmore{% endif%}" id="product-{{ product.id }}">
     <div class="item-product-thumb">
       <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
         {% if product.featured_image %}
@@ -45,8 +45,12 @@
 
       <div class="product-extra-mask">
         <div class="product-extra-link">
+            
+            {% if quickview_big_enable == false%}
             {%include 'product-grid-item--product-action' %}
-            {%if settings.product_quickview_enable %}
+            {% endif %}
+
+            {% if settings.product_quickview_enable %}
               <a href="#popupid" class="action product-quick-view" data-id="{{ product.handle }}" ><span class="lnr lnr-magnifier"></span></a>
               <!-- include 'product-quick-view' -->
             {% endif %}
@@ -104,7 +108,7 @@
           <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
         {% endif %}
 
-        {% if quickview_enable == true %}
+        {% if quickview_big_enable == true %}
         <div class="cart-wishlist-compare">
             {%include 'product-grid-item--product-action' %}
         </div>

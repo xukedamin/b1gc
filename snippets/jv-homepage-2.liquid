@@ -21,8 +21,11 @@
 
   {%include 'jv-sub-homepage' %}
 
-  tabs-grid
-  <div class="cotainer"> {%include 'jv-sc-product-tabs-grid' %} </div>
+  
+  tabs-grid #NEEDTOTEST
+  <div class="container"> 
+
+  {%include 'jv-sc-product-tabs-grid' %} 
   
   slider-grid
   {%include 'jv-sc-product-slider-grid' %}
@@ -36,6 +39,7 @@
   grid-simple style 3
   {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
 
+  </div>
 
 
   {% unless settings.home2_content == blank or pages[settings.home2_content].empty? or pages[settings.home2_content].content == blank %}

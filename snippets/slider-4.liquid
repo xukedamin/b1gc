@@ -4,7 +4,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
   <div class="container">
     <div class="slider-tab">
     <ul class="bxslider">
-      {% for i in (1..4) %}
+      {% for i in (1..3) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
       
 
@@ -35,7 +35,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
     </ul>
     
     <div id="bx-pager">
-     {% for i in (1..4) %}
+     {% for i in (1..3) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
       {% capture slide_title1 %}slide_{{ i }}_title_1{% endcapture %}
        {% if settings[slide] %}

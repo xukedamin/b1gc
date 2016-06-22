@@ -20,10 +20,10 @@
         <div class="item">
           <div class="content-banner-slider">
             <a href="#" class="banner-thumb-link">
-              {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
-           
-              <div data-caption-animation="fadeIn" class="caption-wrapper caption text-center">
-                <p class="heading-icon caption size-70 {% if settings[slide_icon] != blank  %} {{ settings[slide_icon] }} {% endif %}">
+              
+              {% if settings.slider2_text_enable %}
+              <div data-caption-animation="fadeIn" class="caption-wrapper text-center">
+                <p class="heading-icon size-70 {% if settings[slide_icon] != blank  %} {{ settings[slide_icon] }} {% endif %}">
                 {% if settings[slide_icon] == blank  %}
                 <br />{{ slide_icon_img | asset_url | img_tag: settings[slide_alt] }} <br />
                 {% endif %}
@@ -38,10 +38,14 @@
                 <p class="caption">{{ settings[slide_text] }}</p>
                 {% endif %}
                 {% if settings[slide_button]  != blank %}
-                <a href="{{ settings[slide_link] }}" class="caption border-btn border-btn-light btn-size-5">{{ settings[slide_button] }}</a>                            
+                <a href="{{ settings[slide_link] }}" class=" bt-link bt-yellow bt-style5">{{ settings[slide_button] }}</a>                            
                 {% endif %}                        
               </div>
-              </a>  
+              {% endif %}
+
+              <img src="{{slide_img | asset_url}}" alt="slide_alt"> 
+           
+            </a>  
           </div>
         </div>
       {% endif %}

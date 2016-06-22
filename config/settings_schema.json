@@ -5731,7 +5731,13 @@
         "type": "text",
         "id": "slider2_height",
         "label": "Slider 2 - Height (px)",
-        "default": "510"
+        "default": "446"
+      },
+       {
+        "type": "checkbox",
+        "id": "slider2_text_enable",
+        "label": "Slider 2 - Text enable",
+        "default": false
       },
       {
         "type": "header",
@@ -5761,7 +5767,7 @@
         "type": "text",
         "id": "slider3_height",
         "label": "Slider 3 - Height (px)",
-        "default": "750"
+        "default": "514"
       },
       {
         "type": "header",
@@ -5851,7 +5857,7 @@
         "type": "text",
         "id": "slider7_height",
         "label": "Slider 7 - Height (px)",
-        "default": "511"
+        "default": "680"
       }
     ]
   },

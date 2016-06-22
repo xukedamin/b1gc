@@ -238,42 +238,6 @@ Page Grid
 }
 
 
-.filter-type {
-  position: absolute;
-  background: $color_alabaster none repeat scroll 0 0;
-  border: 1px solid $color_mercury;
-  display: none;
-  left: 0;
-  list-style: outside none none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  z-index: 9;
-
-  li {
-    border-bottom: 1px solid $color_mercury;
-
-    &:last-child {
-      border-bottom: 1px solid transparent;
-    }
-    a {
-      display: block;
-      padding: 5px 20px;
-      color: $color_dove-gray;
-
-      &.selected {
-        background: $color_wild-sand none repeat scroll 0 0;
-      }
-      &:hover {
-        color: $color_dusty-gray;
-      }
-    }
-  }
-}
-
-
 .product-pagi-nav {
   margin: 0 0 0 30px;
 

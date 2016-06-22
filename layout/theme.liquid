@@ -220,10 +220,6 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
     
   </script>
 
-
-  
-  
-
   
   <div id="overlays-loading" class=" show-loading">
     <span class="loading-ball ">
@@ -333,18 +329,13 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
   {% include 'search-autocomplete' %}
 {% endif %}
 
+
 <!-- Begin Recently Viewed Products -->
-
-
-
 {% if template contains 'product' %}
-
-<script>
-Shopify.Products.recordRecentlyViewed();
-</script>
-
+  <script>
+  Shopify.Products.recordRecentlyViewed();
+  </script>
 {% endif %}
-
 <!-- End Recently Viewed Products -->
 
 
