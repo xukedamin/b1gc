@@ -4675,6 +4675,30 @@
         "id": "related_products_enable",
         "label": "Show related products"
       },
+
+       {
+        "type": "header",
+        "content": "Featured Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "featured_prod_visible",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "featured_prod_heading",
+        "label": "Heading",
+        "default": "Featured Products"
+      },
+      {
+        "type": "collection",
+        "id": "featured_prod_collection",
+        "label": "Choose collection"
+      },
+
+
        {
         "type": "checkbox",
         "id": "viewed_enable",
@@ -4692,6 +4716,7 @@
         "type": "checkbox",
         "id": "product_reviews_enable",
         "label": "Enable product reviews",
+        "default": true,
         "info": "Install the free Shopify [Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app to add product reviews."
       },
       {
@@ -4856,27 +4881,7 @@
         "id": "sidebar_vendor_enable",
         "label": "Shop by vendor"
       },
-      {
-        "type": "header",
-        "content": "Featured Products"
-      },
-      {
-        "type": "checkbox",
-        "id": "featured_prod_visible",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "featured_prod_heading",
-        "label": "Heading",
-        "default": "Featured Products"
-      },
-      {
-        "type": "collection",
-        "id": "featured_prod_collection",
-        "label": "Choose collection"
-      },
+     
       {
         "type": "text",
         "id": "featured_prod_num",

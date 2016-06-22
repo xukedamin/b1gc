@@ -77,7 +77,8 @@
 
  jQuery('.action.product-quick-view').click(function() { 
     
-     jQuery("#quick-view-template-row").show();
+    jQuery(".quickview-product").show();
+    jQuery("#quick-view-template-row").show();
 
     var id = $(this).attr('data-id');
     var rating = (($(this).closest('.item-product').find('.spr-badge').attr('data-rating')) * 20)+"%";
@@ -139,6 +140,7 @@
         'padding'   : 0,
         'onClosed'    : function() {
           jQuery("#quick-view-template-row").hide();
+          jQuery(".quickview-product").hide();
           jQuery('.quickview-product').html('');
         }
         

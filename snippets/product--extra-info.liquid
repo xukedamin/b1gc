@@ -3,7 +3,10 @@
   <div class="nav-tabs-default">
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">{{ 'products.product.description' | t }}</a></li>
+
+      {%if settings.product_reviews_enable %}
       <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">{{ 'products.product.reviews' | t }} </a></li>
+      {% endif %}
 
       {%if settings.product_custom_tab_enable %}
       <li role="presentation"><a href="#custom_tab" aria-controls="custom_tab" role="tab" data-toggle="tab">{{ settings.product_custom_tab_title }}</a></li>
@@ -23,12 +26,14 @@
     {{ product.description }}
     </div>
     
+    {% if settings.product_reviews_enable %}
     <div role="tabpanel" class="tab-pane" id="reviews">
     <h5>{{ 'products.product.reviews' | t }}</h5>
      <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
     </div>
+    {% endif %}
 
-    {%if settings.product_custom_tab_enable %}
+    {% if settings.product_custom_tab_enable %}
     <div role="tabpanel" class="tab-pane" id="custom_tab">
       <h5>{{ settings.product_custom_tab_title }}</h5>
      {{settings.product_custom_tab}}
@@ -37,13 +42,13 @@
 
 
     
-    {%if settings.product_size_chart_enable %}
+    {% if settings.product_size_chart_enable %}
     <div role="tabpanel" class="tab-pane" id="size_chart">
       <h5>{{ 'products.general.size_chart' | t }}</h5>
 
      <img src="{{ 'product_size_chart.png' | asset_url }}" alt="product_size_chart.png">
     </div>
-    {%endif%}
+    {% endif %}
 
   </div>
 

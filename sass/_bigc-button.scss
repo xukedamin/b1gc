@@ -1409,3 +1409,11 @@
 .bt-primary-inverse{
 	@extend .bt-link, .bt-black, .bt-style4;
 }
+
+.btn-primary
+{
+	@extend .bt-primary;
+	background-image: none;
+	box-shadow: none;
+	border: none;
+}
