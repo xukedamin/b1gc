@@ -38,9 +38,9 @@ $(function() {
           resultsList.empty();
           // If we have no results.
           if(data.results_count == 0) {
-            // resultsList.html('<li><span class="title">No results.</span></li>');
-            // resultsList.fadeIn(200);
-            resultsList.hide();
+             resultsList.html('<li><span class="product-title-mini">No results.</span></li>');
+             resultsList.fadeIn(200);
+            // resultsList.hide();
           } else {
             // If we have results.
             $.each(data.results, function(index, item) {

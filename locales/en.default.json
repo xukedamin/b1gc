@@ -334,7 +334,8 @@
     },
     "search_bar": {
       "placeholder": "Search all products...",
-      "submit": "Search"
+      "submit": "Search",
+      "value":"Product ..."
     },
     "footer": {
       "theme_settings": "Theme Settings",

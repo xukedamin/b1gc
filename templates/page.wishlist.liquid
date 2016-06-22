@@ -132,7 +132,7 @@
       {% capture body %}{{ body }} {% for tag in customer.tags %}{% assign the_test = 'nutthin' %}{% capture tag_id %}{{ tag }}{% endcapture %}{% assign tag_count = 0 %}{% assign tag_size = tag_id | size %}{% for tag in customer.tags %}{% capture cur_tag %}{{ tag }}{% endcapture %}{% if cur_tag contains tag_id %}{% assign cur_tag_size = cur_tag | size %}{% assign difference = tag_size | minus: cur_tag_size %}{% if difference == 0 %}{% assign the_test = tag_id %}{% else %}{% assign the_test = 'nutthin' %}{% endif %}{% endif %}{% endfor %}{% for p in collections.all.products %}{% capture pID %}{{ p.id }}{% endcapture %}{% capture difference %}{{ tag_size | minus:pID.size | money_without_currency | times:100 | divided_by: 2 }}{% endcapture %}{% assign check = difference | split:'.' %}{% if check[1] contains '5' %}{% assign display = false %}{% else %}{% assign display = true %}{% endif %}{% if display and the_test contains pID %}%0A%0A{{ p.title | replace: ' ','%20' }}%3A%20%20{{ shop.url }}{{ p.url }}{% endif %}{% endfor %}{% endfor %}{% endcapture %}
       <p><a class="share icon-mail" href='mailto:?to=&?subject={{ subject }}&amp;body={{ body }}'> {{ 'wishlist.share_email' | t }}</a></p>
       {% else %}
-      <div class="jvbox text-center">{{ 'cart.wishlist.info_list' | t }} <a href='/account/login'>{{ 'customer.form.sign_in' | t }}</a> {{ 'wishlist.or' | t }} {{ 'customer.form.create_account' | t | customer_register_link }}.</div>
+      <div class="jvbox text-center">{{ 'wishlist.info_list' | t }} <a href='/account/login'>{{ 'customer.login.sign_in' | t }}</a> {{ 'wishlist.or' | t }} {{ 'customer.register.title' | t | customer_register_link }}.</div>
       {% endif %}
       <br /><br />
     </div>

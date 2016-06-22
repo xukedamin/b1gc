@@ -159,17 +159,24 @@
     border-radius: 6px;
     color: $color_dusty-gray;
     height: 40px;
-    left: 15px;
     padding: 0 15px;
     position: absolute;
-    top: 15px;
     width: 327px;
+    //fix autocomplete search
+    // left: 15px;
+    // top: 15px;
+    left: 0;
+    top: 0;
   }
+
   .btn-link-default {
     background: $color_curious-blue none repeat scroll 0 0;
     border-radius: 6px;
-    right: 15px;
-    top: 15px;
+    //fix autocomplete search
+    // top: 15px;
+    // right: 15px;
+    top: 0;
+    right: 0;
     padding: 0 20px;
 
     &:hover {
@@ -238,6 +245,7 @@
 .search-result .search-form7{
   line-height: 47px;
   border: 1px solid $color_mercury-darker;
+  padding-left: 0;
 
   >form{
     padding: 0;
@@ -256,7 +264,7 @@ Search auto completed
   margin: 0;
   padding: 0;
   background: $color_white;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #e5e5e5;
   
   @include prefix(box-shadow,0px 4px 7px 0px rgba(0,0,0,0.1));
   @extend %jv-border-radius-4;
@@ -283,6 +291,7 @@ Search auto completed
   font-size: inherit;
 
   @extend %text-ellipsis;
+  @extend %text-left;
 }
 .search-results .thumbnail {
   float: left;
@@ -298,7 +307,7 @@ Search auto completed
 
 /*Search page*/
 
-.common-static-header {
+.header-static {
   position: relative;
   padding: 90px 0;
 

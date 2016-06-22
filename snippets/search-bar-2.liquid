@@ -1,21 +1,15 @@
-<!-- <div class="widget-wrapper widget-search">
-  <form action="/search" method="get" class="search-box">
-  <input type="hidden" name="type" value="product">
-    <input type="search" name="q" accesskey="4" autocomplete="off" placeholder="{{ 'layout.search_bar.placeholder' | t }}" />
-    <button type="submit"><i class="icon-search"></i></button>
-  </form>
-</div> -->
-
 <div class="search-form">
 <form action="/search" method="get">
  <input type="hidden" name="type" value="product">
 	<div class="wrap-toggle-search">
 		<div class="toggle-search-category">
 			<a href="#" class="toggle-category"><span class="lnr lnr-chevron-down"></span></a>
-			{% include 'nav' class: 'select-category list-unstyled', handle: 'menu-category' %}
+			{%comment%}
+			{% include 'nav' class: 'select-category list-unstyled', handle: 'category' %}
+			{%endcomment%}
 		</div>
 		
-		<input type="search" value="Product, brand..." name="q" accesskey="4" autocomplete="off" placeholder="{{ 'layout.search_bar.placeholder' | t }}" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" />
+		<input type="search" value="{{ 'layout.search_bar.value' | t }}" name="q" accesskey="4" autocomplete="off" placeholder="{{ 'layout.search_bar.placeholder' | t }}" onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" />
     
 	</div>
 	<button type="submit" class="btn-link-default" type="submit" value="Search">{{ 'layout.search_bar.submit' | t }}</button>
