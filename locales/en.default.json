@@ -96,6 +96,7 @@
       "continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
       "or": "or",
       "view_cart": "View Cart",
+      "edit_cart": "Edit Cart",
       "close_cart": "Close Cart",
       "image": "IMAGE",
       "product": "PRODUCT",
@@ -365,7 +366,10 @@
   },
   "products": {
     "general": {
-      "related_products": "We Also Recommend",
+      "related_products": "Related product",
+      "fetured_products": "Featured product",
+      "shipping_return": "Shipping and Returns",
+      "size_chart": "Size Chart",
       "save_html": "Save {{ saved_amount }}"
     },
     "product": {

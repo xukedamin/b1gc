@@ -4651,7 +4651,7 @@
       {
         "type": "checkbox",
         "id": "product_quickview_enable",
-        "label": "Show Quickview and Add to cart",
+        "label": "Show Quickview",
         "default": true
       },
       {
@@ -4701,10 +4701,35 @@
         "default": "#e5c649",
         "info": "This selection overrides your product review app settings."
       },
-        {
+      {
+        "type": "checkbox",
+        "id": "product_size_chart_enable",
+        "label": "Enable product size chart",
+        "default": true
+      },
+      {
         "type": "image",
         "id": "product_size_chart.png",
         "label": "Product size chart"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_custom_tab_enable",
+        "label": "Enable product custom tab",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_custom_tab_title",
+        "label": "Enter product custom tab title",
+        "default": "Shipping and return"
+
+      },
+      {
+        "type": "textarea",
+        "id": "product_custom_tab",
+        "label": "Enter product custom tab content",
+        "default": "Custom tab content"
       },
       {
         "type": "select",

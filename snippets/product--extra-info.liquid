@@ -1,37 +1,52 @@
-{% if settings.product_style_option == 'product_style_option_leftsidebar' %}
- 
-{% endif %}
+<div class="detail-product-tab">
+  <!-- Nav tabs -->
+  <div class="nav-tabs-default">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">{{ 'products.product.description' | t }}</a></li>
+      <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">{{ 'products.product.reviews' | t }} </a></li>
 
+      {%if settings.product_custom_tab_enable %}
+      <li role="presentation"><a href="#custom_tab" aria-controls="custom_tab" role="tab" data-toggle="tab">{{ settings.product_custom_tab_title }}</a></li>
+      {% endif %}
 
-  <div class="detail-product-tab">
-    <!-- Nav tabs -->
-    <div class="nav-tabs-default">
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">{{ 'products.product.description' | t }}</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Shipping and Returns</a></li>
-        <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">{{ 'products.product.reviews' | t }} </a></li>
-        <li role="presentation"><a href="#size_chart" aria-controls="tags" role="tab" data-toggle="tab">Size Chart</a></li>
-      </ul>
+      {%if settings.product_size_chart_enable %}
+      <li role="presentation"><a href="#size_chart" aria-controls="tags" role="tab" data-toggle="tab">{{'products.general.size_chart' | t }}</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    
+    <div role="tabpanel" class="tab-pane active" id="description">
+    <h5>{{ 'products.product.description' | t }}</h5>
+    {{ product.description }}
     </div>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="description">
-      <h5>{{ 'products.product.description' | t }}</h5>
-      {{ product.description }}
-      </div>
-      <div role="tabpanel" class="tab-pane" id="profile">
-      
-      </div>
-
-      <div role="tabpanel" class="tab-pane" id="reviews">
-      <h5>{{ 'products.product.reviews' | t }}</h5>
-       <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="size_chart">
-       {{ product_size_chart.png | asset_url | img_tag: banner_img }}
-      </div>
+    
+    <div role="tabpanel" class="tab-pane" id="reviews">
+    <h5>{{ 'products.product.reviews' | t }}</h5>
+     <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
     </div>
 
+    {%if settings.product_custom_tab_enable %}
+    <div role="tabpanel" class="tab-pane" id="custom_tab">
+      <h5>{{ settings.product_custom_tab_title }}</h5>
+     {{settings.product_custom_tab}}
+    </div>
+    {%endif %}
 
+
+    
+    {%if settings.product_size_chart_enable %}
+    <div role="tabpanel" class="tab-pane" id="size_chart">
+      <h5>{{ 'products.general.size_chart' | t }}</h5>
+
+     <img src="{{ 'product_size_chart.png' | asset_url }}" alt="product_size_chart.png">
+    </div>
+    {%endif%}
 
   </div>
+
+
+
+</div>

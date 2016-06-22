@@ -34,7 +34,7 @@
       <button class="action product-add-cart" type="button" onclick="window.location.href='{{product.url}}'" data-toggle="tooltip" data-placement="top" title="{{'products.product.select_options' | t }}"><span class="lnr lnr-cart"></span><span class="text"> {{'products.product.select_options' | t}}</span></button>
   {% else %}
       <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
-      <button class="action product-add-cart btn-ajax" type="submit"  data-toggle="tooltip" data-placement="top" title="{{'products.product.add_to_cart' | t}}"><span class="lnr lnr-cart"></span><span class="text">{{'products.product.add_to_cart' | t}}</button>
+      <button class="action product-add-cart btn-ajax" type="submit"  data-toggle="tooltip" data-placement="top" title="{{'products.product.add_to_cart' | t}}"><span class="lnr lnr-cart"></span><span class="text">{{'products.product.add_to_cart' | t}}</span></button>
   {% endif %}
 </form>  
 

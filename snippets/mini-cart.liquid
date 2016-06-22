@@ -40,7 +40,7 @@
     <label>{{ 'cart.general.subtotal' | t }}</label> <span class="right price">{% include 'price' with cart.total_price %}</span>
   </div>
   <div class="link-cart">
-    <a href="/cart" class="cart-edit">edit cart</a>
+    <a href="/cart" class="cart-edit">{{'cart.general.edit_cart' | t }}</a>
     <button type="submit" name="checkout" class="cart-checkout"> {{ 'cart.general.checkout' | t }} </button>
   </div>
 </form>

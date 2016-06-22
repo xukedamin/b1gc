@@ -83,10 +83,10 @@ $color_danube : #5a88ca;
 $color_primary : #{'{{ settings.color_primary }}'};
 $color_primary--alpha07 : #{'rgba(settings.color_primary,0.7)'};
 
-$color_primary-inverse : #{'{{ settings.$color_primary_inverse }}'};
+$color_primary-inverse : #{'{{ settings.color_primary_inverse }}'};
 
-$color_secondary : #{'{{ settings.$color_secondary }}'};
-$color_secondary-inverse : #{'{{ settings.$color_secondary_inverse }}'};
+$color_secondary : #{'{{ settings.color_secondary }}'};
+$color_secondary-inverse : #{'{{ settings.color_secondary_inverse }}'};
 
 // $color_primary-inverse : $color_shark;
 // $color_secondary : $color_currious-blue-darker;

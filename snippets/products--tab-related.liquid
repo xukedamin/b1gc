@@ -1,0 +1,69 @@
+{% assign number_of_products = 5 %}
+{% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
+
+{% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
+  {% assign found_a_collection = false %}
+  {% for c in product.collections %}
+    {% if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
+      {% assign found_a_collection = true %}
+      {% assign collection = c %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+ <div class="related-product">
+  <!-- Nav tabs -->
+  <div class="nav-tabs-default">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#related-product" aria-controls="related-product" role="tab" data-toggle="tab">{{'products.general.related_products' | t}}</a></li>
+      <li role="presentation"><a href="#featured-product" aria-controls="featured-product" role="tab" data-toggle="tab">{{'products.general.fetured_products' | t}}</a></li>
+    </ul>
+  </div>
+
+
+  <!-- Tab panes -->
+    <div class="tab-content">
+      
+      <div role="tabpanel" class="tab-pane active" id="related-product">
+        <div class="shop-detail-relate">
+        
+        {% if collection and collection.products_count > 1 %}
+          
+          <div class="shop-detail-relate pb-45 product-slider slider-owl-1-item-nav owl-default">
+            {% assign current_product = product %}
+            {% assign current_product_found = false %}
+            <div class="wrap-item">
+            {% for product in collection.products limit: number_of_products_to_fetch %}
+              {% if product.handle == current_product.handle %}
+                {% assign current_product_found = true %}
+              {% else %}
+                {% unless current_product_found == false and forloop.last %}
+
+                  {% include 'product-grid-item' %}
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+            </div>
+          </div>
+        </div>   
+
+        {% endif %}
+
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="featured-product">
+        <div class="shop-detail-relate">
+          
+          {% assign featuredCollection = collections[settings.featured_prod_collection] %}
+          <div class="featured-products">
+            {% for product in featuredCollection.products limit: settings.featured_prod_num %}
+              {% include 'product-grid-item' with grid_item_width: 'col-md-3 col-sm-6 col-xs-12'  %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+

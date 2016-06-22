@@ -4,7 +4,7 @@
 
 <div class="content-popup">
 
-    <div id="quick-view-template-row" class="item-product-featured" style="width: 782px" >
+    <div id="quick-view-template-row" class="item-product-featured">
     <div class="row">
     {% raw %}
   
@@ -38,8 +38,6 @@
                 <a data-slide-index="{{@index}}" href=""><img src={{this}}'> </a>
             {{/each}}
           </div>
-
-
 
           <div class="mt-20">
             <form action="/cart/add" method="post" class="addToCartForm form-add-to-cart" data-id="product-actions-{{product.id}}"  enctype="multipart/form-data" >    
@@ -84,11 +82,7 @@
     var id = $(this).attr('data-id');
     var rating = (($(this).closest('.item-product').find('.spr-badge').attr('data-rating')) * 20)+"%";
 
-
-
     Shopify.getProduct(id, function(product) {
-      
-      
     
       var is_compare_at_price = false;
           if(product.compare_at_price > product.price){

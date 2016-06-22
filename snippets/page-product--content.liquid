@@ -46,7 +46,8 @@
   <div class="product-thumbnail-slider-wrapper {{content_product_childclass}}">
     {% include 'product--image' %}
     {% if settings.social_sharing_products %}
-      <p><span class="uppercase">{{'products.product.shares' | t}} :</span> <div class="text-center">{% include 'social-sharing-ul' %}</div></p>
+      <p><span class="uppercase">{{'products.product.shares' | t}} :</span></p>
+      <div class="text-center">{% include 'social-sharing-ul' %}</div>
     {% endif %}
   </div>
 
@@ -89,20 +90,11 @@
   {% include 'product--extra-info' %}
 
 
+
 {% if settings.related_products_enable %}
   {% assign grid_item_width = 'col-xs-12' %}
-  {% include 'related-products' %}
-
-
+  {% include 'products--tab-related' %}
 {% endif %}
-  'FEATURED PRODUCTS'
-  {% assign featuredCollection = collections[settings.featured_prod_collection] %}
-    <div class="featured-products">
-      {% for product in featuredCollection.products limit: settings.featured_prod_num %}
-      {% include 'product-grid-item' with grid_item_width: 'col-md-3 col-sm-6 col-xs-12'  %}
-      {% endfor %}
-    </div>
-
 
 
 {% include 'product--bottom-nav' %}

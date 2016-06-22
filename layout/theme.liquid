@@ -244,8 +244,10 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
     </div>
   </div>  
 
-<div class="quickview-product" id="popupid"></div>
+{%if settings.product_quickview_enable %}
+<div class="quickview-product" id="popupid" style="width: 782px;height: 479px;"></div>
 {%include 'quick-view' %}
+{% endif %}
 
   {{ 'jquery.bxslider.js' | asset_url | script_tag }}
   {{ 'script.js' | asset_url | script_tag }}
