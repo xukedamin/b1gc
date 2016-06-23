@@ -22,26 +22,7 @@
   {%include 'jv-sub-homepage' %}
 
   
-  tabs-grid #NEEDTOTEST
-  <div class="container"> 
 
-  {%include 'jv-sc-product-tabs-grid' %} 
-  
-  slider-grid
-  {%include 'jv-sc-product-slider-grid' %}
-  
-  grid-simple style 1
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'1',product_paginav:true, product_loadmore:false, product_desc_enable: false %}
-  
-  grid-simple style 2
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true %}
-  
-  grid-simple style 3
-  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
-
-  {%include 'jv-sc-accordion-simple' %}
-
-  </div>
 
 
   {% unless settings.home2_content == blank or pages[settings.home2_content].empty? or pages[settings.home2_content].content == blank %}

@@ -1,0 +1,35 @@
+<main class="main-content content-element">
+	<div class="container">
+	  {% include 'breadcrumb' %}
+
+		<div class="box-header-intro">
+			<label>{{page.title}}</label>	
+	    {% if page.content contains '[jvsubheading]' %}
+	        {% assign sub = page.content | split:'[/jvsubheading]' | first %}
+			{% assign sub = sub | split:'[jvsubheading]' | last %}
+
+	        {% assign des = page.content | split:'[/jvsubheading]' | last %}
+	    	{{sub}}
+	    {% else %}
+			{%assign des = page.content %}
+		{% endif %}
+		</div>
+		{{des}} 
+
+		<h2>jv-sc-tabs-block</h2>
+		{%include 'jv-sc-tabs-block' %}
+
+		<h2>jv-sc-tabs-border</h2>
+		{%include 'jv-sc-tabs-border' %}
+		
+		<h2>jv-sc-tabs-default</h2>
+		{%include 'jv-sc-tabs-default' %}
+		
+		<h2>jv-sc-tabs-icon</h2>
+		{%include 'jv-sc-tabs-icon' %}
+		
+
+	</div>
+	
+	
+</main>

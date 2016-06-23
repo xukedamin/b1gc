@@ -40,13 +40,19 @@
   return '_' + Math.random().toString(36).substr(2, 9);
 };
 
-var list = jQuery('.nav-tabs-block-wrap .nav a[role=tab]');
-var panels = jQuery('.nav-tabs-block-wrap .tab-content .tab-pane');
+if(jQuery('.nav-tabs-block-wrap').length > 1)
+{
 
-for (var i = list.length - 1; i >= 0; i--) {
-	var random =  randomID();
-	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
-	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+	var list = jQuery('.nav-tabs-block-wrap .nav a[role=tab]');
+	var panels = jQuery('.nav-tabs-block-wrap .tab-content .tab-pane');
+
+	for (var i = list.length - 1; i >= 0; i--) {
+		var random =  randomID();
+		jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
+		console.log(random);
+		jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+		console.log(random);
+	}
 }
 
 </script>

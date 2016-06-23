@@ -36,13 +36,16 @@
   return '_' + Math.random().toString(36).substr(2, 9);
 };
 
-var list = jQuery('.nav-tabs-default-wrap .nav-tabs-default a[role=tab]');
-var panels = jQuery('.nav-tabs-default-wrap .tab-content .tab-pane');
+if(jQuery('.nav-tabs-default-wrap').length > 1)
+{
+	var list = jQuery('.nav-tabs-default-wrap .nav-tabs-default a[role=tab]');
+	var panels = jQuery('.nav-tabs-default-wrap .tab-content .tab-pane');
 
-for (var i = list.length - 1; i >= 0; i--) {
-	var random =  randomID();
-	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
-	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+	for (var i = list.length - 1; i >= 0; i--) {
+		var random =  randomID();
+		jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
+		jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
+	}
 }
 
 </script>
