@@ -41,8 +41,9 @@
   }
   .panel-heading{
     padding-right: 20px;
-     &:after {
+      a:after {
         color: $color_boulder;
+        content: "\e874";
         @extend %jv-font-Linearicons;
         font-size: 13px;
         position: absolute;
@@ -74,6 +75,8 @@
         left: 0;
         top: 17px;
       }
+      font-size: inherit;
+      
       &.active {
         &:before {
           background-image: url('{{ "sub.png" | asset_url }}');

@@ -1,0 +1,22 @@
+<main class="main-content content-element">
+	<div class="container">
+	  {% include 'breadcrumb' %}
+
+		<div class="box-header-intro">
+			<label>{{page.title}}</label>	
+	    {% if page.content contains '[jvsubheading]' %}
+	        {% assign sub = page.content | split:'[/jvsubheading]' | first %}
+			{% assign sub = sub | split:'[jvsubheading]' | last %}
+
+	        {% assign des = page.content | split:'[/jvsubheading]' | last %}
+	    	{{sub}}
+	    {% else %}
+			{%assign des = page.content %}
+		{% endif %}
+		</div>
+		{{des}} 
+
+		
+	</div>
+
+</main>

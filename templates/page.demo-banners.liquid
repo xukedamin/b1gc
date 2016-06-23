@@ -1,0 +1,47 @@
+<main class="main-content content-element">
+<div class="container">
+  {% include 'breadcrumb' %}
+
+	<div class="box-header-intro">
+		<label>{{page.title}}</label>	
+    {% if page.content contains '[jvsubheading]' %}
+        {% assign sub = page.content | split:'[/jvsubheading]' | first %}
+		{% assign sub = sub | split:'[jvsubheading]' | last %}
+
+        {% assign des = page.content | split:'[/jvsubheading]' | last %}
+    	{{sub}}
+    {% else %}
+		{%assign des = page.content %}
+	{% endif %}
+	</div>
+	{{des}} 
+	
+	<h2>Banner - jv-sc-banner-1</h2>
+	{%include 'jv-sc-banner-1' %}
+	
+	<h2>Banner - jv-sc-banner-2</h2>
+	{%include 'jv-sc-banner-2' %}
+
+	<h2>Banner - jv-sc-banner-3</h2>
+	{%include 'jv-sc-banner-3' %}
+
+	<h2>Banner - jv-sc-banner-4</h2>
+	{%include 'jv-sc-banner-4' %}
+
+	<h2>Banner - jv-sc-banner-5</h2>
+	{%include 'jv-sc-banner-5' %}
+	
+	<h2>Banner - jv-sc-banner-about</h2>
+	{%include 'jv-sc-banner-about' %}
+
+
+	<h2>Banner - jv-sc-banner-product-adv</h2>
+	{%include 'jv-sc-banner-product-adv' %}
+	
+</div>
+
+
+<div class="container"><h2>Banner - jv-sc-banner-catalog</h2></div>
+	{%include 'jv-sc-banner-catalog' %}
+
+</main>

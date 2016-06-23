@@ -1,0 +1,42 @@
+<main class="main-content content-element">
+<div class="container">
+  {% include 'breadcrumb' %}
+
+	<div class="box-header-intro">
+		<label>{{page.title}}</label>	
+    {% if page.content contains '[jvsubheading]' %}
+        {% assign sub = page.content | split:'[/jvsubheading]' | first %}
+		{% assign sub = sub | split:'[jvsubheading]' | last %}
+
+        {% assign des = page.content | split:'[/jvsubheading]' | last %}
+    	{{sub}}
+    {% else %}
+		{%assign des = page.content %}
+	{% endif %}
+	</div>
+	{{des}} 
+</div>	
+
+	<div class="container">
+	<h2>Banner - slider-1</h2>
+	{%include 'slider-1' %}
+	</div>
+	
+	<div class="container"><h2>Banner - slider-2</h2></div>
+	{%include 'slider-2' %}
+
+	<div class="container"><h2>Banner - slider-3</h2></div>
+	{%include 'slider-3' %}
+
+	<div class="container"><h2>Banner - slider-4</h2></div>
+	{%include 'slider-4' %}
+
+	
+	<div class="container"><h2>Banner - slider-6</h2></div>
+	{%include 'slider-6' %}
+
+	<div class="container"><h2>Banner - slider-7</h2></div>
+	{%include 'slider-7' %}
+
+
+</main>

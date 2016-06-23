@@ -327,7 +327,7 @@ Dependency-free breakpoint mixin
   border-radius: 4px;
 }
 
-[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-item-has-children > a:after, .mainmenu > ul > li.menu-item-has-children:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
+[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-item-has-children > a:after, .mainmenu > ul > li.menu-item-has-children:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .language-box::after,
 .currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .item-popular-thumb:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before {
   font-family: Linearicons-Free;
@@ -3169,8 +3169,9 @@ span.click-button {
 .panel-group.accordion.style1 .panel-heading {
   padding-right: 20px;
 }
-.panel-group.accordion.style1 .panel-heading:after {
+.panel-group.accordion.style1 .panel-heading a:after {
   color: #747474;
+  content: "\e874";
   font-size: 13px;
   position: absolute;
   right: 0;
@@ -3188,6 +3189,9 @@ span.click-button {
 .panel-group.accordion.style2 .panel-heading {
   font-size: 13px;
   padding: 17px 15px 17px 25px;
+}
+.panel-group.accordion.style2 .panel-heading a {
+  font-size: inherit;
 }
 .panel-group.accordion.style2 .panel-heading a:before {
   width: 14px;

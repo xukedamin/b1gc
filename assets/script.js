@@ -417,6 +417,7 @@
       //Category Slider
       if ($('.category-slider').length > 0) {
             $('.category-slider').each(function() {
+
                 $(this).find('.wrap-item').owlCarousel({
                     items: 1,
                     itemsCustom: [
@@ -428,8 +429,9 @@
                     ],
                     pagination: false,
                     lazyLoad : true,
-                    navigation: true,
+                    navigation: true
                 });
+
             });
         }
         //Post Slider

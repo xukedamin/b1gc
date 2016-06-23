@@ -1,0 +1,33 @@
+<main class="main-content content-element">
+<div class="container">
+  {% include 'breadcrumb' %}
+
+	<div class="box-header-intro">
+		<label>{{page.title}}</label>	
+    {% if page.content contains '[jvsubheading]' %}
+        {% assign sub = page.content | split:'[/jvsubheading]' | first %}
+		{% assign sub = sub | split:'[jvsubheading]' | last %}
+
+        {% assign des = page.content | split:'[/jvsubheading]' | last %}
+    	{{sub}}
+    {% else %}
+		{%assign des = page.content %}
+	{% endif %}
+	</div>
+	{{des}} 
+	
+	<h2>style 01</h2>
+	{%include 'jv-sc-accordion-simple' with accor_id:"acc_simple" %}
+	
+	<h2>style 02</h2>
+	{%include 'jv-sc-accordion-simple' with accor_style: 'style2', accor_id:"acc_style_2" %}	
+	
+	<h2>style 03</h2>
+	{%include 'jv-sc-accordion-simple' with accor_style: 'style3', accor_id:"acc_style_3"  %}	
+
+	
+</div>
+
+
+
+</main>
