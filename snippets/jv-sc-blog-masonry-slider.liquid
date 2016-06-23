@@ -20,6 +20,7 @@
         {% endif %}
       </div>
     {% endunless%}
+
     {% include 'jv-sc-heading-box' %}
 
     <div class="paginav-slider">
@@ -53,7 +54,7 @@
 
               {%assign test =  forloop.index | modulo:item_per_slide %}
               {% if test == 0 %}
-                {{'</div>'}}
+                </div>
                 {%if forloop.last == false %}
                 <!-- open new item -->
                   {{'<div class="item masonry-container">'}}
@@ -62,7 +63,7 @@
 
               {% endfor %}
        
-          </div>
+          <!-- </div> -->
           <!-- item masonry-container -->
       </div> 
       <!-- wrap-item -->

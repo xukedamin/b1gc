@@ -751,6 +751,17 @@
   }
 }
 
+ul.blog-related{
+  list-style: none;
+  li{
+    margin-bottom: 30px;
+  }
+  .post-date {
+    color: $color_dusty-gray;
+    margin: 0;
+  }
+}
+
 .tagcloud {
   a {
     border: 1px solid $color_mercury;
