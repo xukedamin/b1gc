@@ -163,11 +163,7 @@
 
 
 .item-product-loadmore {
-  &:hover .product-quick-view {
-    opacity: 1;
-    @extend %jv-transform-scale-1;
 
-  }
   .item-product-thumb {
     background: $color_white;
 
@@ -175,6 +171,7 @@
       display: none;
     }
   }
+
   .product-quick-view {
     background: rgba($color_curious-blue, 0.9) none repeat scroll 0 0 !important;
     bottom: 0;
@@ -196,7 +193,20 @@
     @extend %jv-transition-easeout;
     @extend %jv-transform-scale-05;
     
+
+    padding: 0;
+    text-align: center;
+
+    [class*="lnr-"]{
+      font-size: 20px;
+    }
   }
+  
+  &:hover .product-quick-view {
+    opacity: 1;
+    @extend %jv-transform-scale-1;
+  }
+
   .item-product-info {
     margin: 0;
     padding: 25px;

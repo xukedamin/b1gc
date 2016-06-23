@@ -1,13 +1,3 @@
-.title-normal {
-  font-size: 30px;
-  margin: 0 0 10px;
-  @extend %text-up;
-}
-
-.title-product-best-sale {
-    margin-bottom: 50px;
-    position: relative;
-}
 
 .filter-product {
   .btn-filter.style-border-left {
@@ -27,24 +17,5 @@
   }
 }
 
-.product-best-sale{
-  margin-bottom:50px;
-  .item-product.item-product-loadmore {
-      background: $color_white none repeat scroll 0 0;
-      box-shadow: none;
-      margin: 0 0 30px;
-  }
-}
-
-.product-best-sale .item-product-loadmore {
-  .item-product-thumb {
-      background: $color_wild-sand none repeat scroll 0 0;
-  }
-  .item-product-info {
-      margin: 15px 0 0;
-      padding: 0;
-      @extend %text-left;
-  }
-}
 
 

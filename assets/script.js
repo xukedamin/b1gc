@@ -427,6 +427,7 @@
                         [1200, 4]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                 });
             });
@@ -444,6 +445,7 @@
                         [1200, 2]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>']
                 });
@@ -463,6 +465,7 @@
                         [1200, 2]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>']
                 });
@@ -482,6 +485,7 @@
                         [1200, 3]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: false,
                     autoPlay: true
                 });
@@ -504,6 +508,7 @@
                         [1200, 4]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true
                 });
             });
@@ -523,6 +528,7 @@
                         [1200, 4]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
                 });
@@ -542,6 +548,7 @@
                         [1200, 6]
                     ],
                     pagination: true,
+                    lazyLoad : true,
                     navigation: false,
                     autoPlay: true,
                 });
@@ -559,6 +566,7 @@
                         [1200, 6]
                     ],
                     pagination: true,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
                 });
@@ -576,6 +584,7 @@
                         [1200, 6]
                     ],
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
                 });
@@ -590,6 +599,7 @@
                 $(this).find('.wrap-item').owlCarousel({
                     singleItem: true,
                     pagination: false,
+                    lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
                 });
@@ -604,6 +614,7 @@
                     singleItem: true,
                     transitionStyle: "fade",
                     pagination: true,
+                    lazyLoad : true,
                     navigation: false
                 });
             });
@@ -619,7 +630,8 @@
                 $(this).find('.wrap-item').owlCarousel({
                     singleItem: true,
                     pagination: true,
-                    navigation: false
+                    lazyLoad : true,
+                    navigation: false,
                 });
             });
         }
@@ -641,6 +653,7 @@
                     singleItem: true,
                     pagination: false,
                     navigation: true,
+                    lazyLoad : true,
                     autoPlay: false,
                     navigationText: ['<span class="lnr lnr-chevron-left"></span>', '<span class="lnr lnr-chevron-right"></span>']
                 });
@@ -659,6 +672,7 @@
                         [992, 1],
                         [1200, 4]
                     ],
+                    lazyLoad : true,
                     pagination: true,
                     navigation: false,
                 });
@@ -679,6 +693,7 @@
                         [1200, 1]
                     ],
                     addClassActive: true,
+                    lazyLoad : true,
                     pagination: true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
