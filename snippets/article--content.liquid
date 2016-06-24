@@ -1,0 +1,58 @@
+ <div class="post-detail TEST">
+  
+  {% if article.excerpt.size > 0 %}
+    <div class="video-container post-thumbnail col-md-7 col-sm-6 col-xs-12 pull-right">
+      {{ article.excerpt }}
+    </div>
+    {% elsif article.image %}
+      {% assign image_alt = article.title | escape %}
+      <div class="post-thumbnail col-md-7 col-sm-6 col-xs-12 pull-right">
+        {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+      </div>
+  {% endif %}
+
+  <h2 class="post-title">{{ article.title }}</h2>
+  <div class="post-info">
+    <label> {{ 'blogs.article.postedby' | t }}</label> <a href="#" class="post-author"> {{ article.author }} </a> 
+    <time class="post-date" pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
+  
+
+  {% if settings.social_sharing_blog %}
+    <div class="share-social">
+      <label>{{ 'blogs.article.share' | t }}</label>
+      {% include 'social-sharing-ul' %}
+    </div>
+  {% endif %}
+  </div>
+
+  <div class="content">
+    {{ article.content }}
+  </div>
+  
+  <div class="list-post-tags">
+    {% include 'article--tags' %}
+  </div>
+
+
+  {% if blog.next_article or blog.previous_article %}
+    <p class="control-post clearfix pt-25">
+      {% if blog.previous_article %}
+        <span class="pull-left">
+          {{ 'blogs.article.older_post' | t | prepend: '← ' | link_to: blog.previous_article }}
+        </span>
+      {% endif %}
+      {% if blog.next_article %}
+        <span class="pull-right">
+          {{ 'blogs.article.newer_post' | t | append: ' →' | link_to: blog.next_article }}
+        </span>
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {% if blog.comments_enabled? %}
+  <div class="post-comment">
+    <h4 class="post-title"><a href="#write-comment">{{ 'blogs.comments.comments_with_count' | t: count: number_of_comments }}</a></h4>
+    {%include 'article--comments'%} 
+  </div>
+  {% endif %}
+</div>

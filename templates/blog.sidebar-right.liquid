@@ -25,17 +25,17 @@
   </div>
 {% endif %}
 
-  <section role="main" class="wrapper-content full-content ">
+  <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
     <div class="container">
 
       {% paginate blog.articles by 5 %}
 
       <div class="row">
-        <div class="col-md-9 col-md-offset-3 blog-list blog-main-right has-sidebar">
+        <div class="col-md-9 blog-list blog-main-left has-sidebar">
           
           {% for article in blog.articles %}
-
-            {%include 'blog--list-item'%}
+            
+           {%include 'blog--list-item'%}
 
           {% endfor %}
 
@@ -46,11 +46,9 @@
               </div>
             </div>
           {% endif %}
-
-
         </div>
 
-        <aside class="sidebar-blog col-md-3 col-md-jvoffset-12">
+        <aside class="sidebar-blog col-md-3">
           {% include 'blog-sidebar' %}
         </aside>
 

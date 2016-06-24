@@ -1323,34 +1323,7 @@
         "label": "Mailing list description",
         "default": "Enter your email address to receive all news, updates on new arrivals, special offers and other discount information."
       },
-      {
-        "type": "header",
-        "content": "Instagram"
-      },
-      {
-        "type": "text",
-        "id": "instagram_id",
-        "label": "Instagram Client ID [( ? )](http:\/\/jelled.com\/instagram\/access-token)",
-        "default": "c42ae934e02f48daa2eb1793851e2d39"
-      },
-      {
-        "type": "text",
-        "id": "instagram_token",
-        "label": "Instagram Access Token [( ? )](http:\/\/jelled.com\/instagram\/access-token)",
-        "default": "2209322954.cf0499d.0f04acc59d3e46ef824ddd6d7d4be1e0"
-      },
-      {
-        "type": "text",
-        "id": "instagram_userid",
-        "label": "Instagram User ID [( ? )](http:\/\/jelled.com\/instagram\/lookup-user-id)",
-        "default": "2209322954"
-      },
-      {
-        "type": "text",
-        "id": "instagram_username",
-        "label": "Instagram Username",
-        "default": "toan_cuchi123"
-      },
+    
       {
         "type": "header",
         "content": "Contact Us"
