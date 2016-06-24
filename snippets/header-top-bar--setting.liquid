@@ -39,9 +39,10 @@
 			<div class="col-md-8 col-sm-8 col-xs-5">
 				<div class="top-right">
 					<ul class="list-inline">
+						
+						{% if shop.customer_accounts_enabled and top_bar_myaccount_show %}
 						<li class="info-user">
 
-							{% if shop.customer_accounts_enabled and top_bar_myaccount_show %}
 			          {% if customer %}
 			            <ul class="dropdownMenu subrtl">
 			              <li>
@@ -67,20 +68,18 @@
 			                {% if shop.customer_accounts_optional %}
 			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
 			                {% endif %}
-			               
-											<li><a href="#"><span class="lnr lnr-sync"></span> Compare</a></li>
 											<li><a href="#"><span class="lnr lnr-exit"></span> Checkout</a></li>
 			              </ul>
 			            </li>
 			          </ul>
 			        {% endif %}
-			      {% endif %}
 
 						</li>
+			      {% endif %}
 						
 						{% if settings.header_cart_enable and top_bar_header_cart_show %}
 						<li class="info-cart">
-		            <a href="#" class="top-header__menu-title mycart-link ">
+		            <a href="#" class="top-header__menu-title mycart-link cart-toggle xs-text-hidden">
 		            	<span class="lnr-cart"></span> {{ 'cart.general.mycart' | t }}  <span class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
 		            </a>
 		            

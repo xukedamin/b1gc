@@ -1,12 +1,12 @@
 {% if handle != '' %}
-<ul class="mega-menu-content{{ class }}">
+<ul class="mega-menu-content{{ class }} mega-style1">
   {% for link in linklists[handle].links %}  
-  <li class="{% if link.active %} active{% endif %} menu-title">
+  <li class="{% if link.active %} active{% endif %} menu-title mega-menu-item-has-children column-megamenu">
     <a href="{{ link.url }}">{{ link.title }}</a>
     {% assign handlej = link.title | handleize %}
     {% if linklists[handle].links.size > 0 %}
-    {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
-      {% include 'nav' class:'', handle: handlei %}
+    {% capture handlei %}{{handlej}}{% endcapture %}
+      {% include 'nav' class:'sub-menu', handle: handlei %}
     {% endif %}
   </li>
   {% endfor%}

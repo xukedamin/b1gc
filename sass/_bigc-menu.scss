@@ -498,6 +498,11 @@ NAV - vertical style
     z-index: 99;
   }
 
+  //header-4
+  .header-4 .mobile-menu{
+    top: -5px;
+  }
+
   .nav-vertical .mobile-menu {
     right: 1px;
     top: -31px;
@@ -507,7 +512,12 @@ NAV - vertical style
     }
   }
 
-  .main-nav .main-menu ,
+  //megamenu
+  .dropdownMenu .mega-menu .mega-menu-content.sub-menu{
+    background-image: none;
+  }
+
+  .main-nav .main-menu,
   .dropdownMenu{
     background: #fff none repeat scroll 0 0;
     border: 1px solid #e5e5e5;

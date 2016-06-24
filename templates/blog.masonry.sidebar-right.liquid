@@ -4,8 +4,10 @@
   <div class="container"> {% include 'breadcrumb' %} </div>
   {% endif %}  
 
-{% if page.metafields.jvpage.titlePage != 'hide'  %}
-  <div class="common-static-header">
+{{page.metafields}}
+{{page.metafields.jvpage.titlePage}}
+
+<div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25"
       {% if page.metafields.jvpage.titleBackground != blank %}
         style="background-image:url({{ page.metafields.jvpage.titleBackground }})"
@@ -22,9 +24,9 @@
       </span>
       </h1>
     </div>
-  </div>
-{% endif %}
-<section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
+</div>
+
+<section role="main" class="wrapper-content full-content">
 <div class="container">
 
   {% paginate blog.articles by 8 %}
@@ -47,16 +49,6 @@
         </div>
         {% endif %}
 
-        
-        {%comment %}
-        <div id="product-list-foot"></div>
-        {% if paginate.current_page < paginate.pages %}
-        <div class="news-load-more">
-          <a class="addmore btn-link-default" href="{{ paginate.next.url }}">Load More</a>
-        </div>
-        {% endif %}
-        {%endcomment%}
-
       </div>
       <script language="javascript">
       
@@ -68,7 +60,7 @@
           });
 
           grid.addEventListener( 'click', function( event ) {
-            if ( !matchesSelector( event.target, '.popular-box' )  ) {
+            if ( !matchesSelector( event.target, '.popular-box' )) {
               return;
             }
             var itemElem = event.target.parentNode;

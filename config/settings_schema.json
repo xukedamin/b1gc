@@ -4606,6 +4606,22 @@
     ]
   }
   ,
+    {
+    "name": "Collections Product",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "page_collections_enable",
+        "label": "Show Collections",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "page_product_in_collections_enable",
+        "label": "Show product in Collections"
+      }
+    ]
+  },
   {
     "name": "Product",
     "settings": [ 
@@ -4768,7 +4784,7 @@
     ]
   },
   {
-    "name": "Sidebar ",
+    "name": "Collection Sidebar ",
     "settings": [
       {
         "type": "select",
@@ -5047,31 +5063,7 @@
       }
     ]
   },
-  {
-    "name": "Customer",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Login"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading",
-        "label": "Heading H3",
-        "default": "WELCOME BACK!"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading_text",
-        "label": "Customer text",
-        "default": "Login to your account below"
-      },
-      {
-        "type": "image",
-        "id": "customer_image.jpg"
-      }
-    ]
-  },
+
   {
     "name": "Currency",
     "settings": [
@@ -5117,167 +5109,8 @@
       }
     ]
   },
-  {
-    "name": "Page FAQ",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "text",
-        "id": "faq1_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq1_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "text",
-        "id": "faq2_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq2_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "text",
-        "id": "faq3_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq3_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "text",
-        "id": "faq4_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq4_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #5"
-      },
-      {
-        "type": "text",
-        "id": "faq5_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq5_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
-        "type": "text",
-        "id": "faq6_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq6_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
-        "type": "text",
-        "id": "faq7_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq7_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #8"
-      },
-      {
-        "type": "text",
-        "id": "faq8_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq8_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #9"
-      },
-      {
-        "type": "text",
-        "id": "faq9_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq9_text",
-        "label": "Content"
-      },
-      {
-        "type": "header",
-        "content": "Item #10"
-      },
-      {
-        "type": "text",
-        "id": "faq10_title",
-        "label": "Title"
-      },
-      {
-        "type": "textarea",
-        "id": "faq10_text",
-        "label": "Content"
-      }
-    ]
-  },
-  {
-    "name": "Page Collections",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "page_collections_enable",
-        "label": "Show Collections",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "page_product_in_collections_enable",
-        "label": "Show product in Collections"
-      }
-    ]
-  },
+  
+
   {
     "name": "Page About Us",
     "settings": [
@@ -5294,11 +5127,21 @@
         "type": "image",
         "id": "account_bg_image.jpg",
         "label": "Set background image"
+      },
+        {
+        "type": "text",
+        "id": "customer_heading",
+        "label": "Login welcome message",
+        "default": "WELCOME BACK!"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading_text",
+        "label": "Login welcome message extra",
+        "default": "Login to your account below"
       }
     ]
   },
-
-
 
   {
     "name": " Page Contact",
