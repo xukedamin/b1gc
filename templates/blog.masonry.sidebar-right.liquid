@@ -30,7 +30,7 @@
   {% paginate blog.articles by 8 %}
 
   <div class="row">
-    <div class="col-md-9 col-md-offset-3 content-blog-page">
+    <div class="col-md-9 content-blog-page">
       <div class="row masonry-container">
         
         {% for article in blog.articles %}
@@ -81,7 +81,7 @@
       });
 
       </script>
-      <aside class="sidebar-blog col-md-3 col-md-jvoffset-12">
+      <aside class="sidebar-blog col-md-3">
         {% include 'blog-sidebar' %}
       </aside>
     </div>

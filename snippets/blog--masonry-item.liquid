@@ -1,0 +1,28 @@
+<div class="col-md-6 itemMasonry TESSST">
+  <article class="popular-box">
+    
+      {% if article.excerpt.size > 0 %}
+        <div class="video-container popular-box-thumb">
+          {{ article.excerpt }}
+        </div>
+      {% else %}
+        {% if article.image %}
+          {% assign image_alt = article.title | escape %}
+          <div class="post-thumbnail popular-box-thumb">
+            {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+          </div>
+        {% endif %}
+      {% endif %}
+      <div class="popular-box-text">
+        <div class="desc-popular-box date"><time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></div>
+        <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
+        <p class="desc-popular-box"><span>{{ article.content | strip_html | truncatewords: 6 }}</span></p>
+
+        </div>
+        <div class="share pull-right">
+            {% if settings.social_sharing_blog %}
+              {% include 'social-sharing-ul' %}
+            {% endif %}
+        </div>
+  </article>
+</div>
