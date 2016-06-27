@@ -327,7 +327,8 @@ Dependency-free breakpoint mixin
   border-radius: 4px;
 }
 
-[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-item-has-children > a:after, .mainmenu > ul > li.menu-item-has-children:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
+[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button::before, .right-open span.click-button::before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-item-has-children > a:after, .menu-dropdown > a:after,
+.mainmenu > ul > li.menu-item-has-children:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .language-box::after,
 .currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .item-popular-thumb:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before {
   font-family: Linearicons-Free;
@@ -3794,7 +3795,7 @@ span.click-button {
 .mainmenu .sub-menu li {
   padding: 0 15px;
 }
-.mainmenu .sub-menu li > a {
+.mainmenu .sub-menu li:not(:last-child) a {
   border-bottom: 1px solid {{ settings.mega_sub_boder_color }};
 }
 
@@ -3962,7 +3963,7 @@ NAV - vertical style
   overflow: hidden;
   padding: 2px;
   position: absolute;
-  right: 0;
+  right: 15px;
   top: -35px;
   width: 30px;
   display: none;
@@ -3986,6 +3987,10 @@ NAV - vertical style
 
   .header-4 .mobile-menu {
     top: -5px;
+  }
+
+  .header-4 .info-total > .info-search {
+    margin-right: 20px;
   }
 
   .nav-vertical .mobile-menu {
@@ -4013,6 +4018,10 @@ NAV - vertical style
     transition: all 0.5s ease-out 0s;
     width: 290px;
     z-index: 9999;
+  }
+
+  .mainmenu > .dropdownMenu {
+    top: 35px;
   }
 
   .mainmenu .active {
@@ -4054,8 +4063,35 @@ NAV - vertical style
     top: 16px;
   }
 
+  .menu-dropdown > a:after {
+    color: #999;
+    content: "\e874";
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 16px;
+  }
+
   .mainmenu > ul > li.menu-item-has-childrent > a {
     padding-right: 15px;
+  }
+
+  .menu-item-has-children > a:after {
+    left: 20px;
+  }
+
+  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li {
+    text-transform: none;
+    padding-left: 0;
+  }
+  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li:not(:last-child) a {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li a {
+    padding: 12px 15px;
+  }
+  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a:after {
+    display: none;
   }
 
   .mainmenu .sub-menu {
@@ -4066,6 +4102,10 @@ NAV - vertical style
     left: 0 !important;
     visibility: visible !important;
     width: 100% !important;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    padding-bottom: 0;
   }
 
   .nav-vertical {

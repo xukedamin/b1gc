@@ -274,10 +274,9 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   @extend %jv-transition-easeout;
   li{
     padding: 0 15px;
-    >a{
-       // border-bottom: 1px solid $color_mercury;
-       border-bottom: $menu__sub__border;
-    }
+  }
+  li:not(:last-child) a{
+     border-bottom: $menu__sub__border;
   }
 }
 
@@ -455,16 +454,16 @@ NAV - vertical style
   }
 }
 
-
+.menu-dropdown>a:after,
 .mainmenu > ul >li.menu-item-has-children:before{
    @extend %jv-font-Linearicons;
 }
-//HOME 3
+
 
 /* -------------------------------------------------------------------
   Mobile menu
 --------------------------------------------------------------------*/
-//Mobile menu
+
 // main nav
 .mobile-menu {
   border: 1px solid $color_mercury;
@@ -473,7 +472,8 @@ NAV - vertical style
   overflow: hidden;
   padding: 2px;
   position: absolute;
-  right: 0;
+  // right: 0;
+  right: 15px;
   top: -35px;
   width: 30px;
   display:none;
@@ -501,6 +501,10 @@ NAV - vertical style
   //header-4
   .header-4 .mobile-menu{
     top: -5px;
+  }
+
+  .header-4 .info-total > .info-search{
+    margin-right: 20px;
   }
 
   .nav-vertical .mobile-menu {
@@ -531,8 +535,15 @@ NAV - vertical style
     width: 290px;
     z-index: 9999;
   }
+
+
+  .mainmenu > .dropdownMenu{
+    top: 35px;
+  }
   
-  .mainmenu .active,
+  
+
+  .mainmenu .active
   {
     right: 0;
   }
@@ -574,12 +585,46 @@ NAV - vertical style
      
     }
   }
+  //sub menu icon
+  .menu-dropdown>a:after{
+     color: #999;
+      content: "\e874";
+      font-size: 13px;
+      position: absolute;
+      right: 0;
+      top: 16px;
+
+  }
 
 
-  .mainmenu > ul > li.menu-item-has-childrent>a {
+  .mainmenu > ul > li.menu-item-has-childrent > a {
     padding-right: 15px;
   }
 
+
+  .menu-item-has-children>a:after{
+    left: 20px;
+  }
+
+
+  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li
+  {
+    text-transform: none;
+    padding-left: 0;
+
+    &:not(:last-child) a{
+      border-bottom: 1px solid $color_mercury;
+
+    }
+
+    a{
+      padding: 12px 15px;
+    }
+
+    > a:after{
+      display: none;
+    }
+  }
 
   .mainmenu .sub-menu {
     display: none;
@@ -589,8 +634,17 @@ NAV - vertical style
     left: 0!important;
     visibility: visible!important;
     width: 100%!important;
+
+    //
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    padding-bottom: 0;
+
+
   }
 
+  //nav-vertical home 1
   .nav-vertical {
     max-width: none;
     
