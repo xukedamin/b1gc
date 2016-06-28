@@ -96,7 +96,7 @@ $color_secondary-inverse : #{'{{ settings.color_secondary_inverse }}'};
 	background-color: $color_primary;
 }
 %jv-color-primary{
-	color: $color_primary;
+	color: $color_primary !important;
 }
 %jv-border-color-primary{
 	border-color: $color_primary;

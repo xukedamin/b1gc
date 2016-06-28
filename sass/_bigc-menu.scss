@@ -13,6 +13,7 @@ $menu__sub__header-color: #{'{{ settings.mega_sub_color_header }}'};
 $menu__sub__header-font-size: #{'{{ settings.mega_sub_size_header }}px'};
 
 $menu__sub__background-color: #{'{{ settings.mega_sub_bg_color }}'};
+$menu__sub__border-color: #{'{{ settings.mega_sub_boder_color }}'};
 $menu__sub__border: 1px solid #{'{{ settings.mega_sub_boder_color }}'};
 
 // {% if settings.mega_sub_family != '0' %}
@@ -23,10 +24,9 @@ $menu__sub__font-weight:  #{'{{ settings.mega_sub_weight }}'};
 $menu__sub__font-size: #{'{{ settings.mega_sub_size }}px'} ;
 
 
-
 $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
 
-//MENU
+
 .dropdownMenu {
   margin: 0;
   padding: 0;
@@ -37,7 +37,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
     position: relative;
 
     > a {
-      // font-family: $menu__font-family;
       font-size: $menu__font-size;
       padding: 0 $menu__padding;
       color: $menu__main-color;
@@ -46,7 +45,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
       height: $menu__height;
       outline: none;
       text-decoration: none;
-      // overflow: hidden;
       display: block;
       position: relative;
       @extend %text-up;
@@ -268,16 +266,22 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   // border: 1px solid $color_mercury;
   border : $menu__sub__border;
 
-  padding: 10px 0px 30px;
+  padding: 10px 0px;
   list-style: none;
   box-shadow: -1px 3px 5px -1px rgba($color_black, 0.1);
   @extend %jv-transition-easeout;
   li{
     padding: 0 15px;
   }
-  li:not(:last-child) a{
-     border-bottom: $menu__sub__border;
-  }
+
+}
+
+
+
+
+
+.mainmenu .sub-menu li:not(:last-child) > a{
+   border-bottom: $menu__sub__border;
 }
 
 .menu-item-has-children {
@@ -293,31 +297,28 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   }
 
   > a:after {
-    background: $color_white none repeat scroll 0 0;
-    // background-color: $menu__sub__background-color;
+
     color: $color_mercury;
-    content: "\e873";
-    font-size: 13px;
-    left: 50%;
-    margin-left: -5px;
-    margin-top: 30px;
-    opacity: 0;
+    content: "";
+    display: block;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px $color_mercury;
     position: absolute;
-    top: 100%;
+    bottom: -10px;
+    left: 20px;
+    z-index: 1;
     visibility: hidden;
-    line-height: 11px;
-    height: 11px;
-    width: 11px;
-    z-index: 10;
-    @extend %jv-font-Linearicons;
+    opacity: 0;
     @extend %jv-transition-easeout;
   }
-}
 
-.menu-item-has-children:hover > a:after {
-    opacity: 1;
-    visibility: visible;
-    margin-top: -10px;
+  &:hover > a:after {
+      opacity: 1;
+      visibility: visible;
+      bottom: 0px;
+  }
+  
 }
 
 
@@ -326,6 +327,9 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   font-size:  $menu__sub__header-font-size;
 }
 
+/* -------------------------------------------------------------------
+Label badge
+--------------------------------------------------------------------*/
 
 .label-sub {
   font-size: 10px;
@@ -347,9 +351,8 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
 }
 
 /* -------------------------------------------------------------------
-NAV - vertical style
+NAV - vertical style//HOME 1
 --------------------------------------------------------------------*/
-//HOME 1
 
 .nav-vertical {
   max-width: 200px;
@@ -393,6 +396,8 @@ NAV - vertical style
   }
 }
 
+
+
 .nav-vertical {
   li.menu-item-has-children > .sub-menu {
     background: $color_shark none repeat scroll 0 0;
@@ -414,33 +419,35 @@ NAV - vertical style
   }
 }
 
-.nav-vertical .dropdownMenu > li {
-  float: none;
-  >a{
-    line-height: inherit;
-    height: auto;
+.nav-vertical .dropdownMenu 
+{
+  > li {
+    float: none;
+    >a{
+      line-height: inherit;
+      height: auto;
+    }
   }
+
+  .menu-item-has-children.mega-menu{
+    position: relative !important;
+
+    .mega-menu-content > li > a {
+      color: $color_silver-chalice;
+      
+    }
+  }
+
+
+  .mega-menu .mega-menu-content.sub-menu{
+    background: $color_shark none repeat scroll 0 0;
+    left: 100%;
+    width: 650px;
+    background-image: none;
+  }
+
 }
 
-.nav-vertical .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a {
-  color: $color_silver-chalice;
-  
-}
-
-.nav-vertical .dropdownMenu .menu-item-has-children.mega-menu{
-  position: relative !important;
-}
-
-
-.nav-vertical .dropdownMenu .mega-menu .mega-menu-content.sub-menu{
-  background: $color_shark none repeat scroll 0 0;
-  left: 100%;
-  width: 650px;
-  background-image: none;
-}
-
-
-//HOME 1
 .nav-vertical > ul > li:hover > a{
   &:before {
     opacity:1;
@@ -454,9 +461,20 @@ NAV - vertical style
   }
 }
 
-.menu-dropdown>a:after,
-.mainmenu > ul >li.menu-item-has-children:before{
+/* -------------------------------------------------------------------
+  Extend function
+--------------------------------------------------------------------*/
+
+.menu-dropdown > a:before,
+.mainmenu > ul >li.menu-item-has-children > a:before{
    @extend %jv-font-Linearicons;
+}
+
+.menu-trigger ul:after,
+.menu-item-has-children  > a + ul:after,
+.mainmenu > ul >li.menu-item-has-children > a:before,
+.menu-dropdown > a:before{
+  @extend %jv-transition-easeout;
 }
 
 
@@ -536,11 +554,16 @@ NAV - vertical style
     z-index: 9999;
   }
 
+  .mainmenu .dropdownMenu{
+    padding: 0 15px;
+  }
+
 
   .mainmenu > .dropdownMenu{
     top: 35px;
   }
   
+
   
 
   .mainmenu .active
@@ -548,11 +571,14 @@ NAV - vertical style
     right: 0;
   }
 
-  .mainmenu > ul > li {
-    border-bottom: 1px solid #e5e5e5;
+  .mainmenu > ul > li{
     display: block;
     margin-right: 0;
     float: none;
+    &:not(:last-child){
+      border-bottom: 1px solid #e5e5e5;
+
+    }
   }
 
 
@@ -567,7 +593,7 @@ NAV - vertical style
     position: relative!important;
   }
 
-  .dropdownMenu .menu-item-has-children.mega-menu.menu-4-col .mega-menu-content>li{
+  .dropdownMenu .menu-item-has-children.mega-menu.menu-4-col .mega-menu-content > li{
     float: none;
     width: auto;
   }
@@ -575,9 +601,9 @@ NAV - vertical style
   .mainmenu > ul >li.menu-item-has-children {
     position: relative;
     
-    &:before {
+    > a:before {
       color: #999;
-      content: "\e874";
+      content: "\e876";
       font-size: 13px;
       position: absolute;
       right: 0;
@@ -586,21 +612,52 @@ NAV - vertical style
     }
   }
   //sub menu icon
-  .menu-dropdown>a:after{
-     color: #999;
-      content: "\e874";
-      font-size: 13px;
-      position: absolute;
-      right: 0;
-      top: 16px;
 
+  .menu-dropdown > a{
+    position: relative;
+  }
+
+  .menu-dropdown > a:before {
+    position: absolute;
+    content: "\e876";
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    font-size: 13px;
+    height:13px;
+    width: 13px;
+    line-height: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include prefix(transform, rotate(0deg));
+  }
+  
+  //menu-trigger
+  .mainmenu > ul >li.menu-item-has-children > a.active:before,
+  .menu-dropdown > a.menu-trigger:before {
+    @include prefix(transform, rotate(90deg));
+  }
+
+  .menu-item-has-children  > a:after { display: none; }
+
+  .menu-trigger + ul:after,
+  .menu-item-has-children  > a + ul:after {
+    color: $color_mercury;
+    content: "";
+    display: block;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+    border-top: solid 6px $color_mercury;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
   }
 
 
-  .mainmenu > ul > li.menu-item-has-childrent > a {
+  .mainmenu > ul > li.menu-item-has-children > a {
     padding-right: 15px;
   }
-
 
   .menu-item-has-children>a:after{
     left: 20px;
@@ -610,15 +667,18 @@ NAV - vertical style
   .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li
   {
     text-transform: none;
-    padding-left: 0;
+    padding: 0;
 
-    &:not(:last-child) a{
-      border-bottom: 1px solid $color_mercury;
-
-    }
 
     a{
       padding: 12px 15px;
+      font-weight: normal;
+      font-size: inherit;
+    }
+    
+    > a{
+     border-bottom: 1px solid $color_mercury;
+      
     }
 
     > a:after{
@@ -635,13 +695,11 @@ NAV - vertical style
     visibility: visible!important;
     width: 100%!important;
 
-    //
-    border-left: none;
-    border-right: none;
     box-shadow: none;
     padding-bottom: 0;
 
-
+    border: none;
+    border-top : 1px solid $menu__sub__border-color;
   }
 
   //nav-vertical home 1

@@ -789,27 +789,28 @@
 
     goMenuMobileOSS: function(){
 
-        var $nav_MainMenu = $(".mainmenu");
+       if ($(window).width() < 1025) {
+          var $nav_MainMenu = $(".mainmenu");
 
-         $nav_MainMenu.each(function () {
+           $nav_MainMenu.each(function () {
 
-        $(this).find(">li li:has(ul)").children("a").on('click', function (event) {
-                event.preventDefault();
-        });
-        
+          $(this).find(">li li:has(ul)").children("a").on('click', function (event) {
+                  event.preventDefault();
+          });
+          
 
-        $(this).find(".menu-dropdown > a").each(function () {
-                $(this).siblings('ul').hide();
-                $(this).on("click", function (event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    jvbigC.menu_DropdownTrigger(this);
-                });
-            });
+          $(this).find(".menu-dropdown > a").each(function () {
+                  $(this).siblings('ul').hide();
+                  $(this).on("click", function (event) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      jvbigC.menu_DropdownTrigger(this);
+                  });
+              });
 
-        });
+          });
   
-
+       }
     },
 
     menu_DropdownTrigger : function (selector) {
