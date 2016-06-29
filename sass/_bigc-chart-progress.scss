@@ -153,3 +153,14 @@
 		fill: $color_shark;
 	}
 }
+
+
+
+@media only screen and (max-width: 767px) {
+	.circle2{
+		margin-right: 0;
+	}
+	.pieChart-target{
+		margin-left: 0;
+	}
+}

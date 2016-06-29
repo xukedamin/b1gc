@@ -45,7 +45,7 @@
         var wrapper = jQuery('#mini-cart .shop-cart-list .info-list-cart'),
         template_compiled = Handlebars.compile(carttemplate.html());
         
-        var data = this.fetchTemplateLayout(n);
+        var data = this.fetchMinicartTemplateLayout(n);
 
         console.log(data);
 
@@ -70,7 +70,7 @@
       },
 
 
-      fetchTemplateLayout: function(cart){
+      fetchMinicartTemplateLayout: function(cart){
       
       // Handlebars.js cart layout
       var items = [],
@@ -1021,11 +1021,18 @@
       
       //.icon-cart -> use ajaxify
 
-        $('.language-link,.currency-link,.account-link,.icon-search,.icon-user').click(function(event) {
+        $('.language-link,.currency-link,.account-link,.icon-user').click(function(event) {
              event.preventDefault();
             console.log($(this).next());
-            $(this).next().slideToggle("slow");
+            $(this).next().slideToggle();
             // $(this).next().show();
+        });
+
+        $('.info-search .icon-search').on('click',function(){
+           event.preventDefault();
+           event.stopPropagation();
+           $(this).parent().toggleClass('form-visible');
+           // $(this).next().slideToggle();
         });
     }
 

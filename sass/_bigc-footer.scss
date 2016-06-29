@@ -287,9 +287,9 @@
 }
 
 .logo.logo-footer2 a {
-    color: $color_white;
-    font-size: 30px;
-    @extend %text-up;
+  color: $color_white;
+  font-size: 30px;
+  @extend %text-up;
 }
 
 #back-top {
@@ -312,16 +312,17 @@
 }
 
 #back-top.show {
-  transform: translate(0px, 0px);
-  -webkit-transform: translate(0px, 0px);
+
+  @include prefix( transform,translate(0px, 0px));
   display: block !important;
 }
 
 @media (max-width: 767px){
 
-.footer-bottom{
-  text-align: center;
-}
+  .copyright,
+  .footer-bottom{
+    text-align: center !important;
+  }
 
   //footer
   .footer-nav {

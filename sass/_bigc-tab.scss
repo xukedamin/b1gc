@@ -317,10 +317,18 @@
 
 
 @media only screen and (max-width: 767px) {
+
+	.nav.nav-tabs li{
+		display: block;
+	}
 	.nav-tabs-default .nav.nav-tabs li {
-	    display: block;
+		display: block;
 	    border-color: $color_mercury;
 	    border-style: solid;
 	    border-width: 1px 0px 1px 0px;
+	}
+
+	.nav-tabs-border.nav-tabs-block .nav-tabs>li{
+		margin-bottom: 0;
 	}
 }

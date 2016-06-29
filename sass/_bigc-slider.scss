@@ -1,5 +1,34 @@
 
 /*Home Slider*/
+.header-slider {
+  &.default-paginav {
+    border: 10px solid $color_white;
+    margin: 10px -15px 50px;
+  }
+  
+  .owl-pagination {
+    left: 0;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+  }
+  
+  .owl-theme .owl-controls .owl-page {
+    span {
+      background: $color_dove-gray none repeat scroll 0 0;
+      @extend %jv-border-radius-50;
+      display: block;
+      height: 7px;
+      margin: 4px;
+      opacity: 1;
+      width: 7px;
+    }
+    span:hover, 
+    &.active span {
+      background: $color_black none repeat scroll 0 0;
+    }
+  }
+}
 
 .home-slider {
     background: #eeeeee none repeat scroll 0 0;
@@ -390,7 +419,7 @@
 .banner-slider-rect-vertical {
   .owl-pagination {
       position: absolute;
-      right: 0;
+      right: 15px;
       top: -290px;
   }
   .owl-theme .owl-controls {
@@ -695,6 +724,11 @@ div[class^='bannerslider'] .img{
   }
 
   //bannerslider1
+
+  .header-slider .owl-theme .owl-controls .owl-page span{
+    width: 20px;
+    height: 20px;
+  }
   .bannerslider1 .item, 
   .bannerslider1 .wrap-item{
     height: auto !important;
@@ -723,6 +757,10 @@ div[class^='bannerslider'] .img{
     top: -200px;
   }
 
+  .banner-slider-rect-vertical .owl-theme .owl-controls .owl-page span{
+    height: 10px;
+  }
+
   //bannerslider4
   .bannerslider4 .item{
     height: auto!important;
@@ -734,6 +772,7 @@ div[class^='bannerslider'] .img{
   .slider-tab #bx-pager a {
     display: block;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
   }
   .slider-tab #bx-pager{
     padding-left: 0;
@@ -773,6 +812,11 @@ div[class^='bannerslider'] .img{
     width: 100%;
   }
 
+  .banner-slider-circle-hoztical .owl-theme .owl-controls .owl-page span{
+    width: 20px;
+    height: 20px;
+  }
+
 
 
   //common bannerslider
@@ -783,5 +827,15 @@ div[class^='bannerslider'] .img{
     font-size: 30px;
   }
 
+    .paginav-slider .owl-theme .owl-controls .owl-page span{
+    width: 20px;
+    height: 20px;
+  }
+
 
 }
+
+/*@include at-query($max, $medium){
+
+}*/
+

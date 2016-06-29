@@ -351,6 +351,15 @@ Search auto completed
   }
 }
 
+.info-search{
+  .search-form{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s ease-in-out 0.4s, opacity 0.4s ease-in-out;
+    transition: visibility 0s ease-in-out 0.4s, opacity 0.4s ease-in-out;
+  }
+}
+
 
 @media only screen and (max-width: 767px) {
   //header-4 form search
@@ -360,6 +369,28 @@ Search auto completed
   }
   .wrap-toggle-search{
     width: 100%;
+  }
+  
+  .info-search:hover .search-form,
+  .info-search:hover:after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .info-search.form-visible{
+    .search-form{
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+      z-index: 1000;
+      margin-top: 15px;
+    }
+  }
+
+  .info-search.form-visible:after{
+    opacity: 1;
+    visibility: visible;
   }
 
 }

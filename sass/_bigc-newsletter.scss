@@ -185,7 +185,7 @@
   .sub-title {
     margin-bottom: 20px;
   }
-  input[type="text"],
+  
   input[type="email"] {
     color: $color_dusty-gray;
     height: 40px;
@@ -197,5 +197,12 @@
   input[type="submit"] {
     border: medium none;
     margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 990px){
+  .newsletter input[type="email"] {
+      width: auto;
   }
 }

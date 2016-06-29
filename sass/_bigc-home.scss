@@ -3,35 +3,7 @@
 ********************************************************************/
 
 
-.header-slider {
-  &.default-paginav {
-    border: 10px solid $color_white;
-    margin: 10px -15px 50px;
-  }
-  
-  .owl-pagination {
-    left: 0;
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-  }
-  
-  .owl-theme .owl-controls .owl-page {
-    span {
-      background: $color_dove-gray none repeat scroll 0 0;
-      @extend %jv-border-radius-50;
-      display: block;
-      height: 7px;
-      margin: 4px;
-      opacity: 1;
-      width: 7px;
-    }
-    span:hover, 
-    &.active span {
-      background: $color_black none repeat scroll 0 0;
-    }
-  }
-}
+
 
 .home-extra-sub {
   background: $color_shark none repeat scroll 0 0;

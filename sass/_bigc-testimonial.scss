@@ -465,3 +465,10 @@ span.click-button {
     color: $color_white;
   }
 }
+
+@media (max-width: 767px){
+.testimo-content-right {
+    padding: 30px 15px;
+}
+
+}

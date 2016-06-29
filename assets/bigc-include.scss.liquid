@@ -326,7 +326,7 @@ Dependency-free breakpoint mixin
 .thumb-customer-saying img, .testimonial-thumb-link, .testimonial-thumb-link:before, .testimonial-thumb-link .img,
 .testimonial-thumb-link > img, .testimo-avatar, .testimo-avatar:before, .testimo-avatar .img,
 .testimo-avatar img, .i-circle, .i-circle.feature-box-link, .i-border-double:before, .wrap-cart-remove .remove-product, .cart-wishlist-compare .action, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button, .product-extra-link .action, .product-box-promotion span, .time_circles > div, .item-popular-thumb:after, .post-pagi-nav .item-paginate, .intro-text-adv, .deal-countdown .time_circles > div, .post-slider .owl-theme .owl-controls .owl-buttons div,
-.slider-btn-shadow .owl-theme .owl-controls .owl-buttons div, .team-social-network a, .team-cirle-image, .team-circle-thumb, .team-circle-social-network a, .paginav-slider .owl-theme .owl-controls .owl-page span, .banner-slider-circle-vertical .owl-theme .owl-controls .owl-page span, .banner-slider-circle-hoztical .owl-theme .owl-controls .owl-page span, .header-slider .owl-theme .owl-controls .owl-page span, .control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all, .home-featured-slider .owl-pagination .owl-theme .owl-controls .owl-page, .paginav-best-seller a, .paginav-best-seller a.active:before, .partner-home5 .owl-theme .owl-controls .owl-buttons div, .item-product-loadmore .product-quick-view, .info-cart7 .info-icon.icon-cart, #slider-range-price .ui-slider-handle.ui-state-default.ui-corner-all {
+.slider-btn-shadow .owl-theme .owl-controls .owl-buttons div, .team-social-network a, .team-cirle-image, .team-circle-thumb, .team-circle-social-network a, .header-slider .owl-theme .owl-controls .owl-page span, .paginav-slider .owl-theme .owl-controls .owl-page span, .banner-slider-circle-vertical .owl-theme .owl-controls .owl-page span, .banner-slider-circle-hoztical .owl-theme .owl-controls .owl-page span, .control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all, .home-featured-slider .owl-pagination .owl-theme .owl-controls .owl-page, .paginav-best-seller a, .paginav-best-seller a.active:before, .partner-home5 .owl-theme .owl-controls .owl-buttons div, .item-product-loadmore .product-quick-view, .info-cart7 .info-icon.icon-cart, #slider-range-price .ui-slider-handle.ui-state-default.ui-corner-all {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -2076,6 +2076,16 @@ textarea:focus {
   border: none;
 }
 
+@media (max-width: 767px) {
+  div[class^='list-button-box'] .bt-link, div[class^='list-button-box'] .bt-primary, div[class^='list-button-box'] .btn-primary, div[class^='list-button-box'] .bt-primary-inverse {
+    margin-left: 15px;
+  }
+
+  .btn-circle-box {
+    display: block;
+    margin: 15px;
+  }
+}
 /***********************************************************************
 						Charts & Progress Bars						
 ************************************************************************/
@@ -2210,6 +2220,15 @@ textarea:focus {
   fill: #1b1d1f;
 }
 
+@media only screen and (max-width: 767px) {
+  .circle2 {
+    margin-right: 0;
+  }
+
+  .pieChart-target {
+    margin-left: 0;
+  }
+}
 /*******************************************************************
               Contact
 ********************************************************************/
@@ -2514,7 +2533,6 @@ textarea:focus {
 .newsletter .sub-title {
   margin-bottom: 20px;
 }
-.newsletter input[type="text"],
 .newsletter input[type="email"] {
   color: #999;
   height: 40px;
@@ -2528,6 +2546,11 @@ textarea:focus {
   margin-top: 10px;
 }
 
+@media (max-width: 990px) {
+  .newsletter input[type="email"] {
+    width: auto;
+  }
+}
 /***********************************************************************
 						Tabs&Toggles						
 ************************************************************************/
@@ -2810,11 +2833,19 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 767px) {
+  .nav.nav-tabs li {
+    display: block;
+  }
+
   .nav-tabs-default .nav.nav-tabs li {
     display: block;
     border-color: #e5e5e5;
     border-style: solid;
     border-width: 1px 0px 1px 0px;
+  }
+
+  .nav-tabs-border.nav-tabs-block .nav-tabs > li {
+    margin-bottom: 0;
   }
 }
 .item-customer-saying {
@@ -3246,6 +3277,11 @@ span.click-button {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .testimo-content-right {
+    padding: 30px 15px;
+  }
+}
 /***********************************************************************
             Accordions            
 ************************************************************************/
@@ -5975,14 +6011,18 @@ a.jvlogo {
 }
 
 #back-top.show {
-  transform: translate(0px, 0px);
   -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   display: block !important;
 }
 
 @media (max-width: 767px) {
+  .copyright,
   .footer-bottom {
-    text-align: center;
+    text-align: center !important;
   }
 
   .footer-nav {
@@ -6299,6 +6339,13 @@ Search auto completed
   margin-bottom: 0;
 }
 
+.info-search .search-form {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s ease-in-out 0.4s, opacity 0.4s ease-in-out;
+  transition: visibility 0s ease-in-out 0.4s, opacity 0.4s ease-in-out;
+}
+
 @media only screen and (max-width: 767px) {
   .info-search .search-form {
     width: 300px;
@@ -6307,6 +6354,26 @@ Search auto completed
 
   .wrap-toggle-search {
     width: 100%;
+  }
+
+  .info-search:hover .search-form,
+  .info-search:hover:after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .info-search.form-visible .search-form {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    z-index: 1000;
+    margin-top: 15px;
+  }
+
+  .info-search.form-visible:after {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .spr-icon,
@@ -9191,6 +9258,16 @@ ul.blog-related .post-date {
   width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .team-circle-thumb {
+    width: 270px;
+    height: 270px;
+  }
+
+  .team-circle-thumb:hover .team-cirle-image {
+    margin-left: 0;
+  }
+}
 /*The Brand*/
 .the-brand {
   margin-top: 35px;
@@ -9573,6 +9650,28 @@ ul.blog-related .post-date {
   }
 }
 /*Home Slider*/
+.header-slider.default-paginav {
+  border: 10px solid #fff;
+  margin: 10px -15px 50px;
+}
+.header-slider .owl-pagination {
+  left: 0;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+.header-slider .owl-theme .owl-controls .owl-page span {
+  background: #666 none repeat scroll 0 0;
+  display: block;
+  height: 7px;
+  margin: 4px;
+  opacity: 1;
+  width: 7px;
+}
+.header-slider .owl-theme .owl-controls .owl-page span:hover, .header-slider .owl-theme .owl-controls .owl-page.active span {
+  background: #000 none repeat scroll 0 0;
+}
+
 .home-slider {
   background: #eeeeee none repeat scroll 0 0;
 }
@@ -9900,7 +9999,7 @@ ul.blog-related .post-date {
 /*Rect Vertical*/
 .banner-slider-rect-vertical .owl-pagination {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: -290px;
 }
 .banner-slider-rect-vertical .owl-theme .owl-controls {
@@ -10159,6 +10258,11 @@ div[class^='bannerslider'] .img {
     display: none;
   }
 
+  .header-slider .owl-theme .owl-controls .owl-page span {
+    width: 20px;
+    height: 20px;
+  }
+
   .bannerslider1 .item,
   .bannerslider1 .wrap-item {
     height: auto !important;
@@ -10188,6 +10292,10 @@ div[class^='bannerslider'] .img {
     top: -200px;
   }
 
+  .banner-slider-rect-vertical .owl-theme .owl-controls .owl-page span {
+    height: 10px;
+  }
+
   .bannerslider4 .item {
     height: auto !important;
   }
@@ -10199,6 +10307,7 @@ div[class^='bannerslider'] .img {
   .slider-tab #bx-pager a {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
 
   .slider-tab #bx-pager {
@@ -10236,6 +10345,11 @@ div[class^='bannerslider'] .img {
     width: 100%;
   }
 
+  .banner-slider-circle-hoztical .owl-theme .owl-controls .owl-page span {
+    width: 20px;
+    height: 20px;
+  }
+
   div[class^='bannerslider'] h4 {
     font-size: 15px;
   }
@@ -10243,7 +10357,15 @@ div[class^='bannerslider'] .img {
   div[class^='bannerslider'] h2 {
     font-size: 30px;
   }
+
+  .paginav-slider .owl-theme .owl-controls .owl-page span {
+    width: 20px;
+    height: 20px;
+  }
 }
+/*@include at-query($max, $medium){
+
+}*/
 /*************************************************************
 Page Detail
 *************************************************************/
@@ -10661,28 +10783,6 @@ select.input-full {
 /*******************************************************************
 							Front Page
 ********************************************************************/
-.header-slider.default-paginav {
-  border: 10px solid #fff;
-  margin: 10px -15px 50px;
-}
-.header-slider .owl-pagination {
-  left: 0;
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-}
-.header-slider .owl-theme .owl-controls .owl-page span {
-  background: #666 none repeat scroll 0 0;
-  display: block;
-  height: 7px;
-  margin: 4px;
-  opacity: 1;
-  width: 7px;
-}
-.header-slider .owl-theme .owl-controls .owl-page span:hover, .header-slider .owl-theme .owl-controls .owl-page.active span {
-  background: #000 none repeat scroll 0 0;
-}
-
 .home-extra-sub {
   background: #1b1d1f none repeat scroll 0 0;
   left: 100px;

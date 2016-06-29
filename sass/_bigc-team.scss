@@ -243,3 +243,14 @@
 .team-circle-thumb > img {
     width: 100%;
 }
+
+
+@media only screen and (max-width: 767px) {
+  .team-circle-thumb{
+    width: 270px;
+    height: 270px;
+  }
+  .team-circle-thumb:hover .team-cirle-image{
+    margin-left: 0;
+  }
+}
