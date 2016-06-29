@@ -7022,7 +7022,195 @@
       }
     ]
   },
-
+  {
+  "name": "Material Banner Product adv",
+  "settings": [
+    {
+    "type": "header",
+    "content": "Item #1"
+    },
+    {
+    "type": "checkbox",
+    "id": "banner_pa_item_1",
+    "label": "Enable",
+    "default":true
+    },
+    {
+    "type": "image",
+    "id": "banner_pa_item_1_img.png",
+    "label": "Banner Image",
+    "info": "Recommended size: 580 x 500 px"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_1_title",
+    "label": "Title",
+    "default": "Title 1"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_1_subtitle",
+    "label": "Subtitle",
+    "default": "Subtitle 1"
+    },
+    {
+    "type": "textarea",
+    "id": "banner_pa_item_1_text",
+    "label": "Banner Text",
+    "default": "Banner Text"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_1_btn",
+    "label": "Button",
+    "default": "Shop now"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_1_link",
+    "label": "Banner link",
+    "default": "http:\/\/bigc-1.myshopify.com\/"
+    },
+    {
+    "type": "header",
+    "content": "Item #2"
+    },
+    {
+    "type": "checkbox",
+    "id": "banner_pa_item_2",
+    "label": "Enable",
+    "default":true
+    },
+    {
+    "type": "image",
+    "id": "banner_pa_item_2_img.png",
+    "label": "Banner Image",
+    "info": "Recommended size: 580 x 500 px"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_2_title",
+    "label": "Title",
+    "default": "30% OFF"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_2_subtitle",
+    "label": "Subtitle",
+    "default": "Subtitle 1"
+    },
+    {
+    "type": "textarea",
+    "id": "banner_pa_item_2_text",
+    "label": "Banner Text",
+    "default": "Banner Text 2"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_2_btn",
+    "label": "Button",
+    "default": "Shop now"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_2_link",
+    "label": "Banner link",
+    "default": "http:\/\/bigc-1.myshopify.com\/"
+    },
+      {
+    "type": "header",
+    "content": "Item #3"
+    },
+    {
+    "type": "checkbox",
+    "id": "banner_pa_item_3",
+    "label": "Enable",
+    "default":true
+    },
+    {
+    "type": "image",
+    "id": "banner_pa_item_3_img.png",
+    "label": "Banner Image",
+    "info": "Recommended size: 580 x 500 px"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_3_title",
+    "label": "Title",
+    "default": "30% OFF"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_3_subtitle",
+    "label": "Subtitle",
+    "default": "Subtitle 3"
+    },
+    {
+    "type": "textarea",
+    "id": "banner_pa_item_3_text",
+    "label": "Banner Text",
+    "default": "Banner Text 3"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_3_btn",
+    "label": "Button",
+    "default": "Shop now"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_3_link",
+    "label": "Banner link",
+    "default": "http:\/\/bigc-1.myshopify.com\/"
+    },
+      {
+    "type": "header",
+    "content": "Item #4"
+    },
+    {
+    "type": "checkbox",
+    "id": "banner_pa_item_4",
+    "label": "Enable",
+    "default":true
+    },
+    {
+    "type": "image",
+    "id": "banner_pa_item_4_img.png",
+    "label": "Banner Image",
+    "info": "Recommended size: 580 x 500 px"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_4_title",
+    "label": "Title",
+    "default": "30% OFF"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_4_subtitle",
+    "label": "Subtitle",
+    "default": "Subtitle 1"
+    },
+    {
+    "type": "textarea",
+    "id": "banner_pa_item_4_text",
+    "label": "Banner Text",
+    "default": "Banner Text 2"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_4_btn",
+    "label": "Button",
+    "default": "Shop now"
+    },
+    {
+    "type": "text",
+    "id": "banner_pa_item_4_link",
+    "label": "Banner link",
+    "default": "http:\/\/bigc-1.myshopify.com\/"
+    }
+  ]
+  },
    {
     "name": "Shortcode Banner catalog",
     "settings": [

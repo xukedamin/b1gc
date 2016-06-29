@@ -17,7 +17,7 @@
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
-   height: 292px;
+  height: 292px;
 
   &:before {
     background: rgba($color_shark, 0.1) none repeat scroll 0 0;
@@ -45,26 +45,26 @@
     left: 0;
     right: 0;
     z-index: -1;
-    background-size: cover; background-position: center center
+    background-size: cover; 
+    background-position: center center;
   }
 
 }
 
 .about-box-text {
   @extend %text-center;
-  padding-top: 55px;
+  padding-top: 20px;
+  padding-bottom: 20px;
  
 
   p {
     font-size: 30px;
     margin: 25px 0 0;
-    // color: $color_white;
     color: inherit;
   }
 
   a {
     font-size: 90px;
-    // color: $color_white;
     color: inherit;
   }
 
@@ -92,6 +92,10 @@
     @extend %jv-transition-easeout;
   }
 
+   > img {
+    width: 100%;
+}
+
   &:hover {
     img {
       @extend %jv-transform-scale-115;
@@ -104,7 +108,6 @@
 .about-big-icon {
   @extend %text-center;
   bottom: 60px;
-  // color: $color_white;
   color: inherit;
   font-size: 60px;
   line-height: 60px;
@@ -152,34 +155,34 @@
 
 
 
-.item-post-slider {
-  padding: 0 10px;
+// .item-post-slider {
+//   padding: 0 10px;
 
-  > h3 {
-    margin: 0 0 25px;
-  }
+//   > h3 {
+//     margin: 0 0 25px;
+//   }
 
-  h3 a {
-    color: #379fd7;
-    font-size: 16px;
-    margin-bottom: 20px;
+//   h3 a {
+//     color: #379fd7;
+//     font-size: 16px;
+//     margin-bottom: 20px;
 
-    &:hover {
-      color: $color_bright-sun;
-    }
+//     &:hover {
+//       color: $color_bright-sun;
+//     }
 
-  }
+//   }
 
-  > span {
-    color: $color_dusty-gray;
-  }
+//   > span {
+//     color: $color_dusty-gray;
+//   }
 
-  > p {
-    color: $color_dove-gray;
-    margin-top: 10px;
-  }
+//   > p {
+//     color: $color_dove-gray;
+//     margin-top: 10px;
+//   }
 
-}
+// }
 
 .post-slider
  {
@@ -256,120 +259,37 @@
 
 }
 
-.post-social-network {
-  margin: 15px 0 0;
-  padding: 0;
+// .post-social-network {
+//   margin: 15px 0 0;
+//   padding: 0;
 
-  > li {
-    display: inline-block;
-    margin-right: 5px;
-  }
+//   > li {
+//     display: inline-block;
+//     margin-right: 5px;
+//   }
 
-}
+// }
 
-.post-social-network {
-  a {
-    background: $color_wild-sand none repeat scroll 0 0;
-    color: $color_dove-gray;
-    display: block;
-    height: 33px;
-    width: 33px;
-    @extend %jv-border-radius-50;
-    @extend %text-center;
+// .post-social-network {
+//   a {
+//     background: $color_wild-sand none repeat scroll 0 0;
+//     color: $color_dove-gray;
+//     display: block;
+//     height: 33px;
+//     width: 33px;
+//     @extend %jv-border-radius-50;
+//     @extend %text-center;
 
-    &:hover {
-      background: $color_currious-blue-darker none repeat scroll 0 0;
-      color: $color_white;
-    }
+//     &:hover {
+//       background: $color_currious-blue-darker none repeat scroll 0 0;
+//       color: $color_white;
+//     }
 
-    i {
-      line-height: 33px;
-    }
+//     i {
+//       line-height: 33px;
+//     }
 
-  }
+//   }
 
-}
+// }
 
-.item-customer-saying {
-  display: table;
-  width: 100%;
-}
-
-.thumb-customer-saying {
-  display: table-cell;
-  width: 70px;
-
-  > a {
-    @extend %jv-border-radius-50;
-    display: block;
-    overflow: hidden;
-    width: 70px;
-    height: 70px;
-  }
-
-  .img,
-  img {
-    @extend %jv-border-radius-50;
-    @extend %jv-transition-easeout;
-    width: 100%;
-    height: 100%;
-  }
-
-}
-
-.info-customer-saying {
-  display: table-cell;
-  padding-left: 40px;
-  padding-right: 20px;
-  position: relative;
-  vertical-align: top;
-
-  &:before {
-    color: $color_silver-darker;
-    @extend %jv-font-Awesome;
-    left: 20px;
-    position: absolute;
-    top: 5px;
-    content: "\f10d";
-  }
-
-  >h3 {
-    margin: 20px 0 5px;
-  }
-
-  h3 a {
-    color: $color_currious-blue-darker;
-    font-size: 16px;
-
-    &:hover {
-      color: $color_bright-sun;
-    }
-
-  }
-
-  .desc {
-    position: relative;
-  }
-
-  > span {
-    color: $color_dusty-gray;
-  }
-
-}
-
-.customer-saying {
-  margin-top: 45px;
-
-  >h2 {
-    margin: 0 0 45px;
-  }
-
-}
-
-.thumb-customer-saying a:hover img {
-  transform: rotate(30deg);
-}
-
-.footer.footer-about {
-  margin-top: 0;
-}

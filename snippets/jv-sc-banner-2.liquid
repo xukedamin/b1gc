@@ -1,41 +1,40 @@
-<div class="container">
-  <div class="row">
-  {% for i in (1..3) %}
 
-      {% capture banner_img %}banner2_item_{{ i }}_img.png{% endcapture %}
-      {% capture banner_title %}banner2_item_{{ i }}_title{% endcapture %}
-      {% capture banner_subtitle %}banner2_item_{{ i }}_subtitle{% endcapture %}
-      {% capture banner_text %}banner2_item_{{ i }}_text{% endcapture %}
-      {% capture banner_btn %}banner2_item_{{ i }}_btn{% endcapture %}
-      {% capture banner_link %}banner2_item_{{ i }}_link{% endcapture %}
+<div class="row">
+{% for i in (1..3) %}
 
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="banner-box banner-style2">
-        <a href="#" class="banner-box-link">
-          {{ banner_img | asset_url | img_tag: banner_img }}
-        </a>
-        <div class="banner-box-info">
-          {% if settings[banner_text]  != blank %}
-          <h3 class="title-banner-box-black">{{ settings[banner_text] }}</h3>
-          {% endif %}
-          
-          {% if settings[banner_subtitle] != blank %}
-            <h2 class="title-banner-box-blue">{{settings[banner_subtitle]}}</h2>
-          {% endif %} 
+    {% capture banner_img %}banner2_item_{{ i }}_img.png{% endcapture %}
+    {% capture banner_title %}banner2_item_{{ i }}_title{% endcapture %}
+    {% capture banner_subtitle %}banner2_item_{{ i }}_subtitle{% endcapture %}
+    {% capture banner_text %}banner2_item_{{ i }}_text{% endcapture %}
+    {% capture banner_btn %}banner2_item_{{ i }}_btn{% endcapture %}
+    {% capture banner_link %}banner2_item_{{ i }}_link{% endcapture %}
 
-          {% if settings[banner_btn]  != blank %}
-          <a href="{{ settings[banner_link] }}" class="btn-box-banner">{{ settings[banner_btn] }}</a>                            
-          {% endif %}   
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="banner-box banner-style2">
+      <a href="#" class="banner-box-link">
+        {{ banner_img | asset_url | img_tag: banner_img }}
+      </a>
+      <div class="banner-box-info">
+        {% if settings[banner_text]  != blank %}
+        <h3 class="title-banner-box-black">{{ settings[banner_text] }}</h3>
+        {% endif %}
+        
+        {% if settings[banner_subtitle] != blank %}
+          <h2 class="title-banner-box-blue">{{settings[banner_subtitle]}}</h2>
+        {% endif %} 
 
-        </div>
-          {% if settings[banner_title] != blank  %}
-            <h2 class="banner-box-title banner-box-title-blue">{{ settings[banner_title] }}</h2>
-          {% endif %}
+        {% if settings[banner_btn]  != blank %}
+        <a href="{{ settings[banner_link] }}" class="btn-box-banner">{{ settings[banner_btn] }}</a>                            
+        {% endif %}   
 
       </div>
+        {% if settings[banner_title] != blank  %}
+          <h2 class="banner-box-title banner-box-title-blue">{{ settings[banner_title] }}</h2>
+        {% endif %}
+
     </div>
-
-  {% endfor %}
-
   </div>
+
+{% endfor %}
+
 </div>

@@ -802,20 +802,16 @@ form.cart-page-form .list-button br {
         margin-right: 0px;
         margin-bottom: 30px
     }
+
+  //cart
+  .shop-cart-total .button-wrapper a.border-btn {
+      padding-left:50px;
+      padding-right: 50px
+  }
+  .page-account {
+    padding: 10px;
+  }
+
+
 }
 
-textarea {
-    border: 1px solid #dddddd;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 12px;
-    line-height: 16px;
-    outline: none;
-    padding: 13px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    font-family: 'Raleway', sans-serif;
-}
-textarea:focus {
-    border-color: $color_primary;
-}

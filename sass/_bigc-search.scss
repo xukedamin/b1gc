@@ -350,3 +350,16 @@ Search auto completed
     margin-bottom: 0;
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+  //header-4 form search
+  .info-search .search-form {
+    width: 300px;
+    margin-right: -65px;
+  }
+  .wrap-toggle-search{
+    width: 100%;
+  }
+
+}

@@ -1,7 +1,7 @@
 
 
 <div class="banner-home7">
-  <div class="banner-slider-circle-hoztical slider-owl-single-item-paging background-transparent" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+  <div class="bannerslider7 banner-slider-circle-hoztical slider-owl-single-item-paging background-transparent" data-pauseonhover="{{settings.slide_pauseOnHover}}"
 data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
     <div class="wrap-item">
 
@@ -32,7 +32,6 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
             <div class="content-banner-slider">
               <div class="container">
                 <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="banner-rect-info">
                     {% if settings[slide_title1] != blank  %}
                       <h4>{{ settings[slide_title1] }}</h4>
@@ -44,13 +43,12 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
                       <a href="#" class="btn-link-default"> {{ settings[slide_button] }}</a>
                        {% endif %}
                     </div>
+                    <div class="banner-rect-img">
+                      <a href="#" class="banner-thumb-link">
+                        {{ slide_img | asset_url | img_tag: settings[slide_alt] }} 
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <a href="#" class="banner-thumb-link">
-                      {{ slide_img | asset_url | img_tag: settings[slide_alt] }} 
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

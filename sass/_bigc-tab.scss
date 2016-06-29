@@ -313,3 +313,14 @@
       font-weight: bold;
   }
 }
+
+
+
+@media only screen and (max-width: 767px) {
+	.nav-tabs-default .nav.nav-tabs li {
+	    display: block;
+	    border-color: $color_mercury;
+	    border-style: solid;
+	    border-width: 1px 0px 1px 0px;
+	}
+}

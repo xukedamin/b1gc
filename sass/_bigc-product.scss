@@ -397,7 +397,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 
 /*New Product*/
 .new-product {
-  margin-top: 70px;
+  // margin-top: 70px;
 
   .product-box-promotion {
     left: 12px;
@@ -1255,4 +1255,24 @@ $height : 32px;
       padding: 0;
       @extend %text-left;
   }
+}
+
+
+@media (max-width: 990px)
+{
+  .info-sale {
+    display: none;
+  }
+}
+
+@media (max-width: 767px){
+  .item-product-leading .item-product-info {
+      margin: 0;
+      position: static;
+  }
+
+  .item-product-leading .info-price span{
+    font-size: 50px;
+  }
+
 }

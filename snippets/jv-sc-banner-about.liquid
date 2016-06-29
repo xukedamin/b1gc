@@ -4,12 +4,12 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="about-box {%if settings['banner_about_item_1_img_enable'] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings['banner_about_item_1_color_bg']}} ">
-				<a class="about-text about-icon" href="{{settings['banner_about_item_1_url']}}">
+				<a class="" href="{{settings['banner_about_item_1_url']}}">
 					{%if settings['banner_about_item_1_img_enable']  %}
 						{{'banner_about_item_1_img.png' | asset_url | img_tag: '1'}}
 					{% endif %}
 
-					<span class="{{settings['banner_about_item_1_icon']}}"></span>
+					<span class="about-text about-icon {{settings['banner_about_item_1_icon']}}"></span>
 					<p class="about-text">{{settings['banner_about_item_1_title']}}</p>
 				</a>
 			</div>
@@ -71,7 +71,8 @@
 		
 		<a class="" href="{{settings[banner_url]}}">
 			{%if settings[banner_img_enable]  %}
-			<div class="img" style="background-image: url({{ banner_img | asset_url }});"></div>
+			<!-- <div class="img" style="background-image: url({{ banner_img | asset_url }});"></div> -->
+			{{ banner_img | asset_url | img_tag: banner_title }}
 			{% endif %}
 
 			<span class="about-text about-icon {{settings[banner_icon]}}"></span>

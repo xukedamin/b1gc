@@ -394,3 +394,44 @@
 
   }
 }
+
+
+
+@media (max-width: 767px){
+  .item-advert.left {
+      margin-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .banner-box.banner-style1.box-right{
+    margin-left: 0;
+  }
+  .banner-box.banner-style1.box-center{
+    margin: 0;
+  }
+
+  .about-box{
+    height: auto;
+  }
+
+  // banner about
+  .about-big-text{
+    left: 0;
+    line-height: 30px;
+    font-size: 30px;
+  }
+  .about-big-text.about-icon{
+    left: 0;
+    font-size: 30px;
+  }
+
+  //banner alt - catalog
+  .catalog {
+    background-attachment: scroll;
+    background-position: left center !important;
+  }
+  .content-catelog {
+    padding-left: 0;
+  }
+
+}

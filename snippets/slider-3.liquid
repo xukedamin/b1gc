@@ -1,4 +1,4 @@
-<div class="banner-slider banner-slider-rect-vertical slider-owl-single-item-paging" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+<div class="bannerslider3 banner-slider banner-slider-rect-vertical slider-owl-single-item-paging" data-pauseonhover="{{settings.slide_pauseOnHover}}"
 data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
   <div class="wrap-item">
   {% for i in (1..4) %}
@@ -28,7 +28,8 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
         {% endif %}     
 
           <a href="{{ settings[slide_link] }}" class="banner-thumb-link">
-           {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
+           <!-- {{ slide_img | asset_url | img_tag: settings[slide_alt] }} -->
+           <div class="img" style="background-image: url('{{slide_img | asset_url}}');" ></div>
           </a>
           <div class="banner-info">
             <div class="container">

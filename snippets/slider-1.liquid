@@ -1,5 +1,5 @@
 
-<div class="header-slider slider-owl-single-item-paging default-paginav">
+<div class="bannerslider1 header-slider slider-owl-single-item-paging default-paginav">
   <div class="wrap-item">
   {% for i in (1..4) %}
   
@@ -16,7 +16,10 @@
     {% if settings[slide] %}
       <div class="item">
         <div class="item-home-slider">
-          <a href="{{settings[slide_link]}}">{{ slide_img | asset_url | img_tag: slide_img }}</a>
+          <a href="{{settings[slide_link]}}">
+          <div class="img" style="background-image: url('{{slide_img | asset_url}}');" ></div>
+          <!-- {{ slide_img | asset_url | img_tag: slide_img }} -->
+          </a>
         </div>
       </div>
     {% endif %}

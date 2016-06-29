@@ -1,5 +1,5 @@
 
-<div class="banner-slider banner-slider-circle-vertical slider-owl-single-item-paging">
+<div class="bannerslider2 banner-slider banner-slider-circle-vertical slider-owl-single-item-paging">
   <div class="wrap-item">
     {% for i in (1..4) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
@@ -43,7 +43,9 @@
               </div>
               {% endif %}
 
-              <img src="{{slide_img | asset_url}}" alt="slide_alt"> 
+              <div class="img" style="background-image: url('{{slide_img | asset_url}}');" ></div>
+
+              <!-- <img src="{{slide_img | asset_url}}" alt="slide_alt">  -->
            
             </a>  
           </div>

@@ -1024,8 +1024,8 @@
         $('.language-link,.currency-link,.account-link,.icon-search,.icon-user').click(function(event) {
              event.preventDefault();
             console.log($(this).next());
-            // $(this).next().slideToggle("slow");
-            $(this).next().show();
+            $(this).next().slideToggle("slow");
+            // $(this).next().show();
         });
     }
 

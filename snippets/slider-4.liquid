@@ -1,5 +1,5 @@
 
-<div class="banner-slider home-slider" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+<div class="bannerslider4 banner-slider home-slider" data-pauseonhover="{{settings.slide_pauseOnHover}}"
 data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
   <div class="container">
     <div class="slider-tab">
@@ -27,7 +27,8 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
             <source src="{{settings[slide_video]}}" type="video/mp4">
           </video>
           {% endif %}  
-          {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
+          <div class="img" style="background-image: url('{{slide_img | asset_url}}');" ></div>
+          <!-- {{ slide_img | asset_url | img_tag: settings[slide_alt] }} -->
         </li>
      {% endif %}
 

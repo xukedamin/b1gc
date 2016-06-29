@@ -671,3 +671,46 @@ a.jvlogo {
 .info-cart.info-cart3:hover .inner-cart-info {
   margin-top:5px;
 }
+
+
+@media only screen and (max-width: 767px) {
+  
+   
+  // header 3
+  .contact-top3 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .menu-top3.text-right {
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .xs-text-hidden{
+    font-size: 0 !important;
+    [class*="lnr-"]{
+      font-size: 18px;
+    }
+    .cart-count{
+      margin-left: 0 !important;
+    }
+  }
+
+
+
+
+  //header 4
+  .header-4 .logo-wrapper{
+    margin-top: -15px;
+    .logo-text{
+      span{
+        display: inline-block;
+      }
+    }
+  }
+
+  .header-4 .info-header{
+    padding-top: 0;
+  }
+
+}

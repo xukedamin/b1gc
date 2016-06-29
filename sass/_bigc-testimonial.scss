@@ -1,4 +1,84 @@
-///FROM HOME
+
+.item-customer-saying {
+  display: table;
+  width: 100%;
+}
+
+.thumb-customer-saying {
+  display: table-cell;
+  width: 70px;
+
+  > a {
+    @extend %jv-border-radius-50;
+    display: block;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+  }
+
+  .img,
+  img {
+    @extend %jv-border-radius-50;
+    @extend %jv-transition-easeout;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.info-customer-saying {
+  display: table-cell;
+  padding-left: 40px;
+  padding-right: 20px;
+  position: relative;
+  vertical-align: top;
+
+  &:before {
+    color: $color_silver-darker;
+    @extend %jv-font-Awesome;
+    left: 20px;
+    position: absolute;
+    top: 5px;
+    content: "\f10d";
+  }
+
+  >h3 {
+    margin: 20px 0 5px;
+  }
+
+  h3 a {
+    color: $color_currious-blue-darker;
+    font-size: 16px;
+
+    &:hover {
+      color: $color_bright-sun;
+    }
+
+  }
+
+  .desc {
+    position: relative;
+  }
+
+  > span {
+    color: $color_dusty-gray;
+  }
+
+}
+
+.customer-saying {
+  margin-top: 45px;
+
+  >h2 {
+    margin: 0 0 45px;
+  }
+
+}
+
+.thumb-customer-saying a:hover img {
+  // transform: rotate(30deg);
+  @include prefix(transform, rotate(30deg));
+}
 
 /*Testimonial*/
 
@@ -12,7 +92,8 @@ span.click-button {
   cursor: pointer;
 }
 
-.left-open span.click-button::before {
+
+.left-open span.click-button:before {
   content: "\e879";
   @extend %jv-font-Linearicons;
   speak: none;
@@ -25,7 +106,7 @@ span.click-button {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.right-open span.click-button::before {
+.right-open span.click-button:before {
   content: "\e87a";
   @extend %jv-font-Linearicons;
   speak: none;
@@ -92,8 +173,8 @@ span.click-button {
     position: relative;
     float: left;
     left: 0;
-    @extend %text-right;
     @include prefix(transform, translateX(0));
+    @extend %text-right;
     @extend %jv-transition-easeout;
     -webkit-backface-visibility: hidden;
   }
