@@ -30,7 +30,9 @@
 			
 			<h3 class="sub-title"> <a href="{{ thisproduct.url | within: current_collection }}" class="product-title">{{ thisproduct.title }}</a></h3>
       
+      <div class="test {{product.handle}}">
       {%include 'product--countdown' with countdown_wrap:"countdown--big" %}
+      </div>
 		
 			<a href="{{ thisproduct.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>
 

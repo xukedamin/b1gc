@@ -10,6 +10,7 @@ required: product
   {% capture countdown_time %}countdown_product_{{ i }}_time{% endcapture %}
   {% capture countdown_bgcolor %}countdown_product_{{ i }}_color{% endcapture %}
 
+
   {% if settings[countdown] ==  product.handle and settings[countdown_time] != blank %}
 
   {% include 'jv-sc-countdown' with countdown_time:settings[countdown_time] %}

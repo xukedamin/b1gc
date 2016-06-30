@@ -269,12 +269,18 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 
 
-  .info-price  span {
-    color: #e6e6e6;
-    display: block;
-    font-size: 90px;
-    font-weight: 700;
-    margin-bottom: -10px;
+  .info-price  {
+    span {
+      color: #e6e6e6;
+      display: block;
+      font-size: 90px;
+      font-weight: 700;
+      margin-bottom: -10px;
+
+    }
+    del span{
+      display: inline-block;
+    }
   }
   .readmore {
     color: $color_shark;
@@ -1274,5 +1280,39 @@ $height : 32px;
   .item-product-leading .info-price span{
     font-size: 50px;
   }
+
+  //slider grid product
+  .new-product .owl-theme .owl-controls .owl-buttons div{
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    font-size: inherit;
+  }
+
+
+  .heading-row-wrapper .filter-product{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    .btn-filter.style-border-left {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+    }
+  }
+
+  //product-tabs-grid-simple-wrapper with filter
+  .product-tabs-grid-simple-wrapper.style2 .filter-product{
+    // display: block;
+    // width: 100%;
+    // margin-bottom: 20px;
+    // .btn-filter{
+    //   margin: 0;
+    //   width: 100%;
+    // }
+  }
+
+
+
 
 }

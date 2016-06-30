@@ -76,7 +76,6 @@
 }
 
 .thumb-customer-saying a:hover img {
-  // transform: rotate(30deg);
   @include prefix(transform, rotate(30deg));
 }
 
@@ -87,9 +86,10 @@ span.click-button {
   display: block;
   font-size: 30px;
   z-index: 2;
-}
-.click-button:hover {
-  cursor: pointer;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
@@ -467,8 +467,48 @@ span.click-button {
 }
 
 @media (max-width: 767px){
-.testimo-content-right {
-    padding: 30px 15px;
-}
+  .testimo-content-right {
+      padding: 30px 15px;
+  }
+
+  .info-testimo-author{
+    top: 10px;
+  }
+
+  .testimo-avatar {
+      display: block;
+      margin: auto;
+      max-width: 100px;
+      max-height: 100px;
+  }
+
+  //two sides
+  .testimonial h2{
+    font-size: 30px;
+  }
+  .home-testimonial:before{
+    display: none;
+  }
+  .side-testimonial{
+    width: 100%;
+  }
+
+  .testimonial-page {
+    width: 100%;
+    padding: 0 !important;
+    display: none;
+  }
+  .item-testimonial.item-left .testimonial-job {
+    border-top: 1px solid $color_black;
+    color:$color_black;
+  }
+  .item-testimonial.item-left .testimonial-title a {
+      color: $color_black;
+  }
+
+  //
+  .home-testimonial .home-directnav .owl-buttons{
+    margin-top: 0;
+  }
 
 }

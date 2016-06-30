@@ -323,7 +323,8 @@
       $('.btn-filter').click(function(event) {
           event.preventDefault();
           event.stopPropagation();
-          $('.box-attr-filter').slideToggle();
+          $(this).parent().next('.box-attr-filter').slideToggle();
+          // $('.box-attr-filter').slideToggle();
       });
     },
 
@@ -1078,36 +1079,34 @@
     });
        
 
-});
+  });
 
   //Window Load
   $(window).load(function() {
          
   });
 
-
+  // Ajax filter collection
+  $(document).delegate('.advanced-filter > a', 'click', function() {
+    history.pushState({}, document.title, this.href);
+    var b = $('body').addClass('ajaxing'),
+        h = $('html,body');
+    $('#box').load([this.href, '#collection'].join(' '), function() {
+        
+        //TEST
+        ajaxifyShopifyInit();
+       
+        b.removeClass('ajaxing');
+        h.animate({ scrollTop: $('#box').offset().top });
+    });
+    return false;
+  });
 
 
 })(jQuery); // End of use strict
 
 
-// Ajax filter collection
 jQuery(function($) {
-    $(document).delegate('.advanced-filter > a', 'click', function() {
-        history.pushState({}, document.title, this.href);
-        var b = $('body').addClass('ajaxing'),
-            h = $('html,body');
-        $('#box').load([this.href, '#collection'].join(' '), function() {
-            
-            //TEST
-            ajaxifyShopifyInit();
-           
-            b.removeClass('ajaxing');
-            h.animate({ scrollTop: $('#box').offset().top });
-        });
-        return false;
-    });
-
 
     // ======================================================
     // callback for option_selection.js
