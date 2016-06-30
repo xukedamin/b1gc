@@ -38,7 +38,7 @@
 
 	<div class="{%if style_header_product != 'inline' %}nav-tabs-default{%endif%}" id="tab-2">
 		
-		<ul class="nav nav-tabs" role="tablist" >
+		<ul class="nav nav-tabs" role="tablist">
 			{% for i in (1..4) %}
 				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}

@@ -982,8 +982,8 @@
                 });
               }
           }
-
-
+         
+          //update circle to have the same dimension for w and h
           $( ".time_circles div[class^='textDiv_']").each(function(){
              var w = $(this).width();
             $(this).height(w);
@@ -1023,8 +1023,8 @@
       //.icon-cart -> use ajaxify
 
         $('.language-link,.currency-link,.account-link,.icon-user').click(function(event) {
-             event.preventDefault();
-            console.log($(this).next());
+            event.preventDefault();
+            
             $(this).next().slideToggle();
             // $(this).next().show();
         });
@@ -1065,8 +1065,23 @@
 
     jvbigC.goFilterPriceSidebar();
 
-    //onload??
+    
+    
     jvbigC.goJVCountdown();
+
+    $('.product-tabs-grid-wrapper a[data-toggle="tab"],.product-tabs-grid-simple-wrapper a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      var tabid = $(e.target).attr("href");
+      
+      //must rebuild countdown when changing the tabs  
+      $(tabid).find('.jv-countdown').TimeCircles().rebuild();
+      
+      //update circle to have the same dimension for w and h
+      $(tabid).find( ".time_circles div[class^='textDiv_']").each(function(){
+         var w = $(this).width();
+        $(this).height(w);
+      });
+    });
+
 
     jvbigC.goToTop();
 
@@ -1083,7 +1098,7 @@
 
   //Window Load
   $(window).load(function() {
-         
+   
   });
 
   // Ajax filter collection

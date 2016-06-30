@@ -1,11 +1,10 @@
-{% assign thisproduct = all_products[leading_product] %}
 {%assign time = leading_time %}
 
 <div class='product-grid-item col-md-6 col-sm-6 col-xs-12  style="max-height: 374px; overflow: hidden;" '>
 
 	<div class="item-product item-product-leading">
 		<div class="item-product-thumb">
-			<a class="product-thumb-link" href="{{ thisproduct.url }}">
+			<a class="product-thumb-link" href="{{ product.url }}">
 
        {% if leading_product_image %}
           {{ leading_product_image | asset_url | img_tag: leading_product_image }}
@@ -17,24 +16,35 @@
 		<div class="item-product-info">
 			<div class="info-price product-item--price price">
         <span class="">
-          {% include 'price' with thisproduct.price %}
+          {% include 'price' with product.price %}
         </span>
          {% if on_sale %}
           <del class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
-          {% assign compare_price = thisproduct.compare_at_price %}
-          {% assign product_price = thisproduct.price %}
+          {% assign compare_price = product.compare_at_price %}
+          {% assign product_price = product.price %}
           {% include 'price-sale' %}
           </del>
         {% endif %}
       </div>
 			
-			<h3 class="sub-title"> <a href="{{ thisproduct.url | within: current_collection }}" class="product-title">{{ thisproduct.title }}</a></h3>
+			<h3 class="sub-title"> <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
       
       <div class="test {{product.handle}}">
-      {%include 'product--countdown' with countdown_wrap:"countdown--big" %}
+
+     
+        {% if product.description contains '[jvcountdown]' %}            
+        {% assign temp = product.description | split:'[/jvcountdown]' | first %}
+        {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
+
+          {% include 'jv-sc-countdown' with countdown_time:count_down_time,countdown_wrap:"countdown--big" %}
+
+        
+        {% endif %}
+      
+
       </div>
 		
-			<a href="{{ thisproduct.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>
+			<a href="{{ product.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>
 
       
 		</div>

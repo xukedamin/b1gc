@@ -37,19 +37,15 @@
       
   {% endfor %}
   
-  {% if more_link %}
+
+  {% if more_link and product_loadmore %}
   <div class="{{grid_item_width}}">
-    <div class="shop-product-1 next-page">
+    <div class="loadmore-wrapper">
          {% assign header_title = header_title | downcase %}
-          
-        <a href="{{ more_link }}">
-          <div class="fixed-ratio-1-1 bgc-gray text-center">
-            <div class="fixed-ratio-content">
-              <h5>{{ 'homepage.featured_collection_rows.more_in_collection' | t: collection_title: header_title }}</h5><i class="icon-outline-vector-icons-pack-149 fz-common-2"></i>
-            </div>
-          </div>
-        </a>
+        <a href="{{ more_link }}" class="bt-link bt-blue bt-radius">{{ 'homepage.featured_collection_rows.more_in_collection' | t: collection_title: header_title }}</a>
+
    </div>
   </div>
   {% endif %}
+
 </div>

@@ -41,7 +41,17 @@
         {% endif %}
       </a>
 
-       {%include 'product--countdown' with countdown_wrap:'countdown--small' %}
+
+
+        {% if product.description contains '[jvcountdown]' %}            
+        {% assign temp = product.description | split:'[/jvcountdown]' | first %}
+        {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
+
+        {% include 'jv-sc-countdown' with countdown_time:count_down_time,countdown_wrap:"countdown--small" %}
+
+        
+        {% endif %}
+
 
       <div class="product-extra-mask">
         <div class="product-extra-link">
@@ -100,7 +110,12 @@
       
       {%if product_desc_enable %}
       <div class="desc">
-        {{product.description | truncate: 90 }}
+        {% if product.description contains '[jvcountdown]' %}
+            {% assign des = product.description | split:'[/jvcountdown]' | last %}
+            {{ des | split: '|' | first | strip_html | truncatewords: 50 }}
+          {%else %}
+            {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
+        {%endif %}
       </div>
       {% endif %}
 

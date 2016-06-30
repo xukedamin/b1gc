@@ -7626,11 +7626,7 @@
       "label": "Enable",
       "default": true
     }, 
-    {
-      "type": "product",
-      "id": "sc_product_tab_grid_1_product",
-      "label": "Select products leading to"
-    }, 
+    
     {
       "type": "image",
       "id": "sc_product_tab_grid_1_product_lead_img.png",
@@ -7659,11 +7655,7 @@
       "label": "Enable",
        "default": true
     }, 
-        {
-      "type": "product",
-      "id": "sc_product_tab_grid_2_product",
-      "label": "Select products leading to"
-    }, 
+     
     {
       "type": "image",
       "id": "sc_product_tab_grid_2_product_lead_img.png",
@@ -7692,11 +7684,7 @@
       "label": "Enable",
        "default": true
     }, 
-    {
-      "type": "product",
-      "id": "sc_product_tab_grid_3_product",
-      "label": "Select products leading to"
-    }, 
+  
     {
       "type": "image",
       "id": "sc_product_tab_grid_3_product_lead_img.png",
@@ -7724,11 +7712,7 @@
       "label": "Enable",
        "default": true
     }, 
-        {
-      "type": "product",
-      "id": "sc_product_tab_grid_4_product",
-      "label": "Select products leading to"
-    }, 
+     
     {
       "type": "image",
       "id": "sc_product_tab_grid_4_product_lead_img.png",
