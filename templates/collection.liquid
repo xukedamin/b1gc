@@ -23,7 +23,7 @@
       </div>
     {% endif %}
 
-    {% paginate collection.products by 16 %}
+    {% paginate collection.products by 9 %}
     {% assign has_sidebar = false %}
     
     {% if collection.all_tags.size > 0 %}
@@ -41,6 +41,7 @@
           </div>
           {% if paginate.pages > 1 %}
             {% include 'pagination-2' %}
+            {% include 'pagination-1' %}
           {% endif %}
           
           <div class="product-filter pull-right">

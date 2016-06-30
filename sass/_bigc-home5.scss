@@ -66,14 +66,16 @@
 }
 
 
-
-.paginav-best-seller {
+.pagination-colorful
+{
   border-top: 1px solid $color_mercury-darker;
   margin-top: 20px;
   padding-top: 30px;
   @extend %text-center;
 
-  a {
+  // a,span 
+  li > *
+  {
     background: $color_wild-sand none repeat scroll 0 0;
     
     box-shadow: 0 2px 2px 0 rgba($color_black, 0.1);
@@ -87,7 +89,31 @@
     color: $color_shark;
     @extend %jv-border-radius-50;
 
-    &.active {
+    // &.active {
+    //   position: relative;
+
+    //   &:before {
+    //     position: absolute;
+    //     width: 8px;
+    //     height: 8px;
+    //     background: $color_currious-blue-darker;
+    //     content: "";
+    //     top: 0px;
+    //     left: 14px;
+    //     @extend %jv-border-radius-50;
+    //   }
+    // }
+    // &.active, &:hover {
+    //   opacity: 1;
+    //   background: $color_white none repeat scroll 0 0;
+    //   color: $color_currious-blue-darker;
+      
+    //   @include prefix(box-shadow, 0 3px 3px 0 rgba($color_black, 0.2));
+    // }
+  }
+  
+  li{
+     &.active {
       position: relative;
 
       &:before {
@@ -109,6 +135,8 @@
       @include prefix(box-shadow, 0 3px 3px 0 rgba($color_black, 0.2));
     }
   }
+
+
 }
 
 .inner-cart-info5.inner-cart-info .link-cart {
