@@ -2070,6 +2070,11 @@ textarea:focus {
   padding: 0 30px;
 }
 
+.btn-link-default.btn-compare {
+  margin-right: 25px;
+  padding: 0 20px;
+}
+
 .btn-primary {
   background-image: none;
   box-shadow: none;
@@ -5237,11 +5242,11 @@ form.cart-page-form .list-button br {
   color: #999;
 }
 
-.btn-link-default.btn-compare {
-  margin-right: 25px;
-  padding: 0 20px;
+@media (max-width: 1024px) {
+  .sidebar-product .widget {
+    padding: 15px;
+  }
 }
-
 a.jvlogo {
   left: 15px;
   position: absolute;
@@ -6758,6 +6763,10 @@ Search auto completed
   background: #5398d7;
 }
 
+.product-thumbnail-slider-wrapper .product-box-promotion {
+  left: 20px;
+}
+
 /*New Product*/
 .new-product .product-box-promotion {
   left: 12px;
@@ -6833,6 +6842,15 @@ Search auto completed
 }
 
 /* SINGE product page:*/
+.product-thumbnail-slider.product-gallery .bx-pager {
+  display: none;
+}
+
+.product-style-detail .desc {
+  line-height: 24px;
+  margin: 15px 0 10px;
+}
+
 .related-product .nav-tabs-default {
   margin-bottom: 30px;
 }
@@ -7550,6 +7568,10 @@ Page Detail Mr
     display: block;
     margin-left: 0;
   }
+
+  .swatch .header {
+    margin-right: 0;
+  }
 }
 .item-collections .inner {
   position: relative;
@@ -7966,6 +7988,47 @@ Page Product List Mr
   max-width: 220px;
 }
 
+.messagefull .content {
+  padding: 20px 25px 20px 110px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .product-sort,
+  .product-pagi-nav,
+  .product-filter {
+    float: left !important;
+    display: block !important;
+    width: 100%;
+  }
+
+  .product-pagi-nav {
+    margin: 10px 0;
+  }
+
+  .product-list .item-product {
+    padding: 15px;
+  }
+
+  .product-list .item-product-thumb {
+    margin-bottom: 20px;
+    width: 100% !important;
+  }
+
+  .product-list .item-product-info {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .product-list .product--detail-countdown {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .has-sidebar + .toolbar.toolbar-bottom {
+    padding-bottom: 30px;
+  }
+}
 /*home 2*/
 .item-popular-info > p {
   color: #666;
@@ -10980,6 +11043,10 @@ select.input-full {
   }
   .box-attr-filter .box-attr-filter .attr-category {
     margin-bottom: 0;
+  }
+
+  .filter-product .btn-filter.style-border-left {
+    margin: 10px 0;
   }
 }
 /*******************************************************************

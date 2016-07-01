@@ -4606,7 +4606,7 @@
     ]
   }
   ,
-    {
+  {
     "name": "Collections Product",
     "settings": [
       {
@@ -4625,9 +4625,142 @@
         "type": "checkbox",
         "id": "page_product_in_collections_enable",
         "label": "Show product in Collections"
+      }, 
+      {
+        "type": "select",
+        "id": "collection_sidebar_location",
+        "label": "Collection Sidebar Location",
+        "options": [
+          {
+            "value": "collection_sidebar_left",
+            "label": "Sidebar left"
+          },
+          {
+            "value": "collection_sidebar_right",
+            "label": "Sidebar right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "collection_prod_image_sizes",
+        "label": "Product image size",
+        "options": [
+          {
+            "value": "compact",
+            "label": "Small"
+          },
+          {
+            "value": "large",
+            "label": "Medium (default)"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Link Lists"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist1",
+        "label": "Show link list #1?"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist1",
+        "label": "Use list:"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist2",
+        "label": "Show link list #2?"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist2",
+        "label": "Use list:"
+      },
+      {
+        "type": "header",
+        "content": "Product Filters"
+      },
+      {
+        "type": "radio",
+        "id": "collection_sidebar_filters",
+        "label": "Sidebar product filters",
+        "options": [
+          {
+            "value": "tags",
+            "label": "By tag"
+          },
+          {
+            "value": "groups",
+            "label": "By group"
+          }
+        ],
+        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_type_enable",
+        "label": "Shop by type"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_vendor_enable",
+        "label": "Shop by vendor"
+      },
+     
+      {
+        "type": "text",
+        "id": "featured_prod_num",
+        "label": "Number of",
+        "default": "3"
+      },
+      {
+        "type": "header",
+        "content": "Text Widget"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_visible",
+        "label": "Show?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget_heading",
+        "label": "Heading",
+        "default": "Welcome to BigC"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_image",
+        "label": "Enable"
+      },
+      {
+        "type": "image",
+        "id": "textwidget_image.jpg",
+        "max-width": 270
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget_content",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
+      },
+
+      {
+        "type": "checkbox",
+        "id": "sidebar_ajax_filters",
+        "label": "Enable Ajax Filters?",
+        "default": true
       }
+    
+
     ]
   },
+
   {
     "name": "Product",
     "settings": [ 
@@ -4771,167 +4904,14 @@
         ]
       },
       {
-        "type": "select",
-        "id": "product_image_gallery_style",
-        "label": "Product image gallery style (product details view)",
-        "info": "For Variant Product: you should set Zoom style",
-        "options": [
-          {
-            "value": "product_image_gallery_style_zoom",
-            "label": "Zoom"
-          },
-          {
-            "value": "product_image_gallery_style_slider",
-            "label": "Slider"
-          }
-        ],
-        "default": "product_image_gallery_style_slider"
-      }
-    ]
-  },
-  {
-    "name": "Collection Sidebar ",
-    "settings": [
-      {
-        "type": "select",
-        "id": "collection_sidebar_location",
-        "label": "Collection Sidebar Location",
-        "options": [
-          {
-            "value": "collection_sidebar_left",
-            "label": "Sidebar left"
-          },
-          {
-            "value": "collection_sidebar_right",
-            "label": "Sidebar right"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "collection_prod_image_sizes",
-        "label": "Product image size",
-        "options": [
-          {
-            "value": "compact",
-            "label": "Small"
-          },
-          {
-            "value": "large",
-            "label": "Medium (default)"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Link Lists"
-      },
-      {
         "type": "checkbox",
-        "id": "show_widget_linklist1",
-        "label": "Show link list #1?"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist1",
-        "label": "Use list:"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_widget_linklist2",
-        "label": "Show link list #2?"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist2",
-        "label": "Use list:"
-      },
-      {
-        "type": "header",
-        "content": "Product Filters"
-      },
-      {
-        "type": "radio",
-        "id": "collection_sidebar_filters",
-        "label": "Sidebar product filters",
-        "options": [
-          {
-            "value": "tags",
-            "label": "By tag"
-          },
-          {
-            "value": "groups",
-            "label": "By group"
-          }
-        ],
-        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_type_enable",
-        "label": "Shop by type"
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_vendor_enable",
-        "label": "Shop by vendor"
-      },
-     
-      {
-        "type": "text",
-        "id": "featured_prod_num",
-        "label": "Number of",
-        "default": "3"
-      },
-      {
-        "type": "header",
-        "content": "Text Widget"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget_visible",
-        "label": "Show?",
+        "id": "product_image_gallery_zoom_enable",
+        "label": "product_image_gallery_zoom_enable",
         "default": true
-      },
-      {
-        "type": "text",
-        "id": "textwidget_heading",
-        "label": "Heading",
-        "default": "Welcome"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget_image",
-        "label": "Image"
-      },
-      {
-        "type": "image",
-        "id": "textwidget_image.jpg",
-        "max-width": 270
-      },
-      {
-        "type": "textarea",
-        "id": "textwidget_content",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
-      },
-      {
-        "type": "header",
-        "content": "Custom content from"
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_content_enable",
-        "label": "Show ?"
-      },
-      {
-        "type": "page",
-        "id": "sidebar_content_page",
-        "label": " Show custom content from  ",
-        "info": "Max 50 words"
       }
     ]
   },
+ 
   {
     "name": "Sidebar Blog",
     "settings": [

@@ -384,6 +384,7 @@
               minSlides: 4,
               maxSlides: 4,
               slideMargin: 6,
+              infiniteLoop: false,
               nextText: '<span class="lnr lnr-chevron-right"></span>',
               prevText: '<span class="lnr lnr-chevron-left"></span>'
             });
@@ -394,10 +395,10 @@
            $('.none-sidebar .product-gallery #bx-pager').bxSlider({
               slideWidth: 126,
               minSlides: 4,
-              maxSlides: 4,
+              maxSlides: 6,
               slideMargin: 0,
               mode: 'vertical',
-              infiniteLoop: true,
+              infiniteLoop: false,
               nextText: '<span class="lnr lnr-chevron-up"></span>',
               prevText: '<span class="lnr lnr-chevron-down"></span>'
             });
@@ -1102,21 +1103,23 @@
    
   });
 
-  // Ajax filter collection
-  $(document).delegate('.advanced-filter > a', 'click', function() {
-    history.pushState({}, document.title, this.href);
-    var b = $('body').addClass('ajaxing'),
-        h = $('html,body');
-    $('#box').load([this.href, '#collection'].join(' '), function() {
+  // // Ajax filter collection
+  // $(document).delegate('.advanced-filter > a', 'click', function() {
+
+  //   history.pushState({}, document.title, this.href);
+    
+  //   var b = $('body').addClass('ajaxing'),
+  //       h = $('html,body');
+  //   $('#box').load([this.href, '#collection'].join(' '), function() {
         
-        //TEST
-        ajaxifyShopifyInit();
+  //       //TEST
+  //       ajaxifyShopifyInit();
        
-        b.removeClass('ajaxing');
-        h.animate({ scrollTop: $('#box').offset().top });
-    });
-    return false;
-  });
+  //       b.removeClass('ajaxing');
+  //       h.animate({ scrollTop: $('#box').offset().top });
+  //   });
+  //   return false;
+  // });
 
 
 })(jQuery); // End of use strict

@@ -371,6 +371,10 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 }
 
+//in product details
+.product-thumbnail-slider-wrapper .product-box-promotion{
+  left: 20px;
+}
 
 
 
@@ -468,6 +472,16 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 
 
 /* SINGE product page:*/
+
+//hide pager bxslider
+.product-thumbnail-slider.product-gallery .bx-pager{ display: none;}
+
+
+
+.product-style-detail .desc{
+  line-height: 24px;
+  margin: 15px 0 10px;
+}
 
 .related-product {
   
@@ -1273,6 +1287,13 @@ $height : 32px;
         margin-left: 0;
     }
   }
+
+
+  //swatch
+  .swatch .header{
+    margin-right: 0;
+  }
+
 
 
 

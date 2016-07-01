@@ -37,7 +37,7 @@
 {% endif %}
 
 
-<div class="grid-item grid-border--left content-product-detail {{content_product_class}}">    
+<div class="grid-item grid-border--left content-product-detail {{content_product_class}} info-product-detail ">    
 
 <div class="row" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
@@ -46,8 +46,13 @@
   <div class="product-thumbnail-slider-wrapper {{content_product_childclass}}">
     {% include 'product--image' %}
     {% if settings.social_sharing_products %}
-      <p><span class="uppercase">{{'products.product.shares' | t}} :</span></p>
-      <div class="text-center">{% include 'social-sharing-ul' %}</div>
+      
+      <div class="row">
+        <div class="col-xs-12">
+          <p><span class="uppercase">{{'products.product.shares' | t}} :</span></p>
+          <div class="text-center">{% include 'social-sharing-ul' %}</div>
+        </div>
+      </div>
     {% endif %}
   </div>
 
@@ -239,6 +244,6 @@
       });
     </script>
 
-  {% if settings.product_image_gallery_style == 'product_image_gallery_style_zoom' %} 
+  {% if settings.product_image_gallery_zoom_enable %} 
+    {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
   {% endif %}    
-  {{ 'jquery.zoom.min.js' | asset_url | script_tag }}

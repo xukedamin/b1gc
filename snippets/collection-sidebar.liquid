@@ -143,6 +143,32 @@ breadcrumbs you need to include this:
     });
   </script>
 
+{%if settings.sidebar_ajax_filters%}
+<script>
+  // Ajax filter collection
+  $(document).delegate('.advanced-filter > a', 'click', function() {
+
+    history.pushState({}, document.title, this.href);
+    
+    var b = $('body').addClass('ajaxing'),
+        h = $('html,body');
+    $('#box').load([this.href, '#collection'].join(' '), function() {
+        
+        //TEST
+        ajaxifyShopifyInit();
+       
+        b.removeClass('ajaxing');
+        h.animate({ scrollTop: $('#box').offset().top });
+    });
+    return false;
+  });
+</script>
+
+{% endif %}
+
+
+
+
   {% endif %}
   {% else %}
     <div class="widget-wrapper">
@@ -241,24 +267,9 @@ breadcrumbs you need to include this:
 
   <ul class="list-unstyled list-styled">
     {% if settings.textwidget_image %}
-    <li><img src="{{'logo.png' | asset_url}}" alt="{{settings.textwidget_heading}}" />  <br><br></li>
+    <li><img src="{{'textwidget_image.jpg' | asset_url}}" alt="{{settings.textwidget_heading}}" />  <br><br></li>
     {% endif %}
     <li>{{ settings.textwidget_content }}</li>
   </ul>
 </div>
-{% endif %}
-
-
-
-
-
-{% if settings.sidebar_content_enable %}
-<nav class="sidebar-module">
-  <div class="section-header">
-    <p class="section-header__title h4">{{ pages[settings.sidebar_content_page].title }}</p>
-  </div>
-  <div>
-    {{ pages[settings.sidebar_content_page].content }}
-  </div>
-</nav>
 {% endif %}

@@ -1,5 +1,5 @@
-{% unless grid_item_width %}
-{% assign grid_item_width = 'large--one-quarter medium-down--one-half' %}
+{% unless list_item_width %}
+{% assign list_item_width = 'col-md-12 col-sm-12 col-xs-12' %}
 {% endunless %}
 
 {% unless current_collection %}
@@ -23,7 +23,7 @@ Select the product image size from settings.
 
 <div class="list-product row list-unstyled">
 
-<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="{{list_item_width}}">
     <div class="item-product clearfix">
       <div class="item-product-thumb">
         <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">

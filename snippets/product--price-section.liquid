@@ -3,8 +3,8 @@
     {% include 'price' with variant.price %}
   </span>
   {% if product.compare_at_price_max > product.price %}
-    <span class="saleoff">-{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
-    <del id="comparePrice" class="sale-tag large h4">
+    
+     <del id="comparePrice" class="sale-tag large h4">
     {% assign compare_price = variant.compare_at_price %}
     {% assign product_price = variant.price %}
     {% include 'price-sale' %}

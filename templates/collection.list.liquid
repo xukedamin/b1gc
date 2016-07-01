@@ -35,40 +35,30 @@
 <main class="wrapper main-content templates-collection" role="main">
 <div class="container">
   <div class="row">
+    
     {% if has_sidebar and settings.collection_sidebar_location == "collection_sidebar_left" %}
       <aside class="sidebar collection-filters col-sm-3 sidebar-left sidebar-product" id="collectionFilters">
         {% include 'collection-sidebar' %}
       </aside>
     {% endif %}
-    <div class="grid-item{% if has_sidebar %} col-sm-9 grid-border--left{% endif %}">
+
+    <div class="grid-item{% if has_sidebar %} col-sm-9 {% endif %}">
         {% comment %}Different markup if description is set{% endcomment %}
         
-        {%comment %}
-        <div class="section-header__right sort-pagi-bar top clearfix">
-          {% include 'collection-views' %}
-         
-          {% if paginate.pages > 1 %}
-            <div class="pagination-1">
-              {% include 'pagination-1' %}
-            </div>
-          {% endif %}
-
-          <div class="product-filter pull-right">
-          {% include 'collection-sorting' %}
-          </div>
-        </div>
-        {%endcomment%}
-
         {%include 'collection-toolbar' with class_toolbar:'toolbar-top', show_button_filter: false %}
 
 
       <div class="grid-uniform product-list {% if has_sidebar %}has-sidebar{% endif %}">
         {% for product in collection.products  %}
+          
+          {%comment%}
           {% if has_sidebar %}
-            {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
+            {% assign list_item_width = 'large--one-quarter medium--one-third small--one-half' %}
           {% else %}
-            {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
+            {% assign list_item_width = 'large--one-fifth medium--one-third small--one-half' %}
           {% endif %}
+          {%endcomment%}
+
           {% include 'product-list-item' %}
         {% else %}
           <div class="grid-item col-xs-12 messagefull info">
