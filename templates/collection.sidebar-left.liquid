@@ -2,29 +2,30 @@
 
 <div id="box">
   <div id="collection">
-    {% if page.metafields.jvpage.titlePage != 'hide'  %}
-      <div class="common-static-header collection-header">
-        <div class="parallax-bg" data-stellar-background-ratio="0.25"
-          {% if settings.bg_page_shop_enable %}
-            style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"
-          {% endif %}
-        ></div>
-        <div class="container">
-          <h1 class="section-header--title">{{ collection.title }}
-          <span class="count">({{ collection.all_products_count }}   {{ collection.all_products_count | pluralize: 'collections.general.items', 'collections.general.items' | t }})</span>
-          </h1>
-          
-          
-          {% if collection.description != blank %}
-            <div class="collection-description">
-              {{ collection.description }}
-            </div>
-          {% endif %}
-        </div>
+    <div class="common-static-header collection-header">
+     
+      <div class="container">
+        <h1 class="section-header--title">{{ collection.title }}
+        <span class="count">({{ collection.all_products_count }}   {{ collection.all_products_count | pluralize: 'collections.general.items', 'collections.general.items' | t }})</span>
+        </h1>
+        
+        
+        {% if collection.description != blank %}
+          <div class="collection-description">
+            {{ collection.description }}
+          </div>
+        {% endif %}
       </div>
+    </div>
+
+
+    {% if settings.number_products_per_page != blank %}
+      {% assign product_per_page = settings.number_products_per_page %}
+    {% else %}
+      {% assign product_per_page = 6 %}
     {% endif %}
 
-    {% paginate collection.products by 15 %}
+    {% paginate collection.products by product_per_page %}
 
     <div class="container">
     {% include 'breadcrumb' %}
@@ -39,26 +40,15 @@
       <div class="container">
         <div class="row" >
           <div class="grid-item{% if has_sidebar %} col-md-9  col-md-offset-3 {% endif %}">
+          
           {% comment %} Different markup if description is set {% endcomment %}
 
-            <div class="section-header__right sort-pagi-bar top clearfix">
             {% assign collection_data_view = 'sidebar_left' %}
-              {% include 'collection-views' %}
-            
-              {% if paginate.pages > 1 %}
-                <div class="pagination-2">
-                  {% include 'pagination-2' %}
-                </div>
-              {% endif %}
 
-              <div class="product-filter pull-right">
-              {% include 'collection-sorting' %}
-              </div>
-
-            </div>
+            {%include 'collection-toolbar' with class_toolbar:'toolbar-top', show_button_filter: false %}
 
 
-          <div class="row masonry-container">
+          <div class="row">
             {% for product in collection.products  %}
               
               {% include 'product-grid-item' %}
@@ -68,12 +58,9 @@
               </div>
             {% endfor %}
           </div>
+        
+          {%include 'collection-toolbar' with class_toolbar:'toolbar-bottom', show_button_filter: false %}
 
-        {% if paginate.pages > 1 %}
-          <div class="pagination-2">
-            {% include 'pagination-2' %}
-          </div>
-        {% endif %}
       </div>
       {% if has_sidebar %}
         <aside class="sidebar col-md-jvoffset-12 col-md-3 sidebar-left sidebar-product" id="collectionFilters">

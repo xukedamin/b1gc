@@ -1,0 +1,27 @@
+<div class="sort-pagi-bar toolbar {{class_toolbar}} clearfix">
+  {% include 'collection-views' %}
+  
+  {%if show_button_filter %}
+    
+    <div class="filter-product">
+      <a href="#" class="btn-filter style-border-left "> {{ 'collections.general.filter' | t }}</a>
+    </div>
+    {% if has_sidebar%}
+      <aside  data-id="collectionFilters" class="box-attr-filter" >
+        {% include 'collection-sidebar-filter' %}
+      </aside>
+    {% endif %}
+
+  {% endif %}
+
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination-1' %}
+  {% endif %}
+  
+  <div class="product-filter pull-right">
+    {% include 'collection-sorting' %}
+    
+  </div>
+  
+</div>

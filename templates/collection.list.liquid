@@ -1,12 +1,7 @@
 {% include 'collection-category-slider' %}
 
-{% if page.metafields.jvpage.titlePage != 'hide'  %}
   <div class="common-static-header collection-header">
-    <div class="parallax-bg" data-stellar-background-ratio="0.25"
-      {% if settings.bg_page_shop_enable %}
-        style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"
-      {% endif %}
-    ></div>
+
     <div class="container">
       <h1 class="section-header--title">{{ collection.title }}
       <span class="count">({{ collection.all_products_count }}   {{ collection.all_products_count | pluralize: 'collections.general.items', 'collections.general.items' | t }})
@@ -19,9 +14,14 @@
       {% endif %}
     </div>
   </div>
+
+{% if settings.number_products_per_page != blank %}
+  {% assign product_per_page = settings.number_products_per_page %}
+ {% else %}
+  {% assign product_per_page = 9 %}
 {% endif %}
 
-{% paginate collection.products by 10 %}
+{% paginate collection.products by product_per_page %}
 
 <div class="container">
 {% include 'breadcrumb' %}
@@ -32,7 +32,7 @@
   {% assign has_sidebar = true %}
 {% endif %}
 
-<main class="wrapper main-content templates-collection pt-50 " role="main">
+<main class="wrapper main-content templates-collection" role="main">
 <div class="container">
   <div class="row">
     {% if has_sidebar and settings.collection_sidebar_location == "collection_sidebar_left" %}
@@ -42,25 +42,26 @@
     {% endif %}
     <div class="grid-item{% if has_sidebar %} col-sm-9 grid-border--left{% endif %}">
         {% comment %}Different markup if description is set{% endcomment %}
-
+        
+        {%comment %}
         <div class="section-header__right sort-pagi-bar top clearfix">
           {% include 'collection-views' %}
          
-          <!--  <div class="filter-product">
-            <a href="#" class="btn-filter style-border-left "> {{ 'collections.general.filter' | t }}</a>
-          </div> -->
-         
           {% if paginate.pages > 1 %}
-            <div class="pagination-2">
-              {% include 'pagination-2' %}
+            <div class="pagination-1">
+              {% include 'pagination-1' %}
             </div>
           {% endif %}
 
           <div class="product-filter pull-right">
           {% include 'collection-sorting' %}
           </div>
-
         </div>
+        {%endcomment%}
+
+        {%include 'collection-toolbar' with class_toolbar:'toolbar-top', show_button_filter: false %}
+
+
       <div class="grid-uniform product-list {% if has_sidebar %}has-sidebar{% endif %}">
         {% for product in collection.products  %}
           {% if has_sidebar %}
@@ -75,6 +76,9 @@
           </div>
         {% endfor %}
       </div>
+
+      {%include 'collection-toolbar' with class_toolbar:'toolbar-bottom', show_button_filter: false %}
+
     
     </div>
 
@@ -85,7 +89,7 @@
     {% endif %}
 
 
-</div>
-{% endpaginate %}
-</div>
+    </div>
+    {% endpaginate %}
+  </div>
 </main>

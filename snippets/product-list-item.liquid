@@ -36,16 +36,13 @@ Select the product image size from settings.
         
         <div class="product-extra-mask">
           <div class="product-extra-link">
-            <a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
-            
-            <a class="action product-wishlist" href="#"><span class="lnr lnr-heart"></span></a>
             
             {% if settings.product_quickview_enable %}
               <a class="action product-quick-view" href="{{ product.url | within: current_collection }}"><span class="lnr lnr-magnifier"></span></a>
             {% endif %}
           </div>
-          </div><!-- product-extra-mask -->
-        </div>
+        </div><!-- product-extra-mask -->
+      </div>
 
         <div class="product-box-promotion">
 
@@ -66,16 +63,27 @@ Select the product image size from settings.
         </div>
 
         <div class="item-product-info">
+          <div class="product--detail-countdown pull-right">
+          {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
+          </div>
+
           <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
-          <!-- <div class="wrap-star-rating"> -->
-            <!-- <div class="inner-star-rating" style="width:80%"></div> -->
             {% if settings.product_reviews_enable %}
               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
             {% endif %}
-          <!-- </div> -->
-          <div class="desc"> {{ product.content | strip_html | truncatewords: 30 }}</div>
+          <div class="desc"> 
+
+            {% if product.description contains '[jvcountdown]' %}
+                {% assign des = product.description | split:'[/jvcountdown]' | last %}
+                
+                {{ des | split: '|' | first | strip_html | truncatewords: 30 }}
+              {%else %}
+                {{ product.description | split: '|' | first | strip_html | truncatewords: 30 }}
+            {%endif %}
+
+          </div>
          
-          {% include 'product-list-item--add-to-cart' with with show_price:'yes' %}
+           {% include 'product-list-item--add-to-cart' with show_price:'yes' %}
 
           </div>
         </div>

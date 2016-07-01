@@ -229,14 +229,21 @@ Page Grid
     padding: 5px 1em 5px 0.4em;
 }
 
-.sort-pagi-bar {
- position: relative;
+// .sort-pagi-bar {
+//  position: relative;
+// }
+
+.toolbar{
+  position: relative;
 }
 
-.sort-pagi-bar.top {
+.toolbar.toolbar-top {
     margin-bottom: 30px;
 }
-
+.toolbar.toolbar-bottom {
+    border-top: 1px solid $color_mercury;
+    padding-top: 30px;
+}
 
 .product-pagi-nav {
   margin: 0 0 0 30px;
@@ -271,10 +278,7 @@ Page Grid
   }
 }
 
-.sort-pagi-bar.bottom {
-    border-top: 1px solid $color_mercury;
-    padding-top: 30px;
-}
+
 .list-product {
     margin-bottom: 0;
 }

@@ -23,7 +23,15 @@
     
     <div role="tabpanel" class="tab-pane active" id="description">
     <h5>{{ 'products.product.description' | t }}</h5>
-    {{ product.description }}
+
+      {% if product.description contains '[jvcountdown]' %}
+            {% assign des = product.description | split:'[/jvcountdown]' | last %}
+            {{ des | split: '|' | first | strip_html | truncatewords: 50 }}
+          {%else %}
+            {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
+        {%endif %}
+        
+    <!-- {{ product.description }} -->
     </div>
     
     {% if settings.product_reviews_enable %}

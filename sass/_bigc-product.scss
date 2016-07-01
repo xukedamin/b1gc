@@ -234,6 +234,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .countdown-wrap{
   @extend %jv-transition-easeout;
 }
+
 .countdown--small{
   width: 200px;
   position: absolute;
@@ -246,6 +247,15 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     font-weight: 300;
   }
 }
+
+.product--detail-countdown {
+
+  .countdown--small{
+  position: static;
+   @include prefix(transform,translateX(0));
+ }
+}
+
 
 .item-product.item-product-leading {
   position: relative;
@@ -293,6 +303,10 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
       color: $color_dusty-gray;
     }
   }
+}
+
+.item-product-leading .item-product-thumb:hover .product-thumb-link img {
+  @extend %jv-transform-scale-115;
 }
 
 .product-grid-item .item-product-leading .info-price {
@@ -357,48 +371,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 }
 
-/*Advert*/
-.product-advert {
-  margin-top: 40px;
-}
 
-.leading-box-adv {
-  color: $color_white;
-}
-
-.product-advert .col-lg-3.col-md-3.col-sm-6.col-xs-12 {
-  padding: 0;
-}
-
-.product-thumb-link {
-  display: block;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    width: 100%;
-    @extend %jv-transition-easeout;
-  }
-}
-
-.product-box-adv {
-  overflow: hidden;
-  position: relative;
-
-  .btn-link-default {
-    position: absolute;
-    bottom: 0;
-    width: 130px;
-    right: 0;
-    @extend %text-center;
-    @extend %jv-transition-easeout;
-  }
-
-  &:hover img {
-    
-    @extend %jv-transform-scale-12;
-  }
-}
 
 
 /*New Product*/

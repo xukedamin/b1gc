@@ -4616,6 +4616,12 @@
         "default": true
       },
       {
+        "type": "text",
+        "id": "number_products_per_page",
+        "label": "Products per page",
+        "default": "9"
+      }, 
+      {
         "type": "checkbox",
         "id": "page_product_in_collections_enable",
         "label": "Show product in Collections"

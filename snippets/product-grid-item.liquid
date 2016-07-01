@@ -41,16 +41,7 @@
         {% endif %}
       </a>
 
-
-
-        {% if product.description contains '[jvcountdown]' %}            
-        {% assign temp = product.description | split:'[/jvcountdown]' | first %}
-        {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
-
-        {% include 'jv-sc-countdown' with countdown_time:count_down_time,countdown_wrap:"countdown--small" %}
-
-        
-        {% endif %}
+      {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
 
 
       <div class="product-extra-mask">

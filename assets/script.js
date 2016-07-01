@@ -1069,7 +1069,8 @@
     
     jvbigC.goJVCountdown();
 
-    $('.product-tabs-grid-wrapper a[data-toggle="tab"],.product-tabs-grid-simple-wrapper a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    // $('.product-tabs-grid-wrapper a[data-toggle="tab"],.product-tabs-grid-simple-wrapper a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       var tabid = $(e.target).attr("href");
       
       //must rebuild countdown when changing the tabs  

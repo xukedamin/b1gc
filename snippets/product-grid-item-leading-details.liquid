@@ -29,20 +29,14 @@
 			
 			<h3 class="sub-title"> <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
       
-      <div class="test {{product.handle}}">
 
      
-        {% if product.description contains '[jvcountdown]' %}            
-        {% assign temp = product.description | split:'[/jvcountdown]' | first %}
-        {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
 
-          {% include 'jv-sc-countdown' with countdown_time:count_down_time,countdown_wrap:"countdown--big" %}
+      {% include 'product-item--countdown' with countdown_wrap:"countdown--big" %}
 
         
-        {% endif %}
       
 
-      </div>
 		
 			<a href="{{ product.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>
 

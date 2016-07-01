@@ -70,8 +70,19 @@
 
       <div class="desc">
       <h5> {{ 'products.product.description' | t }}</h5>
-        {{ product.description }}
+        
+        {% if product.description contains '[jvcountdown]' %}
+            {% assign des = product.description | split:'[/jvcountdown]' | last %}
+            
+            {{ des | split: '|' | first | strip_html | truncatewords: 50 }}
+          {%else %}
+            {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
+        {%endif %}
+
       </div>
+
+      
+
 
       {% include 'product--price-section' %}
 
@@ -80,6 +91,10 @@
       {% include 'product--addtocart' %}
      
       {% include 'product--detail-others' %}
+      
+      <div class="product--detail-countdown">
+        {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
+      </div>
 
     </div>
 
