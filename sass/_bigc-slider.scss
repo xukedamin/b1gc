@@ -628,7 +628,8 @@
   position: absolute;
   top: 50%;
   width: 100%;
-  @include prefix(transform, translateY(-50%));
+  @extend %jv-transform-translateY-50;
+  
   z-index: 5;
 }
 

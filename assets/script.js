@@ -379,7 +379,7 @@
       //Product Gallery
       if ($('.has-sidebar .product-gallery .bxslider').length > 0) {
 
-           $('.has-sidebar .product-gallery #bx-pager').bxSlider({
+           $('.has-sidebar .product-gallery:not(.no-zoom) #bx-pager').bxSlider({
               slideWidth: 120,
               minSlides: 4,
               maxSlides: 4,
@@ -392,10 +392,9 @@
 
       if ($('.none-sidebar .product-gallery .bxslider').length > 0) {
 
-           $('.none-sidebar .product-gallery #bx-pager').bxSlider({
+           $('.none-sidebar .product-gallery:not(.no-zoom) #bx-pager').bxSlider({
               slideWidth: 126,
-              minSlides: 4,
-              maxSlides: 6,
+
               slideMargin: 0,
               mode: 'vertical',
               infiniteLoop: false,
@@ -403,6 +402,16 @@
               prevText: '<span class="lnr lnr-chevron-down"></span>'
             });
        }
+
+       if($('.product-gallery.no-zoom .bxslider').length > 0){
+        $('.product-gallery.no-zoom .bxslider').bxSlider({
+          pagerCustom: '.product-gallery #bx-pager',
+           maxSlides: 4,
+           infiniteLoop: false,
+          nextText:'<span class="lnr lnr-chevron-right"></span>',
+          prevText:'<span class="lnr lnr-chevron-left"></span>'
+        });
+      }
 
         //Post Gallery
       if ($('.post-format-gallery .bxslider').length > 0) {
@@ -1055,6 +1064,14 @@
     jvbigC.goCategoryLightbox();
 
     jvbigC.goAttachToSliderBx();
+
+    // //update product sliderbx
+    // if($('.extra').parent('#bx-pager').length > 1 ){
+    //   $('.extra').parent('#bx-pager').css('min-height','575px');
+    //   console.log('call');
+    // }
+
+
     jvbigC.goAttachToSliderOwl();
 
     jvbigC.goMenuMobile();

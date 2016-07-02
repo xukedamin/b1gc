@@ -208,6 +208,15 @@ $max: max-width;
   @include prefix(transform,translate(0,100%));
 }
 
+%jv-transform-translateX-50{
+ @include prefix(transform, translateX(-50%));
+}
+
+%jv-transform-translateY-50{
+ @include prefix(transform, translateY(-50%));
+}
+
+
 %jv-transform-rotate-225{
   @include prefix(transform, rotate(225deg));
 }
@@ -259,7 +268,7 @@ $max: max-width;
   from { -webkit-transform: translate3d(0, 30px, 0); transform: translate3d(0, 30px, 0); opacity: 0; visibility: visible; }
   to { -webkit-transform: translate3d(0, 0, 0); opacity: 1; transform: translate3d(0, 0, 0); }
 }
-.slideInUp-30 { -webkit-animation-name: slideInUp-30; animation-name: slideInUp-30; }
+
 @-webkit-keyframes slideInRight-30 {
   from { -webkit-transform: translate3d(30px, 0, 0); transform: translate3d(30px, 0, 0); visibility: visible; opacity: 0; }
   to { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
@@ -277,6 +286,8 @@ $max: max-width;
   to { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
 }
 
+
+.slideInUp-30 { -webkit-animation-name: slideInUp-30; animation-name: slideInUp-30; }
 .slideInRight-30 {  -webkit-animation-name: slideInRight-30;  animation-name: slideInRight-30;}
 .slideInLeft-30 {  -webkit-animation-name: slideInLeft-30;  animation-name: slideInLeft-30;}
 
@@ -336,20 +347,6 @@ $max: max-width;
 
 
 
-.panel-group .panel-heading + .panel-collapse > .list-group,
-.panel-group .panel-heading + .panel-collapse > .panel-body {
-  border-top: none;
-}
-
-.panel-group .panel,
-.panel-group .panel-heading {
-  border-radius: 0;
-  box-shadow: none;
-  -webit-box-shadow: none;
-}
-
-
-
 /*============================================================================
 #Normalize
 ==============================================================================*/
@@ -376,6 +373,21 @@ a:hover, a:focus { text-decoration: none; outline: none; }
 input, input:focus, input:hover { outline: none; }
 p { line-height: 24px; }
 blockquote { border-left: 5px solid $color_shark; color: $color_dusty-gray; font-size: 16px; line-height: 30px; padding: 0 30px; }
+
+
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: none;
+}
+
+.panel-group .panel,
+.panel-group .panel-heading {
+  // border-radius: 0;
+  // box-shadow: none;
+  // -webit-box-shadow: none;
+  @include prefix(border-radius, 0);
+  @include prefix(box-shadow, none);
+}
 
 
 .owl-theme .owl-controls {
@@ -505,15 +517,17 @@ select option {
 .show-loading .loading-ball .ball {
   border-left-color: $color_white !important;
   border-top-color: $color_white !important;
-  -moz-animation: spin .5s infinite linear;
-  -webkit-animation: spin .5s infinite linear;
-  -ms-animation: spin .5s infinite linear;
+  // -moz-animation: spin .5s infinite linear;
+  // -webkit-animation: spin .5s infinite linear;
+  // -ms-animation: spin .5s infinite linear;
+  @include prefix(animation,spin .5s infinite linear);
 
   .ball1 {
     opacity: 1;
-    -moz-animation: spinoff .5s infinite linear;
-    -webkit-animation: spinoff .5s infinite linear;
-    -ms-animation: spinoff .5s infinite linear
+    // -moz-animation: spinoff .5s infinite linear;
+    // -webkit-animation: spinoff .5s infinite linear;
+    // -ms-animation: spinoff .5s infinite linear;
+    @include prefix(animation, spinoff .5s infinite linear);
   }
   .ball2 {
     opacity: 0
@@ -546,14 +560,11 @@ body.ajaxing  #overlays-loading {  visibility: visible;  opacity: 1; }
 .owl-carousel .item { width:auto !important; float:none !important;  margin:0 !important; }
 
 
-
-
 section.one-child {
-    padding: 75px 0;
-    position: relative;
+  padding: 75px 0;
+  position: relative;
 }
 
-.width100 { width:100%}
 
 
 input[type="text"],

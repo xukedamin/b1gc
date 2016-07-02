@@ -314,6 +314,22 @@ Dependency-free breakpoint mixin
   transform: translate(0, 100%);
 }
 
+.none-sidebar .product-gallery:not(.no-zoom) .bx-prev, .none-sidebar .product-gallery:not(.no-zoom) .bx-next {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.content-product-detail.has-sidebar #productThumbs .bx-prev, .banner-info, .page-login-wrapper .page-login form .infor .icon {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .btn-circle-box5 .link-compare:hover span, .btn-circle-box55 .link-compare:hover span, .btn-circle-box66 .link-compare:hover {
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
@@ -422,11 +438,6 @@ Dependency-free breakpoint mixin
     transform: translate3d(0, 0, 0);
   }
 }
-.slideInUp-30 {
-  -webkit-animation-name: slideInUp-30;
-  animation-name: slideInUp-30;
-}
-
 @-webkit-keyframes slideInRight-30 {
   from {
     -webkit-transform: translate3d(30px, 0, 0);
@@ -479,6 +490,11 @@ Dependency-free breakpoint mixin
     opacity: 1;
   }
 }
+.slideInUp-30 {
+  -webkit-animation-name: slideInUp-30;
+  animation-name: slideInUp-30;
+}
+
 .slideInRight-30 {
   -webkit-animation-name: slideInRight-30;
   animation-name: slideInRight-30;
@@ -605,18 +621,6 @@ Dependency-free breakpoint mixin
     bottom: 0;
   }
 }
-.panel-group .panel-heading + .panel-collapse > .list-group,
-.panel-group .panel-heading + .panel-collapse > .panel-body {
-  border-top: none;
-}
-
-.panel-group .panel,
-.panel-group .panel-heading {
-  border-radius: 0;
-  box-shadow: none;
-  -webit-box-shadow: none;
-}
-
 /*============================================================================
 #Normalize
 ==============================================================================*/
@@ -678,6 +682,25 @@ blockquote {
   font-size: 16px;
   line-height: 30px;
   padding: 0 30px;
+}
+
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: none;
+}
+
+.panel-group .panel,
+.panel-group .panel-heading {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 
 .owl-theme .owl-controls {
@@ -813,15 +836,19 @@ select option {
 .show-loading .loading-ball .ball {
   border-left-color: #fff !important;
   border-top-color: #fff !important;
-  -moz-animation: spin .5s infinite linear;
-  -webkit-animation: spin .5s infinite linear;
-  -ms-animation: spin .5s infinite linear;
+  -webkit-animation: spin 0.5s infinite linear;
+  -moz-animation: spin 0.5s infinite linear;
+  -ms-animation: spin 0.5s infinite linear;
+  -o-animation: spin 0.5s infinite linear;
+  animation: spin 0.5s infinite linear;
 }
 .show-loading .loading-ball .ball .ball1 {
   opacity: 1;
-  -moz-animation: spinoff .5s infinite linear;
-  -webkit-animation: spinoff .5s infinite linear;
+  -webkit-animation: spinoff 0.5s infinite linear;
+  -moz-animation: spinoff 0.5s infinite linear;
   -ms-animation: spinoff 0.5s infinite linear;
+  -o-animation: spinoff 0.5s infinite linear;
+  animation: spinoff 0.5s infinite linear;
 }
 .show-loading .loading-ball .ball .ball2 {
   opacity: 0;
@@ -881,10 +908,6 @@ body.ajaxing #overlays-loading {
 section.one-child {
   padding: 75px 0;
   position: relative;
-}
-
-.width100 {
-  width: 100%;
 }
 
 input[type="text"],
@@ -7233,7 +7256,7 @@ Page Detail Mr
   padding-left: 10px;
 }
 
-.none-sidebar .product-gallery .bx-wrapper {
+.none-sidebar .product-gallery:not(.no-zoom) .bx-wrapper {
   padding: 0;
 }
 .none-sidebar #productThumbs .bx-wrapper .bx-viewport {
@@ -7241,25 +7264,30 @@ Page Detail Mr
   max-height: 463px;
   overflow: hidden;
 }
-.none-sidebar .product-gallery .bx-prev {
+.none-sidebar .product-gallery:not(.no-zoom) .bx-prev {
   left: 50%;
   bottom: 30px;
   margin: 0;
   top: auto;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
-.none-sidebar .product-gallery .bx-next {
+.none-sidebar .product-gallery:not(.no-zoom) .bx-next {
   left: 50%;
   top: 30px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+}
+.none-sidebar .product-gallery.no-zoom .extra {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  direction: rtl;
+  z-index: 1;
+}
+.none-sidebar .product-gallery.no-zoom .extra > a {
+  width: 107px !important;
+  margin-left: 5px;
+  display: inline-block !important;
+}
+.none-sidebar .product-gallery.no-zoom .extra > a:nth-child(5n) {
+  margin-left: 0;
 }
 
 .content-product-detail.has-sidebar .product-photo-container {
@@ -7277,11 +7305,10 @@ Page Detail Mr
 .content-product-detail.has-sidebar #productThumbs .bx-prev, .content-product-detail.has-sidebar #productThumbs .bx-prev {
   top: 50%;
   margin: 0;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+}
+
+.content-product-detail.has-sidebar .product-gallery #bx-pager a:nth-child(4n) {
+  margin-right: 0;
 }
 
 .addToCartForm .variant-quantity {
@@ -10349,11 +10376,6 @@ ul.blog-related .post-date {
   position: absolute;
   top: 50%;
   width: 100%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
   z-index: 5;
 }
 
@@ -10721,11 +10743,6 @@ Page Detail
   top: 50%;
   left: 15px;
   z-index: 1;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 .page-login-wrapper .page-login form .infor .icon i:before {
   vertical-align: middle;

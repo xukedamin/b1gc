@@ -906,8 +906,9 @@ Page Detail Mr
   padding-left: 10px;
 }
 
+//product single nonesidebar
 .none-sidebar {
-  .product-gallery .bx-wrapper{
+  .product-gallery:not(.no-zoom) .bx-wrapper{
     padding: 0;
   }
 
@@ -917,21 +918,51 @@ Page Detail Mr
   overflow: hidden;
   }
 
-  .product-gallery {
+  .product-gallery:not(.no-zoom)  {
     .bx-prev {
     left: 50%;
     bottom: 30px;
     margin: 0;
     top: auto;
-      @include prefix(transform, translateX(-50%));
+     @extend %jv-transform-translateX-50;
     }
     .bx-next {
       left: 50%;
       top: 30px;
-      @include prefix(transform, translateX(-50%));
+     @extend %jv-transform-translateX-50;
     }
+
+    //if pager item is more than 4:
+    // #bx-pager > a:nth-child(6){
+    //   position: absolute;
+    //   max-width: 105px;
+    //   right: 135px;
+    //   bottom: 90px;
+    // }
+    
   }
+  
+  .product-gallery.no-zoom{
+    .extra {
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        direction: rtl;
+        z-index: 1;
+        >a{
+          width: 107px !important;
+          margin-left: 5px;
+          display: inline-block !important;
+          &:nth-child(5n){
+            margin-left: 0;
+          }
+        }
+    }
+    
+  }
+
 }
+
 
 .content-product-detail.has-sidebar{
   .product-photo-container{
@@ -949,10 +980,16 @@ Page Detail Mr
     .bx-prev, .bx-prev{
       top: 50%;
       margin: 0;
-      @include prefix(transform, translateY(-50%));
+      @extend %jv-transform-translateY-50;
     }
   }
 }
+
+
+.content-product-detail.has-sidebar .product-gallery #bx-pager a:nth-child(4n){
+  margin-right: 0;
+}
+
 
 .addToCartForm .variant-quantity{
   display: block;
