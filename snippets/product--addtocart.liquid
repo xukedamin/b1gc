@@ -1,4 +1,9 @@
 <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart product-option" id="AddToCartForm"  data-id="product-actions-{{ product.id }}">
+  
+  {% if settings.product_quantity_message %}
+  <span id="variantQuantity" class="variant-quantity"></span>
+  {% endif %}
+
   <div class="wrap-variants clearfix">
     <select name="id" id="productSelect"   class="product-variants hidden">
       {% for variant in product.variants %}
@@ -19,17 +24,9 @@
         {% include 'swatch' with option %}
       {% endfor %}
     {% endif %}
-
-
-
   </div>
 
 
-
-  
-  {% if settings.product_quantity_message %}
-  <span id="variantQuantity" class="variant-quantity"></span>
-  {% endif %}
 
   <div class="wrap-cart-detail clearfix wrap-cart-qty">
 

@@ -4905,8 +4905,8 @@
       },
       {
         "type": "checkbox",
-        "id": "product_image_gallery_zoom_enable",
-        "label": "product_image_gallery_zoom_enable",
+        "id": "product_image_zoom_enable",
+        "label": "product_image_zoom_enable",
         "default": true
       }
     ]

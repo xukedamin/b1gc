@@ -127,7 +127,7 @@
 
     checkItemsInMiniCart: function() {
 
-        console.log($("#mini-cart .shop-cart-list .info-list-cart").children().length);
+        
         if ($("#mini-cart .shop-cart-list .info-list-cart").children().length > 0) {
           $("#mini-cart").removeClass('mini_cart_hidden');
           $("#mini-cart").parent().removeClass('hidden');

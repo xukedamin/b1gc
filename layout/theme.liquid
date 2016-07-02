@@ -77,8 +77,6 @@
 
 
 
-
-
   {% include 'google-fonts' %}
 
   <!-- Header hook for plugins ================================================== -->
@@ -101,8 +99,7 @@
   {{ 'bootstrap.min.js' | asset_url | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}  
 
-
-{{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+  {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
 
   
   {{ 'jquery.masonry.min.js' | asset_url | script_tag }}  
@@ -115,17 +112,11 @@
   {{ 'PieChart.js' | asset_url | script_tag }}
   {{ 'circles.js' | asset_url | script_tag }}
 
-
-  
   {{ 'jquery.magnific-popup.min.js' | asset_url | script_tag }}
   {{ 'jquery.ajaxchimp.js' | asset_url | script_tag }}
-  
-
 
   {{ 'slick.min.js' | asset_url | script_tag }}
   
-
-
 
 
 </head>
@@ -187,9 +178,11 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
   </script>
 
   {% if settings.ajax_cart_method != 'page' %}
-  {{ 'handlebars.min.js' | asset_url | script_tag }}
-  {% include 'ajax-cart-template' %}
-  {{ 'ajaxify.js' | asset_url | script_tag }}
+
+    {{ 'handlebars.min.js' | asset_url | script_tag }}
+    {% include 'ajax-cart-template' %}
+    {{ 'ajaxify.js' | asset_url | script_tag }}
+  
   <script>
   //TEST
     jQuery(function($) {
@@ -219,6 +212,8 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
     window.ajax_cart = true;
     
   </script>
+
+
 
   
   <div id="overlays-loading" class=" show-loading">
@@ -269,34 +264,39 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
   
   <script>
     jQuery( function( $ ) {
-      $('ul.mega-menu-content.double-sub').each( function() {
-        var a = []
-        ,b = $('<ul>')
-        ,w = $(this)
-        ;
-        w.children('li').each( function( i ) {
 
-          b.append( this );
-          if( i%2 )
-          {
-            a.push( b );
-            b = $('<ul>');
-          }
-        } );
+      // $('ul.mega-menu-content.double-sub').each( function() {
+      //   var a = []
+      //   ,b = $('<ul>')
+      //   ,w = $(this)
+      //   ;
+      //   w.children('li').each( function( i ) {
 
-        w.empty();
+      //     b.append( this );
+      //     if( i%2 )
+      //     {
+      //       a.push( b );
+      //       b = $('<ul>');
+      //     }
+      //   } );
 
-        a.length && $.each( a, function() {
-          w.append( $('<li class="column">').append( this ) );
-        } );
-      } );
+      //   w.empty();
+
+      //   a.length && $.each( a, function() {
+      //     w.append( $('<li class="column">').append( this ) );
+      //   } );
+      // } );
 
 
       //newsletter popup
-      $("#newsletter-btn").fancybox({
-        'titleShow'   : false,
-        'padding'   : 0
-      });
+      if($("#newsletter-btn").length > 0){
+
+        $("#newsletter-btn").fancybox({
+          'titleShow'   : false,
+          'padding'   : 0
+        });
+
+      }
 
       if (document.cookie.indexOf('visited=true') == -1) {
       var fifteenDays = 1000*60*60*24*15;
@@ -331,7 +331,7 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
 
 
 <!-- Begin Recently Viewed Products -->
-{% if template contains 'product' %}
+{% if settings.viewed_enable and template contains 'product' %}
   <script>
   Shopify.Products.recordRecentlyViewed();
   </script>

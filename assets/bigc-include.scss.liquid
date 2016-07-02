@@ -7563,6 +7563,10 @@ Page Detail Mr
   padding: 0;
 }
 
+.modify-height {
+  min-height: 575px;
+}
+
 @media (max-width: 990px) {
   .info-sale {
     display: none;
@@ -7598,6 +7602,67 @@ Page Detail Mr
 
   .swatch .header {
     margin-right: 0;
+  }
+
+  .none-sidebar .product-gallery.no-zoom .extra > a {
+    width: 18% !important;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .product-gallery .bx-wrapper {
+    padding-right: 5px;
+  }
+
+  .product-gallery #bx-pager a {
+    margin-bottom: 4px;
+  }
+
+  .product-gallery.no-zoom #bx-pager a {
+    margin-bottom: 7px;
+  }
+
+  .detail-product-tab {
+    padding: 0 15px 20px;
+  }
+
+  .product--bottom-nav {
+    margin: 20px 0;
+  }
+  .product--bottom-nav .bt-link, .product--bottom-nav .bt-primary, .product--bottom-nav .btn-primary, .product--bottom-nav .bt-primary-inverse {
+    display: block;
+    width: 100%;
+  }
+  .product--bottom-nav .bt-link + .bt-link, .product--bottom-nav .bt-primary + .bt-link, .product--bottom-nav .btn-primary + .bt-link, .product--bottom-nav .bt-primary-inverse + .bt-link, .product--bottom-nav .bt-link + .bt-primary, .product--bottom-nav .bt-primary + .bt-primary, .product--bottom-nav .btn-primary + .bt-primary, .product--bottom-nav .bt-primary-inverse + .bt-primary, .product--bottom-nav .bt-link + .btn-primary, .product--bottom-nav .bt-primary + .btn-primary, .product--bottom-nav .btn-primary + .btn-primary, .product--bottom-nav .bt-primary-inverse + .btn-primary, .product--bottom-nav .bt-link + .bt-primary-inverse, .product--bottom-nav .bt-primary + .bt-primary-inverse, .product--bottom-nav .btn-primary + .bt-primary-inverse, .product--bottom-nav .bt-primary-inverse + .bt-primary-inverse {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .modify-height {
+    min-height: 350px;
+  }
+
+  .content-product-detail.has-sidebar .product-gallery.no-zoom #bx-pager a {
+    margin-right: 1px;
+    margin-top: 5px;
+    max-width: 69px;
+    color: black;
+  }
+  .content-product-detail.has-sidebar .product-gallery.no-zoom #bx-pager a:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .none-sidebar .product-gallery:not(.no-zoom) #productThumbs .bx-wrapper .bx-viewport {
+    max-height: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .none-sidebar .product-gallery:not(.no-zoom) #productThumbs .bx-wrapper .bx-viewport {
+    max-height: 240px;
+  }
+
+  .modify-height {
+    min-height: 300px;
   }
 }
 .item-collections .inner {
@@ -10622,6 +10687,100 @@ Page Detail
 }
 .title-list-collection h2 {
   margin: 0;
+}
+
+/*============================================================================
+#Password Page
+==============================================================================*/
+.template-password {
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+}
+
+.password-page__wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-image: url('{{ "password-page-background.jpg" | asset_url }}');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+.password-page__wrapper a {
+  color: inherit;
+}
+.password-page__wrapper .social-sharing a {
+  color: #ffffff;
+}
+.password-page__wrapper h2 {
+  color: #ffffff;
+}
+.password-page__wrapper .password-page__header {
+  display: table-row;
+  height: 1px;
+}
+.password-page__wrapper .password-page__header .password-page__header__inner {
+  display: table-cell;
+  padding: 15px 30px;
+}
+.password-page__wrapper .password-page__header .password-page__header__inner .password-page__logo {
+  margin-top: 90px;
+}
+.password-page__wrapper .password-page__main {
+  display: table-row;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.password-page__wrapper .password-page__main .password-page__main__inner {
+  display: table-cell;
+  padding: 15px 30px 100px;
+  vertical-align: middle;
+}
+.password-page__wrapper .password-page__footer {
+  display: table-row;
+  height: 1px;
+}
+.password-page__wrapper .password-page__footer .password-page__footer_inner {
+  display: table-cell;
+  font-size: 95%;
+  line-height: 19.5px;
+  padding: 30px;
+  vertical-align: bottom;
+}
+
+.password-page__message, .password-page__login-form, .password-page__signup-form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.password-page__message .inputbox, .password-page__login-form .inputbox, .password-page__signup-form .inputbox {
+  width: 100%;
+  color: #333;
+}
+
+.password-page__login-form, .password-page__signup-form {
+  padding: 0 30px;
+}
+
+.lock-icon-svg {
+  display: inline-block;
+  height: 14px;
+  vertical-align: baseline;
+  width: 14px;
+}
+
+.shopify-logo-svg {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: top;
+  /* Hiding the SVG logo in IE8, we show the word 'Shopify' instead */
+}
+.shopify-logo-svg path {
+  fill: currentColor;
+}
+.lt-ie9 .shopify-logo-svg {
+  display: none;
 }
 
 .page-common-background {

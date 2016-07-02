@@ -61,10 +61,14 @@
         <div class="shop-detail-relate">
           
           {% assign featuredCollection = collections[settings.featured_prod_collection] %}
-          <div class="featured-products">
+          <div class="featured-products pb-45 product-slider slider-owl-1-item-nav owl-default">
+           <div class="wrap-item">
             {% for product in featuredCollection.products limit: settings.featured_prod_num %}
-              {% include 'product-grid-item' with grid_item_width: 'col-md-3 col-sm-6 col-xs-12'  %}
+
+            {% include 'product-grid-item'%}
+
             {% endfor %}
+            </div>
           </div>
         </div>
       </div>

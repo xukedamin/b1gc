@@ -49,7 +49,6 @@
       
       <div class="row">
         <div class="col-xs-12">
-          <p><span class="uppercase">{{'products.product.shares' | t}} :</span></p>
           <div class="text-center">{% include 'social-sharing-ul' %}</div>
         </div>
       </div>
@@ -85,8 +84,6 @@
         {%endif %}
 
       </div>
-
-      
 
 
       {% include 'product--price-section' %}
@@ -150,7 +147,8 @@
             $productPrice = $('#productPrice'),
             $comparePrice = $('#comparePrice'),
             $variantQuantity = $('#variantQuantity'),
-            $quantityElements = $('.quantity-selector, label + .js-qty'),
+            //to hide jvbigC quantity-wrapper
+            $quantityElements = $('.quantity-wrapper, .quantity-selector, label + .js-qty'),
             $addToCartText = $('#addToCartText'),
             $featuredImage = $('#productPhotoImg');
 
@@ -244,6 +242,6 @@
       });
     </script>
 
-  {% if settings.product_image_gallery_zoom_enable %} 
+  {% if settings.product_image_zoom_enable %} 
     {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
   {% endif %}    

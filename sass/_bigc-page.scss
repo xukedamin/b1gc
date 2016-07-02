@@ -60,3 +60,120 @@ Page Detail
     margin: 0;
   }
 }
+
+
+/*============================================================================
+#Password Page
+==============================================================================*/
+
+.template-password {
+  height: 100vh;
+  text-align: center;
+  padding: 0;
+}
+
+.password-page__wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+    background-image: url('{{ "password-page-background.jpg" | asset_url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    // color: $colorTextBody;
+
+  a {
+    color: inherit;
+  }
+
+  .social-sharing a {
+    color: #ffffff;
+  }
+
+  h2 {
+    color: #ffffff;
+  }
+
+
+
+
+  .password-page__header {
+    display: table-row;
+    height: 1px;
+
+    .password-page__header__inner {
+      display: table-cell;
+      padding: 15px 30px;
+
+      .password-page__logo {
+        margin-top: 90px;
+      }
+    }
+  }
+
+  .password-page__main {
+    display: table-row;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+
+    .password-page__main__inner {
+      display: table-cell;
+      padding: 15px 30px 100px;
+      vertical-align: middle;
+
+    }
+  }  
+
+  .password-page__footer {
+    display: table-row;
+    height: 1px;
+
+
+    .password-page__footer_inner {
+      display: table-cell;
+      font-size: 95%;
+      line-height: 19.5px;
+      padding: 30px;
+      vertical-align: bottom;
+    }
+  }  
+}
+
+.password-page__message, .password-page__login-form, .password-page__signup-form {
+  margin: 0 auto;
+  max-width: 500px;
+
+  .inputbox  { width:100%; color:#333;}
+}
+.password-page__login-form, .password-page__signup-form {
+  padding: 0 30px;
+}
+
+
+
+
+.lock-icon-svg {
+  display: inline-block;
+  height: 14px;
+  vertical-align: baseline;
+  width: 14px;
+}
+
+.shopify-logo-svg {
+  // width: 1.5 * $baseFontSize * 120 / 35;
+  // height: 1.5 * $baseFontSize;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: top;
+
+  path {
+    fill: currentColor;
+  }
+
+  /* Hiding the SVG logo in IE8, we show the word 'Shopify' instead */
+  .lt-ie9 & {
+    display: none;
+  }
+}

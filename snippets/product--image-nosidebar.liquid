@@ -1,0 +1,40 @@
+{%comment %}
+with page_style == 'nosidebar'
+product image #bx-pager is align to left of feature image
+need some extra code for alignment #bx-pager items(> 4) align continued on the bottom 
+
+{%endcomment%}
+
+{% for image in product.images limit: 4 %}
+  <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb1" data-slide-index="{{forloop.index | minus: 1}}" >
+    <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+  </a>
+ 
+{% endfor %}
+
+
+
+{%if product.images| size  > 4 %}
+
+<div class="extra">
+{% for image in product.images offset: 4 limit: 5 %}
+ 
+  <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb1" data-slide-index="{{forloop.index | plus : 4 |minus: 1}}" >
+    <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+  </a>
+{% endfor %}
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  (function($){
+    $(document).ready(function(){
+      if($('.none-sidebar .extra').parent('#bx-pager').length > 0 ){
+        $('.none-sidebar .extra').parent('#bx-pager').addClass('modify-height');
+      }
+    }); 
+
+  })(jQuery);
+</script>  
+
+{% endif %}
+
