@@ -3,11 +3,16 @@
     {% include 'price' with variant.price %}
   </span>
   {% if product.compare_at_price_max > product.price %}
+    {%if settings.product_show_price_compare_at_price == 'save' %}
     
-     <del id="comparePrice" class="sale-tag large h4">
-    {% assign compare_price = variant.compare_at_price %}
-    {% assign product_price = variant.price %}
-    {% include 'price-sale' %}
-    </del>
+    <div id="comparePrice" class="sale-tag large h4">
+      {% assign compare_price = variant.compare_at_price %}
+      {% assign product_price = variant.price %}
+      {% include 'price-sale' %}
+    </div>
+  {% else %}
+    <del>{% include 'price' with variant.compare_at_price %}</del>
+    
   {% endif %}
+{% endif %}
 </div>

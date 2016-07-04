@@ -53,7 +53,6 @@
 
             {% if settings.product_quickview_enable %}
               <a href="#popupid" class="action product-quick-view" data-id="{{ product.handle }}" ><span class="lnr lnr-magnifier"></span></a>
-              <!-- include 'product-quick-view' -->
             {% endif %}
 
           </div>
@@ -90,11 +89,17 @@
           {% include 'price' with product.price %}
         </span>
          {% if on_sale %}
-          <del class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
-          {% assign compare_price = product.compare_at_price %}
-          {% assign product_price = product.price %}
-          {% include 'price-sale' %}
-          </del>
+            
+            {%if settings.product_show_price_compare_at_price == 'save' %}
+              <div class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
+              {% assign compare_price = product.compare_at_price %}
+              {% assign product_price = product.price %}
+              {% include 'price-sale' %}
+              </div>
+            {% else %}
+               <del>{% include 'price' with product.compare_at_price %}</del>
+            {% endif %}
+
         {% endif %}
         
       </div>

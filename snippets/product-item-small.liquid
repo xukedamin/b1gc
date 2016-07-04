@@ -5,8 +5,13 @@
 {% endif %}
 {% endfor %}
 
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+  {% assign on_sale = true %}
+{% endif %}
 
-<div class="product-small shop-recently-viewed-item clearfix {{settings.wrapper_style}}">
+
+<div class="product-small clearfix">
   <div class="product-thumb">
     <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
     <div class="image"><img src="{{ product.featured_image | product_img_url: settings.wrapper_img_size }}" class="main-image img-responsive" alt="{{ product.title }}" /></div>
@@ -16,13 +21,19 @@
   <div class="price info-price">
       <div class="clearfix">
 
-
         {% if on_sale %}
-        <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-          {% assign compare_price = product.compare_at_price %}
-          {% assign product_price = product.price %}
-          {% include 'price-sale' %}
-        </del>
+
+           {%if settings.product_show_price_compare_at_price == 'save' %}
+
+            <div class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
+              {% assign compare_price = product.compare_at_price %}
+              {% assign product_price = product.price %}
+              {% include 'price-sale' %}
+            </div>
+            {% else %}
+              <del>{% include 'price' with product.compare_at_price %}</del>
+          {% endif %}
+
         {% endif %}
         <span class=" medium--left">
           {% include 'price' with product.price %}

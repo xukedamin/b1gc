@@ -89,14 +89,16 @@
       {% include 'product--price-section' %}
 
       <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+      
+      <div class="product--detail-countdown mt-20">
+        {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
+      </div>
 
       {% include 'product--addtocart' %}
      
       {% include 'product--detail-others' %}
       
-      <div class="product--detail-countdown">
-        {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
-      </div>
+    
 
     </div>
 

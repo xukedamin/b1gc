@@ -1397,6 +1397,27 @@
         "type": "image",
         "id": "seach_header_bg_image.jpg",
         "label": "Set header image"
+      },
+       {
+        "type": "select",
+        "id": "search_result_view_display",
+        "label": "Select Search result view Style",
+        "options": [
+          {
+            "value": "grid",
+            "label": "Grid"
+          },
+          {
+            "value": "list",
+            "label": "List"
+          }],
+        "default" : "grid"
+        },
+       {
+        "type": "text",
+        "id": "search_result_number_products_per_page",
+        "label": "Products per page",
+        "default": "9"
       }
     ]
   },
@@ -4775,6 +4796,22 @@
         "id": "product_masonry_effect",
         "label": "Use Masonry layout",
         "default": true
+      },
+      {
+        "type": "radio",
+        "id": "product_show_price_compare_at_price",
+        "label": "Show price compare at price",
+        "options": [
+          {
+            "value": "compared",
+            "label": "Show price compare at price"
+          },
+          {
+            "value": "save",
+            "label": "Price after compare (using the text 'You save X')"
+          }
+        ],
+        "default": "compared"
       },
       {
         "type": "checkbox",

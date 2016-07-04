@@ -1,6 +1,9 @@
-.category-slider{
 
+.messagefull .content {
+    padding: 20px 25px 20px 110px;
+    position: relative;
 }
+
 
 .item-collections .inner {
   position: relative;
@@ -443,29 +446,6 @@ Page Product List
   }
 }
 
-
-.item-product-info .product-readmore {
-  border: 1px solid $color_mercury;
-  color: $color_shark;
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  margin-top: 15px;
-  padding: 0 30px;
-  @extend %text-up;
-  @extend %jv-transition-easeout;
-
-  &:hover {
-    background: $color_shark none repeat scroll 0 0;
-    border: 1px solid $color_shark;
-    color: $color_white;
-  }
-}
-
-
-/**************************************
-Page Product List Mr
-***************************************/
 .product-list.has-sidebar {
 
   .item-product-thumb {
@@ -502,9 +482,23 @@ Page Product List Mr
   }
 }
 
-.messagefull .content {
-    padding: 20px 25px 20px 110px;
-    position: relative;
+
+.item-product-info .product-readmore {
+  border: 1px solid $color_mercury;
+  color: $color_shark;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 15px;
+  padding: 0 30px;
+  @extend %text-up;
+  @extend %jv-transition-easeout;
+
+  &:hover {
+    background: $color_shark none repeat scroll 0 0;
+    border: 1px solid $color_shark;
+    color: $color_white;
+  }
 }
 
 @media (max-width: 767px){

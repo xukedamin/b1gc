@@ -1,6 +1,5 @@
 <main class="main-content search-result">
 
-  {% if page.metafields.jvpage.titlePage != 'hide'  %}  
   <div class="header-static">
     <div class="parallax-bg" data-stellar-background-ratio="0.25" ></div>
 
@@ -16,43 +15,60 @@
       
     </div>  
   </div>
-  {% endif %}    
 
 
-
-  <section role="main" class="wrapper-content full-content {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %} pt-70">
+  <section role="main" class="wrapper-content full-content pt-70">
     <div class="container">
 
-      {% assign grid_results = true %}
+      {% assign grid_results = settings.search_result_view_display %}
 
       {% assign respond_js_secret_key = shop.domain | md5 %}
       {% unless search.terms == respond_js_secret_key %}
 
         {% if search.performed %}
 
-          {% paginate search.results by 20 %}
+          {% if settings.search_result_number_products_per_page != blank %}
+            {% assign product_per_page = settings.search_result_number_products_per_page %}
+          {% else %}
+            {% assign product_per_page = 9 %}
+          {% endif %}
+
+          {% paginate search.results by product_per_page %}
 
             {% if search.results_count != 0 %}
-              {% if grid_results == false %}
-
+              {% if grid_results == "list" %}
+                
+                <div class="product-list">
                 {% for item in search.results %}
+                 {% comment %}
                   {% include 'search-result' %}
+                  {% endcomment %}
+                  {%assign product = item %}
+                 
+                  {%include 'product-list-item' %}
+                
                 {% endfor %}
+                  </div>
 
                 {% else %}
 
                   <div class="row div-product-grid-item">
                     {% for item in search.results %}
                       {% assign grid_item_width = 'col-md-4 col-sm-6 col-xs-12' %}
+                      {% comment %}
                       {% include 'search-result-grid' %}
+                      {%endcomment %}
+                      {%assign product = item %}
+                      {%include 'product-grid-item' %}
                     {% endfor %}
                   </div>
                 {% endif %}
               {% endif %}
 
+
               {% if paginate.pages > 1 %}
                 <div class="pagination">
-                  {% include 'pagination-custom' %}
+                  {% include 'pagination-1' %}
                 </div>
             {% endif %}
 

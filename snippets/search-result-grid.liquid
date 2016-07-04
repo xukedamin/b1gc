@@ -20,7 +20,7 @@
 
 <div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %}">
   
-
+  <div class="item-product">
   <div class="item-product-thumb">
     <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
 
@@ -52,16 +52,24 @@
       <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" class="product-title">{{ item.title }}</a></h3>
 
       <div class="info-price product-item--price price">
-        {% if on_sale %}
-        <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-          {% assign compare_price = item.compare_at_price %}
-          {% assign product_price = item.price %}
-          {% include 'price-sale' %}
-        </del>
-        {% endif %}
-        <span class=" medium--left">
+        <span class="">
           {% include 'price' with item.price %}
-        </span>      
+        </span>   
+        {% if on_sale %}
+
+          {%if settings.product_show_price_compare_at_price == 'save' %}
+
+            <div class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
+              {% assign compare_price = item.compare_at_price %}
+              {% assign product_price = item.price %}
+              {% include 'price-sale' %}
+            </div>
+            {% else %}
+              <del>{% include 'price' with item.compare_at_price %}</del>
+          {% endif %}
+
+        {% endif %}
+        
       </div>
       {% if item.featured_image %}
         {% if settings.product_reviews_enable %}
@@ -73,6 +81,7 @@
         </div>        
       {% endif %}        
     </div>
+  </div>
 
 </div>
 

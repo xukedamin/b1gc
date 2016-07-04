@@ -21,11 +21,11 @@ Select the product image size from settings.
 {% endcomment %}
 {% assign image_size = settings.collection_prod_image_sizes %}
 
+{%unless class_feature_img_wrap%}
+{%assign class_feature_img_wrap = "col-md-6" %}
+{%endunless%}
 
-
-
-<!-- <div class="col-md-4 col-sm-5 col-xs-12 col-md-offset-1 col-sm-offset-0"> -->
-<div class="col-md-6">
+<div class="{{class_feature_img_wrap}}">
   <div class="product-featured-thumb">
     <ul class="bxslider">
 
@@ -41,15 +41,21 @@ Select the product image size from settings.
     <h3><a href="{{ product.url | within: current_collection }}" >{{ product.title }}</a></h3>
      <div class="info-price">
         <div class="product-item--price price">
-          <span class="medium--left">
+            
             {% include 'price' with product.price %}
-          </span>
+
           {% if on_sale %}
-            <del class="sale-tag medium--right{% if settings.product_reviews_enable %} has-reviews{% endif %}">
-            {% assign compare_price = product.compare_at_price %}
-            {% assign product_price = product.price %}
-            {% include 'price-sale' %}
-            </del>
+         
+             {%if settings.product_show_price_compare_at_price == 'save' %}
+              <div class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
+                {% assign compare_price = product.compare_at_price %}
+                {% assign product_price = product.price %}
+                {% include 'price-sale' %}
+              </div>
+              {% else %}
+                <del>{% include 'price' with product.compare_at_price %}</del>
+            {% endif %}
+
           {% endif %}
           
         </div>

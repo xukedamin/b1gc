@@ -1,5 +1,11 @@
 {%assign time = leading_time %}
 
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+
 <div class='product-grid-item col-md-6 col-sm-6 col-xs-12  style="max-height: 374px; overflow: hidden;" '>
 
 	<div class="item-product item-product-leading">
@@ -19,27 +25,26 @@
           {% include 'price' with product.price %}
         </span>
          {% if on_sale %}
-          <del class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
-          {% assign compare_price = product.compare_at_price %}
-          {% assign product_price = product.price %}
-          {% include 'price-sale' %}
-          </del>
+
+             {%if settings.product_show_price_compare_at_price == 'save' %}
+              <div class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
+              {% assign compare_price = product.compare_at_price %}
+              {% assign product_price = product.price %}
+              {% include 'price-sale' %}
+              </div>
+            {% else %}
+               <del>{% include 'price' with product.compare_at_price %}</del>
+            {% endif %}
+
+
         {% endif %}
       </div>
 			
 			<h3 class="sub-title"> <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
-      
-
-     
 
       {% include 'product-item--countdown' with countdown_wrap:"countdown--big" %}
-
-        
-      
-
 		
 			<a href="{{ product.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>
-
       
 		</div>
 	</div>
