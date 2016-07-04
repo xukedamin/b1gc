@@ -133,6 +133,9 @@ breadcrumbs you need to include this:
         el = $(this);
         elGroup = el.data('group');
         elHandle = el.data('handle');
+
+        //ADD
+        activeTagInGroup = $('.active-filter[data-group="'+ elGroup +'"]');
          
         // If the tag clicked is not already active and its group contains an active tag, we will swap tag within the group.
         if ( !el.hasClass('active-filter')  && activeTagInGroup.size() ) {

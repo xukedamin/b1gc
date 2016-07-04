@@ -48,17 +48,9 @@
         {%include 'collection-toolbar' with class_toolbar:'toolbar-top', show_button_filter: false %}
 
 
-      <div class="grid-uniform product-list {% if has_sidebar %}has-sidebar{% endif %}">
+      <div class="product-list {% if has_sidebar %}has-sidebar{% endif %}">
         {% for product in collection.products  %}
           
-          {%comment%}
-          {% if has_sidebar %}
-            {% assign list_item_width = 'large--one-quarter medium--one-third small--one-half' %}
-          {% else %}
-            {% assign list_item_width = 'large--one-fifth medium--one-third small--one-half' %}
-          {% endif %}
-          {%endcomment%}
-
           {% include 'product-list-item' %}
         {% else %}
           <div class="grid-item col-xs-12 messagefull info">
