@@ -1,3 +1,85 @@
+/*Home 2 Catalog*/
+
+.catalog {
+    background-attachment: fixed;
+    background-image: url('{{ "index2_bg-parallax.png" | asset_url }}');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    padding: 75px 0;
+    margin-top: 15px;
+}
+
+.content-catelog {
+  color: $color_white;
+  padding-left: 45px;
+
+  >*{
+    position: relative;
+  }
+
+  > h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    @extend %text-up;
+  }
+  
+  ul li a {
+    color: $color_white;
+    font-style: italic;
+    padding: 0 0 0 30px;
+    position: relative;
+    span{
+      margin-right: 10px;
+    }
+
+  }
+
+  .download-catalog {
+    background: $color_white none repeat scroll 0 0;
+    color: $color_shark;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 15px;
+    padding: 0 20px;
+    @extend %text-up;
+    @extend %jv-transition-easeout;
+
+    &:hover {
+      color: $color_white;
+      background: $color_shark;
+    }
+  }
+}
+.catalog{
+  overflow: hidden;
+}
+
+.latest-post-content:before,
+.content-catelog:before {
+  content: "";
+ @extend %jv-bg-color-primary;
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: 0;
+}
+
+.latest-post-content:before{
+ @extend %jv-bg-color-primary;
+}
+
+.item-latest-post.item-left .latest-post-content:before{
+  left: -100%;
+  right: 0;
+}
+
+.item-latest-post .latest-post-content *{
+  position: relative;
+}
 
 /*home 2*/
 .item-popular-info {

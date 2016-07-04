@@ -64,7 +64,7 @@
         {% assign date_now = 'now' | date:'%Y%m%d' %}
         {% assign date_difference = date_now | minus: date_published %}
         {% if date_difference < 30 %}
-        <span class="new-item">new</span>
+        <span class="new-item">{{'collections.general.new'}}</span>
         {% endif %}
         
         {% if sold_out %}

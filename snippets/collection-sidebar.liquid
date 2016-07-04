@@ -238,23 +238,6 @@ breadcrumbs you need to include this:
 {% endif %}
 
 
-
-
-{% comment %} ----- Recently viewed Products ----- {% endcomment %}
-{% if settings.viewed_enable %}
-<div class="widget-wrapper">
-  <div class="widget widget-default">  
-    <h3 class="widget-title sub-title">
-      <span>{{ 'collections.sidebar.recent_products' | t }}</span>
-    </h3>
-
-   {% include 'recently-viewed' %}
-
-  </div>
-</div>
-{% endif %}
-
-
 {% comment %} ----- Sidebar textwidget ----- {% endcomment %}
 {% if settings.textwidget_visible %}
 <div class="widget-wrapper">

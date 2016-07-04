@@ -1,3 +1,10 @@
+  {%comment%}
+  Pagination for:
+  - blog/article/comments
+  - account/address
+
+  {%endcomment%}
+
   {% if paginate.previous %}
     <a class="item-paginate" href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}"><i class="lnr-chevron-left"></i></a>
   {% else %}

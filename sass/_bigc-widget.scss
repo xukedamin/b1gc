@@ -104,6 +104,12 @@
   } 
 }
 
+.product-small{
+  .info-price del{
+    margin-left: 0;
+  }
+}
+
 
 .widget.widget-compare ul li {
   margin-bottom: 20px;
