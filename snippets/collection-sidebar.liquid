@@ -7,36 +7,9 @@ breadcrumbs you need to include this:
 {% include 'advanced-tag-loop' %}
 {% endcomment %}
 
+{%comment%} category {%endcomment%}
 
-{%comment%}
-{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
-  <div class="widget-wrapper">
-    <div class="widget category-product widget-category">
-    <h2 class="widget-title sub-title">{{ 'collections.sidebar.product_categories' | t }}</h2>
-{% endif %}
-
-  {% comment %} ----- Sidebar linklist 1 ----- {% endcomment %}
-  {% if settings.show_widget_linklist1 %}
-    {% assign list_temp = settings.widget_linklist1 %}
-    {% include 'collection-sidebar--linklist'%}
-  {% endif %}
-
-  {% comment %} ----- Sidebar linklist 2 ----- {% endcomment %}
-
-  {% if settings.show_widget_linklist2 %}
-    {% assign list_temp = settings.widget_linklist2 %}
-    {% include 'collection-sidebar--linklist'%}
-  {% endif %}
-
-{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
-      </div>  
-    </div>
-{% endif %}
-
-{%endcomment%}
-
-
-{% for i in (1..5) %}
+{% for i in (1..2) %}
   {% capture setting_key %}widget_linklist{{ i }}{% endcapture %}
   {% assign sidebar_linklist_handle = settings[setting_key] %}
   {% if linklists[sidebar_linklist_handle].links.size > 0 %}
@@ -162,6 +135,7 @@ breadcrumbs you need to include this:
         if ( !el.hasClass('active-filter')  && activeTagInGroup.size() ) {
           e.preventDefault();
           location.href = location.href.replace(activeTagInGroup.data('handle'), elHandle);
+
         }
       });
     });
@@ -169,7 +143,7 @@ breadcrumbs you need to include this:
 
 {%if settings.sidebar_ajax_filters%}
 <script>
-  // Ajax filter collection
+  //Ajax filter collection
   $(document).delegate('.advanced-filter > a', 'click', function() {
 
     history.pushState({}, document.title, this.href);
@@ -177,8 +151,7 @@ breadcrumbs you need to include this:
     var b = $('body').addClass('ajaxing'),
         h = $('html,body');
     $('#box').load([this.href, '#collection'].join(' '), function() {
-        
-        //TEST
+
         ajaxifyShopifyInit();
        
         b.removeClass('ajaxing');

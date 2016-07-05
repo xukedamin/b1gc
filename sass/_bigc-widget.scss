@@ -179,6 +179,7 @@
   }
   .sidebar-module__list{
     list-style: none;
+    margin-bottom: 0;
 
     li{
       padding: 8px 0;
@@ -194,6 +195,7 @@
 .sidebar-sublist {
   ul{
     list-style: none;
+    margin-bottom: 0;
      }
   a {
     display: block;

@@ -12,7 +12,7 @@
 <ul class="collection-view product-sort pull-left list-inline">
   <li><a  title="Grid view" class="grid change-view{% unless template contains 'list' %} collection-view--active{% endunless %}" data-view="grid"> {{ 'collections.general.grid' | t }}</a></li>
   <li>
-    <a title="List view" class="list change-view{% if template contains 'list' %} collection-view--active{% endif %}" data-view="{{collection_data_view}}">
+    <a title="List view" class="list change-view{% if template contains 'list' %} collection-view--active{% endif %}" data-view="list">
     {{ 'collections.general.list' | t }}
   </a></li>
 </ul>
@@ -25,8 +25,6 @@
     }
     return newUrl;
   }
-
-
 
   $(function() {
     $( document ).delegate('.change-view', 'click', function() {

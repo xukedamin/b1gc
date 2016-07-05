@@ -369,7 +369,7 @@ Dependency-free breakpoint mixin
 [class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button:before, .right-open span.click-button:before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-dropdown > a:before,
 .mainmenu > ul > li.menu-item-has-children > a:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .sidebar-sublist__content a:before, .language-box::after,
-.currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .item-popular-thumb:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before {
+.currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .item-popular-thumb:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before, .advanced-filter.active-filter a:hover::after {
   font-family: Linearicons-Free;
 }
 
@@ -5332,6 +5332,7 @@ form.cart-page-form .list-button br {
 }
 .sidebar-module .sidebar-module__list {
   list-style: none;
+  margin-bottom: 0;
 }
 .sidebar-module .sidebar-module__list li {
   padding: 8px 0;
@@ -5343,6 +5344,7 @@ form.cart-page-form .list-button br {
 
 .sidebar-sublist ul {
   list-style: none;
+  margin-bottom: 0;
 }
 .sidebar-sublist a {
   display: block;
@@ -11318,7 +11320,7 @@ select.input-full {
   border: 1px solid #e5e5e5;
   height: 12px;
   left: 0;
-  top: 6px;
+  top: 3px;
   width: 12px;
 }
 
@@ -11326,7 +11328,7 @@ select.input-full {
   background-color: transparent;
   height: 6px;
   left: 3px;
-  top: 9px;
+  top: 6px;
   width: 6px;
 }
 
@@ -11341,13 +11343,12 @@ select.input-full {
 .advanced-filter.active-filter a:hover::after {
   background-color: #000;
   color: #fff;
-  content: "x";
-  font-family: "icons";
+  content: "\e870";
   font-size: 8px;
   height: 12px;
   left: 0;
   line-height: 12px;
-  top: 6px;
+  top: 4px;
   width: 12px;
 }
 

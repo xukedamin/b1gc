@@ -8,35 +8,9 @@ breadcrumbs you need to include this:
 {% endcomment %}
 
 
-{%comment%}
-{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
-  <div class="widget-wrapper">
-    <div class="widget category-product widget-category">
-    <h2 class="widget-title sub-title">{{ 'collections.sidebar.product_categories' | t }}</h2>
-{% endif %}
+{%comment%} category {%endcomment%}
 
-  {% comment %} ----- Sidebar linklist 1 ----- {% endcomment %}
-  {% if settings.show_widget_linklist1 %}
-    {% assign list_temp = settings.widget_linklist1 %}
-    {% include 'collection-sidebar--linklist'%}
-  {% endif %}
-
-  {% comment %} ----- Sidebar linklist 2 ----- {% endcomment %}
-
-  {% if settings.show_widget_linklist2 %}
-    {% assign list_temp = settings.widget_linklist2 %}
-    {% include 'collection-sidebar--linklist'%}
-  {% endif %}
-
-{% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
-      </div>  
-    </div>
-{% endif %}
-
-{%endcomment%}
-
-
-{% for i in (1..5) %}
+{% for i in (1..2) %}
   {% capture setting_key %}widget_linklist{{ i }}{% endcapture %}
   {% assign sidebar_linklist_handle = settings[setting_key] %}
   {% if linklists[sidebar_linklist_handle].links.size > 0 %}

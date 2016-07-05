@@ -1106,11 +1106,11 @@
 
    
     //Change Grid-List
-    $('.product-sort a').click(function(event) {
-        //event.preventDefault();
-        $('.product-sort a').removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('.product-sort a').click(function(event) {
+ 
+    //     $('.product-sort a').removeClass('active');
+    //     $(this).addClass('active');
+    // });
        
 
   });
