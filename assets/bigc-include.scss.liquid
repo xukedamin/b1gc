@@ -8100,6 +8100,9 @@ Page Product List
 .product-list .desc {
   margin-top: 20px;
 }
+.product-list .desc + .spr-badge {
+  margin-top: 20px;
+}
 .product-list .wrap-cart-qty {
   margin-top: 5px;
   max-width: inherit;
@@ -8157,6 +8160,18 @@ Page Product List
   background: #1b1d1f none repeat scroll 0 0;
   border: 1px solid #1b1d1f;
   color: #fff;
+}
+
+.product-list-item .item-product:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.changed-view .product-list-item .action .text {
+  display: none;
+}
+.product-list-item .desc.hidden {
+  display: block !important;
 }
 
 @media (max-width: 767px) {

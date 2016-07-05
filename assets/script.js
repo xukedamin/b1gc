@@ -1019,6 +1019,23 @@
         }, 800);
         return false;
       });
+    },
+
+    goChangeView: function(){
+      $('.collection-view .change-view').click(function(){
+        var v = $(this).data('view');
+        $(this).addClass('collection-view--active');
+        $(this).parent().siblings().find('.change-view').removeClass('collection-view--active');
+
+        if(v == 'list'){
+          $('#collection .product-grid').removeClass('product-grid').addClass('product-list changed-view');
+          $('#collection .product-grid-item').removeClass('product-grid-item col-md-4 col-sm-6 col-xs-12').addClass('product-list-item ');
+        }
+        else{
+          $('#collection .product-list').removeClass('product-list').addClass('product-grid changed-view');
+          $('#collection .product-list-item').removeClass('product-list-item').addClass('product-grid-item col-md-4 col-sm-6 col-xs-12');
+        }
+      });
     }
 
 
@@ -1083,6 +1100,7 @@
 
     jvbigC.goFilterPriceSidebar();
 
+    jvbigC.goChangeView();
     
     
     jvbigC.goJVCountdown();

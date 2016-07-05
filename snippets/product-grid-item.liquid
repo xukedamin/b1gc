@@ -31,7 +31,7 @@
 {% assign image_size = settings.collection_prod_image_sizes %}
 
 <div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
-  <div class="item-product  {% if quickview_big_enable %}item-product-loadmore{% endif%}" id="product-{{ product.id }}">
+  <div class="item-product  {% if quickview_big_enable %}item-product-loadmore{% endif%}" data-id="product-{{ product.id }}">
     <div class="item-product-thumb">
       <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">
         {% if product.featured_image %}
@@ -104,16 +104,16 @@
         
       </div>
       
-      {%if product_desc_enable %}
-      <div class="desc">
+
+      <div class="desc hidden">
         {% if product.description contains '[jvcountdown]' %}
             {% assign des = product.description | split:'[/jvcountdown]' | last %}
-            {{ des | split: '|' | first | strip_html | truncatewords: 50 }}
+            {{ des | split: '|' | first | strip_html | truncatewords: 30 }}
           {%else %}
-            {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
+            {{ product.description | split: '|' | first | strip_html | truncatewords: 30 }}
         {%endif %}
       </div>
-      {% endif %}
+
 
        {% if settings.product_reviews_enable %}
           <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>

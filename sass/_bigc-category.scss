@@ -347,6 +347,9 @@ Page Product List
   }
   .desc {
     margin-top: 20px;
+    &+ .spr-badge{
+      margin-top: 20px;
+    }
   }
 
   .wrap-cart-qty {
@@ -414,6 +417,20 @@ Page Product List
     background: $color_shark none repeat scroll 0 0;
     border: 1px solid $color_shark;
     color: $color_white;
+  }
+}
+
+.product-list-item {
+  .item-product{
+    @include clearfix();
+  }
+  .changed-view &{
+    .action .text{
+      display: none;
+    }
+  }
+  .desc.hidden{
+    display: block !important;
   }
 }
 
