@@ -4724,12 +4724,14 @@
       {
         "type": "checkbox",
         "id": "sidebar_type_enable",
-        "label": "Shop by type"
+        "label": "Shop by type",
+        "default":false
       },
       {
         "type": "checkbox",
         "id": "sidebar_vendor_enable",
-        "label": "Shop by vendor"
+        "label": "Shop by vendor",
+        "default":false
       },
      
       {

@@ -93,6 +93,8 @@
   }
 }
 
+$baseFontSize : #{'{{ settings.font_type_base_size }}'};
+
 @function em($target, $context: $baseFontSize) {
   @if $target == 0 {
     @return 0;

@@ -8,7 +8,7 @@ breadcrumbs you need to include this:
 {% endcomment %}
 
 
-
+{%comment%}
 {% if settings.show_widget_linklist1 || settings.show_widget_linklist2 %}
   <div class="widget-wrapper">
     <div class="widget category-product widget-category">
@@ -33,8 +33,25 @@ breadcrumbs you need to include this:
     </div>
 {% endif %}
 
+{%endcomment%}
 
-{% comment %} ----- Top Seller Products ----- {% endcomment %}
+
+{% for i in (1..5) %}
+  {% capture setting_key %}widget_linklist{{ i }}{% endcapture %}
+  {% assign sidebar_linklist_handle = settings[setting_key] %}
+  {% if linklists[sidebar_linklist_handle].links.size > 0 %}
+    <nav class="sidebar-module">
+      <div class="section-header">
+        <p class="section-header__title">{{ linklists[sidebar_linklist_handle].title }}</p>
+      </div>
+      <ul class="sidebar-module__list">
+        {% for link in linklists[sidebar_linklist_handle].links %}
+          {% include 'sidebar-partial' %}
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endfor %}
 
 
 

@@ -88,6 +88,8 @@ $color_primary-inverse : #{'{{ settings.color_primary_inverse }}'};
 $color_secondary : #{'{{ settings.color_secondary }}'};
 $color_secondary-inverse : #{'{{ settings.color_secondary_inverse }}'};
 
+$color_border : $color_mercury;
+
 // $color_primary-inverse : $color_shark;
 // $color_secondary : $color_currious-blue-darker;
 // $color_secondary-inverse : $color_candlelight;

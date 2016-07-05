@@ -1,7 +1,5 @@
 {% if handle != '' %}
   {% if linklists[handle].links.size > 0 %}
-  
-
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
 
@@ -12,9 +10,7 @@
         {% capture pick_name %}nav{{i}}{% endcapture %}
         {% capture pick_name %}{{settings[pick_name]}}{% endcapture %}
         {% capture pick %}nav{{i}}_style{% endcapture %}
-
        
-
         {% if pick_name == handlej %}
           {% capture stylei %}nav-{{settings[pick]}}{% endcapture %}
           {% assign style = stylei %}
@@ -29,6 +25,7 @@
         <a href="{{ link.url }}">{{ link.title }} 
 
           {%if hot_label_enable %}
+            
             {% assign hots = {{settings.main_menu_hot_items}} | split: ',' %}
 
             {%for hot in hots %}
@@ -44,21 +41,14 @@
                <sup class="label-sub title-new hidden-xs">{{'collections.general.new' | t}}</sup>
                {% endif %}
             {% endfor %}
-
           {% endif %}
-
         </a>
 
         {% include style class:' sub-menu', handle: handlei %}
 
       </li>
 
-
     {% endfor%}
   </ul>
-
-
   {% endif %}
 {% endif %}
-
-

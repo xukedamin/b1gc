@@ -1424,6 +1424,10 @@
 	border: none;
 }
 
+.text-link {
+	span{text-decoration: inherit;}
+}
+
 @media (max-width: 767px){
 
 	div[class^='list-button-box'] .bt-link{

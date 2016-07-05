@@ -3,7 +3,7 @@
  * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/enquire.js
  * License: MIT (http://www.opensource.org/licenses/mit-license.php)
  */
-!function(a,b,c){var d=window.matchMedia;"undefined"!=typeof module&&module.exports?module.exports=c(d):"function"==typeof define&&define.amd?define(function(){return b[a]=c(d)}):b[a]=c(d)}("enquire",this,function(a){"use strict";function b(a,b){var c,d=0,e=a.length;for(d;e>d&&(c=b(a[d],d),c!==!1);d++);}function c(a){return"[object Array]"===Object.prototype.toString.apply(a)}function d(a){return"function"==typeof a}function e(a){this.options=a,!a.deferSetup&&this.setup()}function f(b,c){this.query=b,this.isUnconditional=c,this.handlers=[],this.mql=a(b);var d=this;this.listener=function(a){d.mql=a,d.assess()},this.mql.addListener(this.listener)}function g(){if(!a)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!a("only all").matches}return e.prototype={setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},f.prototype={addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var c=this.handlers;b(c,function(b,d){return b.equals(a)?(b.destroy(),!c.splice(d,1)):void 0})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){b(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";b(this.handlers,function(b){b[a]()})}},g.prototype={register:function(a,e,g){var h=this.queries,i=g&&this.browserIsIncapable;return h[a]||(h[a]=new f(a,i)),d(e)&&(e={match:e}),c(e)||(e=[e]),b(e,function(b){d(b)&&(b={match:b}),h[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},new g});
+!function(a,b,c){var d=window.matchMedia;"undefined"!=typeof module&&module.timberrts?module.timberrts=c(d):"function"==typeof define&&define.amd?define(function(){return b[a]=c(d)}):b[a]=c(d)}("enquire",this,function(a){"use strict";function b(a,b){var c,d=0,e=a.length;for(d;e>d&&(c=b(a[d],d),c!==!1);d++);}function c(a){return"[object Array]"===Object.prototype.toString.apply(a)}function d(a){return"function"==typeof a}function e(a){this.options=a,!a.deferSetup&&this.setup()}function f(b,c){this.query=b,this.isUnconditional=c,this.handlers=[],this.mql=a(b);var d=this;this.listener=function(a){d.mql=a,d.assess()},this.mql.addListener(this.listener)}function g(){if(!a)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!a("only all").matches}return e.prototype={setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},f.prototype={addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var c=this.handlers;b(c,function(b,d){return b.equals(a)?(b.destroy(),!c.splice(d,1)):void 0})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){b(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";b(this.handlers,function(b){b[a]()})}},g.prototype={register:function(a,e,g){var h=this.queries,i=g&&this.browserIsIncapable;return h[a]||(h[a]=new f(a,i)),d(e)&&(e={match:e}),c(e)||(e=[e]),b(e,function(b){d(b)&&(b={match:b}),h[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},new g});
 
 /* Simple jQuery Equal Heights @version 1.5.1. Copyright (c) 2013 Matt Banks. Dual licensed under the MIT and GPL licenses. */
 !function(a){a.fn.equalHeights=function(){var b=0,c=a(this);return c.each(function(){var c=a(this).innerHeight();c>b&&(b=c)}),c.css("height",b)},a("[data-equal]").each(function(){var b=a(this),c=b.data("equal");b.find(c).equalHeights()})}(jQuery);
@@ -38,14 +38,26 @@ timber.cacheSelectors = function () {
     // Collection Pages
     //$collectionFilters: $('#collectionFilters'),
     //$toggleFilterBtn: $('#toggleFilters'),
-    $advancedFilters: $('.advanced-filters')
+    $advancedFilters: $('.advanced-filters'),
+
+    //sidebar
+    $sidebarDropdown: $('.sidebar-sublist'),
+    $sidebarDropdownExpand: $('.sidebar-sublist__expand'),
+    $sidebarDropdownContract: $('.sidebar-sublist__contract'),
+    $sidebarSubLists: $('.sidebar-sublist__content'),
+
+    $sidebarViewMore: $('.sidebar-module__viewmore')
 
     // Equal height elements
     // $featuredBoxes: $('.featured-box'),
     // $featuredImages: $('.featured-box--image'),
     //$productGridImages: $('.product-grid-image')
+
+
   };
 };
+
+
 
 timber.cacheVariables = function () {
   timber.vars = {
@@ -75,6 +87,12 @@ timber.init = function () {
   //timber.equalHeights();
   timber.responsiveVideos();
   //timber.toggleFilters();
+  
+  timber.sidebarViewMore();
+  timber.sidebarDropdowns();
+  timber.sidebarDropdownCheck();
+
+
   timber.initBreakpoints();
 
   // Wait until fonts load to attempt creating 'more' link in nav
@@ -104,6 +122,45 @@ timber.initBreakpoints = function () {
       timber.productImageZoom();
     }
   });
+};
+
+timber.sidebarViewMore = function () {
+  if (!timber.cache.$sidebarViewMore.length) {
+    return;
+  }
+
+  timber.cache.$sidebarViewMore.on('click', function() {
+    $(this).prev('.sidebar-module__list').toggleClass('sidebar-module__list--expand');
+  });
+};
+
+timber.sidebarDropdowns = function () {
+  if (!timber.cache.$sidebarDropdown.length) {
+    return;
+  }
+
+  timber.cache.$sidebarDropdownExpand.on('click', function() {
+    $(this).closest('.sidebar-sublist').addClass('is-open');
+  });
+
+  timber.cache.$sidebarDropdownContract.on('click', function() {
+    $(this).closest('.sidebar-sublist').removeClass('is-open');
+  });
+
+};
+
+timber.sidebarDropdownCheck = function () {
+  if (!timber.cache.$sidebarSubLists.length) {
+    return;
+  }
+
+  timber.cache.$sidebarSubLists.each(function() {
+    var $el = $(this);
+    if ($el.find('.is-active').length) {
+      $el.parent('.sidebar-sublist').addClass('is-open');
+    }
+  });
+
 };
 
 //unused
@@ -316,6 +373,7 @@ timber.equalHeights = function () {
   //  timber.cache.$productGridImages.css('height', 'auto').equalHeights();
   }
 };
+
 timber.toggleFilters = function () {
   if ( timber.cache.$collectionFilters.length ) {
     timber.cache.$toggleFilterBtn.on('click', function() {
@@ -380,7 +438,7 @@ timber.productImageZoom = function () {
   {% endif %}
 };
 
-timber.socialSharing = function () {
+timber.socialSharing1 = function () {
   // General selectors
   var $buttons = timber.cache.$shareButtons,
       $shareLinks = $buttons.find('a'),
@@ -441,6 +499,66 @@ timber.socialSharing = function () {
       case 'share-twitter':
         h = 300;
         break;
+      case 'share-fancy':
+        w = 480;
+        h = 720;
+        break;
+      case 'share-google':
+        w = 500;
+        break;
+    }
+
+    window.open(link, popup, 'width=' + w + ', height=' + h);
+  });
+};
+
+timber.socialSharing = function () {
+  // General selectors
+  var $buttons = timber.cache.$shareButtons,
+      $shareLinks = $buttons.find('a'),
+      permalink = $buttons.attr('data-permalink');
+
+  // Share button selectors
+  var $fbLink = $('.share-facebook'),
+      $pinLink = $('.share-pinterest'),
+      $googleLink = $('.share-google');
+
+  if ( $fbLink.length ) {
+    $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?', function(data) {
+      if (data.shares) {
+        $fbLink.find('.share-count').text(data.shares).addClass('is-loaded');
+      } else {
+        $fbLink.find('.share-count').remove();
+      }
+    });
+  };
+
+  if ( $pinLink.length ) {
+    $.getJSON('https://api.pinterest.com/v1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
+      if (data.count > 0) {
+        $pinLink.find('.share-count').text(data.count).addClass('is-loaded');
+      } else {
+        $pinLink.find('.share-count').remove();
+      }
+    });
+  };
+
+  if ( $googleLink.length ) {
+    // Can't currently get Google+ count with JS, so just pretend it loaded
+    $googleLink.find('.share-count').addClass('is-loaded');
+  }
+
+  // Share popups
+  $shareLinks.on('click', function(e) {
+    e.preventDefault();
+    var el = $(this),
+        popup = el.attr('class').replace('-','_'),
+        link = el.attr('href'),
+        w = 700,
+        h = 400;
+
+    // Set popup sizes
+    switch (popup) {
       case 'share-fancy':
         w = 480;
         h = 720;
