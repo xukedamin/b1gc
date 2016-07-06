@@ -25,12 +25,16 @@
     color: $color_white;
     display: inline-block;
     height: 40px;
-    @extend %text-center;
-    vertical-align: top;
     width: 100px;
-    @extend %jv-transition-easeout;
     line-height: 40px;
+    vertical-align: top;
+    @extend %text-center;
+    @extend %jv-transition-easeout;
     @extend %text-up;
+
+    [class*="lnr-"]{
+      line-height: inherit;
+    }
   }
 }
 
@@ -39,7 +43,7 @@
   position: fixed;
   right: 10px;
   top: 100px;
-  z-index: 99999;
+  z-index: 999;
 
   .info-icon.icon-cart {
     background: $color_currious-blue-darker none repeat scroll 0 0;

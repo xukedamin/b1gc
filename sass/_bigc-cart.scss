@@ -153,6 +153,7 @@
 .cart-title {
   margin: 5px 0 13px;
 
+
   a {
     color: $color_dove-gray;
     font-size: 13px;
@@ -782,26 +783,42 @@ form.cart-page-form .list-button br {
     display: none
 }
 
+@media (max-width: 990px){
+  .header .info-cart .inner-cart-info {
+      max-width: 300px;
+      padding: 10px 15px;
+  }
+  .mini-cart .item-info-cart{
+    padding: 5px 0;
+  }
+  .mini-cart .link-cart{
+    margin-top: 20px;
+  }
+  .mini-cart .link-cart > * {
+      max-width: 110px;
+  }
+}
+
 @media (max-width: 767px) {
-    form.cart-page-form .list-button {
-        text-align:center
-    }
-    
-    form.cart-page-form .list-button br {
-        display: block
-    }
-    
-    form.cart-page-form .list-button .normal-btn,form.cart-page-form .list-button a.border-btn {
-        padding-left: 30px;
-        padding-right: 30px;
-        width: 100%;
-        max-width: 300px
-    }
-    
-    form.cart-page-form .list-button .normal-btn {
-        margin-right: 0px;
-        margin-bottom: 30px
-    }
+  form.cart-page-form .list-button {
+      text-align:center
+  }
+  
+  form.cart-page-form .list-button br {
+      display: block
+  }
+  
+  form.cart-page-form .list-button .normal-btn,form.cart-page-form .list-button a.border-btn {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+      max-width: 300px
+  }
+  
+  form.cart-page-form .list-button .normal-btn {
+      margin-right: 0px;
+      margin-bottom: 30px
+  }
 
   //cart
   .shop-cart-total .button-wrapper a.border-btn {
@@ -810,6 +827,17 @@ form.cart-page-form .list-button br {
   }
   .page-account {
     padding: 10px;
+  }
+
+  //minicart
+  .inner-cart-info .info-list-cart{
+    margin: 0;
+  }
+  .mini-cart .wrap-cart-title{
+    max-width: 100px;
+    .cart-title a{
+      width: 100%;
+    }
   }
 
 
