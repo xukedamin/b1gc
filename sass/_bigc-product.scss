@@ -1278,14 +1278,32 @@ $height : 32px;
   }
 }
 
+@media (max-width: 990px) and (min-width: 768px)
+{
+  //countdown
+  .collection-product .countdown--small{
+    bottom: auto;
+  }
+}
+
+
 @media (max-width: 767px){
-  .item-product-leading .item-product-info {
-      margin: 0;
-      position: static;
+  
+  //countdown
+  .collection-product .countdown--small{
+    bottom: 50px;
   }
 
-  .item-product-leading .info-price span{
-    font-size: 50px;
+  //product-leading
+  .item-product-leading {
+    .item-product-info {
+      margin: 0;
+      position: static;
+    }
+
+    .info-price span{
+      font-size: 50px;
+    }
   }
 
   //slider grid product
@@ -1306,6 +1324,11 @@ $height : 32px;
         display: block;
         margin-left: 0;
     }
+  }
+
+  //quickview
+  .action.product-quick-view{
+    display: none;
   }
 
 

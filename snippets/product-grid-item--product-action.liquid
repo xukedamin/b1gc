@@ -3,8 +3,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-
-<a class="action product-compare" href="#"><span class="lnr lnr-sync"></span></a>
+<a class="action product-compare" href="{{product.url}}"><span class="lnr lnr-link"></span></a>
 
 {% comment %}
 <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart " id="product-actions-{{ product.id }}">

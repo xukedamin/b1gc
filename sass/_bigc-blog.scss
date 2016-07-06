@@ -760,7 +760,10 @@
 }
 .sidebar-blog {
   .widget {
-    margin-bottom: 47px;
+    &:not(:last-child)
+    {
+      margin-bottom: 47px;
+    }
 
     ul {
       list-style: outside none none;
@@ -1175,6 +1178,15 @@ ul.blog-related{
     .latest-post-content:before{
       background-color: rgba($color_black, 0.6);
     }
+  }
+
+  //blog list
+  .item-blog-list{
+    margin-bottom: 10px;
+  }
+  .post-thumbnail{
+    margin-left: 0;
+    margin-bottom: 20px;
   }
   
 }
