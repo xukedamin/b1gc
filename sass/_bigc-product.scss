@@ -123,6 +123,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .item-product {
   margin-bottom: 30px;
   position: relative;
+  @extend %jv-transition-easeout;
 }
 
 .featured-product .tab-content {
@@ -135,39 +136,24 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 }
 
-.product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    font-size: 0px !important;
-    &:before{
-      content: "\e81b";
-      @extend %jv-font-Linearicons;
-      font-size: 20px;
-      
+//from list view--> grid view
+.changed-view .product-grid-item .item-product-info {
+  .wrap-cart-qty{
+    margin-top: 5px;
+    max-width: 100%;
+    .info-extra{
+      margin: 5px 0;
     }
+  }
+  .product-add-cart .text{
+    display: inline;
+  }
+  .desc{
+    display: none;
+  }
 }
-//giong benduoi
-.product-grid-item .item-product:not(.item-product-loadmore) + .sca-qv-button-wrap .sca-qv-button{
-   background: $color_white none repeat scroll 0 0;
-    color: $color_shark;
-    display: inline-block;
-    margin: auto;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
 
-    @extend %text-center;
-    @extend %jv-border-radius-50;
-    @extend %jv-transition-easeout;
-    @extend %jv-transform-scale-05;
 
-    &:hover {
-      color: $color_white;
-      background: $color_shark;
-    }
-}
 
 .product-extra-link {
   
@@ -323,12 +309,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   @extend %jv-transform-scale-115;
 }
 
-// .product-grid-item .item-product-leading .info-price {
-//   span{
-//   font-size: 40px;
-//   }
- 
-// }
+
 
 .product-extra-mask {
   content: "";
@@ -390,9 +371,8 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 
 
 
-/*New Product*/
+
 .new-product {
-  // margin-top: 70px;
 
   .product-box-promotion {
     left: 12px;
@@ -487,7 +467,6 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 
 //hide pager bxslider
 .product-thumbnail-slider.product-gallery .bx-pager{ display: none;}
-
 
 
 .product-style-detail .desc{
@@ -920,53 +899,47 @@ Page Detail Mr
 
 //product single nonesidebar
 .none-sidebar {
-  .product-gallery:not(.no-zoom) .bx-wrapper{
+  .product-gallery:not(.no-zoom) .bx-wrapper {
     padding: 0;
   }
-
-  #productThumbs .bx-wrapper .bx-viewport{ 
-  height: 100% !important ; 
-  max-height: 463px;
-  overflow: hidden;
+  #productThumbs .bx-wrapper .bx-viewport {
+    height: 100% !important;
+    max-height: 463px;
+    overflow: hidden;
   }
-
-  .product-gallery:not(.no-zoom)  {
+  .product-gallery:not(.no-zoom) {
     .bx-prev {
-    left: 50%;
-    bottom: 30px;
-    margin: 0;
-    top: auto;
-     @extend %jv-transform-translateX-50;
+      left: 50%;
+      bottom: 30px;
+      margin: 0;
+      top: auto;
+      @extend %jv-transform-translateX-50;
     }
     .bx-next {
       left: 50%;
       top: 30px;
-     @extend %jv-transform-translateX-50;
+      @extend %jv-transform-translateX-50;
     }
-
- 
-    
   }
-
-  .product-gallery.no-zoom{
+  .product-gallery.no-zoom {
     .extra {
-        position: absolute;
-        left: 15px;
-        right: 15px;
-        direction: rtl;
-        z-index: 1;
-        >a{
-          width: 107px !important;
-          margin-left: 5px;
-          display: inline-block !important;
-          &:nth-child(5n){
-            margin-left: 0;
-          }
-        }
-    }
-    
-  }
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      direction: rtl;
+      z-index: 1;
 
+      >a {
+        width: 107px !important;
+        margin-left: 5px;
+        display: inline-block !important;
+
+        &:nth-child(5n) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
 
 

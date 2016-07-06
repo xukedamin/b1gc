@@ -21,7 +21,7 @@ Select the product image size from settings.
 {% endcomment %}
 {% assign image_size = settings.collection_prod_image_sizes %}
 
-<div class="product-list-item {% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
+<div class="product-list-item {{list_item_width}} {% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
   <div class="item-product clearfix">
     <div class="item-product-thumb">
       <a class="product-thumb-link" href="{{ product.url | within: current_collection }}">

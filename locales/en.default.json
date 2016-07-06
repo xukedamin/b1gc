@@ -370,6 +370,7 @@
       "fetured_products": "Featured product",
       "shipping_return": "Shipping and Returns",
       "size_chart": "Size Chart",
+      "count_down_title":"Limited-Time Offers, End in:",
       "save_html": "Save {{ saved_amount }}"
     },
     "product": {

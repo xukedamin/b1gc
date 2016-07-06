@@ -41,7 +41,7 @@
             
            {%include 'collection-toolbar' with class_toolbar:'toolbar-top', show_button_filter: false %}
 
-          <div class="row {% if has_sidebar %}has-sidebar{% endif %}">
+          <div class="row collection-product product-grid {% if has_sidebar %}has-sidebar{% endif %}">
             {% for product in collection.products  %}
               
               {% include 'product-grid-item' %}
