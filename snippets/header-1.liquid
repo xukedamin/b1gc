@@ -1,22 +1,15 @@
 {% include 'header-top-bar--welcome' %}
 
-
-<div id="header" class="header1">
-
+<div id="header" class="header1-wrapper">
   {% include 'header-top-bar--setting' with top_bar_header_cart_show:false %}
-
-  <div class="header header-home clearfix header-1">
+  <div class="header header1 clearfix">
     <div class="container">
-      
       <div class="row">
         <div class="col-md-3 col-sm-3 col-xs-12">
-          <div class="logo logo-home">
-
+          <!-- <div class="logo logo-home"> -->
+          <div class="header__logo-wrapper">
             {%include 'header-logo' %}
-
           </div>
-          
-
           <div class="mainmenu nav-vertical">
             {% include 'nav' class: 'dropdownMenu', handle: settings.header_main_menu, hot_label_enable: true %}
             <div class="mobile-menu">
@@ -25,15 +18,11 @@
             </div>
           </div>
         </div>
-        
         <div class="col-md-7 col-sm-7 col-xs-12">
-        
           {% if settings.slider_home_enable %}
             {% capture slider %}slider-{{settings.home1_slide_style}}{% endcapture %}
             {% include slider  %}
-
           {% endif %}
-          
           {% include 'header-1_banner' %}
         </div>
         <div class="col-md-2 col-sm-2 col-xs-12">
@@ -43,4 +32,3 @@
     </div>
   </div>
 </div>
-<!-- End Header -->

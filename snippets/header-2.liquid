@@ -1,18 +1,11 @@
 {% include 'header-top-bar--welcome' %}
 {% include 'header-top-bar--setting' %}
-
-
-<div class="header header-2">
+<div class="header header2">
   <div class="container">
-      
-      <div style="position:absolute;left: 15px;bottom: 0; top:0;">
-        
+      <div class ="header__logo-wrapper"><!--  style="position:absolute;left: 15px;bottom: 0; top:0;"> -->
         {% include 'header-logo' %}
-
       </div>
-      
       <div class="mainmenu pull-left" style="margin-left:200px;">
-
       <!-- main-menu -->
         {% include 'nav' class: 'dropdownMenu ', handle: settings.header_main_menu , hot_label_enable: true %}
         <div class="mobile-menu">
@@ -20,26 +13,18 @@
           <a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
         </div>
       </div>
-
       <div class="pull-right">
         <div class="info-header info-header2">
           <ul class="info-total">
             {% if settings.header_search_enable %}
             <li class="info-search">
               <a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
-
               {% include 'search-bar-2' %}
-
             </li>
             {% endif %}
-
           </ul>
         </div>
       </div>
-
-
-     
-
   </div>
 </div>
 

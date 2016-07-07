@@ -195,6 +195,7 @@
   "customer": {
     "account": {
       "title": "My Account",
+      "welcome_text":"Welcome,",
       "details": "Account Details",
       "view_addresses": "View Addresses",
       "return": "Return to Account Details"
@@ -327,6 +328,7 @@
       "sign_in": "Sign in",
       "my_account": "My Account",
       "create_account": "Create an Account",
+      "register": "Register",
       "or": "or"
     },
     "navigation": {

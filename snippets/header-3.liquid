@@ -11,89 +11,92 @@
 				<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
 			</div>
 		</div>
-		<div style="position:absolute;left: 50%; transform: translateX(-50%);bottom: 0; top:0;">
+		<div class="header__logo-wrapper"><!--  style="position:absolute;left: 50%; transform: translateX(-50%);bottom: 0; top:0;"> -->
 			{%include 'header-logo' %}
 		
 		</div>
-		<div class="pull-right">
-			<div class="info-header info-header3">
-				<ul class="info-total">
-					<li class="info-user info-user3">
-						
-						{% if shop.customer_accounts_enabled %}
-							{% if customer %}
-								<a href="#" class="info-icon icon-user"><span class="lnr lnr-user"></span></a>
-								<a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} ">
-		            	  <span class="lnr lnr-user"></span> 
-		          	</a>
-		          {% else %}
-		          	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
-		              <span class="lnr lnr-user"></span>
-		            </a>
-							{% endif %}
-				    {% endif %}
-
-						<div class="box-info-user">
-
-							{% if shop.customer_accounts_enabled %}
-		          {% if customer %}
-
-                <ul class="list-unstyled user-info-list">
-                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
-                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
-                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
-                </ul>
-
-		          {% else %}
-
-		              <ul class="list-unstyled  user-info-list">
-		                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
-		                {% if shop.customer_accounts_optional %}
-		                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
-		                {% endif %}
-		                <li><a href="/page/wishlist"><span class="lnr lnr-heart"></span> {{'wishlist.title' | t }}</a></li>
-		              </ul>
-
-				        {% endif %}
-				      {% endif %}
-
-							{% if settings.header_top_bar_setting_lang %}
-							<ul class="list-unstyled language-list">
-								<li  class="active"><a href="#"><img src='{{ "flag-fr.png" | asset_url }}' alt="" />French</a></li>
-								<li><a href="#"><img src='{{ "flag-en.png" | asset_url }}' alt="" />English</a></li>
-								<li><a href="#"><img src='{{ "flag-gm.png" | asset_url }}' alt="" />German</a></li>
-							</ul>
-							{% endif %}
-
-
-							{% if settings.show_multiple_currencies and settings.header_top_bar_setting_currency %}
-			            {% include 'currency-picker' %}
-			        {% endif %}
-
-						</div>
-
-					</li>
-
-					{% if settings.header_search_enable %}
-					<li class="info-search">
-						<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
-						<div class="search-form search-form3">
-							{% include 'search-bar' %}
-						</div>
-					</li>
-					{% endif %}
-
-					{%if settings.header_cart_enable %}
-					<li class="info-cart info-cart3">
-						<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span>  <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
-						
-						{% include 'mini-cart' with inner_cart_info_class: 'inner-cart-info5' %}
-						
-					</li>
-					{% endif %}
+		<!-- <div class="pull-right"> -->
+		<div class="info-header info-header3 header__info-wrapper">
+			<ul class="info-total">
+				<li class="info-user info-user3">
 					
-				</ul>
-			</div>
+					{% if shop.customer_accounts_enabled %}
+						{% if customer %}
+							<a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} ">
+	            	  <span class="lnr lnr-user"></span> 
+	          	</a>
+	          {% else %}
+	          	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
+	              <span class="lnr lnr-user"></span>
+	            </a>
+						{% endif %}
+			    {% endif %}
+
+					<div class="box-info-user">
+
+						{% if shop.customer_accounts_enabled %}
+	          {% if customer %}
+
+              <ul class="list-unstyled user-info-list">
+                <li><a href="/account">{{'customer.account.welcome_text' | t}} {{ customer.first_name }}</a></li>
+                <li class="customer-navlink"><span class="lnr lnr-cog"></span><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+                <li><span class="lnr lnr-exit"></span>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+              </ul>
+
+	          {% else %}
+
+	              <ul class="list-unstyled  user-info-list">
+	                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
+	                {% if shop.customer_accounts_optional %}
+	                <li><span class="lnr lnr-enter"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
+	                {% endif %}
+	              </ul>
+
+			        {% endif %}
+			      {% endif %}
+						
+						{% if settings.show_multiple_currencies and settings.header_top_bar_setting_currency %}
+						<div class="currency-wrapper"><!--  style="border-left: 1px solid #e5e5e5;padding: 0 10px;">  -->
+							<div class="currency__title">Currency</div>
+		            {% include 'currency-picker' %}
+		         </div>
+		        {% endif %}
+
+						{% if settings.header_top_bar_setting_lang %}
+						<ul class="list-unstyled language-list">
+							<li  class="active"><a href="#"><img src='{{ "flag-fr.png" | asset_url }}' alt="" />French</a></li>
+							<li><a href="#"><img src='{{ "flag-en.png" | asset_url }}' alt="" />English</a></li>
+							<li><a href="#"><img src='{{ "flag-gm.png" | asset_url }}' alt="" />German</a></li>
+						</ul>
+						{% endif %}
+
+
+
+
+					</div>
+
+				</li>
+
+				{% if settings.header_search_enable %}
+				<li class="info-search">
+					<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
+					<div class="search-form search-form3">
+						{% include 'search-bar' %}
+					</div>
+				</li>
+				{% endif %}
+
+				{%if settings.header_cart_enable %}
+				<li class="info-cart info-cart3">
+					<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span>  <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
+					
+					{% include 'mini-cart' with inner_cart_info_class: 'inner-cart-info5' %}
+					
+				</li>
+				{% endif %}
+				
+			</ul>
 		</div>
+		<!-- </div> -->
 	</div>
 </div>

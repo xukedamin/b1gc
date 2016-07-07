@@ -3,9 +3,9 @@
 
 
 <div id="header">
-	<div class="header header7">
+	<div class="header header5">
 		<div class="container">
-			<div style="position:absolute;left: 15px;bottom: 0; top:0;">
+			<div class="header__logo-wrapper"><!-- style="position:absolute;left: 15px;bottom: 0; top:0;"> -->
 				<div class="logo-header7">
 					{%include 'header-logo' %}
 				</div>
@@ -26,10 +26,19 @@
              		<span class="lnr lnr-user hidden visible-xs"></span>
                <span class="hidden-xs">{{ 'layout.customer.my_account' | t }}</span>
               </a>
+              <a href="/account/logout" class="link-signin">
+              	<span class="lnr lnr-exit hidden visible-xs"></span>
+              	<span class="hidden-xs">{{ 'layout.customer.log_out' | t }}</span>
+              </a>
+              
            	{% else %}
-           		<a href="/account/login" class="link-signin account-link">
+           		<a href="/account/login" class="link-login account-link">
            			<span class="lnr lnr-user hidden visible-xs"></span>
-                <span class="hidden-xs"> {{ 'layout.customer.my_account' | t }}</span>
+                <span class="hidden-xs"> {{ 'layout.customer.sign_in' | t }}</span>
+              </a>
+              <a href="/account/register" class="link-signin">
+              	<span class="lnr lnr-enter hidden visible-xs"></span>
+              	<span class="hidden-xs">{{ 'layout.customer.register' | t }}</span>
               </a>
            {% endif %}
       		{% endif %}

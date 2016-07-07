@@ -2,7 +2,7 @@
 {% include 'header-top-bar--setting' with top_bar_myaccount_show:false %}
 
 
-<div class="header header-4">
+<div class="header header4">
 	<div class="container">
 			<div class="logo-wrapper" style="position:absolute;left: 15px;bottom: 0; top:0;">
 				
@@ -30,34 +30,33 @@
 						<li class="info-user">
 								{% if shop.customer_accounts_enabled %}
 				          {% if customer %}
-				            <ul class="dropdownMenu subrtl">
-				              <li>
+				          <!--   <ul class="dropdownMenu1 subrtl1">
+				              <li> -->
 				                <a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
 				                  <span class="lnr lnr-user"></span> 
 				                </a>
-				                <ul class="hidden-xs inner-user-info">
-				                  {% capture first_name %}<li><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
-				                  <li class="customer-navlink"><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
+				                <ul class="inner-user-info">
+				                  {% capture first_name %}<li><span class="lnr lnr-heart"></span><a href="/account">{{ customer.first_name }}</a></li>{% endcapture %}
+				                  <li class="customer-navlink"><span class="lnr lnr-cog"></span><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
 				                  <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span> {{ 'wishlist.title' | t }}</a></li>
-				                  <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+				                  <li><span class="lnr lnr-exit"></span>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
 				                </ul>
-				              </li>
-				            </ul>
+				            <!--   </li>
+				            </ul> -->
 				          {% else %}
-				            <ul class="dropdownMenu subrtl">
-				              <li> 
+				           <!--  <ul class="dropdownMenu1 subrtl1">
+				              <li>  -->
 				              	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
 					                <span class="lnr lnr-user"></span>
 					              </a>
-				              <ul class="hidden-xs inner-user-info">
+				              <ul class="inner-user-info">
 				                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
 				                {% if shop.customer_accounts_optional %}
-				                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.create_account' | t | customer_register_link }}</li>
+				                <li><span class="lnr lnr-enter"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
 				                {% endif %}
-				                <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span>{{'wishlist.title' | t }}</a></li>
 				              </ul>
-				            </li>
-				          </ul>
+				         <!--    </li>
+				          </ul> -->
 				        {% endif %}
 				      {% endif %}
 
@@ -78,12 +77,3 @@
 			</div>
 	</div>
 </div>
-
-<div>Header 5</div>
-{%include 'header-5'%}
-<div>Header 3</div>
-{%include 'header-3'%}
-<div>Header 2</div>
-{%include 'header-2'%}
-<div>Header 1</div>
-{%include 'header-1'%}

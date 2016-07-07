@@ -143,6 +143,8 @@
   
         {{ content_for_layout }}
 
+  {{ 'jquery.ajaxchimp.js' | asset_url | script_tag }}
+
   {% if settings.footer_default == 'footer_dark' or settings.footer_default == 'footer_dark_simple' %}
     {% include 'footer-dark' %}
   {% elsif settings.footer_default == 'footer_light'%}
@@ -153,7 +155,7 @@
   
   
   {% if settings.footer_newsletter_enable == true %}
-  {{ 'jquery.ajaxchimp.js' | asset_url | script_tag }}
+ 
     <a id="newsletter-btn" href="#mc_embed_signup"><span class="hidden">Try now</span></a>
     {% include 'newsletter-popup' %}
     <script>
