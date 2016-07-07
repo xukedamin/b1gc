@@ -1,4 +1,6 @@
-////LOGO
+/*============================================================================
+#LOGO
+==============================================================================*/
 
 a.jvlogo {
     left: 15px;
@@ -34,30 +36,6 @@ a.jvlogo {
   }
 }
 
-
-
-
-/*Header*/
-.header{
-  padding:20px 0;
-}
-
-/*Header*/
-.header .container {
-  // height:  #{'{{ settings.header_height }}px'};
-  position: relative;
-}
-
-//Front Page
-
-.header.header-home {
-  background-image: url('{{ "home_bg-page.jpg" | asset_url }}');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  padding: 50px 0 20px;
-}
-
 .logo-home {
     background: $color_shark none repeat scroll 0 0;
     max-width: 200px;
@@ -82,85 +60,83 @@ a.jvlogo {
   }
 }
 
+/*============================================================================
+#HEADER
+==============================================================================*/
 
-// TOP HEADER MYACCOUNT
-.info-user{
-  &:after {
-    background: $color_white none repeat scroll 0 0;
-    border-color: $color_mercury;
-    border-style: solid;
-    border-width: 0 0 1px 1px;
-    color: $color_mercury;
-    content: "";
-    height: 10px;
-    left: 0;
-    margin-left: 2px;
-    margin-top: 40px;
-    position: absolute;
-    top: 100%;
-    @include prefix(transform, rotate(135deg));
-    @extend %jv-transition-easeout;
-    opacity: 0;
-    visibility: hidden;
-    width: 10px;
-    z-index: 10;
+
+.header{
+  padding:20px 0;
+}
+
+.header .container {
+  // height:  #{'{{ settings.header_height }}px'};
+  position: relative;
+}
+
+//Front Page
+
+.header.header-home {
+  background-image: url('{{ "home_bg-page.jpg" | asset_url }}');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding: 50px 0 20px;
+}
+
+/*============================================================================
+#HEADER - WELCOME
+==============================================================================*/
+.header__top-bar__welcome {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 8px 0;
+}
+
+// .contact-top3
+.header__top-bar__contact{
+    color: $color_dusty-gray;
+    margin: 0;
+  
+  > label {
+      border-right: 1px solid $color_gallery;
+      font-weight: normal;
+      height: 13px;
+      line-height: 13px;
+      margin-bottom: 0;
+      margin-right: 12px;
+      padding-right: 15px;
   }
 }
 
-.info-user {
-  .inner-user-info {
-    background: $color_white none repeat scroll 0 0;
-    border: 1px solid $color_mercury;
-    margin-right: -48px;
-    margin-top: 45px;
-    padding: 12px 15px 30px;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    // opacity: 0;
-    // visibility: hidden;
-    width: 210px;
-    z-index: 9;
-    @extend %jv-transition-easeout;
-    box-shadow: -1px 3px 5px -1px rgba($color_black, 0.1);
+// .menu-top3 {
+.header__top-bar__menu-top{
+  margin: 0;
+
+  a {
     color: $color_dusty-gray;
 
-  
-    a {
-      color: $color_dove-gray;
-      display: inline-block;
-      padding: 15px 0;
-
-      &:hover {
-        color: $color_dusty-gray;
-      }
-      span {
-        margin-right: 9px;
-      }
-    }
-
-    span[class*="lnr-"]{
-      margin-right: 9px;
-    }
-
-    li {
-      border-bottom: 1px solid $color_mercury;
+    a:hover {
+      color: $color_currious-blue-darker;
     }
   }
-  &:hover {
-    .inner-user-info {
-      opacity: 1;
-      visibility: visible;
-      margin-top: 15px;
-    }
-    &:after {
-      opacity: 1;
-      visibility: visible;
-      margin-top: 10px;
+  li {
+    border-left: 1px solid $color_gallery;
+    height: 13px;
+    line-height: 13px;
+    margin-left: 10px;
+    padding: 0 0 0 13px;
+
+    &:first-child {
+      border: medium none;
+      margin: 0;
+      padding: 0;
     }
   }
 }
 
+/*============================================================================
+#HEADER - SETTING
+==============================================================================*/
 
 .top-header {
   .currency-picker__label {
@@ -176,12 +152,7 @@ a.jvlogo {
   }
 }
 
-
-
-/*******************************************************************
-              Index 2
-********************************************************************/
-
+/*Index 2*/
 
 .top-header {
   background: $color_shark none repeat scroll 0 0;
@@ -252,17 +223,39 @@ a.jvlogo {
   }
 }
 
+
 //index 2
 
 
-.top-right ul li {
-    vertical-align: top;
+.top-header {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .container > div > ul>li {
+    border-left: 1px solid rgba($color_white, 0.1);
+
+    .text-title {
+      line-height: 40px;
+    }
+    >a {
+      color: $color_white;
+      display: block;
+      font-size: 10px;
+      height: auto;
+      line-height: 40px;
+      padding: 0 20px;
+      @extend %text-up;
+    }
+  }
+  .hotline, .header_address {
+    padding: 0 20px;
+  }
 }
 
+
 .top-left {
-  // li {
-  //   float: left;
-  // }
+
   .language-link {
     border-left: 1px solid rgba($color_white, 0.1);
     border-right: 1px solid rgba($color_white, 0.1);
@@ -309,33 +302,9 @@ a.jvlogo {
   }
 }
 
-
-.top-header {
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  .container > div > ul>li {
-    border-left: 1px solid rgba($color_white, 0.1);
-
-    .text-title {
-      line-height: 40px;
-    }
-    >a {
-      color: $color_white;
-      display: block;
-      font-size: 10px;
-      height: auto;
-      line-height: 40px;
-      padding: 0 20px;
-      @extend %text-up;
-    }
-  }
-  .hotline, .header_address {
-    padding: 0 20px;
-  }
+.top-right ul li {
+    vertical-align: top;
 }
-
 
 .top-right {
   border-right: 1px solid rgba($color_white, 0.1);
@@ -409,7 +378,91 @@ a.jvlogo {
 }
 
 
-//header 2
+
+
+
+/*============================================================================
+#HEADER - MY ACCOUNT
+==============================================================================*/
+
+
+// TOP HEADER MYACCOUNT
+.info-user{
+  &:after {
+    background: $color_white none repeat scroll 0 0;
+    border-color: $color_mercury;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    color: $color_mercury;
+    content: "";
+    height: 10px;
+    left: 0;
+    margin-left: 2px;
+    margin-top: 40px;
+    position: absolute;
+    top: 100%;
+    @include prefix(transform, rotate(135deg));
+    @extend %jv-transition-easeout;
+    opacity: 0;
+    visibility: hidden;
+    width: 10px;
+    z-index: 10;
+  }
+  &:hover {
+    .inner-user-info {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 15px;
+    }
+    &:after {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 10px;
+    }
+  }
+}
+
+.info-user .inner-user-info {
+  background: $color_white none repeat scroll 0 0;
+  border: 1px solid $color_mercury;
+  margin-right: -48px;
+  margin-top: 45px;
+  padding: 12px 15px 30px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  // opacity: 0;
+  // visibility: hidden;
+  width: 210px;
+  z-index: 9;
+  @extend %jv-transition-easeout;
+  box-shadow: -1px 3px 5px -1px rgba($color_black, 0.1);
+  color: $color_dusty-gray;
+
+  a {
+    color: $color_dove-gray;
+    display: inline-block;
+    padding: 15px 0;
+
+    &:hover {
+      color: $color_dusty-gray;
+    }
+    span {
+      margin-right: 9px;
+    }
+  }
+  span[class*="lnr-"] {
+    margin-right: 9px;
+  }
+  li {
+    border-bottom: 1px solid $color_mercury;
+  }
+}
+
+
+/*============================================================================
+#HEADER --HEADER 2
+==============================================================================*/
 
 .info-header2 {
   .info-search {
@@ -449,58 +502,15 @@ a.jvlogo {
 }
 
 /***********************************************************************
-                Home 3          
+ HEADER -- HEADER 3       
 ************************************************************************/
-.banner-top-home3 {
-    margin-top: 50px;
+
+.header.header3 {
+  background: $color_alabaster none repeat scroll 0 0;
 }
 
-.top-header3 {
-    border-bottom: 1px solid #f1f1f1;
-    padding: 8px 0;
-}
-.contact-top3 {
-    color: $color_dusty-gray;
-    margin: 0;
-  
-  > label {
-      border-right: 1px solid $color_gallery;
-      font-weight: normal;
-      height: 13px;
-      line-height: 13px;
-      margin-bottom: 0;
-      margin-right: 12px;
-      padding-right: 15px;
-  }
-}
-
-.menu-top3 {
-  margin: 0;
-
-  a {
-    color: $color_dusty-gray;
-
-    a:hover {
-      color: $color_currious-blue-darker;
-    }
-  }
-  li {
-    border-left: 1px solid $color_gallery;
-    height: 13px;
-    line-height: 13px;
-    margin-left: 10px;
-    padding: 0 0 0 13px;
-
-    &:first-child {
-      border: medium none;
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
-.logo-text h1,
-.logo-header3 h1 {
+.logo-text h1
+{
   color: $color_currious-blue-darker;
   font-size: 48px;
   margin: 0;
@@ -509,12 +519,6 @@ a.jvlogo {
   span {
     color: $color_bright-sun;
   }
-}
-
-
-
-.header.header3 {
-  background: $color_alabaster none repeat scroll 0 0;
 }
 
 .box-info-user {
@@ -613,8 +617,6 @@ a.jvlogo {
 }
 
 
-
-
 .language-list {
   img {
     margin-right: 15px;
@@ -655,8 +657,6 @@ a.jvlogo {
 .info-header3 .info-total>li::after{
   display:none;
 }
-
-
 
 
 .info-total .info-cart3 .inner-cart-info {
@@ -711,9 +711,6 @@ a.jvlogo {
       margin-left: 0 !important;
     }
   }
-
-
-
 
   //header 4
   .header-4 .logo-wrapper{

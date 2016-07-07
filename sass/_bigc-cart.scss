@@ -808,7 +808,8 @@ form.cart-page-form .list-button br {
       display: block
   }
   
-  form.cart-page-form .list-button .normal-btn,form.cart-page-form .list-button a.border-btn {
+  form.cart-page-form .list-button .normal-btn,
+  form.cart-page-form .list-button a.border-btn {
       padding-left: 30px;
       padding-right: 30px;
       width: 100%;
@@ -830,7 +831,7 @@ form.cart-page-form .list-button br {
   }
 
   //minicart
-  .inner-cart-info .info-list-cart{
+  .mini-cart .info-list-cart{
     margin: 0;
   }
   .mini-cart .wrap-cart-title{
@@ -838,6 +839,13 @@ form.cart-page-form .list-button br {
     .cart-title a{
       width: 100%;
     }
+  }
+  .mini-cart .total-cart{padding-top: 10px;}
+
+  .info-cart7 .mini-cart .shop-cart-list {
+    height: 150px;
+      overflow: auto;
+      margin-bottom: 10px;
   }
 
 

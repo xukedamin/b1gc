@@ -63,8 +63,7 @@
 
 							</li>
 							
-							{% comment %}
-							{%if settings.header_cart_enable %}
+							{%if settings.header_cart_enable and settings.header_top_bar_setting == false %}
 							<li class="info-cart">
 								<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span> 
 									<sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
@@ -74,9 +73,17 @@
 								
 							</li>
 							{% endif %}
-							{% endcomment %}
 							
 					</ul>
 			</div>
 	</div>
 </div>
+
+<div>Header 5</div>
+{%include 'header-5'%}
+<div>Header 3</div>
+{%include 'header-3'%}
+<div>Header 2</div>
+{%include 'header-2'%}
+<div>Header 1</div>
+{%include 'header-1'%}

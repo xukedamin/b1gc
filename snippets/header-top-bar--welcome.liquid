@@ -1,19 +1,19 @@
-{%if settings.header_top_bar_welcome -%}
-<div class="top-header3">
+{%if settings.header_top_bar_welcome %}
+<div class="header__top-bar__welcome">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
-				<p class="contact-top3">
-					{%if settings.header_top_bar_welcome_text -%}<label>{{ settings.header_top_bar_welcome_text -}} </label>{%endif -%}
-					{%if settings.header_top_bar_welcome_hotline -%}<span>{{settings.header_top_bar_welcome_hotline -}}</span>{% endif -%}
+				<p class="header__top-bar__contact">
+					{%if settings.header_top_bar_welcome_text %}<label>{{ settings.header_top_bar_welcome_text }} </label>{%endif %}
+					{%if settings.header_top_bar_welcome_hotline %}<span>{{settings.header_top_bar_welcome_hotline }}</span>{% endif %}
 				</p>
 			</div>
-			{% if settings.header_top_bar_welcome_menu != blank -%}
+			{% if settings.header_top_bar_welcome_menu != blank %}
 			<div class="col-md-6 col-sm-6 col-xs-12"><!-- menu-short-2 -->
-				{% include 'nav' class: 'menu-top3 list-inline text-right', handle: settings.header_top_bar_welcome_menu -%}
+				{% include 'nav' class: 'header__top-bar__menu-top list-inline text-right', handle: settings.header_top_bar_welcome_menu %}
 			</div>
-			{% endif -%}
+			{% endif %}
 		</div>
 	</div>
 </div>
-{% endif -%}
+{% endif %}
