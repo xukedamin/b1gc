@@ -267,3 +267,34 @@ select.input-full {
     text-align: left;
 }
 
+
+section.one-child {
+  padding: 75px 0;
+  position: relative;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+  .page-account{
+    padding: 10px 15px;
+  }
+
+  section.one-child{
+    padding: 50px 0;
+  }
+ 
+
+}
+
+@media only screen and (max-width: 480px) {
+ .btn-wrapper{
+    a[class^='bt-']{
+      width: 100%;
+    }
+    a[class^='bt-'] + a{
+      margin-top: 10px;
+    }
+  }
+}

@@ -905,11 +905,6 @@ body.ajaxing #overlays-loading {
   margin: 0 !important;
 }
 
-section.one-child {
-  padding: 75px 0;
-  position: relative;
-}
-
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -2148,6 +2143,10 @@ textarea:focus {
 
   .btn-link-default.btn-link-loadmore {
     width: 100%;
+  }
+
+  .bt-loadmore {
+    width: auto;
   }
 }
 /***********************************************************************
@@ -5536,10 +5535,6 @@ form.cart-page-form .list-button br {
     padding-right: 50px;
   }
 
-  .page-account {
-    padding: 10px;
-  }
-
   .mini-cart .info-list-cart {
     margin: 0;
   }
@@ -6470,12 +6465,12 @@ a.jvlogo {
     top: 10px;
   }
 
-  .contact-top3 {
+  .header__top-bar__contact {
     font-size: 12px;
     text-align: center;
   }
 
-  .menu-top3.text-right {
+  .header__top-bar__menu-top.text-right {
     padding: 5px 0;
     text-align: center;
   }
@@ -6514,14 +6509,13 @@ a.jvlogo {
     width: auto;
   }
 
-  .search-form7 input[type="search"] {
+  .header .search-form7 input[type="search"] {
     max-width: 150px;
   }
 
   .header5 .register-box {
     margin-right: 35px;
   }
-
   .header5 .register-box a {
     width: 40px;
   }
@@ -6534,9 +6528,109 @@ a.jvlogo {
   .header5 .info-cart7 {
     top: 150px;
   }
+
+  .header5 .search-form7 form {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    z-index: 10;
+    position: relative;
+  }
+  .header5 .search-form7 form:before {
+    position: absolute;
+    z-index: 11;
+    right: 0;
+    top: 0;
+    color: #000;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    content: "\e86f";
+    font-family: Linearicons-Free;
+  }
+
+  .header5 .search-form7 form input[type="search"] {
+    color: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    position: absolute;
+    left: -1px;
+    top: 12px;
+    padding: 0 0 0 35px;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+  }
+
+  .header5 .search-form7 form .screen-reader-text {
+    display: none;
+  }
+
+  .header5 .search-form7 form [type="submit"] {
+    background: none;
+    display: none;
+    border: medium none;
+    height: 40px;
+    width: 40px;
+    right: -1px;
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    z-index: 12;
+  }
+
+  .header5 .search-form7 form:hover {
+    border-color: transparent;
+  }
+
+  .header5 .search-form7 form:hover input[type="search"],
+  .header5 .search-form7 form input[type="search"]:focus,
+  .header5 .search-form7 form:focus input[type="search"] {
+    opacity: 1;
+    width: 250px;
+    color: inherit;
+  }
+
+  .header5 .search-form7 form input[type="search"]:focus + [type="submit"],
+  .header5 .search-form7 form [type="submit"]:hover {
+    display: block;
+  }
+
+  .header5 .search-form7 form input[type="search"] {
+    opacity: 1;
+    top: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    max-width: 150px;
+  }
+
+  .header5 .logo-text h1 {
+    line-height: 40px;
+  }
+
+  .header5 .search-form7 {
+    height: 40px;
+    border: none;
+  }
+
+  .header5 .register-box {
+    margin-top: 0 !important;
+  }
+
+  .header5 .mobile-menu {
+    top: 5px;
+  }
 }
 @media only screen and (max-width: 480px) {
-  .search-form7 input[type="search"] {
+  .header .search-form7 input[type="search"] {
     max-width: 100px;
   }
 
@@ -6546,7 +6640,7 @@ a.jvlogo {
   }
 }
 @media only screen and (max-width: 360px) {
-  .search-form7 input[type="search"] {
+  .header .search-form7 input[type="search"] {
     max-width: 50px;
   }
 }
@@ -11489,6 +11583,28 @@ select.input-full {
   text-align: left;
 }
 
+section.one-child {
+  padding: 75px 0;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .page-account {
+    padding: 10px 15px;
+  }
+
+  section.one-child {
+    padding: 50px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .btn-wrapper a[class^='bt-'] {
+    width: 100%;
+  }
+  .btn-wrapper a[class^='bt-'] + a {
+    margin-top: 10px;
+  }
+}
 .product-list-filter {
   background: #f5f5f5 none repeat scroll 0 0;
   padding: 50px 0;

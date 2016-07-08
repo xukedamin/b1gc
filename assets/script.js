@@ -1050,7 +1050,7 @@
       
       //.icon-cart -> use ajaxify
 
-        $('.language-link,.currency-link,.account-link,.icon-user').click(function(event) {
+        $('.language-link,.currency-link,.account-link:not(.nosub),.icon-user').click(function(event) {
             event.preventDefault();
             
             $(this).next().slideToggle();

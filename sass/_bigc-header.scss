@@ -828,11 +828,11 @@ a.jvlogo {
   .header3 .mobile-menu{top: 10px;}
 
 
-  .contact-top3 {
+  .header__top-bar__contact {
     font-size: 12px;
     text-align: center;
   }
-  .menu-top3.text-right {
+  .header__top-bar__menu-top.text-right {
     padding: 5px 0;
     text-align: center;
   }
@@ -876,17 +876,17 @@ a.jvlogo {
     margin-left: 5px;
     width: auto;
   }
-  .search-form7 input[type="search"]{
+  .header .search-form7 input[type="search"]{
     max-width: 150px;
   }
 
   .header5 .register-box{
     margin-right: 35px;
+    a{
+      width: 40px;
+    }
   }
-  .header5 .register-box a{
-    width: 40px;
-  }
-  
+
   .header5 .mobile-menu{
     top: 15px;
     right: 15px;
@@ -894,14 +894,101 @@ a.jvlogo {
   .header5 .info-cart7{
     top: 150px;
   }
-
   
+  $search-btn--size : 40px;
+
+  //header5 searchform
+  .header5 .search-form7 form {
+    height: $search-btn--size;
+    width: $search-btn--size;
+    line-height: $search-btn--size;
+    z-index: 10;
+    position: relative;
+    
+    &:before {
+      position: absolute;
+      z-index: 11;
+      right: 0;
+      top: 0;
+      color: $color_black;
+      font-size: 15px;
+      width: 100%;
+      text-align: center;
+      content: "\e86f";
+      font-family: Linearicons-Free;
+    }
+  }
+
+  .header5 .search-form7 form input[type="search"] {
+    color: transparent;
+    border: 1px solid $color_mercury;
+    border-radius: 0;
+    height: $search-btn--size;
+    width: $search-btn--size;
+    opacity: 0;
+    position: absolute;
+    left: -1px;
+    top: 12px;
+    padding: 0 0 0 35px;
+    @include prefix(transition, all 0.5s ease-in-out 0s);
+  }
+
+  .header5 .search-form7 form .screen-reader-text {
+    display: none;
+  }
+  .header5 .search-form7 form [type="submit"] {
+    background: none;
+    display: none;
+    border: medium none;
+    height: $search-btn--size;
+    width: $search-btn--size;
+    right: -1px;
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    z-index: 12;
+  }
+  .header5 .search-form7 form:hover {
+    border-color: transparent;
+  }
+  .header5 .search-form7 form:hover input[type="search"], 
+  .header5 .search-form7 form input[type="search"]:focus, 
+  .header5 .search-form7 form:focus input[type="search"] {
+    opacity: 1;
+    width: 250px;
+    color: inherit;
+  }
+  .header5 .search-form7 form input[type="search"]:focus + [type="submit"], 
+  .header5 .search-form7 form [type="submit"]:hover {
+    display: block;
+  }
+
+  //responsive
+  .header5 .search-form7 form input[type="search"] {
+    opacity: 1;
+    top: 0;
+    
+    @include prefix(border-radius, 3px);
+    max-width: 150px;
+  }  
+
+  .header5 .logo-text h1{
+    line-height: 40px;
+  }
+  .header5 .search-form7{
+    height: 40px;
+    border: none;
+  }
+  .header5 .register-box{margin-top: 0 !important;}
+  .header5 .mobile-menu{
+    top: 5px;
+  }
 
 }
 
 @media only screen and (max-width: 480px) {
 
-  .search-form7 input[type="search"] {
+  .header .search-form7 input[type="search"] {
       max-width: 100px;
   }
 
@@ -910,12 +997,14 @@ a.jvlogo {
     top: 50px;
   }
 
+
+
 }
 
 
 @media only screen and (max-width: 360px) {
 
-  .search-form7 input[type="search"] {
+  .header .search-form7 input[type="search"] {
       max-width: 50px;
   }
 
