@@ -792,7 +792,8 @@ form.cart-page-form .list-button br {
     padding: 5px 0;
   }
   .mini-cart .link-cart{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .mini-cart .link-cart > * {
       max-width: 110px;
@@ -840,12 +841,16 @@ form.cart-page-form .list-button br {
   }
   .mini-cart .total-cart{padding-top: 10px;}
 
-  .info-cart7 .mini-cart .shop-cart-list {
+  // .info-cart7 
+  .mini-cart .shop-cart-list {
     height: 150px;
-      overflow: auto;
-      margin-bottom: 10px;
+    overflow: auto;
+    margin-bottom: 10px;
   }
 
+  .mini-cart .inner-cart-info h2{
+    margin-bottom: 5px;
+  }
 
 }
 

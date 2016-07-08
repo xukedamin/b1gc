@@ -41,7 +41,7 @@ a.jvlogo {
 {
     background: $color_shark none repeat scroll 0 0;
     max-width: 200px;
-    padding: 30px 15px;
+    padding: 10px;
     @extend %text-center;
     width: 100%;
 }
@@ -781,10 +781,15 @@ a.jvlogo {
   .header1 .header__logo-wrapper{
     max-width: 100%;
   }
+
   .header1 .nav-vertical .mobile-menu{
     right: 15px;
     top: auto;
     bottom: 0;
+  }
+
+  .header1 .mainmenu > .dropdownMenu {
+    top: 130px;
   }
 
   //header2
@@ -825,7 +830,14 @@ a.jvlogo {
   .header__info-wrapper{
     margin-right: 35px;
   }
+
   .header3 .mobile-menu{top: 10px;}
+  .header3 .mainmenu>.dropdownMenu {
+      top: 50px;
+  }
+  .header3 .search-form.search-form3 input[type="search"]{
+    width: auto;
+  }
 
 
   .header__top-bar__contact {
@@ -983,6 +995,9 @@ a.jvlogo {
   .header5 .mobile-menu{
     top: 5px;
   }
+
+
+
 
 }
 

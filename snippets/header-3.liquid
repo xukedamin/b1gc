@@ -11,11 +11,10 @@
 				<a href="#" class="hide-menu"><span class="lnr lnr-indent-increase"></span></a>
 			</div>
 		</div>
-		<div class="header__logo-wrapper"><!--  style="position:absolute;left: 50%; transform: translateX(-50%);bottom: 0; top:0;"> -->
+		<div class="header__logo-wrapper">
 			{%include 'header-logo' %}
-		
 		</div>
-		<!-- <div class="pull-right"> -->
+		
 		<div class="info-header info-header3 header__info-wrapper">
 			<ul class="info-total">
 				<li class="info-user info-user3">
@@ -48,7 +47,7 @@
 	              <ul class="list-unstyled  user-info-list">
 	                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
 	                {% if shop.customer_accounts_optional %}
-	                <li><span class="lnr lnr-enter"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
+	                <li><span class="lnr lnr-select"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
 	                {% endif %}
 	              </ul>
 
@@ -56,7 +55,7 @@
 			      {% endif %}
 						
 						{% if settings.show_multiple_currencies and settings.header_top_bar_setting_currency %}
-						<div class="currency-wrapper"><!--  style="border-left: 1px solid #e5e5e5;padding: 0 10px;">  -->
+						<div class="currency-wrapper">
 							<div class="currency__title">Currency</div>
 		            {% include 'currency-picker' %}
 		         </div>
@@ -69,10 +68,6 @@
 							<li><a href="#"><img src='{{ "flag-gm.png" | asset_url }}' alt="" />German</a></li>
 						</ul>
 						{% endif %}
-
-
-
-
 					</div>
 
 				</li>
@@ -97,6 +92,6 @@
 				
 			</ul>
 		</div>
-		<!-- </div> -->
+		
 	</div>
 </div>

@@ -1,10 +1,6 @@
 /*******************************************************************
 							Front Page
 ********************************************************************/
-
-
-
-
 .home-extra-sub {
   background: $color_shark none repeat scroll 0 0;
   left: 100px;
@@ -515,8 +511,6 @@
   }
 }
 
-
-
 .home-featured-slider {
 
   .control-paginav-featured-slider {
@@ -535,14 +529,9 @@
   }
 }
 
-
-
 .title.title-home {
     margin-bottom: 45px;
 }
-
-
-
 
 .home-featured-slider .owl-pagination {
   display: inline-block;
@@ -564,15 +553,15 @@
   }
   .owl-theme .owl-controls .owl-page {
     border: 1px solid $color_mine-shaft;
-    @extend %jv-border-radius-50;
+    background: $color_white;
     display: inline-block;
     height: 36px;
-    margin: 0 25px 0 0;
-    @extend %text-center;
     width: 36px;
+    margin: 0 25px 0 0;
     opacity: 0;
-    background: $color_white;
     position: relative;
+    @extend %text-center;
+    @extend %jv-border-radius-50;
 
     &.active {
       opacity: 1;
@@ -602,7 +591,47 @@
 }
 
 
+@media only screen and (max-width: 767px) {
+  //header1
+  .home-box-extra{
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    width: 40px;
+    z-index: 999;
+  }
+  .home-box-extra > div > a{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1px;
+  }
 
+  .home-box-extra>div>a>.lnr{
+    font-size: 18px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
 
+  .home-extra-sub.show-box{
+    width: auto;
+    right: 0;
+    padding: 10px;
+  }
 
+  .home-extra-sub .close-extra-sub{
+    display: inline-block;
+    float: right;
+  }
+  .home-extra-sub .inner-cart-info h2{
+    margin-bottom: 0;
+  }
+}
 
+@media only screen and (max-width: 767px){
+  .home-extra-sub.show-box {
+    left: -250px;
+  }
+  
+}

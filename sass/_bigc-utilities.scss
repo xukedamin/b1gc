@@ -384,9 +384,6 @@ blockquote { border-left: 5px solid $color_shark; color: $color_dusty-gray; font
 
 .panel-group .panel,
 .panel-group .panel-heading {
-  // border-radius: 0;
-  // box-shadow: none;
-  // -webit-box-shadow: none;
   @include prefix(border-radius, 0);
   @include prefix(box-shadow, none);
 }
@@ -519,16 +516,10 @@ select option {
 .show-loading .loading-ball .ball {
   border-left-color: $color_white !important;
   border-top-color: $color_white !important;
-  // -moz-animation: spin .5s infinite linear;
-  // -webkit-animation: spin .5s infinite linear;
-  // -ms-animation: spin .5s infinite linear;
   @include prefix(animation,spin .5s infinite linear);
 
   .ball1 {
     opacity: 1;
-    // -moz-animation: spinoff .5s infinite linear;
-    // -webkit-animation: spinoff .5s infinite linear;
-    // -ms-animation: spinoff .5s infinite linear;
     @include prefix(animation, spinoff .5s infinite linear);
   }
   .ball2 {
@@ -560,7 +551,6 @@ body.ajaxing  #overlays-loading {  visibility: visible;  opacity: 1; }
 .overlay  .errors.qty-error { background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0!important;    border-radius: 0!important;    height: auto!important;    left: 0!important;    line-height: normal!important;    margin: 0!important;    padding: 10px!important;    position: absolute!important;    right: 0!important;    top: 0!important;  width: 100%!important;}
 .btn-secondary.update-cart { margin-bottom:10px}
 .owl-carousel .item { width:auto !important; float:none !important;  margin:0 !important; }
-
 
 
 
