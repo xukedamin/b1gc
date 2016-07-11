@@ -1043,6 +1043,12 @@
         "default": "1"
       },
       {
+        "type": "checkbox",
+        "id": "header_1_social_sharing",
+        "label": "Enable header 1 - social sharing",
+        "default": true
+      },
+      {
         "type": "text",
         "id": "header_height",
         "label": "Fix height header",
@@ -4645,7 +4651,7 @@
       {
         "type": "checkbox",
         "id": "page_product_in_collections_enable",
-        "label": "Show product in Collections"
+        "label": "Show products in Collections page"
       }, 
       {
         "type": "select",

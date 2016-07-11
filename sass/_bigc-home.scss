@@ -138,9 +138,9 @@
     height: 100px;
     opacity: 1;
     position: relative;
-    @extend %text-right;
     visibility: visible;
     width: 100px;
+    @extend %text-right;
     @extend %jv-transition-easeout;
 
     &:hover {
@@ -595,10 +595,10 @@
   //header1
   .home-box-extra{
     position: fixed;
-    top: 100px;
-    right: 15px;
+    top: 131px;
+    right: 16px;
     width: 40px;
-    z-index: 999;
+    // z-index: 999;
   }
   .home-box-extra > div > a{
     width: 40px;
@@ -627,11 +627,21 @@
   .home-extra-sub .inner-cart-info h2{
     margin-bottom: 0;
   }
-}
 
-@media only screen and (max-width: 767px){
   .home-extra-sub.show-box {
     left: -250px;
+  }
+
+  .home-search-form {
+    input[type="search"] {
+      width: 140px;
+      padding: 0 10px;
+      float: left;
+    }
+    .btn-link-default {
+      margin: 0;
+      width: auto;
+    }
   }
   
 }

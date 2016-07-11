@@ -1,26 +1,36 @@
-// _bigc-icon.scss
-
 //home
 .icon-extra-sub.hide-box{
 	opacity:0;
 	visibility: hidden;
 }
 
-.icon-home-cart {
-  background: $color_shark none repeat scroll 0 0;
-}
 .icon-home-share {
   background: $color_shark none repeat scroll 0 0;
 }
+
+.icon-home-cart,
 .icon-home-search {
   background: $color_mine-shaft none repeat scroll 0 0;
 }
 
 
 .mtl {
-	.btn4  {   width: 13em;  display: inline-block; font-size: 16px;  color:#333;
-     & > span { margin-right:10px; display:inline-block}
-      .lnr {    display: inline-block;   fill: currentcolor;    height: 1em;    vertical-align: -0.05em;    width: 1em;}
-    }
+	.btn4 {
+		width: 13em;
+		display: inline-block;
+		font-size: 16px;
+		color: #333;
 
+		& > span {
+			margin-right: 10px;
+			display: inline-block
+		}
+		.lnr {
+			display: inline-block;
+			fill: currentcolor;
+			height: 1em;
+			vertical-align: -0.05em;
+			width: 1em;
+		}
+	}
 }

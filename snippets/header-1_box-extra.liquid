@@ -16,17 +16,17 @@
   </div><!-- home-cart-box -->
   {% endif %}
 
-  <div class="home-share-box">
+  {%if settings.header_1_social_sharing%}
+  <div class="home-share-box hidden-xs">
     <a href="#" class="icon-extra-sub icon-home-share">
       <span class="lnr lnr-bullhorn"></span>
     </a>
-    <div class="home-extra-sub">
+    <div class="home-extra-sub ">
       <a href="#" class="close-extra-sub">Close</a>
-
       {%include 'social-sharing-ul' %}
-
     </div>
   </div>
+  {% endif %}
 
   {% if settings.header_search_enable %}
   <div class="home-search-box">

@@ -30,8 +30,6 @@
 						<li class="info-user">
 								{% if shop.customer_accounts_enabled %}
 				          {% if customer %}
-				          <!--   <ul class="dropdownMenu1 subrtl1">
-				              <li> -->
 				                <a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
 				                  <span class="lnr lnr-user"></span> 
 				                </a>
@@ -41,11 +39,7 @@
 				                  <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span> {{ 'wishlist.title' | t }}</a></li>
 				                  <li><span class="lnr lnr-exit"></span>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
 				                </ul>
-				            <!--   </li>
-				            </ul> -->
 				          {% else %}
-				           <!--  <ul class="dropdownMenu1 subrtl1">
-				              <li>  -->
 				              	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
 					                <span class="lnr lnr-user"></span>
 					              </a>
@@ -55,8 +49,6 @@
 				                <li><span class="lnr lnr-enter"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
 				                {% endif %}
 				              </ul>
-				         <!--    </li>
-				          </ul> -->
 				        {% endif %}
 				      {% endif %}
 
