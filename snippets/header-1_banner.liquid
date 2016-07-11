@@ -2,6 +2,7 @@
   <div class="row">
  
        {% assign index = 0 %}
+
        {% if settings.home_featured_collections_sort == 'manual' %}
         {% for i in (1..12) %}
           {% capture featured_collection %}collection_{{ i }}{% endcapture %}
@@ -14,32 +15,32 @@
         {% endfor %}
 
         {% else %}
-        {% assign index = 0 %}
-        {% for collection in collections limit:4 %}
-          
-          {% unless index >= 4 %}
-            {% unless collection.handle == 'frontpage' %}
-              {% assign featured = collection.handle %}
+          {% assign index = 0 %}
+          {% for collection in collections limit:4 %}
+            
+            {% unless index >= 4 %}
+              {% unless collection.handle == 'frontpage' %}
+                {% assign featured = collection.handle %}
 
-              {% assign class_box = index | modulo:2 %}
-              {% if class_box == 0 %}
-                {% assign class_box = 'left'%}
-              {% else %}
-                {% assign class_box = 'right'%}
-              {% endif %}
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="item-header-banner box-{{class_box}}">
-                  {% include 'featured-collection' %}
-                  {% include 'category-lightbox' %}
+                {% assign class_box = index | modulo:2 %}
+                {% if class_box == 0 %}
+                  {% assign class_box = 'left'%}
+                {% else %}
+                  {% assign class_box = 'right'%}
+                {% endif %}
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="item-header-banner box-{{class_box}}">
+                    {% include 'featured-collection' %}
+                    {% include 'category-lightbox' %}
+                  </div>
                 </div>
-              </div>
 
-               {% assign index = index | plus: 1 %}
-                
+                 {% assign index = index | plus: 1 %}
+                  
+              {% endunless %}
             {% endunless %}
-          {% endunless %}
 
-        {% endfor %}
+          {% endfor %}
       {% endif %}
 
   </div>

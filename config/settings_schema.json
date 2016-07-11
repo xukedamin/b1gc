@@ -990,7 +990,7 @@
   },
 
   {
-    "name": "Header",
+    "name": "Header #",
     "settings": [
       {
         "type": "header",
@@ -1053,6 +1053,13 @@
         "id": "header_1_banner_enable",
         "label": "Enable header 1 - Banner",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "header_1_slider_enable",
+        "label": "Enable slider on HEADER 1",
+        "default": true,
+        "info": "The slideshow in header area (only on header 1 style)"
       },
       {
         "type": "text",
@@ -1476,7 +1483,15 @@
         ],
         "default": "1"
       }
-    ]
+      ,{
+        "type": "checkbox",
+        "id": "slider_home_enable",
+        "label": "Enable slideshow",
+        "default": true,
+        "info": "The main slideshow in main content area"
+
+      }
+    ]  
   },
 
 
@@ -1484,60 +1499,6 @@
     "name": "Homepage 1",
     "settings": [
       {
-        "type": "header",
-        "content": "Select header"
-      },
-      {
-        "type": "header",
-        "content": "Slideshow"
-      },
-      {
-        "type": "header",
-        "content": "Options"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider_home_enable",
-        "label": "Enable slideshow"
-      },
-      {
-        "type": "select",
-        "id": "home1_slide_style",
-        "label": "Select Slider Style",
-        "options": [
-          {
-            "value": "1",
-            "label": "style 1"
-          },
-          {
-            "value": "2",
-            "label": "style 2"
-          },
-          {
-            "value": "3",
-            "label": "style 3"
-          },
-          {
-            "value": "4",
-            "label": "style 4"
-          },
-          {
-            "value": "5",
-            "label": "style 5"
-          },
-          {
-            "value": "6",
-            "label": "style 6"
-          },
-          {
-            "value": "7",
-            "label": "style 7"
-          }
-        ],
-        "default": "1",
-        "info": "Navigate to 'Material Slideshow' below to configure "
-      },
-    {
         "type": "header",
         "content": "Position and Content"
       },
@@ -5324,14 +5285,7 @@
         "id": "slide_1_icon",
         "label": "Font Icon"
       },
-      {
-        "type": "image",
-        "id": "slide_1_icon_img.png",
-        "label": "Image Icon",
-        "max-width": 130,
-        "max-height": 130,
-        "info": "If you use images here. Please empty input text of *Font Icon* box above"
-      },
+
       {
         "type": "text",
         "id": "slide_1_title_1",
@@ -5377,14 +5331,7 @@
         "id": "slide_2_icon",
         "label": "Font Icon"
       },
-      {
-        "type": "image",
-        "id": "slide_2_icon_img.png",
-        "label": "Image Icon",
-        "max-width": 130,
-        "max-height": 130,
-        "info": "If you use images here. Please empty input text of *Font Icon* box above"
-      },
+    
       {
         "type": "text",
         "id": "slide_2_title_1",
@@ -5430,14 +5377,7 @@
         "id": "slide_3_icon",
         "label": "Font Icon"
       },
-      {
-        "type": "image",
-        "id": "slide_3_icon_img.png",
-        "label": "Image Icon",
-        "max-width": 130,
-        "max-height": 130,
-        "info": "If you use images here. Please empty input text of *Font Icon* box above"
-      },
+   
       {
         "type": "text",
         "id": "slide_3_title_1",
@@ -5483,14 +5423,7 @@
         "id": "slide_4_icon",
         "label": "Font Icon"
       },
-      {
-        "type": "image",
-        "id": "slide_4_icon_img.png",
-        "label": "Image Icon",
-        "max-width": 130,
-        "max-height": 130,
-        "info": "If you use images here. Please empty input text of *Font Icon* box above"
-      },
+    
       {
         "type": "text",
         "id": "slide_4_title_1",
@@ -5554,7 +5487,7 @@
         "type": "text",
         "id": "slider1_height",
         "label": "Slider 1 - Height (px)",
-        "default": "750"
+        "default": "680"
       },
       {
         "type": "header",

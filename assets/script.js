@@ -1060,7 +1060,7 @@
 
       
           //.icon-cart -> use ajaxify
-          $('.language-link,.currency-link,.account-link:not(.nosub),.icon-user').click(function(event) {
+        $('.language-link,.currency-link,.account-link:not(.nosub),.icon-user').click(function(event) {
               event.preventDefault();
               
               if( $('html').hasClass('supports-touch' == false) ){
@@ -1068,7 +1068,7 @@
                   console.log('slideToggle');
               }
               // $(this).next().show();
-          });
+        });
         
 
         $('.info-search .icon-search').on('click',function(){

@@ -5,7 +5,8 @@
   <div class="header header1 clearfix">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-12">
+      <!-- col-md-3 col-sm-3 col-xs-12  -->
+        <div class="col-xs-12 col-md-absolute">
           <!-- <div class="logo logo-home"> -->
           <div class="header__logo-wrapper">
             {%include 'header-logo' %}
@@ -18,20 +19,27 @@
             </div>
           </div>
         </div>
-        <div class="col-md-7 col-sm-7 col-xs-12">
-          {% if settings.slider_home_enable %}
-            {% capture slider %}slider-{{settings.home1_slide_style}}{% endcapture %}
-            {% include slider  %}
-          {% endif %}
-
-          {%if settings.header_1_banner_enable %}
-          {% include 'header-1_banner' %}
-          {% endif %}
-        </div>
-        <div class="col-md-2 col-sm-2 home-box-extra-wrapper">
+        
+        <!-- col-md-2 col-sm-2 home-box-extra-wrapper -->
+        <div class="home-box-extra-wrapper col-md-absolute right">
           {% include 'header-1_box-extra' %}
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+<div class="container heading-line" style="width: 830px;padding-left: 100px;padding-right: 0;margin-top: -20px;">
+  <div class="row-background {%if template == 'index' and settings.header_1_slider_enable and settings.header_1_banner_enable %}height-max{%endif%}" style="width: 700px;">
+     
+      {% if settings.header_1_slider_enable %}
+        {% include 'slider-1'  %}
+      {% endif %}
+      {%if template == 'index' %}
+        {%if settings.header_1_banner_enable %}
+        {% include 'header-1_banner' %}
+        {% endif %}
+      {%endif%}     
   </div>
 </div>

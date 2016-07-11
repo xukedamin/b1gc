@@ -1,5 +1,3 @@
-
-
 <main class="wrapper main-content homepage2" role="main">
   {% if settings.slider_home_enable %}
     {% capture slider %}slider-{{settings.home2_slide_style}}{% endcapture %}
@@ -20,10 +18,7 @@
   {%assign pos_length = 7 %}
 
   {%include 'jv-sub-homepage' %}
-
   
-
-
 
   {% unless settings.home2_content == blank or pages[settings.home2_content].empty? or pages[settings.home2_content].content == blank %}
   {% assign page = pages[settings.home2_content] %}
