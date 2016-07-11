@@ -593,13 +593,26 @@
 
 @media only screen and (max-width: 767px) {
   //header1
-  .home-box-extra{
-    position: fixed;
-    top: 131px;
+
+  .home-box-extra-wrapper{
+        position: absolute;
+    top: 1px;
     right: 16px;
-    width: 40px;
-    // z-index: 999;
+    padding: 0;
   }
+
+  .home-box-extra{
+    // position: fixed;
+    // top: 131px;
+    // right: 16px;
+    width: 40px;
+    float: none;
+    // z-index: 999;
+
+  }
+
+
+
   .home-box-extra > div > a{
     width: 40px;
     height: 40px;

@@ -227,7 +227,7 @@ Dependency-free breakpoint mixin
 .owl-default .owl-theme .owl-controls .owl-buttons div, .leading-text-adv h3, .item-box-sub, .bt-link, .bt-primary, .btn-primary, .bt-primary-inverse, .bt-link span, .bt-primary span, .btn-primary span, .bt-primary-inverse span, .link-black, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .jv-btn-icon:after, .link-style4:after, .link-style9:after, .link-style14:after, .link-style19:after, .jv-btn-icon span, .link-style4 span, .link-style9 span, .link-style14 span, .link-style19 span, .link-white, .btn-circle-box a, .btn-circle-box a span, .btn-circle-box5 .link-add-cart:before, .btn-circle-box55 .link-add-cart:before, .btn-circle-box6 .link-add-cart:before, .btn-circle-box66 .link-add-cart:before, .btn-link-default, .btn-box-banner, .btn-link-hidden, .btn-submit-form, .btn-reset-form, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-icon .nav-tabs > li > a:before, .nav-tabs-icon .nav-tabs > li > a:after, .nav-tabs-border .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a:before, .list-tab-title .nav > li > a::after, .nav-tabs-filter .nav-tabs > li > a, .thumb-customer-saying .img,
 .thumb-customer-saying img, .side-testimonial, .testimonial-page, .testimonial-page-left, .left-open .side-left, .left-open .testimonial-page-left, .right-open .testimonial-page-right, .testimonial-thumb-link:before, .testimonial-thumb-link .img,
 .testimonial-thumb-link > img, .testimo-avatar:before, .testimo-avatar .img,
-.testimo-avatar img, .locator-thumb .locator-thumb-link, .eff-border-translate:after, .item-service-text .sub-title a, .eff-hover-rotate a.i-wrap, .dropdownMenu li ul, .mainmenu .sub-menu, .menu-item-has-children > a:after, .nav-vertical > ul > li > a:before, .nav-vertical > ul > li > a:after, .menu-trigger ul:after,
+.testimo-avatar img, .locator-thumb .locator-thumb-link, .eff-border-translate:after, .item-service-text .sub-title a, .eff-hover-rotate a.i-wrap, .dropdownMenu li ul, .mainmenu .sub-menu, .mainmenu:not(.nav-vertical) .menu-item-has-children > a:after, .nav-vertical > ul > li > a:before, .nav-vertical > ul > li > a:after, .menu-trigger ul:after,
 .menu-item-has-children > a + ul:after,
 .mainmenu > ul > li.menu-item-has-children > a:before,
 .menu-dropdown > a:before, .info-search .search-form, .info-search:after, .info-total .info-cart:before, .info-cart:after, .info-cart .inner-cart-info, .cart-thumb img, .link-cart > *, .wrap-cart-remove .remove-product, .cart-wishlist-compare .action, .sidebar-sublist__content, .language-box::after,
@@ -4105,7 +4105,8 @@ span.click-button:hover {
   right: 15px;
   top: 15px;
 }
-.menu-item-has-children > a:after {
+
+.mainmenu:not(.nav-vertical) .menu-item-has-children > a:after {
   color: #e5e5e5;
   content: "";
   display: block;
@@ -4119,7 +4120,7 @@ span.click-button:hover {
   visibility: hidden;
   opacity: 0;
 }
-.menu-item-has-children:hover > a:after {
+.mainmenu:not(.nav-vertical) .menu-item-has-children:hover > a:after {
   opacity: 1;
   visibility: visible;
   bottom: 0px;
@@ -4259,14 +4260,22 @@ NAV - vertical style//HOME 1
   position: absolute;
   right: 15px;
   top: -35px;
-  width: 40px;
-  height: 40px;
+  height: 30px;
+  width: 30px;
   display: none;
 }
 .mobile-menu a {
   color: #1b1d1f;
   display: block;
   font-size: 24px;
+  line-height: 24px;
+}
+
+.header1 .mobile-menu {
+  width: 40px;
+  height: 40px;
+}
+.header1 .mobile-menu a {
   line-height: 34px;
 }
 
@@ -4449,6 +4458,24 @@ NAV - vertical style//HOME 1
   }
   .nav-vertical .mobile-menu a {
     color: #fff;
+  }
+
+  .nav-vertical > .dropdownMenu {
+    background-color: #000;
+  }
+  .nav-vertical > .dropdownMenu li {
+    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  .nav-vertical > .dropdownMenu li a {
+    color: #a9a9a9;
+  }
+
+  .nav-vertical .dropdownMenu .mega-menu .mega-menu-content.sub-menu li ul li a {
+    color: #a9a9a9;
+  }
+
+  .nav-vertical .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
   }
 
   .mainmenu > .dropdownMenu {
@@ -5981,12 +6008,12 @@ a.jvlogo {
 .language-box:after {
   position: absolute;
 }
-.language-box:hover .language-inner-box {
+.language-box:focus .language-inner-box, .language-box:hover .language-inner-box {
   opacity: 1;
   visibility: visible;
   margin-top: 0;
 }
-.language-box:hover:after {
+.language-box:focus:after, .language-box:hover:after {
   opacity: 1;
 }
 
@@ -6240,7 +6267,8 @@ a.jvlogo {
   visibility: hidden;
 }
 
-.info-user:hover .box-info-user {
+.info-user:hover .box-info-user,
+.info-user:focus .box-info-user {
   opacity: 1;
   visibility: visible;
   margin-top: 5px;
@@ -6422,7 +6450,7 @@ a.jvlogo {
   }
 
   .header1 .nav-vertical .mobile-menu {
-    right: 15px;
+    right: 16px;
     top: auto;
     bottom: 0;
   }
@@ -12357,11 +12385,16 @@ section.one-child {
 }
 
 @media only screen and (max-width: 767px) {
-  .home-box-extra {
-    position: fixed;
-    top: 131px;
+  .home-box-extra-wrapper {
+    position: absolute;
+    top: 1px;
     right: 16px;
+    padding: 0;
+  }
+
+  .home-box-extra {
     width: 40px;
+    float: none;
   }
 
   .home-box-extra > div > a {

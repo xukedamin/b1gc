@@ -253,6 +253,7 @@ a.jvlogo {
   &:after {
     position: absolute;
   }
+  &:focus,
   &:hover {
     .language-inner-box {
       opacity: 1;
@@ -576,10 +577,13 @@ a.jvlogo {
   visibility: hidden;
 }
 
-.info-user:hover .box-info-user {
-  opacity: 1;
-  visibility: visible;
-  margin-top: 5px;
+.info-user:hover, 
+.info-user:focus {
+  .box-info-user {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 5px;
+  }
 }
 
 .info-header.info-header3 {
@@ -783,7 +787,7 @@ a.jvlogo {
   }
 
   .header1 .nav-vertical .mobile-menu{
-    right: 15px;
+    right: 16px;
     top: auto;
     bottom: 0;
   }

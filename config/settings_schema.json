@@ -1048,6 +1048,12 @@
         "label": "Enable header 1 - social sharing",
         "default": true
       },
+        {
+        "type": "checkbox",
+        "id": "header_1_banner_enable",
+        "label": "Enable header 1 - Banner",
+        "default": true
+      },
       {
         "type": "text",
         "id": "header_height",

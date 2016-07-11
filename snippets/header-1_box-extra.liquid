@@ -5,13 +5,9 @@
       <span class="lnr lnr-cart"></span>
       <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
     </a>
-
     <div class="home-extra-sub">
       <a href="#" class="close-extra-sub">Close</a>
-  
-      
       {% include 'mini-cart' %}
-      
     </div>
   </div><!-- home-cart-box -->
   {% endif %}
