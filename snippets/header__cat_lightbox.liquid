@@ -1,10 +1,10 @@
-<div class="header-banner">
+<div class="header__category--lightbox">
   <div class="row">
  
        {% assign index = 0 %}
 
-       {% if settings.home_featured_collections_sort == 'manual' %}
-        {% for i in (1..12) %}
+       {% if settings.header_1_featured_collections_sort_manual == 'manual' %}
+        {% for i in (1..4) %}
           {% capture featured_collection %}collection_{{ i }}{% endcapture %}
           
           {% unless settings[featured_collection] == blank %}

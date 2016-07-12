@@ -17,609 +17,7 @@
       }
     ]
   },
-  {
-    "name": "Main Menu",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Nav #1"
-      },
-      {
-        "type": "link_list",
-        "id": "nav1",
-        "label": "Select Mega Menu"
-      },
-      
-      {
-        "type": "select",
-        "id": "nav1_style",
-        "label": "Mega style",
-        "options": [
-          {
-            "value": "style1",
-            "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "nav1_column",
-        "label": "Mega Column",
-        "options": [
-          {
-            "value": "1",
-            "label": "1 Column"
-          },
-          {
-            "value": "2",
-            "label": "2 Column"
-          },
-          {
-            "value": "3",
-            "label": "3 Column"
-          },
-          {
-            "value": "4",
-            "label": "4 Column"
-          },
-          {
-            "value": "5",
-            "label": "5 Column"
-          },
-          {
-            "value": "6",
-            "label": "6 Column"
-          }
-        ],
-        "default": "4"
-      },
-      {
-        "type": "header",
-        "content": "Nav #2"
-      },
-      {
-        "type": "link_list",
-        "id": "nav2",
-        "label": "Select Mega Menu"
-      },
-      {
-        "type": "select",
-        "id": "nav2_style",
-        "label": "Mega style",
-        "options": [
-          {
-            "value": "style1",
-            "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "nav2_column",
-        "label": "Mega Column",
-        "options": [
-          {
-            "value": "1",
-            "label": "1 Column"
-          },
-          {
-            "value": "2",
-            "label": "2 Column"
-          },
-          {
-            "value": "3",
-            "label": "3 Column"
-          },
-          {
-            "value": "4",
-            "label": "4 Column"
-          },
-          {
-            "value": "5",
-            "label": "5 Column"
-          },
-          {
-            "value": "6",
-            "label": "6 Column"
-          }
-        ],
-        "default": "4"
-      },
-      {
-        "type": "header",
-        "content": "Nav #3"
-      },
-      {
-        "type": "link_list",
-        "id": "nav3",
-        "label": "Select Mega Menu"
-      },
-      {
-        "type": "select",
-        "id": "nav3_style",
-        "label": "Mega style",
-        "options": [
-          {
-            "value": "style1",
-            "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "nav3_column",
-        "label": "Mega Column",
-        "options": [
-          {
-            "value": "1",
-            "label": "1 Column"
-          },
-          {
-            "value": "2",
-            "label": "2 Column"
-          },
-          {
-            "value": "3",
-            "label": "3 Column"
-          },
-          {
-            "value": "4",
-            "label": "4 Column"
-          },
-          {
-            "value": "5",
-            "label": "5 Column"
-          },
-          {
-            "value": "6",
-            "label": "6 Column"
-          }
-        ],
-        "default": "4"
-      },
-        {
-        "type": "header",
-        "content": "Hot items"
-      },
-       {
-        "type": "text",
-        "id": "main_menu_hot_items",
-        "label": "Main Menu hot items",
-        "default": "featured",
-        "info": "Separate handles with comma(,) without any whitespace"
-      },
-        {
-        "type": "text",
-        "id": "main_menu_new_items",
-        "label": "Main Menu new items",
-        "default": "shop",
-        "info": "Separate handles with comma(,) without any whitespace"
-      },
-
-      {
-        "type": "header",
-        "content": "Style Mainmenu"
-      },
-      {
-        "type": "select",
-        "id": "mega_main_size",
-        "label": "Font Size ",
-        "options": [
-          {
-            "value": "10",
-            "label": "10px"
-          },
-          {
-            "value": "11",
-            "label": "11px"
-          },
-          {
-            "value": "12",
-            "label": "12px"
-          },
-          {
-            "value": "13",
-            "label": "13px"
-          },
-          {
-            "value": "14",
-            "label": "14px"
-          },
-          {
-            "value": "15",
-            "label": "15px"
-          },
-          {
-            "value": "16",
-            "label": "16px"
-          }
-        ],
-        "default": "11"
-      },
-      {
-        "type": "text",
-        "id": "mega_main_padding",
-        "label": "Padding",
-        "default": "20",
-        "info": "in px"
-      },
-      {
-        "type": "select",
-        "id": "mega_main_weight",
-        "label": "Font Weight",
-        "options": [
-          {
-            "value": "100",
-            "label": "100"
-          },
-          {
-            "value": "200",
-            "label": "200"
-          },
-          {
-            "value": "300",
-            "label": "300"
-          },
-          {
-            "value": "400",
-            "label": "400"
-          },
-          {
-            "value": "500",
-            "label": "500"
-          },
-          {
-            "value": "600",
-            "label": "600"
-          },
-          {
-            "value": "700",
-            "label": "700"
-          }
-        ],
-        "default": "700"
-      },
-      {
-        "type": "select",
-        "id": "mega_main_family",
-        "label": "Font family",
-        "options": [
-           {
-            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
-            "label": "Open Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, Helvetica, sans-serif",
-            "label": "Arial",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Arial Black', Gadget, sans-serif",
-            "label": "Arial Black",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Comic Sans MS', cursive, sans-serif",
-            "label": "Comic Sans MS",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Impact, Charcoal, sans-serif",
-            "label": "Impact",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
-            "label": "Lucida Sans Unicode",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Tahoma, Geneva, sans-serif",
-            "label": "Tahoma",
-            "group": "Sans-serif"
-          },
-       {
-            "value": "Verdana, Geneva, sans-serif",
-            "label": "Verdana",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Georgia, serif",
-            "label": "Georgia",
-            "group": "Serif"
-          },
-          {
-            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
-            "label": "Palatino Linotype",
-            "group": "Serif"
-          },
-          {
-            "value": "'Times New Roman', Times, serif",
-            "label": "Times New Roman",
-            "group": "Serif"
-          },
-        {
-            "value": "'Courier New', Courier, monospace",
-            "label": "Courier New",
-            "group": "Monospace"
-          },
-          {
-            "value": "'Lucida Console', Monaco, monospace",
-            "label": "Lucida Console",
-            "group": "Monospace"
-          }
-        ],
-        "default": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif"
-      },
-        {
-        "type": "text",
-        "id": "mega_bg_img",
-        "label": "Mega background image"
-        
-      },
-     {
-        "type": "color",
-        "id": "mega_main_color",
-        "label": "Color item",
-        "default": "#333",
-        "info": "Color item main menu"
-      },
-      {
-        "type": "header",
-        "content": "Style Submenu"
-      },
-      {
-        "type": "color",
-        "id": "mega_sub_bg_color",
-        "label": "Background Submenu",
-        "default": "#fff",
-        "info": "Background Submenu"
-      },
-        {
-        "type": "color",
-        "id": "mega_sub_color_header",
-        "label": "Header Color  ",
-        "default": "#666",
-        "info": "Header Color "
-      },
-       {
-        "type": "color",
-        "id": "mega_sub_color",
-        "label": "Color item",
-        "default": "#ccc",
-        "info": "Color item sub menu"
-      },
-      {
-        "type": "color",
-        "id": "mega_sub_boder_color",
-        "label": "Border Submenu",
-        "default": "#e5e5e5",
-        "info": "Border Submenu"
-      },
-    
-      {
-        "type": "select",
-        "id": "mega_sub_size_header",
-        "label": "Header Font Size ",
-        "options": [
-          {
-            "value": "10",
-            "label": "10px"
-          },
-          {
-            "value": "11",
-            "label": "11px"
-          },
-          {
-            "value": "12",
-            "label": "12px"
-          },
-          {
-            "value": "13",
-            "label": "13px"
-          },
-          {
-            "value": "14",
-            "label": "14px"
-          },
-          {
-            "value": "15",
-            "label": "15px"
-          },
-          {
-            "value": "16",
-            "label": "16px"
-          }
-        ],
-        "default": "14"
-      },
-
-      {
-        "type": "select",
-        "id": "mega_sub_size",
-        "label": "Item Font Size ",
-        "options": [
-          {
-            "value": "10",
-            "label": "10px"
-          },
-          {
-            "value": "11",
-            "label": "11px"
-          },
-          {
-            "value": "12",
-            "label": "12px"
-          },
-          {
-            "value": "13",
-            "label": "13px"
-          },
-          {
-            "value": "14",
-            "label": "14px"
-          },
-          {
-            "value": "15",
-            "label": "15px"
-          },
-          {
-            "value": "16",
-            "label": "16px"
-          }
-        ],
-        "default": "11"
-      },
-      {
-        "type": "text",
-        "id": "mega_sub_padding",
-        "label": "Padding",
-        "default": "15",
-        "info": "in px"
-      },
-      {
-        "type": "select",
-        "id": "mega_sub_weight",
-        "label": "Font Weight",
-        "options": [
-          {
-            "value": "100",
-            "label": "100"
-          },
-          {
-            "value": "200",
-            "label": "200"
-          },
-          {
-            "value": "300",
-            "label": "300"
-          },
-          {
-            "value": "400",
-            "label": "400"
-          },
-          {
-            "value": "500",
-            "label": "500"
-          },
-          {
-            "value": "600",
-            "label": "600"
-          },
-          {
-            "value": "700",
-            "label": "700"
-          }
-        ],
-        "default": "400"
-      },
-      {
-        "type": "select",
-        "id": "mega_sub_family",
-        "label": "Font family",
-        "options": [
-          {
-            "value": "0",
-            "label": "Inherit",
-            "group": "inherit"
-          },
-          {
-            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
-            "label": "Open Sans",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Arial, Helvetica, sans-serif",
-            "label": "Arial",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Arial Black', Gadget, sans-serif",
-            "label": "Arial Black",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Comic Sans MS', cursive, sans-serif",
-            "label": "Comic Sans MS",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Impact, Charcoal, sans-serif",
-            "label": "Impact",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
-            "label": "Lucida Sans Unicode",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Tahoma, Geneva, sans-serif",
-            "label": "Tahoma",
-            "group": "Sans-serif"
-          },
-       {
-            "value": "Verdana, Geneva, sans-serif",
-            "label": "Verdana",
-            "group": "Sans-serif"
-          },
-          {
-            "value": "Georgia, serif",
-            "label": "Georgia",
-            "group": "Serif"
-          },
-          {
-            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
-            "label": "Palatino Linotype",
-            "group": "Serif"
-          },
-          {
-            "value": "'Times New Roman', Times, serif",
-            "label": "Times New Roman",
-            "group": "Serif"
-          },
-        {
-            "value": "'Courier New', Courier, monospace",
-            "label": "Courier New",
-            "group": "Monospace"
-          },
-          {
-            "value": "'Lucida Console', Monaco, monospace",
-            "label": "Lucida Console",
-            "group": "Monospace"
-          }
-        ],
-        "default": "0"
-      }
-     
-    ]
-  },
- 
+  
   {
     "name": "Colors",
     "settings": [
@@ -910,7 +308,609 @@
       }
     ]
   },
+  {
+    "name": "Main Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Nav #1"
+      },
+      {
+        "type": "link_list",
+        "id": "nav1",
+        "label": "Select Mega Menu"
+      },
+      
+      {
+        "type": "select",
+        "id": "nav1_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav1_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Nav #2"
+      },
+      {
+        "type": "link_list",
+        "id": "nav2",
+        "label": "Select Mega Menu"
+      },
+      {
+        "type": "select",
+        "id": "nav2_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav2_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Nav #3"
+      },
+      {
+        "type": "link_list",
+        "id": "nav3",
+        "label": "Select Mega Menu"
+      },
+      {
+        "type": "select",
+        "id": "nav3_style",
+        "label": "Mega style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "Style 1"
+          },
+          {
+            "value": "style2",
+            "label": "Style 2"
+          },
+          {
+            "value": "style3",
+            "label": "Style 3"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "nav3_column",
+        "label": "Mega Column",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 Column"
+          },
+          {
+            "value": "2",
+            "label": "2 Column"
+          },
+          {
+            "value": "3",
+            "label": "3 Column"
+          },
+          {
+            "value": "4",
+            "label": "4 Column"
+          },
+          {
+            "value": "5",
+            "label": "5 Column"
+          },
+          {
+            "value": "6",
+            "label": "6 Column"
+          }
+        ],
+        "default": "4"
+      },
+        {
+        "type": "header",
+        "content": "Hot items"
+      },
+       {
+        "type": "text",
+        "id": "main_menu_hot_items",
+        "label": "Main Menu hot items",
+        "default": "featured",
+        "info": "Separate handles with comma(,) without any whitespace"
+      },
+        {
+        "type": "text",
+        "id": "main_menu_new_items",
+        "label": "Main Menu new items",
+        "default": "shop",
+        "info": "Separate handles with comma(,) without any whitespace"
+      },
 
+      {
+        "type": "header",
+        "content": "Style Main Menu"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_size",
+        "label": "Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "11"
+      },
+      {
+        "type": "text",
+        "id": "mega_main_padding",
+        "label": "Padding",
+        "default": "20",
+        "info": "in px"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "700"
+      },
+      {
+        "type": "select",
+        "id": "mega_main_family",
+        "label": "Font family",
+        "options": [
+           {
+            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Georgia, serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
+          }
+        ],
+        "default": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif"
+      },
+        {
+        "type": "text",
+        "id": "mega_bg_img",
+        "label": "Mega background image"
+        
+      },
+     {
+        "type": "color",
+        "id": "mega_main_color",
+        "label": "Color item",
+        "default": "#333",
+        "info": "Color item Main menu"
+      },
+      {
+        "type": "header",
+        "content": "Style Sub Menu"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_bg_color",
+        "label": "Background Sub Menu",
+        "default": "#fff",
+        "info": "Background Sub Menu"
+      },
+        {
+        "type": "color",
+        "id": "mega_sub_color_header",
+        "label": "Header Color  ",
+        "default": "#666",
+        "info": "Header Color "
+      },
+       {
+        "type": "color",
+        "id": "mega_sub_color",
+        "label": "Color item",
+        "default": "#ccc",
+        "info": "Color item sub Menu"
+      },
+      {
+        "type": "color",
+        "id": "mega_sub_boder_color",
+        "label": "Border Sub Menu",
+        "default": "#e5e5e5",
+        "info": "Border Sub Menu"
+      },
+    
+      {
+        "type": "select",
+        "id": "mega_sub_size_header",
+        "label": "Header Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "14"
+      },
+
+      {
+        "type": "select",
+        "id": "mega_sub_size",
+        "label": "Item Font Size ",
+        "options": [
+          {
+            "value": "10",
+            "label": "10px"
+          },
+          {
+            "value": "11",
+            "label": "11px"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "13",
+            "label": "13px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "15",
+            "label": "15px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          }
+        ],
+        "default": "11"
+      },
+      {
+        "type": "text",
+        "id": "mega_sub_padding",
+        "label": "Padding",
+        "default": "15",
+        "info": "in px"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_weight",
+        "label": "Font Weight",
+        "options": [
+          {
+            "value": "100",
+            "label": "100"
+          },
+          {
+            "value": "200",
+            "label": "200"
+          },
+          {
+            "value": "300",
+            "label": "300"
+          },
+          {
+            "value": "400",
+            "label": "400"
+          },
+          {
+            "value": "500",
+            "label": "500"
+          },
+          {
+            "value": "600",
+            "label": "600"
+          },
+          {
+            "value": "700",
+            "label": "700"
+          }
+        ],
+        "default": "400"
+      },
+      {
+        "type": "select",
+        "id": "mega_sub_family",
+        "label": "Font family",
+        "options": [
+          {
+            "value": "0",
+            "label": "Inherit",
+            "group": "inherit"
+          },
+          {
+            "value": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif",
+            "label": "Open Sans",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Arial, Helvetica, sans-serif",
+            "label": "Arial",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Arial Black', Gadget, sans-serif",
+            "label": "Arial Black",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Comic Sans MS', cursive, sans-serif",
+            "label": "Comic Sans MS",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Impact, Charcoal, sans-serif",
+            "label": "Impact",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "'Lucida Sans Unicode', 'Lucida Grande', sans-serif",
+            "label": "Lucida Sans Unicode",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Tahoma, Geneva, sans-serif",
+            "label": "Tahoma",
+            "group": "Sans-serif"
+          },
+       {
+            "value": "Verdana, Geneva, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Georgia, serif",
+            "label": "Georgia",
+            "group": "Serif"
+          },
+          {
+            "value": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+            "label": "Palatino Linotype",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          },
+        {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "'Lucida Console', Monaco, monospace",
+            "label": "Lucida Console",
+            "group": "Monospace"
+          }
+        ],
+        "default": "0"
+      }
+     
+    ]
+  },
+ 
   {
     "name": "Selector Google Fonts",
     "settings": [
@@ -1045,19 +1045,52 @@
       {
         "type": "checkbox",
         "id": "header_1_social_sharing",
-        "label": "Enable header 1 - social sharing",
+        "label": " header 1 - Show social media",
         "default": true
       },
         {
         "type": "checkbox",
-        "id": "header_1_banner_enable",
-        "label": "Enable header 1 - Banner",
+        "id": "header_1_cat_lightbox_enable",
+        "label": " Header 1 - Show Collection categories lightbox",
         "default": true
       },
       {
+        "type": "radio",
+        "id": "header_1_featured_collections_sort",
+        "label": "Choose collections",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatically"
+          },
+          {
+            "value": "manual",
+            "label": "Manually:"
+          }
+        ],
+        "default":"auto"
+      },
+      {
+        "type": "collection",
+        "id": "collection_1"
+      },
+      {
+        "type": "collection",
+        "id": "collection_2"
+      },
+      {
+        "type": "collection",
+        "id": "collection_3"
+      },
+      {
+        "type": "collection",
+        "id": "collection_4"
+      },
+
+      {
         "type": "checkbox",
         "id": "header_1_slider_enable",
-        "label": "Enable slider on HEADER 1",
+        "label": "Header 1 - Show slider",
         "default": true,
         "info": "The slideshow in header area (only on header 1 style)"
       },
@@ -1138,18 +1171,18 @@
 
       {
         "type": "header",
-        "content": "III. Header menu"
+        "content": "III. Header Menu"
       },
         {
         "type": "link_list",
         "id": "header_main_menu",
-        "label": "Header main menu"
+        "label": "Header main Menu"
       },
      
       {
         "type": "link_list",
         "id": "header_main_menu_short",
-        "label": "Header main menu short",
+        "label": "Header main Menu short",
         "info": "Used for header style 3"
       },
 
@@ -1160,7 +1193,7 @@
        {
         "type": "checkbox",
         "id": "header_top_bar_welcome",
-        "label": "Enable top bar - Welcome"
+        "label": "Show top bar - Welcome"
       },
 
       {
@@ -1188,33 +1221,31 @@
        {
         "type": "checkbox",
         "id": "header_top_bar_setting",
-        "label": "Enable top bar - setting"
+        "label": "Show top bar - setting"
       },
        {
         "type": "checkbox",
         "id": "header_top_bar_setting_lang",
-        "label": "Enable top bar setting language"
+        "label": "Show top bar setting language"
       },
         {
         "type": "checkbox",
         "id": "header_top_bar_setting_currency",
-        "label": "Enable top bar setting Currency"
+        "label": "Show top bar setting Currency"
       },
      
       {
         "type": "checkbox",
         "id": "header_cart_enable",
-        "label": "Show header Cart ?",
+        "label": "Show header Cart",
         "default": true
       },
        {
         "type": "checkbox",
         "id": "header_search_enable",
-        "label": "Show header search ?",
+        "label": "Show header search",
         "default": true
       }
-
-   
      
     ]
   },
@@ -1396,6 +1427,181 @@
     ]
   },
   {
+    "name": "Sidebar Blog",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_search",
+        "label": "Show post search",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_categories",
+        "label": "Show post categories",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_recent",
+        "label": "Show recent articles",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Banner ADV"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_visible",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_heading",
+        "label": "Heading",
+        "default": "BANNER"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_image",
+        "label": "Image",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "textwidget2_image.jpg",
+        "max-width": 470
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_link",
+        "label": "link"
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget2_content",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar Collections",
+    "settings": [
+      
+      {
+        "type": "header",
+        "content": "Link Lists"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist1",
+        "label": "Show link list #1"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist1",
+        "label": "Use list:"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist2",
+        "label": "Show link list #2"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist2",
+        "label": "Use list:"
+      },
+      {
+        "type": "header",
+        "content": "Product Filters"
+      },
+      {
+        "type": "radio",
+        "id": "collection_sidebar_filters",
+        "label": "Sidebar product filters",
+        "options": [
+          {
+            "value": "tags",
+            "label": "By tag"
+          },
+          {
+            "value": "groups",
+            "label": "By group"
+          }
+        ],
+        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_type_enable",
+        "label": "Show shop by type",
+        "default":false
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_vendor_enable",
+        "label": "Show shop by vendor",
+        "default":false
+      },
+     
+    
+      {
+        "type": "header",
+        "content": "Text Widget"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_visible",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget_heading",
+        "label": "Heading",
+        "default": "Welcome to BigC"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_image",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "textwidget_image.jpg",
+        "max-width": 270
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget_content",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_ajax_filters",
+        "label": "Show Ajax Filters",
+        "default": true
+      }
+      ,{
+        "type": "checkbox",
+        "id": "viewed_enable",
+        "label": "Enable recently products",
+        "default" :true
+      },
+
+      {
+        "type": "text",
+        "id":"viewed_number_of",
+        "label": "Number of recently products",
+        "default" : "4"
+      }
+    ]
+  },
+  {
     "name": "Search settings",
     "settings": [
       {
@@ -1405,7 +1611,7 @@
       {
         "type": "checkbox",
         "id": "search_auto_complete_enabale",
-        "label": "Enable Autocomplete",
+        "label": "Show Autocomplete",
         "default": true
       },
       {
@@ -1441,44 +1647,44 @@
     ]
   },
   {
-    "name": "Select default homepage",
+    "name": "Select default home page",
     "settings": [
       {
         "type": "header",
-        "content": "Homepage"
+        "content": "Home page"
       },
       {
         "type": "select",
         "id": "homepage_option",
-        "label": "Select Homepage",
+        "label": "Select Home page",
         "options": [
           {
             "value": "1",
-            "label": "Homepage 1"
+            "label": "Home page 1"
           },
           {
             "value": "2",
-            "label": "Homepage 2"
+            "label": "Home page 2"
           },
           {
             "value": "3",
-            "label": "Homepage 3"
+            "label": "Home page 3"
           },
           {
             "value": "4",
-            "label": "Homepage 4"
+            "label": "Home page 4"
           },
           {
             "value": "5",
-            "label": "Homepage 5"
+            "label": "Home page 5"
           },
           {
             "value": "6",
-            "label": "Homepage 6"
+            "label": "Home page 6"
           },
           {
             "value": "7",
-            "label": "Homepage 7"
+            "label": "Home page 7"
           }
         ],
         "default": "1"
@@ -1486,7 +1692,7 @@
       ,{
         "type": "checkbox",
         "id": "slider_home_enable",
-        "label": "Enable slideshow",
+        "label": "Show slideshow",
         "default": true,
         "info": "The main slideshow in main content area"
 
@@ -1496,7 +1702,7 @@
 
 
   {
-    "name": "Homepage 1",
+    "name": "Home page 1",
     "settings": [
       {
         "type": "header",
@@ -1505,7 +1711,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_1_enable",
-        "label": "Home 1 - position content 1 enable",
+        "label": "Home 1 - Show position content 1",
         "default": true
       },
       {
@@ -1560,7 +1766,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
      {
@@ -1572,7 +1778,7 @@
      {
         "type": "checkbox",
         "id": "home1_pos_content_2_enable",
-        "label": "Home 1 - position content 2 enable",
+        "label": "Home 1 - Show position content 2",
         "default": true
       },
       {
@@ -1627,7 +1833,7 @@
         {
         "type": "checkbox",
         "id": "home1_pos_content_2_fullwidth",
-        "label": "Fullwidth ?",
+        "label": "Fullwidth",
         "default": false
       },
         {
@@ -1639,7 +1845,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_3_enable",
-        "label": "Home 1 - position content 3 enable",
+        "label": "Home 1 - Show position content 3",
         "default": true
       },
       {
@@ -1694,7 +1900,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_3_fullwidth",
-        "label": "Fullwidth ?",
+        "label": "Fullwidth",
         "default": false
       },  
       {
@@ -1707,7 +1913,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_4_enable",
-        "label": "Home 1 - position content 4 enable",
+        "label": "Home 1 - Show position content 4",
         "default": true
       },
       {
@@ -1762,7 +1968,7 @@
         {
         "type": "checkbox",
         "id": "home1_pos_content_4_fullwidth",
-        "label": "Fullwidth ?",
+        "label": "Fullwidth",
         "default": false
       },
         {
@@ -1775,7 +1981,7 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_5_enable",
-        "label": "Home 1 - position content 5 enable",
+        "label": "Home 1 - Show position content 5",
         "default": true
       },
       {
@@ -1830,7 +2036,7 @@
         {
         "type": "checkbox",
         "id": "home1_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
         {
@@ -1878,7 +2084,7 @@
       {
         "type": "checkbox",
         "id": "slider_home2_enable",
-        "label": "Enable slideshow"
+        "label": "Show slideshow"
       },
       {
         "type": "select",
@@ -1920,7 +2126,7 @@
       {
         "type": "checkbox",
         "id": "home2_banner_enable",
-        "label": "Enable banner"
+        "label": "Show banner"
       },
       {
         "type": "select",
@@ -1958,7 +2164,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -2013,7 +2219,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2025,7 +2231,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -2080,7 +2286,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2092,7 +2298,7 @@
           {
         "type": "checkbox",
         "id": "home2_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -2147,7 +2353,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2159,7 +2365,7 @@
           {
         "type": "checkbox",
         "id": "home2_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -2214,7 +2420,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2226,7 +2432,7 @@
           {
         "type": "checkbox",
         "id": "home2_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": true
       },
       {
@@ -2281,7 +2487,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2293,7 +2499,7 @@
           {
         "type": "checkbox",
         "id": "home2_pos_content_6_enable",
-        "label": "--Position content 6 -- enable -- ",
+        "label": "--Position content 6 -- Show -- ",
         "default": true
       },
       {
@@ -2348,7 +2554,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_6_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -2360,7 +2566,7 @@
     {
         "type": "checkbox",
         "id": "home2_pos_content_7_enable",
-        "label": "--Position content 7 -- enable -- ",
+        "label": "--Position content 7 -- Show -- ",
         "default": true
       },
       {
@@ -2415,7 +2621,7 @@
       {
         "type": "checkbox",
         "id": "home2_pos_content_7_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -2441,13 +2647,13 @@
       {
         "type": "checkbox",
         "id": "slider_home3_enable",
-        "label": "Enable slideshow",
+        "label": "Show slideshow",
         "default": true
       },
       {
         "type": "select",
         "id": "home3_slide_style",
-        "label": "Select Slider Style",
+        "label": "Select Slideshow Style",
         "options": [
           {
             "value": "1",
@@ -2484,7 +2690,7 @@
     {
         "type": "checkbox",
         "id": "home3_banner_enable",
-        "label": "Enable banner"
+        "label": "Show banner"
       },
       {
         "type": "select",
@@ -2522,7 +2728,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -2577,7 +2783,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -2589,7 +2795,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -2644,7 +2850,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -2656,7 +2862,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -2711,7 +2917,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -2723,7 +2929,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -2778,7 +2984,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -2790,7 +2996,7 @@
           {
         "type": "checkbox",
         "id": "home3_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": false
       },
       {
@@ -2845,7 +3051,7 @@
       {
         "type": "checkbox",
         "id": "home3_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -2859,7 +3065,7 @@
 
 
 {
-    "name": "Homepage 4",
+    "name": "Home page 4",
     "settings": [
       {
         "type": "header",
@@ -2890,7 +3096,7 @@
       {
         "type": "checkbox",
         "id": "slider_home4_enable",
-        "label": "Enable slideshow"
+        "label": "Show slideshow"
       },
       {
         "type": "select",
@@ -2937,7 +3143,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -2992,7 +3198,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3005,7 +3211,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -3060,7 +3266,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3072,7 +3278,7 @@
           {
         "type": "checkbox",
         "id": "home4_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -3127,7 +3333,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },  
       {
@@ -3139,7 +3345,7 @@
           {
         "type": "checkbox",
         "id": "home4_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -3194,7 +3400,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -3206,7 +3412,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": true
       },
       {
@@ -3261,7 +3467,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -3273,7 +3479,7 @@
      {
         "type": "checkbox",
         "id": "home4_pos_content_6_enable",
-        "label": "--Position content 6 -- enable -- ",
+        "label": "--Position content 6 -- Show -- ",
         "default": true
       },
       {
@@ -3328,7 +3534,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_6_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }
       , 
@@ -3341,7 +3547,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_7_enable",
-        "label": "--Position content 7 -- enable -- ",
+        "label": "--Position content 7 -- Show -- ",
         "default": true
       },
       {
@@ -3396,7 +3602,7 @@
       {
         "type": "checkbox",
         "id": "home4_pos_content_7_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -3423,7 +3629,7 @@
       {
         "type": "checkbox",
         "id": "slider_home5_enable",
-        "label": "Enable slideshow",
+        "label": "Show slideshow",
         "default": true
       },
       {
@@ -3470,7 +3676,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -3525,7 +3731,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3537,7 +3743,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -3592,7 +3798,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3604,7 +3810,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -3659,7 +3865,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3671,7 +3877,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -3726,7 +3932,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -3738,7 +3944,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": true
       },
       {
@@ -3793,7 +3999,7 @@
       {
         "type": "checkbox",
         "id": "home5_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -3820,7 +4026,7 @@
       {
         "type": "checkbox",
         "id": "home6_slider_enable",
-        "label": "Enable slideshow",
+        "label": "Show slideshow",
         "default": true
       },
       {
@@ -3867,7 +4073,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -3922,7 +4128,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -3935,7 +4141,7 @@
     {
         "type": "checkbox",
         "id": "home6_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -3990,7 +4196,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -4002,7 +4208,7 @@
           {
         "type": "checkbox",
         "id": "home6_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -4057,7 +4263,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -4069,7 +4275,7 @@
           {
         "type": "checkbox",
         "id": "home6_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -4124,7 +4330,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
        {
@@ -4136,7 +4342,7 @@
           {
         "type": "checkbox",
         "id": "home6_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": true
       },
       {
@@ -4191,7 +4397,7 @@
       {
         "type": "checkbox",
         "id": "home6_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       }, 
       {
@@ -4204,7 +4410,7 @@
   },
 
 {
-    "name": "Homepage 7",
+    "name": "Home page 7",
     "settings": [
       {
         "type": "header",
@@ -4217,7 +4423,7 @@
       {
         "type": "checkbox",
         "id": "home7_slider_enable",
-        "label": "Enable slideshow",
+        "label": "Show slideshow",
         "default": true
       },
       {
@@ -4264,7 +4470,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_1_enable",
-        "label": "--Position content 1 -- enable -- ",
+        "label": "--Position content 1 -- Show -- ",
         "default": true
       },
       {
@@ -4319,7 +4525,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_1_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -4331,7 +4537,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_2_enable",
-        "label": "--Position content 2 -- enable -- ",
+        "label": "--Position content 2 -- Show -- ",
         "default": true
       },
       {
@@ -4386,7 +4592,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_2_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -4398,7 +4604,7 @@
           {
         "type": "checkbox",
         "id": "home7_pos_content_3_enable",
-        "label": "--Position content 3 -- enable -- ",
+        "label": "--Position content 3 -- Show -- ",
         "default": true
       },
       {
@@ -4453,7 +4659,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_3_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -4465,7 +4671,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_4_enable",
-        "label": "--Position content 4 -- enable -- ",
+        "label": "--Position content 4 -- Show -- ",
         "default": true
       },
       {
@@ -4520,7 +4726,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_4_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -4532,7 +4738,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_5_enable",
-        "label": "--Position content 5 -- enable -- ",
+        "label": "--Position content 5 -- Show -- ",
         "default": true
       },
       {
@@ -4587,7 +4793,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_5_fullwidth",
-        "label": "Fullwidth?",
+        "label": "Fullwidth",
         "default": false
       },
       {
@@ -4601,7 +4807,7 @@
   }
   ,
   {
-    "name": "Collections Product",
+    "name": "Collections Page",
     "settings": [
       {
         "type": "checkbox",
@@ -4609,18 +4815,7 @@
         "label": "Show Collections",
         "default": true
       },
-      {
-        "type": "text",
-        "id": "number_products_per_page",
-        "label": "Products per page",
-        "default": "9"
-      }, 
-      {
-        "type": "checkbox",
-        "id": "page_product_in_collections_enable",
-        "label": "Show products in Collections page"
-      }, 
-      {
+       {
         "type": "select",
         "id": "collection_sidebar_location",
         "label": "Collection Sidebar Location",
@@ -4646,132 +4841,33 @@
           },
           {
             "value": "large",
-            "label": "Medium (default)"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Link Lists"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_widget_linklist1",
-        "label": "Show link list #1?"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist1",
-        "label": "Use list:"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_widget_linklist2",
-        "label": "Show link list #2?"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist2",
-        "label": "Use list:"
-      },
-      {
-        "type": "header",
-        "content": "Product Filters"
-      },
-      {
-        "type": "radio",
-        "id": "collection_sidebar_filters",
-        "label": "Sidebar product filters",
-        "options": [
-          {
-            "value": "tags",
-            "label": "By tag"
-          },
-          {
-            "value": "groups",
-            "label": "By group"
+            "label": "Medium (recommended)"
           }
         ],
-        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
+        "default": "large"
       },
-      {
-        "type": "checkbox",
-        "id": "sidebar_type_enable",
-        "label": "Shop by type",
-        "default":false
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_vendor_enable",
-        "label": "Shop by vendor",
-        "default":false
-      },
-     
       {
         "type": "text",
-        "id": "featured_prod_num",
-        "label": "Number of",
-        "default": "3"
-      },
+        "id": "number_products_per_page",
+        "label": "Products per page",
+        "default": "9"
+      }, 
       {
+        "type": "checkbox",
+        "id": "page_product_in_collections_enable",
+        "label": "Show products in Collections page"
+      },
+       {
         "type": "header",
-        "content": "Text Widget"
+        "content": "Product General setting"
       },
-      {
-        "type": "checkbox",
-        "id": "textwidget_visible",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "textwidget_heading",
-        "label": "Heading",
-        "default": "Welcome to BigC"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget_image",
-        "label": "Enable"
-      },
-      {
-        "type": "image",
-        "id": "textwidget_image.jpg",
-        "max-width": 270
-      },
-      {
-        "type": "textarea",
-        "id": "textwidget_content",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
-      },
-
-      {
-        "type": "checkbox",
-        "id": "sidebar_ajax_filters",
-        "label": "Enable Ajax Filters?",
-        "default": true
-      }
-    
-
-    ]
-  },
-
-  {
-    "name": "Product",
-    "settings": [ 
       {
         "type": "checkbox",
         "id": "enable_wishlist",
         "label": "Enable Wishlist",
         "default": true
       },
-      {
-        "type": "checkbox",
-        "id": "product_masonry_effect",
-        "label": "Use Masonry layout",
-        "default": true
-      },
+
       {
         "type": "radio",
         "id": "product_show_price_compare_at_price",
@@ -4791,110 +4887,20 @@
       {
         "type": "checkbox",
         "id": "product_quickview_enable",
-        "label": "Show Quickview",
+        "label": "Enable Quickview",
         "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "product_quantity_enable",
-        "label": "Show quantity selector"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_quantity_message",
-        "label": "Show remaining quantity message",
-        "info": "Shown when less than 10 items are in stock"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_vendor_enable",
-        "label": "Show product vendor"
-      },
-      {
-        "type": "checkbox",
-        "id": "related_products_enable",
-        "label": "Show related products"
-      },
+      }
 
-       {
+    ]
+  },
+
+  {
+    "name": "Product Page",
+    "settings": [ 
+     
+      {
         "type": "header",
-        "content": "Featured Products"
-      },
-      {
-        "type": "checkbox",
-        "id": "featured_prod_visible",
-        "label": "Show?",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "featured_prod_heading",
-        "label": "Heading",
-        "default": "Featured Products"
-      },
-      {
-        "type": "collection",
-        "id": "featured_prod_collection",
-        "label": "Choose collection"
-      },
-
-
-       {
-        "type": "checkbox",
-        "id": "viewed_enable",
-        "label": "Show recently products",
-        "default" :true
-      },
-
-      {
-        "type": "text",
-        "id":"viewed_number_of",
-        "label": "Number of recently products",
-        "default" : "4"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_reviews_enable",
-        "label": "Enable product reviews",
-        "default": true,
-        "info": "Install the free Shopify [Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app to add product reviews."
-      },
-      {
-        "type": "color",
-        "id": "product_reviews_star_color",
-        "label": "Star color",
-        "default": "#e5c649",
-        "info": "This selection overrides your product review app settings."
-      },
-      {
-        "type": "checkbox",
-        "id": "product_size_chart_enable",
-        "label": "Enable product size chart",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "product_size_chart.png",
-        "label": "Product size chart"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_custom_tab_enable",
-        "label": "Enable product custom tab",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "product_custom_tab_title",
-        "label": "Enter product custom tab title",
-        "default": "Shipping and return"
-
-      },
-      {
-        "type": "textarea",
-        "id": "product_custom_tab",
-        "label": "Enter product custom tab content",
-        "default": "Custom tab content"
+        "content": "Product Page setting"
       },
       {
         "type": "select",
@@ -4918,79 +4924,121 @@
       {
         "type": "checkbox",
         "id": "product_image_zoom_enable",
-        "label": "product_image_zoom_enable",
-        "default": true
-      }
-    ]
-  },
- 
-  {
-    "name": "Sidebar Blog",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "blog_search",
-        "label": "Show post search ?",
+        "label": "Enable product image zoom",
         "default": true
       },
       {
         "type": "checkbox",
-        "id": "blog_categories",
-        "label": "Show post categories ?",
-        "default": true
+        "id": "product_quantity_enable",
+        "label": "Enable quantity selector"
       },
       {
         "type": "checkbox",
-        "id": "blog_recent",
-        "label": "Show recent articles ?",
-        "default": true
+        "id": "product_quantity_message",
+        "label": "Show remaining quantity message",
+        "info": "Show when less than 10 items are in stock"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_vendor_enable",
+        "label": "Show product vendor"
+      }, 
+      {
+        "type": "checkbox",
+        "id": "product_reviews_enable",
+        "label": "Show product reviews",
+        "default": true,
+        "info": "Install the free Shopify [Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app to add product reviews."
+      },
+      {
+        "type": "color",
+        "id": "product_reviews_star_color",
+        "label": "Review star color",
+        "default": "#e5c649",
+        "info": "This selection overrides your product review app settings."
       },
       {
         "type": "header",
-        "content": "Banner ADV"
+        "content": "Product page - tab bottom"
       },
       {
         "type": "checkbox",
-        "id": "textwidget2_visible",
-        "label": "Show?",
+        "id": "related_products_enable",
+        "label": "Show related products tab"
+      },  
+       {
+        "type": "text",
+        "id": "related_prod_num",
+        "label": "Number of Related products",
+        "default": "5"
+      },
+      
+      {
+        "type": "checkbox",
+        "id": "featured_prod_visible",
+        "label": "Show Featured products tab",
         "default": true
       },
       {
         "type": "text",
-        "id": "textwidget2_heading",
-        "label": "Heading",
-        "default": "BANNER"
+        "id": "featured_prod_num",
+        "label": "Number of featured products",
+        "default": "5"
       },
       {
+        "type": "text",
+        "id": "featured_prod_heading",
+        "label": "Heading",
+        "default": "Featured Products"
+      },
+      {
+        "type": "collection",
+        "id": "featured_prod_collection",
+        "label": "Select collection"
+      },
+
+
+      {
         "type": "checkbox",
-        "id": "textwidget2_image",
-        "label": "Image",
+        "id": "product_size_chart_enable",
+        "label": "Show product size chart tab",
         "default": true
       },
       {
         "type": "image",
-        "id": "textwidget2_image.jpg",
-        "max-width": 470
+        "id": "product_size_chart.png",
+        "label": "Product size chart"
+      },
+      {
+        "type": "checkbox",
+        "id": "product_custom_tab_enable",
+        "label": "Show product custom tab",
+        "default": true
       },
       {
         "type": "text",
-        "id": "textwidget2_link",
-        "label": "link"
+        "id": "product_custom_tab_title",
+        "label": "Enter product custom tab title",
+        "default": "Shipping and return"
+
       },
       {
         "type": "textarea",
-        "id": "textwidget2_content",
-        "label": "Content"
+        "id": "product_custom_tab",
+        "label": "Enter product custom tab content",
+        "default": "Custom tab content"
       }
     ]
   },
+ 
+  
   {
     "name": "Cart page",
     "settings": [
       {
         "type": "checkbox",
         "id": "cart_notes_enable",
-        "label": "Enable order notes"
+        "label": "Show order notes"
       },
       {
         "type": "select",
@@ -5057,7 +5105,8 @@
       {
         "type": "checkbox",
         "id": "superscript_decimals",
-        "label": "Show cents as superscript"
+        "label": "Show cents as superscript",
+        "info": "This setting won't apply if you're using a currency selector or format that includes a period before the number. For example: RS.1,000.00. [More info.](https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/supply#show-cents-as-superscript)"
       }
     ]
   },
@@ -5072,7 +5121,7 @@
       {
         "type": "checkbox",
         "id": "show_multiple_currencies",
-        "label": "Enable currency conversion",
+        "label": "Show currency conversion",
         "default": true,
         "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
       },
@@ -5216,7 +5265,7 @@
 
 
   {
-    "name": "Material Slideshow",
+    "name": "Material Slide show",
     "settings": [
       {
         "type": "header",
@@ -5273,7 +5322,7 @@
       {
         "type": "checkbox",
         "id": "slide_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "text",
@@ -5319,7 +5368,7 @@
       {
         "type": "checkbox",
         "id": "slide_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "text",
@@ -5365,7 +5414,7 @@
       {
         "type": "checkbox",
         "id": "slide_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "text",
@@ -5411,7 +5460,7 @@
       {
         "type": "checkbox",
         "id": "slide_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "text",
@@ -5522,7 +5571,7 @@
        {
         "type": "checkbox",
         "id": "slider2_text_enable",
-        "label": "Slider 2 - Text enable",
+        "label": "Slider 2 - Show Text",
         "default": false
       },
       {
@@ -5706,7 +5755,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_sm_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5720,7 +5769,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_sm_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5734,7 +5783,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_sm_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5748,7 +5797,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_sm_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5771,7 +5820,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_trans_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5785,7 +5834,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_trans_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5799,7 +5848,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_trans_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -5813,7 +5862,7 @@
       {
         "type": "checkbox",
         "id": "slide_img_trans_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6155,7 +6204,7 @@
       {
         "type": "checkbox",
         "id": "banner1_item_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6200,7 +6249,7 @@
       {
         "type": "checkbox",
         "id": "banner1_item_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6245,7 +6294,7 @@
       {
         "type": "checkbox",
         "id": "banner1_item_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6290,7 +6339,7 @@
       {
         "type": "checkbox",
         "id": "banner1_item_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6340,7 +6389,7 @@
       {
         "type": "checkbox",
         "id": "banner2_item_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6385,7 +6434,7 @@
       {
         "type": "checkbox",
         "id": "banner2_item_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6430,7 +6479,7 @@
       {
         "type": "checkbox",
         "id": "banner2_item_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6475,7 +6524,7 @@
       {
         "type": "checkbox",
         "id": "banner2_item_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6525,7 +6574,7 @@
       {
         "type": "checkbox",
         "id": "banner3_item_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6570,7 +6619,7 @@
       {
         "type": "checkbox",
         "id": "banner3_item_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6615,7 +6664,7 @@
       {
         "type": "checkbox",
         "id": "banner3_item_3",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6660,7 +6709,7 @@
       {
         "type": "checkbox",
         "id": "banner3_item_4",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6710,7 +6759,7 @@
       {
         "type": "checkbox",
         "id": "banner4_item_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6755,7 +6804,7 @@
       {
         "type": "checkbox",
         "id": "banner4_item_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6805,7 +6854,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_1",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6846,7 +6895,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_1_price_enable",
-        "label": "Enable Price"
+        "label": "Show Price"
       },
       {
         "type": "text",
@@ -6857,7 +6906,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_1_sale_enable",
-        "label": "Enable Sale off"
+        "label": "Show Sale off"
       },
       {
         "type": "text",
@@ -6868,7 +6917,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_1_timer_enable",
-        "label": "Enable timer"
+        "label": "Show timer"
       },
       {
         "type": "text",
@@ -6901,7 +6950,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_2",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -6942,7 +6991,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_2_price_enable",
-        "label": "Enable Price"
+        "label": "Show Price"
       },
       {
         "type": "text",
@@ -6953,7 +7002,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_2_sale_enable",
-        "label": "Enable Sale off"
+        "label": "Show Sale off"
       },
       {
         "type": "text",
@@ -6964,7 +7013,7 @@
       {
         "type": "checkbox",
         "id": "banner5_item_2_timer_enable",
-        "label": "Enable Timer"
+        "label": "Show Timer"
       },
       {
         "type": "text",
@@ -7002,7 +7051,7 @@
     {
     "type": "checkbox",
     "id": "banner_pa_item_1",
-    "label": "Enable",
+    "label": "Show",
     "default":true
     },
     {
@@ -7048,7 +7097,7 @@
     {
     "type": "checkbox",
     "id": "banner_pa_item_2",
-    "label": "Enable",
+    "label": "Show",
     "default":true
     },
     {
@@ -7094,7 +7143,7 @@
     {
     "type": "checkbox",
     "id": "banner_pa_item_3",
-    "label": "Enable",
+    "label": "Show",
     "default":true
     },
     {
@@ -7140,7 +7189,7 @@
     {
     "type": "checkbox",
     "id": "banner_pa_item_4",
-    "label": "Enable",
+    "label": "Show",
     "default":true
     },
     {
@@ -7191,7 +7240,7 @@
       {
         "type": "checkbox",
         "id": "banner_catalog",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",
@@ -7234,7 +7283,7 @@
   },
 
   {
-  "name": "Countdown",
+  "name": "Countdown promotions",
   "settings": [{
     "type": "header",
     "content": "General Countdown settings",
@@ -7278,7 +7327,7 @@
   {
     "type": "checkbox",
     "id": "countdown_date",
-    "label": "1. Enable Date",
+    "label": "1. Show Date",
     "default": true
   }, {
     "type": "text",
@@ -7293,7 +7342,7 @@
   },{
     "type": "checkbox",
     "id": "countdown_hour",
-    "label": "2. Enable Hour",
+    "label": "2. Show Hour",
     "default": true
   },  {
     "type": "text",
@@ -7309,7 +7358,7 @@
   {
     "type": "checkbox",
     "id": "countdown_minute",
-    "label": "Enable Minute",
+    "label": "Show Minute",
     "default": true
   }, {
     "type": "text",
@@ -7324,7 +7373,7 @@
   }, {
     "type": "checkbox",
     "id": "countdown_second",
-    "label": "Enable Second",
+    "label": "Show Second",
     "default": true
   },
     {
@@ -7378,7 +7427,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_1_enable",
-      "label": "Enable",
+      "label": "Show",
       "default": true
     }, {
       "type": "text",
@@ -7398,7 +7447,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_2_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, {
       "type": "text",
@@ -7418,7 +7467,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_3_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, {
       "type": "text",
@@ -7438,7 +7487,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_4_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, {
       "type": "text",
@@ -7457,7 +7506,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_5_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, {
       "type": "text",
@@ -7477,7 +7526,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_6_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, {
       "type": "text",
@@ -7524,7 +7573,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_1_enable",
-      "label": "Enable",
+      "label": "Show",
       "default": true
     }, 
     
@@ -7553,7 +7602,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_2_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, 
      
@@ -7582,7 +7631,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_3_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, 
   
@@ -7610,7 +7659,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_tab_grid_4_enable",
-      "label": "Enable",
+      "label": "Show",
        "default": true
     }, 
      
@@ -7654,7 +7703,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_slider_grid_1_enable",
-      "label": "Enable",
+      "label": "Show",
       "default": true
     }, {
       "type": "text",
@@ -7668,7 +7717,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_slider_grid_2_enable",
-      "label": "Enable",
+      "label": "Show",
       "default": true
     }, {
       "type": "text",
@@ -7683,7 +7732,7 @@
     }, {
       "type": "checkbox",
       "id": "sc_product_slider_grid_3_enable",
-      "label": "Enable",
+      "label": "Show",
       "default": true
     }, {
       "type": "text",
@@ -7706,7 +7755,7 @@
       {
         "type": "checkbox",
         "id": "feature_locator_item_1_enable",
-        "label": "Item enable",
+        "label": "Item Show",
         "default": true
       }, {
         "type": "text",
@@ -7736,7 +7785,7 @@
       }, {
         "type": "checkbox",
         "id": "feature_locator_item_2_enable",
-        "label": "Item enable",
+        "label": "Show item",
         "default": true
       }, {
         "type": "text",
@@ -7765,7 +7814,7 @@
       }, {
         "type": "checkbox",
         "id": "feature_locator_item_3_enable",
-        "label": "Item enable",
+        "label": "Show item",
         "default": true
       }, {
         "type": "text",
@@ -7801,7 +7850,7 @@
     }, {
       "type": "checkbox",
       "id": "brand_item_1_enable",
-      "label": "Item enable",
+      "label": "Show item",
       "default": true
     }, {
       "type": "text",
@@ -7838,7 +7887,7 @@
     }, {
       "type": "checkbox",
       "id": "brand_item_2_enable",
-      "label": "Item enable",
+      "label": "Show item",
       "default": true
     }, {
       "type": "text",
@@ -7874,7 +7923,7 @@
     }, {
       "type": "checkbox",
       "id": "brand_item_3_enable",
-      "label": "Item enable",
+      "label": "Show item",
       "default": true
     }, {
       "type": "text",
@@ -7917,7 +7966,7 @@
       {
         "type": "checkbox",
         "id": "services_show_img",
-        "label": "Show service image?",
+        "label": "Show service image",
         "default": true
       },
       {
@@ -8586,7 +8635,7 @@
        {
         "type": "checkbox",
         "id": "pbar_item_1_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8616,7 +8665,7 @@
        {
         "type": "checkbox",
         "id": "pbar_item_2_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8647,7 +8696,7 @@
        {
         "type": "checkbox",
         "id": "pbar_item_3_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8677,7 +8726,7 @@
        {
         "type": "checkbox",
         "id": "pbar_item_4_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8718,7 +8767,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_1_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8760,7 +8809,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_2_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8802,7 +8851,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_3_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8844,7 +8893,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_4_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8886,7 +8935,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_5_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8929,7 +8978,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_6_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -8972,7 +9021,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_7_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -9015,7 +9064,7 @@
        {
         "type": "checkbox",
         "id": "pbarcircle_item_8_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
        {
@@ -9068,7 +9117,7 @@
        {
         "type": "checkbox",
         "id": "piechart_item_1_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
       {
@@ -9110,7 +9159,7 @@
          {
         "type": "checkbox",
         "id": "piechart_item_2_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
       {
@@ -9152,7 +9201,7 @@
          {
         "type": "checkbox",
         "id": "piechart_item_3_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
       {
@@ -9194,7 +9243,7 @@
          {
         "type": "checkbox",
         "id": "piechart_item_4_enable",
-        "label": "Enable",
+        "label": "Show",
         "default":true
       }, 
       {
@@ -9304,7 +9353,7 @@
       {
         "type": "checkbox",
         "id": "social_sharing_blog",
-        "label": "Enable blog post sharing"
+        "label": "Show blog post sharing"
       },
       {
         "type": "checkbox",
@@ -10118,7 +10167,7 @@
       {
         "type": "checkbox",
         "id": "team_item_1_enable",
-        "label": "Enable",
+        "label": "Show",
         "default": true
       },
       {
@@ -10175,7 +10224,7 @@
       {
         "type": "checkbox",
         "id": "team_item_2_enable",
-        "label": "Enable",
+        "label": "Show",
         "default": true
       },
       {
@@ -10232,7 +10281,7 @@
       {
         "type": "checkbox",
         "id": "team_item_3_enable",
-        "label": "Enable",
+        "label": "Show",
         "default": true
       },
       {
@@ -10289,7 +10338,7 @@
       {
         "type": "checkbox",
         "id": "team_item_4_enable",
-        "label": "Enable"
+        "label": "Show"
       },
       {
         "type": "image",

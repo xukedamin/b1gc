@@ -31,14 +31,14 @@
 
 
 <div class="container heading-line" style="width: 830px;padding-left: 100px;padding-right: 0;margin-top: -20px;">
-  <div class="row-background {%if template == 'index' and settings.header_1_slider_enable and settings.header_1_banner_enable %}height-max{%endif%}" style="width: 700px;">
+  <div class="row-background {%if template == 'index' and settings.header_1_slider_enable and settings.header_1_cat_lightbox_enable %}height-max{%endif%}" style="width: 700px;">
      
       {% if settings.header_1_slider_enable %}
         {% include 'slider-1'  %}
       {% endif %}
       {%if template == 'index' %}
-        {%if settings.header_1_banner_enable %}
-        {% include 'header-1_banner' %}
+        {%if settings.header_1_cat_lightbox_enable %}
+        {% include 'header__cat_lightbox' %}
         {% endif %}
       {%endif%}     
   </div>
