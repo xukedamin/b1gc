@@ -34,27 +34,22 @@
   <div class="category-lightbox slider-directnav ">
     <h2>{{collection_title}}</h2>
     <a href="#" class="close-category-lightbox">{{'general.lightbox.close' | t }}</a>
-    <div class="slider-owl-single-item-nav default-directnav home-directnav">
+    <div class="slider-owl-single-item-nav-responsive default-directnav home-directnav">
       <div class="wrap-item">
-        <div class="item">
-          <ul class="list-product row list-unstyled">
+     
           {%for product in collections[featured].products limit:6 %}
-            
-         
-
+   <div class="item">
+          <ul class="list-product row list-unstyled">
             <li class="col-md-4 col-sm-6 col-xs-12">
               {% assign grid_item_width = 'col-md-12' %}
               {% include 'product-grid-item' %}
             </li>
-
+         </ul>
+        </div>
             {%endfor %}
            
-          </ul>
-        </div>
-        <!-- End Item -->
-         <div class="item">
-        </div>
-        <!-- End Item -->
+      
+
       </div>
     </div>
   </div>

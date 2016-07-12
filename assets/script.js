@@ -602,7 +602,7 @@
 
         //home-testimonial-slider
         //home-latest-news .default-directnav
-        //default-directnav
+       
         if ($('.slider-owl-single-item-nav').length > 0) {
             $('.slider-owl-single-item-nav').each(function() {
                 $(this).find('.wrap-item').owlCarousel({
@@ -611,10 +611,29 @@
                     lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
+                  
                 });
             });
         }
-
+        
+        //default-directnav
+        if ($('.slider-owl-single-item-nav-responsive').length > 0) {
+            $('.slider-owl-single-item-nav-responsive').each(function() {
+                $(this).find('.wrap-item').owlCarousel({
+                    items: 3,
+                    itemsCustom: [ 
+                    [0, 1], 
+                    [480, 1], 
+                    [768, 1], 
+                    [992, 6], 
+                    [1200,6] 
+                    ],
+                    pagination: false,
+                    navigation: true,
+                    navigationText:['<span class="lnr lnr-arrow-left-circle"></span>','<span class="lnr lnr-arrow-right-circle"></span>']
+                });
+            });
+        }
         //.testimonial-slider
         //.the-brand
         if ($('.slider-owl-single-item-paging-fade').length > 0) {

@@ -339,8 +339,6 @@
   }
 }
 
-
-
 // .product-featured-thumb
 
 .product-featured-thumb {
@@ -590,6 +588,14 @@
   }
 }
 
+@media (max-width: 1024px){
+  .category-lightbox {
+    margin-left: -543px;
+    width: 1000px;
+  }
+
+}
+
 
 @media only screen and (max-width: 767px) {
   //header1
@@ -655,6 +661,13 @@
       margin: 0;
       width: auto;
     }
+  }
+
+  .category-lightbox {
+      left: 0;
+      margin-left: 0;
+      top: 50px;
+      width: 100%;
   }
   
 }
