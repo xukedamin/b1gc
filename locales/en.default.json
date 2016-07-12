@@ -48,6 +48,9 @@
       "share_on_twitter": "Tweet",
       "share_on_pinterest": "Pin it",
       "share_on_fancy": "Fancy"
+    },
+    "lightbox":{
+      "close": "Close"
     }
   },
   "blogs": {
@@ -416,5 +419,6 @@
     "min" : "min",
     "sec":"sec"
   }
+
 
 }

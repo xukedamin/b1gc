@@ -1,24 +1,63 @@
-{% unless featured_collection_width %}
-  {% assign featured_collection_width = 'small--one-half medium--one-third large--one-sixth' %}
-{% endunless %}
+{% assign class_box = forloop.index | modulo:2 %}
+{% if class_box == 0 %}
+  {% assign class_box = 'right'%}
+  {% else %}
+  {% assign class_box = 'left test'%}
+{% endif %}
 
 {% unless featured_collection_size %}
   {% assign featured_collection_size = 'large' %}
 {% endunless %}
 
-<div class="header-banner-thumb">
-  {% capture collection_title %}{{ collections[featured].title | escape }}{% endcapture %}
-  <a class="inner header-banner-link" href="{{ collections[featured].url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" >
-    {% if collections[featured].image %}
-      {{ collections[featured].image | img_url: featured_collection_size | img_tag: collection_title }}
-    {% else %}
-      {{ collections[featured].products.first.featured_image | img_url: featured_collection_size | img_tag: collection_title }}
-    {% endif %}
-    <span class="info-collections header-banner-title">
-      {{ collection_title }}
-      <span class="count"> 
-        {{ collection.products_count }} {{ 'collections.general.products' | t }} 
+
+<div class="col-md-6 col-sm-6 col-xs-12">
+  <div class="item-header-banner box-{{class_box}}">
+
+
+  <div class="header-banner-thumb">
+    {% capture collection_title %}{{ collections[featured].title | escape }}{% endcapture %}
+    <a class="inner header-banner-link" href="{{ collections[featured].url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" >
+      {% if collections[featured].image %}
+        {{ collections[featured].image | img_url: featured_collection_size | img_tag: collection_title }}
+      {% else %}
+        {{ collections[featured].products.first.featured_image | img_url: featured_collection_size | img_tag: collection_title }}
+      {% endif %}
+      <span class="info-collections header-banner-title">
+        {{ collection_title }}
+        <span class="count"> 
+          {{ collection.products_count }} {{ 'collections.general.products' | t }} 
+        </span>
       </span>
-    </span>
-  </a>
+    </a>
+  </div>
+
+  <div class="category-lightbox slider-directnav ">
+    <h2>{{collection_title}}</h2>
+    <a href="#" class="close-category-lightbox">{{'general.lightbox.close' | t }}</a>
+    <div class="slider-owl-single-item-nav default-directnav home-directnav">
+      <div class="wrap-item">
+        <div class="item">
+          <ul class="list-product row list-unstyled">
+          {%for product in collections[featured].products limit:6 %}
+            
+         
+
+            <li class="col-md-4 col-sm-6 col-xs-12">
+              {% assign grid_item_width = 'col-md-12' %}
+              {% include 'product-grid-item' %}
+            </li>
+
+            {%endfor %}
+           
+          </ul>
+        </div>
+        <!-- End Item -->
+         <div class="item">
+        </div>
+        <!-- End Item -->
+      </div>
+    </div>
+  </div>
+
+  </div>
 </div>

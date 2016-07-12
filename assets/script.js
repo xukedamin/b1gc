@@ -343,12 +343,12 @@
       //Category Lightbox
       $('.header-banner-link').click(function(event) {
             event.preventDefault();
-            $(this).parent().next().addClass('height-light');
+            $(this).parent().next().addClass('hight-light');
       });
 
       $('.close-category-lightbox').click(function(event) {
             event.preventDefault();
-            $(this).parent().removeClass('height-light');
+            $(this).parent().removeClass('hight-light');
       });
     },
 
