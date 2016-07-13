@@ -5,7 +5,7 @@
     <a href="{{ link.url }}">{{ link.title }}</a>
     {% assign handlej = link.title | handleize %}
     {% if linklists[handle].links.size > 0 %}
-    {% capture handlei %}jvsub-{{handlej}}{% endcapture %}
+    {% capture handlei %}{{handlej}}{% endcapture %}
       {% include 'nav' class:'', handle: handlei %}
     {% endif %}
   </li>
