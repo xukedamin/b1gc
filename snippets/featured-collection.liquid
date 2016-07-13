@@ -1,22 +1,14 @@
-{% assign class_box = forloop.index | modulo:2 %}
-{% if class_box == 0 %}
-  {% assign class_box = 'right'%}
-  {% else %}
-  {% assign class_box = 'left test'%}
-{% endif %}
-
 {% unless featured_collection_size %}
   {% assign featured_collection_size = 'large' %}
 {% endunless %}
 
 
 <div class="col-md-6 col-sm-6 col-xs-12">
-  <div class="item-header-banner box-{{class_box}}">
-
+  <div class="item-header-banner box-{% cycle 'group1': 'left', 'right', 'left', 'right' %}">
 
   <div class="header-banner-thumb">
     {% capture collection_title %}{{ collections[featured].title | escape }}{% endcapture %}
-    <a class="inner header-banner-link" href="{{ collections[featured].url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" >
+    <a class="inner header-banner-link {%if settings.header_1_cat_lightbox_enable %}header-banner-link-event{%endif%}" href=" {%if settings.header_1_cat_lightbox_enable == false %}{{ collections[featured].url }}{%endif%}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" >
       {% if collections[featured].image %}
         {{ collections[featured].image | img_url: featured_collection_size | img_tag: collection_title }}
       {% else %}
@@ -31,28 +23,38 @@
     </a>
   </div>
 
+  {%if settings.header_1_cat_lightbox_enable %}
+
   <div class="category-lightbox slider-directnav ">
     <h2>{{collection_title}}</h2>
-    <a href="#" class="close-category-lightbox">{{'general.lightbox.close' | t }}</a>
+    <a href="#" class="close-category-lightbox xs-text-hidden">{{'general.lightbox.close' | t }}</a>
     <div class="slider-owl-single-item-nav-responsive default-directnav home-directnav">
       <div class="wrap-item">
      
-          {%for product in collections[featured].products limit:6 %}
-   <div class="item">
+        <div class="item">
           <ul class="list-product row list-unstyled">
+          {%for product in collections[featured].products limit:12 %}
             <li class="col-md-4 col-sm-6 col-xs-12">
               {% assign grid_item_width = 'col-md-12' %}
               {% include 'product-grid-item' %}
             </li>
-         </ul>
+
+          {%assign test =  forloop.index | modulo:6 %}
+          {% if test == 0 %}
+            {{'</ul></div>'}}
+            {%if forloop.last == false %}
+              <!-- open new item -->
+              {{'<div class="item"><ul class="list-product row list-unstyled">'}}
+            {% endif %}
+          {% endif %}
+          {%endfor %} 
+          </ul>
         </div>
-            {%endfor %}
-           
-      
 
       </div>
     </div>
   </div>
+  {% endif %}
 
   </div>
 </div>

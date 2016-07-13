@@ -309,6 +309,83 @@
     ]
   },
   {
+    "name": "Selector Google Fonts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Google font #1"
+      },
+      {
+        "type": "text",
+        "id": "google_font_1",
+        "label": "Input font name",
+        "default": "Open Sans"
+      },
+      {
+        "type": "text",
+        "id": "google_font_1_style",
+        "label": "Google Web Fonts Style",
+        "default": "700,400",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "textarea",
+        "id": "google_font_1_css",
+        "label": "CSS Selector",
+        "default": "body",
+        "info": "Ex : body, h1, h2, .class, #id"
+      },
+      {
+        "type": "header",
+        "content": "Google font #2"
+      },
+      {
+        "type": "text",
+        "id": "google_font_2",
+        "label": "Input font name",
+        "default": "Open Sans"
+      },
+      {
+        "type": "text",
+        "id": "google_font_2_style",
+        "label": "Google Web Fonts Style",
+        "default": "400,700",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "textarea",
+        "id": "google_font_2_css",
+        "label": "CSS Selector",
+        "default": "h1",
+        "info": "Ex : body, h1, h2, .class, #id"
+      },
+      {
+        "type": "header",
+        "content": "Google font #3"
+      },
+      {
+        "type": "text",
+        "id": "google_font_3",
+        "label": "Input font name",
+        "default": "Open Sans"
+      },
+      {
+        "type": "text",
+        "id": "google_font_3_style",
+        "label": "Google Web Fonts Style",
+        "default": "700,400",
+        "info": "Example : 100,200,300"
+      },
+      {
+        "type": "textarea",
+        "id": "google_font_3_css",
+        "label": "CSS Selector",
+        "default": "h1,h2,h3,h4,h5,h6",
+        "info": "Ex : body, h1, h2, .class, #id"
+      }
+    ]
+  },
+  {
     "name": "Main Menu",
     "settings": [
       {
@@ -910,85 +987,7 @@
      
     ]
   },
- 
-  {
-    "name": "Selector Google Fonts",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Google font #1"
-      },
-      {
-        "type": "text",
-        "id": "google_font_1",
-        "label": "Input font name",
-        "default": "Open Sans"
-      },
-      {
-        "type": "text",
-        "id": "google_font_1_style",
-        "label": "Google Web Fonts Style",
-        "default": "700,400",
-        "info": "Example : 100,200,300"
-      },
-      {
-        "type": "textarea",
-        "id": "google_font_1_css",
-        "label": "CSS Selector",
-        "default": "body",
-        "info": "Ex : body, h1, h2, .class, #id"
-      },
-      {
-        "type": "header",
-        "content": "Google font #2"
-      },
-      {
-        "type": "text",
-        "id": "google_font_2",
-        "label": "Input font name",
-        "default": "Open Sans"
-      },
-      {
-        "type": "text",
-        "id": "google_font_2_style",
-        "label": "Google Web Fonts Style",
-        "default": "400,700",
-        "info": "Example : 100,200,300"
-      },
-      {
-        "type": "textarea",
-        "id": "google_font_2_css",
-        "label": "CSS Selector",
-        "default": "h1",
-        "info": "Ex : body, h1, h2, .class, #id"
-      },
-      {
-        "type": "header",
-        "content": "Google font #3"
-      },
-      {
-        "type": "text",
-        "id": "google_font_3",
-        "label": "Input font name",
-        "default": "Open Sans"
-      },
-      {
-        "type": "text",
-        "id": "google_font_3_style",
-        "label": "Google Web Fonts Style",
-        "default": "700,400",
-        "info": "Example : 100,200,300"
-      },
-      {
-        "type": "textarea",
-        "id": "google_font_3_css",
-        "label": "CSS Selector",
-        "default": "h1,h2,h3,h4,h5,h6",
-        "info": "Ex : body, h1, h2, .class, #id"
-      }
-    ]
-  },
-
+  
   {
     "name": "Header #",
     "settings": [
@@ -1050,14 +1049,14 @@
       },
         {
         "type": "checkbox",
-        "id": "header_1_cat_lightbox_enable",
-        "label": " Header 1 - Show Collection categories lightbox",
+        "id": "header_1_cat_box_enable",
+        "label": " Header 1 - Show Collection categories Boxes",
         "default": true
       },
       {
         "type": "radio",
         "id": "header_1_featured_collections_sort",
-        "label": "Choose collections",
+        "label": "Choose method",
         "options": [
           {
             "value": "auto",
@@ -1068,7 +1067,8 @@
             "label": "Manually:"
           }
         ],
-        "default":"auto"
+        "default":"auto",
+        "info":"If Method is Manually, need to select 4 collections below, ignore them if method is Automatically"
       },
       {
         "type": "collection",
@@ -1086,6 +1086,13 @@
         "type": "collection",
         "id": "collection_4"
       },
+       {
+        "type": "checkbox",
+        "id": "header_1_cat_lightbox_enable",
+        "label": " Header 1 - Show Collection categories Boxes with Lightbox products",
+        "default": true,
+        "info":"If not show lightbox, link to the collection page"
+      },
 
       {
         "type": "checkbox",
@@ -1094,13 +1101,7 @@
         "default": true,
         "info": "The slideshow in header area (only on header 1 style)"
       },
-      {
-        "type": "text",
-        "id": "header_height",
-        "label": "Fix height header",
-        "default": "90",
-        "info": "in px"
-      },
+   
       {
         "type": "header",
         "content": "II - Logo"

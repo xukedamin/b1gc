@@ -731,8 +731,8 @@ a.jvlogo {
 //home1
 .row-background{
   min-height: 400px;
-}
-.row-background:before {
+  width: 700px;
+  &:before {
     background-image: url('{{ "home_bg-page.jpg" | asset_url }}');
     background-position: center center;
     background-repeat: repeat;
@@ -742,13 +742,22 @@ a.jvlogo {
     left: 0;
     right: 0;
     width: 100%;
-    height: 900px;
+    height: 400px;
     top: 40px;
     bottom: 0;
     z-index: -1;
+  }
+
+}
+.row-background.slider--enable:before{
+  height: 750px;
 }
 
-.row-background.height-max:before {
+.template-index .row-background.catbox--enable:before{
+  height: 790px;
+}
+
+.template-index .row-background.catbox--enable.slider--enable:before {
   //770+750
   height: 1650px;
 }
@@ -758,14 +767,36 @@ a.jvlogo {
   }
 }
 
+.heading-line {
+  width: 830px;
+  padding-left: 100px;
+  padding-right: 0;
+  margin-top: -20px;
+}
+
 
 @media only screen and (max-width: 992px) {
+
   .header5 .info-cart7{
     top: 150px;
   }
 }
 
 @media only screen and (min-width: 768px) and(max-width: 992px) {
+  //homepage1
+  .heading-line {
+    width: 448px;
+    padding-left: 50px;
+  }
+  .heading-line .row-background {
+    width: 448px;
+    .bannerslider1 .item{
+      height: auto !important;
+      
+    }
+  }
+  
+
   //header 7
   .header5 .mainmenu.main-nav7{
     width: 100%;
@@ -812,11 +843,13 @@ a.jvlogo {
   //header1
   .heading-line{
     padding: 0!important;
+    width: 100%;
+    margin-top: 0;
+    .row-background{
+      width: 100%;
+    }
   }
-  .row-background{
-    max-width: 300px !important;
-    width: 300px !important;
-  }
+
 
   //header3
   .box-info-user{
@@ -849,6 +882,7 @@ a.jvlogo {
   .header1 .mainmenu > .dropdownMenu {
     top: 130px;
   }
+
 
   //header2
   //~ top-header
@@ -1081,5 +1115,9 @@ a.jvlogo {
       max-width: 50px;
   }
 
+  .row-background{
+    max-width: 300px !important;
+    width: 300px !important;
+  }
  
 }
