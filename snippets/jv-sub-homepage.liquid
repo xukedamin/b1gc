@@ -23,7 +23,14 @@
       {% endif %}
 
       {% capture file %}{{settings[code] }}{% endcapture %}
-      {% include file with heading_enable: settings[title] ,heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
+      
+      {%if file contains 'jv-sc-' %}
+
+        {% include file with heading_enable: settings[title] ,heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
+
+      {% else %}
+        {{ 'The asset file selected is not a shortcode'}}
+      {%endif%}
 
       {% if settings[fullwidth] == false %}
        </div>

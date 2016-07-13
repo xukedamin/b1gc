@@ -75,6 +75,12 @@
         "content": "1. Body Base styles"
       },
       {
+        "type":      "font",
+        "id":        "id",
+        "label":     "Text",
+        "info":      "Thisssss"
+},
+      {
         "type": "select",
         "id": "font_type_base_family",
         "label": "Font family",
@@ -991,23 +997,7 @@
   {
     "name": "Header #",
     "settings": [
-      {
-        "type": "header",
-        "content": "Favicon"
-      },
-      {
-        "type": "checkbox",
-        "id": "favicon_enable",
-        "label": "Use a custom icon"
-      },
-      {
-        "type": "image",
-        "id": "favicon.png",
-        "label": "Custom favicon",
-        "max-width": 16,
-        "max-height": 16,
-        "info": "16 x 16px .png required"
-      },
+
       {
         "type": "header",
         "content": "Select header default"
@@ -1042,21 +1032,36 @@
         "default": "1"
       },
       {
+        "type": "header",
+        "content": "Header 1 settings"
+      },
+      {
+        "type": "paragraph",
+        "content":"This section is corresponde to the Header 1 style, if not using this header style, ignore it"
+      },
+      {
         "type": "checkbox",
         "id": "header_1_social_sharing",
-        "label": " header 1 - Show social media",
+        "label": "Header 1 - 1. Show social media",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "header_1_slider_enable",
+        "label": "Header 1 - 2. Show slider",
+        "default": true,
+        "info": "The slideshow in header area (only for header 1 style)"
       },
         {
         "type": "checkbox",
         "id": "header_1_cat_box_enable",
-        "label": " Header 1 - Show Collection categories Boxes",
+        "label": " Header 1 - 3. Show Collection categories Boxes",
         "default": true
       },
       {
         "type": "radio",
         "id": "header_1_featured_collections_sort",
-        "label": "Choose method",
+        "label": "Header 1 - 3.1 Method to fill collections",
         "options": [
           {
             "value": "auto",
@@ -1069,6 +1074,10 @@
         ],
         "default":"auto",
         "info":"If Method is Manually, need to select 4 collections below, ignore them if method is Automatically"
+      },
+       {
+        "type": "paragraph",
+        "content":"Header 1 - 3.2 Select collections"
       },
       {
         "type": "collection",
@@ -1089,19 +1098,27 @@
        {
         "type": "checkbox",
         "id": "header_1_cat_lightbox_enable",
-        "label": " Header 1 - Show Collection categories Boxes with Lightbox products",
+        "label": " Header 1 - 3.3 Collection categories Boxes with Lightbox products",
         "default": true,
         "info":"If not show lightbox, link to the collection page"
       },
-
+      {
+        "type": "header",
+        "content": "Favicon"
+      },
       {
         "type": "checkbox",
-        "id": "header_1_slider_enable",
-        "label": "Header 1 - Show slider",
-        "default": true,
-        "info": "The slideshow in header area (only on header 1 style)"
+        "id": "favicon_enable",
+        "label": "Use a custom icon"
       },
-   
+      {
+        "type": "image",
+        "id": "favicon.png",
+        "label": "Custom favicon",
+        "max-width": 16,
+        "max-height": 16,
+        "info": "16 x 16px .png required"
+      },
       {
         "type": "header",
         "content": "II - Logo"
@@ -1124,14 +1141,14 @@
         "id": "logo-dark.png",
         "label": "1. Logo dark",
         "max-height": 150,
-        "info": " .png recommended"
+        "info": " .png recommended. 171 x 31 px"
       },
       {
         "type": "image",
         "id": "logo-white.png",
         "label": "2. Logo white",
         "max-height": 150,
-        "info": " .png recommended"
+        "info": " .png recommended. 170 x 100 px. Prefered for Header 1 style"
       },
       
       {
@@ -1150,24 +1167,16 @@
 
       {
         "type": "text",
-        "id": "maxheight-logo-1",
+        "id": "maxheight-logo",
         "label": "Max height Logo",
         "default": "100",
         "info": "in px"
       },
       {
         "type": "image",
-        "id": "logo-1-mobile.png",
+        "id": "logo-mobile.png",
         "label": "Logo Mobile",
         "max-height": 120
-      },
-
-      {
-        "type": "text",
-        "id": "maxheight-logo-1-mobile",
-        "label": "Max height Logo Mobile",
-        "default": "35",
-        "info": "in px"
       },
 
       {
@@ -1217,22 +1226,22 @@
       },
        {
         "type": "header",
-        "content": "IV. Header top bar Menu"
+        "content": "IV. Header top bar Setting"
       },
        {
         "type": "checkbox",
         "id": "header_top_bar_setting",
-        "label": "Show top bar - setting"
+        "label": "Show top bar Setting"
       },
        {
         "type": "checkbox",
         "id": "header_top_bar_setting_lang",
-        "label": "Show top bar setting language"
+        "label": "Show top bar Setting - Language"
       },
         {
         "type": "checkbox",
         "id": "header_top_bar_setting_currency",
-        "label": "Show top bar setting Currency"
+        "label": "Show top bar Setting - Currency"
       },
      
       {
@@ -1246,6 +1255,11 @@
         "id": "header_search_enable",
         "label": "Show header search",
         "default": true
+      }
+      ,
+       {
+        "type": "paragraph",
+        "content": "To control My account's visibility, go to the admin backend site"
       }
      
     ]

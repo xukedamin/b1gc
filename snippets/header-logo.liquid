@@ -1,17 +1,15 @@
 <a title="{{ shop.name }}" href="/" rel="home">
 
 {%if settings.logo_type_use == 'logo_type_text' %}
-	<span class="logo-text">
+	<div class="logo-text">
 		<h1>{{settings.logo_text_title}}<span class="subtitle">{{settings.logo_text_stitle}}</span></h1>	
-	</span>
+	</div>
 {%else %}
 	<span class="logo-table">
 		<span class="logo-table-cell">
-			<img src="{{ settings.logo_type_use | asset_url }}" alt="{{ shop.name }}"  class="logo-img1">
+			<img src="{{ settings.logo_type_use | asset_url }}" alt="{{ shop.name }}"  class="logo-img hidden-xs">
+			<img src="{{ 'logo-mobile.png' | asset_url }}" alt="{{ shop.name }} logo-mobile"  class="logo-img mobile hidden visible-xs">
 		</span>
 	</span>
-
 {% endif %}
-
-
 </a>

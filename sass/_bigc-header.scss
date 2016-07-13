@@ -19,9 +19,15 @@ a.jvlogo {
   display: table-cell;
   height: 100%;
   vertical-align: middle;
-   img {
-    max-height: #{'{{ settings.maxheight-logo-2 }}px'};
-  }
+  //  img {
+  //   max-height: #{'{{ settings.maxheight-logo }}px'};
+  // }
+}
+
+.header,
+.header .logo-table-cell,
+.header .logo-table-cell img {
+  max-height: #{'{{ settings.maxheight-logo }}px'};
 }
 
 .logo.logo-header {
