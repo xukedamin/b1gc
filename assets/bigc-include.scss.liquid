@@ -227,7 +227,7 @@ Dependency-free breakpoint mixin
 .owl-default .owl-theme .owl-controls .owl-buttons div, .leading-text-adv h3, .item-box-sub, .bt-link, .bt-primary, .btn-primary, .bt-primary-inverse, .bt-link span, .bt-primary span, .btn-primary span, .bt-primary-inverse span, .link-black, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .jv-btn-icon:after, .link-style4:after, .link-style9:after, .link-style14:after, .link-style19:after, .jv-btn-icon span, .link-style4 span, .link-style9 span, .link-style14 span, .link-style19 span, .link-white, .btn-circle-box a, .btn-circle-box a span, .btn-circle-box5 .link-add-cart:before, .btn-circle-box55 .link-add-cart:before, .btn-circle-box6 .link-add-cart:before, .btn-circle-box66 .link-add-cart:before, .btn-link-default, .btn-box-banner, .btn-link-hidden, .btn-submit-form, .btn-reset-form, .newsletter-form input[type="submit"], .nav-tabs-default .nav.nav-tabs li a, .nav-tabs-icon .nav-tabs > li > a, .nav-tabs-icon .nav-tabs > li > a:before, .nav-tabs-icon .nav-tabs > li > a:after, .nav-tabs-border .nav-tabs > li > a, .nav-tabs-border .nav-tabs > li > a:before, .list-tab-title .nav > li > a::after, .nav-tabs-filter .nav-tabs > li > a, .thumb-customer-saying .img,
 .thumb-customer-saying img, .side-testimonial, .testimonial-page, .testimonial-page-left, .left-open .side-left, .left-open .testimonial-page-left, .right-open .testimonial-page-right, .testimonial-thumb-link:before, .testimonial-thumb-link .img,
 .testimonial-thumb-link > img, .testimo-avatar:before, .testimo-avatar .img,
-.testimo-avatar img, .locator-thumb .locator-thumb-link, .eff-border-translate:after, .item-service-text .sub-title a, .eff-hover-rotate a.i-wrap, .dropdownMenu, .dropdownMenu li ul, .mainmenu .sub-menu, .mainmenu:not(.nav-vertical) .menu-item-has-children > a:after, .nav-vertical > ul > li > a:before, .nav-vertical > ul > li > a:after, .menu-trigger ul:after,
+.testimo-avatar img, .locator-thumb .locator-thumb-link, .eff-border-translate:after, .item-service-text .sub-title a, .eff-hover-rotate a.i-wrap, .dropdownMenu, .dropdownMenu li ul, .mainmenu .sub-menu, .mainmenu:not(.nav-vertical) > .dropdownMenu > .menu-item-has-children > a:after, .nav-vertical > ul > li > a:before, .nav-vertical > ul > li > a:after, .menu-trigger ul:after,
 .menu-item-has-children > a + ul:after,
 .mainmenu > ul > li.menu-item-has-children > a:before,
 .menu-dropdown > a:before, .info-search .search-form, .info-search:after, .info-total .info-cart:before, .info-cart:after, .info-cart .inner-cart-info, .cart-thumb img, .link-cart > *, .wrap-cart-remove .remove-product, .cart-wishlist-compare .action, .sidebar-sublist__content, .language-box::after,
@@ -366,7 +366,7 @@ Dependency-free breakpoint mixin
   border-radius: 4px;
 }
 
-[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button:before, .right-open span.click-button:before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .menu-dropdown > a:before,
+[class*="lnr-"], .item-box-sub li:before, .jv-btn-icon:before, .link-style4:before, .link-style9:before, .link-style14:before, .link-style19:before, .fancybox-close:before, .left-open span.click-button:before, .right-open span.click-button:before, .testimo-content-right .testimo-desc:before, .panel-group.accordion.style1 .panel-heading a:after, .item-feature-box .readmore.i-before:before, .item-feature-box .readmore.i-after:before, .menu-item-has-children:after, .mainmenu .sub-menu .menu-item-has-children:not(.menu-dropdown):after, .menu-dropdown > a:before,
 .mainmenu > ul > li.menu-item-has-children > a:before, .info-cart:after, .js--add:before, .ajaxifyCart--add:before,
 .js--minus:before, .ajaxifyCart--minus:before, .shop-cart-list table tbody .cart-item td.product-remove > a:before, .widget.widget-category ul li a:before, .sidebar-sublist__content a:before, .language-box::after,
 .currency-box::after, .top-left .language-link:after, .top-left .currency-link:after, .top-right .info-user:before, .box-menu-footer3 a:before, .product-filter .ui-selectmenu-button:after, .product-filter .filter-selected:after, .item-popular-thumb:after, .blog-list-info .readmore:before, .widget.widget-post-list a:before, .advanced-filter.active-filter a:hover::after {
@@ -3927,8 +3927,8 @@ span.click-button:hover {
   display: none;
   z-index: 99;
   margin: 0;
-  background: #525252;
   list-style: none;
+  background: #525252;
   background-color: {{ settings.mega_sub_bg_color }};
   border: 1px solid 1px solid {{ settings.mega_sub_boder_color }};
   padding: 15px;
@@ -3960,6 +3960,17 @@ span.click-button:hover {
   -webkit-animation-name: slideInUp-30;
 }
 
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children:after {
+  color: #999;
+  font-size: 12px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
 .mainmenu .sub-menu {
   background-color: {{ settings.mega_sub_bg_color }};
   border: 1px solid {{ settings.mega_sub_boder_color }};
@@ -3978,18 +3989,16 @@ span.click-button:hover {
   border-bottom: 1px solid {{ settings.mega_sub_boder_color }};
 }
 
-.menu-item-has-children {
-  position: relative;
-}
-.menu-item-has-children:after {
+.mainmenu .sub-menu .menu-item-has-children:not(.menu-dropdown):after {
   color: #999;
+  content: "\e876";
   font-size: 12px;
   position: absolute;
   right: 15px;
   top: 15px;
 }
 
-.mainmenu:not(.nav-vertical) .menu-item-has-children > a:after {
+.mainmenu:not(.nav-vertical) > .dropdownMenu > .menu-item-has-children > a:after {
   color: #e5e5e5;
   content: "";
   display: block;
@@ -4003,7 +4012,7 @@ span.click-button:hover {
   visibility: hidden;
   opacity: 0;
 }
-.mainmenu:not(.nav-vertical) .menu-item-has-children:hover > a:after {
+.mainmenu:not(.nav-vertical) > .dropdownMenu > .menu-item-has-children:hover > a:after {
   opacity: 1;
   visibility: visible;
   bottom: 0px;
@@ -4270,12 +4279,12 @@ NAV - vertical style//HOME 1
     right: -320px;
     top: 0;
     width: 290px;
+    z-index: 9999;
     -webkit-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
     -ms-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
     -o-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
     box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
   }
 
   .mainmenu > .dropdownMenu {
@@ -4321,6 +4330,10 @@ NAV - vertical style//HOME 1
     top: 16px;
   }
 
+  .mainmenu:not(.nav-vertical) .menu-item-has-children:hover > a:after {
+    display: none;
+  }
+
   .menu-item-has-children > a:after {
     left: 20px;
     display: none;
@@ -4340,6 +4353,13 @@ NAV - vertical style//HOME 1
     border-top: 1px solid {{ settings.mega_sub_boder_color }};
   }
 
+  .mainmenu .sub-menu li:not(:last-child) {
+    border-bottom: 1px solid {{ settings.mega_sub_boder_color }};
+  }
+  .mainmenu .sub-menu li:not(:last-child) > a {
+    border: none;
+  }
+
   .dropdownMenu .menu-item-has-children.mega-menu {
     position: relative !important;
   }
@@ -4356,9 +4376,6 @@ NAV - vertical style//HOME 1
     padding: 12px 15px;
     font-weight: normal;
     font-size: inherit;
-  }
-  .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a {
-    border-bottom: 1px solid #e5e5e5;
   }
   .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a:after {
     display: none;

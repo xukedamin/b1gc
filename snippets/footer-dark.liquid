@@ -2,16 +2,24 @@
 <div id="footer">
   <div class="footer footer-dark {%if settings.footer_default == 'footer_black_simple'%}{{footer-simple}} {% endif %}">
     <div class="container">
+
+      {%if settings.footer_top_row_enable %}
       <div class="row">
         {% if settings.footer_default == "footer_dark_simple" %}
+          
+          {%if settings.footer_logo_enable%}
           <div class="col-md-12 logo logo-footer">
-            <a href="#" class="sub-title"><span class="lnr lnr-apartment"></span> bigc.ltd.,</a>
+            {{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
           </div>
+          {% endif %}
+
         {% else %}
           {% include 'footer--row-details'%}
         {% endif %}
       </div>
-
+      {% endif %}
+      
+      {%if settings.footer_bottom_row_enable%}
       <div class="footer-bottom">
         <div class="row">
           <div class="col-md-9 col-sm-9 col-xs-12">
@@ -28,7 +36,11 @@
           </div>
         </div>
       </div>
+      {% endif %}
+
     </div>
   </div>
 </div>
 <!-- End Footer -->
+
+{%include 'footer-light' %}

@@ -1,11 +1,18 @@
 <div id="footer">
 	<div class="container">
+	  {%if settings.footer_top_row_enable %}
+
 		<div class="footer-3">
 			<div class="row">
 				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="logo-footer3">
-						<a href="#">bigc.ltd.,</a>
+						
+					{%if settings.footer_logo_enable%}
+					<div class="logo-footer3 " style="background:black">
+						{{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
 					</div>
+					{% endif %}
+
+					{%if settings.footer_contact_enable %}
 					<div class="contact-footer3">
 						<ul class="list-unstyled">
 							<li>{{  settings.footer_addr }}</li>
@@ -14,38 +21,34 @@
 							<li>{{  settings.footer_addr_phone }}</li>
 						</ul>
 					</div>
+					{% endif %}
+
 					<div class="social-network3">
 						{% include 'social-sharing-ul' %}
 					</div>
+					
+					{%if settings.footer_content_text != blank %}
+					<div class="text--extra">
+						{{settings.footer_content_text}}
+					</div>
+					{% endif %}
 				</div>
-				<div class="col-md-2 col-sm-6 col-xs-12">
-					<div class="box-menu-footer3">
+				
+				{% for i in (1..4) %}
+					{% capture footer_menu %}footer_menu_{{i}}{% endcapture %}
+					<div class="col-md-2 col-sm-4 col-xs-12">
+						<div class="box-menu-footer3">
+							{% include 'nav-simple' class: '', handle: settings[footer_menu], linklist_show_title: true %}
+						</div>
+					</div>
+				{% endfor %}
 
-						{% include 'nav-simple' class: '', handle: settings.footer_legallinks_linklist, linklist_show_title: true %}
-						
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 col-xs-12">
-					<div class="box-menu-footer3">
-					
-						 {% include 'nav-simple' class: '', handle: settings.footer_legallinks_linklist2, linklist_show_title: true %}
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 col-xs-12">
-					<div class="box-menu-footer3">
-					
-						{% include 'nav-simple' class: '', handle: settings.footer_legallinks_linklist3, linklist_show_title: true %}
-					</div>
-				</div>
-				<div class="col-md-2 col-sm-4 col-xs-12">
-					<div class="box-menu-footer3">
-					
-						{% include 'nav-simple' class: '', handle: settings.footer_legallinks_linklist4, linklist_show_title: true %}
-
-					</div>
-				</div>
 			</div>
 		</div>
+
+		{% endif %}
+		
+		{%if settings.footer_bottom_row_enable%}
 		<div class="footer-bottom3">
 			<div class="row">
 				<div class="col-md-9 col-sm-9 col-xs-12">
@@ -58,6 +61,8 @@
 				</div>
 			</div>
 		</div>
+		{% endif %}
+
 	</div>
 </div>
 <!-- End Footer -->

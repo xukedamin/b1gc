@@ -18,6 +18,10 @@ required: hot_label_enable : Boolean
         {% if pick_name == handlej %}
           {% capture stylei %}nav-{{settings[pick]}}{% endcapture %}
           {% assign style = stylei %}
+        
+          {% capture pick_column %}nav{{i}}_column{% endcapture %}
+          {% capture coli %}{{settings[pick_column]}}{% endcapture %}
+
           {% break %}
         {% endif %}
 
@@ -34,7 +38,9 @@ required: hot_label_enable : Boolean
         {% assign class_li = class_li | append: ' menu-item-has-children' %}
       {% endif %} 
       {% if style == 'nav-style1' or style == 'nav-style2' %}
-        {% assign class_li = class_li | append:' mega-menu menu-4-col' %}
+        {%capture class_add %} mega-menu menu-{{coli}}-col{%endcapture%}
+        {% assign class_li = class_li | append: class_add %}
+        
       {% endif %}
       <li class="{{class_li}}">
         <a href="{{ link.url }}">{{ link.title }} 

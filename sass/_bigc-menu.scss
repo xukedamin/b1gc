@@ -87,8 +87,8 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
       display: none;
       z-index: 99;
       margin: 0;
-      background: $color_emperor;
       list-style: none;
+      background: $color_emperor;
       background-color: $menu__sub__background-color;
       border: 1px solid $menu__sub__border;
       padding: 15px;
@@ -127,6 +127,19 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   }
 }
 
+.menu-item-has-children {
+  position: relative;
+
+  &:after {
+    color: $color_dusty-gray;
+    @extend %jv-font-Linearicons;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
 .mainmenu .sub-menu{
   //#fff
   background-color : $menu__sub__background-color;
@@ -147,22 +160,20 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   }
 }
 
-
-.menu-item-has-children {
-  position: relative;
-
-  &:after {
-    color: $color_dusty-gray;
-    @extend %jv-font-Linearicons;
-    font-size: 12px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-  }
+.mainmenu .sub-menu .menu-item-has-children:not(.menu-dropdown):after {
+  color: #999;
+  content: "\e876";
+   @extend %jv-font-Linearicons;
+  font-size: 12px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
-//retangle after menuitem has child
-.mainmenu:not(.nav-vertical) .menu-item-has-children {
+
+
+//retangle top before sub menu (desktop)
+.mainmenu:not(.nav-vertical) > .dropdownMenu > .menu-item-has-children {
   > a:after {
     color: $color_mercury;
     content: "";
@@ -186,12 +197,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   }
  
 }
-
-
-// .dropdownMenu .menu-item-has-children.mega-menu .mega-menu-content > li > a{
-//   color: $menu__sub__header-color;
-//   font-size:  $menu__sub__header-font-size;
-// }
 
 
 /* -------------------------------------------------------------------
@@ -495,17 +500,15 @@ NAV - vertical style//HOME 1
   
   .dropdownMenu{
     background: $color_white none repeat scroll 0 0;
-    border: 1px solid #e5e5e5;
+    border: 1px solid $color_mercury;
     margin: 0;
     padding: 15px 15px 30px;
     position: absolute;
     right: -320px;
     top: 0;
     width: 290px;
-    // transition: all 0.5s ease-out 0s;
-
-    @include prefix(box-shadow,-1px 3px 5px -1px rgba($color_black, 0.1));
     z-index: 9999;
+    @include prefix(box-shadow,-1px 3px 5px -1px rgba($color_black, 0.1));
   }
 
   .mainmenu > .dropdownMenu{
@@ -525,17 +528,18 @@ NAV - vertical style//HOME 1
     margin-right: 0;
     float: none;
     &:not(:last-child){
-      border-bottom: 1px solid #e5e5e5;
-
+      border-bottom: 1px solid $color_mercury;
     }
   }
 
   .mainmenu .dropdownMenu > li >a {
     display: block;
-     padding: 15px 15px 15px 0;
-     line-height: inherit;
-     height: auto;
+    padding: 15px 15px 15px 0;
+    line-height: inherit;
+    height: auto;
   }
+
+
 
 
   //*HERE2*//
@@ -545,7 +549,7 @@ NAV - vertical style//HOME 1
       padding-right: 15px;
 
       &:before {
-        color: #999;
+        color: $color_dusty-gray;
         content: "\e876";
         font-size: 13px;
         position: absolute;
@@ -554,10 +558,10 @@ NAV - vertical style//HOME 1
       }
     }
   }
-  // .mainmenu > ul > li.menu-item-has-children > a {
-  //   padding-right: 15px;
-  // }
 
+  .mainmenu:not(.nav-vertical) .menu-item-has-children:hover > a:after{
+    display: none;
+  }
   .menu-item-has-children > a:after {
     left: 20px;
     display: none;
@@ -575,6 +579,13 @@ NAV - vertical style//HOME 1
     padding-bottom: 0;
     border: none;
     border-top: 1px solid $menu__sub__border-color;
+  }
+
+  .mainmenu .sub-menu li:not(:last-child) {
+    border-bottom: $menu__sub__border;
+    > a{
+      border : none;
+    }
   }
 
 
@@ -597,7 +608,7 @@ NAV - vertical style//HOME 1
       font-size: inherit;
     }
     > a {
-      border-bottom: 1px solid $color_mercury;
+      // border-bottom: 1px solid $color_mercury;
     }
     > a:after {
       display: none;

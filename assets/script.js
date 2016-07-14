@@ -781,10 +781,12 @@
               $('.mainmenu .dropdownMenu').removeClass('active');
           });
           
-
-          $('.mainmenu .dropdownMenu li.menu-item-has-children > a').click(function(event) 
+          //$('.mainmenu .dropdownMenu  li.menu-item-has-children > a')
+          $('.mainmenu .dropdownMenu > li.menu-item-has-children > a').click(function(event) 
           {
-              event.stopPropagation();
+              console.log('click 1');
+              console.log(event.target);
+              // event.stopPropagation();
               event.preventDefault();
 
               $(this).toggleClass('active');
@@ -798,7 +800,10 @@
               }
           });
 
+          $('.menu-item-has-children > .sub-menu > .menu-item-has-children').addClass('menu-dropdown');
+
           $('.mega-menu-content .mega-menu-item-has-children').click(function(e){
+            console.log('click 2');
              $(this).toggleClass('active');
 
               if ($(this).hasClass('active')) {
@@ -824,14 +829,16 @@
 
            $nav_MainMenu.each(function () {
 
-          $(this).find(">li li:has(ul)").children("a").on('click', function (event) {
-                  event.preventDefault();
-          });
-          
+            $(this).find(">li li:has(ul)").children("a").on('click', function (event) {
+              console.log('click 3');
+              event.preventDefault();
+            });
 
-          $(this).find(".menu-dropdown > a").each(function () {
+            // .menu-item-has-children > .sub-menu > li
+            $(this).find(".menu-dropdown > a").each(function () {
                   $(this).siblings('ul').hide();
                   $(this).on("click", function (event) {
+                      console.log('click 4');
                       event.preventDefault();
                       event.stopPropagation();
                       jvbigC.menu_DropdownTrigger(this);

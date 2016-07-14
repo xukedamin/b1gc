@@ -75,12 +75,6 @@
         "content": "1. Body Base styles"
       },
       {
-        "type":      "font",
-        "id":        "id",
-        "label":     "Text",
-        "info":      "Thisssss"
-},
-      {
         "type": "select",
         "id": "font_type_base_family",
         "label": "Font family",
@@ -554,24 +548,21 @@
           },
           {
             "value": "2",
-            "label": "2 Column"
+            "label": "2 Columns"
           },
           {
             "value": "3",
-            "label": "3 Column"
+            "label": "3 Columns"
           },
           {
             "value": "4",
-            "label": "4 Column"
+            "label": "4 Columns"
           },
           {
             "value": "5",
-            "label": "5 Column"
-          },
-          {
-            "value": "6",
-            "label": "6 Column"
+            "label": "5 Columns"
           }
+         
         ],
         "default": "4"
       },
@@ -1287,6 +1278,12 @@
         ],
         "default": "footer_dark"
       },
+      {
+        "type": "checkbox",
+        "id": "footer_top_row_enable",
+        "label": "Show footer top row",
+        "default":true
+      },
      
       {
         "type": "header",
@@ -1308,18 +1305,20 @@
         "type": "header",
         "content": "Contact information"
       },
-      {
+     {
         "type": "checkbox",
-        "id": "footer_content_enable",
-        "label": "Show footer contact info"
+        "id": "footer_logo_enable",
+        "label": "Show footer logo",
+        "default": true
       },
       {
         "type": "image",
-        "id": "footer-001.png",
+        "id": "footer-logo.png",
         "label": "Footer logo",
-        "max-width": 500,
+        "max-width": 370,
         "max-height": 150
       },
+   
       {
         "type": "text",
         "id": "footer_email",
@@ -1353,7 +1352,7 @@
       {
         "type": "textarea",
         "id": "footer_content_text",
-        "label": "Contact text",
+        "label": "Extra content text",
         "info": "Use basic HTML to format text"
       },
       {
@@ -1406,31 +1405,37 @@
       {
         "type": "checkbox",
         "id": "footer_legallinks_enable",
-        "label": "Show legal links in bottom bar"
+        "label": "Show Footer Menus "
       },
       {
         "type": "link_list",
-        "id": "footer_legallinks_linklist",
-        "label": "Legal link list"
+        "id": "footer_menu_1",
+        "label": "Footer menu 1"
       },
       {
         "type": "link_list",
-        "id": "footer_legallinks_linklist2",
-        "label": "Legal link list 2"
+        "id": "footer_menu_2",
+        "label": "Footer menu 2"
       },
       {
         "type": "link_list",
-        "id": "footer_legallinks_linklist3",
-        "label": "Legal link list 3"
+        "id": "footer_menu_3",
+        "label": "Footer menu 3"
       },
       {
         "type": "link_list",
-        "id": "footer_legallinks_linklist4",
-        "label": "Legal link list 4"
+        "id": "footer_menu_4",
+        "label": "Footer menu 4"
       },
       {
         "type": "header",
         "content": "Copyright"
+      },
+       {
+        "type": "checkbox",
+        "id": "footer_bottom_row_enable",
+        "label": "Show footer bottom row",
+        "default":true
       },
       {
         "type": "textarea",

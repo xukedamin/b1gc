@@ -1,34 +1,42 @@
 <div class="col-md-4 col-sm-4 col-xs-12">
+
+  {%if settings.footer_logo_enable%}
   <div class="logo logo-footer">
-    <a href="#" class="sub-title"><span class="lnr lnr-apartment"></span> bigc.ltd.,</a>
+     {{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
   </div>
+  {% endif %}
+
+
+  {%if settings.footer_content_text != blank %}
   <div class="download">
-    <div class="row">
-      <div class="col-md-5 col-sm-5 col-xs-12">
-        <img class="img-responsive" src="https://cdn.shopify.com/s/files/1/1184/2838/files/img-download.png" alt="img-download.png" />
-      </div>
-      <div class="col-md-7 col-sm-7 col-xs-12">
-        <p>Architecto beatae vitae dicta sunt explicabo. Nemo enim</p>
-        <ul class="download-link list-unstyled">
-          <li><a href="#"><span class="lnr lnr-download"></span> Download Profile</a></li>
-          <li><a href="#"><span class="lnr lnr-download"></span> Download Catalog</a></li>
-        </ul>
-        {% include 'nav-simple' class: 'download-link list-unstyled', handle: settings.footer_legallinks_linklist, linklist_show_title: false %}
-      </div>
+    <div class="text--extra">
+    {{settings.footer_content_text}}
     </div>
   </div>
+  {% endif %}
+
+ {%if settings.footer_contact_enable %}
   <div class="contact-phone">
-    <label class="sub-title">hot-line:</label>
-    <span class="phone-number">(090) 345 9669</span>
+    <ul class="list-unstyled">
+      <li>{{  settings.footer_addr }}</li>
+      <li>{{  settings.footer_addr_state }}</li>
+      <li>{{  settings.footer_addr_country }}</li>
+      <li>{{  settings.footer_addr_phone }}</li>
+    </ul>
   </div>
+ {% endif %}
+ 
 </div>
 <div class="col-md-4 col-sm-4 col-xs-12">
-  <div class="footer-nav">
-    {% include 'nav-simple' class: 'list-unstyled', handle: settings.footer_legallinks_linklist, linklist_show_title: true %}
-  </div>
+  {% for i in (1..2) %}
+    {% capture footer_menu %}footer_menu_{{i}}{% endcapture %}
+    <div class="footer-nav">
+      {% include 'nav-simple' class: 'list-unstyled', handle: settings[footer_menu], linklist_show_title: true %}
+    </div>
+  {% endfor %}
 </div>
+
 <div class="col-md-4 col-sm-4 col-xs-12">
-  
   {% include 'newsletter' %}
   {% include 'social-sharing-ul' %}
 </div>
