@@ -33,11 +33,10 @@ required: hot_label_enable : Boolean
       {% if linklists[handlei].links.size > 0 %}
         {% assign class_li = class_li | append: ' menu-item-has-children' %}
       {% endif %} 
-      {% if style == 'nav-style1' %}
+      {% if style == 'nav-style1' or style == 'nav-style2' %}
         {% assign class_li = class_li | append:' mega-menu menu-4-col' %}
       {% endif %}
       <li class="{{class_li}}">
-       <!--  <li class="{% if link.active %} active{% endif %} {% if linklists[handlei].links.size > 0 %}menu-item-has-children{% endif %} {% if style == 'nav-style1' %}mega-menu menu-4-col{% endif %}">  -->
         <a href="{{ link.url }}">{{ link.title }} 
 
           {%if hot_label_enable %}

@@ -769,7 +769,7 @@
               event.stopPropagation();
               $(this).hide();
               $(this).next().show();
-              $('.main-menu').addClass('active');
+              // $('.main-menu').addClass('active');
               $('.mainmenu .dropdownMenu').addClass('active');
           });
           $('.hide-menu').click(function(event) {
@@ -777,7 +777,7 @@
               event.stopPropagation();
               $(this).hide();
               $(this).prev().show();
-              $('.main-menu').removeClass('active');
+              // $('.main-menu').removeClass('active');
               $('.mainmenu .dropdownMenu').removeClass('active');
           });
           
