@@ -1,31 +1,75 @@
-<!-- End Footer -->
 <div id="footer">
-  <div class="footer footer-dark {%if settings.footer_default == 'footer_black_simple'%}{{footer-simple}} {% endif %}">
+  <div class="footer footer-dark {%if settings.footer_custom_color_enable%}footer__color--custom{%endif%}">
     <div class="container">
 
       {%if settings.footer_top_row_enable %}
       <div class="row">
-        {% if settings.footer_default == "footer_dark_simple" %}
-          
-          {%if settings.footer_logo_enable%}
-          <div class="col-md-12 logo logo-footer">
-            {{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
-          </div>
-          {% endif %}
 
-        {% else %}
-          {% include 'footer--row-details'%}
-        {% endif %}
+          <div class="col-md-4 col-sm-4 col-xs-12">
+
+            {%if settings.footer_logo_enable%}
+            <div class="logo logo-footer">
+               {{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
+            </div>
+            {% endif %}
+
+            {%if settings.footer_content_text != blank %}
+            <div class="download">
+              <div class="text--extra">
+              {{settings.footer_content_text}}
+              </div>
+            </div>
+            {% endif %}
+
+           {%if settings.footer_contact_enable %}
+            <div class="contact-phone">
+              <ul class="list-unstyled">
+                <li>{{  settings.footer_addr }}</li>
+                <li>{{  settings.footer_addr_state }}</li>
+                <li>{{  settings.footer_addr_country }}</li>
+                <li>{{  settings.footer_addr_phone }}</li>
+              </ul>
+            </div>
+           {% endif %}
+           
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            {%if settings.footer_menus_enable %}
+            {% for i in (1..2) %}
+              {% capture footer_menu %}footer_menu_{{i}}{% endcapture %}
+              <div class="footer-nav">
+                {% include 'nav-simple' class: 'list-unstyled', handle: settings[footer_menu], linklist_show_title: true %}
+              </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            {% if settings.footer_newsletter_enable %}
+              {% include 'newsletter' %}
+            {% endif %}
+
+            {%if settings.footer_social_enable%}
+            {% include 'social-sharing-ul' %}
+            {% endif %}
+          </div>
+
+        
       </div>
       {% endif %}
       
-      {%if settings.footer_bottom_row_enable%}
+      {%if settings.footer_bottom_row_enable %}
       <div class="footer-bottom">
         <div class="row">
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="menu-footer">
 
-              {% include 'nav-simple' class: 'list-inline', handle: 'footer' %}
+              {% unless settings.footer_bottom_menu %}
+                {% include 'nav-simple' class: 'list-inline', handle: 'footer' %}
+                {% else %}
+                {% include 'nav-simple' class: 'list-inline', handle: settings.footer_bottom_menu %}
+              {% endunless %}
               
             </div>
           </div>

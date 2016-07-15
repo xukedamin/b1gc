@@ -1,19 +1,26 @@
 <div id="footer">
-	<div class="container">
-	  {%if settings.footer_top_row_enable %}
-
-		<div class="footer-3">
+	<div class="footer footer-light {%if settings.footer_custom_color_enable%}footer__color--custom{%endif%}">
+		
+		{% if settings.footer_newsletter_enable %}
+		<div class="newsletter-form-wrapper mb-20">
+			<div class="newsletter-form">
+			{%include 'newsletter' %}
+			</div>
+		</div>
+		{% endif %}
+		<div class="container">
+		 {%if settings.footer_top_row_enable %}
 			<div class="row">
 				<div class="col-md-4 col-sm-6 col-xs-12">
-						
+
 					{%if settings.footer_logo_enable%}
-					<div class="logo-footer3 " style="background:black">
+					<div class="logo logo-footer">
 						{{'footer-logo.png' | asset_url | img_tag: 'footer_logo'}}
 					</div>
 					{% endif %}
 
 					{%if settings.footer_contact_enable %}
-					<div class="contact-footer3">
+					<div class="contact-footer">
 						<ul class="list-unstyled">
 							<li>{{  settings.footer_addr }}</li>
 							<li>{{  settings.footer_addr_state }}</li>
@@ -23,9 +30,11 @@
 					</div>
 					{% endif %}
 
-					<div class="social-network3">
+					{%if settings.footer_social_enable%}
+					<div class="social-network-sm">
 						{% include 'social-sharing-ul' %}
 					</div>
+					{% endif %}
 					
 					{%if settings.footer_content_text != blank %}
 					<div class="text--extra">
@@ -34,35 +43,33 @@
 					{% endif %}
 				</div>
 				
+				{%if settings.footer_menus_enable %}
 				{% for i in (1..4) %}
 					{% capture footer_menu %}footer_menu_{{i}}{% endcapture %}
 					<div class="col-md-2 col-sm-4 col-xs-12">
-						<div class="box-menu-footer3">
+						<div class="box-menu-footer">
 							{% include 'nav-simple' class: '', handle: settings[footer_menu], linklist_show_title: true %}
 						</div>
 					</div>
 				{% endfor %}
-
+				{%endif %}
 			</div>
-		</div>
-
 		{% endif %}
 		
 		{%if settings.footer_bottom_row_enable%}
-		<div class="footer-bottom3">
-			<div class="row">
-				<div class="col-md-9 col-sm-9 col-xs-12">
-					 {% include 'nav-simple' class: 'list-inline menu-footer3', handle: 'footer', linklist_show_title: false %}
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-12">
-					<div class="copyright3">
-						<p>{{ settings.footer_copyright_text }}</p>
+			<div class="footer-bottom">
+				<div class="row">
+					<div class="col-md-9 col-sm-9 col-xs-12">
+						 {% include 'nav-simple' class: 'list-inline menu-footer', handle: 'footer', linklist_show_title: false %}
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-12">
+						<div class="copyright">
+							{{ settings.footer_copyright_text }}
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		{% endif %}
-
+		</div>
 	</div>
 </div>
-<!-- End Footer -->

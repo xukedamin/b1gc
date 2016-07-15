@@ -1,41 +1,16 @@
-/*Footer*/
 .footer {
   background: $color_wild-sand none repeat scroll 0 0;
   margin-top: 50px;
   padding: 55px 0 35px;
-
   a:hover {
     color: $color_shark;
   }
-}
-
-.logo-footer .sub-title {
-  color: $color_shark;
 }
 
 .logo.logo-footer {
   margin-bottom: 25px;
 }
 
-.footer-nav {
-  border-left: 1px solid $color_mercury;
-  border-right: 1px solid $color_mercury;
-  margin: auto;
-  max-width: 280px;
-  min-height: 280px;
-  padding: 0 60px;
-  width: 100%;
-
-  a {
-    color: $color_dove-gray;
-  }
-  li {
-    margin-bottom: 20px;
-  }
-  .sub-title {
-    margin-bottom: 20px;
-  }
-}
 .download p {
   border-bottom: 1px solid $color_mercury;
   margin-bottom: 12px;
@@ -53,11 +28,8 @@
   }
 }
 
-
-
 .share-social {
   margin-top: 23px;
-
   a {
     color: $color_dove-gray;
     font-size: 24px;
@@ -83,20 +55,18 @@
     margin-right: 10px;
   }
 }
+
 .copyright {
   color: $color_dove-gray;
-
   a {
     color: $color_shark;
+
+    &:hover {
+      color: $color_dusty-gray;
+    }
   }
 }
 
-
-
-
-#footer .copyright a:hover {
-  color: $color_dusty-gray;
-}
 .contact-phone {
   margin-top: 30px;
 }
@@ -105,54 +75,42 @@
   margin-left: 10px;
 }
 
-//Home 2_
-/*Footer*/
-// footer2 --> footer-dark.footer-simple
+/*******************************************************************
+  FOOTER LIGHT
+********************************************************************/
+.footer.footer-light {
+  padding: 40px 0;
+  background-color: $color_white;
 
-.footer.footer-dark.footer-simple
-{
-    // background: $color_shark none repeat scroll 0 0;
+  .newsletter-form-wrapper{
     margin-top: 0;
-
-  a:hover {
-    color: $color_white;
   }
-  .copyright a {
-    color: $color_white;
 
-    &:hover {
-      color: $color_dove-gray;
-    }
-  }
-}
-
-.footer-bottom2 {
-    margin-top: 15px;
-}
-
-// Home 3
-.logo-footer3 {
-  margin-bottom: 25px;
-
-  > a {
-    color: $color_currious-blue-darker;
-    font-size: 30px;
-    @extend %text-up;
-  }
-  h1 {
-    font-size: 48px;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.contact-footer3 li {
+  .contact-footer li {
     color: $color_dove-gray;
     margin-bottom: 7px;
+  }
+
+  .menu-footer {
+    margin: 0;
+    a {
+      color: $color_shark;
+      &:hover {
+        color: $color_currious-blue-darker;
+      }
+    }
+    > li {
+      margin-right: 20px;
+      padding: 0;
+    }
+  }
+  .footer-bottom {
+    border-top: 1px solid $color_mercury;
+    padding: 30px 0 40px;
+  }
 }
 
-
-.box-menu-footer3 {
+.box-menu-footer {
   > h2 {
     font-size: 16px;
     margin: 15px 0 25px;
@@ -161,7 +119,6 @@
   a {
     color: $color_dove-gray;
     position: relative;
-
     &:hover {
       color: $color_currious-blue-darker;
     }
@@ -176,59 +133,46 @@
   li {
     padding: 6px 0;
   }
-
   > ul {
     list-style: outside none none;
     padding: 0;
   }
-  
 }
 
-.social-network3 .share-social a {
-    color: $color_shark;
-    font-size: 16px;
-    margin-right: 7px;
-}
-
-.footer-bottom3 {
-    border-top: 1px solid $color_mercury;
-    padding: 30px 0 40px;
+.social-network-sm .share-social a {
+  color: $color_shark;
+  font-size: 16px;
+  margin-right: 7px;
 }
 
 
-.menu-footer3 {
-  margin: 0;
+/*******************************************************************
+  FOOTER DARK
+********************************************************************/
+.footer-nav {
+  border-left: 1px solid $color_mercury;
+  border-right: 1px solid $color_mercury;
+  margin: auto;
+  max-width: 280px;
+  // min-height: 280px;
+  padding: 0 60px;
+  width: 100%;
+
   a {
-    color: $color_shark;
-    &:hover {
-      color: $color_currious-blue-darker;
-    }
+    color: $color_dove-gray;
   }
-
-  > li {
-    margin-right: 20px;
-    padding: 0;
+  li {
+    margin-bottom: 20px;
   }
-  
+  .sub-title {
+    margin-bottom: 20px;
+  }
 }
 
-.copyright3 > p {
-    margin: 0;
-    @extend %text-right;
-}
-
-.footer-3 {
-    padding: 40px 0;
-}
-
-// footer-dark
 .footer.footer-dark {
   background: $color_cod-gray none repeat scroll 0 0;
   color: $color_white;
 
-  .logo-footer .sub-title {
-    color: $color_white;
-  }
   .download p {
     border-color: rgba($color_white, 0.1);
     color: $color_dusty-gray;
@@ -242,7 +186,7 @@
   }
   .footer-nav {
     border-color: rgba($color_white, 0.1);
-    h2{
+    h2 {
       @extend %text-up;
       font-size: 16px;
       margin-top: 0;
@@ -254,13 +198,11 @@
   .newsletter {
     border-color: rgba($color_white, 0.1);
 
-    input[type="text"],
-    input[type="email"] {
+    input[type="text"], input[type="email"] {
       border: none;
     }
-
     input[type="submit"] {
-      @extend %jv-bg-color-primary;;
+      @extend %jv-bg-color-primary;
 
       &:hover {
         background: $color_white none repeat scroll 0 0;
@@ -271,6 +213,7 @@
   }
   .copyright {
     @extend %text-right;
+
     a {
       color: $color_dusty-gray;
     }
@@ -282,15 +225,48 @@
       color: $color_white;
     }
   }
+}
 
+//footer custom color
+$footer__color--custom :  #{'{{settings.footer_color_text}}'};
+$footer__color--border : #{'{{settings.footer_color_border}}'};
+
+.footer.footer__color--custom{
+  color: $footer__color--custom !important;
+  background-color: #{'{{settings.footer_color_background}}'} !important;
+  
+  .newsletter-form-wrapper{
+    background: inherit !important;
+    border-top-color: $footer__color--border !important;
+  }
+  
+  p,
+  .footer-bottom,
+  .footer-nav,
+   .newsletter {
+    border-color: $footer__color--border !important;
+  }
+
+ 
+  .download p,
+  a,
+  .copyright,
+  .contact-footer li{
+    color: $footer__color--custom !important;
+  }
+ 
+  a:hover{
+    color: #{'{{settings.footer_color_text_hover}}'} !important;
+  }
 
 }
 
-.logo.logo-footer2 a {
-  color: $color_white;
-  font-size: 30px;
-  @extend %text-up;
-}
+
+
+
+/*******************************************************************
+  BACK-TOP
+********************************************************************/
 
 #back-top {
   bottom: 15px;
@@ -312,7 +288,6 @@
 }
 
 #back-top.show {
-
   @include prefix( transform,translate(0px, 0px));
   display: block !important;
 }
