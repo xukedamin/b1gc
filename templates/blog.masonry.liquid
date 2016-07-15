@@ -62,21 +62,24 @@
       
       jQuery(function($){
 
-          var grid = document.querySelector('.masonry-container');
-          var msnry = new Masonry( grid, {
-            itemSelector: '.itemMasonry'
+          var $container = $('.masonry-container').imagesLoaded(function(){
+            $container.masonry({
+              itemSelector: '.itemMasonry'
+            });
           });
 
-          grid.addEventListener( 'click', function( event ) {
-            if ( !matchesSelector( event.target, '.popular-box' )  ) {
-              return;
-            }
-            var itemElem = event.target.parentNode;
-            itemElem.classList.toggle('is-expanded');
-
-            msnry.layout();
-          });
-
+          
+          // var msnry = new Masonry( grid, {
+          //   itemSelector: '.itemMasonry'
+          // });
+          // grid.addEventListener( 'click', function( event ) {
+          //   if ( !matchesSelector( event.target, '.popular-box' )  ) {
+          //     return;
+          //   }
+          //   var itemElem = event.target.parentNode;
+          //   itemElem.classList.toggle('is-expanded');
+          //   msnry.layout();
+          // });
 
       });
 

@@ -7435,161 +7435,15 @@
   }
 ]
 },
-
- {
-    "name": "Material Products shortcode",
+  {
+    "name": "Shortcode: product-tabs-grid",
     "settings": [
-    {
+      {
       "type": "header",
-      "content": "Featured products slider------"
-    }, {
-      "type": "text",
-      "id": "sc_product_feature_slider_heading",
-      "label": "Heading",
-      "default": "Feature Products slider"
-    }, {
-      "type": "collection",
-      "id": "sc_product_feature_slider",
-      "label": "Select products"
+      "content": "slider-tabs-grid"
     }, 
+
     {
-      "type": "text",
-      "id": "sc_product_feature_slider_limit",
-      "label": "Limit",
-      "default":"20"
-    }, 
-    {
-      "type": "header",
-      "content": "Products tabs------------------"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_heading",
-      "label": "Heading",
-      "default": "Best seller"
-    }, {
-      "type": "collection",
-      "id": "sc_product_tab_1",
-      "label": "Select products tab 1"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_1_enable",
-      "label": "Show",
-      "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_1_limit",
-      "label": "Limit",
-      "default": "20"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_1_icon",
-      "label": "Icon",
-      "default": "lnr lnr-home"
-    }, 
-    {
-      "type": "collection",
-      "id": "sc_product_tab_2",
-      "label": "Select products tab 2"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_2_enable",
-      "label": "Show",
-       "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_2_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_2_icon",
-      "label": "Icon",
-      "default": "lnr lnr-construction"
-    }, {
-      "type": "collection",
-      "id": "sc_product_tab_3",
-      "label": "Select products tab 3"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_3_enable",
-      "label": "Show",
-       "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_3_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-     {
-      "type": "text",
-      "id": "sc_product_tab_3_icon",
-      "label": "Icon",
-      "default": "lnr lnr-funnel"
-    }, {
-      "type": "collection",
-      "id": "sc_product_tab_4",
-      "label": "Select products tab 4"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_4_enable",
-      "label": "Show",
-       "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_4_limit",
-      "label": "Limit",
-      "default": "20"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_4_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    }, {
-      "type": "collection",
-      "id": "sc_product_tab_5",
-      "label": "Select products tab 5"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_5_enable",
-      "label": "Show",
-       "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_5_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_5_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    },{
-      "type": "collection",
-      "id": "sc_product_tab_6",
-      "label": "Select products tab 6"
-    }, {
-      "type": "checkbox",
-      "id": "sc_product_tab_6_enable",
-      "label": "Show",
-       "default": true
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_6_limit",
-      "label": "Limit",
-      "default": "20"
-    },
-     {
-      "type": "text",
-      "id": "sc_product_tab_6_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    },
-    {
-      "type": "header",
-      "content": "Products tabs grid-------------"
-    }, {
       "type": "text",
       "id": "sc_product_tab_grid_heading",
       "label": "Heading",
@@ -7611,8 +7465,12 @@
       ],
       "default": "default"
     }, 
- 
-  {
+      {
+      "type": "header",
+      "content": "TAB 1"
+    }, 
+
+    {
       "type": "collection",
       "id": "sc_product_tab_grid_1",
       "label": "TAB 1 - Select products tab 1"
@@ -7622,14 +7480,11 @@
       "label": "Show",
       "default": true
     }, 
-    
     {
       "type": "image",
       "id": "sc_product_tab_grid_1_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-
-
     {
       "type": "text",
       "id": "sc_product_tab_grid_1_limit",
@@ -7642,6 +7497,10 @@
       "default": "lnr lnr-home"
     }, 
     {
+      "type": "header",
+      "content": "TAB 2"
+    }, 
+    {
       "type": "collection",
       "id": "sc_product_tab_grid_2",
       "label": "TAB 2 - Select products tab 2"
@@ -7651,14 +7510,11 @@
       "label": "Show",
        "default": true
     }, 
-     
     {
       "type": "image",
       "id": "sc_product_tab_grid_2_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-  
-
     {
       "type": "text",
       "id": "sc_product_tab_grid_2_limit",
@@ -7670,7 +7526,12 @@
       "id": "sc_product_tab_grid_2_icon",
       "label": "Icon",
       "default": "lnr lnr-construction"
-    }, {
+    }, 
+    {
+      "type": "header",
+      "content": "TAB 3"
+    }, 
+    {
       "type": "collection",
       "id": "sc_product_tab_grid_3",
       "label": "TAB 3 - Select products tab 3"
@@ -7698,7 +7559,12 @@
       "id": "sc_product_tab_grid_3_icon",
       "label": "Icon",
       "default": "lnr lnr-funnel"
-    }, {
+    },
+    {
+      "type": "header",
+      "content": "TAB 4"
+    }, 
+     {
       "type": "collection",
       "id": "sc_product_tab_grid_4",
       "label": "TAB 4 - Select products tab 4"
@@ -7708,87 +7574,302 @@
       "label": "Show",
        "default": true
     }, 
-     
     {
       "type": "image",
       "id": "sc_product_tab_grid_4_product_lead_img.png",
       "label": "Select products leading image"
     }, 
-
-
     {
       "type": "text",
       "id": "sc_product_tab_grid_4_limit",
       "label": "Limit",
       "default": "6"
-    }, {
+    }, 
+    {
       "type": "text",
       "id": "sc_product_tab_grid_4_icon",
       "label": "Icon",
       "default": "lnr lnr-page-break"
-    },
-
-     {
+    }
+    ]
+  },
+  {
+    "name" : "Shorcode: slider-grid",
+    "settings":[
+      {
       "type": "header",
-      "content": "SC Products slider grid--------------"
-    }, {
+      "content": "jv-sc-slider-grid"
+      }, 
+      {
       "type": "text",
       "id": "sc_product_slider_grid_heading",
       "label": "Heading",
       "default": "New products"
-    }, 
+      }, 
      {
       "type": "text",
       "id": "sc_product_slider_grid_subheading",
       "label": "SubHeading",
       "default": "SubHeading New products"
-    }, {
-      "type": "collection",
-      "id": "sc_product_slider_grid_1",
-      "label": "Select products tab 1"
-    }, {
+    }, 
+    {
+    "type": "header",
+    "content": "Collection 1"
+    }, 
+    {
       "type": "checkbox",
       "id": "sc_product_slider_grid_1_enable",
       "label": "Show",
       "default": true
-    }, {
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_slider_grid_1",
+      "label": "Select Collection 1"
+    }, 
+    {
       "type": "text",
       "id": "sc_product_slider_grid_1_limit",
       "label": "Limit",
       "default": "6"
-    },{
-      "type": "collection",
-      "id": "sc_product_slider_grid_2",
-      "label": "Select products tab 2"
-    }, {
+    },
+     {
+    "type": "header",
+    "content": "Collection 2"
+    },
+    {
       "type": "checkbox",
       "id": "sc_product_slider_grid_2_enable",
       "label": "Show",
       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_slider_grid_2",
+      "label": "Select Collection 2"
     }, {
       "type": "text",
       "id": "sc_product_slider_grid_2_limit",
       "label": "Limit",
       "default": "6"
     },
+     {
+    "type": "header",
+    "content": "Collection 3"
+    },
     {
-      "type": "collection",
-      "id": "sc_product_slider_grid_3",
-      "label": "Select products tab 3"
-    }, {
       "type": "checkbox",
       "id": "sc_product_slider_grid_3_enable",
       "label": "Show",
       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_slider_grid_3",
+      "label": "Select Collection 3"
     }, {
       "type": "text",
       "id": "sc_product_slider_grid_3_limit",
       "label": "Limit",
       "default": "6"
     }
+    ]
+  },
 
-
+ {
+    "name": "Shorcode: product-tabs-grid-simple",
+    "settings": [
+    {
+      "type": "header",
+      "content": "product-tabs-grid-simple"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_heading",
+      "label": "Heading",
+      "default": "Best seller"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 1"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_1_enable",
+      "label": "Show",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_1",
+      "label": "Select Collection 1"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_1_limit",
+      "label": "Limit",
+      "default": "20"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_1_icon",
+      "label": "Icon",
+      "default": "lnr lnr-home"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 2"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_2_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_2",
+      "label": "Select Collection 2"
+    },{
+      "type": "text",
+      "id": "sc_product_tab_2_limit",
+      "label": "Limit",
+      "default": "20"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_2_icon",
+      "label": "Icon",
+      "default": "lnr lnr-construction"
+    },
+     {
+      "type": "header",
+      "content": "Tab 3"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_3_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_3",
+      "label": "Select Collection 3"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_3_limit",
+      "label": "Limit",
+      "default": "20"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_tab_3_icon",
+      "label": "Icon",
+      "default": "lnr lnr-funnel"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 4"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_4_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_4",
+      "label": "Select Collection 4"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_4_limit",
+      "label": "Limit",
+      "default": "20"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_4_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 5"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_5_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_5",
+      "label": "Select Colletion 5"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_5_limit",
+      "label": "Limit",
+      "default": "20"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_5_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 6"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_6_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_6",
+      "label": "Select Collection 6"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_6_limit",
+      "label": "Limit",
+      "default": "20"
+    },
+     {
+      "type": "text",
+      "id": "sc_product_tab_6_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    }
    ]
+  },
+
+  {
+    "name":"Shortcode : sc-slider-single",
+    "settings":[
+     {
+      "type": "header",
+      "content": "jv-sc-slider-single"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_feature_slider_heading",
+      "label": "Heading",
+      "default": "Feature Products slider"
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_feature_slider",
+      "label": "Select products"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_feature_slider_limit",
+      "label": "Limit",
+      "default":"10"
+    }
+    ]
   },
 
    {

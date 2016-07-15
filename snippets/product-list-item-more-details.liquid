@@ -59,8 +59,19 @@ Select the product image size from settings.
           {% endif %}
           
         </div>
-      </div>
-    <p class="desc">{{ product.content | strip_html | truncatewords: 30 }}</p>
+    </div>
+    <div class="product--detail-countdown mt-20">
+      {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
+    </div>
+    <p class="desc">
+      
+        {% if product.description contains '[jvcountdown]' %}
+            {% assign des = product.description | split:'[/jvcountdown]' | last %}
+            {{ des | split: '|' | first | strip_html | truncatewords: 30 }}
+          {%else %}
+            {{ product.description | split: '|' | first | strip_html | truncatewords: 30 }}
+        {% endif %}
+    </p>
     <div class="bx-pager">
       {% assign index = 0 %}
       {% for image in product.images %}

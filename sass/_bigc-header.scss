@@ -85,7 +85,9 @@ a.jvlogo {
 /*============================================================================
 #HEADER
 ==============================================================================*/
-
+#header{
+  min-height: 80px;
+}
 
 .header{
   padding:20px 0;
@@ -211,29 +213,6 @@ a.jvlogo {
 }
 
 .top-header {
-
-  // .container > div > ul> li {
-  //   border-left: 1px solid rgba($color_white, 0.1);
-
-  //   >a {
-  //     color: $color_white;
-  //     display: block;
-  //     font-size: 10px;
-  //     height: auto;
-  //     line-height: 40px;
-  //     padding: 0 20px;
-  //     @extend %text-up;
-  //   }
-  // }
-
-  // .hotline, 
-  // .header_address {
-  //   padding: 0 20px;
-  // }
-}
-
-
-.top-header {
   .currency-picker__label {
     display: none
   }
@@ -246,8 +225,6 @@ a.jvlogo {
     
   }
 }
-
-
 
 .top-left {
   .top-header {
@@ -435,16 +412,10 @@ a.jvlogo {
   }
 }
 
-
-
-
-
 /*============================================================================
 #HEADER - MY ACCOUNT
 ==============================================================================*/
 
-
-// TOP HEADER MYACCOUNT
 .info-user{
   &:after {
     background: $color_white none repeat scroll 0 0;

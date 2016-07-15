@@ -1,18 +1,11 @@
 <main class="main-content">
-
-  {% if page.metafields.jvpage.breadcrumb != 'hide'  %}  
   <div class="container"> {% include 'breadcrumb' %} </div>
-  {% endif %}  
 
-{{page.metafields}}
-{{page.metafields.jvpage.titlePage}}
-
-<div class="common-static-header">
+  <div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25"
       {% if page.metafields.jvpage.titleBackground != blank %}
         style="background-image:url({{ page.metafields.jvpage.titleBackground }})"
-      {% endif %}
-    ></div>
+      {% endif %} ></div>
     <div class="container">
       <h1 >
       <span>
@@ -51,25 +44,13 @@
 
       </div>
       <script language="javascript">
-      
       jQuery(function($){
 
-          var grid = document.querySelector('.masonry-container');
-          var msnry = new Masonry( grid, {
-            itemSelector: '.itemMasonry'
-          });
-
-          grid.addEventListener( 'click', function( event ) {
-            if ( !matchesSelector( event.target, '.popular-box' )) {
-              return;
-            }
-            var itemElem = event.target.parentNode;
-            itemElem.classList.toggle('is-expanded');
-
-            msnry.layout();
-          });
-
-
+        var $container = $('.masonry-container').imagesLoaded(function(){
+            $container.masonry({
+              itemSelector: '.itemMasonry'
+            });
+        });
       });
 
       </script>
