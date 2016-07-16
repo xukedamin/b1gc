@@ -15,7 +15,7 @@
        {% if leading_product_image %}
           {{ leading_product_image | asset_url | img_tag: leading_product_image }}
         {% else %}
-          <img src="{{ 'no_image.png' | asset_url }}" alt="{{ item.title }}">
+          <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="{{ product.title }}">
         {% endif %}
 			</a>
 		</div>

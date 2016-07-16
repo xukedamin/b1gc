@@ -1,6 +1,11 @@
+{% comment %}
+required: listProduct
 
+{%unless listProduct%}
 {% assign listProduct = "sc_product_tab_" %}
+{% endunless %}
 
+{% endcomment %}
 
 {% if tab_style == '1'%}
 	{%assign class_wrap = 'product-best-sale tab_style1'%}
@@ -10,15 +15,13 @@
 	{%assign class_wrap ='product-best-sale style2 tab_style3' %}
 {% endif %}
 
+{% capture listProductHeading %}{{listProduct}}heading{%endcapture%}
+{% capture listProductFilter %}{{listProduct}}filter_enable{%endcapture%}
+{% capture listProductShowMoreBtn %}{{listProduct}}showmore_enable{%endcapture%}
 
-<div class="container"> {% include 'jv-sc-heading-box' %} </div>
 
 <div class="product-tabs-grid-simple-wrapper {{class_wrap}}">
 	<div class="container">
-		
-		{%comment%}
-		{% 'jv-sub-product-tabs-grid-simple--header-navtab' %}
-		{%endcomment %}
 
 		{%assign class_tab = "nav-tabs-bestsale" %}
 		{% if tab_style == '2' %}
@@ -31,19 +34,20 @@
 		<div class="title-product-best-sale">
 			<div class="row">
 				<div class="heading-row-wrapper">
-					<h2 class="title-normal">best sellers</h2>
+					<h2 class="title-normal">{{settings[listProductHeading]}}</h2>
 					
+					{%if settings[listProductFilter]%}
 					<div class="filter-product">
 						<a href="#" class="btn-filter style-border-left">Filter</a>
 					</div>
 
-					<aside  id="collectionFilters" class="box-attr-filter" >
-              {% include 'collection-sidebar-filter' %}
+					<aside  id="collectionFilters" class="box-attr-filter">
+            {% include 'collection-sidebar-filter' %}
            </aside>
+          {% endif %}
 
 					<div class="{{class_tab}}">
 						<ul role="tablist" class="nav nav-tabs">
-
 
 						{% for i in (1..4) %}
 							{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
@@ -58,7 +62,7 @@
 							
 								{% unless collections[featured_row].all_products_count == 0 %}
 								<li class="{% if i == 1 %} active {% endif %}" role="presentation">
-									<a data-toggle="tab" role="tab" aria-controls="furniture" href="#product-grid-simple--tab{{ i }}">{% include 'featured-row-title' %}</a>
+									<a data-toggle="tab" role="tab" href="#{{listProduct}}_product-grid-simple--tab{{ i }}">{% include 'featured-row-title' %}</a>
 								</li>
 								{% endunless %}
 							{% endif %}
@@ -74,7 +78,7 @@
 
 		<div class="tab-content">
 			
-				{% for i in (1..4) %}
+			{% for i in (1..4) %}
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
@@ -83,11 +87,14 @@
 					{% assign featured_row = settings[featured_row] %}
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
+
+
 					{% unless collections[featured_row].all_products_count == 0 %}
-					<div id="product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
-						{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: '', leading_product_image:'', leading_time: '', quickview_big_enable: true %}
+					<div id="{{listProduct}}_product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
+						{% include 'featured-row-content' with leading_product: false, class_col: 'col-md-3 col-sm-6 col-xs-12', product_loadmore: settings[listProductShowMoreBtn] , leading_product_image:'', leading_time: '', quickview_big_enable: true %}
 					{% endunless %}
 					
+					{%comment%}
 					{%if product_paginav == true %}
 						<div class="pagination-colorful">
 							<ul class="list-inline">
@@ -97,7 +104,7 @@
 							</ul>
 						</div>
 					{%endif%}
-
+					{%endcomment%}
 				
 					</div>
 
@@ -108,6 +115,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 <script>

@@ -7436,11 +7436,11 @@
 ]
 },
   {
-    "name": "Shortcode: product-tabs-grid",
+    "name": "SC: product-tabs-grid",
     "settings": [
       {
       "type": "header",
-      "content": "slider-tabs-grid"
+      "content": "product-tabs-grid"
     }, 
 
     {
@@ -7593,8 +7593,700 @@
     }
     ]
   },
+
   {
-    "name" : "Shorcode: slider-grid",
+    "name": "SC: product tabs grid inline",
+    "settings": [
+      {
+      "type": "header",
+      "content": "tabs grid inline"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_heading",
+      "label": "Heading",
+      "default": "Product tab grid"
+    }, 
+      {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_inline_showmore_enable",
+      "label": "Enable Show more button",
+      "default": false
+    }, 
+      {
+      "type": "header",
+      "content": "TAB 1"
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_inline_1",
+      "label": "TAB 1 - Select products tab 1"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_inline_1_enable",
+      "label": "Show",
+      "default": true
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_inline_1_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_1_limit",
+      "label": "Limit",
+      "default": "7"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_1_icon",
+      "label": "Icon",
+      "default": "lnr lnr-home"
+    }, 
+    {
+      "type": "header",
+      "content": "TAB 2"
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_inline_2",
+      "label": "TAB 2 - Select products tab 2"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_inline_2_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_inline_2_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_2_limit",
+      "label": "Limit",
+      "default": "7"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_2_icon",
+      "label": "Icon",
+      "default": "lnr lnr-construction"
+    }, 
+    {
+      "type": "header",
+      "content": "TAB 3"
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_inline_3",
+      "label": "TAB 3 - Select products tab 3"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_inline_3_enable",
+      "label": "Show",
+       "default": true
+    }, 
+  
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_inline_3_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_3_limit",
+      "label": "Limit",
+      "default": "7"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_3_icon",
+      "label": "Icon",
+      "default": "lnr lnr-funnel"
+    },
+    {
+      "type": "header",
+      "content": "TAB 4"
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_inline_4",
+      "label": "TAB 4 - Select products tab 4"
+    }, {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_inline_4_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "image",
+      "id": "sc_product_tab_grid_inline_4_product_lead_img.png",
+      "label": "Select products leading image"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_4_limit",
+      "label": "Limit",
+      "default": "7"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_inline_4_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    }
+    ]
+  },
+
+{
+    "name": "SC: product tabs grid simple style 1",
+    "settings": [
+    {
+      "type": "header",
+      "content": "product-tabs-grid-simple style 1"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_heading",
+      "label": "Heading",
+      "default": "Best seller"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_filter_enable",
+      "label": "Enable Filter",
+      "default": true
+    }, 
+         {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_showmore_enable",
+      "label": "Enable Show more button",
+      "default": false
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 1"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_1_enable",
+      "label": "Show",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_1",
+      "label": "Select Collection 1"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_1_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_1_icon",
+      "label": "Icon",
+      "default": "lnr lnr-home"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 2"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_2_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_2",
+      "label": "Select Collection 2"
+    },{
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_2_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_2_icon",
+      "label": "Icon",
+      "default": "lnr lnr-construction"
+    },
+     {
+      "type": "header",
+      "content": "Tab 3"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_3_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_3",
+      "label": "Select Collection 3"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_3_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_3_icon",
+      "label": "Icon",
+      "default": "lnr lnr-funnel"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 4"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_4_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_4",
+      "label": "Select Collection 4"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_4_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_4_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 5"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_5_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_5",
+      "label": "Select Colletion 5"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_5_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_5_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 6"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style1_6_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style1_6",
+      "label": "Select Collection 6"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_6_limit",
+      "label": "Limit",
+      "default": "8"
+    },
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style1_6_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    }
+   ]
+  },
+   {
+    "name": "SC: tabs-grid-simple-style-2",
+    "settings": [
+    {
+      "type": "header",
+      "content": "product tabs grid simple style 2"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_heading",
+      "label": "Heading",
+      "default": "Best seller"
+    }, 
+
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_filter_enable",
+      "label": "Enable Filter",
+      "default": true
+    }, 
+         {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_showmore_enable",
+      "label": "Enable Show more button",
+      "default": false
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 1"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_1_enable",
+      "label": "Show",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_1",
+      "label": "Select Collection 1"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_1_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_1_icon",
+      "label": "Icon",
+      "default": "lnr lnr-home"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 2"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_2_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_2",
+      "label": "Select Collection 2"
+    },{
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_2_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_2_icon",
+      "label": "Icon",
+      "default": "lnr lnr-construction"
+    },
+     {
+      "type": "header",
+      "content": "Tab 3"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_3_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_3",
+      "label": "Select Collection 3"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_3_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_3_icon",
+      "label": "Icon",
+      "default": "lnr lnr-funnel"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 4"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_4_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_4",
+      "label": "Select Collection 4"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_4_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_4_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 5"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_5_enable",
+      "label": "Show",
+       "default": false
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_5",
+      "label": "Select Colletion 5"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_5_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_5_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 6"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style2_6_enable",
+      "label": "Show",
+       "default": false
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style2_6",
+      "label": "Select Collection 6"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_6_limit",
+      "label": "Limit",
+      "default": "8"
+    },
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style2_6_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    }
+   ]
+  },
+
+   {
+    "name": "SC: product-tabs-grid-simple-style-3",
+    "settings": [
+    {
+      "type": "header",
+      "content": "product tabs grid simple style 3"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_heading",
+      "label": "Heading",
+      "default": "Tabs grid simple style 3"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_filter_enable",
+      "label": "Enable Filter",
+      "default": true
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_showmore_enable",
+      "label": "Enable Show more button",
+      "default": false
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 1"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_1_enable",
+      "label": "Show",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_1",
+      "label": "Select Collection 1"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_1_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_1_icon",
+      "label": "Icon",
+      "default": "lnr lnr-home"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 2"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_2_enable",
+      "label": "Show",
+       "default": true
+    }, 
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_2",
+      "label": "Select Collection 2"
+    },{
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_2_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_2_icon",
+      "label": "Icon",
+      "default": "lnr lnr-construction"
+    },
+     {
+      "type": "header",
+      "content": "Tab 3"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_3_enable",
+      "label": "Show",
+       "default": true
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_3",
+      "label": "Select Collection 3"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_3_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_3_icon",
+      "label": "Icon",
+      "default": "lnr lnr-funnel"
+    }, 
+     {
+      "type": "header",
+      "content": "Tab 4"
+    }, 
+     {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_4_enable",
+      "label": "Show",
+       "default": true
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_4",
+      "label": "Select Collection 4"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_4_limit",
+      "label": "Limit",
+      "default": "8"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_4_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 5"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_5_enable",
+      "label": "Show",
+       "default": false
+    }, 
+     {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_5",
+      "label": "Select Colletion 5"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_5_limit",
+      "label": "Limit",
+      "default": "8"
+    }, 
+    {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_5_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    },
+     {
+      "type": "header",
+      "content": "Tab 6"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "sc_product_tab_grid_style3_6_enable",
+      "label": "Show",
+       "default": false
+    },
+    {
+      "type": "collection",
+      "id": "sc_product_tab_grid_style3_6",
+      "label": "Select Collection 6"
+    }, {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_6_limit",
+      "label": "Limit",
+      "default": "8"
+    },
+     {
+      "type": "text",
+      "id": "sc_product_tab_grid_style3_6_icon",
+      "label": "Icon",
+      "default": "lnr lnr-page-break"
+    }
+   ]
+  },
+
+    {
+    "name" : "SC: slider-grid",
     "settings":[
       {
       "type": "header",
@@ -7676,177 +8368,8 @@
     ]
   },
 
- {
-    "name": "Shorcode: product-tabs-grid-simple",
-    "settings": [
-    {
-      "type": "header",
-      "content": "product-tabs-grid-simple"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_heading",
-      "label": "Heading",
-      "default": "Best seller"
-    }, 
-     {
-      "type": "header",
-      "content": "Tab 1"
-    }, 
-     {
-      "type": "checkbox",
-      "id": "sc_product_tab_1_enable",
-      "label": "Show",
-      "default": true
-    },
-    {
-      "type": "collection",
-      "id": "sc_product_tab_1",
-      "label": "Select Collection 1"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_1_limit",
-      "label": "Limit",
-      "default": "20"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_1_icon",
-      "label": "Icon",
-      "default": "lnr lnr-home"
-    }, 
-     {
-      "type": "header",
-      "content": "Tab 2"
-    }, 
-     {
-      "type": "checkbox",
-      "id": "sc_product_tab_2_enable",
-      "label": "Show",
-       "default": true
-    }, 
-    {
-      "type": "collection",
-      "id": "sc_product_tab_2",
-      "label": "Select Collection 2"
-    },{
-      "type": "text",
-      "id": "sc_product_tab_2_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_2_icon",
-      "label": "Icon",
-      "default": "lnr lnr-construction"
-    },
-     {
-      "type": "header",
-      "content": "Tab 3"
-    }, 
-    {
-      "type": "checkbox",
-      "id": "sc_product_tab_3_enable",
-      "label": "Show",
-       "default": true
-    }, 
-     {
-      "type": "collection",
-      "id": "sc_product_tab_3",
-      "label": "Select Collection 3"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_3_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-     {
-      "type": "text",
-      "id": "sc_product_tab_3_icon",
-      "label": "Icon",
-      "default": "lnr lnr-funnel"
-    }, 
-     {
-      "type": "header",
-      "content": "Tab 4"
-    }, 
-     {
-      "type": "checkbox",
-      "id": "sc_product_tab_4_enable",
-      "label": "Show",
-       "default": true
-    },
-    {
-      "type": "collection",
-      "id": "sc_product_tab_4",
-      "label": "Select Collection 4"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_4_limit",
-      "label": "Limit",
-      "default": "20"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_4_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    },
-     {
-      "type": "header",
-      "content": "Tab 5"
-    }, 
-    {
-      "type": "checkbox",
-      "id": "sc_product_tab_5_enable",
-      "label": "Show",
-       "default": true
-    }, 
-     {
-      "type": "collection",
-      "id": "sc_product_tab_5",
-      "label": "Select Colletion 5"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_5_limit",
-      "label": "Limit",
-      "default": "20"
-    }, 
-    {
-      "type": "text",
-      "id": "sc_product_tab_5_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    },
-     {
-      "type": "header",
-      "content": "Tab 6"
-    }, 
-    {
-      "type": "checkbox",
-      "id": "sc_product_tab_6_enable",
-      "label": "Show",
-       "default": true
-    },
-    {
-      "type": "collection",
-      "id": "sc_product_tab_6",
-      "label": "Select Collection 6"
-    }, {
-      "type": "text",
-      "id": "sc_product_tab_6_limit",
-      "label": "Limit",
-      "default": "20"
-    },
-     {
-      "type": "text",
-      "id": "sc_product_tab_6_icon",
-      "label": "Icon",
-      "default": "lnr lnr-page-break"
-    }
-   ]
-  },
-
   {
-    "name":"Shortcode : sc-slider-single",
+    "name":"SC : sc-slider-single",
     "settings":[
      {
       "type": "header",

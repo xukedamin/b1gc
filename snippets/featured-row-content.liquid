@@ -9,7 +9,9 @@
   reset or send empty variables so a previous definition isn't used.
 {% endcomment %}
 
-
+{%unless leading_product%}
+  {%assign leading_product = false %}
+{%endunless %}
 
 {% assign header_title = collections[featured_row].title %}
 {% assign more_link = collections[featured_row].url %}
@@ -27,7 +29,7 @@
 
     {% assign current_collection = collections[featured_row] %}
     
-    {% if forloop.index == 2 and leading_product != blank %}
+    {% if forloop.index == 2 and leading_product %}
        {% include 'product-grid-item-leading-details' %}
 
     {% else %}

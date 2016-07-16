@@ -30,7 +30,7 @@ Select the product image size from settings.
     <ul class="bxslider">
 
     {% for image in product.images %}
-    <li> <img src="{{ image.src  | img_url: image_size }}"> </li>
+    <li> <img src="{{ image.src  | img_url: image_size }}" alt="{{ image.alt | escape }}"> </li>
     {% endfor %}
     </ul>
   </div>
@@ -75,7 +75,7 @@ Select the product image size from settings.
     <div class="bx-pager">
       {% assign index = 0 %}
       {% for image in product.images %}
-      <a data-slide-index="{{index}}" href=""><img src="{{ image.src  | img_url: thumb }}"> </a>
+      <a data-slide-index="{{index}}" href=""><img src="{{ image.src  | img_url: thumb }}" alt="{{ image.alt | escape }}"> </a>
        {% assign index = index | plus: 1 %}
       {% endfor %}
 

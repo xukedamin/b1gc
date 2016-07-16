@@ -16,28 +16,35 @@
 		</div>
 		{{des}} 
 
+	<h2>product-tab</h2>
+	  {%include 'jv-sc-product-tabs' %} 
  		
- 		<h2>product-tabs-grid</h2>
+ 	<h2>product-tabs-grid</h2>
 	  {%include 'jv-sc-product-tabs-grid' %} 
 
 	   <h2>product-tabs-grid inline</h2>
 	  {% include 'jv-sc-product-tabs-grid--inline'%}
 	  
-	  <h2>slider-grid</h2>
-	  {%include 'jv-sc-product-slider-grid' %}
+
 	  
 	  <h2>grid-simple style 1</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'1',product_paginav:true, product_loadmore:false, product_desc_enable: false %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-1' %}
 	  
 	  <h2>grid-simple style 2</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-2' %}
+
 	  
 	  <h2>grid-simple style 3</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple' with tab_style:'3',product_paginav:false, product_loadmore:true, product_desc_enable: false %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-3' %}
+	
+		{%comment%}
+	  {%endcomment%}
 
-
+	  <h2>slider-grid</h2>
+	  {%include 'jv-sc-product-slider-grid' %}
 		
 	</div>
+
 	<div class="container"> <h2>slider-single</h2> </div>
 	{%include 'jv-sc-product-slider-single' %} 
 </main>

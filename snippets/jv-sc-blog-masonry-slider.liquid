@@ -7,7 +7,7 @@
 
 {% assign blog = blogs[blogs_list_grids] %}
 
-<div class="popular-post-masonry slider-owl-single-item-paging">
+<div class="popular-post-masonry slider-owl-single-item-paging-nolazyload">
   <div class="container">
 
     {% unless heading_enable %}
@@ -38,7 +38,11 @@
                     <div class="popular-box-thumb">
 
                       {% assign image_alt = article.title | escape %}
+                      {% if article.image %}
                       {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+                      {% else %}
+                      <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="{{ product.title }}">
+                      {% endif %}
 
                     </div>
                     <div class="popular-box-text">
@@ -87,5 +91,11 @@ jQuery(function($){
     itemSelector: '.itemMasonry'
     });
   });
+
+  // var $container = $('.masonry-container').masonry({
+    
+  //   itemSelector: '.itemMasonry'
+  //   });
+
 });
 </script>

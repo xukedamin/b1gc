@@ -20,7 +20,7 @@
 
 			<div class="item">
 				{% unless collections[featured_row].all_products_count == 0 %}
-					{% include 'featured-row-content' with class_col: 'col-md-4 col-sm-6 col-xs-12' with leading_product: '', leading_product_image:'', leading_time: '' %}
+					{% include 'featured-row-content' with class_col: 'col-md-4 col-sm-6 col-xs-12' ,leading_product: false, leading_product_image:'', leading_time: '' %}
 				{% endunless %}
 			</div>
 			<!-- End Item -->
