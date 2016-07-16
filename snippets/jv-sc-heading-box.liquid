@@ -1,10 +1,9 @@
 
 {% comment  %} -- must setting 
-{% assign heading_enable =  settings.logo_partner_title_enable %}
-{% assign heading_style = settings.logo_partner_title_style %}
-{% assign heading_title =  settings.logo_partner_title %}
-{% assign heading_subtitle =  settings.logo_partner_subtitle %}
-
+heading_enable
+heading_style
+heading_title
+heading_subtitle
 {% endcomment %}
 
 {%if heading_enable %}
@@ -23,7 +22,6 @@
     {% else %}
    	 	{% assign class_title_box = 'text-left' %} 
   {% endcase %}
-
 
 	<div class="jv-heading {{class_title_box}}">
 		{% if heading_title != blank %}
