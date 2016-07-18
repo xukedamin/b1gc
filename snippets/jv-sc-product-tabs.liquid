@@ -7,16 +7,17 @@
 
 {% endcomment %}
 
-{% assign listProduct = "sc_product_tab_" %}
+{% assign listProduct = "sc_product_tab_grid_icon_" %}
+{% capture listProductHeading %}{{listProduct}}heading{%endcapture%}
+{% capture listProductShowMoreBtn %}{{listProduct}}showmore_enable{%endcapture%}
 
 <div class="product-tab-wrapper">
 
-	<div class="container"> {% include 'jv-sc-heading-box' %} </div>
+	<div class="container"> {% include 'jv-sc-heading-box' with heading_title: settings[listProductHeading], heading_enable:true %} </div>
 
-
-	<div class="nav-tabs-icon tab-section-01 style-2 pt-30" id="tab-2">
+	<div class="nav-tabs-icon tab-section-01 style-2">
 		
-		<ul class="nav nav-tabs" role="tablist" >
+		<ul class="nav nav-tabs" role="tablist">
 			{% for i in (1..6) %}
 				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
@@ -30,7 +31,7 @@
 					
 					{% unless collections[featured_row].all_products_count == 0 %}
 						<li class="{% if i == 1 %} active {% endif %} ">
-							<a href="#product-tab-tab_{{ i }}" data-toggle="tab" role="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
+							<a href="#{{listProduct}}__product-tab-tab_{{ i }}" data-toggle="tab" role="tab"><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
 						</li>
 					{% endunless %}
 				{% endif %}
@@ -49,8 +50,8 @@
 				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
 				{% unless collections[featured_row].all_products_count == 0 %}
-					<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="product-tab-tab_{{ i }}">
-					{% include 'featured-row-content' with leading_product: false, leading_product_image:'', leading_time: ''  %}
+					<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="{{listProduct}}__product-tab-tab_{{ i }}">
+					{% include 'featured-row-content' with leading_product: false, leading_product_image:'', leading_time: '',  product_loadmore: settings[listProductShowMoreBtn]  %}
 					</div>
 				{% endunless %}
 

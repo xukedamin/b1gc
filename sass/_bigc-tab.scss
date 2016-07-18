@@ -258,6 +258,9 @@
     border-bottom: 2px solid $color_mercury;
     margin-bottom: 30px;
     padding-bottom: 14px;
+    .row > .div{
+    	min-height: 33px;
+    }
 }
 
 .list-tab-title .nav > li > a {

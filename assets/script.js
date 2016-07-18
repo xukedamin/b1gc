@@ -784,10 +784,7 @@
 
                 jvbigC.goJVCountdown_load_rebuild(this);
 
-              });
-            });
-
-
+              
             var first = $('.home-featured-slider .owl-theme .owl-controls .owl-page').first().index() + 1;
             var last = $('.home-featured-slider .owl-theme .owl-controls .owl-page').last().index() + 1;
             $('.control-paginav-featured-slider').prepend('<span class="first-num">' + first + '</span>');
@@ -805,6 +802,12 @@
             });
             $(".control-paginav-featured-slider #amount").text($(".control-paginav-featured-slider #slider-range-max").slider("value"));
             $(".control-paginav-featured-slider #amount").appendTo($(".control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all"));
+
+              });
+            });
+
+
+
         }
 
     },
