@@ -6,6 +6,29 @@
 {% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
+
+{%if settings.blog_general_icon_comment != blank %}
+  {%assign icon_comment = settings.blog_general_icon_comment %}
+{%else%}
+   {%assign icon_comment ="lnr lnr-bubble"%}
+{%endif%}
+{%if settings.blog_general_icon_date != blank %}
+  {%assign icon_date = settings.blog_general_icon_date %}
+{%else%}
+   {%assign icon_date ="lnr lnr-calendar-full"%}
+{%endif%}
+{%if settings.blog_general_icon_readmore != blank %}
+  {%assign icon_readmore = settings.blog_general_icon_readmore %}
+{%else%}
+   {%assign icon_readmore ="lnr lnr-arrow-right-circle"%}
+{%endif%}
+{%if settings.blog_general_icon_user != blank %}
+  {%assign icon_user = settings.blog_general_icon_user %}
+{%else%}
+   {%assign icon_user ="lnr lnr-user"%}
+{%endif%}
+
+
 {% assign blogs_list_grids = settings[blog_handle] %}
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
@@ -29,14 +52,20 @@
 
       <div class="container">
         <div class="row">
-         <div class="img-xs col-xs-12" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
-          </div>
+         {%if article.image %}
+          <div class="img-xs col-xs-12" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center"></div>
+          {%else%}
+            <div class="img-xs col-xs-12" style="background-image: url({{ 'jv_noimage.jpg' | asset_url }}); background-size: cover; background-position: center center"></div>
+          {%endif %}
 
          {% if class_item == 'right'%}
           <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
             <div class="content-empty">
-              <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
-              </div>
+              {%if article.image%}
+              <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center"></div>
+              {%else%}
+                <div class="img-xs col-xs-12" style="background-image: url({{ 'jv_noimage.jpg' | asset_url }}); background-size: cover; background-position: center center"></div>
+              {%endif%}
             </div>
           </div>
           {% endif %}
@@ -48,32 +77,32 @@
               <div class="latest-post-info">
                 <ul class="list-inline">
                   <li>
-                    <a href="#"><span class="lnr lnr-calendar-full"></span></a>
+                    <a href="#"><span class="{{icon_date}}"></span></a>
                     <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
                   </li>
                   <li>
-                    <a href="#"><span class="lnr lnr-bubble"></span></a>
-                    <span>{{ article.comments_count }} Comment</span>
+                    <a href="#"><span class="{{icon_comment}}"></span></a>
+                    <span>{{ article.comments_with_count }} {{'blogs.article.comment' | t}}</span>
                   </li>
                   <li>
-                    <a href="#"><span class="lnr lnr-user"></span></a>
+                    <a href="#"><span class="{{icon_user}}"></span></a>
                     <span>{{'blogs.article.postedby'| t}} : {{ article.author }}</span>
                   </li>
-                  <li>
-                    <a href="#"><span class="lnr lnr-heart"></span></a>
-                    <span>29 Like</span>
-                  </li>
+                
                 </ul>
               </div>
-              <a href="{{ article.url }}" class="readmore"><span class="lnr lnr-arrow-right-circle"></span> {{'blogs.article.read_more' | t}}</a>
+              <a href="{{ article.url }}" class="readmore"><span class="{{icon_readmore}}"></span> {{'blogs.article.read_more' | t}}</a>
             </div>
           </div>
 
           {% if class_item == 'left'%}
           <div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
             <div class="content-empty"> 
-              <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center">
-              </div>
+            {%if article.image%}
+              <div class="img" style="background-image: url({{ article.image.src | img_url: '1024x1024' }}); background-size: cover; background-position: center center"></div>
+               {%else%}
+              <div class="img-xs col-xs-12" style="background-image: url({{ 'jv_noimage.jpg' | asset_url }}); background-size: cover; background-position: center center"></div>
+            {%endif%}
             </div>
           </div>
           {% endif %}

@@ -9,6 +9,28 @@
 {% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
+
+{% capture blog_show_readmore %}{{blogDataId}}_show_readmore{%endcapture%}
+{% capture blog_show_date %}{{blogDataId}}_show_date{%endcapture%}
+{% capture blog_show_desc %}{{blogDataId}}_show_desc{%endcapture%}
+
+{%if settings.blog_general_icon_comment != blank %}
+  {%assign icon_comment = settings.blog_general_icon_comment %}
+{%else%}
+   {%assign icon_comment ="lnr lnr-bubble"%}
+{%endif%}
+{%if settings.blog_general_icon_date != blank %}
+  {%assign icon_date = settings.blog_general_icon_date %}
+{%else%}
+   {%assign icon_date ="lnr lnr-calendar-full"%}
+{%endif%}
+{%if settings.blog_general_icon_readmore != blank %}
+  {%assign icon_readmore = settings.blog_general_icon_readmore %}
+{%else%}
+   {%assign icon_readmore ="lnr lnr-arrow-right-circle"%}
+{%endif%}
+
+
 <div class="popular-post-grid slider-owl-4-items">
   <div class="container">
 
@@ -27,26 +49,45 @@
             <div class="item-popular">
               <div class="item-popular-thumb">
                   <a href="{{ article.url }}" class="item-popular-thumb-link">
+                   {% assign image_alt = article.title | escape %}
+                    {%if article.image %}
                      {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' }}
+                     {%else %}
+                      <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
+                    {% endif %}
                   </a>
+                  <span class="icon {{icon_comment}}"></span>
               </div>
               <div class="item-popular-info">
                 <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-                {% if article.content != blank %}
+                {% if article.content != blank and settings[blog_show_desc] %}
                 <p> {{ article.content| strip_html | truncate: 90 }}</p>
                 {% endif %}
+
+                {%if settings[blog_show_readmore] and settings[blog_show_date] %}
+                  {%assign class_meta_col = "col-md-6 col-sm-6 col-xs-6" %}
+                {%else%}
+                  {%assign class_meta_col = "col-xs-12" %}
+                {%endif %}
                 
-                <div class="popular-post-date">
+                {%if settings[blog_show_readmore] or settings[blog_show_date] %}
+                <div class="popular-post-date {%if settings[blog_show_readmore]%}showreadmore{%endif%} {%if settings[blog_show_date]%}showdate{%endif%}">
                   <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                      <span class="lnr lnr-calendar-full"></span>
+                    {%if settings[blog_show_date] %}
+                    <div class="{{class_meta_col}}">
+                      <span class="{{icon_date}}"></span>
                       <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'mm_dd_yy' }}</time>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                      <a href="{{ article.url }}" class="readmore"><span class="lnr lnr-arrow-right-circle"></span> {{'blogs.article.read_more' | t}}</a>
+                    {%endif %}
+                    {%if settings[blog_show_readmore] %}
+                    <div class="{{class_meta_col}}">
+                      <a href="{{ article.url }}" class="readmore"><span class="{{icon_readmore}}"></span> {{'blogs.article.read_more' | t}}</a>
                     </div>
+                    {%endif %}
                   </div>
                 </div>
+                {%endif %}
+
               </div>
             </div>
         </div>

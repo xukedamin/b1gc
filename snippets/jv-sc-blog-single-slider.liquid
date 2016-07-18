@@ -16,6 +16,29 @@
 
 {% capture blog_color_bg_custom_enable %}{{blogDataId}}_color_bg_custom_enable{%endcapture%}
 
+
+{%if settings.blog_general_icon_comment != blank %}
+  {%assign icon_comment = settings.blog_general_icon_comment %}
+{%else%}
+   {%assign icon_comment ="lnr lnr-bubble"%}
+{%endif%}
+{%if settings.blog_general_icon_date != blank %}
+  {%assign icon_date = settings.blog_general_icon_date %}
+{%else%}
+   {%assign icon_date ="lnr lnr-calendar-full"%}
+{%endif%}
+{%if settings.blog_general_icon_readmore != blank %}
+  {%assign icon_readmore = settings.blog_general_icon_readmore %}
+{%else%}
+   {%assign icon_readmore ="lnr lnr-arrow-right-circle"%}
+{%endif%}
+{%if settings.blog_general_icon_user != blank %}
+  {%assign icon_user = settings.blog_general_icon_user %}
+{%else%}
+   {%assign icon_user ="lnr lnr-user"%}
+{%endif%}
+
+
 <div class="home-latest-news">
   
   <div class="container">
@@ -52,21 +75,18 @@
                     <div class="latest-post-info">
                       <ul class="list-inline">
                         <li>
-                          <a href="#"><span class="lnr lnr-calendar-full"></span></a>
+                          <a href="#"><span class="{{icon_date}}"></span></a>
                           <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
                         </li>
                         <li>
-                          <a href="{{ article.url }}#comments"><span class="lnr lnr-bubble"></span></a>
+                          <a href="{{ article.url }}#comments"><span class="{{icon_comment}}"></span></a>
                           <span>{{ article.comments_count }} Comment</span>
                         </li>
                         <li>
-                          <a href="#"><span class="lnr lnr-user"></span></a>
+                          <a href="#"><span class="{{icon_user}}"></span></a>
                           <span>{{'blogs.article.postedby'| t}} : {{ article.author }}</span>
                         </li>
-                        <li>
-                          <a href="#"><span class="lnr lnr-heart"></span></a>
-                          <span>29 Like</span>
-                        </li>
+                       
                       </ul>
                     </div>
                     {% if article.content != blank %}

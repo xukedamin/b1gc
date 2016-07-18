@@ -62,7 +62,8 @@
       "comment_meta_html": "{{ author }} on {{ date }}",
       "read_more": "Read more",
       "share": "SHARE",
-      "postedby": "Posted by"
+      "postedby": "Posted by",
+      "comment":"Comment(s)"
     },
     "comments": {
       "title": "Leave a comment",

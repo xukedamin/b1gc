@@ -16,19 +16,6 @@
 <div class="popular-post-masonry slider-owl-single-item-paging-nolazyload">
   <div class="container">
 
-    {%comment%}
-    {% unless heading_enable %}
-      <div class="box-intro">
-        {% if blog_title != blank %}
-        <h2><span class="title">{{ blog_title }}</span></h2>
-        {% endif %}
-        {% if blog_text != blank %}
-        <span class="desc-title">{{ blog_text }}</span>
-        {% endif %}
-      </div>
-    {% endunless%}
-    {%endcomment%}
-
    {%include 'jv-sc-heading-box' with heading_enable: settings[blog_heading], heading_style:settings[blog_heading_style], heading_title: settings[blog_heading], heading_subtitle: settings[blog_subheading] %}
 
     <div class="paginav-slider">

@@ -8602,6 +8602,45 @@
   },
 
   {
+    "name": "Blog settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      }, 
+      {
+        "type": "text",
+        "id": "blog_general_icon_comment",
+        "label": "Icon comment",
+        "default": "lnr lnr-bubble",
+        "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
+      },
+       {
+        "type": "text",
+        "id": "blog_general_icon_date",
+        "label": "Icon Date",
+        "default": "lnr lnr-calendar-full",
+        "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
+      },
+       {
+        "type": "text",
+        "id": "blog_general_icon_readmore",
+        "label": "Icon Readmore",
+        "default": "lnr lnr-arrow-right-circle",
+        "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
+      },
+       {
+        "type": "text",
+        "id": "blog_general_icon_user",
+        "label": "Icon User",
+        "default": "lnr lnr-user",
+        "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
+      }
+
+    ]
+  },
+
+  {
     "name": "SC: B1 Blog style 1",
     "settings": [
     {
@@ -8646,18 +8685,36 @@
         "label": "Background Center"
         }
       ],
-      "default": "hr_center"
-    },
-    {
-        "type": "blog",
-        "id": "sc_blog_grid_slider_handle",
-        "label": "Select Blog"
+        "default": "hr_center"
+      },
+      {
+          "type": "blog",
+          "id": "sc_blog_grid_slider_handle",
+          "label": "Select Blog"
       }, 
-    {
+      {
         "type": "text",
         "id": "sc_blog_grid_slider_limit",
         "label": "Limit",
         "default": "6"
+      },
+      {
+        "type": "checkbox",
+        "id": "sc_blog_grid_slider_show_readmore",
+        "label": "Show Readmore",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "sc_blog_grid_slider_show_date",
+        "label": "Show Date",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "sc_blog_grid_slider_show_desc",
+        "label": "Show Description",
+        "default": true
       }
     ]
   },
