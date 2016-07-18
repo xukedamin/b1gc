@@ -1,13 +1,27 @@
+{% assign blogDataId = "sc_blog_mini" %}
+
+{% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
+{% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
+{% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
+
+{% assign blogs_list_grids = settings[blog_handle] %}
+{% assign limit_item = settings[blog_limit] | plus: 0 %}
+{% assign blog = blogs[blogs_list_grids] %}
+
 <ul class="blog-related">
-	{% for article in blog.articles limit:6 %}
+	{% for article in blog.articles limit:limit_item %}
 	
 		<li class="blog-related-item">
-			{% if article.image %}
 				{% assign image_alt = article.title | escape %}
 				<div class="widget-recent-post-thumb">
-					<a href="{{article.url}}" class="widget-recent-post-link">	{{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' }}</a>
+					<a href="{{article.url}}" class="widget-recent-post-link">	
+					{% if article.image %}
+						{{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' }}
+					{% else %}
+	          <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
+					{% endif %}
+					</a>
 				</div>
-			{% endif %}
 
 			<div class="content widget-recent-post-info">
 				<h3 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>

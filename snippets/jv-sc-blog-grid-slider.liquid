@@ -1,31 +1,26 @@
 
 
-{% assign blogs_list_grids = settings.home_blog %}
-{% assign limit_item = settings.home_blog_number | plus: 0 %}
 
-{% assign blog = blogs[blogs_list_grids] %}
+{% assign blogDataId = "sc_blog_grid_slider" %}
+
+{% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
+{% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
+{% capture blog_heading_style %}{{blogDataId}}_heading_style{%endcapture%}
+{% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
+{% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
 <div class="popular-post-grid slider-owl-4-items">
   <div class="container">
 
-    {%unless heading_enable %}
-      {% assign blog_title = settings.home_blog_title %}
-      {% assign blog_text = settings.home_blog_text %}
-    <div class="box-intro">
-     {% if blog_title != blank %}
-      <h2><span class="title">{{ blog_title }}</span></h2>
-       {% endif %}
-       {% if blog_text != blank %}
-      <span class="desc-title">{{ blog_text }}</span>
-       {% endif %}
-    </div>
-
-    {%endunless%}
-
-    {%include 'jv-sc-heading-box'%}
+     {%include 'jv-sc-heading-box' with heading_enable: settings[blog_heading], heading_style:settings[blog_heading_style], heading_title: settings[blog_heading], heading_subtitle: settings[blog_subheading] %}
   
      <div class="paginav-slider">
       <div class="wrap-item">
+
+      {% assign blogs_list_grids = settings[blog_handle] %}
+      {% assign limit_item = settings[blog_limit] | plus: 0 %}
+
+      {% assign blog = blogs[blogs_list_grids] %}
 
           {% for article in blog.articles limit:limit_item %}
           <div class="item col-md-3 col-sm-6 col-xs-12">

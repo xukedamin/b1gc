@@ -2441,7 +2441,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -2508,7 +2508,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -2575,7 +2575,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -2804,7 +2804,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -2871,7 +2871,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -2938,7 +2938,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3005,7 +3005,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3072,7 +3072,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3219,7 +3219,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3287,7 +3287,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3354,7 +3354,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3421,7 +3421,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3488,7 +3488,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3555,7 +3555,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3623,7 +3623,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3752,7 +3752,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3819,7 +3819,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3886,7 +3886,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -3953,7 +3953,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4020,7 +4020,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4149,7 +4149,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4217,7 +4217,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4284,7 +4284,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4351,7 +4351,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4418,7 +4418,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4546,7 +4546,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4613,7 +4613,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4680,7 +4680,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4747,7 +4747,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -4814,7 +4814,7 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
           "value": "hr_left",
@@ -8601,7 +8601,283 @@
     ]
   },
 
-   {
+  {
+    "name": "SC: B1 Blog style 1",
+    "settings": [
+    {
+      "type": "header",
+      "content": "B1 blog 1 - grid slider"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_grid_slider_heading",
+        "label": "Heading",
+        "default": "Latest posts"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_grid_slider_subheading",
+        "label": "Heading",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_grid_slider_heading_style",
+      "label": "Heading style",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "Border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Hr Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Hr Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "hr_center"
+    },
+    {
+        "type": "blog",
+        "id": "sc_blog_grid_slider_handle",
+        "label": "Select Blog"
+      }, 
+    {
+        "type": "text",
+        "id": "sc_blog_grid_slider_limit",
+        "label": "Limit",
+        "default": "6"
+      }
+    ]
+  },
+
+  {
+    "name": "SC: B2 Blog style 2",
+    "settings": [
+    {
+      "type": "header",
+      "content": "B2 blog 2 - Masonry slider"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_masonry_slider_heading",
+        "label": "Heading",
+        "default": "Popular"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_masonry_slider_subheading",
+        "label": "Heading",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_masonry_slider_heading_style",
+      "label": "Heading style",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "Border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Hr Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Hr Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "hr_center"
+    },
+    {
+        "type": "blog",
+        "id": "sc_blog_masonry_slider_handle",
+        "label": "Select Blog"
+      }, 
+    {
+        "type": "text",
+        "id": "sc_blog_masonry_slider_limit",
+        "label": "Limit",
+        "default": "12"
+      }
+    ]
+  },
+  {
+    "name": "SC: B2 Blog style 3 - short",
+    "settings": [
+    {
+      "type": "header",
+      "content": "B2 blog 3 - Short"
+    }, 
+ 
+    {
+        "type": "blog",
+        "id": "sc_blog_mini_handle",
+        "label": "Select Blog"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_mini_limit",
+        "label": "Limit",
+        "default": "6"
+    }
+    ]
+  },
+  {
+    "name": "SC: B2 Blog style 4",
+    "settings": [
+    {
+      "type": "header",
+      "content": "B2 blog 4 - Alternate"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_alt_heading",
+        "label": "Heading",
+        "default": "LATEST POSTS FROM OUR BLOG"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_alt_subheading",
+        "label": "Heading",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_alt_heading_style",
+      "label": "Heading style",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "Border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Horizontial Line Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Horizontial Line Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "background_center"
+    },
+    {
+        "type": "blog",
+        "id": "sc_blog_alt_handle",
+        "label": "Select Blog"
+      }, 
+    {
+        "type": "text",
+        "id": "sc_blog_alt_limit",
+        "label": "Limit",
+        "default": "2"
+      }
+    ]
+  },
+
+  {
+    "name": "SC: B2 Blog style 5",
+    "settings": [
+    {
+      "type": "header",
+      "content": "B2 blog 5 - Single slider"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_singleslider_heading",
+        "label": "Heading",
+        "default": "Latest posts"
+    }, 
+    {
+        "type": "text",
+        "id": "sc_blog_singleslider_subheading",
+        "label": "Heading",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_singleslider_heading_style",
+      "label": "Heading style",
+      "options": [
+        {
+        "value": "normal",
+        "label": "Normal"
+        },
+        {
+        "value": "border",
+        "label": "Border bottom"
+        },
+        {
+        "value": "hr_left",
+        "label": "Hr Left"
+        },
+        {
+        "value": "hr_center",
+        "label": "Hr Center"
+        },
+        {
+        "value": "background_center",
+        "label": "Background Center"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+        "type": "checkbox",
+        "id": "sc_blog_singleslider_color_bg_custom_enable",
+        "label": "Custom Color enable",
+        "default": false
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_singleslider_color_bg_custom",
+        "label": "Custom Color",
+        "default": "#1b1d1f"
+    },
+    {
+        "type": "blog",
+        "id": "sc_blog_singleslider_handle",
+        "label": "Select Blog"
+      }, 
+    {
+        "type": "text",
+        "id": "sc_blog_singleslider_limit",
+        "label": "Limit",
+        "default": "9"
+      }
+    ]
+  },
+
+  {
     "name": "Material Feature - Locator",
     "settings": [
       {
@@ -10732,15 +11008,15 @@
           },
           {
           "value": "border",
-          "label": "border bottom"
+          "label": "Border bottom"
           },
           {
             "value": "hr_left",
-            "label": "Underline Left"
+            "label": "Horizontial line Left"
           },
           {
             "value": "hr_center",
-            "label": "Underline Center"
+            "label": "Horizontial line Center"
           },
           {
             "value": "background_center",

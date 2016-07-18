@@ -894,7 +894,7 @@ ul.blog-related{
 .latest-post {
     background: $color_wild-sand none repeat scroll 0 0;
     margin-top: 15px;
-    padding: 70px 0 0;
+    // padding: 70px 0 0;
 }
 
 .item-latest-post {
@@ -1039,6 +1039,10 @@ ul.blog-related{
   background: $color_shark none repeat scroll 0 0;
   padding: 100px 0;
   position: relative;
+}
+
+.wrap-latest-news-slider.blog__color--custom{
+ background: #{'{{settings.sc_blog_singleslider_color_bg_custom}}'} !important;
 }
 
 .home-latest-news .item {

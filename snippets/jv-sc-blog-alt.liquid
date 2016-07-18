@@ -1,23 +1,19 @@
-{% assign blog_title = settings.home_blog_title %}
-{% assign blog_text = settings.home_blog_text %}
+{% assign blogDataId = "sc_blog_alt" %}
 
-{% assign blogs_list_grids = settings.home_blog %}
-{% assign limit_item = settings.home_blog_number | plus: 0 %}
+{% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
+{% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
+{% capture blog_heading_style %}{{blogDataId}}_heading_style{%endcapture%}
+{% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
+{% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
-{% assign limit_item = 2 %}
-
+{% assign blogs_list_grids = settings[blog_handle] %}
+{% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
 
 <div class="latest-post alt">
   <div class="container">
-    <div class="box-title">
-    {% if blog_title != blank %}
-      <h2>{{ blog_title }}</h2>
-      {% endif %}
-      {% if blog_text != blank %}
-      <p>{{ blog_text }}</p>
-       {% endif %}
-    </div>
+    {%include 'jv-sc-heading-box' with heading_enable: settings[blog_heading], heading_style:settings[blog_heading_style], heading_title: settings[blog_heading], heading_subtitle: settings[blog_subheading] %}
+
   </div>
 
   {% for article in blog.articles limit:limit_item %}
