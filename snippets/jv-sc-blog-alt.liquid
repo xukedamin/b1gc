@@ -7,6 +7,19 @@
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
 
+{% capture blog_color_bg_custom_enable %}{{blogDataId}}_color_bg_custom_enable{%endcapture%}
+{% capture blog_show_readmore %}{{blogDataId}}_show_readmore{%endcapture%}
+{% capture blog_show_comment %}{{blogDataId}}_show_comment{%endcapture%}
+{% capture blog_show_date %}{{blogDataId}}_show_date{%endcapture%}
+{% capture blog_show_desc %}{{blogDataId}}_show_desc{%endcapture%}
+
+{% capture blog_show_desc_length %}{{blogDataId}}_desc_length{%endcapture%}
+{%assign desc_limit = settings[blog_show_desc_length] | plus: 0 %}
+
+{% capture blog_show_author %}{{blogDataId}}_show_author{%endcapture%}
+
+
+
 {%if settings.blog_general_icon_comment != blank %}
   {%assign icon_comment = settings.blog_general_icon_comment %}
 {%else%}
@@ -71,27 +84,42 @@
           {% endif %}
 
           <div class="col-md-6 col-sm-6 col-xs-12" >
-            <div class="latest-post-content">
+            <div class="latest-post-content {%if settings[blog_color_bg_custom_enable]%}blog__color--custom{%endif%} ">
               <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-              <p>{{ article.content| strip_html  | truncate: 200 }}</p>
+
+              {% if settings[blog_show_desc] %}
+              <p>{{ article.content| strip_html  | truncatewords: desc_limit }}</p>
+              {% endif %}
               <div class="latest-post-info">
                 <ul class="list-inline">
+                  
+                  {%if settings[blog_show_date] %}
                   <li>
                     <a href="#"><span class="{{icon_date}}"></span></a>
                     <time  datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
                   </li>
+                  {%endif %}
+                  
+                  {%if settings[blog_show_comment] %}
                   <li>
                     <a href="#"><span class="{{icon_comment}}"></span></a>
                     <span>{{ article.comments_with_count }} {{'blogs.article.comment' | t}}</span>
                   </li>
+                  {%endif %}
+                  
+                  {%if settings[blog_show_author] %}
                   <li>
                     <a href="#"><span class="{{icon_user}}"></span></a>
                     <span>{{'blogs.article.postedby'| t}} : {{ article.author }}</span>
                   </li>
+                  {% endif %}
                 
                 </ul>
               </div>
+
+              {%if settings[blog_show_readmore] %}
               <a href="{{ article.url }}" class="readmore"><span class="{{icon_readmore}}"></span> {{'blogs.article.read_more' | t}}</a>
+              {% endif %}
             </div>
           </div>
 

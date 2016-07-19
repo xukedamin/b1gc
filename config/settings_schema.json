@@ -8770,21 +8770,57 @@
         "type": "blog",
         "id": "sc_blog_masonry_slider_handle",
         "label": "Select Blog"
-      }, 
+    }, 
     {
         "type": "text",
         "id": "sc_blog_masonry_slider_limit",
         "label": "Limit",
         "default": "12"
-      }
+    },
+    {
+        "type": "checkbox",
+        "id": "sc_blog_masonry_slider_show_title",
+        "label": "Show Title",
+        "default": true
+      },
+   
+      {
+        "type": "checkbox",
+        "id": "sc_blog_masonry_slider_show_desc",
+        "label": "Show Description",
+        "default": true
+      },
+    {
+      "type": "header",
+      "content": "Customize color"
+    }, 
+
+    {
+        "type": "checkbox",
+        "id": "sc_blog_masonry_slider_color_custom_enable",
+        "label": "Custom Color enable",
+        "default": false
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_masonry_slider_color_bg_custom",
+        "label": "Custom Background Color",
+        "default": "#1b1d1f"
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_masonry_slider_color_text_custom",
+        "label": "Custom Text Color",
+        "default": "#ffffff"
+    }
     ]
   },
   {
-    "name": "SC: B2 Blog style 3 - short",
+    "name": "SC: B3 Blog style 3 - short",
     "settings": [
     {
       "type": "header",
-      "content": "B2 blog 3 - Short"
+      "content": "B3 blog 3 - Short"
     }, 
  
     {
@@ -8798,14 +8834,27 @@
         "label": "Limit",
         "default": "6"
     }
+    ,{
+        "type": "checkbox",
+        "id": "sc_blog_mini_show_date",
+        "label": "Show Date",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "sc_blog_mini_show_dateicon",
+        "label": "Show Date Icon",
+        "default": false
+    }
+    
     ]
   },
   {
-    "name": "SC: B2 Blog style 4",
+    "name": "SC: B4 Blog style 4",
     "settings": [
     {
       "type": "header",
-      "content": "B2 blog 4 - Alternate"
+      "content": "B4 blog 4 - Alternate"
     }, 
     {
         "type": "text",
@@ -8816,7 +8865,7 @@
     {
         "type": "text",
         "id": "sc_blog_alt_subheading",
-        "label": "Heading",
+        "label": "Sub Heading",
         "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
     },
     {
@@ -8851,18 +8900,96 @@
         "type": "blog",
         "id": "sc_blog_alt_handle",
         "label": "Select Blog"
-      }, 
+    }, 
     {
         "type": "text",
         "id": "sc_blog_alt_limit",
         "label": "Limit",
         "default": "2"
-      }
+    },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_alt_show_readmore",
+      "label": "Show Readmore",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_alt_show_date",
+      "label": "Show Date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_alt_show_desc",
+      "label": "Show Description",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_alt_desc_length",
+      "label": "Description's length",
+      "options": [
+        {
+        "value": "30",
+        "label": "Short"
+        },
+        {
+        "value": "100",
+        "label": "Medium"
+        },
+        {
+        "value": "200",
+        "label": "Maximum"
+        }
+      ],
+    "default": "100"
+    },
+     {
+      "type": "checkbox",
+      "id": "sc_blog_alt_show_author",
+      "label": "Show Author",
+      "default": true
+    },
+     {
+      "type": "checkbox",
+      "id": "sc_blog_alt_show_comment",
+      "label": "Show Comment",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Customize color"
+    }, 
+     {
+        "type": "checkbox",
+        "id": "sc_blog_alt_color_bg_custom_enable",
+        "label": "Enable Custom Color",
+        "default": false
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_alt_color_bg_custom",
+        "label": "Custom Background Color",
+        "default": "#fec64d"
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_alt_color_text_custom",
+        "label": "Custom Text Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "id": "sc_blog_alt_color_border_custom",
+        "label": "Custom Border Color",
+        "default": "#ffffff"
+    }
     ]
   },
 
   {
-    "name": "SC: B2 Blog style 5",
+    "name": "SC: B5 Blog style 5",
     "settings": [
     {
       "type": "header",
@@ -8908,19 +9035,7 @@
       ],
       "default": "normal"
     },
-    {
-        "type": "checkbox",
-        "id": "sc_blog_singleslider_color_bg_custom_enable",
-        "label": "Custom Color enable",
-        "default": false
-    },
      {
-        "type": "color",
-        "id": "sc_blog_singleslider_color_bg_custom",
-        "label": "Custom Color",
-        "default": "#1b1d1f"
-    },
-    {
         "type": "blog",
         "id": "sc_blog_singleslider_handle",
         "label": "Select Blog"
@@ -8930,7 +9045,72 @@
         "id": "sc_blog_singleslider_limit",
         "label": "Limit",
         "default": "9"
-      }
+      },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_singleslider_show_readmore",
+      "label": "Show Readmore",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_singleslider_show_date",
+      "label": "Show Date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sc_blog_singleslider_show_desc",
+      "label": "Show Description",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "sc_blog_singleslider_desc_length",
+      "label": "Description's length",
+      "options": [
+        {
+        "value": "10",
+        "label": "Short"
+        },
+        {
+        "value": "30",
+        "label": "Maximum"
+        }
+      
+      ],
+      "default": "10"
+      },
+     {
+      "type": "checkbox",
+      "id": "sc_blog_singleslider_show_author",
+      "label": "Show Author",
+      "default": true
+    },
+     {
+      "type": "checkbox",
+      "id": "sc_blog_singleslider_show_comment",
+      "label": "Show Comment",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Customize color"
+    }, 
+
+    {
+        "type": "checkbox",
+        "id": "sc_blog_singleslider_color_bg_custom_enable",
+        "label": "Custom Color enable",
+        "default": false
+    },
+     {
+        "type": "color",
+        "id": "sc_blog_singleslider_color_bg_custom",
+        "label": "Custom Background Color",
+        "default": "#1b1d1f"
+    }
+   
     ]
   },
 

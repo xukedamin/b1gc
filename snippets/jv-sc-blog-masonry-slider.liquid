@@ -7,6 +7,10 @@
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
 
+{% capture blog_color_custom_enable %}{{blogDataId}}_color_custom_enable{%endcapture%}
+{% capture blog_show_title %}{{blogDataId}}_show_title{%endcapture%}
+{% capture blog_show_desc %}{{blogDataId}}_show_desc{%endcapture%}
+
 {% assign blogs_list_grids = settings[blog_handle] %}
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
@@ -36,14 +40,19 @@
                       {% else %}
                        <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
                       {% endif %}
-
                     </div>
-                    <div class="popular-box-text">
+                    
+                    {%if settings[blog_show_title] or settings[blog_show_desc] %}
+                    <div class="popular-box-text {%if settings[blog_color_custom_enable] %}blog__color--custom{%endif%}">
+                      {%if settings[blog_show_title]%}
                       <h2 class="title-popular-box"><a href="{{ article.url }}"><span>{{ article.title }}</span></a></h2>
-                      {% if article.content != blank %}
+                      {% endif %}
+                      {% if article.content != blank and settings[blog_show_desc] %}
                       <div class="desc-popular-box">{{ article.content | strip_html  | truncate: 40 }}</div>
                       {% endif %}
                     </div>
+                    {% endif %}
+
                   </div>
 
                 </div>

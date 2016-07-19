@@ -4,6 +4,14 @@
 {% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
+{% capture blog_show_date %}{{blogDataId}}_show_date{%endcapture%}
+{% capture blog_show_dateicon %}{{blogDataId}}_show_dateicon{%endcapture%}
+{%if settings.blog_general_icon_date != blank %}
+  {%assign icon_date = settings.blog_general_icon_date %}
+{%else%}
+   {%assign icon_date ="lnr lnr-calendar-full"%}
+{%endif%}
+
 {% assign blogs_list_grids = settings[blog_handle] %}
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
@@ -25,9 +33,12 @@
 
 			<div class="content widget-recent-post-info">
 				<h3 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+				{%if settings[blog_show_date]%}
 				<time class="post-date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+					{%if settings[blog_show_dateicon] %}<span class="{{icon_date}}"></span>{% endif %}
 					<em class="text-light">{{ article.published_at | date: format: 'month_day_year' }}</em>
 				</time>
+				{% endif %}
 			</div>
 
 		</li>
