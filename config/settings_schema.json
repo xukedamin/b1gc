@@ -1472,187 +1472,7 @@
       }
     ]
   },
-  {
-    "name": "Sidebar Blog",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "blog_search",
-        "label": "Show post search",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "blog_categories",
-        "label": "Show post categories",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "blog_recent",
-        "label": "Show recent articles",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "blog_sidebar_tags",
-        "label": "Show tags",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Banner ADV"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget2_visible",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "textwidget2_heading",
-        "label": "Heading",
-        "default": "BANNER"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget2_image",
-        "label": "Image",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "textwidget2_image.jpg",
-        "max-width": 470
-      },
-      {
-        "type": "text",
-        "id": "textwidget2_link",
-        "label": "link"
-      },
-      {
-        "type": "textarea",
-        "id": "textwidget2_content",
-        "label": "Content"
-      }
-    ]
-  },
-  {
-    "name": "Sidebar Collections",
-    "settings": [
-      
-      {
-        "type": "header",
-        "content": "Link Lists"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_widget_linklist1",
-        "label": "Show link list #1"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist1",
-        "label": "Use list:"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_widget_linklist2",
-        "label": "Show link list #2"
-      },
-      {
-        "type": "link_list",
-        "id": "widget_linklist2",
-        "label": "Use list:"
-      },
-      {
-        "type": "header",
-        "content": "Product Filters"
-      },
-      {
-        "type": "radio",
-        "id": "collection_sidebar_filters",
-        "label": "Sidebar product filters",
-        "options": [
-          {
-            "value": "tags",
-            "label": "By tag"
-          },
-          {
-            "value": "groups",
-            "label": "By group"
-          }
-        ],
-        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_type_enable",
-        "label": "Show shop by type",
-        "default":false
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_vendor_enable",
-        "label": "Show shop by vendor",
-        "default":false
-      },
-     
-    
-      {
-        "type": "header",
-        "content": "Text Widget"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget_visible",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "textwidget_heading",
-        "label": "Heading",
-        "default": "Welcome to BigC"
-      },
-      {
-        "type": "checkbox",
-        "id": "textwidget_image",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "textwidget_image.jpg",
-        "max-width": 270
-      },
-      {
-        "type": "textarea",
-        "id": "textwidget_content",
-        "label": "Content",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_ajax_filters",
-        "label": "Show Ajax Filters",
-        "default": true
-      }
-      ,{
-        "type": "checkbox",
-        "id": "viewed_enable",
-        "label": "Enable recently products",
-        "default" :true
-      },
 
-      {
-        "type": "text",
-        "id":"viewed_number_of",
-        "label": "Number of recently products",
-        "default" : "4"
-      }
-    ]
-  },
   {
     "name": "Search settings",
     "settings": [
@@ -1698,6 +1518,7 @@
       }
     ]
   },
+
   {
     "name": "Select default home page",
     "settings": [
@@ -1751,8 +1572,6 @@
       }
     ]  
   },
-
-
   {
     "name": "Home page 1",
     "settings": [
@@ -2101,8 +1920,6 @@
 
     ]
   },
-
-
  {
     "name": "Home page 2",
     "settings": [
@@ -2685,7 +2502,7 @@
     ]
   },
 
-   {
+  {
     "name": "Home page 3",
     "settings": [
       {
@@ -3114,8 +2931,6 @@
       }
     ]
   },
-
-
 {
     "name": "Home page 4",
     "settings": [
@@ -3665,8 +3480,6 @@
       }
     ]
   },
-
-
 {
     "name": "Home page 5",
     "settings": [
@@ -4856,31 +4669,233 @@
       }
     
     ]
-  }
-  ,
+  },
+
+  {
+    "name": "Sidebar Blog",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "blog_search",
+        "label": "Show post search",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_categories",
+        "label": "Show post categories",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_recent",
+        "label": "Show recent articles",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_sidebar_tags",
+        "label": "Show tags",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Banner ADV"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_visible",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_heading",
+        "label": "Heading",
+        "default": "BANNER"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget2_image",
+        "label": "Image",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "textwidget2_image.jpg",
+        "max-width": 470
+      },
+      {
+        "type": "text",
+        "id": "textwidget2_link",
+        "label": "link"
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget2_content",
+        "label": "Content"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar Collections",
+    "settings": [
+      
+      {
+        "type": "header",
+        "content": "Link Lists"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist1",
+        "label": "Show link list #1"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist1",
+        "label": "Use list:"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_widget_linklist2",
+        "label": "Show link list #2"
+      },
+      {
+        "type": "link_list",
+        "id": "widget_linklist2",
+        "label": "Use list:"
+      },
+      {
+        "type": "header",
+        "content": "Product Filters"
+      },
+      {
+        "type": "radio",
+        "id": "collection_sidebar_filters",
+        "label": "Sidebar product filters",
+        "options": [
+          {
+            "value": "tags",
+            "label": "By tag"
+          },
+          {
+            "value": "groups",
+            "label": "By group"
+          }
+        ],
+        "info": "[Learn how to set up filter groups](https:\/\/\/docs.shopify.com\/manual\/more\/official-shopify-themes\/supply#enable-group-filtering)."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_type_enable",
+        "label": "Show shop by type",
+        "default":false
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_vendor_enable",
+        "label": "Show shop by vendor",
+        "default":false
+      },
+     
+    
+      {
+        "type": "header",
+        "content": "Text Widget"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_visible",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "textwidget_heading",
+        "label": "Heading",
+        "default": "Welcome to BigC"
+      },
+      {
+        "type": "checkbox",
+        "id": "textwidget_image",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "textwidget_image.jpg",
+        "max-width": 270
+      },
+      {
+        "type": "textarea",
+        "id": "textwidget_content",
+        "label": "Content",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_ajax_filters",
+        "label": "Show Ajax Filters",
+        "default": true
+      },
+       {
+        "type": "header",
+        "content": "Recently Viewed"
+      },
+      {
+        "type": "checkbox",
+        "id": "viewed_enable",
+        "label": "Enable recently products",
+        "default" :true
+      },
+
+      {
+        "type": "text",
+        "id":"viewed_number_of",
+        "label": "Number of recently products",
+        "default" : "4"
+      }
+    ]
+  },
+
   {
     "name": "Collections Page",
     "settings": [
+      {
+        "type": "header",
+        "content": "Collection index page"
+      },
+      {
+        "type":"paragraph",
+        "content": "Refers to site_url\/collections"
+      },
       {
         "type": "checkbox",
         "id": "page_collections_enable",
         "label": "Show Collections",
         "default": true
       },
+        {
+        "type": "checkbox",
+        "id": "page_product_in_collections_enable",
+        "label": "Show products in Collections page"
+      },
+      {
+        "type": "header",
+        "content": "Specified Collection page"
+      },
        {
-        "type": "select",
-        "id": "collection_sidebar_location",
-        "label": "Collection Sidebar Location",
-        "options": [
-          {
-            "value": "collection_sidebar_left",
-            "label": "Sidebar left"
-          },
-          {
-            "value": "collection_sidebar_right",
-            "label": "Sidebar right"
-          }
-        ]
+        "type":"paragraph",
+        "content": "Refers to site_url\/collections\/all or other specified collection id: site_url\/collections\/art"
+      },
+      {
+        "type": "text",
+        "id": "number_products_per_page",
+        "label": "Products per page",
+        "default": "9"
+      }, 
+      {
+        "type": "header",
+        "content": "Product General setting"
       },
       {
         "type": "select",
@@ -4899,27 +4914,11 @@
         "default": "large"
       },
       {
-        "type": "text",
-        "id": "number_products_per_page",
-        "label": "Products per page",
-        "default": "9"
-      }, 
-      {
-        "type": "checkbox",
-        "id": "page_product_in_collections_enable",
-        "label": "Show products in Collections page"
-      },
-       {
-        "type": "header",
-        "content": "Product General setting"
-      },
-      {
         "type": "checkbox",
         "id": "enable_wishlist",
         "label": "Enable Wishlist",
         "default": true
       },
-
       {
         "type": "radio",
         "id": "product_show_price_compare_at_price",
@@ -5082,7 +5081,68 @@
       }
     ]
   },
- 
+   {
+    "name": "Price format",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_dollar_symbol",
+        "label": "Show dollar sign"
+      },
+      {
+        "type": "checkbox",
+        "id": "superscript_decimals",
+        "label": "Show cents as superscript",
+        "info": "This setting won't apply if you're using a currency selector or format that includes a period before the number. For example: RS.1,000.00. [More info.](https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/supply#show-cents-as-superscript)"
+      }
+    ]
+  },
+
+  {
+    "name": "Currency",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "To offer multiple currencies on your online store, you must first [edit your store's currency formatting](https:\/\/docs.shopify.com\/support\/settings\/general\/tell-my-script-where-to-find-money-formats)."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Show currency conversion",
+        "default": true,
+        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without currency ($10.00)"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With currency ($10.00 CAD)"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Supported currencies",
+        "default": "INR GBP CAD USD AUD EUR JPY",
+        "info": "Use the country's ISO [currency code](http:\/\/www.xe.com\/iso4217.php). Separate your currency codes with a space."
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      }
+    ]
+  },
   
   {
     "name": "Cart page",
@@ -5146,70 +5206,6 @@
       }
     ]
   },
-  {
-    "name": "Price format",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "show_dollar_symbol",
-        "label": "Show dollar sign"
-      },
-      {
-        "type": "checkbox",
-        "id": "superscript_decimals",
-        "label": "Show cents as superscript",
-        "info": "This setting won't apply if you're using a currency selector or format that includes a period before the number. For example: RS.1,000.00. [More info.](https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/supply#show-cents-as-superscript)"
-      }
-    ]
-  },
-
-  {
-    "name": "Currency",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "To offer multiple currencies on your online store, you must first [edit your store's currency formatting](https:\/\/docs.shopify.com\/support\/settings\/general\/tell-my-script-where-to-find-money-formats)."
-      },
-      {
-        "type": "checkbox",
-        "id": "show_multiple_currencies",
-        "label": "Show currency conversion",
-        "default": true,
-        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
-      },
-      {
-        "type": "select",
-        "id": "currency_format",
-        "label": "Format",
-        "options": [
-          {
-            "value": "money_format",
-            "label": "Without currency ($10.00)"
-          },
-          {
-            "value": "money_with_currency_format",
-            "label": "With currency ($10.00 CAD)"
-          }
-        ],
-        "default": "money_with_currency_format"
-      },
-      {
-        "type": "text",
-        "id": "supported_currencies",
-        "label": "Supported currencies",
-        "default": "INR GBP CAD USD AUD EUR JPY",
-        "info": "Use the country's ISO [currency code](http:\/\/www.xe.com\/iso4217.php). Separate your currency codes with a space."
-      },
-      {
-        "type": "text",
-        "id": "default_currency",
-        "label": "Default currency",
-        "default": "USD"
-      }
-    ]
-  },
-  
-
   {
     "name": "Page About Us",
     "settings": [
@@ -5314,7 +5310,6 @@
       
     ]
   },
-
 
   {
     "name": "Material Slide show",

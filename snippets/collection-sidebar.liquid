@@ -86,89 +86,88 @@ breadcrumbs you need to include this:
 {% if settings.collection_sidebar_filters == 'groups' %}
   {% if collection.all_tags.size > 0 %}
 
-  {% comment %}  Loop through tag categories  {% endcomment %}
-  {% for cat_item in cat_array %}
-    <div class="widget-wrapper">
-      <div class="widget widget-default">  
-        <h3 class="widget-title sub-title"><span>{{ cat_item }}</span></h3>
-        <ul class="advanced-filters">
-          {% comment %}       Loop through collection tags        {% endcomment %}
-          
-          {% for tag in collection.all_tags %}
-            {% assign cat = tag | split: '_' | first %}              
+    {% comment %}  Loop through tag categories  {% endcomment %}
+    {% for cat_item in cat_array %}
+      <div class="widget-wrapper">
+        <div class="widget widget-default">  
+          <h3 class="widget-title sub-title"><span>{{ cat_item }}</span></h3>
+          <ul class="advanced-filters">
+            {% comment %}       Loop through collection tags        {% endcomment %}
             
-            {% if cat != tag and cat_item == cat %}
-              {% comment %}   Strip out tag category prefix and add/remove link for tag filtering  {% endcomment %}
+            {% for tag in collection.all_tags %}
+              {% assign cat = tag | split: '_' | first %}              
               
-              {% if current_tags contains tag %}
-                <li class="advanced-filter active-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
-                {% else %}
-                <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
+              {% if cat != tag and cat_item == cat %}
+                {% comment %}   Strip out tag category prefix and add/remove link for tag filtering  {% endcomment %}
+                
+                {% if current_tags contains tag %}
+                  <li class="advanced-filter active-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
+                  {% else %}
+                  <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
+                {% endif %}
+
               {% endif %}
 
-            {% endif %}
+            {% endfor %}
 
-          {% endfor %}
-
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
 
-  <script>
-    $(function() {
-      var filters = $('.advanced-filter'),
-          el,
-          elGroup,
-          elHandle,
-          activeTagInGroup;
+    <script>
+      $(function() {
+        var filters = $('.advanced-filter'),
+            el,
+            elGroup,
+            elHandle,
+            activeTagInGroup;
 
-      filters.on('click', function(e) {
-        el = $(this);
-        elGroup = el.data('group');
-        elHandle = el.data('handle');
+        filters.on('click', function(e) {
+          el = $(this);
+          elGroup = el.data('group');
+          elHandle = el.data('handle');
 
-        //ADD
-        activeTagInGroup = $('.active-filter[data-group="'+ elGroup +'"]');
-         
-        // If the tag clicked is not already active and its group contains an active tag, we will swap tag within the group.
-        if ( !el.hasClass('active-filter')  && activeTagInGroup.size() ) {
-          e.preventDefault();
-          location.href = location.href.replace(activeTagInGroup.data('handle'), elHandle);
+          //ADD
+          activeTagInGroup = $('.active-filter[data-group="'+ elGroup +'"]');
+           
+          // If the tag clicked is not already active and its group contains an active tag, we will swap tag within the group.
+          if ( !el.hasClass('active-filter')  && activeTagInGroup.size() ) {
+            e.preventDefault();
+            location.href = location.href.replace(activeTagInGroup.data('handle'), elHandle);
 
-        }
+          }
+        });
       });
-    });
-  </script>
+    </script>
 
-{%if settings.sidebar_ajax_filters%}
-<script>
-  //Ajax filter collection
-  $(document).delegate('.advanced-filter > a', 'click', function() {
+    {%if settings.sidebar_ajax_filters%}
+    <script>
+      //Ajax filter collection
+      $(document).delegate('.advanced-filter > a', 'click', function() {
 
-    history.pushState({}, document.title, this.href);
-    
-    var b = $('body').addClass('ajaxing'),
-        h = $('html,body');
-    $('#box').load([this.href, '#collection'].join(' '), function() {
+        history.pushState({}, document.title, this.href);
+        
+        var b = $('body').addClass('ajaxing'),
+            h = $('html,body');
+        $('#box').load([this.href, '#collection'].join(' '), function() {
 
-        ajaxifyShopifyInit();
-       
-        b.removeClass('ajaxing');
-        h.animate({ scrollTop: $('#box').offset().top });
-    });
-    return false;
-  });
-</script>
-
-{% endif %}
-
-
-
+            ajaxifyShopifyInit();
+           
+            b.removeClass('ajaxing');
+            h.animate({ scrollTop: $('#box').offset().top });
+        });
+        return false;
+      });
+    </script>
+    {% endif %}
 
   {% endif %}
+
+   
   {% else %}
-    <div class="widget-wrapper">
+    {% comment %}  filter == tags  {% endcomment %}
+    <div class="widget-wrapper widget widget-default">
       <h3 class="widget-title sub-title">{{ 'collections.sidebar.shop_by' | t }}</h3>
       {% if template contains 'collection' and collection.all_tags.size > 0 %}
 
@@ -177,7 +176,7 @@ breadcrumbs you need to include this:
         {% if current_tags %}
           <li class="active-filter">
 
-            {% comment %}         Good for /collections/all collection and regular collections          {% endcomment %}
+            {% comment %} Good for /collections/all collection and regular collections {% endcomment %}
 
             {% if collection.handle %}
               <a href="/collections/{{ collection.handle }}">
@@ -187,12 +186,12 @@ breadcrumbs you need to include this:
                 {% endunless %}
               </a>
 
-              {% comment %}          Good for automatic type collections          {% endcomment %}
+              {% comment %} Good for automatic type collections {% endcomment %}
 
             {% elsif collection.current_type %}
               <a href="{{ collection.current_type | url_for_type }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
 
-              {% comment %}          Good for automatic vendor collections          {% endcomment %}
+              {% comment %} Good for automatic vendor collections {% endcomment %}
 
             {% elsif collection.current_vendor %}
               <a href="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.sidebar.all_collection' | t: collection_title: collection.title }}</a>
@@ -201,7 +200,7 @@ breadcrumbs you need to include this:
 
         {% endif %}
 
-        {% comment %}        And for the good stuff, loop through the tags themselves.        Strip the prepended categories if they happen to exist.        {% endcomment %}
+        {% comment %} And for the good stuff, loop through the tags themselves. Strip the prepended categories if they happen to exist. {% endcomment %}
 
         {% for tag in collection.all_tags %}
           {% assign is_advanced_tag = false %}
@@ -225,9 +224,7 @@ breadcrumbs you need to include this:
             {% endif %}
           {% endif %}
         {% endfor %}
-
       </ul>
-
       {% else %}
         <p>{{ 'collections.sidebar.no_tags' | t }}</p>
       {% endif %}
