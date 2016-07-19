@@ -1494,6 +1494,12 @@
         "default": true
       },
       {
+        "type": "checkbox",
+        "id": "blog_sidebar_tags",
+        "label": "Show tags",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "Banner ADV"
       },
@@ -8607,7 +8613,11 @@
       {
         "type": "header",
         "content": "General"
-      }, 
+      },
+      {
+        "type": "paragraph",
+        "content":"This section for both Blogs and Shortcode Blogs"
+      },
       {
         "type": "text",
         "id": "blog_general_icon_comment",
@@ -8629,14 +8639,104 @@
         "default": "lnr lnr-arrow-right-circle",
         "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
       },
+     
        {
         "type": "text",
         "id": "blog_general_icon_user",
         "label": "Icon User",
         "default": "lnr lnr-user",
         "info": "[Find icon](https:\/\/bigc-1.myshopify.com\/pages\/font-linearicons)"
+      },
+      {
+        "type": "header",
+        "content": "Blog settings"
+      },
+       {
+        "type": "paragraph",
+        "content":"This section only for Blogs layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_general_show_readmore",
+        "label": "Show Readmore",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_general_show_date",
+        "label": "Show Date",
+        "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "blog_general_show_author",
+        "label": "Show Author",
+        "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "blog_general_show_comment",
+        "label": "Show Comment info",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_general_show_desc",
+        "label": "Show Description",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "blog_general_desc_length",
+        "label": "Description's length",
+        "options": [
+          {
+          "value": "30",
+          "label": "Short"
+          },
+          {
+          "value": "70",
+          "label": "Maximum"
+          }
+        ],
+        "default": "70"
+      },
+       {
+        "type": "paragraph",
+        "content": "For Social Sharing : go to Material Social media"
+      },
+       {
+        "type": "header",
+        "content": "Article settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "article_single_show_tag",
+        "label": "Show Tag",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "article_single_show_date",
+        "label": "Show Date",
+        "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "article_single_show_author",
+        "label": "Show Author",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "article_single_show_articlenav",
+        "label": "Show Article navigation",
+        "default": true
+      },
+       {
+        "type": "paragraph",
+        "content": "For Social Sharing : go to Material Social media"
       }
-
     ]
   },
 
@@ -8715,6 +8815,22 @@
         "id": "sc_blog_grid_slider_show_desc",
         "label": "Show Description",
         "default": true
+      },
+      {
+        "type": "select",
+        "id": "sc_blog_grid_slider_desc_length",
+        "label": "Description's length",
+        "options": [
+          {
+          "value": "10",
+          "label": "Short"
+          },
+          {
+          "value": "30",
+          "label": "Maximum"
+          }
+        ],
+        "default": "10"
       }
     ]
   },
@@ -8816,7 +8932,7 @@
     ]
   },
   {
-    "name": "SC: B3 Blog style 3 - short",
+    "name": "SC: B3 Blog style 3",
     "settings": [
     {
       "type": "header",

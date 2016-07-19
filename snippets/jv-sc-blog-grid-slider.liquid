@@ -14,6 +14,10 @@
 {% capture blog_show_date %}{{blogDataId}}_show_date{%endcapture%}
 {% capture blog_show_desc %}{{blogDataId}}_show_desc{%endcapture%}
 
+
+{% capture blog_show_desc_length %}{{blogDataId}}_desc_length{%endcapture%}
+{%assign desc_limit = settings[blog_show_desc_length] | plus: 0 %}
+
 {%if settings.blog_general_icon_comment != blank %}
   {%assign icon_comment = settings.blog_general_icon_comment %}
 {%else%}
@@ -61,7 +65,7 @@
               <div class="item-popular-info">
                 <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
                 {% if article.content != blank and settings[blog_show_desc] %}
-                <p> {{ article.content| strip_html | truncate: 90 }}</p>
+                <p> {{ article.content| strip_html | truncatewords: desc_limit }}</p>
                 {% endif %}
 
                 {%if settings[blog_show_readmore] and settings[blog_show_date] %}

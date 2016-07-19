@@ -29,13 +29,10 @@
 <!-- blog-menu -->
 
 <div class="widget widget-post-list widget-blog-categories ">
-
   <h3 class="widget-title title-sidebar-blog">
     <span>{{ 'blogs.sidebar.categories' | t }}</span>
   </h3>
-
   {% include 'nav-simple' class: 'blog-categories list-unstyled', handle: 'blog-menu', linklist_show_title: false %}
-
 </div>
 {% endif %}
 
@@ -54,14 +51,13 @@
 
 {% comment %} ----- Tags ----- {% endcomment %}  
 
+{%if settings.blog_sidebar_tags %}
 <div class="widget widget-post-tag">
-<h2 class="title-sidebar-blog">Tags</h2>
+<h2 class="title-sidebar-blog">{{'blogs.article.tags' | t}}</h2>
   <div class="tagcloud">
-  {% for tag in blog.all_tags %}
-      {{ tag | link_to_tag: tag }}
-  {% endfor %}
+  {% for tag in blog.all_tags %}{{ tag | link_to_tag: tag }}{% endfor %}
   </div>
-  
 </div>
+{%endif %}
 
 

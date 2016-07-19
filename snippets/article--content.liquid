@@ -13,8 +13,13 @@
 
   <h2 class="post-title">{{ article.title }}</h2>
   <div class="post-info">
+
+    {%if settings.article_single_show_author %}
     <label> {{ 'blogs.article.postedby' | t }}</label> <a href="#" class="post-author"> {{ article.author }} </a> 
+    {%endif %}
+    {%if settings.article_single_show_date %}
     <time class="post-date" pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time>
+    {%endif %}
   
 
   {% if settings.social_sharing_blog %}
@@ -29,12 +34,14 @@
     {{ article.content }}
   </div>
   
+  {%if settings.article_single_show_tag %}
   <div class="list-post-tags">
     {% include 'article--tags' %}
   </div>
+  {%endif%}
 
 
-  {% if blog.next_article or blog.previous_article %}
+  {% if settings.article_single_show_articlenav and blog.next_article or blog.previous_article %}
     <p class="control-post clearfix pt-25">
       {% if blog.previous_article %}
         <span class="pull-left">

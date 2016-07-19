@@ -1,10 +1,7 @@
 <main class="main-content">
 
- {% if page.metafields.jvpage.breadcrumb != 'hide'  %}  
   <div class="container"> {% include 'breadcrumb' %} </div>
-  {% endif %}  
 
-{% if page.metafields.jvpage.titlePage != 'hide'  %}
   <div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25"
       {% if settings.bg_page_blog_enable %}
@@ -23,7 +20,9 @@
       </h1>
     </div>
   </div>
-{% endif %}
+
+
+
 
   <section role="main" class="wrapper-content full-content ">
     <div class="container">
@@ -50,7 +49,7 @@
 
         </div>
 
-        <aside class="sidebar-blog col-sm-3 col-sm-jvoffset-12">
+        <aside class="sidebar-blog col-sm-3 col-md-jvoffset-12">
           {% include 'blog-sidebar' %}
         </aside>
 
