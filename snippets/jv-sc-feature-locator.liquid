@@ -1,14 +1,12 @@
-<div class="container">{% include 'jv-sc-heading-box' %}</div> 
-
 <div class="locator container">
 	<div class="row">
 	 {% for i in (1..3) %}
 
-	 		{% capture item_enable %}feature_locator_item_{{ i }}_enable{% endcapture %}
-	   {% capture item_icon %}feature_locator_item_{{ i }}_icon{% endcapture %}
-     {% capture item_title %}feature_locator_item_{{ i }}_title{% endcapture %}
-     {% capture item_desc %}feature_locator_item_{{ i }}_desc{% endcapture %}
-     {% capture item_link %}feature_locator_item_{{ i }}_link{% endcapture %}
+	 	{% capture item_enable %}feature_locator_item_{{ i }}_enable{% endcapture %}
+	  {% capture item_icon %}feature_locator_item_{{ i }}_icon{% endcapture %}
+    {% capture item_title %}feature_locator_item_{{ i }}_title{% endcapture %}
+    {% capture item_desc %}feature_locator_item_{{ i }}_desc{% endcapture %}
+    {% capture item_link %}feature_locator_item_{{ i }}_link{% endcapture %}
 		
 		{% if settings[item_enable] %}
 		<div class="col-md-4 col-sm-4 col-xs-12">

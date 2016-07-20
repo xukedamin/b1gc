@@ -16,7 +16,12 @@
 		</div>
 		{{des}} 
 
-		<h2>jv-sc-feature-box</h2>
+		<h2 id="pos1">SC: Feature 1 </h2>
+
+		{%include 'jv-sc-feature-box' %}
+
+		<h2>SC: Feature 1 custom </h2>
+		<h5>Demo using shortcode with parameter : not effected by theme setting mofication </h5>
 		{%include 'jv-sc-feature-box' with feature_shape:'i-square', feature_alignment:'text-left',feature_color:'color-dark',feature_bgcolor:'bg-gray',feature_bordercolor:'' %}
 		{%include 'jv-sc-feature-box' with feature_shape:'i-square', feature_alignment:'text-left',feature_color:'color-dark',feature_bgcolor:'bg-white',feature_bordercolor:'border-gray' %}
 		{%include 'jv-sc-feature-box' with feature_shape:'i-square', feature_alignment:'text-left',feature_color:'color-white',feature_bgcolor:'bg-yellow',feature_bordercolor:'border-yellow' %}
@@ -48,16 +53,16 @@
 
 		{%include 'jv-sc-feature-box' with feature_shape:'i-circle', feature_alignment:'text-left box-wrap box-bg-darkblue',feature_color:'color-white',feature_bgcolor:'bg-darkblue',feature_bordercolor:'border-gray',feature_readmore_color:'color-yellow',feature_readmore_pos:'i-before' %}
 
-				{%include 'jv-sc-feature-box' with feature_shape:'i-square', feature_alignment:'text-left box-wrap border-gray',feature_color:'color-white',feature_bgcolor:'bg-darkblue',feature_bordercolor:'',feature_readmore_color:'color-white',feature_readmore_pos:'' %}
+		{%include 'jv-sc-feature-box' with feature_shape:'i-square', feature_alignment:'text-left box-wrap border-gray',feature_color:'color-white',feature_bgcolor:'bg-darkblue',feature_bordercolor:'',feature_readmore_color:'color-white',feature_readmore_pos:'' %}
 
-		<h2>jv-sc-feature-locator</h2>
+		<h2 id="pos2">SC: Feature Locator</h2>
 		{%include 'jv-sc-feature-locator' %}
 
 
 	</div>
 	
-	<div class="container">
-		<h2>jv-sc-service-custom</h2>
+	<div class="container" id="pos3">
+		<h2>SC: Feature Service</h2>
 	</div>
 	{%include 'jv-sc-service-custom' %}
 </main>

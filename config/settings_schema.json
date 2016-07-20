@@ -7532,12 +7532,8 @@
     ]
   },
   {
-    "name": "Sliders settings",
+    "name": "SC: Banner Slider 1",
     "settings": [
-      {
-        "type": "header",
-        "content": "Slider settings"
-      },
       {
         "type": "header",
         "content": "Slider 1"
@@ -7567,7 +7563,12 @@
         "id": "slider1_height",
         "label": "Slider 1 - Height (px)",
         "default": "680"
-      },
+      }
+    ]
+  },
+  {
+    "name": "SC: Banner Slider 2",
+    "settings": [
       {
         "type": "header",
         "content": "Slider 2"
@@ -7603,7 +7604,12 @@
         "id": "slider2_text_enable",
         "label": "Slider 2 - Show Text",
         "default": false
-      },
+      }
+    ]
+  },
+  {
+    "name": "SC: Banner Slider style 3",
+    "settings": [
       {
         "type": "header",
         "content": "Slider 3"
@@ -7633,7 +7639,12 @@
         "id": "slider3_height",
         "label": "Slider 3 - Height (px)",
         "default": "514"
-      },
+      }
+    ]
+  },
+  {
+    "name": "SC: Banner Slider style 4",
+    "settings": [
       {
         "type": "header",
         "content": "Slider 4"
@@ -7663,11 +7674,16 @@
         "id": "slider4_height",
         "label": "Slider 4 - Height (px)",
         "default": "470"
-      },
-      {
-        "type": "header",
-        "content": "Slider 6"
-      },
+      }
+      ]
+    },
+    {
+      "name": "SC: Banner Slider style 6",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Slider 6"
+        },
       {
         "type": "select",
         "id": "slider6_img_set",
@@ -7693,7 +7709,13 @@
         "id": "slider6_height",
         "label": "Slider 6 - Height (px)",
         "default": "511"
-      },
+      }
+      ]
+    },
+    {
+      "name": "SC: Banner Slider style 6",
+      "settings": [
+
       {
         "type": "header",
         "content": "Slider 7"
@@ -7726,6 +7748,7 @@
       }
     ]
   },
+
   {
     "name": "Image set - Normal",
     "settings": [
@@ -9111,7 +9134,7 @@
   },
 
   {
-    "name": "Material Brands",
+    "name": "SC: Brands",
     "settings": [
       {
         "type": "header",
@@ -9250,7 +9273,8 @@
     "settings": [
       {
         "type": "header",
-        "content": "General setting"
+        "content": "Setting: jv-sc-feature-box",
+         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos1)"
       },
       {
         "type": "select",
@@ -9501,7 +9525,12 @@
   },
   {
     "name": "SC: Feature 2 - Locator",
-    "settings": [
+    "settings": [ 
+      {
+        "type": "header",
+        "content": "Setting: jv-sc-feature-locator",
+         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-locator/#pos2)"
+      },
       {
         "type": "header",
         "content": "Item #1"
@@ -9509,7 +9538,7 @@
       {
         "type": "checkbox",
         "id": "feature_locator_item_1_enable",
-        "label": "Item Show",
+        "label": "Show",
         "default": true
       },
       {
@@ -9544,7 +9573,7 @@
       {
         "type": "checkbox",
         "id": "feature_locator_item_2_enable",
-        "label": "Show item",
+        "label": "Show",
         "default": true
       },
       {
@@ -9579,7 +9608,7 @@
       {
         "type": "checkbox",
         "id": "feature_locator_item_3_enable",
-        "label": "Show item",
+        "label": "Show",
         "default": true
       },
       {
@@ -9610,11 +9639,24 @@
     ]
   },
    {
-    "name": "SC: Service - Image",
+    "name": "SC: Feature 3 - Service",
     "settings": [
       {
         "type": "header",
-        "content": "General setting"
+        "content": "Setting: jv-sc-service-custom",
+         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos3)"
+      },
+       {
+        "type": "text",
+        "id": "service_headingtitle",
+        "label": "Title",
+        "default": "SERVICES CUSTOM"
+      },
+      {
+        "type": "text",
+        "id": "service_headingsub",
+        "label": "Title",
+        "default": "Continuing the legacy of excellence"
       },
       {
         "type": "checkbox",
@@ -9627,25 +9669,7 @@
         "id": "services_bgimg.jpg",
         "label": "Image"
       },
-      {
-        "type": "select",
-        "id": "services_style",
-        "label": "Service style",
-        "options": [
-          {
-            "value": "style1",
-            "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3"
-          }
-        ]
-      },
+   
       {
         "type": "header",
         "content": "Item #1 -----------"

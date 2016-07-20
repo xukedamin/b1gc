@@ -1,9 +1,15 @@
 <div class="custom-service">
 	<div class="container">
+		{%if settings.service_headingtitle != blank %}
 		<div class="box-title">
-			<h2>services custom</h2>
-			<p>Continuing the legacy of excellence</p>
+			{%if settings.service_headingtitle != blank %}
+			<h2>{{settings.service_headingtitle}}</h2>
+			{%endif%}
+			{%if settings.service_headingsub != blank %}
+			<p>{{settings.service_headingsub}}</p>
+			{%endif%}
 		</div>
+		{%endif %}
 		<div class="content-custom-service">
 			<div class="row">
 
