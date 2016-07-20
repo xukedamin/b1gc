@@ -1,13 +1,17 @@
+{%assign banner_name = 'banner1' %}
+
 <div class="row">
  {% for i in (1..3) %}
 
-    {% capture banner_img %}banner1_item_{{ i }}_img.png{% endcapture %}
-    {% capture banner_title %}banner1_item_{{ i }}_title{% endcapture %}
-    {% capture banner_subtitle %}banner1_item_{{ i }}_subtitle{% endcapture %}
-    {% capture banner_text %}banner1_item_{{ i }}_text{% endcapture %}
-    {% capture banner_btn %}banner1_item_{{ i }}_btn{% endcapture %}
-    {% capture banner_link %}banner1_item_{{ i }}_link{% endcapture %}
+ {% capture banner_enable %}{{banner_name}}_item_{{i}}{% endcapture %}
 
+  {%if settings[banner_enable] %}
+    {% capture banner_img %}{{banner_name}}_item_{{ i }}_img.png{% endcapture %}
+    {% capture banner_title %}{{banner_name}}_item_{{ i }}_title{% endcapture %}
+    {% capture banner_subtitle %}{{banner_name}}_item_{{ i }}_subtitle{% endcapture %}
+    {% capture banner_text %}{{banner_name}}_item_{{ i }}_text{% endcapture %}
+    {% capture banner_btn %}{{banner_name}}_item_{{ i }}_btn{% endcapture %}
+    {% capture banner_link %}{{banner_name}}_item_{{ i }}_link{% endcapture %}
 
     {% assign class_item = 'box-left' %}
     {% if i == 2 %}
@@ -42,6 +46,8 @@
       </div>
     </div>
   </div>
+
+   {% endif %}   
 
 {% endfor %}
 

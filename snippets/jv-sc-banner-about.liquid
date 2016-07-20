@@ -18,7 +18,6 @@
 	<div class="row">
 {% for i in (2..7) %}
 
-
     {% capture banner_img %}{{var_banner}}_item_{{ i }}_img.png{% endcapture %}
     {% capture banner_img_enable %}{{var_banner}}_item_{{ i }}_img_enable{% endcapture %}
 
@@ -71,7 +70,7 @@
 		
 		<a class="" href="{{settings[banner_url]}}">
 			{%if settings[banner_img_enable]  %}
-			<!-- <div class="img" style="background-image: url({{ banner_img | asset_url }});"></div> -->
+			
 			{{ banner_img | asset_url | img_tag: banner_title }}
 			{% endif %}
 

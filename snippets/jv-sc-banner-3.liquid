@@ -1,14 +1,15 @@
+{%assign banner_name = 'banner3' %}
 
 <div class="row">
 
 	 {% for i in (1..4) %}
 
-      {% capture banner_img %}banner3_item_{{ i }}_img.png{% endcapture %}
-      {% capture banner_title %}banner3_item_{{ i }}_title{% endcapture %}
-      {% capture banner_subtitle %}banner3_item_{{ i }}_subtitle{% endcapture %}
-      {% capture banner_text %}banner3_item_{{ i }}_text{% endcapture %}
-      {% capture banner_btn %}banner3_item_{{ i }}_btn{% endcapture %}
-      {% capture banner_link %}banner3_item_{{ i }}_link{% endcapture %}
+      {% capture banner_img %}{{banner_name}}_item_{{ i }}_img.png{% endcapture %}
+      {% capture banner_title %}{{banner_name}}_item_{{ i }}_title{% endcapture %}
+      {% capture banner_subtitle %}{{banner_name}}_item_{{ i }}_subtitle{% endcapture %}
+      {% capture banner_text %}{{banner_name}}_item_{{ i }}_text{% endcapture %}
+      {% capture banner_btn %}{{banner_name}}_item_{{ i }}_btn{% endcapture %}
+      {% capture banner_link %}{{banner_name}}_item_{{ i }}_link{% endcapture %}
 
       {% assign class_item = i %}
         {% if class_item == 1 %}
@@ -20,7 +21,7 @@
 	<div class="col-md-6 col-sm-6 col-xs-12 {{class_item}}">
 	{%endif %}
 
-		<div class="banner-box banner-style3  " >
+		<div class="banner-box banner-style3">
 				<a href="{{settings[banner_link]}}" class="banner-box-link">
 					  {{ banner_img | asset_url | img_tag: banner_img }}
 				</a>
