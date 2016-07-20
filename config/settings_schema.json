@@ -7532,7 +7532,7 @@
     ]
   },
   {
-    "name": "SC: Banner Slider 1",
+    "name": "Banner Slider 1",
     "settings": [
       {
         "type": "header",
@@ -7553,7 +7553,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_sm"
@@ -7567,7 +7567,7 @@
     ]
   },
   {
-    "name": "SC: Banner Slider 2",
+    "name": "Banner Slider 2",
     "settings": [
       {
         "type": "header",
@@ -7588,7 +7588,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_normal"
@@ -7608,7 +7608,7 @@
     ]
   },
   {
-    "name": "SC: Banner Slider style 3",
+    "name": "Banner Slider style 3",
     "settings": [
       {
         "type": "header",
@@ -7629,7 +7629,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_normal"
@@ -7643,7 +7643,7 @@
     ]
   },
   {
-    "name": "SC: Banner Slider style 4",
+    "name": "Banner Slider style 4",
     "settings": [
       {
         "type": "header",
@@ -7664,7 +7664,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_normal"
@@ -7678,13 +7678,13 @@
       ]
     },
     {
-      "name": "SC: Banner Slider style 6",
+      "name": "Banner Slider style 6",
       "settings": [
         {
           "type": "header",
           "content": "Slider 6"
         },
-      {
+        {
         "type": "select",
         "id": "slider6_img_set",
         "label": "Slider stlye 6 image set",
@@ -7699,7 +7699,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_normal"
@@ -7713,7 +7713,7 @@
       ]
     },
     {
-      "name": "SC: Banner Slider style 6",
+      "name": "Banner Slider style 7",
       "settings": [
 
       {
@@ -7735,7 +7735,7 @@
           },
           {
             "value": "img_trans",
-            "label": "Transperant image set"
+            "label": "Transparent image set"
           }
         ],
         "default": "img_trans"
@@ -7860,11 +7860,11 @@
     ]
   },
   {
-    "name": "Image set - Transperant",
+    "name": "Image set - Transparent",
     "settings": [
       {
         "type": "header",
-        "content": "Image Transperant set"
+        "content": "Image Transparent set"
       },
       {
         "type": "header",
@@ -7878,7 +7878,7 @@
       {
         "type": "image",
         "id": "slide_img_trans_1.png",
-        "label": "Item Image transperant 1"
+        "label": "Item Image Transparent 1"
       },
       {
         "type": "header",
@@ -7892,7 +7892,7 @@
       {
         "type": "image",
         "id": "slide_img_trans_2.png",
-        "label": "Item Image transperant 2"
+        "label": "Item Image Transparent 2"
       },
       {
         "type": "header",
@@ -7906,7 +7906,7 @@
       {
         "type": "image",
         "id": "slide_img_trans_3.png",
-        "label": "Item Image transperant 3"
+        "label": "Item Image Transparent 3"
       },
       {
         "type": "header",
@@ -7920,7 +7920,7 @@
       {
         "type": "image",
         "id": "slide_img_trans_4.png",
-        "label": "Item Image transperant 4"
+        "label": "Item Image Transparent 4"
       }
     ]
   },
@@ -10032,24 +10032,619 @@
       }
     ]
   },
+
+  {
+    "name": "SC: Progressbar circle",
+    "settings": [
+      {
+        "type": "header",
+        "content": "SC: jv-sc-circle",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/pages/charts-progress-bars/#pos1)"
+      },
+       {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_1_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_1_background",
+        "label": "Background Color",
+        "default": "rgba(0,0,0,0)",
+        "info": "default: rgba(0,0,0,0)"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_1_value",
+        "label": "Value",
+        "default": "47"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_1_color_main",
+        "label": "Main value Color",
+        "default": "#FFD21E",
+        "info": "default: #FFD21E"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_1_color_stroke",
+        "label": "Stroke Color",
+        "default": "#E5E5E5",
+        "info": "default: #E5E5E5"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_1_textcolor",
+        "label": "Text Color",
+        "default": "#ccc",
+        "info": "default: #ccc"
+      },
+       {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_2_enable",
+        "label": "Show",
+        "default": true
+      },
+        
+      {
+        "type": "color",
+        "id": "pbarcircle_item_2_background",
+        "label": "Background Color",
+        "default": "rgba(0,0,0,0)",
+        "info": "default: rgba(0,0,0,0)"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_2_value",
+        "label": "Value",
+        "default": "68"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_2_color_main",
+        "label": "Main value Color",
+        "default": "#2EA0D7",
+        "info": "default: #2EA0D7"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_2_color_stroke",
+        "label": "Stroke Color",
+        "default": "#E5E5E5",
+        "info": "default: #E5E5E5"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_2_textcolor",
+        "label": "Text Color",
+        "default": "#ccc",
+        "info": "default: #ccc"
+      },
+       {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_3_enable",
+        "label": "Show",
+        "default": true
+      },
+        
+      {
+        "type": "color",
+        "id": "pbarcircle_item_3_background",
+        "label": "Background Color",
+        "default": "rgba(0,0,0,0)",
+        "info": "default: rgba(0,0,0,0)"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_3_value",
+        "label": "Value",
+        "default": "93"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_3_color_main",
+        "label": "Main value Color",
+        "default": "#1B1D1F",
+         "info": "default: #1B1D1F"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_3_color_stroke",
+        "label": "Stroke Color",
+        "default": "#E5E5E5",
+        "info": "default: #E5E5E5"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_3_textcolor",
+        "label": "Text Color",
+        "default": "#ccc",
+        "info": "default: #ccc"
+      },
+       {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_4_background",
+        "label": "Background Color",
+        "default": "#2ea0d7",
+        "info": "default: #2ea0d7"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_4_value",
+        "label": "Value",
+        "default": "75"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_4_color_main",
+        "label": "Main value Color",
+        "default": "#ffffff",
+        "info":"default: #ffffff"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_4_color_stroke",
+        "label": "Stroke Color",
+        "default": "#2EA0D7",
+        "info" : "default: #2EA0D7"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_4_textcolor",
+        "label": "Text Color",
+        "default": "#fff",
+        "info":"default: #ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_5_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_5_title",
+        "label": "Title",
+        "default": "Item 5"
+      },
+      
+      {
+        "type": "color",
+        "id": "pbarcircle_item_5_background",
+        "label": "Background Color",
+        "default": "#fec942",
+        "info" :"default : #fec942"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_5_value",
+        "label": "Value",
+        "default": "50"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_5_color_main",
+        "label": "Main value Color",
+        "default": "#fff",
+        "info" :"default : #ffffff"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_5_color_stroke",
+        "label": "Stroke Color",
+        "default": "#FFD56A",
+        "info" :"default : #FFD56A"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_5_textcolor",
+        "label": "Text Color",
+        "default": "#fff",
+        "info" :"default : #ffffff"
+      },
+       {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_6_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_6_title",
+        "label": "Title",
+        "default": "Item 6"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_6_background",
+        "label": "Background Color",
+        "default": "#cccccc",
+        "info" :"default : #cccccc"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_6_value",
+        "label": "Value",
+        "default": "95"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_6_color_main",
+        "label": "Main value Color",
+        "default": "#1B1D1F",
+        "info" :"default : #1B1D1F"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_6_color_stroke",
+        "label": "Stroke Color",
+        "default": "#fff",
+        "info" :"default : #ffffff"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_6_textcolor",
+        "label": "Text Color",
+        "default": "#1b1d1f",
+        "info" :"default : #1b1d1f"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_7_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_7_title",
+        "label": "Title",
+        "default": "Item 7"
+      },
+     
+      {
+        "type": "color",
+        "id": "pbarcircle_item_7_background",
+        "label": "Background color",
+        "default": "#ffd21e",
+        "info" :"default : #ffd21e"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_7_value",
+        "label": "Value",
+        "default": "67"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_7_color_main",
+        "label": "Main value Color",
+        "default": "#1B1D1F",
+        "info" :"default : #1B1D1F"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_7_color_stroke",
+        "label": "Stroke Color",
+        "default": "#fff",
+        "info" :"default : #ffffff"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_7_textcolor",
+        "label": "Text Color",
+        "default": "#1b1d1f",
+        "info" :"default : #1b1d1f"
+      },
+      {
+        "type": "header",
+        "content": "Item #8"
+      },
+      {
+        "type": "checkbox",
+        "id": "pbarcircle_item_8_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_8_title",
+        "label": "Title",
+        "default": "Item 8"
+      },
+     
+      {
+        "type": "color",
+        "id": "pbarcircle_item_8_background",
+        "label": "Background color",
+        "default": "#1b1d1f",
+        "info" :"default : #1b1d1f"
+      },
+      {
+        "type": "text",
+        "id": "pbarcircle_item_8_value",
+        "label": "Value",
+        "default": "18"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_8_color_main",
+        "label": "Main value Color",
+        "default": "#FFD21E",
+        "info" :"default : #FFD21E"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_8_color_stroke",
+        "label": "Stroke Color",
+        "default": "#424242",
+        "info" :"default : #424242"
+      },
+      {
+        "type": "color",
+        "id": "pbarcircle_item_8_textcolor",
+        "label": "Text Color",
+        "default": "#ffd21e",
+        "info" :"default : #ffd21e"
+      }
+    ]
+  },
+  {
+    "name": "SC: PieChart",
+    "settings": [
+      {
+        "type": "header",
+        "content": "PieChart",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/pages/charts-progress-bars/#pos2)"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "piechart_item_1_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "piechart_item_1_title",
+        "label": "Title",
+        "default": "Piechart 1"
+      },
+     
+      {
+        "type": "text",
+        "id": "piechart_item_1_value",
+        "label": "Value",
+        "default": "65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_1_color",
+        "label": "Color",
+        "options": [
+          {
+            "label": "blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default": "pieChart-blue"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "piechart_item_2_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "piechart_item_2_title",
+        "label": "Title",
+        "default": "Piechart 2"
+      },
+     
+      {
+        "type": "text",
+        "id": "piechart_item_2_value",
+        "label": "Value",
+        "default": "65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_2_color",
+        "label": "Color",
+        "options": [
+          {
+            "label": "blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default": "pieChart-blue"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "piechart_item_3_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "piechart_item_3_title",
+        "label": "Title",
+        "default": "Piechart 3"
+      },
+     
+      {
+        "type": "text",
+        "id": "piechart_item_3_value",
+        "label": "Value",
+        "default": "65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_3_color",
+        "label": "Color",
+        "options": [
+          {
+            "label": "blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default": "pieChart-blue"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "piechart_item_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "piechart_item_4_title",
+        "label": "Title",
+        "default": "Piechart 4"
+      },
+    
+      {
+        "type": "text",
+        "id": "piechart_item_4_value",
+        "label": "Value",
+        "default": "65"
+      },
+      {
+        "type": "select",
+        "id": "piechart_item_4_color",
+        "label": "Color",
+        "options": [
+          {
+            "label": "blue",
+            "value": "pieChart-blue"
+          },
+          {
+            "label": "yellow",
+            "value": "pieChart-yellow"
+          },
+          {
+            "label": "gray",
+            "value": "pieChart-gray"
+          },
+          {
+            "label": "black",
+            "value": "pieChart-black"
+          }
+        ],
+        "default": "pieChart-blue"
+      }
+    ]
+  },
   {
     "name": "SC: Progressbar",
     "settings": [
       {
         "type": "header",
-        "content": "Progressbar"
+        "content": "Setting: jv-sc-progressbar",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/pages/charts-progress-bars/#pos3)"
       },
       {
-        "type": "text",
-        "id": "pbar_item_1_title",
-        "label": "Title",
-        "default": "Progressbar 1"
+        "type": "header",
+        "content": "Item #1"
       },
       {
         "type": "checkbox",
         "id": "pbar_item_1_enable",
         "label": "Show",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "pbar_item_1_title",
+        "label": "Title",
+        "default": "Progressbar 1"
       },
       {
         "type": "checkbox",
@@ -10070,10 +10665,8 @@
         "default": "#fec942"
       },
       {
-        "type": "text",
-        "id": "pbar_item_2_title",
-        "label": "Title",
-        "default": "Progressbar 2"
+        "type": "header",
+        "content": "Item #2"
       },
       {
         "type": "checkbox",
@@ -10081,6 +10674,13 @@
         "label": "Show",
         "default": true
       },
+      {
+        "type": "text",
+        "id": "pbar_item_2_title",
+        "label": "Title",
+        "default": "Progressbar 2"
+      },
+     
       {
         "type": "checkbox",
         "id": "pbar_item_2_small",
@@ -10100,10 +10700,8 @@
         "default": "#2ea0d7"
       },
       {
-        "type": "text",
-        "id": "pbar_item_3_title",
-        "label": "Title",
-        "default": "Progressbar 3"
+        "type": "header",
+        "content": "Item #3"
       },
       {
         "type": "checkbox",
@@ -10111,6 +10709,13 @@
         "label": "Show",
         "default": true
       },
+      {
+        "type": "text",
+        "id": "pbar_item_3_title",
+        "label": "Title",
+        "default": "Progressbar 3"
+      },
+     
       {
         "type": "checkbox",
         "id": "pbar_item_3_small",
@@ -10130,10 +10735,8 @@
         "default": "#494a4c"
       },
       {
-        "type": "text",
-        "id": "pbar_item_4_title",
-        "label": "Title",
-        "default": "Progressbar 3"
+        "type": "header",
+        "content": "Item #4"
       },
       {
         "type": "checkbox",
@@ -10141,6 +10744,13 @@
         "label": "Show",
         "default": true
       },
+      {
+        "type": "text",
+        "id": "pbar_item_4_title",
+        "label": "Title",
+        "default": "Progressbar 3"
+      },
+    
       {
         "type": "checkbox",
         "id": "pbar_item_4_small",
@@ -10161,529 +10771,6 @@
       }
     ]
   },
-  {
-    "name": "SC: Progressbar circle",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Progressbar circle"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_1_title",
-        "label": "Title",
-        "default": "Progressbar 1"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_1_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_1_background",
-        "label": "Background Color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_1_value",
-        "label": "Value",
-        "default": "47"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_1_color_main",
-        "label": "Main value Color",
-        "default": "#FFD21E"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_1_color_stroke",
-        "label": "Stroke Color",
-        "default": "#E5E5E5"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_1_textcolor",
-        "label": "Text Color",
-        "default": "#ccc"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_2_title",
-        "label": "Title",
-        "default": "Progressbar 2"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_2_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_2_background",
-        "label": "Background Color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_2_value",
-        "label": "Value",
-        "default": "68"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_2_color_main",
-        "label": "Main value Color",
-        "default": "#2EA0D7"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_2_color_stroke",
-        "label": "Stroke Color",
-        "default": "#E5E5E5"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_2_textcolor",
-        "label": "Text Color",
-        "default": "#ccc"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_3_title",
-        "label": "Title",
-        "default": "Progressbar 3"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_3_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_3_background",
-        "label": "Background Color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_3_value",
-        "label": "Value",
-        "default": "93"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_3_color_main",
-        "label": "Main value Color",
-        "default": "#1B1D1F"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_3_color_stroke",
-        "label": "Stroke Color",
-        "default": "#E5E5E5"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_3_textcolor",
-        "label": "Text Color",
-        "default": "#ccc"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_4_title",
-        "label": "Title",
-        "default": "Progressbar 3"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_4_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_4_background",
-        "label": "Background Color",
-        "default": "#2ea0d7"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_4_value",
-        "label": "Value",
-        "default": "75"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_4_color_main",
-        "label": "Main value Color",
-        "default": "#fff"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_4_color_stroke",
-        "label": "Stroke Color",
-        "default": "#2EA0D7"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_4_textcolor",
-        "label": "Text Color",
-        "default": "#fff"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_5_title",
-        "label": "Title",
-        "default": "Progressbar 5"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_5_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_5_background",
-        "label": "Background Color",
-        "default": "#fec942"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_5_value",
-        "label": "Value",
-        "default": "50"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_5_color_main",
-        "label": "Main value Color",
-        "default": "#fff"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_5_color_stroke",
-        "label": "Stroke Color",
-        "default": "#FFD56A"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_5_textcolor",
-        "label": "Text Color",
-        "default": "#fff"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_6_title",
-        "label": "Title",
-        "default": "Progressbar 6"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_6_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_6_background",
-        "label": "Background Color",
-        "default": "#cccccc"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_6_value",
-        "label": "Value",
-        "default": "95"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_6_color_main",
-        "label": "Main value Color",
-        "default": "#1B1D1F"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_6_color_stroke",
-        "label": "Stroke Color",
-        "default": "#fff"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_6_textcolor",
-        "label": "Text Color",
-        "default": "#1b1d1f"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_7_title",
-        "label": "Title",
-        "default": "Progressbar 7"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_7_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_7_background",
-        "label": "Background color",
-        "default": "#ffd21e"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_7_value",
-        "label": "Value",
-        "default": "67"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_7_color_main",
-        "label": "Main value Color",
-        "default": "#1B1D1F"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_7_color_stroke",
-        "label": "Stroke Color",
-        "default": "#fff"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_7_textcolor",
-        "label": "Text Color",
-        "default": "#1b1d1f"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_8_title",
-        "label": "Title",
-        "default": "Progressbar 8"
-      },
-      {
-        "type": "checkbox",
-        "id": "pbarcircle_item_8_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_8_background",
-        "label": "Background color",
-        "default": "#1b1d1f"
-      },
-      {
-        "type": "text",
-        "id": "pbarcircle_item_8_value",
-        "label": "Value",
-        "default": "18"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_8_color_main",
-        "label": "Main value Color",
-        "default": "#FFD21E"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_8_color_stroke",
-        "label": "Stroke Color",
-        "default": "#424242"
-      },
-      {
-        "type": "color",
-        "id": "pbarcircle_item_8_textcolor",
-        "label": "Text Color",
-        "default": "#ffd21e"
-      }
-    ]
-  },
-  {
-    "name": "SC: PieChart",
-    "settings": [
-      {
-        "type": "header",
-        "content": "PieChart"
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_1_title",
-        "label": "Title",
-        "default": "Piechart 1"
-      },
-      {
-        "type": "checkbox",
-        "id": "piechart_item_1_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_1_value",
-        "label": "Value",
-        "default": "65"
-      },
-      {
-        "type": "select",
-        "id": "piechart_item_1_color",
-        "label": "Color",
-        "options": [
-          {
-            "label": "color-blue",
-            "value": "pieChart-blue"
-          },
-          {
-            "label": "color-yellow",
-            "value": "pieChart-yellow"
-          },
-          {
-            "label": "color-gray",
-            "value": "pieChart-gray"
-          },
-          {
-            "label": "color-black",
-            "value": "pieChart-black"
-          }
-        ],
-        "default": "pieChart-blue"
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_2_title",
-        "label": "Title",
-        "default": "Piechart 2"
-      },
-      {
-        "type": "checkbox",
-        "id": "piechart_item_2_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_2_value",
-        "label": "Value",
-        "default": "65"
-      },
-      {
-        "type": "select",
-        "id": "piechart_item_2_color",
-        "label": "Color",
-        "options": [
-          {
-            "label": "color-blue",
-            "value": "pieChart-blue"
-          },
-          {
-            "label": "color-yellow",
-            "value": "pieChart-yellow"
-          },
-          {
-            "label": "color-gray",
-            "value": "pieChart-gray"
-          },
-          {
-            "label": "color-black",
-            "value": "pieChart-black"
-          }
-        ],
-        "default": "pieChart-blue"
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_3_title",
-        "label": "Title",
-        "default": "Piechart 3"
-      },
-      {
-        "type": "checkbox",
-        "id": "piechart_item_3_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_3_value",
-        "label": "Value",
-        "default": "65"
-      },
-      {
-        "type": "select",
-        "id": "piechart_item_3_color",
-        "label": "Color",
-        "options": [
-          {
-            "label": "color-blue",
-            "value": "pieChart-blue"
-          },
-          {
-            "label": "color-yellow",
-            "value": "pieChart-yellow"
-          },
-          {
-            "label": "color-gray",
-            "value": "pieChart-gray"
-          },
-          {
-            "label": "color-black",
-            "value": "pieChart-black"
-          }
-        ],
-        "default": "pieChart-blue"
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_4_title",
-        "label": "Title",
-        "default": "Piechart 4"
-      },
-      {
-        "type": "checkbox",
-        "id": "piechart_item_4_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "piechart_item_4_value",
-        "label": "Value",
-        "default": "65"
-      },
-      {
-        "type": "select",
-        "id": "piechart_item_4_color",
-        "label": "Color",
-        "options": [
-          {
-            "label": "color-blue",
-            "value": "pieChart-blue"
-          },
-          {
-            "label": "color-yellow",
-            "value": "pieChart-yellow"
-          },
-          {
-            "label": "color-gray",
-            "value": "pieChart-gray"
-          },
-          {
-            "label": "color-black",
-            "value": "pieChart-black"
-          }
-        ],
-        "default": "pieChart-blue"
-      }
-    ]
-  },
-
   {
     "name": "SC: Tabs content",
     "settings": [

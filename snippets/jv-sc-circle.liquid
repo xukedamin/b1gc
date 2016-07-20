@@ -7,15 +7,11 @@
 
 	{%if settings[penable]%}
 	
-		{% capture ptitle %}{{var_progress}}_item_{{ i }}_title{% endcapture %}
 
 		{% capture pcolor_stroke %}{{var_progress}}_item_{{ i }}_color_stroke{% endcapture %}
 		{% capture pcolor_main %}{{var_progress}}_item_{{ i }}_color_main{% endcapture %}
-
 		{% capture textcolor %}{{var_progress}}_item_{{ i }}_textcolor{% endcapture %}
-
 		{% capture pvalue %}{{var_progress}}_item_{{ i }}_value{% endcapture %}
-		
 		{% capture pbackground %}{{var_progress}}_item_{{ i }}_background{% endcapture %}
 
 		{% assign circle_class = 'circle1' %}
@@ -50,7 +46,7 @@ if($('.progress-circle').length > 0) {
 				textClass = $(this).data('textClass'),
 				valueStrokeClass = $(this).data('valueStrokeClass'),
 				maxValueStrokeClass = $(this).data('maxValueStrokeClass'),
-				styleWrapper = $(this).data('styleWrapper')
+				styleWrapper = $(this).data('styleWrapper'),
 				styleText = $(this).data('styleText');
 
 		Circles.create({
