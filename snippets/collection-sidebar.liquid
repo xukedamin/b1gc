@@ -7,7 +7,6 @@ breadcrumbs you need to include this:
 {% include 'advanced-tag-loop' %}
 {% endcomment %}
 
-{%comment%} category {%endcomment%}
 
 {% for i in (1..2) %}
   {% capture setting_key %}widget_linklist{{ i }}{% endcapture %}
@@ -91,7 +90,7 @@ breadcrumbs you need to include this:
       <div class="widget-wrapper">
         <div class="widget widget-default">  
           <h3 class="widget-title sub-title"><span>{{ cat_item }}</span></h3>
-          <ul class="advanced-filters">
+          <ul class="advanced-filters {{ cat_item }}">
             {% comment %}       Loop through collection tags        {% endcomment %}
             
             {% for tag in collection.all_tags %}
@@ -101,9 +100,16 @@ breadcrumbs you need to include this:
                 {% comment %}   Strip out tag category prefix and add/remove link for tag filtering  {% endcomment %}
                 
                 {% if current_tags contains tag %}
-                  <li class="advanced-filter active-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}</li>
+
+                  <li class="advanced-filter active-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}" {%if tag contains 'Color' %}style="background-color: {{ tag | remove_first: cat_item | remove_first: '_' }};background-image: url({{ tag | remove_first: cat_item | remove_first: '_' | downcase |  append: '.png' | asset_url }})"{%endif%}>
+                    {{ tag | remove_first: cat_item | remove_first: '_' | link_to_remove_tag: tag }}
+                  </li>
                   {% else %}
-                  <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}">{{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}</li>
+                  <li class="advanced-filter" data-group="{{ cat_item }}" data-handle="{{ tag | handle }}" {%if tag contains 'Color' %}style="background-color: {{ tag | remove_first: cat_item | remove_first: '_' }};background-image: url({{ tag | remove_first: cat_item | remove_first: '_' | downcase |  append: '.png' | asset_url }})"{%endif%} >
+                    
+                    {{ tag | remove_first: cat_item | remove_first: '_' | link_to_add_tag: tag }}
+
+                  </li>
                 {% endif %}
 
               {% endif %}
@@ -124,6 +130,7 @@ breadcrumbs you need to include this:
             activeTagInGroup;
 
         filters.on('click', function(e) {
+          console.log('li clicked');
           el = $(this);
           elGroup = el.data('group');
           elHandle = el.data('handle');
@@ -145,6 +152,7 @@ breadcrumbs you need to include this:
     <script>
       //Ajax filter collection
       $(document).delegate('.advanced-filter > a', 'click', function() {
+        console.log('a clicked');
 
         history.pushState({}, document.title, this.href);
         

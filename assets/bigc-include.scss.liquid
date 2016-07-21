@@ -9,7 +9,10 @@
   color: {{ settings.color_primary }} !important;
 }
 
-.link-style16, .border-yellow, .shop-cart-list table thead th, .swatch-element input:checked + label, .swatch-element label:hover, .tagcloud a:hover, .post-format-gallery #bx-pager a.active, .post-format-gallery #bx-pager a:hover, .title-post-leading, .post-banner-image {
+.link-style16, .border-yellow, .shop-cart-list table thead th, .swatch-element input:checked + label, .swatch-element label:hover, .widget.widget-default .advanced-filters.Size li:hover,
+.widget.widget-default .advanced-filters.Size li.active-filter,
+.widget.widget-default .advanced-filters.Color li:hover,
+.widget.widget-default .advanced-filters.Color li.active-filter, .tagcloud a:hover, .post-format-gallery #bx-pager a.active, .post-format-gallery #bx-pager a:hover, .title-post-leading, .post-banner-image {
   border-color: {{ settings.color_primary }};
 }
 
@@ -8067,6 +8070,65 @@ Page Detail Mr
 }
 .swatch.error code {
   font-family: monospace;
+}
+
+.advanced-filters.Size,
+.advanced-filters.Color {
+  overflow: hidden;
+}
+
+.advanced-filters.Size li,
+.advanced-filters.Color li {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0 10px 10px 0;
+  float: left;
+  background-size: cover;
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.widget.widget-default .advanced-filters.Size li,
+.widget.widget-default .advanced-filters.Color li {
+  padding: 0;
+  border: 1px solid #e5e5e5;
+}
+
+.advanced-filters.Size li:before,
+.advanced-filters.Color li:before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  border: 1px solid #fff;
+  bottom: 0px;
+  top: 0px;
+}
+
+.advanced-filters.Size li a,
+.advanced-filters.Color li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.advanced-filters.Size li a {
+  font-weight: 600;
+  text-align: center;
+  padding: 0;
+  line-height: 30px;
+}
+
+.advanced-filters.Color li a {
+  text-indent: -99999px;
+}
+
+.advanced-filters.Size li a:after,
+.advanced-filters.Size li a:before,
+.advanced-filters.Color li a:after,
+.advanced-filters.Color li a:before {
+  display: none;
 }
 
 .title-normal {
