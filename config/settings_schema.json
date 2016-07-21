@@ -4726,6 +4726,17 @@
         "id": "widget_linklist2",
         "label": "Use list:"
       },
+       {
+        "type": "header",
+        "content": "Shop by tags"
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tag_value",
+        "label": "Tags value",
+        "default": "Price|Color|Size|Brand|Type",
+        "info": "Default Order: Price|Color|Size|Brand|Type. This relate to Product tags begin with X_Y e.g. Color_Red. Case sensitive"
+      },
       {
         "type": "header",
         "content": "Product Filters"
@@ -4793,7 +4804,7 @@
       {
         "type": "checkbox",
         "id": "sidebar_ajax_filters",
-        "label": "Show Ajax Filters",
+        "label": "Enable Ajax Filters",
         "default": true
       },
       {

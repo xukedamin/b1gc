@@ -82,11 +82,35 @@ breadcrumbs you need to include this:
 {% endif %}
 
 
+<div class="widget widget-filter-price">
+  <h2 class="widget-title sub-title">FILTER BY PRICE</h2>
+  <div id="slider-range"></div>
+  <div class="info-price-filter">
+    <button class="btn-link-default">Filter</button>
+    <p>
+      <label for="amount">Price:</label>
+      <input type="text" id="amount" readonly />
+    </p>
+  </div>
+</div>
+
 {% if settings.collection_sidebar_filters == 'groups' %}
+
   {% if collection.all_tags.size > 0 %}
 
     {% comment %}  Loop through tag categories  {% endcomment %}
-    {% for cat_item in cat_array %}
+    
+    {% comment %}begin modify : cat_array: auto from advanced-tag-loop , cat_array1: get from theme settings {%endcomment%}
+
+    {%if settings.shop_by_tag_value != blank %}
+      {%assign cat_array1 = settings.shop_by_tag_value | split: "|" | uniq %}
+    {%else %}
+      {%assign cat_array1 = "Price|Color|Size|Brand|Type" | split: "|"  | uniq %}
+    {%endif %}
+    
+
+    {% for cat_item in cat_array1 %}
+
       <div class="widget-wrapper">
         <div class="widget widget-default">  
           <h3 class="widget-title sub-title"><span>{{ cat_item }}</span></h3>
