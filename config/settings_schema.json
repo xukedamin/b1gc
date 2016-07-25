@@ -5266,25 +5266,18 @@
       {
         "type": "select",
         "id": "ajax_cart_method",
-        "label": "Cart type",
+        "label": "Enable Ajax Cart method",
         "options": [
           {
-            "value": "drawer",
-            "label": "Drawer"
-          },
-          {
-            "value": "page",
-            "label": "Page"
-          },
-          {
-            "value": "flip",
-            "label": "Flip"
+            "value": "none",
+            "label": "None"
           },
           {
             "value": "modal",
             "label": "Modal"
           }
-        ]
+        ],
+        "default" :"modal"
       },
       {
         "type": "header",
@@ -7942,6 +7935,11 @@
         "type": "header",
         "content": "Setting: jv-sc-banner-1",
          "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos1)"
+      },
+      {
+        "type":"blog",
+        "id": "banner_1_data_blog",
+        "label": "Select datasource for Banner 1"
       },
       {
         "type": "header",

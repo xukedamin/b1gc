@@ -1,5 +1,40 @@
 {%assign banner_name = 'banner1' %}
 
+  {% assign blogs_list_grids = settings.banner_1_data_blog %}
+  {% assign sourcedata = blogs[blogs_list_grids] %}
+
+
+   {% for article in sourcedata.articles %}
+    {{article.content}}
+    <br/>
+    {% if article.content contains '[jvbanner]' %}
+          {% assign temp = article.content | split:'[/jvbanner]' | first %}
+          {% assign bannercode = temp | split:'[jvbanner]' | last %}
+
+          {% assign des = article.content | split:'[/jvbanner]' | last %}
+          
+          <p>Code: {{bannercode }}</p>
+
+          {% assign temp = bannercode | split:'[/title]' | first %}
+          {% assign bannertitle = temp | split:'[title]' | last %}
+
+          <p>title {{bannertitle}}</p>
+
+          {% assign temp = bannercode | split:'[/content]' | first %}
+          {% assign bannercontent = temp | split:'[content]' | last %}
+
+          <p>{{bannercontent}}</p>
+
+
+
+        {%else %}
+          {{ article.content | split: '|' | first | strip_html | truncatewords: 50 }}
+      {%endif %}
+
+      {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+
+  {%endfor %}
+
 <div class="row">
  {% for i in (1..3) %}
 
