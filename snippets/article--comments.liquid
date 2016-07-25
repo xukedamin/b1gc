@@ -45,9 +45,7 @@
       {% include 'form-errors-custom' %}
       
       <div class="post-comments-form">
-        
         <div class="widget contact-us">
-          <form action="#">
             <div class="row">
               <div class="col-sm-6 col-xs-12">
                 <input {% if form.errors contains "author" %} class="error"{% endif %} type="text" name="comment[author]" placeholder="{{ 'blogs.comments.name' | t }}" id="comment-author" value="{{ form.author }}">
@@ -59,11 +57,9 @@
                 <textarea {% if form.errors contains "body" %} class="error"{% endif %} name="comment[body]" id="comment-body" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>
               </div>
             </div>
-
             <div>
                 <input type="submit" class="btn-link-default" value="{{ 'blogs.comments.post' | t }}">
             </div>
-          </form>
         </div>
       </div>
       

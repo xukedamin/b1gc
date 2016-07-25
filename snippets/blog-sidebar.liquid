@@ -1,6 +1,6 @@
 {% comment %} -----BLog  Sidebar textwidget ----- {% endcomment %}
 {% if settings.textwidget2_visible %}
-  <div class="widget widget-post-adv">
+  <div class="widget widget-post-adv mb-30">
 
     {% if settings.textwidget2_heading != blank %}
     <h3 class="widget-title ">
@@ -25,10 +25,7 @@
 {% comment %} ----- Blog Categories ----- {% endcomment %}
 {% if blog.all_tags.size > 0 and settings.blog_categories %}
 
-
-<!-- blog-menu -->
-
-<div class="widget widget-post-list widget-blog-categories ">
+<div class="widget widget-post-list widget-blog-categories mb-30">
   <h3 class="widget-title title-sidebar-blog">
     <span>{{ 'blogs.sidebar.categories' | t }}</span>
   </h3>
@@ -39,7 +36,7 @@
 
 {% comment %} ----- BLog Recent Articles ----- {% endcomment %}  
 {% if settings.blog_recent %}
-  <div class="widget widget-recent-post">
+  <div class="widget widget-recent-post mb-30">
     <h3 class="widget-title title-sidebar-blog">
       <span>{{ 'blogs.sidebar.recent_articles' | t }}</span>
     </h3>

@@ -968,6 +968,8 @@
       });
       $("#amount").val("$" + $("#slider-range").slider("values", 0) +
           " - $" + $("#slider-range").slider("values", 1));
+
+
       //Attr Filter Price
       $("#slider-range-price").slider({
           range: true,
@@ -979,6 +981,7 @@
           }
       });
       $("#amount-price").val("$" + $("#slider-range-price").slider("values", 0) + " - $" + $("#slider-range-price").slider("values", 1));
+
     },
 
     goJVCountdown: function(){
@@ -1230,19 +1233,6 @@
     
     
     jvbigC.goJVCountdown();
-    
-    // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    //   var tabid = $(e.target).attr("href");
-      
-    //   //must rebuild countdown when changing the tabs  
-    //   $(tabid).find('.jv-countdown').TimeCircles().rebuild();
-      
-    //   //update circle to have the same dimension for w and h
-    //   $(tabid).find( ".time_circles div[class^='textDiv_']").each(function(){
-    //      var w = $(this).width();
-    //     $(this).height(w);
-    //   });
-    // });
 
     jvbigC.goJVCountdown_tabClick_rebuild();
 

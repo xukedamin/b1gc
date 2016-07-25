@@ -555,7 +555,11 @@
 .item-comment {
   display: table;
   width: 100%;
+  &:not(.last){
+    margin-bottom: 20px;
+  }
 }
+
 .comment-thumb {
   display: table-cell;
   vertical-align: top;

@@ -41,7 +41,7 @@
       </div>
 			
 			<h3 class="sub-title"> <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
-
+      
       {% include 'product-item--countdown' with countdown_wrap:"countdown--big" %}
 		
 			<a href="{{ product.url }}" class="readmore">{{'products.product.shop_now' | t}}</a>

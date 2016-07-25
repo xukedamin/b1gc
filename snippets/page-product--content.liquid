@@ -20,18 +20,30 @@
 {% endif %}
 
 
+
 {% assign content_product_class = 'has-sidebar col-md-9' %}
 {% assign content_product_childclass = 'col-md-6 col-sm-12 col-xs-12 ' %}
 
-{% if settings.product_style_option == 'product_style_option_leftsidebar' or page_style == 'leftsidebar'  %}
+{% if settings.product_style_option == 'product_style_option_leftsidebar' %}
  {% assign content_product_class = 'has-sidebar col-md-9 col-md-offset-3' %}
 {% endif %}
+
+
+{% if settings.product_style_option == 'product_style_option_nosidebar'%}
+ {% assign content_product_class = 'none-sidebar col-md-12' %}
+ {% assign content_product_childclass = 'col-md-6 col-sm-6 col-xs-12' %}
+{% endif %}
+
+{% comment %} template page has higher prioprity: if a product has specified template, template style has applied {% endcomment %}
+{%if page_style == 'leftsidebar'  %}
+ {% assign content_product_class = 'has-sidebar col-md-9 col-md-offset-3' %}
+{%endif %}
 
 {% if page_style == 'rightsidebar'  %}
   {% assign content_product_class = 'has-sidebar col-md-9' %}
 {% endif %}
 
-{% if settings.product_style_option == 'product_style_option_nosidebar' or page_style == 'nosidebar'  %}
+{%if page_style == 'nosidebar'  %}
  {% assign content_product_class = 'none-sidebar col-md-12' %}
  {% assign content_product_childclass = 'col-md-6 col-sm-6 col-xs-12' %}
 {% endif %}
@@ -90,10 +102,12 @@
 
       <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
       
+      {%if settings.product_detail_countdown_enable %}
       <div class="product--detail-countdown mt-20">
         <div class="pb-20">{{'products.general.count_down_title' | t}}</div>
         {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
       </div>
+      {%endif%}
 
       {% include 'product--addtocart' %}
      
@@ -107,19 +121,14 @@
 
   {% include 'product--extra-info' %}
 
-
-
 {% if settings.related_products_enable or settings.featured_prod_visible %}
   {% assign grid_item_width = 'col-xs-12' %}
   {% include 'product--tab-related' %}
 {% endif %}
 
-
 {% include 'product--bottom-nav' %}
 
-
 </div>
-
 
     {{ 'option_selection.js' | shopify_asset_url | script_tag }}
     <script>
@@ -142,7 +151,6 @@
           }
         }
         // END SWATCHES
-        
 
         var $addToCart = $('#addToCart'),
             $productPrice = $('#productPrice'),

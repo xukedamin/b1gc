@@ -55,3 +55,23 @@ breadcrumbs you need to include this:
   </div>
 </nav>
 {% endif %}
+
+
+{% comment %} ----- Sidebar textwidget ----- {% endcomment %}
+{% if settings.textwidget_visible %}
+<div class="widget-wrapper">
+
+  {% if settings.textwidget_heading != blank %}
+  <h3 class="widget-title ">
+    <span>{{ settings.textwidget_heading }}</span>
+  </h3>
+  {% endif %}
+
+  <ul class="list-unstyled list-styled">
+    {% if settings.textwidget_image %}
+    <li><img src="{{'textwidget_image.jpg' | asset_url}}" alt="{{settings.textwidget_heading}}" />  <br><br></li>
+    {% endif %}
+    <li>{{ settings.textwidget_content }}</li>
+  </ul>
+</div>
+{% endif %}

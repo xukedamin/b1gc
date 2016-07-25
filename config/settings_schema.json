@@ -4726,20 +4726,15 @@
         "id": "widget_linklist2",
         "label": "Use list:"
       },
-       {
-        "type": "header",
-        "content": "Shop by tags"
-      },
-      {
-        "type": "text",
-        "id": "shop_by_tag_value",
-        "label": "Tags value",
-        "default": "Price|Color|Size|Brand|Type",
-        "info": "Default Order: Price|Color|Size|Brand|Type. This relate to Product tags begin with X_Y e.g. Color_Red. Case sensitive"
-      },
       {
         "type": "header",
         "content": "Product Filters"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_ajax_filters",
+        "label": "Enable Ajax Filters",
+        "default": true
       },
       {
         "type": "radio",
@@ -4755,8 +4750,10 @@
             "label": "By group"
           }
         ],
+        "default": "groups",
         "info": "[Learn how to set up filter groups](https:///docs.shopify.com/manual/more/official-shopify-themes/supply#enable-group-filtering)."
-      },
+      }, 
+
       {
         "type": "checkbox",
         "id": "sidebar_type_enable",
@@ -4769,9 +4766,24 @@
         "label": "Show shop by vendor",
         "default": false
       },
+       {
+        "type": "header",
+        "content": "Tags Order"
+      },
+      {
+        "type" : "paragraph",
+        "content":"This section work when select Sidebar Product filters by Group"
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tag_value",
+        "label": "Tags value",
+        "default": "Color|Size|Price|Brand|Type",
+        "info": "Default Order: Color|Size|Price|Brand|Type. This relate to Product tags begin with X_Y e.g. Color_Red. Case sensitive"
+      },
       {
         "type": "header",
-        "content": "Text Widget"
+        "content": "Custom text"
       },
       {
         "type": "checkbox",
@@ -4788,7 +4800,7 @@
       {
         "type": "checkbox",
         "id": "textwidget_image",
-        "label": "Show"
+        "label": "Show Image"
       },
       {
         "type": "image",
@@ -4800,29 +4812,9 @@
         "id": "textwidget_content",
         "label": "Content",
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
-      },
-      {
-        "type": "checkbox",
-        "id": "sidebar_ajax_filters",
-        "label": "Enable Ajax Filters",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Recently Viewed"
-      },
-      {
-        "type": "checkbox",
-        "id": "viewed_enable",
-        "label": "Enable recently products",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "viewed_number_of",
-        "label": "Number of recently products",
-        "default": "4"
       }
+    
+    
     ]
   },
   {
@@ -4921,7 +4913,7 @@
       {
         "type": "select",
         "id": "product_style_option",
-        "label": "Default Style Product detail ",
+        "label": "Default  Product detail Style",
         "options": [
           {
             "value": "product_style_option_nosidebar",
@@ -4935,7 +4927,8 @@
             "value": "product_style_option_rightsidebar",
             "label": "Detail width right sidebar"
           }
-        ]
+        ],
+        "info": "Not applied for the product has specified template layout"
       },
       {
         "type": "checkbox",
@@ -4946,18 +4939,27 @@
       {
         "type": "checkbox",
         "id": "product_quantity_enable",
-        "label": "Enable quantity selector"
+        "label": "Enable quantity selector",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "product_quantity_message",
         "label": "Show remaining quantity message",
-        "info": "Show when less than 10 items are in stock"
+        "info": "Show when less than 10 items are in stock",
+        "default": true
+      },
+         {
+        "type": "checkbox",
+        "id": "product_detail_countdown_enable",
+        "label": "Show Countdown",
+        "default": false
       },
       {
         "type": "checkbox",
         "id": "product_vendor_enable",
-        "label": "Show product vendor"
+        "label": "Show product vendor",
+        "default": true
       },
       {
         "type": "checkbox",
@@ -4972,6 +4974,22 @@
         "label": "Review star color",
         "default": "#e5c649",
         "info": "This selection overrides your product review app settings."
+      },
+      {
+        "type": "header",
+        "content": "Sidebar Recently Viewed"
+      },
+      {
+        "type": "checkbox",
+        "id": "viewed_enable",
+        "label": "Enable recently products",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "viewed_number_of",
+        "label": "Number of recently products",
+        "default": "4"
       },
       {
         "type": "header",
@@ -5402,7 +5420,7 @@
     ]
   },
   {
-    "name": "Countdown promotions",
+    "name": "Countdown promotions settings",
     "settings": [
       {
         "type": "header",
@@ -5412,7 +5430,7 @@
       {
         "type": "checkbox",
         "id": "countdown_enable",
-        "label": "Enabel Hotdeal",
+        "label": "Enable Countdown",
         "default": true
       },
       {
@@ -5603,25 +5621,6 @@
         "id": "social_sharing_count",
         "label": "Show number of shares",
         "info": "Available for Facebook, Twitter, and Pinterest."
-      },
-      {
-        "type": "select",
-        "id": "social_sharing_style",
-        "label": "Button style",
-        "options": [
-          {
-            "value": "is-default",
-            "label": "Normal"
-          },
-          {
-            "value": "is-large",
-            "label": "Large"
-          },
-          {
-            "value": "is-clean",
-            "label": "Clean"
-          }
-        ]
       },
       {
         "type": "checkbox",

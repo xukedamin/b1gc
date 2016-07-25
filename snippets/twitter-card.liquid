@@ -21,13 +21,22 @@
   <meta name="twitter:card" content="product">
   <meta name="twitter:title" content="{{ product.title | strip_html | escape }}">
   <meta name="twitter:description" content="{{ product.description | strip_html | truncatewords: 140, '' | escape }}">
+
   <meta name="twitter:image" content="https:{{ product | img_url: 'medium' }}">
   <meta name="twitter:image:width" content="240">
   <meta name="twitter:image:height" content="240">
+
 {% elsif template contains 'article' %}
-  <meta name="twitter:title" content="{{ article.title | strip_html | escape }}">
+  <meta name="twitter:title" content="{{ article.title | strip_html | escape | }}">
   <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
+  
+
   {% if article.image %}
-  <meta property="twitter:image" content="https:{{ article | img_url: 'medium' }}">
-{% endif %}
+
+    <meta property="twitter:image" content="https:{{ article | img_url: 'medium' }}">
+    
+  {% endif %}
+
+
+
 {% endif %}

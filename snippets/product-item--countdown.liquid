@@ -1,9 +1,7 @@
-{% if product.description contains '[jvcountdown]' %}            
+{% if settings.countdown_enable and product.description contains '[jvcountdown]' %}            
 {% assign temp = product.description | split:'[/jvcountdown]' | first %}
 {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
 
 {% include 'jv-sc-countdown' with countdown_time:count_down_time %}
-
-
 
 {%endif%}
