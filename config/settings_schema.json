@@ -4752,8 +4752,7 @@
         ],
         "default": "groups",
         "info": "[Learn how to set up filter groups](https:///docs.shopify.com/manual/more/official-shopify-themes/supply#enable-group-filtering)."
-      }, 
-
+      },
       {
         "type": "checkbox",
         "id": "sidebar_type_enable",
@@ -4766,13 +4765,13 @@
         "label": "Show shop by vendor",
         "default": false
       },
-       {
+      {
         "type": "header",
         "content": "Tags Order"
       },
       {
-        "type" : "paragraph",
-        "content":"This section work when select Sidebar Product filters by Group"
+        "type": "paragraph",
+        "content": "This section work when select Sidebar Product filters by Group"
       },
       {
         "type": "text",
@@ -4813,8 +4812,6 @@
         "label": "Content",
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra, ligula non mollis pretium, lectus libero sodales augue, interdum auctor mauris dui non risus. Nulla facilisi. Nunc rutrum diam in elit sagittis eget viverra erat viverra. Morbi imperdiet aliquet libero vel rhoncus. Integer."
       }
-    
-    
     ]
   },
   {
@@ -4949,7 +4946,7 @@
         "info": "Show when less than 10 items are in stock",
         "default": true
       },
-         {
+      {
         "type": "checkbox",
         "id": "product_detail_countdown_enable",
         "label": "Show Countdown",
@@ -5277,7 +5274,7 @@
             "label": "Modal"
           }
         ],
-        "default" :"modal"
+        "default": "modal"
       },
       {
         "type": "header",
@@ -7678,16 +7675,16 @@
         "label": "Slider 4 - Height (px)",
         "default": "470"
       }
-      ]
-    },
-    {
-      "name": "Banner Slider style 6",
-      "settings": [
-        {
-          "type": "header",
-          "content": "Slider 6"
-        },
-        {
+    ]
+  },
+  {
+    "name": "Banner Slider style 6",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Slider 6"
+      },
+      {
         "type": "select",
         "id": "slider6_img_set",
         "label": "Slider stlye 6 image set",
@@ -7713,12 +7710,11 @@
         "label": "Slider 6 - Height (px)",
         "default": "511"
       }
-      ]
-    },
-    {
-      "name": "Banner Slider style 7",
-      "settings": [
-
+    ]
+  },
+  {
+    "name": "Banner Slider style 7",
+    "settings": [
       {
         "type": "header",
         "content": "Slider 7"
@@ -7751,7 +7747,6 @@
       }
     ]
   },
-
   {
     "name": "Image set - Normal",
     "settings": [
@@ -7927,29 +7922,28 @@
       }
     ]
   },
-  
   {
-    "name": "SC: Banner 1",
+    "name": "SC: Banner",
     "settings": [
       {
         "type": "header",
         "content": "Setting: jv-sc-banner-1",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos1)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos1)"
       },
       {
-        "type":"blog",
+        "type": "blog",
         "id": "banner_1_datablog",
         "label": "Select datasource for Banner style 1"
       },
       {
-        "type":"text",
+        "type": "text",
         "id": "banner_1_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_style1",
-        "info":"default: banner_style1"
+        "info": "default: banner_style1"
       },
       {
-        "type":"select",
+        "type": "select",
         "id": "banner_1_columns",
         "label": "Number of columns",
         "options": [
@@ -7966,27 +7960,28 @@
             "label": "4"
           }
         ],
-        "default":   "3",
-        "info":      "Default: 3"
+        "default": "3",
+        "info": "Default: 3"
       },
       {
         "type": "header",
-        "content": "Setting: jv-sc-banner-2"
+        "content": "Setting: jv-sc-banner-2",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos2)"
       },
       {
-        "type":"blog",
+        "type": "blog",
         "id": "banner_2_datablog",
         "label": "Select datasource for Banner style 2"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_2_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_style2",
-        "info":"default: banner_style2"
+        "info": "default: banner_style2. Recommended size: 370 x 300 px"
       },
-       {
-        "type":"select",
+      {
+        "type": "select",
         "id": "banner_2_columns",
         "label": "Number of columns",
         "options": [
@@ -8003,44 +7998,45 @@
             "label": "4"
           }
         ],
-        "default":   "3",
-        "info":      "Default: 3"
-      },
-
-       {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-3"
+        "default": "3",
+        "info": "Default: 3"
       },
       {
-        "type":"blog",
+        "type": "header",
+        "content": "Setting: jv-sc-banner-3",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos3)"
+      },
+      {
+        "type": "blog",
         "id": "banner_3_datablog",
         "label": "Select datasource for Banner style 3"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_3_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_style3",
-        "info":"default: banner_style3"
-      },
-       {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-4"
+        "info": "default: banner_style3. Recommended size: 580 x 470 px"
       },
       {
-        "type":"blog",
+        "type": "header",
+        "content": "Setting: jv-sc-banner-4",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos4)"
+      },
+      {
+        "type": "blog",
         "id": "banner_4_datablog",
         "label": "Select datasource for Banner style 4"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_4_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_style4",
-        "info":"default: banner_style4"
+        "info": "default: banner_style4. Recommended size: 580 x 500 px"
       },
-       {
-        "type":"select",
+      {
+        "type": "select",
         "id": "banner_4_columns",
         "label": "Number of columns",
         "options": [
@@ -8057,27 +8053,28 @@
             "label": "4"
           }
         ],
-        "default":   "2",
-        "info":      "Default: 2"
-      },
-        {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-5"
+        "default": "2",
+        "info": "Default: 2"
       },
       {
-        "type":"blog",
+        "type": "header",
+        "content": "Setting: jv-sc-banner-5",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos5)"
+      },
+      {
+        "type": "blog",
         "id": "banner_5_datablog",
         "label": "Select datasource for Banner style 5"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_5_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_style5",
-        "info":"default: banner_style5"
+        "info": "default: banner_style5. Recommended size: 570 x 344 px"
       },
-       {
-        "type":"select",
+      {
+        "type": "select",
         "id": "banner_5_columns",
         "label": "Number of columns",
         "options": [
@@ -8094,28 +8091,28 @@
             "label": "4"
           }
         ],
-        "default":   "2",
-        "info":      "Default: 2"
-      },
-
-        {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-catalog "
+        "default": "2",
+        "info": "Default: 2"
       },
       {
-        "type":"blog",
+        "type": "header",
+        "content": "Setting: jv-sc-banner-catalog ",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos8)"
+      },
+      {
+        "type": "blog",
         "id": "banner_catalog_datablog",
         "label": "Select datasource for Banner style catalog"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_catalog_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_stylecatalog",
-        "info":"default: banner_stylecatalog"
+        "info": "default: banner_stylecatalog. Recommended size: 1920 x 700 px"
       },
-       {
-        "type":"select",
+      {
+        "type": "select",
         "id": "banner_catalog_columns",
         "label": "Number of columns",
         "options": [
@@ -8132,29 +8129,28 @@
             "label": "4"
           }
         ],
-        "default":   "2",
-        "info":      "Default: 2"
-      },
-
-
-        {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-product-adv "
+        "default": "2",
+        "info": "Default: 2"
       },
       {
-        "type":"blog",
+        "type": "header",
+        "content": "Setting: jv-sc-banner-product-adv ",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos7)"
+      },
+      {
+        "type": "blog",
         "id": "banner_product_datablog",
         "label": "Select datasource for Banner style product"
       },
-        {
-        "type":"text",
+      {
+        "type": "text",
         "id": "banner_product_datablog_tag",
-        "label": "Select tag to filter",
+        "label": "Tag to filter",
         "default": "banner_styleproduct",
-        "info":"default: banner_styleproduct"
+        "info": "default: banner_styleproduct. Recommended size: 580 x 500 px"
       },
-       {
-        "type":"select",
+      {
+        "type": "select",
         "id": "banner_product_columns",
         "label": "Number of columns",
         "options": [
@@ -8171,674 +8167,10 @@
             "label": "4"
           }
         ],
-        "default":   "4",
-        "info":      "Default: 4"
-      },
+        "default": "4",
+        "info": "Default: 4"
+      }
      
-
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner1_item_1",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner1_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 384 x 582 px"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_1_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner1_item_1_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner1_item_2",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner1_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 384 x 582 px"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_2_title",
-        "label": "Title",
-        "default": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_2_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner1_item_2_text",
-        "label": "Banner Text",
-        "default": "Banner Text 2"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner1_item_3",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner1_item_3_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 384 x 582 px"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_3_title",
-        "label": "Title",
-        "default": "Title 3"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_3_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 3"
-      },
-      {
-        "type": "textarea",
-        "id": "banner1_item_3_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_3_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner1_item_3_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "SC: Banner 2",
-    "settings": [
-     {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-2",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos2)"
-      },
-    
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner2_item_1",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner2_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 370 x 300 px"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_1_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner2_item_1_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner2_item_2",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner2_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 370 x 300 px"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_2_title",
-        "label": "Title",
-        "default": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_2_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner2_item_2_text",
-        "label": "Banner Text",
-        "default": "Banner Text 2"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner2_item_3",
-        "label": "Show",
-        "default":true
-      },
-      {
-        "type": "image",
-        "id": "banner2_item_3_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 370 x 300 px"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_3_title",
-        "label": "Title",
-        "default": "Title 3"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_3_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 3"
-      },
-      {
-        "type": "textarea",
-        "id": "banner2_item_3_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_3_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner2_item_3_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "SC: Banner 3",
-    "settings": [
-     {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-3",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos3)"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      
-      {
-        "type": "image",
-        "id": "banner3_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 470 px"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_1_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner3_item_1_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-     
-      {
-        "type": "image",
-        "id": "banner3_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 320 px"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_2_title",
-        "label": "Title",
-        "default": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_2_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner3_item_2_text",
-        "label": "Banner Text",
-        "default": "Banner Text 2"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      
-      {
-        "type": "image",
-        "id": "banner3_item_3_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 320 px"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_3_title",
-        "label": "Title",
-        "default": "Title 3"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_3_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 3"
-      },
-      {
-        "type": "textarea",
-        "id": "banner3_item_3_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_3_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_3_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "image",
-        "id": "banner3_item_4_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 470 px"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_4_title",
-        "label": "Title",
-        "default": "Title 4"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_4_subtitle",
-        "label": "Subtitle",
-        "default": "Title 4"
-      },
-      {
-        "type": "textarea",
-        "id": "banner3_item_4_text",
-        "label": "Banner Text",
-        "default": "Banner Text 3"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_4_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner3_item_4_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "SC: Banner 4 ",
-    "settings": [
-     {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-4",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos4)"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner4_item_1",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "banner4_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_1_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner4_item_1_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner4_item_2",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "banner4_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_2_title",
-        "label": "Title",
-        "default": "30% OFF"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_2_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner4_item_2_text",
-        "label": "Banner Text",
-        "default": "Banner Text 2"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner4_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "SC: Banner 5 ",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-5",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos5)"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner5_item_1",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "banner5_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 570 x 344 px"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-    
-      {
-        "type": "text",
-        "id": "banner5_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-     
-      {
-        "type": "text",
-        "id": "banner5_item_1_price",
-        "label": "Price",
-        "default": "$539"
-      },
-     
-      {
-        "type": "text",
-        "id": "banner5_item_1_sale",
-        "label": "Sale off",
-        "default": "-20%"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner5_item_2",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "banner5_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 570 x 344 px"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_2_title",
-        "label": "Title",
-        "default": "Title 2"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_2_price",
-        "label": "Price",
-        "default": "$539"
-      },
-      {
-        "type": "text",
-        "id": "banner5_item_2_sale",
-        "label": "Sale off",
-        "default": "-20%"
-      }
     ]
   },
   {
@@ -8847,7 +8179,7 @@
       {
         "type": "header",
         "content": "Setting: jv-sc-banner-about",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos7)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos7)"
       },
       {
         "type": "header",
@@ -8879,7 +8211,7 @@
       {
         "type": "text",
         "id": "banner_about_item_1_icon",
-        "label": "ICon",
+        "label": "Icon",
         "default": "fa fa-briefcase",
         "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       },
@@ -9167,216 +8499,12 @@
       },
       {
         "type": "color",
-        "id": "banner_about_item_7_color",
+      "id": "banner_about_item_7_color",
         "label": "Text color",
         "default": "#fff"
       }
     ]
   },
-  {
-    "name": "SC: Banner 7 ",
-    "settings": [
-     {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-product-adv",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos6)"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_pa_item_1",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_pa_item_1_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_1_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-    
-      {
-        "type": "text",
-        "id": "banner_pa_item_1_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_1_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_pa_item_2",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_pa_item_2_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_2_title",
-        "label": "Title",
-        "default": "30% OFF"
-      },
-    
-      {
-        "type": "text",
-        "id": "banner_pa_item_2_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_2_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_pa_item_3",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_pa_item_3_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_3_title",
-        "label": "Title",
-        "default": "30% OFF"
-      },
-     
-      {
-        "type": "text",
-        "id": "banner_pa_item_3_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_3_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_pa_item_4",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_pa_item_4_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 500 px"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_4_title",
-        "label": "Title",
-        "default": "30% OFF"
-      },
-    
-      {
-        "type": "text",
-        "id": "banner_pa_item_4_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner_pa_item_4_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "SC: Banner 8 Parallax",
-    "settings": [
-
-      {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-catalog",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos8)"
-      },
-      {
-        "type": "image",
-        "id": "banner_catalog_img.png",
-        "label": "Banner Image",
-        "info": "Recommended size: 580 x 470 px"
-      },
-      {
-        "type": "text",
-        "id": "banner_catalog_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_catalog_subtitle",
-        "label": "Subtitle",
-        "default": "Subtitle 1"
-      },
-      {
-        "type": "textarea",
-        "id": "banner_catalog_text",
-        "label": "Banner Text",
-        "default": "Banner Text"
-      },
-      {
-        "type": "text",
-        "id": "banner_catalog_btn",
-        "label": "Button",
-        "default": "Shop now"
-      },
-      {
-        "type": "text",
-        "id": "banner_catalog_link",
-        "label": "Banner link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-
   {
     "name": "SC: Brands",
     "settings": [
@@ -9511,14 +8639,13 @@
       }
     ]
   },
- 
   {
     "name": "SC: Feature 1",
     "settings": [
       {
         "type": "header",
         "content": "Setting: jv-sc-feature-box",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos1)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos1)"
       },
       {
         "type": "select",
@@ -9769,11 +8896,11 @@
   },
   {
     "name": "SC: Feature 2 - Locator",
-    "settings": [ 
+    "settings": [
       {
         "type": "header",
         "content": "Setting: jv-sc-feature-locator",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-locator/#pos2)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-locator/#pos2)"
       },
       {
         "type": "header",
@@ -9882,15 +9009,15 @@
       }
     ]
   },
-   {
+  {
     "name": "SC: Feature 3 - Service",
     "settings": [
       {
         "type": "header",
         "content": "Setting: jv-sc-service-custom",
-         "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos3)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/feature-boxes/#pos3)"
       },
-       {
+      {
         "type": "text",
         "id": "service_headingtitle",
         "label": "Title",
@@ -9913,7 +9040,6 @@
         "id": "services_bgimg.jpg",
         "label": "Image"
       },
-   
       {
         "type": "header",
         "content": "Item #1 -----------"
@@ -10276,7 +9402,6 @@
       }
     ]
   },
-
   {
     "name": "SC: Progressbar circle",
     "settings": [
@@ -10285,7 +9410,7 @@
         "content": "SC: jv-sc-circle",
         "info": "[Demo](https://bigc-1.myshopify.com/pages/pages/charts-progress-bars/#pos1)"
       },
-       {
+      {
         "type": "header",
         "content": "Item #1"
       },
@@ -10329,7 +9454,7 @@
         "default": "#ccc",
         "info": "default: #ccc"
       },
-       {
+      {
         "type": "header",
         "content": "Item #2"
       },
@@ -10339,7 +9464,6 @@
         "label": "Show",
         "default": true
       },
-        
       {
         "type": "color",
         "id": "pbarcircle_item_2_background",
@@ -10374,7 +9498,7 @@
         "default": "#ccc",
         "info": "default: #ccc"
       },
-       {
+      {
         "type": "header",
         "content": "Item #3"
       },
@@ -10384,7 +9508,6 @@
         "label": "Show",
         "default": true
       },
-        
       {
         "type": "color",
         "id": "pbarcircle_item_3_background",
@@ -10403,7 +9526,7 @@
         "id": "pbarcircle_item_3_color_main",
         "label": "Main value Color",
         "default": "#1B1D1F",
-         "info": "default: #1B1D1F"
+        "info": "default: #1B1D1F"
       },
       {
         "type": "color",
@@ -10419,7 +9542,7 @@
         "default": "#ccc",
         "info": "default: #ccc"
       },
-       {
+      {
         "type": "header",
         "content": "Item #4"
       },
@@ -10447,21 +9570,21 @@
         "id": "pbarcircle_item_4_color_main",
         "label": "Main value Color",
         "default": "#ffffff",
-        "info":"default: #ffffff"
+        "info": "default: #ffffff"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_4_color_stroke",
         "label": "Stroke Color",
         "default": "#2EA0D7",
-        "info" : "default: #2EA0D7"
+        "info": "default: #2EA0D7"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_4_textcolor",
         "label": "Text Color",
         "default": "#fff",
-        "info":"default: #ffffff"
+        "info": "default: #ffffff"
       },
       {
         "type": "header",
@@ -10479,13 +9602,12 @@
         "label": "Title",
         "default": "Item 5"
       },
-      
       {
         "type": "color",
         "id": "pbarcircle_item_5_background",
         "label": "Background Color",
         "default": "#fec942",
-        "info" :"default : #fec942"
+        "info": "default : #fec942"
       },
       {
         "type": "text",
@@ -10498,23 +9620,23 @@
         "id": "pbarcircle_item_5_color_main",
         "label": "Main value Color",
         "default": "#fff",
-        "info" :"default : #ffffff"
+        "info": "default : #ffffff"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_5_color_stroke",
         "label": "Stroke Color",
         "default": "#FFD56A",
-        "info" :"default : #FFD56A"
+        "info": "default : #FFD56A"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_5_textcolor",
         "label": "Text Color",
         "default": "#fff",
-        "info" :"default : #ffffff"
+        "info": "default : #ffffff"
       },
-       {
+      {
         "type": "header",
         "content": "Item #6"
       },
@@ -10535,7 +9657,7 @@
         "id": "pbarcircle_item_6_background",
         "label": "Background Color",
         "default": "#cccccc",
-        "info" :"default : #cccccc"
+        "info": "default : #cccccc"
       },
       {
         "type": "text",
@@ -10548,21 +9670,21 @@
         "id": "pbarcircle_item_6_color_main",
         "label": "Main value Color",
         "default": "#1B1D1F",
-        "info" :"default : #1B1D1F"
+        "info": "default : #1B1D1F"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_6_color_stroke",
         "label": "Stroke Color",
         "default": "#fff",
-        "info" :"default : #ffffff"
+        "info": "default : #ffffff"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_6_textcolor",
         "label": "Text Color",
         "default": "#1b1d1f",
-        "info" :"default : #1b1d1f"
+        "info": "default : #1b1d1f"
       },
       {
         "type": "header",
@@ -10580,13 +9702,12 @@
         "label": "Title",
         "default": "Item 7"
       },
-     
       {
         "type": "color",
         "id": "pbarcircle_item_7_background",
         "label": "Background color",
         "default": "#ffd21e",
-        "info" :"default : #ffd21e"
+        "info": "default : #ffd21e"
       },
       {
         "type": "text",
@@ -10599,21 +9720,21 @@
         "id": "pbarcircle_item_7_color_main",
         "label": "Main value Color",
         "default": "#1B1D1F",
-        "info" :"default : #1B1D1F"
+        "info": "default : #1B1D1F"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_7_color_stroke",
         "label": "Stroke Color",
         "default": "#fff",
-        "info" :"default : #ffffff"
+        "info": "default : #ffffff"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_7_textcolor",
         "label": "Text Color",
         "default": "#1b1d1f",
-        "info" :"default : #1b1d1f"
+        "info": "default : #1b1d1f"
       },
       {
         "type": "header",
@@ -10631,13 +9752,12 @@
         "label": "Title",
         "default": "Item 8"
       },
-     
       {
         "type": "color",
         "id": "pbarcircle_item_8_background",
         "label": "Background color",
         "default": "#1b1d1f",
-        "info" :"default : #1b1d1f"
+        "info": "default : #1b1d1f"
       },
       {
         "type": "text",
@@ -10650,21 +9770,21 @@
         "id": "pbarcircle_item_8_color_main",
         "label": "Main value Color",
         "default": "#FFD21E",
-        "info" :"default : #FFD21E"
+        "info": "default : #FFD21E"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_8_color_stroke",
         "label": "Stroke Color",
         "default": "#424242",
-        "info" :"default : #424242"
+        "info": "default : #424242"
       },
       {
         "type": "color",
         "id": "pbarcircle_item_8_textcolor",
         "label": "Text Color",
         "default": "#ffd21e",
-        "info" :"default : #ffd21e"
+        "info": "default : #ffd21e"
       }
     ]
   },
@@ -10692,7 +9812,6 @@
         "label": "Title",
         "default": "Piechart 1"
       },
-     
       {
         "type": "text",
         "id": "piechart_item_1_value",
@@ -10739,7 +9858,6 @@
         "label": "Title",
         "default": "Piechart 2"
       },
-     
       {
         "type": "text",
         "id": "piechart_item_2_value",
@@ -10786,7 +9904,6 @@
         "label": "Title",
         "default": "Piechart 3"
       },
-     
       {
         "type": "text",
         "id": "piechart_item_3_value",
@@ -10833,7 +9950,6 @@
         "label": "Title",
         "default": "Piechart 4"
       },
-    
       {
         "type": "text",
         "id": "piechart_item_4_value",
@@ -10924,7 +10040,6 @@
         "label": "Title",
         "default": "Progressbar 2"
       },
-     
       {
         "type": "checkbox",
         "id": "pbar_item_2_small",
@@ -10959,7 +10074,6 @@
         "label": "Title",
         "default": "Progressbar 3"
       },
-     
       {
         "type": "checkbox",
         "id": "pbar_item_3_small",
@@ -10994,7 +10108,6 @@
         "label": "Title",
         "default": "Progressbar 3"
       },
-    
       {
         "type": "checkbox",
         "id": "pbar_item_4_small",
@@ -11248,6 +10361,108 @@
   {
     "name": "SC: Testimonials",
     "settings": [
+     {
+        "type": "header",
+        "content": "Testimonials 1"
+      },
+        {
+        "type": "blog",
+        "id": "testimonial_s1_data",
+        "label": "Select datasource for Testimonials style 1"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_s1_data_tag",
+        "label": "Tag to filter",
+        "default": "testi_person",
+        "info": "default: testi_person. Recommended size: x px"
+      },
+      {
+        "type": "select",
+        "id": "testimonial_s1_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
+      },
+        {
+        "type": "header",
+        "content": "Testimonials 2"
+      },
+        {
+        "type": "blog",
+        "id": "testimonial_s2_data",
+        "label": "Select datasource for Testimonials style 2"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_s2_data_tag",
+        "label": "Tag to filter",
+        "default": "testi_person",
+        "info": "default: testi_person. Recommended size: x px"
+      },
+      {
+        "type": "select",
+        "id": "testimonial_s2_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
+      },
+
+              {
+        "type": "header",
+        "content": "Testimonials 3"
+      },
+        {
+        "type": "blog",
+        "id": "testimonial_s3_data",
+        "label": "Select datasource for Testimonials style 3"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_s3_data_tag",
+        "label": "Tag to filter",
+        "default": "testi_person",
+        "info": "default: testi_person. Recommended size: x px"
+      },
+      {
+        "type": "select",
+        "id": "testimonial_s3_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
+      },
+
+
       {
         "type": "header",
         "content": "Item #1--------"
@@ -11444,232 +10659,105 @@
   {
     "name": "SC: Team",
     "settings": [
-      {
+     {
         "type": "header",
-        "content": "Item #1"
+        "content": "Team circle"
       },
-      {
-        "type": "checkbox",
-        "id": "team_item_1_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "team_item_1_img.png",
-        "label": "Image"
+        {
+        "type": "blog",
+        "id": "team_circle_data",
+        "label": "Select datasource for Team style circle"
       },
       {
         "type": "text",
-        "id": "team_item_1_name",
-        "label": "Name",
-        "default": "Name 1"
+        "id": "team_circle_data_tag",
+        "label": "Tag to filter",
+        "default": "team_person",
+        "info": "default: team_person. Recommended size: x px"
       },
       {
-        "type": "text",
-        "id": "team_item_1_job",
-        "label": "Job",
-        "default": "Job 1"
-      },
-      {
-        "type": "textarea",
-        "id": "team_item_1_desc",
-        "label": "Description",
-        "default": "Description 1"
-      },
-      {
-        "type": "text",
-        "id": "team_item_1_twitter",
-        "label": "Twitter",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_1_facebook",
-        "label": "Facebook",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_1_gplus",
-        "label": "Gplus",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_1_pinterest",
-        "label": "Pinterest",
-        "default": "#"
+        "type": "select",
+        "id": "team_circle_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
       },
       {
         "type": "header",
-        "content": "Item #2"
+        "content": "Team Gallery"
       },
-      {
-        "type": "checkbox",
-        "id": "team_item_2_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "team_item_2_img.png",
-        "label": "Image"
+        {
+        "type": "blog",
+        "id": "team_gallery_data",
+        "label": "Select datasource for Team style Gallery"
       },
       {
         "type": "text",
-        "id": "team_item_2_name",
-        "label": "Name",
-        "default": "Name 2"
+        "id": "team_gallery_data_tag",
+        "label": "Tag to filter",
+        "default": "team_person",
+        "info": "default: team_person. Recommended size: x px"
       },
       {
-        "type": "text",
-        "id": "team_item_2_job",
-        "label": "Job",
-        "default": "Job 2"
+        "type": "select",
+        "id": "team_gallery_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
       },
-      {
-        "type": "textarea",
-        "id": "team_item_2_desc",
-        "label": "Description",
-        "default": "Description 2"
-      },
-      {
-        "type": "text",
-        "id": "team_item_2_twitter",
-        "label": "Twitter",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_2_facebook",
-        "label": "Facebook",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_2_gplus",
-        "label": "Gplus",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_2_pinterest",
-        "label": "Pinterest",
-        "default": "#"
-      },
-      {
+
+       {
         "type": "header",
-        "content": "Item #3"
+        "content": "Team Rect"
       },
-      {
-        "type": "checkbox",
-        "id": "team_item_3_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "team_item_3_img.png",
-        "label": "Image"
+        {
+        "type": "blog",
+        "id": "team_rect_data",
+        "label": "Select datasource for Team style Rect"
       },
       {
         "type": "text",
-        "id": "team_item_3_name",
-        "label": "Name",
-        "default": "Name 3"
+        "id": "team_rect_data_tag",
+        "label": "Tag to filter",
+        "default": "team_person",
+        "info": "default: team_person. Recommended size: x px"
       },
       {
-        "type": "text",
-        "id": "team_item_3_job",
-        "label": "Job",
-        "default": "Job 3"
-      },
-      {
-        "type": "textarea",
-        "id": "team_item_3_desc",
-        "label": "Description",
-        "default": "Description 3"
-      },
-      {
-        "type": "text",
-        "id": "team_item_3_twitter",
-        "label": "Twitter",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_3_facebook",
-        "label": "Facebook",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_3_gplus",
-        "label": "Gplus",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_3_pinterest",
-        "label": "Pinterest",
-        "default": "#"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "team_item_4_enable",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "team_item_4_img.png",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_name",
-        "label": "Name",
-        "default": "Name 4"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_job",
-        "label": "Job",
-        "default": "Job 4"
-      },
-      {
-        "type": "textarea",
-        "id": "team_item_4_desc",
-        "label": "Description",
-        "default": "Description 4"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_twitter",
-        "label": "Twitter",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_facebook",
-        "label": "Facebook",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_gplus",
-        "label": "Gplus",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "team_item_4_pinterest",
-        "label": "Pinterest",
-        "default": "#"
+        "type": "select",
+        "id": "team_rect_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4",
+        "info": "Default: 4"
       }
     ]
   },
@@ -11986,5 +11074,4 @@
       }
     ]
   }
-  
 ]

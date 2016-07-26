@@ -1,56 +1,50 @@
+{% assign blogs_list_grids = settings.team_gallery_data %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign number_cols = settings.team_gallery_columns | plus: 0 %}
+{% assign blog_tag_filter = settings.team_gallery_data_tag %}
+
+{%comment%}default :team_person {%endcomment%} 
+{%if count >= 1 %}
+
 <div class="team-gallery">
-
-  {%include 'jv-sc-heading-box'%}
-  
   <div class="row">
+     {% for article in sourcedata.articles %}
 
-  {% for i in (1..4) %}
-{% capture team %}team_item_{{ i }}_enable{% endcapture %}
-{% capture team_img %}team_item_{{ i }}_img.png{% endcapture %}            
-{% capture team_name %}team_item_{{ i }}_name{% endcapture %}
-{% capture team_job %}team_item_{{ i }}_job{% endcapture %}
-{% capture team_desc %}team_item_{{ i }}_desc{% endcapture %}
-
-{% capture team_twitter %}team_item_{{ i }}_twitter{% endcapture %}
-{% capture team_pinterest %}team_item_{{ i }}_pinterest{% endcapture %}
-{% capture team_facebook %}team_item_{{ i }}_facebook{% endcapture %}
-{% capture team_gplus %}team_item_{{ i }}_gplus{% endcapture %}
-
-
-{% if settings[team] %}
-
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="item-team-gallery">
-      <h3><a href="#">{{ settings[team_name] }}</a></h3>
-      <a class="team-gallery-thumb fancybox" href="{{ team_img | asset_url }}" data-fancybox-group="gallery" title="{{ settings[team_name] }}">
-         <img src="{{ team_img | asset_url }}"   alt="{{ settings[team_name] }}">
-      </a>
-      <span>{{ settings[team_job] }}</span>
-      <p class="desc">{{settings[team_desc]}}</p>
-
-       {% if settings[team_twitter] != blank or settings[team_facebook]  != blank or settings[team_gplus]  != blank or settings[team_pinterest]  != blank %}
-      <ul class="team-social-network list-inline">
+      {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+        {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
+        {% assign person_desc = temp | split:'[jvperson]' | last %}
         
-         {% if settings[team_twitter] != blank %}
-            <li><a target="_blank" href="{{ settings[team_twitter] }}"><i class="fa fa-twitter"></i></a></li>
-            {% endif %}
-            {% if settings[team_facebook] != blank %}
-            <li><a target="_blank" href="{{ settings[team_facebook] }}"><i class="fa fa-facebook"></i></a></li>
-            {% endif %}
-            {% if settings[team_gplus] != blank %}
-            <li><a target="_blank" href="{{ settings[team_gplus] }}"><i class="fa fa-google-plus"> </i></a></li>
-            {% endif %}
-            {% if settings[team_pinterest] != blank %}
-            <li><a target="_blank" href="{{ settings[team_pinterest] }}"><i class="fa fa-pinterest"></i></a></li>
-            {% endif %}
-      </ul>
-       {% endif %}
-    </div>
-  </div>
+        {% assign temp = person_desc | split:'[/job]' | first %}
+        {% assign person_job = temp | split:'[job]' | last %}
 
-{% endif %}
-{% endfor %}
-   
+        {% assign temp = person_desc | split:'[/desc]' | first %}
+        {% assign person_desc = temp | split:'[desc]' | last %}
+
+        {% assign temp = article.excerpt | split:'[/links]' | first %}
+        {% assign person_links = temp | split:'[links]' | last %}
+        
+        <div class="col-md-{{12 | divided_by : number_cols }} col-sm-6 col-xs-12">
+          <div class="item-team-gallery">
+            <h3><a href="#">{{ article.title }}</a></h3>
+            <a class="team-gallery-thumb fancybox" href="{{ article.image.src | img_url: 'master' }}" data-fancybox-group="gallery" title="{{ article.title }}">
+               <img src="{{ article.image.src | img_url: 'large' }}"   alt="{{ article.title }}">
+            </a>
+            {%if person_job != blank%}
+            <span>{{ person_job }}</span>
+            {%endif %}
+
+            {%if person_desc != blank %}
+            <p class="desc">{{settings[team_desc]}}</p>
+            {%endif %}
+            
+            {{ person_links }}
+              
+          </div>
+        </div>
+
+        {%endif %}
+    {%endfor %}
   </div>
 </div>
-<!-- End Team Gallery -->
+{%endif%}

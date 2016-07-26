@@ -1,59 +1,52 @@
+{% assign blogs_list_grids = settings.team_circle_data %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign number_cols = settings.team_circle_columns | plus: 0 %}
+{% assign blog_tag_filter = settings.team_circle_data_tag %}
+
+{%comment%}default :team_person {%endcomment%} 
+{%if count >= 1 %}
 
 <div class="team-circle">
-	{%include 'jv-sc-heading-box'%}
-	
 	<div class="row">
-		  {% for i in (1..4) %}
-{% capture team %}team_item_{{ i }}_enable{% endcapture %}
-{% capture team_img %}team_item_{{ i }}_img.png{% endcapture %}            
-{% capture team_name %}team_item_{{ i }}_name{% endcapture %}
-{% capture team_job %}team_item_{{ i }}_job{% endcapture %}
-{% capture team_desc %}team_item_{{ i }}_desc{% endcapture %}
+		 {% for article in sourcedata.articles %}
 
-{% capture team_twitter %}team_item_{{ i }}_twitter{% endcapture %}
-{% capture team_pinterest %}team_item_{{ i }}_pinterest{% endcapture %}
-{% capture team_facebook %}team_item_{{ i }}_facebook{% endcapture %}
-{% capture team_gplus %}team_item_{{ i }}_gplus{% endcapture %}
+	    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+	      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
+	      {% assign personcode = temp | split:'[jvperson]' | last %}
+	      
+	      {% assign temp = personcode | split:'[/job]' | first %}
+	      {% assign person_job = temp | split:'[job]' | last %}
 
+	      {% assign temp = personcode | split:'[/desc]' | first %}
+	      {% assign person_desc = temp | split:'[desc]' | last %}
 
-{% if settings[team] %}
-		<div class="col-md-3 col-sm-6 col-xs-12">
-			<div class="item-team-circle item-team-circle{{i}}">
-				<div class="team-circle-thumb">
-					<div class="img team-cirle-image" style="background-image: url({{team_img | asset_url}}); background-size: cover; background-position: center center"></div>
+	      {% assign temp = article.excerpt | split:'[/links]' | first %}
+	      {% assign person_links = temp | split:'[links]' | last %}
 
-					<div class="info-circle-thumb">
-						<p class="desc">{{settings[team_desc]}}</p>
+			<div class="col-md-{{12 | divided_by : number_cols }} col-sm-6 col-xs-12">
+				<div class="item-team-circle item-team-circle{{i}}">
+					<div class="team-circle-thumb">
+						<div class="img team-cirle-image" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center"></div>
 
-						  {% if settings[team_twitter] != blank or settings[team_facebook]  != blank or settings[team_gplus]  != blank or settings[team_pinterest]  != blank %}
-							<ul class="team-circle-social-network list-inline">
-								{% if settings[team_twitter] != blank %}
-									<li><a target="_blank" href="{{ settings[team_twitter] }}"><i class="fa fa-twitter"></i></a></li>
-								{% endif %}
-								{% if settings[team_facebook] != blank %}
-									<li><a target="_blank" href="{{ settings[team_facebook] }}"><i class="fa fa-facebook"></i></a></li>
-								{% endif %}
-								{% if settings[team_gplus] != blank %}
-									<li><a target="_blank" href="{{ settings[team_gplus] }}"><i class="fa fa-google-plus"> </i></a></li>
-								{% endif %}
-								{% if settings[team_pinterest] != blank %}
-									<li><a target="_blank" href="{{ settings[team_pinterest] }}"><i class="fa fa-pinterest"></i></a></li>
-								{% endif %}
-							</ul>
-
-						 {% endif %}
+						<div class="info-circle-thumb">
+							{%if person_desc != blank %}
+							<p class="desc">{{person_desc}}</p>
+							{%endif %}
+							{{ person_links }}
+						</div>
+					</div>
+					<div class="team-circle-info">
+						<h3><a href="#">{{ article.title }}</a></h3>
+						{%if person_job != blank %}
+						<span>{{ person_job }}</span>
+						{%endif %}
 					</div>
 				</div>
-				<div class="team-circle-info">
-					<h3><a href="#">{{ settings[team_name] }}</a></h3>
-					<span>{{ settings[team_job] }}</span>
-				</div>
 			</div>
-		</div>
 
-
-{% endif %}
-{% endfor %}
-
+	      {%endif %}
+	  {%endfor %}
 	</div>
 </div>
+{%endif%}

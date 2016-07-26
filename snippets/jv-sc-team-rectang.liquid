@@ -1,11 +1,65 @@
+{% assign blogs_list_grids = settings.team_rect_data %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign number_cols = settings.team_rect_columns | plus: 0 %}
+{% assign blog_tag_filter = settings.team_rect_data_tag %}
+
+{%comment%}default :team_person {%endcomment%} 
+{%if count >= 1 %}
+
+<div class="team-rectang wrap-item">
+  <div class="row">
+     {% for article in sourcedata.articles %}
+     
+      {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+        {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
+        {% assign person_desc = temp | split:'[jvperson]' | last %}
+        
+        {% assign temp = person_desc | split:'[/job]' | first %}
+        {% assign person_job = temp | split:'[job]' | last %}
+
+        {% assign temp = person_desc | split:'[/desc]' | first %}
+        {% assign person_desc = temp | split:'[desc]' | last %}
+
+        {% assign temp = article.excerpt | split:'[/links]' | first %}
+        {% assign person_links = temp | split:'[links]' | last %}
+
+        <div class="col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12">
+					<div class="item-team-rectang">
+						<div class="team-rectang-thumb">
+							 <img src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}">
+						</div>
+						<div class="team-circle-info">
+							<h3><a href="#">{{ article.title }}</a></h3>
+							{%if person_job %}
+							<span>{{ person_job }}</span>
+							{%endif%}
+							{%if person_desc %}
+							<p class="desc">{{person_desc}}</p>
+							{%endif%}
+
+					 		{{ person_links }}
+
+						</div>
+					</div>
+				</div>
+
+
+        {%endif %}
+    {%endfor %}
+  </div>
+</div>
+{%endif%}
+
+
+
+{%comment%}
+
 {%unless class_item %}
 {%assign class_item = 'col-md-3 col-sm-6 col-xs-12' %}
 {%endunless%}
 
-
 <div class="team-rectang wrap-item">
-
-{%include 'jv-sc-heading-box'%}
 
 {%if class_item == 'col-md-3 col-sm-6 col-xs-12' %}
 	<div class="row">
@@ -20,7 +74,6 @@
 {% capture team_pinterest %}team_item_{{ i }}_pinterest{% endcapture %}
 {% capture team_facebook %}team_item_{{ i }}_facebook{% endcapture %}
 {% capture team_gplus %}team_item_{{ i }}_gplus{% endcapture %}
-
 
 {% if settings[team] %}
 		<div class="{{class_item}}">
@@ -61,3 +114,5 @@
 	</div>
 {% endif %}
 </div>
+
+{%endcomment%}
