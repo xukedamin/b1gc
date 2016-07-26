@@ -7939,8 +7939,112 @@
       {
         "type":"blog",
         "id": "banner_1_data_blog",
-        "label": "Select datasource for Banner 1"
+        "label": "Select datasource for Banner style 1"
       },
+      {
+        "type":"text",
+        "id": "banner_1_data_blog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_style1",
+        "info":"default: banner_style1"
+      },
+      {
+        "type":"select",
+        "id": "banner_1_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "3",
+        "info":      "Text"
+      },
+      {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-2"
+      },
+      {
+        "type":"blog",
+        "id": "banner_2_data_blog",
+        "label": "Select datasource for Banner style 2"
+      },
+        {
+        "type":"text",
+        "id": "banner_2_data_blog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_style2",
+        "info":"default: banner_style2"
+      },
+       {
+        "type":"select",
+        "id": "banner_2_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "3",
+        "info":      "Text"
+      },
+
+       {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-3"
+      },
+      {
+        "type":"blog",
+        "id": "banner_3_data_blog",
+        "label": "Select datasource for Banner style 3"
+      },
+        {
+        "type":"text",
+        "id": "banner_3_data_blog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_style3",
+        "info":"default: banner_style3"
+      },
+       {
+        "type":"select",
+        "id": "banner_3_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "3",
+        "info":      "Text"
+      },
+
       {
         "type": "header",
         "content": "Item #1"
@@ -8089,6 +8193,7 @@
         "content": "Setting: jv-sc-banner-2",
          "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos2)"
       },
+    
       {
         "type": "header",
         "content": "Item #1"

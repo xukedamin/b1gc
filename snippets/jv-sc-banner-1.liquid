@@ -1,39 +1,68 @@
-{%assign banner_name = 'banner1' %}
+{% assign blogs_list_grids = settings.banner_1_data_blog %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign number_cols = settings.banner_1_columns | plus: 0 %}
+{% assign blog_tag_filter = settings.banner_1_data_blog_tag %}
 
-  {% assign blogs_list_grids = settings.banner_1_data_blog %}
-  {% assign sourcedata = blogs[blogs_list_grids] %}
+{%comment%}default :banner_style1 {%endcomment%} 
 
-
+{%if count > 1 %}
+<div class="row">
    {% for article in sourcedata.articles %}
-    {{article.content}}
-    <br/>
-    {% if article.content contains '[jvbanner]' %}
-          {% assign temp = article.content | split:'[/jvbanner]' | first %}
-          {% assign bannercode = temp | split:'[jvbanner]' | last %}
+    
+    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvbanner]' %}
+        {% assign temp = article.excerpt | split:'[/jvbanner]' | first %}
+        {% assign bannercode = temp | split:'[jvbanner]' | last %}
+        
+        {% assign temp = bannercode | split:'[/subtitle]' | first %}
+        {% assign banner_subtitle = temp | split:'[subtitle]' | last %}
 
-          {% assign des = article.content | split:'[/jvbanner]' | last %}
-          
-          <p>Code: {{bannercode }}</p>
+        {% assign temp = bannercode | split:'[/url]' | first %}
+        {% assign banner_url = temp | split:'[url]' | last %}
 
-          {% assign temp = bannercode | split:'[/title]' | first %}
-          {% assign bannertitle = temp | split:'[title]' | last %}
+         {% assign temp = bannercode | split:'[/btn]' | first %}
+        {% assign banner_btn = temp | split:'[btn]' | last %}
 
-          <p>title {{bannertitle}}</p>
+      {% assign class_item = 'box-left' %}
+        {% if forloop.index == 2 %}
+          {% assign class_item = 'box-center'%}
+        {% elsif forloop.index == 3 %}
+          {% assign class_item = 'box-right'%}
+        {% endif %}
 
-          {% assign temp = bannercode | split:'[/content]' | first %}
-          {% assign bannercontent = temp | split:'[content]' | last %}
+      <div class="col-md-{{12 | divided_by: number_cols }} col-sm-{{12 | divided_by: number_cols }} col-xs-12">
+        <div class="banner-box banner-style1 {{class_item}}">
+          <a href="{{banner_url}}" class="banner-box-link">
+            {{ article | img_url: '1024x1024' | img_tag: article.title, 'article__image' }}
+          </a>
+          <div class="banner-box-info">
+              
+            {% if article.title != blank  %}
+              <h2 class="title-banner-box-yellow"><span>{{ article.title }}</span></h2>
+            {% endif %}
 
-          <p>{{bannercontent}}</p>
+            {% if banner_subtitle != blank %}
+              <h2 class="title-banner-box-blue"><span>{{banner_subtitle}}</span></h2>
+            {% endif %} 
 
+            {% if article.content  != blank %}
+            <p class="desc">{{ article.content | strip_html | truncatewords: 5 }}</p>
+            {% endif %}
 
+            {% if banner_btn  != blank %}
+            <a href="{{ banner_url }}" class="btn-box-banner">{{banner_btn}}</a>                            
+            {% endif %}   
 
-        {%else %}
-          {{ article.content | split: '|' | first | strip_html | truncatewords: 50 }}
-      {%endif %}
-
-      {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
-
+          </div>
+        </div>
+      </div>
+       {%endif %}
   {%endfor %}
+</div>
+{%endif%}
+
+
+{%assign banner_name = 'banner1' %}
 
 <div class="row">
  {% for i in (1..3) %}
