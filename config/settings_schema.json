@@ -7938,12 +7938,12 @@
       },
       {
         "type":"blog",
-        "id": "banner_1_data_blog",
+        "id": "banner_1_datablog",
         "label": "Select datasource for Banner style 1"
       },
       {
         "type":"text",
-        "id": "banner_1_data_blog_tag",
+        "id": "banner_1_datablog_tag",
         "label": "Select tag to filter",
         "default": "banner_style1",
         "info":"default: banner_style1"
@@ -7967,7 +7967,7 @@
           }
         ],
         "default":   "3",
-        "info":      "Text"
+        "info":      "Default: 3"
       },
       {
         "type": "header",
@@ -7975,12 +7975,12 @@
       },
       {
         "type":"blog",
-        "id": "banner_2_data_blog",
+        "id": "banner_2_datablog",
         "label": "Select datasource for Banner style 2"
       },
         {
         "type":"text",
-        "id": "banner_2_data_blog_tag",
+        "id": "banner_2_datablog_tag",
         "label": "Select tag to filter",
         "default": "banner_style2",
         "info":"default: banner_style2"
@@ -8004,7 +8004,7 @@
           }
         ],
         "default":   "3",
-        "info":      "Text"
+        "info":      "Default: 3"
       },
 
        {
@@ -8013,19 +8013,35 @@
       },
       {
         "type":"blog",
-        "id": "banner_3_data_blog",
+        "id": "banner_3_datablog",
         "label": "Select datasource for Banner style 3"
       },
         {
         "type":"text",
-        "id": "banner_3_data_blog_tag",
+        "id": "banner_3_datablog_tag",
         "label": "Select tag to filter",
         "default": "banner_style3",
         "info":"default: banner_style3"
       },
        {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-4"
+      },
+      {
+        "type":"blog",
+        "id": "banner_4_datablog",
+        "label": "Select datasource for Banner style 4"
+      },
+        {
+        "type":"text",
+        "id": "banner_4_datablog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_style4",
+        "info":"default: banner_style4"
+      },
+       {
         "type":"select",
-        "id": "banner_3_columns",
+        "id": "banner_4_columns",
         "label": "Number of columns",
         "options": [
           {
@@ -8041,9 +8057,124 @@
             "label": "4"
           }
         ],
-        "default":   "3",
-        "info":      "Text"
+        "default":   "2",
+        "info":      "Default: 2"
       },
+        {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-5"
+      },
+      {
+        "type":"blog",
+        "id": "banner_5_datablog",
+        "label": "Select datasource for Banner style 5"
+      },
+        {
+        "type":"text",
+        "id": "banner_5_datablog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_style5",
+        "info":"default: banner_style5"
+      },
+       {
+        "type":"select",
+        "id": "banner_5_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "2",
+        "info":      "Default: 2"
+      },
+
+        {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-catalog "
+      },
+      {
+        "type":"blog",
+        "id": "banner_catalog_datablog",
+        "label": "Select datasource for Banner style catalog"
+      },
+        {
+        "type":"text",
+        "id": "banner_catalog_datablog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_stylecatalog",
+        "info":"default: banner_stylecatalog"
+      },
+       {
+        "type":"select",
+        "id": "banner_catalog_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "2",
+        "info":      "Default: 2"
+      },
+
+
+        {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-product-adv "
+      },
+      {
+        "type":"blog",
+        "id": "banner_product_datablog",
+        "label": "Select datasource for Banner style product"
+      },
+        {
+        "type":"text",
+        "id": "banner_product_datablog_tag",
+        "label": "Select tag to filter",
+        "default": "banner_styleproduct",
+        "info":"default: banner_styleproduct"
+      },
+       {
+        "type":"select",
+        "id": "banner_product_columns",
+        "label": "Number of columns",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default":   "4",
+        "info":      "Default: 4"
+      },
+     
 
       {
         "type": "header",

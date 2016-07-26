@@ -1,3 +1,75 @@
+{% assign blogs_list_grids = settings.banner_product_datablog %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign number_cols = settings.banner_product_columns | plus: 0 %}
+{% assign blog_tag_filter = settings.banner_product_datablog_tag %}
+
+{%comment%}default :banner_styleproduct {%endcomment%} 
+
+{%if count > 1 %}
+<div class="row product-advert">
+   {% for article in sourcedata.articles %}
+    
+    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvbanner]' %}
+      {% assign temp = article.excerpt | split:'[/jvbanner]' | first %}
+      {% assign bannercode = temp | split:'[jvbanner]' | last %}
+      
+      {% assign temp = bannercode | split:'[/subtitle]' | first %}
+      {% assign banner_subtitle = temp | split:'[subtitle]' | last %}
+
+      {% assign temp = bannercode | split:'[/url]' | first %}
+      {% assign banner_url = temp | split:'[url]' | last %}
+
+      {% assign temp = bannercode | split:'[/btn]' | first %}
+      {% assign banner_btn = temp | split:'[btn]' | last %}
+
+
+			 	{% if article.tags contains 'item-lead' %}
+	      {% assign class_item_adv = 'leading' %}
+	      	{%else%}
+	      {% assign class_item_adv = 'item' %}
+	      {% endif %}
+
+				<div class="col-lg-{{12 | divided_by: number_cols }} col-md-{{12 | divided_by: number_cols }} col-sm-6 col-xs-12">
+					<div class="{{class_item_adv}}-box-adv product-box-adv">
+
+						<a href="{{settings[banner_link]}}" class="product-thumb-link">
+							{{ article | img_url: '1024x1024' | img_tag: article.title, 'img-responsive'  }}
+							</a>
+
+						{% if class_item_adv == 'leading' %}
+						<div class="{{class_item_adv}}-text-adv">
+							
+							{%if article.title != blank %}
+							<h3>{{ article.title }}</h3>
+							{%endif%}
+							
+							{%if banner_subtitle != blank %}
+							<h2>{{banner_subtitle}}</h2>
+							{%endif%}
+							
+							{%if banner_btn != blank %}
+							<a href="{{banner_url}}">{{banner_btn }}</a>
+							{%endif %}
+						</div>
+						{% else %}
+							{%if article.title != blank %}
+							<h2 class="item-text-adv">{{article.title}}</h2>
+							{%endif %}
+							
+							{%if banner_btn != blank %}
+							<a href="{{banner_url}}" class="btn-link-default"><span>{{banner_btn}}</span></a>
+							{%endif %}
+						{% endif %}
+					</div>
+				</div>
+    {%endif %}
+  {%endfor %}
+</div>
+{%endif%}
+
+
+{% comment %}
 {% assign banner_name = "banner_pa" %}
 
 <div class="product-advert">
@@ -49,4 +121,4 @@
 		</div>
 	</div>
 </div>
-<!-- End Product Advert -->
+{% endcomment %}

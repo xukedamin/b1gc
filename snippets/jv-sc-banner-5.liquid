@@ -1,3 +1,70 @@
+{% assign blogs_list_grids = settings.banner_5_datablog %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign blog_tag_filter = settings.banner_5_datablog_tag %}
+
+{%comment%}default :banner_style5 {%endcomment%} 
+
+{%if count > 1 %}
+<div class="row">
+   {% for article in sourcedata.articles %}
+    
+    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvbanner]' %}
+      {% assign temp = article.excerpt | split:'[/jvbanner]' | first %}
+      {% assign bannercode = temp | split:'[jvbanner]' | last %}
+      
+      {% assign temp = bannercode | split:'[/subtitle]' | first %}
+      {% assign banner_subtitle = temp | split:'[subtitle]' | last %}
+
+      {% assign temp = bannercode | split:'[/url]' | first %}
+      {% assign banner_url = temp | split:'[url]' | last %}
+
+      {% assign temp = bannercode | split:'[/btn]' | first %}
+      {% assign banner_btn = temp | split:'[btn]' | last %}
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="item-product item-product-leading">
+					<div class="item-product-thumb">
+						<a class="product-thumb-link" href="#">
+							 {{ article | img_url: '1024x1024' | img_tag: article.title, 'img-responsive'  }}
+							</a>
+					</div>
+					<div class="item-product-info">
+
+						{% if article.content != blank %}
+						<div class="info-price">
+							<span>{{article.content}}</span>
+						</div>
+						{% endif %}
+						
+						{%comment %}
+						{%if settings[banner_sale] != blank %}
+						<div class="info-sale">
+							<span>{{settings[banner_sale]}}</span>
+						</div>
+						{%endif %}
+						{%endcomment%}
+
+						{% if banner_subtitle != blank %}
+	          <h3 class="sub-title">{{ banner_subtitle }}</h3>
+	          {% endif %} 
+	         
+						{% if banner_btn  != blank %}
+	          <a href="{{ banner_url }}" class="readmore">{{ banner_btn }}</a>                            
+	          {% endif %}         
+
+					</div>
+				</div>
+			</div>
+
+      {%endif %}
+
+  {%endfor %}
+  </div>
+{%endif%}
+
+
+
 {%assign banner_name = 'banner5' %}
 
 <div class="banner-adv-product">

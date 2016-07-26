@@ -1,13 +1,13 @@
-{% assign blogs_list_grids = settings.banner_3_data_blog %}
+{% assign blogs_list_grids = settings.banner_3_datablog %}
 {% assign sourcedata = blogs[blogs_list_grids] %}
 {% assign count = sourcedata.articles_count %}
-{% assign number_cols = settings.banner_3_columns | plus: 0 %}
-{% assign blog_tag_filter = settings.banner_3_data_blog_tag %}
+{% assign blog_tag_filter = settings.banner_3_datablog_tag %}
 
 {%comment%}default :banner_style3 {%endcomment%} 
-
+{%assign count_item = 1 %}
 {%if count > 1 %}
 <div class="row">
+
    {% for article in sourcedata.articles %}
     
     {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvbanner]' %}
@@ -24,17 +24,17 @@
       {% assign banner_btn = temp | split:'[btn]' | last %}
 
       {% assign class_item = forloop.index %}
-        {% if class_item == 1 %}
+        {% if count_item == 1 %}
           {% assign class_item = 'col-left'%}
         {% else %}
           {% assign class_item = 'col-right'%}
       {% endif %}
 	
-	 {%if forloop.index == 1 or forloop.index == 3 %}
-		<div class="col-md-6 col-sm-6 col-xs-12 {{class_item}}">
+	 {%if count_item == 1 or count_item == 3 %}
+		<div class="col-md-6 col-sm-6 col-xs-12 {{class_item}} ">
 		{%endif %}
 
-		<div class="banner-box banner-style3">
+		<div class="banner-box banner-style3 {{forloop.index}}">
 				<a href="{{banner_url}}" class="banner-box-link">
 					  {{ article | img_url: '1024x1024' | img_tag: article.title, 'article__image' }}
 				</a>
@@ -54,10 +54,11 @@
 
 				</div>
 		</div>
-		{%if forloop.index == 2 or forloop.index == 4 %}
+		{%if count_item == 2 or count_item == 4 %}
 		</div>
 		{%endif%}
-
+		
+		{% assign count_item = count_item | plus : 1 %}
     {%endif %}
   {%endfor %}
 </div>

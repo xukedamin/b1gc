@@ -1,3 +1,62 @@
+{% assign blogs_list_grids = settings.banner_catalog_datablog %}
+{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign count = sourcedata.articles_count %}
+{% assign blog_tag_filter = settings.banner_catalog_datablog_tag %}
+
+{%comment%}default :banner_stylecatalog {%endcomment%} 
+
+{%if count > 1 %}
+<div class="row">
+   {% for article in sourcedata.articles %}
+    
+    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvbanner]' %}
+      {% assign temp = article.excerpt | split:'[/jvbanner]' | first %}
+      {% assign bannercode = temp | split:'[jvbanner]' | last %}
+      
+      {% assign temp = bannercode | split:'[/subtitle]' | first %}
+      {% assign banner_subtitle = temp | split:'[subtitle]' | last %}
+
+      {% assign temp = bannercode | split:'[/url]' | first %}
+      {% assign banner_url = temp | split:'[url]' | last %}
+
+      {% assign temp = bannercode | split:'[/btn]' | first %}
+      {% assign banner_btn = temp | split:'[btn]' | last %}
+
+			<div class="catalog" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="content-empty"></div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="content-catelog">
+								{%if article.title != blank%}
+								<h2>{{ article.title }}</h2>
+								{% endif %}
+								
+								{%if article.content != blank %}
+								<div class="text"> {{article.content}} </div>
+								{%endif %}
+
+								{%if banner_btn != blank %}
+								<a href="{{banner_url}}" class="download-catalog">{{banner_btn]}}
+								</a>
+								{%endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+    {%endif %}
+  {%endfor %}
+</div>
+{%endif%}
+
+
+
+
+
 {% assign banner_catalog = "banner_catalog" %}
 
 {% capture banner_img %}{{banner_catalog}}_img.png{% endcapture %}
@@ -23,4 +82,3 @@
 		</div>
 	</div>
 </div>
-<!-- End Catalog -->
