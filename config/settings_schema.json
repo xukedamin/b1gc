@@ -10663,7 +10663,43 @@
         "type": "header",
         "content": "Team circle"
       },
-        {
+      {
+        "type":"checkbox",
+        "id": "team_social_enable",
+        "label": "Show team socials",
+        "default": true
+      },
+     
+      {
+        "type":"text",
+        "id": "team_social_1",
+        "label": "Team social 1",
+        "default": "fa fa-twitter",
+        "info": "Defautl: fa fa-twitter"
+      },
+      {
+        "type":"text",
+        "id": "team_social_2",
+        "info": " Default:  fa fa-facebook",
+        "label": "Team social 2",
+        "default": "fa fa-facebook"
+      },
+       {
+        "type":"text",
+        "id": "team_social_3",
+        "info": " Default: fa fa-google-plus",
+         "label": "Team social 3",
+        "default": "fa fa-google-plus"
+      },
+      {
+        "type":"text",
+        "id": "team_social_4",
+        "info": " Default: fa fa-pinterest",
+        "label": "Team social 4",
+        "default": "fa fa-pinterest"
+      },
+
+      {
         "type": "blog",
         "id": "team_circle_data",
         "label": "Select datasource for Team style circle"

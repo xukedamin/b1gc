@@ -18,24 +18,21 @@
 	      {% assign temp = personcode | split:'[/job]' | first %}
 	      {% assign person_job = temp | split:'[job]' | last %}
 
-	      {% assign temp = personcode | split:'[/desc]' | first %}
-	      {% assign person_desc = temp | split:'[desc]' | last %}
-
-	      {% assign temp = article.excerpt | split:'[/links]' | first %}
-	      {% assign person_links = temp | split:'[links]' | last %}
+	      {% assign temp = personcode | split:'[/url]' | first %}
+	      {% assign person_url = temp | split:'[url]' | last %}
 
 	      <div class="item">
 					<div class="item-customer-saying">
 						<div class="thumb-customer-saying">
-							<a href="{{person_links}}">
+							<a href="{{person_url | url_escape }}">
 							<div class="img" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center"></div>
 							</a>
 						</div>
 						<div class="info-customer-saying">
-							{%if person_desc != blank %}
-							<p class="desc">{{person_desc}}</p>
+							{%if article.content != blank %}
+							<p class="desc">{{article.content | strip_html | truncate: 170}}</p>
 							{%endif %}
-							<h3><a href="{{settings[testi_link]}}">{{article.title}}</a></h3>
+							<h3><a href="{{person_url | url_escape }}">{{article.title}}</a></h3>
 							{%if person_job%}
 							<span>{{person_job}}</span>
 							{%endif %}

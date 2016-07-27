@@ -13,17 +13,17 @@
 		 {% for article in sourcedata.articles %}
 
 	    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+				
+
+
 	      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
 	      {% assign personcode = temp | split:'[jvperson]' | last %}
 	      
 	      {% assign temp = personcode | split:'[/job]' | first %}
 	      {% assign person_job = temp | split:'[job]' | last %}
 
-	      {% assign temp = personcode | split:'[/desc]' | first %}
-	      {% assign person_desc = temp | split:'[desc]' | last %}
-
-	      {% assign temp = article.excerpt | split:'[/links]' | first %}
-	      {% assign person_links = temp | split:'[links]' | last %}
+	     	{% assign temp = personcode | split:'[/url]' | first %}
+	      {% assign person_url = temp | split:'[url]' | last %}
 
 	      <div class="item">
 					<div class="testimo-item">
@@ -32,11 +32,11 @@
 								<div class="testimo-content-left">
 									<img class="testimo-thumb" src="{{ article.image.src | img_url: 'master' }}" alt="" />
 									<div class="info-testimo-author">
-										<a href="{{person_links}}" class="testimo-avatar">
+										<a href="{{person_url | url_escape }}" class="testimo-avatar">
 											<div class="img" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center">
 											</div>
 										</a>
-										<h3 class="testimo-name"><a href="#">{{ article.title }}</a></h3>
+										<h3 class="testimo-name"><a href="{{person_url | url_escape }}">{{ article.title }}</a></h3>
 										{% if person_job != blank %}
 										<p class="testimo-job">{{person_job}}</p>
 										{% endif %}
@@ -45,7 +45,9 @@
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-12">
 								<div class="testimo-content-right">
-									<p class="testimo-desc">{{ person_desc }}</p>
+									{%if article.content != blank %}
+									<p class="testimo-desc">{{article.content | strip_html | truncate: 170}}</p>
+									{% endif %}
 									<span class="testimo-date">{{ article.published_at | date: "%a, %b %d, %y" }}</span>
 								</div>
 							</div>

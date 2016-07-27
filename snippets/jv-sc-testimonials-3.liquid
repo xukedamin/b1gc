@@ -6,75 +6,87 @@
 
 {%comment%}default :testi_person {%endcomment%} 
 {%assign i = 1 %}
+{%assign j = 0 %}
+{%assign item_per_slide = 2%}
 {%if count >= 1 %}
 
 <div class="home-testimonial testimonial two-sides testimonials-3">
-<div class="slider-owl-single-item-nav home-directnav slider-directnav">
-	<div class="wrap-item">
-		 {% for article in sourcedata.articles %}
+	<div class="container">
+		<div class="slider-owl-single-item-nav home-directnav slider-directnav">
+			<div class="wrap-item">
 
-	    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
-		      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
-		      {% assign personcode = temp | split:'[jvperson]' | last %}
-		      
-		      {% assign temp = personcode | split:'[/job]' | first %}
-		      {% assign person_job = temp | split:'[job]' | last %}
+			    <div class="item">
+				 {% for article in sourcedata.articles %}
 
-		      {% assign temp = personcode | split:'[/desc]' | first %}
-		      {% assign person_desc = temp | split:'[desc]' | last %}
+			    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+				      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
+				      {% assign personcode = temp | split:'[jvperson]' | last %}
+				      
+				      {% assign temp = personcode | split:'[/job]' | first %}
+				      {% assign person_job = temp | split:'[job]' | last %}
 
-		      {% assign temp = article.excerpt | split:'[/links]' | first %}
-		      {% assign person_links = temp | split:'[links]' | last %}
-
-
-		      {%if forloop.index == 1 or forloop.index == 3 %}
-		      <div class="item">
-		      {%endif%}
-
-					{% assign class_item = i | modulo:2 %}
-	          {% if class_item == 0 %}
-	            {% assign class_item = 'right'%}
-	          {% else %}
-	            {% assign class_item = 'left'%}
-	        {% endif %}
-						
-						{% if forloop.index == 1 or forloop.index == 3 %}
-						<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
-							<span class="click-button {{class_item}}-close"></span>
-							<h2>{{ article.title }}</h2>
-							<p>{{ person_desc }}</p>
-						</div>
-						{% endif %}
-
-						<div class="side-testimonial side-{{class_item}}">
-							<div class="item-testimonial item-{{class_item}}">
-								<a href="{{settings[testi_link]}}" class="testimonial-thumb-link {{class_item}}-open">
+				     	{% assign temp = personcode | split:'[/url]' | first %}
+				      {% assign person_url = temp | split:'[url]' | last %}
+							
+							{%assign test =  i | modulo:item_per_slide %}
+			          {% if test == 0 %}
+			            {% assign class_item = 'right'%}
+			          {% else %}
+			            {% assign class_item = 'left'%}
+			        {% endif %}
 								
-									<div class="img" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center"></div>
-								</a>
-								<h2 class="testimonial-title"><a href="{{person_links}}">{{ article.title }}</a></h2>
-								<span class="testimonial-job">{{person_job}}</span>                                
-							</div>
-						</div>
+								{% if test == 1 %}
+								<div class="testimonial-page testimonial-page-{{class_item}} {{test}}">
+									<span class="click-button {{class_item}}-close"></span>
+									<h2>{{ article.title }}</h2>
+									{%if article.content != blank %}
+									<p>{{article.content | strip_html | truncate: 200}}</p>
+									{%endif%}
+								</div>
+								{% endif %}
 
-						{% if forloop.index == 2 or forloop.index == 4 %}
-						<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
-							<span class="click-button {{class_item}}-close"></span>
-							<h2>{{ article.title }}</h2>
-							<p>{{ person_desc] }}</p>
-						</div>
-						{% endif %}
+								<div class="side-testimonial side-{{class_item}}">
+									<div class="item-testimonial item-{{class_item}}">
+										<a href="#" class="testimonial-thumb-link {{class_item}}-open">
+											<div class="img" style="background-image: url({{ article.image.src | img_url: 'master' }}); background-size: cover; background-position: center center"></div>
+										</a>
+										<h2 class="testimonial-title"><a href="{{person_url}}">{{ article.title }}</a></h2>
+										<span class="testimonial-job">{{person_job}}</span>                                
+									</div>
+								</div>
 
-					{%if forloop.index == 2 or forloop.index == 4%}
-		        </div>
-		      {% endif %} 
+								{% if test == 0 %}
+								<div class="testimonial-page testimonial-page-{{class_item}} {{test}}">
+									<span class="click-button {{class_item}}-close"></span>
+									<h2>{{ article.title }}</h2>
+									{%if article.content != blank %}
+									<p>{{article.content | strip_html | truncate: 200}}</p>
+									{%endif%}
+								</div>
+								{% endif %}
 
-		      {%assign i = i | plus : 1 %}
-					
-				 {% endif %} 
+							        
+				      {%assign j = j | plus : 1 %}
+			        {% if j == item_per_slide %}
+			          {{'</div>'}}
+			          {% assign j = 0 %}
+			          {%if forloop.last == false and i < 4 %}
+			          <!-- open new item -->
+			            {{'<div class="item">'}}
+			          {% endif %}
+			        {% endif %}
 
-				{% endfor %}  
 
+				      {%assign i = i | plus : 1 %}
+							
+						 {% endif %} 
+
+						{% endfor %}  
+
+				</div>
+				<!-- end item -->
+			</div>
+			<!-- end wrap-item -->
 		</div>
 	</div>
 </div>

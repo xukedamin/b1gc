@@ -18,10 +18,10 @@
         {% assign temp = person_desc | split:'[/job]' | first %}
         {% assign person_job = temp | split:'[job]' | last %}
 
-        {% assign temp = person_desc | split:'[/desc]' | first %}
-        {% assign person_desc = temp | split:'[desc]' | last %}
+        {% assign temp = personcode | split:'[/url]' | first %}
+        {% assign person_url = temp | split:'[url]' | last %}
 
-        {% assign temp = article.excerpt | split:'[/links]' | first %}
+        {% assign temp = personcode | split:'[/links]' | first %}
         {% assign person_links = temp | split:'[links]' | last %}
 
         <div class="col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12">
@@ -30,15 +30,28 @@
 							 <img src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}">
 						</div>
 						<div class="team-circle-info">
-							<h3><a href="#">{{ article.title }}</a></h3>
+							<h3><a href="{{person_url | url_escape }}">{{ article.title }}</a></h3>
 							{%if person_job %}
 							<span>{{ person_job }}</span>
 							{%endif%}
-							{%if person_desc %}
-							<p class="desc">{{person_desc}}</p>
+
+							{%if article.content != blank %}
+							<p class="desc">{{article.content | strip_html | truncatewords: 5}}</p>
 							{%endif%}
 
-					 		{{ person_links }}
+					 		{% assign lis =  person_links | split: ' | ' %}
+							{% assign lis_size = lis | size %}
+							
+							{%if settings.team_social_enable and lis_size > 0 %}
+							<ul class="team-circle-social-network list-inline">
+								{%for i in (1..4) %}
+									{%capture social_i%}team_social_{{i}}{%endcapture%}
+									{% if settings[social_i] != blank %}
+										<li><a target="_blank" href="{{lis[i] | url_escape }}"><i class="{{settings[social_i] }}"></i></a></li>
+									{% endif %}
+								{%endfor %}
+							</ul>
+							{% endif %}
 
 						</div>
 					</div>
