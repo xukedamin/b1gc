@@ -1,5 +1,4 @@
-{% assign blogs_list_grids = settings.testimonial_s2_data %}
-{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign sourcedata = blogs[settings.testimonial_s2_data] %}
 {% assign count = sourcedata.articles_count %}
 {% assign number_cols = settings.testimonial_s2_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.testimonial_s2_data_tag %}
@@ -8,14 +7,13 @@
 {%if count >= 1 %}
 
 <div class="slider-owl-single-item-paging-fade testimonial-slider testimonials-2">
+{% include 'jv-sc-heading-box' %}
 <div class="paginav-slider">
 	<div class="wrap-item">
 		 {% for article in sourcedata.articles %}
 
 	    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
 				
-
-
 	      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
 	      {% assign personcode = temp | split:'[jvperson]' | last %}
 	      
@@ -60,56 +58,3 @@
 	</div>
 </div>
 {%endif%}
-
-
-<div class="container">
-<!-- testimonial-slider -->
-	<div class="slider-owl-single-item-paging-fade testimonial-slider">
-		{% include 'jv-sc-heading-box' %}
-
-		<div class="paginav-slider">
-			<div class="wrap-item">
-				
-				{% for i in (1..5) %}
-				{% capture testi_name %}testimonial{{ i }}_name{% endcapture %}
-				{% capture testi_title %}testimonial{{ i }}_title{% endcapture %}
-				{% capture testi_text %}testimonial{{ i }}_text{% endcapture %}
-				{% capture testi_img %}testimonial{{ i }}_img.png{% endcapture %}
-				{% capture testi_date %}testimonial{{ i }}_date{% endcapture %}
-				{% capture testi_link %}testimonial{{ i }}_link{% endcapture %}
-				{% if settings[testi_text] != blank %}
-
-				<div class="item">
-					<div class="testimo-item">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="testimo-content-left">
-									<img class="testimo-thumb" src="{{testi_img | asset_url}}" alt="" />
-									<div class="info-testimo-author">
-										<a href="{{settings[testi_link]}}" class="testimo-avatar">
-											<div class="img" style="background-image: url({{testi_img | asset_url}}); background-size: cover; background-position: center center">
-											</div>
-										</a>
-										<h3 class="testimo-name"><a href="#">{{ settings[testi_name] }}</a></h3>
-										<p class="testimo-job">{{settings[testi_title]}}</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="testimo-content-right">
-									<p class="testimo-desc">{{ settings[testi_text] }}</p>
-									<span class="testimo-date">{{ settings[testi_date] }}</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				{% endif %}   
-			{% endfor %}
-
-			</div>
-		</div>
-	</div>
-		<!-- End Testimonial -->
-</div>

@@ -1,5 +1,4 @@
-{% assign blogs_list_grids = settings.testimonial_s1_data %}
-{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign sourcedata = blogs[settings.testimonial_s1_data] %}
 {% assign count = sourcedata.articles_count %}
 {% assign number_cols = settings.testimonial_s1_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.testimonial_s1_data_tag %}
@@ -45,41 +44,3 @@
 	</div>
 </div>
 {%endif%}
-
-
-<div class="customer-saying">
-	{% include 'jv-sc-heading-box' %}
-	
-	<div class="wrap-item">
-
-		{% for i in (1..5) %}
-			{% capture testi_name %}testimonial{{ i }}_name{% endcapture %}
-			{% capture testi_title %}testimonial{{ i }}_title{% endcapture %}
-			{% capture testi_text %}testimonial{{ i }}_text{% endcapture %}
-			{% capture testi_img %}testimonial{{ i }}_img.png{% endcapture %}
-			{% capture testi_date %}testimonial{{ i }}_date{% endcapture %}
-			{% capture testi_link %}testimonial{{ i }}_link{% endcapture %}
-			{% if settings[testi_text] != blank %}
-
-		<div class="item">
-			<div class="item-customer-saying">
-				<div class="thumb-customer-saying">
-					<a href="{{settings[testi_link]}}">
-					<div class="img" style="background-image: url({{testi_img | asset_url}}); background-size: cover; background-position: center center"></div>
-					</a>
-				</div>
-				<div class="info-customer-saying">
-					<p class="desc">{{settings[testi_text]}}</p>
-					<h3><a href="{{settings[testi_link]}}">{{settings[testi_name]}}</a></h3>
-					<span>{{settings[testi_title]}}</span>
-				</div>
-			</div>
-		</div>
-		<!-- End Item -->
-
-			{% endif %}   
-			{% endfor %}
-
-	</div>
-</div>
-<!-- End People Saying -->

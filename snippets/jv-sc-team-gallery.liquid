@@ -1,5 +1,4 @@
-{% assign blogs_list_grids = settings.team_gallery_data %}
-{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign sourcedata = blogs[settings.team_gallery_data] %}
 {% assign count = sourcedata.articles_count %}
 {% assign number_cols = settings.team_gallery_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.team_gallery_data_tag %}

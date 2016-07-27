@@ -1,8 +1,6 @@
-{% assign blogs_list_grids = settings.testimonial_s2_data %}
-{% assign sourcedata = blogs[blogs_list_grids] %}
+{% assign sourcedata = blogs[settings.testimonial_s3_data] %}
 {% assign count = sourcedata.articles_count %}
-{% assign number_cols = settings.testimonial_s2_columns | plus: 0 %}
-{% assign blog_tag_filter = settings.testimonial_s2_data_tag %}
+{% assign blog_tag_filter = settings.testimonial_s3_data_tag %}
 
 {%comment%}default :testi_person {%endcomment%} 
 {%assign i = 1 %}
@@ -10,8 +8,19 @@
 {%assign item_per_slide = 2%}
 {%if count >= 1 %}
 
+{%comment%}calculate the real number of testi_person tag to close item{%endcomment%}
+{%assign size = 0 %}
+{% for article in sourcedata.articles %}
+	{% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+		{%assign size = size | plus : 1%}
+	{% endif%}
+{%endfor %}
+
+{% assign heading_enable =  settings.testimonial_s3_heading != blank  %}
+
 <div class="home-testimonial testimonial two-sides testimonials-3">
 	<div class="container">
+    {% include 'jv-sc-heading-box' with heading_title: settings.testimonial_s3_heading %}
 		<div class="slider-owl-single-item-nav home-directnav slider-directnav">
 			<div class="wrap-item">
 
@@ -70,7 +79,7 @@
 			        {% if j == item_per_slide %}
 			          {{'</div>'}}
 			          {% assign j = 0 %}
-			          {%if forloop.last == false and i < 4 %}
+			          {%if forloop.last == false and i < size %}
 			          <!-- open new item -->
 			            {{'<div class="item">'}}
 			          {% endif %}
@@ -91,84 +100,3 @@
 	</div>
 </div>
 {% endif %} 
-
-
-
-{% comment %}
-	need to set variables for jv-sc-heading-box
-{% endcomment %}
-
-
-<div class="home-testimonial testimonial two-sides">
-	<div class="container">
-
-    {% assign heading_enable =  section_title != blank  %}
-    {% assign heading_style = section_title_style %}
-    {% assign heading_title =  section_title %}
-    {% assign heading_subtitle =  section_subtitle %}
-
-    {% include 'jv-sc-heading-box' %}
-
-		<div class="slider-owl-single-item-nav home-directnav slider-directnav">
-			<div class="wrap-item">
-
-			{% for i in (1..4) %}
-				{% capture testi_name %}testimonial{{ i }}_name{% endcapture %}
-				{% capture testi_title %}testimonial{{ i }}_title{% endcapture %}
-				{% capture testi_text %}testimonial{{ i }}_text{% endcapture %}
-				{% capture testi_img %}testimonial{{ i }}_img.png{% endcapture %}
-				{% capture testi_date %}testimonial{{ i }}_date{% endcapture %}
-
-			{% if settings[testi_text] != blank %}
-
-				{%if forloop.index == 1 or forloop.index == 3 %}
-	      <div class="item">
-	      {%endif%}
-
-				{% assign class_item = i | modulo:2 %}
-          {% if class_item == 0 %}
-            {% assign class_item = 'right'%}
-          {% else %}
-            {% assign class_item = 'left'%}
-        {% endif %}
-					
-					{% if forloop.index == 1 or forloop.index == 3 %}
-					<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
-						<span class="click-button {{class_item}}-close"></span>
-						<h2>{{ settings[testi_name] }}</h2>
-						<p>{{ settings[testi_text] }}</p>
-					</div>
-					{% endif %}
-
-					<div class="side-testimonial side-{{class_item}}">
-						<div class="item-testimonial item-{{class_item}}">
-							<a href="{{settings[testi_link]}}" class="testimonial-thumb-link {{class_item}}-open">
-							
-								<div class="img" style="background-image: url({{testi_img | asset_url}}); background-size: cover; background-position: center center"></div>
-							</a>
-							<h2 class="testimonial-title"><a href="{{settings[testi_link]}}">{{ settings[testi_name] }}</a></h2>
-							<span class="testimonial-job">{{settings[testi_title]}}</span>                                
-						</div>
-					</div>
-
-					{% if forloop.index == 2 or forloop.index == 4 %}
-					<div class="testimonial-page testimonial-page-{{class_item}} {{i}}">
-						<span class="click-button {{class_item}}-close"></span>
-						<h2>{{ settings[testi_name] }}</h2>
-						<p>{{ settings[testi_text] }}</p>
-					</div>
-					{% endif %}
-
-				{%if forloop.index == 2 or forloop.index == 4%}
-	        </div>
-	      {% endif %} 
-
-					{% endif %}   
-				<!-- End Item -->
-				{% endfor %}  
-
-			</div>
-		</div>
-	</div>
-</div>
-<!-- End Testimonial -->
