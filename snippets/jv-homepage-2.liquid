@@ -19,13 +19,6 @@
 
   {%include 'jv-sub-homepage' %}
   
-
-  {% unless settings.home2_content == blank or pages[settings.home2_content].empty? or pages[settings.home2_content].content == blank %}
-  {% assign page = pages[settings.home2_content] %}
-  <div class="container">
-    {{ page.content }}
-  </div>
-  <hr>
-  {% endunless %}
+   {%include 'jv-sub-homecontent'%}
 
 </main>     

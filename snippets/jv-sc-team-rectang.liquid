@@ -6,8 +6,19 @@
 {%comment%}default :team_person {%endcomment%} 
 {%if count >= 1 %}
 
+{%unless in_row %}
+{%assign in_row = true %}
+{%endunless%}
+
+{%unless class_item %}
+
+{%capture class_item%}col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12{%endcapture%}
+{%endunless%}
+
 <div class="team-rectang wrap-item">
+	{%if in_row %}
   <div class="row">
+  {%endif %}
      {% for article in sourcedata.articles %}
      
       {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
@@ -23,7 +34,7 @@
         {% assign temp = personcode | split:'[/links]' | first %}
         {% assign person_links = temp | split:'[links]' | last %}
 
-        <div class="col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12">
+        <div class="{{class_item}}">
 					<div class="item-team-rectang">
 						<div class="team-rectang-thumb">
 							 <img src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}">
@@ -59,7 +70,11 @@
 
         {%endif %}
     {%endfor %}
+  
+  {%if in_row %}
   </div>
+  {%endif %}
+  
 </div>
 {%endif%}
 

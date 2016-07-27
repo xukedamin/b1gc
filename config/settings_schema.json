@@ -13,7 +13,7 @@
       },
       {
         "type": "paragraph",
-        "content": "This theme is fully supported by Shopify. For support and customizations, read the [theme documentation](https://docs.shopify.com/manual/more/official-shopify-themes/supply) or contact [theme-support@shopify.com](mailto:theme-support@shopify.com?subject=[Supply]+Theme+Support)."
+        "content": "This theme is fully supported by Shopify. For support and customizations, read the [theme documentation](https://joomlavi.com) or contact [joomlavi.dev@gmail.com](mailto:joomlavi.dev@gmail.com?subject=[BigC shop]+Theme+Support)."
       }
     ]
   },
@@ -1497,7 +1497,7 @@
     ]
   },
   {
-    "name": "Select default home page",
+    "name": "Default Home page",
     "settings": [
       {
         "type": "header",
@@ -1545,6 +1545,15 @@
         "label": "Show slideshow",
         "default": true,
         "info": "The main slideshow in main content area"
+      },
+      {
+        "type": "header",
+        "content": "Home page - featured content"
+      },
+      {
+        "type": "page",
+        "id": "home_content",
+        "label": "Choose page"
       }
     ]
   },
@@ -2525,7 +2534,7 @@
           }
         ],
         "default": "3",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Slideshow Material' below to config"
       },
       {
         "type": "checkbox",
@@ -2971,7 +2980,7 @@
           }
         ],
         "default": "4",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Slideshow Material' below to config"
       },
       {
         "type": "header",
@@ -3500,7 +3509,7 @@
           }
         ],
         "default": "5",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Slideshow Material' below to config"
       },
       {
         "type": "header",
@@ -3895,7 +3904,7 @@
           }
         ],
         "default": "7",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Slideshow Material' below to config"
       },
       {
         "type": "header",
@@ -4290,16 +4299,16 @@
           }
         ],
         "default": "7",
-        "info": "The Slideshows configuration stays at tabs  'Material Slideshow'  below."
+        "info": "Go to 'Slideshow Material' below to config"
       },
       {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home7_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show Position content 1",
         "default": true
       },
       {
@@ -4364,9 +4373,13 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 2"
+      },
+      {
         "type": "checkbox",
         "id": "home7_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
+        "label": "Show Position content 2",
         "default": true
       },
       {
@@ -4431,9 +4444,13 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 3"
+      },
+      {
         "type": "checkbox",
         "id": "home7_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
+        "label": "Show Position content 3",
         "default": true
       },
       {
@@ -4498,9 +4515,13 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 4"
+      },
+      {
         "type": "checkbox",
         "id": "home7_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
+        "label": "Show position content 4",
         "default": true
       },
       {
@@ -4565,9 +4586,13 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 5"
+      },
+      {
         "type": "checkbox",
         "id": "home7_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
+        "label": "Show Position content 5",
         "default": true
       },
       {
@@ -5188,227 +5213,8 @@
       }
     ]
   },
-  {
-    "name": "Currency and Price",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Price"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_dollar_symbol",
-        "label": "Show dollar sign"
-      },
-      {
-        "type": "checkbox",
-        "id": "superscript_decimals",
-        "label": "Show cents as superscript",
-        "info": "This setting won't apply if you're using a currency selector or format that includes a period before the number. For example: RS.1,000.00. [More info.](https://help.shopify.com/manual/using-themes/themes-by-shopify/supply#show-cents-as-superscript)"
-      },
-      {
-        "type": "header",
-        "content": "Currency"
-      },
-      {
-        "type": "paragraph",
-        "content": "To offer multiple currencies on your online store, you must first [edit your store's currency formatting](https://docs.shopify.com/support/settings/general/tell-my-script-where-to-find-money-formats)."
-      },
-      {
-        "type": "checkbox",
-        "id": "show_multiple_currencies",
-        "label": "Show currency conversion",
-        "default": true,
-        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
-      },
-      {
-        "type": "select",
-        "id": "currency_format",
-        "label": "Format",
-        "options": [
-          {
-            "value": "money_format",
-            "label": "Without currency ($10.00)"
-          },
-          {
-            "value": "money_with_currency_format",
-            "label": "With currency ($10.00 CAD)"
-          }
-        ],
-        "default": "money_with_currency_format"
-      },
-      {
-        "type": "text",
-        "id": "supported_currencies",
-        "label": "Supported currencies",
-        "default": "INR GBP CAD USD AUD EUR JPY",
-        "info": "Use the country's ISO [currency code](http://www.xe.com/iso4217.php). Separate your currency codes with a space."
-      },
-      {
-        "type": "text",
-        "id": "default_currency",
-        "label": "Default currency",
-        "default": "USD"
-      }
-    ]
-  },
-  {
-    "name": "Cart page",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "cart_notes_enable",
-        "label": "Show order notes"
-      },
-      {
-        "type": "select",
-        "id": "ajax_cart_method",
-        "label": "Enable Ajax Cart method",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "modal",
-            "label": "Modal"
-          }
-        ],
-        "default": "modal"
-      },
-      {
-        "type": "header",
-        "content": "Delivery date",
-        "info": " use for Cart type = Page "
-      },
-      {
-        "type": "checkbox",
-        "id": "show_delivery_date",
-        "label": "Show delivery date",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "show_delivery_heading",
-        "label": "Delivery heading",
-        "default": "Pick a delivery date:"
-      },
-      {
-        "type": "text",
-        "id": "show_delivery_input",
-        "label": "Delivery text",
-        "default": "Input date "
-      },
-      {
-        "type": "text",
-        "id": "show_delivery_note",
-        "label": "Delivery note",
-        "default": "( We do not deliver during the week-end. ) "
-      }
-    ]
-  },
-  {
-    "name": "Page About Us",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Block Introduce"
-      }
-    ]
-  },
-  {
-    "name": " Page Account",
-    "settings": [
-      {
-        "type": "image",
-        "id": "account_bg_image.jpg",
-        "label": "Set background image"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading",
-        "label": "Login welcome message",
-        "default": "WELCOME BACK!"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading_text",
-        "label": "Login welcome message extra",
-        "default": "Login to your account below"
-      }
-    ]
-  },
-  {
-    "name": " Page Contact",
-    "settings": [
-      {
-        "type": "text",
-        "id": "contact_map_heading",
-        "label": "Heading H5",
-        "default": "HI! WE ARE SUPPORT"
-      },
-      {
-        "type": "text",
-        "id": "contact_map_heading_2",
-        "label": "Heading H3",
-        "default": "SEND EMAIL FOR US"
-      },
-      {
-        "type": "checkbox",
-        "id": "contact_map",
-        "label": "Show contact map",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "contact_address_text",
-        "label": "Heading H3",
-        "default": "The Company Name Inc. 4320 St Vincent Place, Glasgow, DC 28"
-      },
-      {
-        "type": "text",
-        "id": "contact_address_phone",
-        "label": "Heading H3",
-        "default": "800-6688-999, 800-8866-404",
-        "info": "Separate phone number par (,) "
-      },
-      {
-        "type": "text",
-        "id": "contact_address_fax",
-        "label": "Heading H3",
-        "default": "800-6969-0044, 800-6969-0055 ",
-        "info": "Separate phone number par (,) "
-      },
-      {
-        "type": "text",
-        "id": "contact_address_email",
-        "label": "Heading H3",
-        "default": "bigcshop@domain.com"
-      },
-      {
-        "type": "textarea",
-        "id": "contact_address_map",
-        "label": "Map address",
-        "default": "https://www.google.com/maps/embed/v1/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
-      },
-      {
-        "type": "radio",
-        "id": "contact_map_placement",
-        "label": "Contact map placement",
-        "options": [
-          {
-            "value": "full-width",
-            "label": "Style 1"
-          },
-          {
-            "value": "within-container",
-            "label": "Style 2"
-          }
-        ],
-        "default": "full-width"
-      }
-    ]
-  },
+
+ 
   {
     "name": "Countdown promotions settings",
     "settings": [
@@ -6709,7 +6515,7 @@
     ]
   },
   {
-    "name": "SC: P7- Slider grid",
+    "name": "SC: P7- Product Slider grid",
     "settings": [
       {
         "type": "header",
@@ -6793,7 +6599,7 @@
     ]
   },
   {
-    "name": "SC: P8- Slider single",
+    "name": "SC: P8- Product Slider single",
     "settings": [
       {
         "type": "header",
@@ -7299,56 +7105,8 @@
     ]
   },
   {
-    "name": "Material Slide show",
+    "name": "Slideshow Material",
     "settings": [
-      {
-        "type": "header",
-        "content": "Base Param"
-      },
-      {
-        "type": "select",
-        "id": "slide_autoplay",
-        "label": "Autoplay",
-        "options": [
-          {
-            "value": "true",
-            "label": "true"
-          },
-          {
-            "value": "false",
-            "label": "false"
-          }
-        ],
-        "default": "true"
-      },
-      {
-        "type": "select",
-        "id": "slide_pauseOnHover",
-        "label": "Pause On Hover",
-        "options": [
-          {
-            "value": "true",
-            "label": "true"
-          },
-          {
-            "value": "false",
-            "label": "false"
-          }
-        ],
-        "default": "true"
-      },
-      {
-        "type": "text",
-        "id": "slide_speed",
-        "label": "Speed",
-        "default": "400"
-      },
-      {
-        "type": "text",
-        "id": "slide_time",
-        "label": "Time",
-        "default": "8000"
-      },
       {
         "type": "header",
         "content": "Item #1"
@@ -7532,11 +7290,59 @@
     ]
   },
   {
-    "name": "Banner Slider 1",
+    "name": "Slideshow settings",
     "settings": [
       {
         "type": "header",
-        "content": "Slider 1"
+        "content": "General"
+      },
+      {
+        "type": "select",
+        "id": "slide_autoplay",
+        "label": "Autoplay",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "select",
+        "id": "slide_pauseOnHover",
+        "label": "Pause On Hover",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "text",
+        "id": "slide_speed",
+        "label": "Speed",
+        "default": "400"
+      },
+      {
+        "type": "text",
+        "id": "slide_time",
+        "label": "Time",
+        "default": "8000"
+      },
+      {
+        "type": "header",
+        "content": "Style 1"
       },
       {
         "type": "select",
@@ -7563,15 +7369,10 @@
         "id": "slider1_height",
         "label": "Slider 1 - Height (px)",
         "default": "680"
-      }
-    ]
-  },
-  {
-    "name": "Banner Slider 2",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Slider 2"
+        "content": "Style 2"
       },
       {
         "type": "select",
@@ -7604,15 +7405,10 @@
         "id": "slider2_text_enable",
         "label": "Slider 2 - Show Text",
         "default": false
-      }
-    ]
-  },
-  {
-    "name": "Banner Slider style 3",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Slider 3"
+        "content": "Style 3"
       },
       {
         "type": "select",
@@ -7639,15 +7435,10 @@
         "id": "slider3_height",
         "label": "Slider 3 - Height (px)",
         "default": "514"
-      }
-    ]
-  },
-  {
-    "name": "Banner Slider style 4",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Slider 4"
+        "content": "Style 4"
       },
       {
         "type": "select",
@@ -7674,15 +7465,10 @@
         "id": "slider4_height",
         "label": "Slider 4 - Height (px)",
         "default": "470"
-      }
-    ]
-  },
-  {
-    "name": "Banner Slider style 6",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Slider 6"
+        "content": "Style 6"
       },
       {
         "type": "select",
@@ -7709,15 +7495,10 @@
         "id": "slider6_height",
         "label": "Slider 6 - Height (px)",
         "default": "511"
-      }
-    ]
-  },
-  {
-    "name": "Banner Slider style 7",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Slider 7"
+        "content": "Style 7"
       },
       {
         "type": "select",
@@ -7748,11 +7529,11 @@
     ]
   },
   {
-    "name": "Image set - Normal",
+    "name": "Slideshow Image sets",
     "settings": [
       {
         "type": "header",
-        "content": "Image smaller set"
+        "content": "1. Image smaller set"
       },
       {
         "type": "header",
@@ -7789,15 +7570,10 @@
         "type": "image",
         "id": "slide_img_normal_4.jpg",
         "label": "Image"
-      }
-    ]
-  },
-  {
-    "name": "Image set - Square size (smaller)",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Image smaller set"
+        "content": "2. Square size (smaller)"
       },
       {
         "type": "header",
@@ -7854,15 +7630,10 @@
         "type": "image",
         "id": "slide_img_sm_4.jpg",
         "label": "Item Image 4 (sm)"
-      }
-    ]
-  },
-  {
-    "name": "Image set - Transparent",
-    "settings": [
+      },
       {
         "type": "header",
-        "content": "Image Transparent set"
+        "content": "2. Image Transparent set"
       },
       {
         "type": "header",
@@ -7923,7 +7694,7 @@
     ]
   },
   {
-    "name": "SC: Banner",
+    "name": "SC: Banners",
     "settings": [
       {
         "type": "header",
@@ -8169,339 +7940,6 @@
         ],
         "default": "4",
         "info": "Default: 4"
-      }
-     
-    ]
-  },
-  {
-    "name": "SC: Banner 6 About",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Setting: jv-sc-banner-about",
-        "info": "[Demo](https://bigc-1.myshopify.com/pages/banners/#pos7)"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_1_img_enable",
-        "label": "Use image background",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_1_img.png",
-        "label": "Banner item 1 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_1_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_1_icon",
-        "label": "Icon",
-        "default": "fa fa-briefcase",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_1_color_bg",
-        "label": "Background color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_1_color",
-        "label": "Text color",
-        "default": "#000"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_2_img_enable",
-        "label": "Use image background",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_2_img.png",
-        "label": "Banner item 2 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_2_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_2_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_2_icon",
-        "label": "ICon",
-        "default": "fa fa-briefcase",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_2_color_bg",
-        "label": "Background color",
-        "default": "#1997d4"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_2_color",
-        "label": "Text color",
-        "default": "#fff"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_3_img_enable",
-        "label": "Use image background",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_3_img.png",
-        "label": "Banner item 1 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_3_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_3_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_3_icon",
-        "label": "Icon",
-        "default": "lnr lnr-bullhorn",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_3_color_bg",
-        "label": "Background color",
-        "default": "#fdd932"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_3_color",
-        "label": "Text color",
-        "default": "#000"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_4_img_enable",
-        "label": "Use image background",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_4_img.png",
-        "label": "Banner item 1 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_4_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_4_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_4_icon",
-        "label": "Icon",
-        "default": "lnr lnr-apartment",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_4_color_bg",
-        "label": "Background color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_4_color",
-        "label": "Text color",
-        "default": "#000"
-      },
-      {
-        "type": "header",
-        "content": "Item #5"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_5_img_enable",
-        "label": "Use image background",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_5_img.png",
-        "label": "Banner item 5 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_5_title",
-        "label": "Title",
-        "default": "Title 5"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_5_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_5_icon",
-        "label": "Icon",
-        "default": "fa fa-briefcase",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_5_color_bg",
-        "label": "Background color",
-        "default": "rgba(0,0,0,0)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_5_color",
-        "label": "Text color",
-        "default": "#000"
-      },
-      {
-        "type": "header",
-        "content": "Item #6"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_6_img_enable",
-        "label": "Use image background",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_6_img.png",
-        "label": "Banner item 6 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_6_title",
-        "label": "Title",
-        "default": "Title 6"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_6_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_6_icon",
-        "label": "ICon",
-        "default": "lnr lnr-gift",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_6_color_bg",
-        "label": "Background color",
-        "default": "#f3b929"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_6_color",
-        "label": "Text color",
-        "default": "#fff"
-      },
-      {
-        "type": "header",
-        "content": "Item #7"
-      },
-      {
-        "type": "checkbox",
-        "id": "banner_about_item_7_img_enable",
-        "label": "Use image background",
-        "default": false
-      },
-      {
-        "type": "image",
-        "id": "banner_about_item_7_img.png",
-        "label": "Banner item 7 image"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_7_title",
-        "label": "Title",
-        "default": "Title 7"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_7_url",
-        "label": "Url",
-        "default": "joomlavi.com"
-      },
-      {
-        "type": "text",
-        "id": "banner_about_item_7_icon",
-        "label": "ICon",
-        "default": "lnr lnr-store",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "color",
-        "id": "banner_about_item_7_color_bg",
-        "label": "Background color",
-        "default": "#37436d"
-      },
-      {
-        "type": "color",
-      "id": "banner_about_item_7_color",
-        "label": "Text color",
-        "default": "#fff"
       }
     ]
   },
@@ -10361,11 +9799,11 @@
   {
     "name": "SC: Testimonials",
     "settings": [
-     {
+      {
         "type": "header",
         "content": "Testimonials 1"
       },
-        {
+      {
         "type": "blog",
         "id": "testimonial_s1_data",
         "label": "Select datasource for Testimonials style 1"
@@ -10394,11 +9832,11 @@
         "default": "4",
         "info": "Default: 4"
       },
-        {
+      {
         "type": "header",
         "content": "Testimonials 2"
       },
-        {
+      {
         "type": "blog",
         "id": "testimonial_s2_data",
         "label": "Select datasource for Testimonials style 2"
@@ -10427,12 +9865,11 @@
         "default": "4",
         "info": "Default: 4"
       },
-
       {
         "type": "header",
         "content": "Testimonials 3"
       },
-        {
+      {
         "type": "blog",
         "id": "testimonial_s3_data",
         "label": "Select datasource for Testimonials style 3"
@@ -10455,46 +9892,44 @@
   {
     "name": "SC: Team",
     "settings": [
-     {
+      {
         "type": "header",
         "content": "Team circle"
       },
       {
-        "type":"checkbox",
+        "type": "checkbox",
         "id": "team_social_enable",
         "label": "Show team socials",
         "default": true
       },
-     
       {
-        "type":"text",
+        "type": "text",
         "id": "team_social_1",
         "label": "Team social 1",
         "default": "fa fa-twitter",
         "info": "Defautl: fa fa-twitter"
       },
       {
-        "type":"text",
+        "type": "text",
         "id": "team_social_2",
         "info": " Default: fa fa-facebook",
         "label": "Team social 2",
         "default": "fa fa-facebook"
       },
-       {
-        "type":"text",
+      {
+        "type": "text",
         "id": "team_social_3",
         "info": " Default: fa fa-google-plus",
-         "label": "Team social 3",
+        "label": "Team social 3",
         "default": "fa fa-google-plus"
       },
       {
-        "type":"text",
+        "type": "text",
         "id": "team_social_4",
         "info": " Default: fa fa-pinterest",
         "label": "Team social 4",
         "default": "fa fa-pinterest"
       },
-
       {
         "type": "blog",
         "id": "team_circle_data",
@@ -10528,7 +9963,7 @@
         "type": "header",
         "content": "Team Gallery"
       },
-        {
+      {
         "type": "blog",
         "id": "team_gallery_data",
         "label": "Select datasource for Team style Gallery"
@@ -10557,12 +9992,11 @@
         "default": "4",
         "info": "Default: 4"
       },
-
-       {
+      {
         "type": "header",
         "content": "Team Rect"
       },
-        {
+      {
         "type": "blog",
         "id": "team_rect_data",
         "label": "Select datasource for Team style Rect"
@@ -10903,6 +10337,550 @@
         "type": "text",
         "id": "logopartner12_url",
         "label": "Link"
+      }
+    ]
+  },
+    {
+    "name": "Currency and Price",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Price"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_dollar_symbol",
+        "label": "Show dollar sign"
+      },
+      {
+        "type": "checkbox",
+        "id": "superscript_decimals",
+        "label": "Show cents as superscript",
+        "info": "This setting won't apply if you're using a currency selector or format that includes a period before the number. For example: RS.1,000.00. [More info.](https://help.shopify.com/manual/using-themes/themes-by-shopify/supply#show-cents-as-superscript)"
+      },
+      {
+        "type": "header",
+        "content": "Currency"
+      },
+      {
+        "type": "paragraph",
+        "content": "To offer multiple currencies on your online store, you must first [edit your store's currency formatting](https://docs.shopify.com/support/settings/general/tell-my-script-where-to-find-money-formats)."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Show currency conversion",
+        "default": true,
+        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without currency ($10.00)"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With currency ($10.00 CAD)"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Supported currencies",
+        "default": "INR GBP CAD USD AUD EUR JPY",
+        "info": "Use the country's ISO [currency code](http://www.xe.com/iso4217.php). Separate your currency codes with a space."
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Cart page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Show order notes"
+      },
+      {
+        "type": "select",
+        "id": "ajax_cart_method",
+        "label": "Enable Ajax Cart method",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "modal",
+            "label": "Modal"
+          }
+        ],
+        "default": "modal"
+      },
+      {
+        "type": "header",
+        "content": "Delivery date",
+        "info": " use for Cart type = Page "
+      },
+      {
+        "type": "checkbox",
+        "id": "show_delivery_date",
+        "label": "Show delivery date",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_heading",
+        "label": "Delivery heading",
+        "default": "Pick a delivery date:"
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_input",
+        "label": "Delivery text",
+        "default": "Input date "
+      },
+      {
+        "type": "text",
+        "id": "show_delivery_note",
+        "label": "Delivery note",
+        "default": "( We do not deliver during the week-end. ) "
+      }
+    ]
+  },
+  {
+    "name": "About Us Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Setting: jv-sc-banner-about",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/about-us)"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_1_img_enable",
+        "label": "Use image background",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_1_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_1_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_1_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_1_icon",
+        "label": "Icon",
+        "default": "fa fa-briefcase",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_1_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_1_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_2_img_enable",
+        "label": "Use image background",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_2_img.png",
+        "label": "Banner item 2 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_2_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_2_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_2_icon",
+        "label": "ICon",
+        "default": "fa fa-briefcase",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_2_color_bg",
+        "label": "Background color",
+        "default": "#1997d4"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_2_color",
+        "label": "Text color",
+        "default": "#fff"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_3_img_enable",
+        "label": "Use image background",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_3_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_3_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_3_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_3_icon",
+        "label": "Icon",
+        "default": "lnr lnr-bullhorn",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_3_color_bg",
+        "label": "Background color",
+        "default": "#fdd932"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_3_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_4_img_enable",
+        "label": "Use image background",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_4_img.png",
+        "label": "Banner item 1 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_4_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_4_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_4_icon",
+        "label": "Icon",
+        "default": "lnr lnr-apartment",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_4_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_4_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Item #5"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_5_img_enable",
+        "label": "Use image background",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_5_img.png",
+        "label": "Banner item 5 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_5_title",
+        "label": "Title",
+        "default": "Title 5"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_5_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_5_icon",
+        "label": "Icon",
+        "default": "fa fa-briefcase",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_5_color_bg",
+        "label": "Background color",
+        "default": "rgba(0,0,0,0)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_5_color",
+        "label": "Text color",
+        "default": "#000"
+      },
+      {
+        "type": "header",
+        "content": "Item #6"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_6_img_enable",
+        "label": "Use image background",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_6_img.png",
+        "label": "Banner item 6 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_6_title",
+        "label": "Title",
+        "default": "Title 6"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_6_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_6_icon",
+        "label": "ICon",
+        "default": "lnr lnr-gift",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_6_color_bg",
+        "label": "Background color",
+        "default": "#f3b929"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_6_color",
+        "label": "Text color",
+        "default": "#fff"
+      },
+      {
+        "type": "header",
+        "content": "Item #7"
+      },
+      {
+        "type": "checkbox",
+        "id": "banner_about_item_7_img_enable",
+        "label": "Use image background",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "banner_about_item_7_img.png",
+        "label": "Banner item 7 image"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_7_title",
+        "label": "Title",
+        "default": "Title 7"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_7_url",
+        "label": "Url",
+        "default": "joomlavi.com"
+      },
+      {
+        "type": "text",
+        "id": "banner_about_item_7_icon",
+        "label": "ICon",
+        "default": "lnr lnr-store",
+        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_7_color_bg",
+        "label": "Background color",
+        "default": "#37436d"
+      },
+      {
+        "type": "color",
+        "id": "banner_about_item_7_color",
+        "label": "Text color",
+        "default": "#fff"
+      }
+    ]
+  },
+  {
+    "name": "Account Page",
+    "settings": [
+      {
+        "type": "image",
+        "id": "account_bg_image.jpg",
+        "label": "Set background image"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading",
+        "label": "Login welcome message",
+        "default": "WELCOME BACK!"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading_text",
+        "label": "Login welcome message extra",
+        "default": "Login to your account below"
+      }
+    ]
+  },
+  {
+    "name": "Contact Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_map_heading",
+        "label": "Heading H5",
+        "default": "HI! WE ARE SUPPORT"
+      },
+      {
+        "type": "text",
+        "id": "contact_map_heading_2",
+        "label": "Heading H3",
+        "default": "SEND EMAIL FOR US"
+      },
+      {
+        "type": "checkbox",
+        "id": "contact_map",
+        "label": "Show contact map",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "contact_address_text",
+        "label": "Heading H3",
+        "default": "The Company Name Inc. 4320 St Vincent Place, Glasgow, DC 28"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_phone",
+        "label": "Heading H3",
+        "default": "800-6688-999, 800-8866-404",
+        "info": "Separate phone number par (,) "
+      },
+      {
+        "type": "text",
+        "id": "contact_address_fax",
+        "label": "Heading H3",
+        "default": "800-6969-0044, 800-6969-0055 ",
+        "info": "Separate phone number par (,) "
+      },
+      {
+        "type": "text",
+        "id": "contact_address_email",
+        "label": "Heading H3",
+        "default": "bigcshop@domain.com"
+      },
+      {
+        "type": "textarea",
+        "id": "contact_address_map",
+        "label": "Map address",
+        "default": "https://www.google.com/maps/embed/v1/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+      },
+      {
+        "type": "radio",
+        "id": "contact_map_placement",
+        "label": "Contact map placement",
+        "options": [
+          {
+            "value": "full-width",
+            "label": "Style 1"
+          },
+          {
+            "value": "within-container",
+            "label": "Style 2"
+          }
+        ],
+        "default": "full-width"
       }
     ]
   }

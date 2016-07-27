@@ -25,8 +25,10 @@
       {% capture file %}{{settings[code] }}{% endcapture %}
       
       {%if file contains 'jv-sc-' %}
-
-        {% include file with heading_enable: settings[title] ,heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
+        {%if settings[title] != blank %}
+        {%assign heading_enable = true%}
+        {%endif %}
+        {% include file with heading_enable: heading_enable heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
 
       {% else %}
         {{ 'The asset file selected is not a shortcode'}}

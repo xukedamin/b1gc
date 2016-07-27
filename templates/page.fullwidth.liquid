@@ -1,6 +1,5 @@
 <main class="main-content">
 
-{% if page.metafields.jvpage.titlePage != 'hide'  %}
 	<div class="common-static-header">
 		<div class="parallax-bg" data-stellar-background-ratio="0.25"
 			{% if page.metafields.jvpage.titleBackground != blank %}
@@ -11,7 +10,6 @@
 			<h1 ><span>{{ page.title }}</span></h1>
 		</div>
 	</div>
-{% endif %}
 
 {{ page.content }}
 

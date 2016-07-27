@@ -496,8 +496,29 @@
         }
 
         //Customer Slider
-        if ($('.customer-saying').length > 0) {
-            $('.customer-saying').each(function() {
+        // if ($('.customer-saying').length > 0) {
+        //     $('.customer-saying').each(function() {
+
+        //        $(this).hide().imagesLoaded(function(){
+        //         $(this).show().find('.wrap-item').owlCarousel({
+        //             items: 1,
+        //             itemsCustom: [
+        //                 [0, 1],
+        //                 [480, 2],
+        //                 [768, 2],
+        //                 [992, 3],
+        //                 [1200, 3]
+        //             ],
+        //             pagination: false,
+        //             lazyLoad : true,
+        //             navigation: false,
+        //             autoPlay: true
+        //         });
+        //       });
+        //     });
+        // }
+          if ($('.slider-owl-3-items').length > 0) {
+            $('.slider-owl-3-items').each(function() {
 
                $(this).hide().imagesLoaded(function(){
                 $(this).show().find('.wrap-item').owlCarousel({
@@ -515,7 +536,7 @@
                     autoPlay: true
                 });
               });
-            });
+          });
         }
 
         //Product Slider --> single -> related product
