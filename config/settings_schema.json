@@ -1567,8 +1567,20 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_1_enable",
-        "label": "Home 1 - Show position content 1",
+        "label": "Show",
         "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "home1_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home1_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -1617,20 +1629,10 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_1",
-        "label": "Select shortcode"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-product-slider-single. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home1_pos_content_1_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home1_pos_content_1_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+     
       {
         "type": "header",
         "content": "Position 2"
@@ -1638,8 +1640,20 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_2_enable",
-        "label": "Home 1 - Show position content 2",
+        "label": "Show",
         "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "home1_pos_content_2_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home1_pos_content_2_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -1688,20 +1702,10 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_2",
-        "label": "Select shortcode"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home1_pos_content_2_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home1_pos_content_2_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+     
       {
         "type": "header",
         "content": "Position 3"
@@ -1709,8 +1713,20 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_3_enable",
-        "label": "Home 1 - Show position content 3",
+        "label": "Show",
         "default": true
+      },
+        {
+        "type": "checkbox",
+        "id": "home1_pos_content_3_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home1_pos_content_3_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -1759,20 +1775,10 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_3",
-        "label": "Select shortcode"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-testimonials-3. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home1_pos_content_3_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home1_pos_content_3_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+    
       {
         "type": "header",
         "content": "Position 4"
@@ -1780,8 +1786,20 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_4_enable",
-        "label": "Home 1 - Show position content 4",
+        "label": "Show",
         "default": true
+      },
+        {
+        "type": "checkbox",
+        "id": "home1_pos_content_4_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home1_pos_content_4_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -1830,20 +1848,10 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_4",
-        "label": "Select shortcode"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-blog-single-slider. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home1_pos_content_4_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home1_pos_content_4_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+    
       {
         "type": "header",
         "content": "Position 5"
@@ -1851,8 +1859,20 @@
       {
         "type": "checkbox",
         "id": "home1_pos_content_5_enable",
-        "label": "Home 1 - Show position content 5",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home1_pos_content_5_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home1_pos_content_5_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -1901,19 +1921,8 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_5",
-        "label": "Select shortcode"
-      },
-      {
-        "type": "checkbox",
-        "id": "home1_pos_content_5_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home1_pos_content_5_class",
-        "label": "Class",
-        "default": "pt-70"
+       "label": "Select shortcode",
+        "info": "Default: jv-sc-logopartner. Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -10158,8 +10167,7 @@
       },
       {
         "type": "header",
-        "content": "Delivery date",
-        "info": " use for Cart type = Page "
+        "content": "Delivery date"
       },
       {
         "type": "checkbox",

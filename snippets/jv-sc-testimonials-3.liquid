@@ -3,9 +3,9 @@
 {% assign blog_tag_filter = settings.testimonial_s3_data_tag %}
 
 {%comment%}default :testi_person {%endcomment%} 
-{%assign i = 1 %}
+{%assign ii = 1 %}
 {%assign j = 0 %}
-{%assign item_per_slide = 2%}
+{%assign item_per_slide = 2 %}
 {%if count >= 1 %}
 
 {%comment%}calculate the real number of testi_person tag to close item{%endcomment%}
@@ -15,8 +15,6 @@
 		{%assign size = size | plus : 1%}
 	{% endif%}
 {%endfor %}
-
-
 
 <div class="home-testimonial testimonial two-sides testimonials-3">
 	<div class="container">
@@ -30,22 +28,21 @@
 			    {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
 				      {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
 				      {% assign personcode = temp | split:'[jvperson]' | last %}
-				      
 				      {% assign temp = personcode | split:'[/job]' | first %}
 				      {% assign person_job = temp | split:'[job]' | last %}
-
 				     	{% assign temp = personcode | split:'[/url]' | first %}
 				      {% assign person_url = temp | split:'[url]' | last %}
 							
-							{%assign test =  i | modulo:item_per_slide %}
+							{%assign test =  ii | modulo:item_per_slide %}
+							
 			          {% if test == 0 %}
 			            {% assign class_item = 'right'%}
 			          {% else %}
 			            {% assign class_item = 'left'%}
 			        {% endif %}
 								
-								{% if test == 1 %}
-								<div class="testimonial-page testimonial-page-{{class_item}} {{test}}">
+									{% if test == 1 %}
+								<div class="testimonial-page testimonial-page-{{class_item}}">
 									<span class="click-button {{class_item}}-close"></span>
 									<h2>{{ article.title }}</h2>
 									{%if article.content != blank %}
@@ -65,7 +62,7 @@
 								</div>
 
 								{% if test == 0 %}
-								<div class="testimonial-page testimonial-page-{{class_item}} {{test}}">
+								<div class="testimonial-page testimonial-page-{{class_item}}">
 									<span class="click-button {{class_item}}-close"></span>
 									<h2>{{ article.title }}</h2>
 									{%if article.content != blank %}
@@ -73,26 +70,24 @@
 									{%endif%}
 								</div>
 								{% endif %}
-
+					
+					   {%assign ii = ii | plus : 1 %}
 							        
 				      {%assign j = j | plus : 1 %}
 			        {% if j == item_per_slide %}
 			          {{'</div>'}}
 			          {% assign j = 0 %}
-			          {%if forloop.last == false and i < size %}
+			          {%if forloop.last == false and ii < size %}
 			          <!-- open new item -->
 			            {{'<div class="item">'}}
 			          {% endif %}
 			        {% endif %}
-
-
-				      {%assign i = i | plus : 1 %}
 							
 						 {% endif %} 
 
 						{% endfor %}  
 
-				</div>
+				<!-- </div> -->
 				<!-- end item -->
 			</div>
 			<!-- end wrap-item -->
