@@ -5,7 +5,9 @@
 {% assign blog_tag_filter = settings.banner_2_datablog_tag %}
 
 {%comment%}default :banner_style2 {%endcomment%} 
-
+<div class="container">
+  {%include 'jv-sc-heading-box'%}
+</div>
 {%if count >= 1 %}
 <div class="row">
    {% for article in sourcedata.articles %}
@@ -52,4 +54,8 @@
         {%endif %}
   {%endfor %}
 </div>
+{% else %}
+  <div class="row">
+    <p>Nothing found</p>
+  </div>
 {%endif%}

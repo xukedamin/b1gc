@@ -8,12 +8,12 @@
 {% endcomment %}
 
 {% assign listProduct = "sc_product_tab_grid_icon_" %}
-{% capture listProductHeading %}{{listProduct}}heading{%endcapture%}
+
 {% capture listProductShowMoreBtn %}{{listProduct}}showmore_enable{%endcapture%}
 
 <div class="product-tab-wrapper">
 
-	<div class="container"> {% include 'jv-sc-heading-box' with heading_title: settings[listProductHeading], heading_enable:true %} </div>
+	<div class="container"> {% include 'jv-sc-heading-box' %} </div>
 
 	<div class="nav-tabs-icon tab-section-01 style-2">
 		

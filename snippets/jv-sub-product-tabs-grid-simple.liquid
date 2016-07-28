@@ -15,10 +15,8 @@ required: listProduct
 	{%assign class_wrap ='product-best-sale style2 tab_style3' %}
 {% endif %}
 
-{% capture listProductHeading %}{{listProduct}}heading{%endcapture%}
 {% capture listProductFilter %}{{listProduct}}filter_enable{%endcapture%}
 {% capture listProductShowMoreBtn %}{{listProduct}}showmore_enable{%endcapture%}
-
 
 <div class="product-tabs-grid-simple-wrapper {{class_wrap}}">
 	<div class="container">
@@ -34,13 +32,13 @@ required: listProduct
 		<div class="title-product-best-sale">
 			<div class="row">
 				<div class="heading-row-wrapper">
-					<h2 class="title-normal">{{settings[listProductHeading]}}</h2>
+					
+					<h2 class="title-normal">{{heading_title}}</h2>
 					
 					{%if settings[listProductFilter]%}
 					<div class="filter-product">
-						<a href="#" class="btn-filter style-border-left">Filter</a>
+						<a href="#" class="btn-filter style-border-left">{{'collections.general.filter' | t}}</a>
 					</div>
-
 					<aside  id="collectionFilters" class="box-attr-filter">
             {% include 'collection-sidebar-filter' %}
            </aside>
@@ -86,8 +84,6 @@ required: listProduct
 				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 					{% assign featured_row = settings[featured_row] %}
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
-
-
 
 					{% unless collections[featured_row].all_products_count == 0 %}
 					<div id="{{listProduct}}_product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">

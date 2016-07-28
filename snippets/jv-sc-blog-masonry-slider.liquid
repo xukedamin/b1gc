@@ -1,9 +1,6 @@
 {% assign blogDataId = "sc_blog_masonry_slider" %}
 
 {% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
-{% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
-{% capture blog_heading_style %}{{blogDataId}}_heading_style{%endcapture%}
-{% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
 
@@ -20,7 +17,7 @@
 <div class="popular-post-masonry slider-owl-single-item-paging-nolazyload">
   <div class="container">
 
-   {%include 'jv-sc-heading-box' with heading_enable: settings[blog_heading], heading_style:settings[blog_heading_style], heading_title: settings[blog_heading], heading_subtitle: settings[blog_subheading] %}
+   {%include 'jv-sc-heading-box'%}
 
     <div class="paginav-slider">
       <div class="wrap-item">

@@ -1562,7 +1562,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
@@ -1597,7 +1597,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -1632,6 +1632,10 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 2"
+      },
+      {
         "type": "checkbox",
         "id": "home1_pos_content_2_enable",
         "label": "Home 1 - Show position content 2",
@@ -1664,7 +1668,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -1699,6 +1703,10 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 3"
+      },
+      {
         "type": "checkbox",
         "id": "home1_pos_content_3_enable",
         "label": "Home 1 - Show position content 3",
@@ -1731,7 +1739,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -1766,6 +1774,10 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 4"
+      },
+      {
         "type": "checkbox",
         "id": "home1_pos_content_4_enable",
         "label": "Home 1 - Show position content 4",
@@ -1798,7 +1810,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -1833,6 +1845,10 @@
         "default": "pt-70"
       },
       {
+        "type": "header",
+        "content": "Position 5"
+      },
+      {
         "type": "checkbox",
         "id": "home1_pos_content_5_enable",
         "label": "Home 1 - Show position content 5",
@@ -1865,7 +1881,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -1905,38 +1921,6 @@
     "name": "Home page 2",
     "settings": [
       {
-        "type": "header",
-        "content": "Select header"
-      },
-      {
-        "type": "header",
-        "content": "Menu Collections"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_collections_enable",
-        "label": "Show Menu ",
-        "default": true
-      },
-      {
-        "type": "link_list",
-        "id": "home2_collections_menu",
-        "label": "Select Menu "
-      },
-      {
-        "type": "header",
-        "content": "Slideshow"
-      },
-      {
-        "type": "header",
-        "content": "Options"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider_home2_enable",
-        "label": "Show slideshow"
-      },
-      {
         "type": "select",
         "id": "home2_slide_style",
         "label": "Select Slider Style",
@@ -1971,51 +1955,29 @@
           }
         ],
         "default": "2",
-        "info": "Go to 'Material Slideshow'  below to configure."
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_banner_enable",
-        "label": "Show banner"
-      },
-      {
-        "type": "select",
-        "id": "home2_banner_style",
-        "label": "Select Banner Style",
-        "options": [
-          {
-            "value": "1",
-            "label": "style 1"
-          },
-          {
-            "value": "2",
-            "label": "style 2"
-          },
-          {
-            "value": "3",
-            "label": "style 3"
-          },
-          {
-            "value": "4",
-            "label": "style 4"
-          },
-          {
-            "value": "5",
-            "label": "style 5"
-          }
-        ],
-        "default": "2",
-        "info": "The Banner style 'Material Slideshow'  below."
+        "info": "Default: style 2. Go to 'Slideshow Material' below to configure."
       },
       {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home2_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home2_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -2044,7 +2006,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -2064,25 +2026,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-feature-locator. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 2"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_1_fullwidth",
+        "id": "home2_pos_content_2_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_2_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_1_class",
+        "id": "home2_pos_content_2_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2111,7 +2078,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -2131,25 +2098,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_2",
-        "label": "---Position 2---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 3"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_2_fullwidth",
+        "id": "home2_pos_content_3_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_3_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_2_class",
+        "id": "home2_pos_content_3_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2178,7 +2150,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -2198,25 +2170,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_3",
-        "label": "---Position 3---"
+        "label": "Select shortcode",
+        "info": " Default: jv-sc-banner-4. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 4"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_3_fullwidth",
+        "id": "home2_pos_content_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_4_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_3_class",
+        "id": "home2_pos_content_4_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2265,25 +2242,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_4",
-        "label": "---Position 4---"
+        "label": "Select shortcode",
+        "info": " Default: jv-sc-product-slider-grid. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 5"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_4_fullwidth",
+        "id": "home2_pos_content_5_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_5_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_4_class",
+        "id": "home2_pos_content_5_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2332,25 +2314,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_5",
-        "label": "---Position 5---"
+        "label": "Select shortcode",
+        "info": " Default: jv-sc-brand-people. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 6"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_5_fullwidth",
+        "id": "home2_pos_content_6_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_6_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_5_class",
+        "id": "home2_pos_content_6_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_6_enable",
-        "label": "--Position content 6 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2399,25 +2386,30 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_6",
-        "label": "---Position 6---"
+        "label": "Select shortcode",
+        "info": " Default: jv-sc-blog-grid-slider. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 7"
       },
       {
         "type": "checkbox",
-        "id": "home2_pos_content_6_fullwidth",
+        "id": "home2_pos_content_7_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home2_pos_content_7_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home2_pos_content_6_class",
+        "id": "home2_pos_content_7_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_7_enable",
-        "label": "--Position content 7 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2446,7 +2438,7 @@
           },
           {
             "value": "border",
-            "label": "border bottom"
+            "label": "Border Bottom"
           },
           {
             "value": "hr_left",
@@ -2466,19 +2458,8 @@
       {
         "type": "snippet",
         "id": "home2_pos_content_7",
-        "label": "---Position 7---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home2_pos_content_7_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home2_pos_content_7_class",
-        "label": "Class",
-        "default": "pt-70"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-logopartner. Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -2487,17 +2468,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Select header"
-      },
-      {
-        "type": "header",
-        "content": "Block Slideshow"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider_home3_enable",
-        "label": "Show slideshow",
-        "default": true
+        "content": "Slideshow"
       },
       {
         "type": "select",
@@ -2537,48 +2508,26 @@
         "info": "Go to 'Slideshow Material' below to config"
       },
       {
-        "type": "checkbox",
-        "id": "home3_banner_enable",
-        "label": "Show banner"
-      },
-      {
-        "type": "select",
-        "id": "home3_banner_style",
-        "label": "Select Banner Style",
-        "options": [
-          {
-            "value": "1",
-            "label": "style 1"
-          },
-          {
-            "value": "2",
-            "label": "style 2"
-          },
-          {
-            "value": "3",
-            "label": "style 3"
-          },
-          {
-            "value": "4",
-            "label": "style 4"
-          },
-          {
-            "value": "5",
-            "label": "style 5"
-          }
-        ],
-        "default": "1",
-        "info": "The Banner style at 'Material Banner  below."
-      },
-      {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home3_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home3_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -2627,25 +2576,30 @@
       {
         "type": "snippet",
         "id": "home3_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-1. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 2"
       },
       {
         "type": "checkbox",
-        "id": "home3_pos_content_1_fullwidth",
+        "id": "home3_pos_content_2_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_2_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home3_pos_content_1_class",
+        "id": "home3_pos_content_2_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2694,25 +2648,30 @@
       {
         "type": "snippet",
         "id": "home3_pos_content_2",
-        "label": "---Position 2---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid-simple-style-1. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 3"
       },
       {
         "type": "checkbox",
-        "id": "home3_pos_content_2_fullwidth",
+        "id": "home3_pos_content_3_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_3_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home3_pos_content_2_class",
+        "id": "home3_pos_content_3_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2761,25 +2720,30 @@
       {
         "type": "snippet",
         "id": "home3_pos_content_3",
-        "label": "---Position 3---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-2. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 4"
       },
       {
         "type": "checkbox",
-        "id": "home3_pos_content_3_fullwidth",
+        "id": "home3_pos_content_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_4_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home3_pos_content_3_class",
+        "id": "home3_pos_content_4_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -2828,25 +2792,30 @@
       {
         "type": "snippet",
         "id": "home3_pos_content_4",
-        "label": "---Position 4---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 5"
       },
       {
         "type": "checkbox",
-        "id": "home3_pos_content_4_fullwidth",
+        "id": "home3_pos_content_5_enable",
+        "label": "Show",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "home3_pos_content_5_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home3_pos_content_4_class",
+        "id": "home3_pos_content_5_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
-        "default": false
       },
       {
         "type": "text",
@@ -2895,19 +2864,8 @@
       {
         "type": "snippet",
         "id": "home3_pos_content_5",
-        "label": "---Position 5---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home3_pos_content_5_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home3_pos_content_5_class",
-        "label": "Class",
-        "default": "pt-70"
+        "label": "Select shortcode",
+        "info": "Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -2916,34 +2874,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Logo"
-      },
-      {
-        "type": "image",
-        "id": "home4_logo_1.png",
-        "label": "Select Image",
-        "max-width": 300,
-        "max-height": 100
-      },
-      {
-        "type": "image",
-        "id": "home4_logo_2.png",
-        "label": "Select Image",
-        "max-width": 300,
-        "max-height": 100
-      },
-      {
-        "type": "header",
         "content": "Slideshow"
-      },
-      {
-        "type": "header",
-        "content": "Options"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider_home4_enable",
-        "label": "Show slideshow"
       },
       {
         "type": "select",
@@ -2984,13 +2915,25 @@
       },
       {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home4_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home4_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -3039,25 +2982,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-4. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 2"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_1_fullwidth",
+        "id": "home4_pos_content_2_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_2_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_1_class",
+        "id": "home4_pos_content_2_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3106,25 +3054,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_2",
-        "label": "---Position 2---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 3"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_2_fullwidth",
+        "id": "home4_pos_content_3_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_3_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_2_class",
+        "id": "home4_pos_content_3_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3173,25 +3126,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_3",
-        "label": "---Position 3---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-product-adv. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 4"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_3_fullwidth",
+        "id": "home4_pos_content_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_4_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_3_class",
+        "id": "home4_pos_content_4_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3240,25 +3198,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_4",
-        "label": "---Position 4---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-product-slider-grid. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 5"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_4_fullwidth",
+        "id": "home4_pos_content_5_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_5_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_4_class",
+        "id": "home4_pos_content_5_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3307,25 +3270,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_5",
-        "label": "---Position 5---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-testimonials-2. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 6"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_5_fullwidth",
+        "id": "home4_pos_content_6_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_6_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_5_class",
+        "id": "home4_pos_content_6_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_6_enable",
-        "label": "--Position content 6 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3374,25 +3342,30 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_6",
-        "label": "---Position 6---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-blog-mansonry-slider. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 6"
       },
       {
         "type": "checkbox",
-        "id": "home4_pos_content_6_fullwidth",
+        "id": "home4_pos_content_7_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home4_pos_content_7_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home4_pos_content_6_class",
+        "id": "home4_pos_content_7_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_7_enable",
-        "label": "--Position content 7 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3441,19 +3414,8 @@
       {
         "type": "snippet",
         "id": "home4_pos_content_7",
-        "label": "---Position 7---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home4_pos_content_7_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home4_pos_content_7_class",
-        "label": "Class",
-        "default": "pt-70"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-logopartner. Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -3461,65 +3423,30 @@
     "name": "Home page 5",
     "settings": [
       {
-        "type": "header",
-        "content": "Select header"
+        "type": "paragraph",
+        "content": "Home style 5 have no slide by default"
       },
       {
         "type": "header",
-        "content": "Block Slideshow"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider_home5_enable",
-        "label": "Show slideshow",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "home5_slide_style",
-        "label": "Select Style",
-        "options": [
-          {
-            "value": "1",
-            "label": "style 1"
-          },
-          {
-            "value": "2",
-            "label": "style 2"
-          },
-          {
-            "value": "3",
-            "label": "style 3"
-          },
-          {
-            "value": "4",
-            "label": "style 4"
-          },
-          {
-            "value": "5",
-            "label": "style 5"
-          },
-          {
-            "value": "6",
-            "label": "style 6"
-          },
-          {
-            "value": "7",
-            "label": "style 7"
-          }
-        ],
-        "default": "5",
-        "info": "Go to 'Slideshow Material' below to config"
-      },
-      {
-        "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home5_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home5_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -3568,25 +3495,30 @@
       {
         "type": "snippet",
         "id": "home5_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-3. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 2"
       },
       {
         "type": "checkbox",
-        "id": "home5_pos_content_1_fullwidth",
+        "id": "home5_pos_content_2_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_2_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home5_pos_content_1_class",
+        "id": "home5_pos_content_2_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3635,25 +3567,30 @@
       {
         "type": "snippet",
         "id": "home5_pos_content_2",
-        "label": "---Position 2---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid-simple-style-2. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 3"
       },
       {
         "type": "checkbox",
-        "id": "home5_pos_content_2_fullwidth",
+        "id": "home5_pos_content_3_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_3_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home5_pos_content_2_class",
+        "id": "home5_pos_content_3_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3702,25 +3639,30 @@
       {
         "type": "snippet",
         "id": "home5_pos_content_3",
-        "label": "---Position 3---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-logopartner. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 4"
       },
       {
         "type": "checkbox",
-        "id": "home5_pos_content_3_fullwidth",
+        "id": "home5_pos_content_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_4_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home5_pos_content_3_class",
+        "id": "home5_pos_content_4_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3769,25 +3711,30 @@
       {
         "type": "snippet",
         "id": "home5_pos_content_4",
-        "label": "---Position 4---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 5"
       },
       {
         "type": "checkbox",
-        "id": "home5_pos_content_4_fullwidth",
+        "id": "home5_pos_content_5_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home5_pos_content_5_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home5_pos_content_4_class",
+        "id": "home5_pos_content_5_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -3836,19 +3783,8 @@
       {
         "type": "snippet",
         "id": "home5_pos_content_5",
-        "label": "---Position 5---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home5_pos_content_5_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home5_pos_content_5_class",
-        "label": "Class",
-        "default": "pt-70"
+        "label": "Select shortcode",
+        "info": "Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -3857,17 +3793,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Select header"
-      },
-      {
-        "type": "header",
         "content": "Block Slideshow"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_slider_enable",
-        "label": "Show slideshow",
-        "default": true
       },
       {
         "type": "select",
@@ -3908,13 +3834,25 @@
       },
       {
         "type": "header",
-        "content": "Position and Content"
+        "content": "Position 1"
       },
       {
         "type": "checkbox",
         "id": "home6_pos_content_1_enable",
-        "label": "--Position content 1 -- Show -- ",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home6_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -3963,25 +3901,30 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid--inline. Only file with prefix 'jv-sc-' affected"
+      },
+       {
+        "type": "header",
+        "content": "Position 2"
       },
       {
         "type": "checkbox",
-        "id": "home6_pos_content_1_fullwidth",
+        "id": "home6_pos_content_2_enable",
+        "label": "Show",
+        "default": true
+      },
+         {
+        "type": "checkbox",
+        "id": "home6_pos_content_2_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home6_pos_content_1_class",
+        "id": "home6_pos_content_2_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_pos_content_2_enable",
-        "label": "--Position content 2 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -4030,25 +3973,30 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_2",
-        "label": "---Position 2---"
+          "label": "Select shortcode",
+        "info": "Default: jv-sc-banner-catalog. Only file with prefix 'jv-sc-' affected"
+      },
+     {
+        "type": "header",
+        "content": "Position 3"
       },
       {
         "type": "checkbox",
-        "id": "home6_pos_content_2_fullwidth",
+        "id": "home6_pos_content_3_enable",
+        "label": "Show",
+        "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "home6_pos_content_3_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home6_pos_content_2_class",
+        "id": "home6_pos_content_3_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_pos_content_3_enable",
-        "label": "--Position content 3 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -4097,25 +4045,30 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_3",
-        "label": "---Position 3---"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-tabs-grid. Only file with prefix 'jv-sc-' affected"
+      },
+      {
+        "type": "header",
+        "content": "Position 4"
       },
       {
         "type": "checkbox",
-        "id": "home6_pos_content_3_fullwidth",
+        "id": "home6_pos_content_4_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_4_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home6_pos_content_3_class",
+        "id": "home6_pos_content_4_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_pos_content_4_enable",
-        "label": "--Position content 4 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -4164,25 +4117,30 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_4",
-        "label": "---Position 4---"
+          "label": "Select shortcode",
+        "info": "Default: jv-sc-blog-alt. Only file with prefix 'jv-sc-' affected"
+      },
+       {
+        "type": "header",
+        "content": "Position 5"
       },
       {
         "type": "checkbox",
-        "id": "home6_pos_content_4_fullwidth",
+        "id": "home6_pos_content_5_enable",
+        "label": "Show",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home6_pos_content_5_fullwidth",
         "label": "Fullwidth",
         "default": false
       },
       {
         "type": "text",
-        "id": "home6_pos_content_4_class",
+        "id": "home6_pos_content_5_class",
         "label": "Class",
         "default": "pt-70"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_pos_content_5_enable",
-        "label": "--Position content 5 -- Show -- ",
-        "default": true
       },
       {
         "type": "text",
@@ -4231,19 +4189,8 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_5",
-        "label": "---Position 5---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home6_pos_content_5_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home6_pos_content_5_class",
-        "label": "Class",
-        "default": "pt-70"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-service-custom. Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -4252,17 +4199,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Select header"
-      },
-      {
-        "type": "header",
         "content": "Block Slideshow"
-      },
-      {
-        "type": "checkbox",
-        "id": "home7_slider_enable",
-        "label": "Show slideshow",
-        "default": true
       },
       {
         "type": "select",
@@ -4308,8 +4245,20 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_1_enable",
-        "label": "Show Position content 1",
+        "label": "Show",
         "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "home7_pos_content_1_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_1_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -4358,20 +4307,10 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_1",
-        "label": "---Position 1---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-product-tabs-grid-simple-style-3. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home7_pos_content_1_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home7_pos_content_1_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+     
       {
         "type": "header",
         "content": "Position 2"
@@ -4379,8 +4318,20 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_2_enable",
-        "label": "Show Position content 2",
+        "label": "Show",
         "default": true
+      },
+        {
+        "type": "checkbox",
+        "id": "home7_pos_content_2_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_2_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -4429,20 +4380,10 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_2",
-        "label": "---Position 2---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-team-reactang. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home7_pos_content_2_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home7_pos_content_2_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+    
       {
         "type": "header",
         "content": "Position 3"
@@ -4450,7 +4391,7 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_3_enable",
-        "label": "Show Position content 3",
+        "label": "Show",
         "default": true
       },
       {
@@ -4500,7 +4441,8 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_3",
-        "label": "---Position 3---"
+        "label": "Select shortcode",
+        "info": "Default: jv-sc-feature-box. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "checkbox",
@@ -4523,6 +4465,18 @@
         "id": "home7_pos_content_4_enable",
         "label": "Show position content 4",
         "default": true
+      },
+       {
+        "type": "checkbox",
+        "id": "home7_pos_content_4_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_4_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -4571,20 +4525,10 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_4",
-        "label": "---Position 4---"
+          "label": "Select shortcode",
+        "info": "Default: jv-sc-testimonials-1. Only file with prefix 'jv-sc-' affected"
       },
-      {
-        "type": "checkbox",
-        "id": "home7_pos_content_4_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home7_pos_content_4_class",
-        "label": "Class",
-        "default": "pt-70"
-      },
+     
       {
         "type": "header",
         "content": "Position 5"
@@ -4592,8 +4536,20 @@
       {
         "type": "checkbox",
         "id": "home7_pos_content_5_enable",
-        "label": "Show Position content 5",
+        "label": "Show",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "home7_pos_content_5_fullwidth",
+        "label": "Fullwidth",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "home7_pos_content_5_class",
+        "label": "Class",
+        "default": "pt-70"
       },
       {
         "type": "text",
@@ -4642,19 +4598,8 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_5",
-        "label": "---Position 5---"
-      },
-      {
-        "type": "checkbox",
-        "id": "home7_pos_content_5_fullwidth",
-        "label": "Fullwidth",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "home7_pos_content_5_class",
-        "label": "Class",
-        "default": "pt-70"
+         "label": "Select shortcode",
+        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -5213,8 +5158,6 @@
       }
     ]
   },
-
- 
   {
     "name": "Countdown promotions settings",
     "settings": [
@@ -5453,12 +5396,6 @@
         "content": "P1-Tabs grid simple"
       },
       {
-        "type": "text",
-        "id": "sc_product_tab_grid_icon_heading",
-        "label": "Heading",
-        "default": "Tab grid icon"
-      },
-      {
         "type": "checkbox",
         "id": "sc_product_tab_grid_icon_showmore_enable",
         "label": "Enable Show more button",
@@ -5640,12 +5577,6 @@
       {
         "type": "header",
         "content": "P2- Tab grid Filter 1"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_style1_heading",
-        "label": "Heading",
-        "default": "Best seller"
       },
       {
         "type": "checkbox",
@@ -5837,12 +5768,6 @@
         "content": "P3- Tab grid Filter 2"
       },
       {
-        "type": "text",
-        "id": "sc_product_tab_grid_style2_heading",
-        "label": "Heading",
-        "default": "Best seller"
-      },
-      {
         "type": "checkbox",
         "id": "sc_product_tab_grid_style2_filter_enable",
         "label": "Enable Filter",
@@ -6030,12 +5955,6 @@
       {
         "type": "header",
         "content": "P4- Tab grid Filter 3"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_style3_heading",
-        "label": "Heading",
-        "default": "Tabs grid simple style 3"
       },
       {
         "type": "checkbox",
@@ -6368,13 +6287,6 @@
         "content": "P6- Tab grid Leading style 2"
       },
       {
-        "type": "text",
-        "id": "sc_product_tab_grid_inline_heading",
-        "label": "Heading",
-        "default": "Product tab grid",
-        "info": "Leave empty if unused"
-      },
-      {
         "type": "checkbox",
         "id": "sc_product_tab_grid_inline_showmore_enable",
         "label": "Enable Show more button",
@@ -6522,18 +6434,6 @@
         "content": "P7- Slider grid"
       },
       {
-        "type": "text",
-        "id": "sc_product_slider_grid_heading",
-        "label": "Heading",
-        "default": "New products"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_slider_grid_subheading",
-        "label": "SubHeading",
-        "default": "SubHeading New products"
-      },
-      {
         "type": "header",
         "content": "Collection 1"
       },
@@ -6606,12 +6506,6 @@
         "content": "P8- Slider single"
       },
       {
-        "type": "text",
-        "id": "sc_product_feature_slider_heading",
-        "label": "Heading",
-        "default": "Feature Products slider"
-      },
-      {
         "type": "collection",
         "id": "sc_product_feature_slider",
         "label": "Select Collection"
@@ -6630,46 +6524,6 @@
       {
         "type": "header",
         "content": "B1 blog 1 - grid slider"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_grid_slider_heading",
-        "label": "Heading",
-        "default": "Latest posts"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_grid_slider_subheading",
-        "label": "Heading",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
-      },
-      {
-        "type": "select",
-        "id": "sc_blog_grid_slider_heading_style",
-        "label": "Heading style",
-        "options": [
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "border",
-            "label": "Border bottom"
-          },
-          {
-            "value": "hr_left",
-            "label": "Hr Left"
-          },
-          {
-            "value": "hr_center",
-            "label": "Hr Center"
-          },
-          {
-            "value": "background_center",
-            "label": "Background Center"
-          }
-        ],
-        "default": "hr_center"
       },
       {
         "type": "blog",
@@ -6724,46 +6578,6 @@
       {
         "type": "header",
         "content": "B2 blog 2 - Masonry slider"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_masonry_slider_heading",
-        "label": "Heading",
-        "default": "Popular"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_masonry_slider_subheading",
-        "label": "Heading",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
-      },
-      {
-        "type": "select",
-        "id": "sc_blog_masonry_slider_heading_style",
-        "label": "Heading style",
-        "options": [
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "border",
-            "label": "Border bottom"
-          },
-          {
-            "value": "hr_left",
-            "label": "Hr Left"
-          },
-          {
-            "value": "hr_center",
-            "label": "Hr Center"
-          },
-          {
-            "value": "background_center",
-            "label": "Background Center"
-          }
-        ],
-        "default": "hr_center"
       },
       {
         "type": "blog",
@@ -6850,46 +6664,6 @@
       {
         "type": "header",
         "content": "B4 blog 4 - Alternate"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_alt_heading",
-        "label": "Heading",
-        "default": "LATEST POSTS FROM OUR BLOG"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_alt_subheading",
-        "label": "Sub Heading",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper"
-      },
-      {
-        "type": "select",
-        "id": "sc_blog_alt_heading_style",
-        "label": "Heading style",
-        "options": [
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "border",
-            "label": "Border bottom"
-          },
-          {
-            "value": "hr_left",
-            "label": "Horizontial Line Left"
-          },
-          {
-            "value": "hr_center",
-            "label": "Horizontial Line Center"
-          },
-          {
-            "value": "background_center",
-            "label": "Background Center"
-          }
-        ],
-        "default": "background_center"
       },
       {
         "type": "blog",
@@ -6988,46 +6762,6 @@
       {
         "type": "header",
         "content": "B2 blog 5 - Single slider"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_singleslider_heading",
-        "label": "Heading",
-        "default": "Latest posts"
-      },
-      {
-        "type": "text",
-        "id": "sc_blog_singleslider_subheading",
-        "label": "Heading",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit"
-      },
-      {
-        "type": "select",
-        "id": "sc_blog_singleslider_heading_style",
-        "label": "Heading style",
-        "options": [
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "border",
-            "label": "Border bottom"
-          },
-          {
-            "value": "hr_left",
-            "label": "Hr Left"
-          },
-          {
-            "value": "hr_center",
-            "label": "Hr Center"
-          },
-          {
-            "value": "background_center",
-            "label": "Background Center"
-          }
-        ],
-        "default": "normal"
       },
       {
         "type": "blog",
@@ -9880,12 +9614,6 @@
         "label": "Tag to filter",
         "default": "testi_person",
         "info": "default: testi_person. Recommended size: x px"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_s3_heading",
-        "label": "Heading",
-        "default": "testimonials-3"
       }
     ]
   },
@@ -10340,7 +10068,7 @@
       }
     ]
   },
-    {
+  {
     "name": "Currency and Price",
     "settings": [
       {

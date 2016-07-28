@@ -17,28 +17,28 @@
 		{{des}} 
 
 		<h2 class="mb-50">SC: P1-Tab grid simple</h2>
-	  {%include 'jv-sc-product-tabs' %} 
+	  {%include 'jv-sc-product-tabs' with heading_title: 'Tab grid simple', heading_enable:true %} 
 	  
 	  <h2 class="mb-50">SC: P2- Tab grid Filter 1</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple-style-1' %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-1'  with heading_title: 'Grid Filter 1', heading_enable:true  %}
 	  
 	  <h2 class="mb-50">SC: P3- Tab grid Filter 2</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple-style-2' %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-2' with heading_title: 'Grid Filter 2', heading_enable:true %}
 
 	  <h2 class="mb-50">SC: P4- Tab grid Filter 3</h2>
-	  {%include 'jv-sc-product-tabs-grid-simple-style-3' %}
+	  {%include 'jv-sc-product-tabs-grid-simple-style-3' with heading_title: 'Grid Filter 3', heading_enable:true %}
 	
  		<h2 class="mb-50">SC: P5- Tab grid Leading style 1</h2>
-	  {%include 'jv-sc-product-tabs-grid' %} 
+	  {%include 'jv-sc-product-tabs-grid' with heading_title: 'Leading 1', heading_enable:true %} 
 
 	  <h2 class="mb-50">SC: P6- Tab grid Leading style 2</h2>
-	  {% include 'jv-sc-product-tabs-grid--inline'%}
+	  {% include 'jv-sc-product-tabs-grid--inline' with heading_title: 'Leading 2', heading_enable:true %}
 	  
 	  <h2 class="mb-50">SC: P7- Slider grid</h2>
-	  {%include 'jv-sc-product-slider-grid' %}
+	  {%include 'jv-sc-product-slider-grid' with heading_style:'hr_center', heading_title: 'Slider grid', heading_subtitle: 'Subtitle demo' , heading_enable:true  %}
 		
 	</div>
 
 	<div class="container"> <h2>SC: P7- Slider single</h2> </div>
-	{%include 'jv-sc-product-slider-single' %} 
+	{%include 'jv-sc-product-slider-single' with heading_title: 'Single slider', heading_enable:true  %} 
 </main>

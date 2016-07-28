@@ -9,8 +9,9 @@
     {% capture fullwidth %}{{homenum}}_pos_content_{{i}}_fullwidth{% endcapture %}
     {% capture code %}{{homenum}}_pos_content_{{i}}{% endcapture %}
     {% capture title %}{{homenum}}_pos_content_{{i}}_title{% endcapture %}
+    {% capture stitle %}{{homenum}}_pos_content_{{i}}_stitle{% endcapture %}
+
     {% capture title_style %}{{homenum}}_pos_content_{{i}}_title_style{% endcapture %}
-    {% capture stitle %}{{homenum}}_pos_content_{{i}}_title_stitle{% endcapture %}
 
     {% capture extra_class %}{{homenum}}_pos_content_{{i}}_class{% endcapture %}
 
@@ -26,9 +27,9 @@
       
       {%if file contains 'jv-sc-' %}
         {%if settings[title] != blank %}
-        {%assign heading_enable = true%}
+        {%assign heading_enable = true %}
         {%endif %}
-        {% include file with heading_enable: heading_enable heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
+        {% include file with heading_enable: heading_enable, heading_style: settings[title_style] ,heading_title: settings[title] , heading_subtitle: settings[stitle] %}
 
       {% else %}
         {{ 'The asset file selected is not a shortcode'}}

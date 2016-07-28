@@ -5,6 +5,11 @@
 
 {%comment%}default :banner_style3 {%endcomment%} 
 {%assign count_item = 1 %}
+
+<div class="container">
+  {%include 'jv-sc-heading-box'%}
+</div>
+
 {%if count >= 1 %}
 <div class="row">
 
@@ -62,4 +67,8 @@
     {%endif %}
   {%endfor %}
 </div>
+{% else %}
+  <div class="row">
+    <p>Nothing found</p>
+  </div>
 {%endif%}

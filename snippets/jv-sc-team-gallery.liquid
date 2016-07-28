@@ -4,9 +4,13 @@
 {% assign blog_tag_filter = settings.team_gallery_data_tag %}
 
 {%comment%}default :team_person {%endcomment%} 
+
+{% include 'jv-sc-heading-box' %} 
+
 {%if count >= 1 %}
 
 <div class="team-gallery">
+  
   <div class="row">
      {% for article in sourcedata.articles %}
 

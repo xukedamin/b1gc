@@ -1,9 +1,6 @@
 {% assign blogDataId = "sc_blog_singleslider" %}
 
 {% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
-{% capture blog_heading %}{{blogDataId}}_heading{%endcapture%}
-{% capture blog_heading_style %}{{blogDataId}}_heading_style{%endcapture%}
-{% capture blog_subheading %}{{blogDataId}}_subheading{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
 
 {% assign blogs_list_grids = settings[blog_handle] %}
@@ -52,7 +49,7 @@
 <div class="home-latest-news">
   
   <div class="container">
-    {%include 'jv-sc-heading-box' with heading_enable: settings[blog_heading], heading_style:settings[blog_heading_style], heading_title: settings[blog_heading], heading_subtitle: settings[blog_subheading] %}
+    {%include 'jv-sc-heading-box' %}
   </div>
 
   <div class="wrap-latest-news-slider {%if settings[blog_color_bg_custom_enable]%}blog__color--custom{%endif%}">
