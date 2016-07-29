@@ -20,16 +20,13 @@
 
     {% capture banner_img %}{{var_banner}}_item_{{ i }}_img.png{% endcapture %}
     {% capture banner_img_enable %}{{var_banner}}_item_{{ i }}_img_enable{% endcapture %}
-
     {% capture banner_title %}{{var_banner}}_item_{{ i }}_title{% endcapture %}
     {% capture banner_icon %}{{var_banner}}_item_{{ i }}_icon{% endcapture %}
     {% capture banner_url %}{{var_banner}}_item_{{ i }}_url{% endcapture %}	
     {% capture banner_color_bg %}{{var_banner}}_item_{{ i }}_color_bg{% endcapture %}	
     {% capture banner_color %}{{var_banner}}_item_{{ i }}_color{% endcapture %}	
 
-
 		{%if forloop.index == 1 or forloop.index == 2  %}
-
 		<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}} "> 
 					<a href="{{settings[banner_url]}}">
@@ -42,12 +39,10 @@
 					</a>
 			</div>
 		</div>
-
 		{% endif %}
 
 
 		{% if forloop.index == 3 %}
-
 			<div class="col-md-6 col-sm-12 col-xs-12">
 			<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}} ">
 				<a href="{{settings[banner_url]}}">
@@ -68,7 +63,7 @@
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div class="about-box {%if settings[banner_img_enable] %} about-box-image {%else%} about-box-text {%endif%}" style="background-color:{{settings[banner_color_bg]}}; color:{{settings[banner_color]}}">
 		
-		<a class="" href="{{settings[banner_url]}}">
+			<a class="" href="{{settings[banner_url]}}">
 			{%if settings[banner_img_enable]  %}
 			
 			{{ banner_img | asset_url | img_tag: banner_title }}
@@ -83,7 +78,6 @@
 	{% endif %}
 
 {% endfor %}
-
 
 	</div>
 </div>

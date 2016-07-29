@@ -267,20 +267,21 @@ $footer__color--border : #{'{{settings.footer_color_border}}'};
 /*******************************************************************
   BACK-TOP
 ********************************************************************/
-
+$back-top-icon-fontsize : #{'{{settings.general_backtotop_icon_font_size}}px'};
+//default: 50
 #back-top {
   bottom: 15px;
   cursor: pointer;
   display: block;
-  font-size: 50px;
   font-weight: 700;
-  height: 50px;
-  line-height: 50px;
+  font-size: $back-top-icon-fontsize;
+  height: $back-top-icon-fontsize;
+  line-height: $back-top-icon-fontsize;
+  width: $back-top-icon-fontsize;
   position: fixed;
   right: 15px;
   text-align: center;
   text-decoration: none;
-  width: 50px;
   z-index: 1040;
   @include prefix(transform, translate(150%, 0px));
   @extend %jv-transition-easeout;

@@ -4,7 +4,7 @@
 		{% if settings.footer_newsletter_enable %}
 		<div class="newsletter-form-wrapper mb-20">
 			<div class="newsletter-form">
-			{%include 'newsletter' %}
+			{%include 'newsletter' with form_id: 'footer--newsletter' %}
 			</div>
 		</div>
 		{% endif %}

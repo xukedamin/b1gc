@@ -29,40 +29,42 @@
         "id": "color_primary",
         "label": "Primary Color",
         "default": "#fec64d",
-        "info": "Text links and primary buttons"
+        "info": "Default: #fec64d.Text links and primary buttons"
       },
       {
         "type": "color",
         "id": "color_primary_inverse",
         "label": "Primary Color Inverse",
         "default": "#1b1d1f",
-        "info": "Primary buttons hover"
+        "info": "Default: #1b1d1f. Primary buttons hover"
       },
       {
         "type": "color",
         "id": "color_secondary",
         "label": "Secondary Color",
         "default": "#1997d4",
-        "info": "Secondary buttons"
+        "info": "Default: #1997d4. Secondary buttons"
       },
       {
         "type": "color",
         "id": "color_secondary_inverse",
         "label": "Secondary Color inverse",
         "default": "#ffd21e",
-        "info": "Secondary button hover"
+        "info": "Default: #ffd21e.Secondary button hover"
       },
       {
         "type": "color",
         "id": "color_body_bg",
         "label": "Body background color",
-        "default": "#fff"
+        "default": "#fff",
+        "info": "Default: #fff."
       },
       {
         "type": "color",
         "id": "color_body_text",
         "label": "Body text color",
-        "default": "#1b1d1f"
+        "default": "#1b1d1f",
+        "info": "Default: #1b1d1f."
       }
     ]
   },
@@ -386,6 +388,10 @@
     "settings": [
       {
         "type": "header",
+        "content": "Megamenu"
+      },
+      {
+        "type": "header",
         "content": "Nav #1"
       },
       {
@@ -423,23 +429,23 @@
           },
           {
             "value": "2",
-            "label": "2 Column"
+            "label": "2 Columns"
           },
           {
             "value": "3",
-            "label": "3 Column"
+            "label": "3 Columns"
           },
           {
             "value": "4",
-            "label": "4 Column"
+            "label": "4 Columns"
           },
           {
             "value": "5",
-            "label": "5 Column"
+            "label": "5 Columns"
           },
           {
             "value": "6",
-            "label": "6 Column"
+            "label": "6 Columns"
           }
         ],
         "default": "4"
@@ -483,23 +489,23 @@
           },
           {
             "value": "2",
-            "label": "2 Column"
+            "label": "2 Columns"
           },
           {
             "value": "3",
-            "label": "3 Column"
+            "label": "3 Columns"
           },
           {
             "value": "4",
-            "label": "4 Column"
+            "label": "4 Columns"
           },
           {
             "value": "5",
-            "label": "5 Column"
+            "label": "5 Columns"
           },
           {
             "value": "6",
-            "label": "6 Column"
+            "label": "6 Columns"
           }
         ],
         "default": "4"
@@ -744,7 +750,7 @@
         "id": "mega_main_color",
         "label": "Color item",
         "default": "#333",
-        "info": "Color item Main menu"
+        "info": "Default:#333. Color item Main menu"
       },
       {
         "type": "header",
@@ -755,28 +761,28 @@
         "id": "mega_sub_bg_color",
         "label": "Background Sub Menu",
         "default": "#fff",
-        "info": "Background Sub Menu"
+        "info": "Default:#fff. Background Sub Menu"
       },
       {
         "type": "color",
         "id": "mega_sub_color_header",
         "label": "Header Color  ",
         "default": "#666",
-        "info": "Header Color "
+        "info": "Default:#666. Header Color "
       },
       {
         "type": "color",
         "id": "mega_sub_color",
         "label": "Color item",
         "default": "#ccc",
-        "info": "Color item sub Menu"
+        "info": "Default: #ccc. Color item sub Menu"
       },
       {
         "type": "color",
         "id": "mega_sub_boder_color",
         "label": "Border Sub Menu",
         "default": "#e5e5e5",
-        "info": "Border Sub Menu"
+        "info": "Default: #e5e5e5. Border Sub Menu"
       },
       {
         "type": "select",
@@ -974,11 +980,11 @@
     ]
   },
   {
-    "name": "Header #",
+    "name": "Header",
     "settings": [
       {
         "type": "header",
-        "content": "Select header default"
+        "content": "Select Default Header"
       },
       {
         "type": "select",
@@ -1275,25 +1281,29 @@
         "type": "color",
         "id": "footer_color_background",
         "label": "Background",
-        "default": "#f4f4f4"
+        "default": "#f4f4f4",
+        "info": "Default: #f4f4f4"
       },
       {
         "type": "color",
         "id": "footer_color_text",
         "label": "Text",
-        "default": "#555"
+        "default": "#555",
+        "info": "Default: #555"
       },
       {
         "type": "color",
         "id": "footer_color_text_hover",
         "label": "Hover state color",
-        "default": "#1b8dbf"
+        "default": "#1b8dbf",
+        "info": "Default: #1b8dbf"
       },
       {
         "type": "color",
         "id": "footer_color_border",
         "label": "Border color",
-        "default": "#ddd"
+        "default": "#ddd",
+        "info": "Default: #ddd"
       },
       {
         "type": "header",
@@ -1451,21 +1461,21 @@
     ]
   },
   {
-    "name": "Search settings",
+    "name": "Misc",
     "settings": [
       {
         "type": "header",
-        "content": "Search "
+        "content": "Search settings"
       },
       {
         "type": "checkbox",
         "id": "search_auto_complete_enabale",
-        "label": "Show Autocomplete",
+        "label": "Enable Autocomplete",
         "default": true
       },
       {
         "type": "header",
-        "content": "page search"
+        "content": "Search Page"
       },
       {
         "type": "image",
@@ -1493,6 +1503,30 @@
         "id": "search_result_number_products_per_page",
         "label": "Products per page",
         "default": "9"
+      },
+      {
+        "type": "header",
+        "content": "Back to top"
+      },
+      {
+         "type": "checkbox",
+        "id": "general_backtotop_enable",
+        "label": "Enable Back to top",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "general_backtotop_icon",
+        "label": "Icon",
+        "default": "lnr lnr-chevron-up-circle",
+        "info": "Default: lnr lnr-chevron-up-circle. [Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+      },
+       {
+        "type": "text",
+        "id": "general_backtotop_icon_font_size",
+        "label": "Icon Font size",
+        "default": "50",
+        "info": "Default: 50"
       }
     ]
   },
@@ -2740,7 +2774,7 @@
         "type": "checkbox",
         "id": "home3_pos_content_4_enable",
         "label": "Show",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",
@@ -2802,7 +2836,7 @@
         "type": "snippet",
         "id": "home3_pos_content_4",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
+        "info": "Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -3659,7 +3693,7 @@
         "type": "checkbox",
         "id": "home5_pos_content_4_enable",
         "label": "Show",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",
@@ -3721,7 +3755,7 @@
         "type": "snippet",
         "id": "home5_pos_content_4",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
+        "info": "Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -4546,7 +4580,7 @@
         "type": "checkbox",
         "id": "home7_pos_content_5_enable",
         "label": "Show",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",
@@ -4608,7 +4642,7 @@
         "type": "snippet",
         "id": "home7_pos_content_5",
          "label": "Select shortcode",
-        "info": "Default: jv-sc-newsletter. Only file with prefix 'jv-sc-' affected"
+        "info": "Only file with prefix 'jv-sc-' affected"
       }
     ]
   },
@@ -5170,7 +5204,7 @@
     ]
   },
   {
-    "name": "Countdown promotions settings",
+    "name": "Countdown promotions",
     "settings": [
       {
         "type": "header",
@@ -6627,13 +6661,15 @@
         "type": "color",
         "id": "sc_blog_masonry_slider_color_bg_custom",
         "label": "Custom Background Color",
-        "default": "#1b1d1f"
+        "default": "#1b1d1f",
+        "info": "Default: #1b1d1f"
       },
       {
         "type": "color",
         "id": "sc_blog_masonry_slider_color_text_custom",
         "label": "Custom Text Color",
-        "default": "#ffffff"
+        "default": "#ffffff",
+        "info": "Default: #ffffff"
       }
     ]
   },
@@ -6751,19 +6787,22 @@
         "type": "color",
         "id": "sc_blog_alt_color_bg_custom",
         "label": "Custom Background Color",
-        "default": "#fec64d"
+        "default": "#fec64d",
+        "info": "Default: #fec64d"
       },
       {
         "type": "color",
         "id": "sc_blog_alt_color_text_custom",
         "label": "Custom Text Color",
-        "default": "#ffffff"
+        "default": "#ffffff",
+        "info": "Default: #ffffff"
       },
       {
         "type": "color",
         "id": "sc_blog_alt_color_border_custom",
         "label": "Custom Border Color",
-        "default": "#ffffff"
+        "default": "#ffffff",
+        "info": "Default: #ffffff"
       }
     ]
   },
@@ -6845,7 +6884,8 @@
         "type": "color",
         "id": "sc_blog_singleslider_color_bg_custom",
         "label": "Custom Background Color",
-        "default": "#1b1d1f"
+        "default": "#1b1d1f",
+        "info": "Default: #1b1d1f"
       }
     ]
   },
@@ -9205,7 +9245,8 @@
         "type": "color",
         "id": "pbar_item_1_color",
         "label": "Color",
-        "default": "#fec942"
+        "default": "#fec942",
+        "info" :"Default: #fec942"
       },
       {
         "type": "header",
@@ -9239,7 +9280,8 @@
         "type": "color",
         "id": "pbar_item_2_color",
         "label": "Color",
-        "default": "#2ea0d7"
+        "default": "#2ea0d7",
+        "info" :"Default: #2ea0d7"
       },
       {
         "type": "header",
@@ -9273,7 +9315,8 @@
         "type": "color",
         "id": "pbar_item_3_color",
         "label": "Color",
-        "default": "#494a4c"
+        "default": "#494a4c",
+        "info" :"Default: #494a4c"
       },
       {
         "type": "header",
@@ -9307,7 +9350,8 @@
         "type": "color",
         "id": "pbar_item_4_color",
         "label": "Color",
-        "default": "#494a4c"
+        "default": "#494a4c",
+        "info": "Default: #494a4c"
       }
     ]
   },
@@ -10243,13 +10287,15 @@
         "type": "color",
         "id": "banner_about_item_1_color_bg",
         "label": "Background color",
-        "default": "rgba(0,0,0,0)"
+        "default": "rgba(0,0,0,0)",
+        "info": "Default: rgba(0,0,0,0)"
       },
       {
         "type": "color",
         "id": "banner_about_item_1_color",
         "label": "Text color",
-        "default": "#000"
+        "default": "#000",
+        "info": "Default: #000"
       },
       {
         "type": "header",
@@ -10281,7 +10327,7 @@
       {
         "type": "text",
         "id": "banner_about_item_2_icon",
-        "label": "ICon",
+        "label": "Icon",
         "default": "fa fa-briefcase",
         "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       },
@@ -10289,13 +10335,15 @@
         "type": "color",
         "id": "banner_about_item_2_color_bg",
         "label": "Background color",
-        "default": "#1997d4"
+        "default": "#1997d4",
+        "info": "Default: #1997d4"
       },
       {
         "type": "color",
         "id": "banner_about_item_2_color",
         "label": "Text color",
-        "default": "#fff"
+        "default": "#fff",
+        "info": "Default: #fff"
       },
       {
         "type": "header",
@@ -10335,13 +10383,15 @@
         "type": "color",
         "id": "banner_about_item_3_color_bg",
         "label": "Background color",
-        "default": "#fdd932"
+        "default": "#fdd932",
+        "info": "Default: #fdd932"
       },
       {
         "type": "color",
         "id": "banner_about_item_3_color",
         "label": "Text color",
-        "default": "#000"
+        "default": "#000",
+        "info": "Default: #000"
       },
       {
         "type": "header",
@@ -10381,13 +10431,15 @@
         "type": "color",
         "id": "banner_about_item_4_color_bg",
         "label": "Background color",
-        "default": "rgba(0,0,0,0)"
+        "default": "rgba(0,0,0,0)",
+        "info": "Default: rgba(0,0,0,0)"
       },
       {
         "type": "color",
         "id": "banner_about_item_4_color",
         "label": "Text color",
-        "default": "#000"
+        "default": "#000",
+        "info": "Default: #000"
       },
       {
         "type": "header",
@@ -10414,7 +10466,7 @@
         "type": "text",
         "id": "banner_about_item_5_url",
         "label": "Url",
-        "default": "joomlavi.com"
+        "default": "http://joomlavi.com"
       },
       {
         "type": "text",
@@ -10427,13 +10479,15 @@
         "type": "color",
         "id": "banner_about_item_5_color_bg",
         "label": "Background color",
-        "default": "rgba(0,0,0,0)"
+        "default": "rgba(0,0,0,0)",
+        "info": "Default: rgba(0,0,0,0)"
       },
       {
         "type": "color",
         "id": "banner_about_item_5_color",
         "label": "Text color",
-        "default": "#000"
+        "default": "#000",
+        "info": "Default: #000"
       },
       {
         "type": "header",
@@ -10460,12 +10514,12 @@
         "type": "text",
         "id": "banner_about_item_6_url",
         "label": "Url",
-        "default": "joomlavi.com"
+        "default": "http://joomlavi.com"
       },
       {
         "type": "text",
         "id": "banner_about_item_6_icon",
-        "label": "ICon",
+        "label": "Icon",
         "default": "lnr lnr-gift",
         "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       },
@@ -10473,13 +10527,15 @@
         "type": "color",
         "id": "banner_about_item_6_color_bg",
         "label": "Background color",
-        "default": "#f3b929"
+        "default": "#f3b929",
+        "info": "Default: #f3b929"
       },
       {
         "type": "color",
         "id": "banner_about_item_6_color",
         "label": "Text color",
-        "default": "#fff"
+        "default": "#fff",
+        "info": "Default: #fff"
       },
       {
         "type": "header",
@@ -10506,7 +10562,7 @@
         "type": "text",
         "id": "banner_about_item_7_url",
         "label": "Url",
-        "default": "joomlavi.com"
+        "default": "http://joomlavi.com"
       },
       {
         "type": "text",
@@ -10519,35 +10575,15 @@
         "type": "color",
         "id": "banner_about_item_7_color_bg",
         "label": "Background color",
-        "default": "#37436d"
+        "default": "#37436d",
+        "info": "Default: #37436d"
       },
       {
         "type": "color",
         "id": "banner_about_item_7_color",
         "label": "Text color",
-        "default": "#fff"
-      }
-    ]
-  },
-  {
-    "name": "Account Page",
-    "settings": [
-      {
-        "type": "image",
-        "id": "account_bg_image.jpg",
-        "label": "Set background image"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading",
-        "label": "Login welcome message",
-        "default": "WELCOME BACK!"
-      },
-      {
-        "type": "text",
-        "id": "customer_heading_text",
-        "label": "Login welcome message extra",
-        "default": "Login to your account below"
+        "default": "#fff",
+        "info": "Default: #fff"
       }
     ]
   },
@@ -10603,22 +10639,28 @@
         "id": "contact_address_map",
         "label": "Map address",
         "default": "https://www.google.com/maps/embed/v1/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+      }
+    ]
+  },
+  {
+    "name": "Account Page",
+    "settings": [
+      {
+        "type": "image",
+        "id": "account_bg_image.jpg",
+        "label": "Set background image"
       },
       {
-        "type": "radio",
-        "id": "contact_map_placement",
-        "label": "Contact map placement",
-        "options": [
-          {
-            "value": "full-width",
-            "label": "Style 1"
-          },
-          {
-            "value": "within-container",
-            "label": "Style 2"
-          }
-        ],
-        "default": "full-width"
+        "type": "text",
+        "id": "customer_heading",
+        "label": "Login welcome message",
+        "default": "WELCOME BACK!"
+      },
+      {
+        "type": "text",
+        "id": "customer_heading_text",
+        "label": "Login welcome message extra",
+        "default": "Login to your account below"
       }
     ]
   }
