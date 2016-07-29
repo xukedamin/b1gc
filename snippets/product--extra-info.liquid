@@ -13,25 +13,20 @@
       {% endif %}
 
       {%if settings.product_size_chart_enable %}
-      <li role="presentation"><a href="#size_chart" aria-controls="tags" role="tab" data-toggle="tab">{{'products.general.size_chart' | t }}</a></li>
+      <li role="presentation"><a href="#size_chart" aria-controls="size_chart" role="tab" data-toggle="tab">{{'products.general.size_chart' | t }}</a></li>
       {% endif %}
     </ul>
   </div>
-
   <!-- Tab panes -->
   <div class="tab-content">
-    
     <div role="tabpanel" class="tab-pane active" id="description">
     <h5>{{ 'products.product.description' | t }}</h5>
-
       {% if product.description contains '[jvcountdown]' %}
             {% assign des = product.description | split:'[/jvcountdown]' | last %}
             {{ des | split: '|' | first | strip_html | truncatewords: 50 }}
           {%else %}
             {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
         {%endif %}
-        
-    <!-- {{ product.description }} -->
     </div>
     
     {% if settings.product_reviews_enable %}
@@ -48,18 +43,12 @@
     </div>
     {%endif %}
 
-
-    
     {% if settings.product_size_chart_enable %}
     <div role="tabpanel" class="tab-pane" id="size_chart">
       <h5>{{ 'products.general.size_chart' | t }}</h5>
-
      <img src="{{ 'product_size_chart.png' | asset_url }}" alt="product_size_chart.png">
     </div>
     {% endif %}
 
   </div>
-
-
-
 </div>

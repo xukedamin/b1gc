@@ -2,12 +2,9 @@
 
 {% capture blog_handle %}{{blogDataId}}_handle{%endcapture%}
 {% capture blog_limit %}{{blogDataId}}_limit{%endcapture%}
-
-
 {% capture blog_color_custom_enable %}{{blogDataId}}_color_custom_enable{%endcapture%}
 {% capture blog_show_title %}{{blogDataId}}_show_title{%endcapture%}
 {% capture blog_show_desc %}{{blogDataId}}_show_desc{%endcapture%}
-
 {% assign blogs_list_grids = settings[blog_handle] %}
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
@@ -27,10 +24,8 @@
               {% for article in blog.articles limit:limit_item %}
             
                 <div class="itemMasonry col-md-3 {%if forloop.last%} last {%endif%}">
-
                   <div class="popular-box">
                     <div class="popular-box-thumb">
-
                       {% assign image_alt = article.title | escape %}
                       {% if article.image %}
                         {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
@@ -51,7 +46,6 @@
                     {% endif %}
 
                   </div>
-
                 </div>
                 <!-- end itemMasonry -->
 
@@ -74,15 +68,8 @@
   </div>
 </div>
 <!-- End Popular Post -->
-<style type="text/css">
-  .popular-post-masonry .itemMasonry:nth-child(3),
-  .popular-post-masonry .itemMasonry:nth-child(4) {
-    width: 50%;
-  }
-</style>
 
-
-<script language="javascript">
+<script>
 jQuery(function($){
   var $container = $('.masonry-container').imagesLoaded(function(){
     $container.masonry({
@@ -90,11 +77,5 @@ jQuery(function($){
     itemSelector: '.itemMasonry'
     });
   });
-
-  // var $container = $('.masonry-container').masonry({
-    
-  //   itemSelector: '.itemMasonry'
-  //   });
-
 });
 </script>

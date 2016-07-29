@@ -2,7 +2,7 @@
 	<div class="comment content"> 
 	  <h3 class="comment-author">{{ comment.author }}</h3>
 	  <p class="comment-time"><time  datetime="{{ comment.created_at | date: '%Y-%m-%d' }}">{{ comment.created_at | date: format: 'month_day_year' }}</time> </p>
-	 	<p class="comment-text">{{ comment.content }} </p>
-	 	<a href="#write-comment" class="comment-reply">Reply</a>
+	 	<div class="comment-text">{{ comment.content }} </div>
+	 	<a href="#write-comment" class="comment-reply">{{'blogs.comments.reply' | t}}</a>
 	</div>
 </div>

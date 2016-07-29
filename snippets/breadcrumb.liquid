@@ -1,10 +1,7 @@
 {% include 'advanced-tag-loop' %}
 
 {% unless template == 'index' or template == 'cart' %}
-<nav class="bread-crumb" role="navigation" aria-label="breadcrumbs">
-
-
-    
+<nav class="bread-crumb" aria-label="breadcrumbs">
   <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
 
   {% if template contains 'product' %}

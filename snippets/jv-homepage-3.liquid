@@ -1,13 +1,9 @@
-<main class="wrapper main-content homepage3" role="main">
-  <header class="home-sticky-nav-trigger">
-    <div class="home-fw-slider caption-slider dir-nav parents-height">
+<main class="wrapper main-content homepage3">
       
-      {% if settings.slider_home_enable %}
-        {% capture slider %}slider-{{settings.home3_slide_style}}{% endcapture %}
-        {% include slider  %}
-      {% endif %}
-    </div>
-  </header>
+  {% if settings.slider_home_enable %}
+    {% capture slider %}slider-{{settings.home3_slide_style}}{% endcapture %}
+    {% include slider  %}
+  {% endif %}
 
   {% comment %} 
   jv-sc-banner-1 

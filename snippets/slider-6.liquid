@@ -21,8 +21,7 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
 
    <div class="item">
     <div class="content-banner-slider">
-      <a href="{{settings[slide_link]}}" class="banner-thumb-link">
-        <!-- {{ slide_img | asset_url | img_tag: settings[slide_alt] }} -->
+      <a href="{{settings[slide_link] |  url_param_escape}}" class="banner-thumb-link">
         <div class="img" style="background-image: url('{{slide_img | asset_url}}');" ></div>
       </a>
       <div class="banner-info">

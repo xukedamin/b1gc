@@ -1,24 +1,12 @@
-
-
-{% if page.metafields.jvpage.titlePage != 'hide'  %}  
 <div class="common-static-header collection-header">
-  <div class="parallax-bg" data-stellar-background-ratio="0.25" 
-       {% if settings.bg_page_shop_enable %}    
-       style="background-image:url({{ 'bg_page_shop.jpg' | asset_url }})"         
-       {% endif %}        
-       ></div>
   <div class="container">
     <div class="collection-description">
       {% include 'breadcrumb' %}
     </div>
   </div>  
 </div>
-{% endif %} 
-
-
-<main role="main" class="wrapper main-content product-style-detail">
+<main class="wrapper main-content product-style-detail">
   <div class="container">
-   
     <div class="row">
 
       {%include 'page-product--content' %}
@@ -36,9 +24,5 @@
       {% endif %}    
 
     </div>
-
   </div><!-- container -->
-
-</main>      
-
-
+</main>

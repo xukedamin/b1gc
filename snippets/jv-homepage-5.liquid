@@ -1,13 +1,10 @@
-<main class="wrapper main-content homepage5" role="main">
-  <header class="home-sticky-nav-trigger">
+<main class="wrapper main-content homepage5">
 
- {% comment %} ----- Banner  ----- {% endcomment %}
+  {% comment %} ----- Banner  ----- {% endcomment %}
   {%if settings.home5_slide_enable %}
       {% capture slider %}slider-{{settings.home5_slide_style}}{% endcapture %}
       {% include slider  %}
   {%endif %}
-
-  </header>
 
   {% comment %} jv-sc-banner-3 {% endcomment %}
   {% comment %}  'jv-sc-product-tabs-grid-simple' with tab_style:'2',product_paginav:false, product_loadmore:true, product_desc_enable: true  {% endcomment %}

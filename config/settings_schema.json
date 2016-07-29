@@ -4798,12 +4798,10 @@
     "settings": [
       {
         "type": "header",
-        "content": "Collection index page"
+        "content": "Collection index page",
+         "info": "[Demo](https://bigc-1.myshopify.com/collections). Refers to site_url/collections"
       },
-      {
-        "type": "paragraph",
-        "content": "Refers to site_url/collections"
-      },
+
       {
         "type": "checkbox",
         "id": "page_collections_enable",
@@ -4817,17 +4815,21 @@
       },
       {
         "type": "header",
-        "content": "Specified Collection page"
-      },
-      {
-        "type": "paragraph",
-        "content": "Refers to site_url/collections/all or other specified collection id: site_url/collections/art"
+        "content": "Specified Collection page",
+        "info": "[Demo](https://bigc-1.myshopify.com/all). Refers to site_url/collections/all or other specified collection id: site_url/collections/art"
       },
       {
         "type": "text",
         "id": "number_products_per_page",
         "label": "Products per page",
         "default": "9"
+      },
+       {
+        "type": "checkbox",
+        "id": "collection_show_toolbar_bottom",
+        "label": "Show bottom toolbar",
+        "info": "[?](https://bigc-1.myshopify.com/#)",
+        "default": true
       },
       {
         "type": "header",

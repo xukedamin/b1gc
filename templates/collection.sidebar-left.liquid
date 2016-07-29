@@ -36,7 +36,7 @@
       {% assign has_sidebar = true %}
     {% endif %}
 
-    <main class="wrapper main-content templates-collection collection-sidebar-left" role="main">
+    <main class="wrapper main-content templates-collection collection-sidebar-left">
       <div class="container">
         <div class="row" >
           <div class="grid-item{% if has_sidebar %} col-md-9  col-md-offset-3 {% endif %}">
@@ -58,8 +58,10 @@
               </div>
             {% endfor %}
           </div>
-        
-          {%include 'collection-toolbar' with class_toolbar:'toolbar-bottom', show_button_filter: false %}
+          
+          {%if settings.collection_show_toolbar_bottom %}
+            {%include 'collection-toolbar' with class_toolbar:'toolbar-bottom', show_button_filter: false %}
+          {%endif %}
 
       </div>
       {% if has_sidebar %}

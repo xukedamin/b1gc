@@ -1173,6 +1173,12 @@ ul.blog-related{
   position: relative;
 }
 
+//masonsy-slider
+.popular-post-masonry .itemMasonry:nth-child(3),
+.popular-post-masonry .itemMasonry:nth-child(4) {
+  width: 50%;
+}
+
 /*
 Custom background
 **/

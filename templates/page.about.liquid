@@ -2,7 +2,6 @@
 	<div class="container">
 		{% include 'breadcrumb' %}
 		{%include 'jv-sc-banner-about' %}
-		
 		<div class="about-content">
 			<div class="row">
 				<div class="col-md-6 col-sm-12 col-xs-12">
@@ -24,6 +23,7 @@
 			{% include 'jv-sc-testimonials-1' %}
 		</div>
 	</div>
-	{%include 'jv-sc-newsletter' %}
-
+	<div class="mt-70">
+	{%include 'jv-sc-newsletter' with form_id: 'aboutpage_' %}
+	</div>
 </main>

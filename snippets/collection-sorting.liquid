@@ -1,6 +1,6 @@
 <div class="form-horizontal">
-  <label for="sortBy" class="small--hide">{{ 'collections.sorting.title' | t }}</label>
-  <select name="sortBy" id="sortBy">
+  <label for="{{class_toolbar}}_sortBy" class="small--hide">{{ 'collections.sorting.title' | t }}</label>
+  <select name="sortBy" data-id="sortBy" id="{{class_toolbar}}_sortBy">
     <option value="manual">{{ 'collections.sorting.featured' | t }}</option>
     <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
     <option value="title-ascending">{{ 'collections.sorting.az' | t }}</option>
@@ -12,6 +12,8 @@
   </select>
 </div>
 
+{%comment%}include script once{%endcomment%}
+{%if class_toolbar == 'toolbar-top'%}
 <script>
   Shopify.queryParams = {};
   if (location.search.length) {
@@ -24,7 +26,8 @@
   }
 
   $(function() {
-    $('#sortBy')
+  //  $('#sortBy')
+    $('select[data-id="sortBy"]')
       // select the current sort order
       .val('{{ collection.sort_by | default: collection.default_sort_by | escape }}')
       .bind('change', function() {
@@ -34,3 +37,4 @@
     );
   });
 </script>
+{%endif %}
