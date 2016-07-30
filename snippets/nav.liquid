@@ -1,6 +1,4 @@
-{%comment%}
-required: hot_label_enable : Boolean
-{%endcomment%}
+{%comment%}required: hot_label_enable : Boolean {%endcomment%}
 
 {% if handle != '' %}
   {% if linklists[handle].links.size > 0 %}
@@ -11,16 +9,20 @@ required: hot_label_enable : Boolean
       {% assign style ='nav' %}
 
       {% for i in (1..10) %}
-        {% capture pick_name %}nav{{i}}{% endcapture %}
-        {% capture pick_name %}{{settings[pick_name]}}{% endcapture %}
-        {% capture pick %}nav{{i}}_style{% endcapture %}
+        {% capture nav_id %}nav{{i}}{% endcapture %}
+        {% capture nav_style %}nav{{i}}_style{% endcapture %}
+        {% assign nav_handle = settings[nav_id] %}
        
-        {% if pick_name == handlej %}
-          {% capture stylei %}nav-{{settings[pick]}}{% endcapture %}
+        {% if nav_handle == handlej %}
+          {% capture stylei %}nav-{{settings[nav_style]}}{% endcapture %}
           {% assign style = stylei %}
-        
-          {% capture pick_column %}nav{{i}}_column{% endcapture %}
-          {% capture coli %}{{settings[pick_column]}}{% endcapture %}
+
+          {% capture nav_column %}nav{{i}}_column{% endcapture %}
+          {% assign nav_column_setting = settings[nav_column] %} 
+
+          {% capture nav_img_enable %}nav{{i}}_bg_img_enable{% endcapture %}
+
+          {% capture nav_product%}nav{{i}}_product{% endcapture %}
 
           {% break %}
         {% endif %}
@@ -38,7 +40,7 @@ required: hot_label_enable : Boolean
         {% assign class_li = class_li | append: ' menu-item-has-children' %}
       {% endif %} 
       {% if style == 'nav-style1' or style == 'nav-style2' %}
-        {%capture class_add %} mega-menu menu-{{coli}}-col{%endcapture%}
+        {%capture class_add %} mega-menu menu-{{nav_column_setting}}-col{%endcapture%}
         {% assign class_li = class_li | append: class_add %}
         
       {% endif %}
@@ -48,7 +50,6 @@ required: hot_label_enable : Boolean
           {%if hot_label_enable %}
             
             {% assign hots = {{settings.main_menu_hot_items}} | split: ',' %}
-
             {%for hot in hots %}
                {% if link.handle == hot %}
                <sup class="label-sub title-hot hidden-xs"> {{'collections.general.hot' | t}}</sup>
@@ -56,7 +57,6 @@ required: hot_label_enable : Boolean
             {% endfor %}
           
           {% assign news = {{settings.main_menu_new_items}} | split: ',' %}
-
            {% for n in news %}
                {% if link.handle == n %}
                <sup class="label-sub title-new hidden-xs">{{'collections.general.new' | t}}</sup>

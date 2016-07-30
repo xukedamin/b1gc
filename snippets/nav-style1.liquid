@@ -1,5 +1,5 @@
 {% if handle != '' %}
-<ul class="mega-menu-content{{ class }} mega-style1">
+<ul class="mega-menu-content{{ class }} mega-style1 {%if settings[nav_img_enable]%}{{nav_img_enable}}{%endif%}">
   {% for link in linklists[handle].links %}  
   <li class="{% if link.active %} active{% endif %} menu-title menu-dropdown">
     <a href="{{ link.url }}">{{ link.title }}</a>

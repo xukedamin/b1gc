@@ -442,13 +442,25 @@
           {
             "value": "5",
             "label": "5 Columns"
-          },
-          {
-            "value": "6",
-            "label": "6 Columns"
           }
         ],
         "default": "4"
+      },
+      {
+        "type": "checkbox",
+        "id": "nav1_bg_img_enable",
+        "label": "Use background image",
+        "default":true
+      },
+      {
+        "type": "image",
+        "id": "nav1_bg_img.png",
+        "label": "background image"
+      },
+       {
+        "type": "product",
+        "id": "nav1_product",
+        "label": "Select Product"
       },
       {
         "type": "header",
@@ -470,11 +482,11 @@
           },
           {
             "value": "style2",
-            "label": "Style 2"
+            "label": "Style 2 - comming soon"
           },
           {
             "value": "style3",
-            "label": "Style 3"
+            "label": "Style 3 - comming soon"
           }
         ]
       },
@@ -502,13 +514,25 @@
           {
             "value": "5",
             "label": "5 Columns"
-          },
-          {
-            "value": "6",
-            "label": "6 Columns"
           }
         ],
         "default": "4"
+      },
+        {
+        "type": "checkbox",
+        "id": "nav2_bg_img_enable",
+        "label": "Use background image",
+        "default":false
+      },
+      {
+        "type": "image",
+        "id": "nav2_bg_img.png",
+        "label": "background image"
+      },
+        {
+        "type": "product",
+        "id": "nav2_product",
+        "label": "Select Product"
       },
       {
         "type": "header",
@@ -530,11 +554,11 @@
           },
           {
             "value": "style2",
-            "label": "Style 2"
+            "label": "Style 2  - comming soon"
           },
           {
             "value": "style3",
-            "label": "Style 3"
+            "label": "Style 3  - comming soon"
           }
         ]
       },
@@ -565,6 +589,17 @@
           }
         ],
         "default": "4"
+      },
+      {
+        "type": "checkbox",
+        "id": "nav3_bg_img_enable",
+        "label": "Use background image",
+        "default":false
+      },
+      {
+        "type": "image",
+        "id": "nav3_bg_img.png",
+        "label": "background image"
       },
       {
         "type": "header",
@@ -740,11 +775,7 @@
         ],
         "default": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif"
       },
-      {
-        "type": "text",
-        "id": "mega_bg_img",
-        "label": "Mega background image"
-      },
+      
       {
         "type": "color",
         "id": "mega_main_color",
@@ -10649,6 +10680,12 @@
         "type": "header",
         "content": "Account Page"
       },
+       {
+        "type": "checkbox",
+        "id": "account_bg_image_enable",
+        "label": "Use Background Image",
+        "default": true
+      },
       {
         "type": "image",
         "id": "account_bg_image.jpg",
@@ -10673,7 +10710,7 @@
        {
         "type": "checkbox",
         "id": "password_bg_image_enable",
-        "label": "Show Background Image",
+        "label": "Use Background Image",
         "default": true
       },
       {

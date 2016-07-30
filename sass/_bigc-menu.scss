@@ -295,10 +295,24 @@ Mega menu
   --Mega -- style 1
   --------------------------------------------------------------------*/
   .dropdownMenu .mega-menu .mega-menu-content.sub-menu.mega-style1{
-    background-image: url($menu__mega__bg__img);
+    // background-image: url($menu__mega__bg__img);
     background-position: right bottom;
     background-repeat: no-repeat; 
+
+    &.nav1_bg_img_enable{
+      background-image: url('{{ "nav1_bg_img.png" | asset_url }}');
+    }
+    &.nav2_bg_img_enable{
+      background-image: url('{{ "nav2_bg_img.png" | asset_url }}');
+    }
+    &.nav3_bg_img_enable{
+      background-image: url('{{ "nav3_bg_img.png" | asset_url }}');
+    }
+    &.nav4_bg_img_enable{
+      background-image: url('{{ "nav4_bg_img.png" | asset_url }}');
+    }
   }
+
 
 /* -------------------------------------------------------------------
 Home 4
