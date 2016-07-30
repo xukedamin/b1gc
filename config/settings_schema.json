@@ -10643,8 +10643,12 @@
     ]
   },
   {
-    "name": "Account Page",
+    "name": "Account, Password Page",
     "settings": [
+     {
+        "type": "header",
+        "content": "Account Page"
+      },
       {
         "type": "image",
         "id": "account_bg_image.jpg",
@@ -10661,6 +10665,21 @@
         "id": "customer_heading_text",
         "label": "Login welcome message extra",
         "default": "Login to your account below"
+      }
+      ,{
+        "type": "header",
+        "content": "Password Page"
+      },
+       {
+        "type": "checkbox",
+        "id": "password_bg_image_enable",
+        "label": "Show Background Image",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "password-page-background.png",
+        "label": "Set background image"
       }
     ]
   }

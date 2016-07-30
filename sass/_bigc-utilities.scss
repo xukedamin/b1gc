@@ -93,7 +93,7 @@
   }
 }
 
-$baseFontSize : #{'{{ settings.font_type_base_size }}'};
+$baseFontSize : 14px;
 
 @function em($target, $context: $baseFontSize) {
   @if $target == 0 {
@@ -126,6 +126,19 @@ $sizes : 30,40,50,60,70;
      font-size: #{$s}px;
   }
 }
+
+/*============================================================================
+  #Breakpoint and Grid Variables
+==============================================================================*/
+$viewportIncrement: 1px;
+
+$small: 480px;
+$medium: 768px;
+$large: 769px;
+
+$postSmall: $small + $viewportIncrement;
+$preMedium: $medium - $viewportIncrement;
+$preLarge: $large - $viewportIncrement;
 
 /*============================================================================
 Dependency-free breakpoint mixin
@@ -392,34 +405,37 @@ blockquote { border-left: 5px solid $color_shark; color: $color_dusty-gray; font
 .owl-theme .owl-controls {
   margin: 0;
 }
-.owl-default .owl-theme .owl-controls .owl-buttons div.owl-prev {
-  background: rgba(0, 0, 0, 0) url('{{ "left.png" | asset_url }}') no-repeat scroll 0 0;
-  left: 0;
+.owl-default .owl-theme .owl-controls .owl-buttons {
+  div {
+    background: transparent;
+    border-radius: 0;
+    color: $color_shark;
+    display: block;
+    font-size: inherit;
+    height: 18px;
+    margin: -10px 0 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 11px;
+    @extend %jv-transition-easeout;
+  }
+  div.owl-prev {
+    background: rgba(0, 0, 0, 0) url('{{ "left.png" | asset_url }}') no-repeat scroll 0 0;
+    left: 0;
+  }
+  div.owl-next {
+    right: 0;
+    background: rgba(0, 0, 0, 0) url('{{ "right.png" | asset_url }}') no-repeat scroll 0 0;
+  }
 }
-.owl-default .owl-theme .owl-controls .owl-buttons div.owl-next {
-  right: 0;
-  background: rgba(0, 0, 0, 0) url('{{ "right.png" | asset_url }}') no-repeat scroll 0 0;
-}
-.owl-default  .owl-theme .owl-controls .owl-buttons div {
-  background: transparent;
-  border-radius: 0;
-  color: $color_shark;
-  display: block;
-  font-size: inherit;
-  height: 18px;
-  margin: -10px 0 0;
-  opacity: 0;
-  padding: 0;
-  position: absolute;
-  text-indent: -9999px;
-  top: 50%;
-  width: 11px;
-  @extend %jv-transition-easeout;
-}
+
 .owl-default:hover .owl-theme .owl-controls .owl-buttons div {
   opacity: 1;
 }
-
+  
 
 select {
   -moz-appearance: none;
@@ -596,7 +612,7 @@ textarea:focus {
     height: 100%
 }
 
-//
+
 .share-social{
   .share-count{
     background: $color_primary none repeat scroll 0 0;

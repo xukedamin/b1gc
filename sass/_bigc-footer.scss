@@ -30,6 +30,11 @@
 
 .share-social {
   margin-top: 23px;
+  li{
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
   a {
     color: $color_dove-gray;
     font-size: 24px;
