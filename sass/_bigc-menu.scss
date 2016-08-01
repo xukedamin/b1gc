@@ -220,10 +220,10 @@ Mega menu
 
       &:hover {
         z-index: 1000;
+        > a:after {
+          border-color: $color_primary;
+        }
       } 
-      &:hover > a:after {
-        border-color: $color_primary;
-      }
       
       > a {
         display: block;
@@ -238,7 +238,7 @@ Mega menu
 
         @extend %text-up;
 
-        &:after {
+        &:not(.link):after {
           border-bottom: 2px solid transparent;
           content: "";
           display: block;
@@ -294,7 +294,7 @@ Mega menu
   /* -------------------------------------------------------------------
   --Mega -- style 1
   --------------------------------------------------------------------*/
-  .dropdownMenu .mega-menu .mega-menu-content.sub-menu.mega-style1{
+  .dropdownMenu .mega-menu .mega-menu-content.sub-menu[class*="mega-style"]{
     // background-image: url($menu__mega__bg__img);
     background-position: right bottom;
     background-repeat: no-repeat; 

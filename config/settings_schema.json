@@ -392,7 +392,7 @@
       },
       {
         "type": "header",
-        "content": "Nav #1"
+        "content": "Mega Nav #1"
       },
       {
         "type": "link_list",
@@ -458,13 +458,20 @@
         "label": "background image"
       },
        {
+        "type": "text",
+        "id": "nav1_bg_img_position",
+        "label": "Background image position",
+        "default":"right bottom",
+        "info": "Default: right bottom"
+      },
+       {
         "type": "product",
         "id": "nav1_product",
         "label": "Select Product"
       },
       {
         "type": "header",
-        "content": "Nav #2"
+        "content": "Mega Nav #2"
       },
       {
         "type": "link_list",
@@ -529,6 +536,13 @@
         "id": "nav2_bg_img.png",
         "label": "background image"
       },
+       {
+        "type": "text",
+        "id": "nav2_bg_img_position",
+        "label": "Background image position",
+        "default":"right bottom",
+        "info": "Default: right bottom"
+      },
         {
         "type": "product",
         "id": "nav2_product",
@@ -536,7 +550,7 @@
       },
       {
         "type": "header",
-        "content": "Nav #3"
+        "content": "Mega Nav #3"
       },
       {
         "type": "link_list",
@@ -600,6 +614,13 @@
         "type": "image",
         "id": "nav3_bg_img.png",
         "label": "background image"
+      },
+      {
+        "type": "text",
+        "id": "nav3_bg_img_position",
+        "label": "Background image position",
+        "default":"right bottom",
+        "info": "Default: right bottom"
       },
       {
         "type": "header",

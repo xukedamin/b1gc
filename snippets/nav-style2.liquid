@@ -1,5 +1,6 @@
 {% if handle != '' %}
-<ul class="mega-menu-content{{ class }} mega-style2 {%if settings[nav_img_enable]%}{{nav_img_enable}}{%endif%} {{settings[nav_product]}} {{nav_product}} {{settings.nav2_product}}">
+<ul class="mega-menu-content{{ class }} mega-style2 {%if settings[nav_img_enable]%}{{nav_img_enable}}{%endif%} {%if settings[nav_product] != blank %}nav-product{%endif%}" {%if settings[nav_img_enable]%}style='background-position: {{settings[nav_img_pos]}}'{%endif%}>
+  
   {% for link in linklists[handle].links %}  
   <li class="{% if link.active %} active{% endif %} menu-title menu-dropdown">
     <a href="{{ link.url }}">{{ link.title }}</a>
@@ -14,11 +15,12 @@
   {%if settings[nav_product] != blank %}
     {%assign handle_product = settings[nav_product] %}
   <li class="{{handle_product}} {{all_products[handle_product].title}}" >
-    {%assign menu_product = all_products[handle_product] %}
+    {% assign menu_product = all_products[handle_product] %}
     {% assign featured_image = menu_product.selected_variant.featured_image | default: menu_product.featured_image %}
-    <img src="{{ featured_image.src | product_img_url: 'grande' }}" alt="{{menu_product.title}}"/>
-    <a href="{{menu_product.url}}">{{menu_product.title}}</a>
-      {% include 'price' with menu_product.price %}
+    <a href="{{menu_product.url}}">{{menu_product.title}}
+    </a>
+    <a class="link" href="{{menu_product.url}}"><img src="{{ featured_image.src | product_img_url: 'grande' }}" alt="{{menu_product.title}}"/></a>
+    <div class="info-price text-center"> {% include 'price' with menu_product.price %}</div>
   </li>
   {%endif%}
 
