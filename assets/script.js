@@ -911,7 +911,6 @@
            $nav_MainMenu.each(function () {
 
             $(this).find(">li li:has(ul)").children("a").on('click', function (event) {
-              console.log('click 3');
               event.preventDefault();
             });
 
@@ -919,7 +918,7 @@
             $(this).find(".menu-dropdown > a").each(function () {
                   $(this).siblings('ul').hide();
                   $(this).on("click", function (event) {
-                      console.log('click 4');
+                      
                       event.preventDefault();
                       event.stopPropagation();
                       jvbigC.menu_DropdownTrigger(this);

@@ -39,7 +39,7 @@
       {% if linklists[handlei].links.size > 0 %}
         {% assign class_li = class_li | append: ' menu-item-has-children' %}
       {% endif %} 
-      {% if style == 'nav-style1' or style == 'nav-style2' %}
+      {% if style == 'nav-style1' %}
         {%capture class_add %} mega-menu menu-{{nav_column_setting}}-col{%endcapture%}
         {% assign class_li = class_li | append: class_add %}
         

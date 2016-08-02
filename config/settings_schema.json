@@ -407,16 +407,9 @@
           {
             "value": "style1",
             "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3"
           }
-        ]
+        ],
+         "info":"Style 2,3 comming soon."
       },
       {
         "type": "select",
@@ -486,16 +479,9 @@
           {
             "value": "style1",
             "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2 - comming soon"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3 - comming soon"
           }
-        ]
+        ],
+        "info":"Style 2,3 comming soon."
       },
       {
         "type": "select",
@@ -565,16 +551,9 @@
           {
             "value": "style1",
             "label": "Style 1"
-          },
-          {
-            "value": "style2",
-            "label": "Style 2  - comming soon"
-          },
-          {
-            "value": "style3",
-            "label": "Style 3  - comming soon"
           }
-        ]
+        ],
+        "info":"Style 2,3 comming soon."
       },
       {
         "type": "select",
