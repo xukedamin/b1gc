@@ -125,27 +125,7 @@
  
     <a id="newsletter-btn" href="#mc_embed_signup"><span class="hidden">Try now</span></a>
     {% include 'newsletter-popup' %}
-    <script>
 
-    jQuery(document).ready(function($) {
-      //newsletter popup
-      if($("#newsletter-btn").length > 0){
-          $("#newsletter-btn").fancybox({
-            'titleShow'   : false,
-            'padding'   : 0
-          });
-        }
-
-      if (document.cookie.indexOf('visited=true') == -1) {
-        var fifteenDays = 1000*60*60*24*15;
-        var expires = new Date((new Date()).valueOf() + fifteenDays);
-        document.cookie = "visited=true;expires=" + expires.toUTCString();
-          $("#newsletter-btn").trigger('click');
-        }
-        //end newsletter popup
-    });
-
-    </script>
   {% endif %}
 
   
