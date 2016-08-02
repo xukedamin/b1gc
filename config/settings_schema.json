@@ -409,7 +409,7 @@
             "label": "Style 1"
           }
         ],
-         "info":"Style 2,3 comming soon."
+        "info": "Style 2,3 comming soon."
       },
       {
         "type": "select",
@@ -443,21 +443,21 @@
         "type": "checkbox",
         "id": "nav1_bg_img_enable",
         "label": "Use background image",
-        "default":true
+        "default": true
       },
       {
         "type": "image",
         "id": "nav1_bg_img.png",
         "label": "background image"
       },
-       {
+      {
         "type": "text",
         "id": "nav1_bg_img_position",
         "label": "Background image position",
-        "default":"right bottom",
+        "default": "right bottom",
         "info": "Default: right bottom"
       },
-       {
+      {
         "type": "product",
         "id": "nav1_product",
         "label": "Select Product"
@@ -481,7 +481,7 @@
             "label": "Style 1"
           }
         ],
-        "info":"Style 2,3 comming soon."
+        "info": "Style 2,3 comming soon."
       },
       {
         "type": "select",
@@ -511,25 +511,25 @@
         ],
         "default": "4"
       },
-        {
+      {
         "type": "checkbox",
         "id": "nav2_bg_img_enable",
         "label": "Use background image",
-        "default":false
+        "default": false
       },
       {
         "type": "image",
         "id": "nav2_bg_img.png",
         "label": "background image"
       },
-       {
+      {
         "type": "text",
         "id": "nav2_bg_img_position",
         "label": "Background image position",
-        "default":"right bottom",
+        "default": "right bottom",
         "info": "Default: right bottom"
       },
-        {
+      {
         "type": "product",
         "id": "nav2_product",
         "label": "Select Product"
@@ -553,7 +553,7 @@
             "label": "Style 1"
           }
         ],
-        "info":"Style 2,3 comming soon."
+        "info": "Style 2,3 comming soon."
       },
       {
         "type": "select",
@@ -587,7 +587,7 @@
         "type": "checkbox",
         "id": "nav3_bg_img_enable",
         "label": "Use background image",
-        "default":false
+        "default": false
       },
       {
         "type": "image",
@@ -598,7 +598,7 @@
         "type": "text",
         "id": "nav3_bg_img_position",
         "label": "Background image position",
-        "default":"right bottom",
+        "default": "right bottom",
         "info": "Default: right bottom"
       },
       {
@@ -775,7 +775,6 @@
         ],
         "default": "'Open Sans', 'Helvetica Neue',Helvetica,Arial,sans-serif"
       },
-      
       {
         "type": "color",
         "id": "mega_main_color",
@@ -1540,7 +1539,7 @@
         "content": "Back to top"
       },
       {
-         "type": "checkbox",
+        "type": "checkbox",
         "id": "general_backtotop_enable",
         "label": "Enable Back to top",
         "default": true
@@ -1552,7 +1551,7 @@
         "default": "lnr lnr-chevron-up-circle",
         "info": "Default: lnr lnr-chevron-up-circle. [Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       },
-       {
+      {
         "type": "text",
         "id": "general_backtotop_icon_font_size",
         "label": "Icon Font size",
@@ -1635,7 +1634,7 @@
         "label": "Show",
         "default": true
       },
-       {
+      {
         "type": "checkbox",
         "id": "home1_pos_content_1_fullwidth",
         "label": "Fullwidth",
@@ -1694,10 +1693,9 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_1",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-product-slider-single. Only file with prefix 'jv-sc-' affected"
       },
-     
       {
         "type": "header",
         "content": "Position 2"
@@ -1708,7 +1706,7 @@
         "label": "Show",
         "default": true
       },
-       {
+      {
         "type": "checkbox",
         "id": "home1_pos_content_2_fullwidth",
         "label": "Fullwidth",
@@ -1767,10 +1765,9 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_2",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-product-tabs. Only file with prefix 'jv-sc-' affected"
       },
-     
       {
         "type": "header",
         "content": "Position 3"
@@ -1781,7 +1778,7 @@
         "label": "Show",
         "default": true
       },
-        {
+      {
         "type": "checkbox",
         "id": "home1_pos_content_3_fullwidth",
         "label": "Fullwidth",
@@ -1840,10 +1837,9 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_3",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-testimonials-3. Only file with prefix 'jv-sc-' affected"
       },
-    
       {
         "type": "header",
         "content": "Position 4"
@@ -1854,7 +1850,7 @@
         "label": "Show",
         "default": true
       },
-        {
+      {
         "type": "checkbox",
         "id": "home1_pos_content_4_fullwidth",
         "label": "Fullwidth",
@@ -1913,10 +1909,9 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_4",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-blog-single-slider. Only file with prefix 'jv-sc-' affected"
       },
-    
       {
         "type": "header",
         "content": "Position 5"
@@ -1986,7 +1981,7 @@
       {
         "type": "snippet",
         "id": "home1_pos_content_5",
-       "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-logopartner. Only file with prefix 'jv-sc-' affected"
       }
     ]
@@ -3978,7 +3973,7 @@
         "label": "Select shortcode",
         "info": "Default: jv-sc-product-tabs-grid--inline. Only file with prefix 'jv-sc-' affected"
       },
-       {
+      {
         "type": "header",
         "content": "Position 2"
       },
@@ -3988,7 +3983,7 @@
         "label": "Show",
         "default": true
       },
-         {
+      {
         "type": "checkbox",
         "id": "home6_pos_content_2_fullwidth",
         "label": "Fullwidth",
@@ -4047,10 +4042,10 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_2",
-          "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-banner-catalog. Only file with prefix 'jv-sc-' affected"
       },
-     {
+      {
         "type": "header",
         "content": "Position 3"
       },
@@ -4060,7 +4055,7 @@
         "label": "Show",
         "default": true
       },
-       {
+      {
         "type": "checkbox",
         "id": "home6_pos_content_3_fullwidth",
         "label": "Fullwidth",
@@ -4119,7 +4114,7 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_3",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-tabs-grid. Only file with prefix 'jv-sc-' affected"
       },
       {
@@ -4191,10 +4186,10 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_4",
-          "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-blog-alt. Only file with prefix 'jv-sc-' affected"
       },
-       {
+      {
         "type": "header",
         "content": "Position 5"
       },
@@ -4263,7 +4258,7 @@
       {
         "type": "snippet",
         "id": "home6_pos_content_5",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-service-custom. Only file with prefix 'jv-sc-' affected"
       }
     ]
@@ -4322,7 +4317,7 @@
         "label": "Show",
         "default": true
       },
-       {
+      {
         "type": "checkbox",
         "id": "home7_pos_content_1_fullwidth",
         "label": "Fullwidth",
@@ -4384,7 +4379,6 @@
         "label": "Select shortcode",
         "info": "Default: jv-sc-product-tabs-grid-simple-style-3. Only file with prefix 'jv-sc-' affected"
       },
-     
       {
         "type": "header",
         "content": "Position 2"
@@ -4395,7 +4389,7 @@
         "label": "Show",
         "default": true
       },
-        {
+      {
         "type": "checkbox",
         "id": "home7_pos_content_2_fullwidth",
         "label": "Fullwidth",
@@ -4457,7 +4451,6 @@
         "label": "Select shortcode",
         "info": "Default: jv-sc-team-reactang. Only file with prefix 'jv-sc-' affected"
       },
-    
       {
         "type": "header",
         "content": "Position 3"
@@ -4540,7 +4533,7 @@
         "label": "Show position content 4",
         "default": true
       },
-       {
+      {
         "type": "checkbox",
         "id": "home7_pos_content_4_fullwidth",
         "label": "Fullwidth",
@@ -4599,10 +4592,9 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_4",
-          "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Default: jv-sc-testimonials-1. Only file with prefix 'jv-sc-' affected"
       },
-     
       {
         "type": "header",
         "content": "Position 5"
@@ -4672,7 +4664,7 @@
       {
         "type": "snippet",
         "id": "home7_pos_content_5",
-         "label": "Select shortcode",
+        "label": "Select shortcode",
         "info": "Only file with prefix 'jv-sc-' affected"
       }
     ]
@@ -4864,9 +4856,8 @@
       {
         "type": "header",
         "content": "Collection index page",
-         "info": "[Demo](https://bigc-1.myshopify.com/collections). Refers to site_url/collections"
+        "info": "[Demo](https://bigc-1.myshopify.com/collections). Refers to site_url/collections"
       },
-
       {
         "type": "checkbox",
         "id": "page_collections_enable",
@@ -4889,7 +4880,7 @@
         "label": "Products per page",
         "default": "9"
       },
-       {
+      {
         "type": "checkbox",
         "id": "collection_show_toolbar_bottom",
         "label": "Show bottom toolbar",
@@ -9277,7 +9268,7 @@
         "id": "pbar_item_1_color",
         "label": "Color",
         "default": "#fec942",
-        "info" :"Default: #fec942"
+        "info": "Default: #fec942"
       },
       {
         "type": "header",
@@ -9312,7 +9303,7 @@
         "id": "pbar_item_2_color",
         "label": "Color",
         "default": "#2ea0d7",
-        "info" :"Default: #2ea0d7"
+        "info": "Default: #2ea0d7"
       },
       {
         "type": "header",
@@ -9347,7 +9338,7 @@
         "id": "pbar_item_3_color",
         "label": "Color",
         "default": "#494a4c",
-        "info" :"Default: #494a4c"
+        "info": "Default: #494a4c"
       },
       {
         "type": "header",
@@ -10676,11 +10667,11 @@
   {
     "name": "Account, Password Page",
     "settings": [
-     {
+      {
         "type": "header",
         "content": "Account Page"
       },
-       {
+      {
         "type": "checkbox",
         "id": "account_bg_image_enable",
         "label": "Use Background Image",
@@ -10702,12 +10693,12 @@
         "id": "customer_heading_text",
         "label": "Login welcome message extra",
         "default": "Login to your account below"
-      }
-      ,{
+      },
+      {
         "type": "header",
         "content": "Password Page"
       },
-       {
+      {
         "type": "checkbox",
         "id": "password_bg_image_enable",
         "label": "Use Background Image",

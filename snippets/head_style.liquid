@@ -1,0 +1,21 @@
+  {% if settings.ajax_cart_method != 'page' %}
+  <!-- Ajaxify Cart Plugin ================================================== -->
+  {{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+<!-- CSS ================================================== -->
+{{ 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/animatecss/3.4.0/animate.min.css' | stylesheet_tag }}
+{{ 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' | stylesheet_tag }}
+{{ 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' | stylesheet_tag }}
+
+{{ 'bootstrap-theme.css' | asset_url | stylesheet_tag }} 
+{{ 'jquery.fancybox.css' | asset_url | stylesheet_tag }} 
+{{ 'jquery-ui.css' | asset_url | stylesheet_tag }} 
+{{ 'owl.carousel.css' | asset_url | stylesheet_tag }} 
+{{ 'owl.transitions.css' | asset_url | stylesheet_tag }} 
+{{ 'owl.theme.css' | asset_url | stylesheet_tag }} 
+{{ 'tilteffect.css' | asset_url | stylesheet_tag }} 
+{{ 'PieChart.css' | asset_url | stylesheet_tag }}
+
+{{ 'style.scss.css' | asset_url | stylesheet_tag }}
+{{ 'bigc-include.scss.css' | asset_url | stylesheet_tag }}

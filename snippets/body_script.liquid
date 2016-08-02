@@ -1,0 +1,127 @@
+<script>
+Shopify.money_format = "{{ shop.money_format }}";
+window.shop_currency = "{{ shop.currency }}";
+window.show_multiple_currencies = {{settings.show_multiple_currencies}};
+</script>
+  
+{{ 'tiltfx.js' | asset_url | script_tag }}
+
+<script>
+  var moneyFormat = '{{ shop.money_format }}';
+</script>
+
+{% if settings.ajax_cart_method != 'page' %}
+
+  {{ 'handlebars.min.js' | asset_url | script_tag }}
+  {% include 'ajax-cart-template' %}
+  {{ 'ajaxify.js' | asset_url | script_tag }}
+
+<script>
+  jQuery(function($) {
+    window.ajaxifyShopifyInit = function()
+    {
+      ajaxifyShopify.init({
+        method: '{{ settings.ajax_cart_method }}',
+        wrapperClass: 'wrapper',
+        formSelector: '#AddToCartForm',
+        addToCartSelector: '.addToCart',
+        cartCountSelector: '.cart-count',
+        toggleCartButton: '.cart-toggle',
+        useCartTemplate: true,
+        btnClass: 'btn',
+        moneyFormat: {{ shop.money_format | json }},
+        disableAjaxCart: false,
+        enableQtySelectors: true
+      });
+    }
+    ajaxifyShopifyInit();
+  
+   });
+</script>
+{% endif %}
+
+<script>
+  window.ajax_cart = true;
+</script>
+  
+<div id="overlays-loading" class=" show-loading">
+  <span class="loading-ball ">
+    <span class="ball"></span>
+    <span class="ball1"></span>
+  </span>
+</div>
+
+<div class="ajax-error-cbox ajax-box-message animated ">
+  <div class="ajax-error-message message notice icon-notice2"></div>
+</div>
+<div class="ajax-success-cbox ajax-box-message animated">
+  <div class="success-message show-wishlist">
+   <span class="color-main">  {{ 'wishlist.success_wishlist' | t }}</span> - <a href="/pages/wishlist" >  {{ 'wishlist.view_wishlist' | t }}</a>
+  </div>    
+  <div class="success-message show-cart">
+    <span class="color-main"> {{ 'cart.general.added_cart' | t }}</span> - <a  href="/cart"> {{ 'cart.general.view_cart' | t }}</a>
+  </div>
+</div>
+
+{%if settings.product_quickview_enable %}
+<div class="quickview-product" id="popupid" style="width: 782px;height: 479px;display: none"></div>
+{%include 'quick-view' %}  
+{% endif %}
+
+{{ 'jquery.bxslider.js' | asset_url | script_tag }}
+{{ 'shop.js' | asset_url | script_tag }}
+{{ 'script.js' | asset_url | script_tag }}
+
+
+{{ "//cdn.shopify.com/s/javascripts/currencies.js" | script_tag }}
+{{ "jquery.currencies.min.js" | asset_url | script_tag }}
+
+{% if settings.header_top_bar_setting_currency == false or settings.header_top_bar_setting == false %}
+  <input name="currencies" type="hidden" value="{{settings.default_currency}}">
+    <script type="text/javascript">
+      Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
+    </script>
+
+  {% elsif settings.show_multiple_currencies %}              
+    {% include 'currencies' %}
+{% endif %}  
+
+
+{%if settings.general_backtotop_enable %}
+  {%if settings.general_backtotop_icon != blank %}
+    {%assign class_btt = settings.general_backtotop_icon %}
+  {%else%}
+    {%assign class_btt = "lnr lnr-chevron-up-circle" %}
+  {%endif%}
+<a id="back-top" class="{{class_btt}}" href="#"></a>
+{%endif %}
+
+<script>
+     //swatch on single product
+    jQuery(function() {
+      jQuery('.swatch :radio').change(function() {
+        var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+        var optionValue = jQuery(this).val();
+        jQuery(this)
+          .closest('form')
+          .find('.single-option-selector')
+          .eq(optionIndex)
+          .val(optionValue)
+          .trigger('change');
+      });
+    });
+
+</script>
+
+{%if settings.search_auto_complete_enabale %}
+  {% include 'search-autocomplete' %}
+{% endif %}
+
+
+<!-- Begin Recently Viewed Products -->
+{% if settings.viewed_enable and template contains 'product' %}
+  <script>
+  Shopify.Products.recordRecentlyViewed();
+  </script>
+{% endif %}
+<!-- End Recently Viewed Products -->
