@@ -72,7 +72,6 @@ timber.cacheVariables = function () {
 };
 
 timber.init = function () {
-  /*FastClick.attach(document.body);*/
   timber.cacheSelectors();
   timber.cacheVariables();
 
@@ -81,12 +80,8 @@ timber.init = function () {
     timber.cache.$html.removeClass('no-touch').addClass('touch');
   }
 
-  //timber.toggleMenu();
-  //timber.sliders();
   timber.productImageSwitch();
-  //timber.equalHeights();
   timber.responsiveVideos();
-  //timber.toggleFilters();
   
   timber.sidebarViewMore();
   timber.sidebarDropdowns();
@@ -94,11 +89,6 @@ timber.init = function () {
 
 
   timber.initBreakpoints();
-
-  // Wait until fonts load to attempt creating 'more' link in nav
- // $(window).load(function() {
- //   timber.responsiveNav();
- // });
 
   {% if settings.social_sharing_products or settings.social_sharing_blog %}
   timber.socialSharing();
@@ -165,24 +155,6 @@ timber.sidebarDropdownCheck = function () {
 
 //unused
 
-
-timber.sliders = function () {
-  var $slider = timber.cache.$slider;
-
-  if ($slider.length) {
-    $(window).on('load', function() {
-      $slider.flexslider({
-        animation: 'slide',
-        animationSpeed: 500,
-        pauseOnHover: true,
-        keyboard: false,
-        slideshow: {{ settings.slider_home_auto }},
-        slideshowSpeed: {{ settings.slider_home_rate }},
-        smoothHeight: true
-      });
-    });
-  }
-};
 
 timber.equalHeights = function () {
   $(window).load(function() {
