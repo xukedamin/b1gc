@@ -10,7 +10,7 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
   var moneyFormat = '{{ shop.money_format }}';
 </script>
 
-{% if settings.ajax_cart_method != 'page' %}
+{% if settings.ajax_cart_method != 'none' %}
 
   {{ 'handlebars.min.js' | asset_url | script_tag }}
   {% include 'ajax-cart-template' %}
