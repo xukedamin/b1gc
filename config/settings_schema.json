@@ -1014,6 +1014,69 @@
     "settings": [
       {
         "type": "header",
+        "content": "Header top bar welcome"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_top_bar_welcome",
+        "label": "Show top bar - Welcome"
+      },
+      {
+        "type": "text",
+        "id": "header_top_bar_welcome_text",
+        "label": "Text",
+        "default": "Welcome to BigC Store"
+      },
+      {
+        "type": "text",
+        "id": "header_top_bar_welcome_hotline",
+        "label": "Hotline",
+        "default": "Call Us: 0800 266 966"
+      },
+      {
+        "type": "link_list",
+        "id": "header_top_bar_welcome_menu",
+        "label": "Menu"
+      },
+      {
+        "type": "header",
+        "content": "Header top bar Setting"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_top_bar_setting",
+        "label": "Show top bar Setting"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_top_bar_setting_lang",
+        "label": "Show top bar Setting - Language",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "header_top_bar_setting_currency",
+        "label": "Show top bar Setting - Currency",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "header_cart_enable",
+        "label": "Show header Cart",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "header_search_enable",
+        "label": "Show header search",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "To control My account's visibility, go to the admin backend site"
+      },
+      {
+        "type": "header",
         "content": "Select Default Header"
       },
       {
@@ -1134,7 +1197,7 @@
       },
       {
         "type": "header",
-        "content": "II - Logo"
+        "content": "Logo"
       },
       {
         "type": "select",
@@ -1197,7 +1260,7 @@
       },
       {
         "type": "header",
-        "content": "III. Header Menu"
+        "content": "Header Menu"
       },
       {
         "type": "link_list",
@@ -1209,67 +1272,6 @@
         "id": "header_main_menu_short",
         "label": "Header main Menu short",
         "info": "Used for header style 3"
-      },
-      {
-        "type": "header",
-        "content": "III. Header top bar welcome"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_top_bar_welcome",
-        "label": "Show top bar - Welcome"
-      },
-      {
-        "type": "text",
-        "id": "header_top_bar_welcome_text",
-        "label": "Text",
-        "default": "Welcome to BigC Store"
-      },
-      {
-        "type": "text",
-        "id": "header_top_bar_welcome_hotline",
-        "label": "Hotline",
-        "default": "Call Us: 0800 266 966"
-      },
-      {
-        "type": "link_list",
-        "id": "header_top_bar_welcome_menu",
-        "label": "Menu"
-      },
-      {
-        "type": "header",
-        "content": "IV. Header top bar Setting"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_top_bar_setting",
-        "label": "Show top bar Setting"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_top_bar_setting_lang",
-        "label": "Show top bar Setting - Language"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_top_bar_setting_currency",
-        "label": "Show top bar Setting - Currency"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_cart_enable",
-        "label": "Show header Cart",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "header_search_enable",
-        "label": "Show header search",
-        "default": true
-      },
-      {
-        "type": "paragraph",
-        "content": "To control My account's visibility, go to the admin backend site"
       }
     ]
   },
@@ -1468,7 +1470,7 @@
       },
       {
         "type": "header",
-        "content": "Copyright"
+        "content": "Footer bottom row"
       },
       {
         "type": "checkbox",
