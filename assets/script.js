@@ -1010,7 +1010,6 @@
 
             //check date
             var var_date = new Date($(this).data('date'));
-
             var today_date = new Date();
 
             if(var_date > today_date){
@@ -1091,30 +1090,50 @@
     },
 
     goJVCountdown_load_rebuild: function(ele){
-      //must rebuild countdown when changing the tabs  
-      $(ele).find('.jv-countdown').TimeCircles().rebuild();
-      
-      //update circle to have the same dimension for w and h
-      $(ele).find( ".time_circles div[class^='textDiv_']").each(function(){
-         var w = $(this).width();
-        $(this).height(w);
-      });
+
+        $(ele).find('.jv-countdown').each(function(){
+
+         //check if date is after today
+          var var_date = new Date( $(this).data('date'));
+          var today_date = new Date();
+
+            if(var_date > today_date){
+            //must rebuild countdown when changing the tabs  
+            $(this).TimeCircles().rebuild();
+            
+            //update circle to have the same dimension for w and h
+            $(ele).find( ".time_circles div[class^='textDiv_']").each(function(){
+               var w = $(this).width();
+              $(this).height(w);
+            });
+          }
+
+        });
     },
 
 
     goJVCountdown_tabClick_rebuild: function(){
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
       var tabid = $(e.target).attr("href");
-
       
-      //must rebuild countdown when changing the tabs  
-        $(tabid).find('.jv-countdown').TimeCircles().rebuild();
-        
-        //update circle to have the same dimension for w and h
-        $(tabid).find( ".time_circles div[class^='textDiv_']").each(function(){
-           var w = $(this).width();
-          $(this).height(w);
+        $(tabid).find('.jv-countdown').each(function(){
+
+          var var_date = new Date( $(this).data('date'));
+          var today_date = new Date();
+
+          if(var_date > today_date){
+            
+            //must rebuild countdown when changing the tabs  
+            $(this).TimeCircles().rebuild();
+            
+            //update circle to have the same dimension for w and h
+            $(tabid).find( ".time_circles div[class^='textDiv_']").each(function(){
+               var w = $(this).width();
+              $(this).height(w);
+            });
+          }
         });
+
       });
     },
 

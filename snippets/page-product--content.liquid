@@ -104,7 +104,6 @@
       
       {%if settings.product_detail_countdown_enable %}
       <div class="product--detail-countdown mt-20">
-        <div class="pb-20">{{'products.general.count_down_title' | t}}</div>
         {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
       </div>
       {%endif%}

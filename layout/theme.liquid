@@ -78,7 +78,7 @@
    {% include 'footer-light' %}
   {% endif %}
   
-  {% if settings.footer_newsletter_enable == true %}
+  {% if settings.footer_newsletter_enable == true and template == 'index' %}
     <a id="newsletter-btn" href="#mc_embed_signup" data-pause=20 ><span class="hidden">Try now</span></a>
     {% include 'newsletter-popup' %}
   {% endif %}

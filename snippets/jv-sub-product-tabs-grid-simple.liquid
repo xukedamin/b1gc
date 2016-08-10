@@ -60,7 +60,7 @@ required: listProduct
 							
 								{% unless collections[featured_row].all_products_count == 0 %}
 								<li class="{% if i == 1 %} active {% endif %}" role="presentation">
-									<a data-toggle="tab" role="tab" href="#{{listProduct}}_product-grid-simple--tab{{ i }}">{% include 'featured-row-title' %}</a>
+									<a data-toggle="tab" role="tab" href="#{{listProduct}}_product-grid-simple--tab{{ i }}"><span class="{{settings[featured_row_icon]}}"></span> {% include 'featured-row-title' %}</a>
 								</li>
 								{% endunless %}
 							{% endif %}

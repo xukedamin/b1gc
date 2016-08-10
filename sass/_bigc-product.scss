@@ -854,6 +854,20 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   width: 100%;
 }
 
+.wrap-cart-qty.no-ajax{
+  float: none;
+
+  input[type=number]{
+    max-width: 100px;
+    line-height: 30px;
+    border: none;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+}
+
 /*****************************************
 Page Detail Mr
 ******************************************/

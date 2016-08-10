@@ -4,7 +4,7 @@
   <span id="variantQuantity" class="variant-quantity"></span>
   {% endif %}
 
-  <div class="wrap-variants clearfix">
+  <div class="wrap-variants">
     <select name="id" id="productSelect"   class="product-variants hidden">
       {% for variant in product.variants %}
       {% if variant.available %}
@@ -26,15 +26,15 @@
     {% endif %}
   </div>
 
-  <div class="wrap-cart-detail clearfix wrap-cart-qty">
+  <div class="wrap-cart-detail clearfix wrap-cart-qty {%if settings.ajax_cart_method == 'none' %}no-ajax{%endif%}">
 
     {% if settings.product_quantity_enable %}
     <div class="quantity-wrapper info-qty">
       <div class="quantity">
-
         <label for="quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
         <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-selector">
-      </div>   </div>         
+      </div>
+    </div>         
     {% endif %}
     <div  {% if settings.product_quantity_enable %} class="cart-button"  {% endif %} >
 

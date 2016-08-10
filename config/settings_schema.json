@@ -621,7 +621,7 @@
       },
       {
         "type": "header",
-        "content": "Style Main Menu"
+        "content": "Main Menu Style"
       },
       {
         "type": "select",
@@ -784,7 +784,7 @@
       },
       {
         "type": "header",
-        "content": "Style Sub Menu"
+        "content": "Sub Menu Style"
       },
       {
         "type": "color",
