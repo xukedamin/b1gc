@@ -17,13 +17,21 @@
 	{{des}} 
 	
 	<h2>style 01</h2>
-	{%include 'jv-sc-accordion-simple' with accor_id:"acc_simple" %}
+	{%include 'jv-sc-accordion-1' with accor_id:"acc_1" %}
+
 	
 	<h2>style 02</h2>
-	{%include 'jv-sc-accordion-simple' with accor_style: 'style2', accor_id:"acc_style_2" %}	
+	{%include 'jv-sc-accordion-2' with accor_style: 'style2',  accor_id:"acc_2" %}
+
 	
 	<h2>style 03</h2>
+	{%include 'jv-sc-accordion-3' with accor_style: 'style3',  accor_id:"acc_3" %}
+	
+	{%comment%}
+	{%include 'jv-sc-accordion-simple' with accor_id:"acc_simple" %}
+	{%include 'jv-sc-accordion-simple' with accor_style: 'style2', accor_id:"acc_style_2" %}	
 	{%include 'jv-sc-accordion-simple' with accor_style: 'style3', accor_id:"acc_style_3"  %}	
+	{%endcomment%}
 
 	
 </div>
