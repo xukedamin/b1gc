@@ -7752,140 +7752,7 @@
       }
     ]
   },
-  {
-    "name": "SC: Brands",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "brand_item_1_enable",
-        "label": "Show item",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "brand_item_1_title",
-        "label": "Title",
-        "default": "Title 1"
-      },
-      {
-        "type": "image",
-        "id": "brand_item_1_img.png",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_1_btn",
-        "label": "Button text",
-        "default": "Discover"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_1_link",
-        "label": "Link",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_1_product_img_left_link",
-        "label": "Left Product image link"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_1_product_img_right_link",
-        "label": "Right Product image link"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "brand_item_2_enable",
-        "label": "Show item",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "brand_item_2_title",
-        "label": "Title",
-        "default": "Title 2"
-      },
-      {
-        "type": "image",
-        "id": "brand_item_2_img.png",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_2_btn",
-        "label": "Button text",
-        "default": "Discover"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_2_link",
-        "label": "Link",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_2_product_img_left_link",
-        "label": "Left Product image link"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_2_product_img_right_link",
-        "label": "Right Product image link"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "brand_item_3_enable",
-        "label": "Show item",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "brand_item_3_title",
-        "label": "Title",
-        "default": "Title 3"
-      },
-      {
-        "type": "image",
-        "id": "brand_item_3_img.png",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_3_btn",
-        "label": "Button text",
-        "default": "Discover"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_3_link",
-        "label": "Link",
-        "default": "#"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_3_product_img_left_link",
-        "label": "Left Product image link"
-      },
-      {
-        "type": "text",
-        "id": "brand_item_3_product_img_right_link",
-        "label": "Right Product image link"
-      }
-    ]
-  },
+  
   {
     "name": "SC: Feature 1",
     "settings": [
@@ -9835,8 +9702,152 @@
     ]
   },
   {
-    "name": "SC: Logo Partner",
+    "name": "SC: Brands",
     "settings": [
+     {
+        "type": "header",
+        "content": "jv-sc-brand-people",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/brands/#pos1)"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_item_1_enable",
+        "label": "Show item",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "brand_item_1_title",
+        "label": "Title",
+        "default": "Title 1"
+      },
+      {
+        "type": "image",
+        "id": "brand_item_1_img.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_1_btn",
+        "label": "Button text",
+        "default": "Discover"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_1_link",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_1_product_img_left_link",
+        "label": "Left Product image link"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_1_product_img_right_link",
+        "label": "Right Product image link"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_item_2_enable",
+        "label": "Show item",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "brand_item_2_title",
+        "label": "Title",
+        "default": "Title 2"
+      },
+      {
+        "type": "image",
+        "id": "brand_item_2_img.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_2_btn",
+        "label": "Button text",
+        "default": "Discover"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_2_link",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_2_product_img_left_link",
+        "label": "Left Product image link"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_2_product_img_right_link",
+        "label": "Right Product image link"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_item_3_enable",
+        "label": "Show item",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "brand_item_3_title",
+        "label": "Title",
+        "default": "Title 3"
+      },
+      {
+        "type": "image",
+        "id": "brand_item_3_img.png",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_3_btn",
+        "label": "Button text",
+        "default": "Discover"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_3_link",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_3_product_img_left_link",
+        "label": "Left Product image link"
+      },
+      {
+        "type": "text",
+        "id": "brand_item_3_product_img_right_link",
+        "label": "Right Product image link"
+      }
+    ]
+  },
+  {
+    "name": "SC: Partners",
+    "settings": [
+      {
+        "type": "header",
+        "content": "jv-sc-logopartner",
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/brands/#pos2)"
+      },
       {
         "type": "header",
         "content": "General settings"
