@@ -7103,7 +7103,8 @@
     "settings": [
       {
         "type": "header",
-        "content": "General"
+        "content": "General",
+        "info" :"[Demo](https://bigc-1.myshopify.com/pages/banner-sliders)"
       },
       {
         "type": "select",
@@ -7160,15 +7161,15 @@
         "options": [
           {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_sm"
@@ -7190,15 +7191,15 @@
         "options": [
           {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_normal"
@@ -7226,15 +7227,15 @@
         "options": [
           {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_normal"
@@ -7256,15 +7257,15 @@
         "options": [
           {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_normal"
@@ -7286,15 +7287,15 @@
         "options": [
           {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_normal"
@@ -7314,17 +7315,17 @@
         "id": "slider7_img_set",
         "label": "Slider stlye 7 image set",
         "options": [
-          {
+         {
             "value": "img_normal",
-            "label": "Default image set"
+            "label": "Set 1 - Larger"
           },
           {
             "value": "img_sm",
-            "label": "Square image set"
+            "label": "Set 2 - Square"
           },
           {
             "value": "img_trans",
-            "label": "Transparent image set"
+            "label": "Set 3 - Transparent"
           }
         ],
         "default": "img_trans"
@@ -7342,7 +7343,8 @@
     "settings": [
       {
         "type": "header",
-        "content": "1. Image smaller set"
+        "content": "1. Set 1: Larger",
+        "info": "Recommended size: 1920 x 470. JPG required"
       },
       {
         "type": "header",
@@ -7373,7 +7375,7 @@
       },
       {
         "type": "header",
-        "content": "Item #3"
+        "content": "Item #4"
       },
       {
         "type": "image",
@@ -7382,7 +7384,8 @@
       },
       {
         "type": "header",
-        "content": "2. Square size (smaller)"
+        "content": "2. Set 2: Square",
+         "info": "Recommended size: 730 x 565. JPG required"
       },
       {
         "type": "header",
@@ -7442,7 +7445,8 @@
       },
       {
         "type": "header",
-        "content": "2. Image Transparent set"
+        "content": "3. Set 3: Transparent",
+         "info": "Recommended 498 x 377. PNG required"
       },
       {
         "type": "header",
