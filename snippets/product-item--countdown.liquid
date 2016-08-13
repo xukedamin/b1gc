@@ -2,6 +2,6 @@
 {% assign temp = product.description | split:'[/jvcountdown]' | first %}
 {% assign count_down_time = temp | split:'[jvcountdown]' | last %}
 
-{% include 'jv-sc-countdown' with countdown_time:count_down_time %}
+{% include 'jv-sub-countdown' with countdown_time:count_down_time %}
 
 {%endif%}
