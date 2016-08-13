@@ -3,31 +3,26 @@
 		<iframe src=" {{ settings.contact_address_map }} " class="map-iframe"></iframe>
 	{% endif %}
 </div>
-
-
 <div class="contact-info-box">
 	<div class="row">
 		<div class="col-md-4 col-sm-4 col-xs-12">
-			<div class="item-contact-box"><a href="#"><span class="lnr lnr-apartment"></span></a> <label>{{'customer.addresses.title' | t}}</label></div>
+			<div class="item-contact-box">{%if settings.contact_address_icon != blank %}<a href="#"><span class="{{settings.contact_address_icon}}"></span></a>{%endif%}<label>{{'customer.addresses.title' | t}}</label></div>
 			<p>{{settings.contact_address_text}}</p>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div>
-				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone-handset"></span></a> <label>{{'contact.form.phone' | t}}</label></div>
+				<div class="item-contact-box">{%if settings.contact_address_phone_icon != blank %}<a href="#"><span class="{{settings.contact_address_phone_icon}}"></span></a>{%endif%}<label>{{'contact.form.phone' | t}}</label></div>
 				<div class="phone-box">
-
 				{% assign phones = {{settings.contact_address_phone}} | split: ',' %}
-
 					{% for phone in phones %}
 						<h2>{{ phone }}</h2>
 					{% endfor %}
 				</div>
 			</div>
 			<div>
-				<div class="item-contact-box"><a href="#"><span class="lnr lnr-phone"></span></a> <label>{{'contact.form.fax' | t}}</label></div>
+				<div class="item-contact-box">{%if settings.contact_address_phone_icon != blank %}<a href="#"><span class="{{settings.contact_address_phone_icon}}"></span></a>{%endif%}<label>{{'contact.form.fax' | t}}</label></div>
 				<div class="phone-box">
 					{% assign faxes = {{settings.contact_address_fax}} | split: ',' %}
-
 					{% for fax in faxes %}
 						<h2>{{ fax }}</h2>
 					{% endfor %}
@@ -35,16 +30,15 @@
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-4 col-xs-12">
-			<div class="item-contact-box"><a href="#"><span class="lnr lnr-envelope"></span></a> <label>{{'contact.form.email' | t}}</label></div>
+			<div class="item-contact-box">{%if settings.contact_address_email_icon != blank %}<a href="mailto:{{settings.contact_address_email}}"><span class="{{settings.contact_address_email_icon}}"></span></a>{%endif%}<label>{{'contact.form.email' | t}}</label></div>
 			<div class="mail-box"><a href="mailto:{{settings.contact_address_email}}">{{settings.contact_address_email}}</a></div>
 		</div>
 	</div>
 </div>
 
-
+{%if settings.contact_form_enable %}
 <div class="contact-form">
 	<h2>{{'contact.form.title'| t }}</h2>
-
 {% form 'contact' %}
   {% include 'form-errors-custom' %}
 
@@ -66,10 +60,8 @@
 		<div class="successForm feedback">
 		  <p>{{ 'contact.form.post_success' | t }}</p>
 		</div>
-
 		{% endif %}        
 		<input type="submit" value="{{'contact.form.send' | t}}" class="btn-submit-form" /> <input name="reset" type="reset" value="{{'contact.form.reset' | t}}" class="btn-reset-form" /></p>
-
 {% endform %}
 </div>
-
+{%endif %}

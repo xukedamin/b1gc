@@ -4671,7 +4671,7 @@
       }
     ]
   },
-    {
+  {
     "name": "Slideshow Material",
     "settings": [
       {
@@ -4862,7 +4862,7 @@
       {
         "type": "header",
         "content": "General",
-        "info" :"[Demo](https://bigc-1.myshopify.com/pages/banner-sliders)"
+        "info": "[Demo](https://bigc-1.myshopify.com/pages/banner-sliders)"
       },
       {
         "type": "select",
@@ -5073,7 +5073,7 @@
         "id": "slider7_img_set",
         "label": "Slider stlye 7 image set",
         "options": [
-         {
+          {
             "value": "img_normal",
             "label": "Set 1 - Larger"
           },
@@ -5143,7 +5143,7 @@
       {
         "type": "header",
         "content": "2. Set 2: Square",
-         "info": "Recommended size: 730 x 565. JPG required"
+        "info": "Recommended size: 730 x 565. JPG required"
       },
       {
         "type": "header",
@@ -5204,7 +5204,7 @@
       {
         "type": "header",
         "content": "3. Set 3: Transparent",
-         "info": "Recommended 498 x 377. PNG required"
+        "info": "Recommended 498 x 377. PNG required"
       },
       {
         "type": "header",
@@ -7506,7 +7506,6 @@
       }
     ]
   },
-
   {
     "name": "SC: Banners",
     "settings": [
@@ -7757,7 +7756,6 @@
       }
     ]
   },
-  
   {
     "name": "SC: Feature 1",
     "settings": [
@@ -9709,7 +9707,7 @@
   {
     "name": "SC: Brands",
     "settings": [
-     {
+      {
         "type": "header",
         "content": "jv-sc-brand-people",
         "info": "[Demo](https://bigc-1.myshopify.com/pages/brands/#pos1)"
@@ -10629,7 +10627,7 @@
         "type": "header",
         "content": "Team Section"
       },
-       {
+      {
         "type": "checkbox",
         "id": "about_page_team_enable",
         "label": "Team Enable",
@@ -10639,29 +10637,20 @@
         "type": "header",
         "content": "Testimonials Section"
       },
-       {
+      {
         "type": "checkbox",
         "id": "about_page_testi_enable",
         "label": "Testimonial Enable",
         "default": true
       }
-    
     ]
   },
   {
     "name": "Contact Page",
     "settings": [
       {
-        "type": "text",
-        "id": "contact_map_heading",
-        "label": "Heading H5",
-        "default": "HI! WE ARE SUPPORT"
-      },
-      {
-        "type": "text",
-        "id": "contact_map_heading_2",
-        "label": "Heading H3",
-        "default": "SEND EMAIL FOR US"
+        "type": "header",
+        "content": "Map section"
       },
       {
         "type": "checkbox",
@@ -10670,36 +10659,94 @@
         "default": true
       },
       {
-        "type": "text",
-        "id": "contact_address_text",
-        "label": "Heading H3",
-        "default": "The Company Name Inc. 4320 St Vincent Place, Glasgow, DC 28"
-      },
-      {
-        "type": "text",
-        "id": "contact_address_phone",
-        "label": "Heading H3",
-        "default": "800-6688-999, 800-8866-404",
-        "info": "Separate phone number par (,) "
-      },
-      {
-        "type": "text",
-        "id": "contact_address_fax",
-        "label": "Heading H3",
-        "default": "800-6969-0044, 800-6969-0055 ",
-        "info": "Separate phone number par (,) "
-      },
-      {
-        "type": "text",
-        "id": "contact_address_email",
-        "label": "Heading H3",
-        "default": "bigcshop@domain.com"
-      },
-      {
         "type": "textarea",
         "id": "contact_address_map",
         "label": "Map address",
         "default": "https://www.google.com/maps/embed/v1/place?q=SiliconValley,+California,+UnitedStates&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"
+      },
+      {
+        "type": "header",
+        "content": "Address section",
+        "info": "Setting Title in Locale language file"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_icon",
+        "label": "Address icon",
+        "default": "lnr lnr-apartment",
+        "info": "Default: lnr lnr-apartment"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_text",
+        "label": "Address",
+        "default": "The Company Name Inc. 4320 St Vincent Place, Glasgow, DC 28"
+      },
+      {
+        "type": "header",
+        "content": "Phone",
+        "info": "Setting Title in Locale language file"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_phone_icon",
+        "label": "Phone icon",
+        "default": "lnr lnr-phone-handset",
+        "info": "Default: lnr lnr-phone-handset"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_phone",
+        "label": "Phone",
+        "default": "800-6688-999, 800-8866-404",
+        "info": "Separate phone number par (,) "
+      },
+      {
+        "type": "header",
+        "content": "Fax",
+        "info": "Setting Title in Locale language file"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_fax_icon",
+        "label": "Fax icon",
+        "default": "lnr lnr-phone-handset",
+        "info": "Default: lnr lnr-phone-handset"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_fax",
+        "label": "Fax",
+        "default": "800-6969-0044, 800-6969-0055 ",
+        "info": "Separate phone number par (,) "
+      },
+      {
+        "type": "header",
+        "content": "Email",
+        "info": "Setting Title in Locale language file"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_email_icon",
+        "label": "Fax icon",
+        "default": "lnr lnr-envelope",
+        "info": "Default: lnr lnr-envelope"
+      },
+      {
+        "type": "text",
+        "id": "contact_address_email",
+        "label": "Email",
+        "default": "bigcshop@domain.com"
+      },
+       {
+        "type": "header",
+        "content": "Contact form"
+      },
+       {
+        "type": "checkbox",
+        "id": "contact_form_enable",
+        "label": "Enable",
+        "default": true
       }
     ]
   },
