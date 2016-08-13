@@ -4671,6 +4671,599 @@
       }
     ]
   },
+    {
+    "name": "Slideshow Material",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_1",
+        "label": "Show"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_1_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_link",
+        "label": "Slide link",
+        "default": "http://bigc-1.myshopify.com/"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_2",
+        "label": "Show"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_2_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_link",
+        "label": "Slide link",
+        "default": "http://bigc-1.myshopify.com/"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_3",
+        "label": "Show"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_3_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_link",
+        "label": "Slide link",
+        "default": "http://bigc-1.myshopify.com/"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_4",
+        "label": "Show"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_video",
+        "label": "Video ( .MP4 file )"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_icon",
+        "label": "Font Icon"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_title_1",
+        "label": "Title 1"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_title_2",
+        "label": "Title 2"
+      },
+      {
+        "type": "textarea",
+        "id": "slide_4_text",
+        "label": "Slide Text"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_button",
+        "label": "Slide button"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_link",
+        "label": "Slide link",
+        "default": "http://bigc-1.myshopify.com/"
+      }
+    ]
+  },
+  {
+    "name": "Slideshow settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General",
+        "info" :"[Demo](https://bigc-1.myshopify.com/pages/banner-sliders)"
+      },
+      {
+        "type": "select",
+        "id": "slide_autoplay",
+        "label": "Autoplay",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "select",
+        "id": "slide_pauseOnHover",
+        "label": "Pause On Hover",
+        "options": [
+          {
+            "value": "true",
+            "label": "true"
+          },
+          {
+            "value": "false",
+            "label": "false"
+          }
+        ],
+        "default": "true"
+      },
+      {
+        "type": "text",
+        "id": "slide_speed",
+        "label": "Speed",
+        "default": "400"
+      },
+      {
+        "type": "text",
+        "id": "slide_time",
+        "label": "Time",
+        "default": "8000"
+      },
+      {
+        "type": "header",
+        "content": "Style 1"
+      },
+      {
+        "type": "select",
+        "id": "slider1_img_set",
+        "label": "Slider stlye 1 image set",
+        "options": [
+          {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_sm"
+      },
+      {
+        "type": "text",
+        "id": "slider1_height",
+        "label": "Slider 1 - Height (px)",
+        "default": "680"
+      },
+      {
+        "type": "header",
+        "content": "Style 2"
+      },
+      {
+        "type": "select",
+        "id": "slider2_img_set",
+        "label": "Slider stlye 2 image set",
+        "options": [
+          {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_normal"
+      },
+      {
+        "type": "text",
+        "id": "slider2_height",
+        "label": "Slider 2 - Height (px)",
+        "default": "446"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider2_text_enable",
+        "label": "Slider 2 - Show Text",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Style 3"
+      },
+      {
+        "type": "select",
+        "id": "slider3_img_set",
+        "label": "Slider stlye 3 image set",
+        "options": [
+          {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_normal"
+      },
+      {
+        "type": "text",
+        "id": "slider3_height",
+        "label": "Slider 3 - Height (px)",
+        "default": "514"
+      },
+      {
+        "type": "header",
+        "content": "Style 4"
+      },
+      {
+        "type": "select",
+        "id": "slider4_img_set",
+        "label": "Slider stlye 4 image set",
+        "options": [
+          {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_normal"
+      },
+      {
+        "type": "text",
+        "id": "slider4_height",
+        "label": "Slider 4 - Height (px)",
+        "default": "470"
+      },
+      {
+        "type": "header",
+        "content": "Style 6"
+      },
+      {
+        "type": "select",
+        "id": "slider6_img_set",
+        "label": "Slider stlye 6 image set",
+        "options": [
+          {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_normal"
+      },
+      {
+        "type": "text",
+        "id": "slider6_height",
+        "label": "Slider 6 - Height (px)",
+        "default": "511"
+      },
+      {
+        "type": "header",
+        "content": "Style 7"
+      },
+      {
+        "type": "select",
+        "id": "slider7_img_set",
+        "label": "Slider stlye 7 image set",
+        "options": [
+         {
+            "value": "img_normal",
+            "label": "Set 1 - Larger"
+          },
+          {
+            "value": "img_sm",
+            "label": "Set 2 - Square"
+          },
+          {
+            "value": "img_trans",
+            "label": "Set 3 - Transparent"
+          }
+        ],
+        "default": "img_trans"
+      },
+      {
+        "type": "text",
+        "id": "slider7_height",
+        "label": "Slider 7 - Height (px)",
+        "default": "680"
+      }
+    ]
+  },
+  {
+    "name": "Slideshow Image sets",
+    "settings": [
+      {
+        "type": "header",
+        "content": "1. Set 1: Larger",
+        "info": "Recommended size: 1920 x 470. JPG required"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_normal_1.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_normal_2.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_normal_3.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_normal_4.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "2. Set 2: Square",
+         "info": "Recommended size: 730 x 565. JPG required"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_sm_1",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_sm_1.jpg",
+        "label": "Item Image 1 (sm)"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_sm_2",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_sm_2.jpg",
+        "label": "Item Image 2 (sm)"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_sm_3",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_sm_3.jpg",
+        "label": "Item Image 3 (sm)"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_sm_4",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_sm_4.jpg",
+        "label": "Item Image 4 (sm)"
+      },
+      {
+        "type": "header",
+        "content": "3. Set 3: Transparent",
+         "info": "Recommended 498 x 377. PNG required"
+      },
+      {
+        "type": "header",
+        "content": "Item #1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_1",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_1.png",
+        "label": "Item Image Transparent 1"
+      },
+      {
+        "type": "header",
+        "content": "Item #2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_2",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_2.png",
+        "label": "Item Image Transparent 2"
+      },
+      {
+        "type": "header",
+        "content": "Item #3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_3",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_3.png",
+        "label": "Item Image Transparent 3"
+      },
+      {
+        "type": "header",
+        "content": "Item #4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_img_trans_4",
+        "label": "Show"
+      },
+      {
+        "type": "image",
+        "id": "slide_img_trans_4.png",
+        "label": "Item Image Transparent 4"
+      }
+    ]
+  },
   {
     "name": "Sidebar Blog",
     "settings": [
@@ -6913,599 +7506,7 @@
       }
     ]
   },
-  {
-    "name": "Slideshow Material",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_1",
-        "label": "Show"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_video",
-        "label": "Video ( .MP4 file )"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_icon",
-        "label": "Font Icon"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_title_1",
-        "label": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_title_2",
-        "label": "Title 2"
-      },
-      {
-        "type": "textarea",
-        "id": "slide_1_text",
-        "label": "Slide Text"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_button",
-        "label": "Slide button"
-      },
-      {
-        "type": "text",
-        "id": "slide_1_link",
-        "label": "Slide link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_2",
-        "label": "Show"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_video",
-        "label": "Video ( .MP4 file )"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_icon",
-        "label": "Font Icon"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_title_1",
-        "label": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_title_2",
-        "label": "Title 2"
-      },
-      {
-        "type": "textarea",
-        "id": "slide_2_text",
-        "label": "Slide Text"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_button",
-        "label": "Slide button"
-      },
-      {
-        "type": "text",
-        "id": "slide_2_link",
-        "label": "Slide link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_3",
-        "label": "Show"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_video",
-        "label": "Video ( .MP4 file )"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_icon",
-        "label": "Font Icon"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_title_1",
-        "label": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_title_2",
-        "label": "Title 2"
-      },
-      {
-        "type": "textarea",
-        "id": "slide_3_text",
-        "label": "Slide Text"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_button",
-        "label": "Slide button"
-      },
-      {
-        "type": "text",
-        "id": "slide_3_link",
-        "label": "Slide link",
-        "default": "http://bigc-1.myshopify.com/"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_4",
-        "label": "Show"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_video",
-        "label": "Video ( .MP4 file )"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_icon",
-        "label": "Font Icon"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_title_1",
-        "label": "Title 1"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_title_2",
-        "label": "Title 2"
-      },
-      {
-        "type": "textarea",
-        "id": "slide_4_text",
-        "label": "Slide Text"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_button",
-        "label": "Slide button"
-      },
-      {
-        "type": "text",
-        "id": "slide_4_link",
-        "label": "Slide link",
-        "default": "http://bigc-1.myshopify.com/"
-      }
-    ]
-  },
-  {
-    "name": "Slideshow settings",
-    "settings": [
-      {
-        "type": "header",
-        "content": "General",
-        "info" :"[Demo](https://bigc-1.myshopify.com/pages/banner-sliders)"
-      },
-      {
-        "type": "select",
-        "id": "slide_autoplay",
-        "label": "Autoplay",
-        "options": [
-          {
-            "value": "true",
-            "label": "true"
-          },
-          {
-            "value": "false",
-            "label": "false"
-          }
-        ],
-        "default": "true"
-      },
-      {
-        "type": "select",
-        "id": "slide_pauseOnHover",
-        "label": "Pause On Hover",
-        "options": [
-          {
-            "value": "true",
-            "label": "true"
-          },
-          {
-            "value": "false",
-            "label": "false"
-          }
-        ],
-        "default": "true"
-      },
-      {
-        "type": "text",
-        "id": "slide_speed",
-        "label": "Speed",
-        "default": "400"
-      },
-      {
-        "type": "text",
-        "id": "slide_time",
-        "label": "Time",
-        "default": "8000"
-      },
-      {
-        "type": "header",
-        "content": "Style 1"
-      },
-      {
-        "type": "select",
-        "id": "slider1_img_set",
-        "label": "Slider stlye 1 image set",
-        "options": [
-          {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_sm"
-      },
-      {
-        "type": "text",
-        "id": "slider1_height",
-        "label": "Slider 1 - Height (px)",
-        "default": "680"
-      },
-      {
-        "type": "header",
-        "content": "Style 2"
-      },
-      {
-        "type": "select",
-        "id": "slider2_img_set",
-        "label": "Slider stlye 2 image set",
-        "options": [
-          {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_normal"
-      },
-      {
-        "type": "text",
-        "id": "slider2_height",
-        "label": "Slider 2 - Height (px)",
-        "default": "446"
-      },
-      {
-        "type": "checkbox",
-        "id": "slider2_text_enable",
-        "label": "Slider 2 - Show Text",
-        "default": false
-      },
-      {
-        "type": "header",
-        "content": "Style 3"
-      },
-      {
-        "type": "select",
-        "id": "slider3_img_set",
-        "label": "Slider stlye 3 image set",
-        "options": [
-          {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_normal"
-      },
-      {
-        "type": "text",
-        "id": "slider3_height",
-        "label": "Slider 3 - Height (px)",
-        "default": "514"
-      },
-      {
-        "type": "header",
-        "content": "Style 4"
-      },
-      {
-        "type": "select",
-        "id": "slider4_img_set",
-        "label": "Slider stlye 4 image set",
-        "options": [
-          {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_normal"
-      },
-      {
-        "type": "text",
-        "id": "slider4_height",
-        "label": "Slider 4 - Height (px)",
-        "default": "470"
-      },
-      {
-        "type": "header",
-        "content": "Style 6"
-      },
-      {
-        "type": "select",
-        "id": "slider6_img_set",
-        "label": "Slider stlye 6 image set",
-        "options": [
-          {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_normal"
-      },
-      {
-        "type": "text",
-        "id": "slider6_height",
-        "label": "Slider 6 - Height (px)",
-        "default": "511"
-      },
-      {
-        "type": "header",
-        "content": "Style 7"
-      },
-      {
-        "type": "select",
-        "id": "slider7_img_set",
-        "label": "Slider stlye 7 image set",
-        "options": [
-         {
-            "value": "img_normal",
-            "label": "Set 1 - Larger"
-          },
-          {
-            "value": "img_sm",
-            "label": "Set 2 - Square"
-          },
-          {
-            "value": "img_trans",
-            "label": "Set 3 - Transparent"
-          }
-        ],
-        "default": "img_trans"
-      },
-      {
-        "type": "text",
-        "id": "slider7_height",
-        "label": "Slider 7 - Height (px)",
-        "default": "680"
-      }
-    ]
-  },
-  {
-    "name": "Slideshow Image sets",
-    "settings": [
-      {
-        "type": "header",
-        "content": "1. Set 1: Larger",
-        "info": "Recommended size: 1920 x 470. JPG required"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_normal_1.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_normal_2.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_normal_3.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_normal_4.jpg",
-        "label": "Image"
-      },
-      {
-        "type": "header",
-        "content": "2. Set 2: Square",
-         "info": "Recommended size: 730 x 565. JPG required"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_sm_1",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_sm_1.jpg",
-        "label": "Item Image 1 (sm)"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_sm_2",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_sm_2.jpg",
-        "label": "Item Image 2 (sm)"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_sm_3",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_sm_3.jpg",
-        "label": "Item Image 3 (sm)"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_sm_4",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_sm_4.jpg",
-        "label": "Item Image 4 (sm)"
-      },
-      {
-        "type": "header",
-        "content": "3. Set 3: Transparent",
-         "info": "Recommended 498 x 377. PNG required"
-      },
-      {
-        "type": "header",
-        "content": "Item #1"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_trans_1",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_trans_1.png",
-        "label": "Item Image Transparent 1"
-      },
-      {
-        "type": "header",
-        "content": "Item #2"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_trans_2",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_trans_2.png",
-        "label": "Item Image Transparent 2"
-      },
-      {
-        "type": "header",
-        "content": "Item #3"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_trans_3",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_trans_3.png",
-        "label": "Item Image Transparent 3"
-      },
-      {
-        "type": "header",
-        "content": "Item #4"
-      },
-      {
-        "type": "checkbox",
-        "id": "slide_img_trans_4",
-        "label": "Show"
-      },
-      {
-        "type": "image",
-        "id": "slide_img_trans_4.png",
-        "label": "Item Image Transparent 4"
-      }
-    ]
-  },
+
   {
     "name": "SC: Banners",
     "settings": [
@@ -10227,7 +10228,7 @@
     ]
   },
   {
-    "name": "Cart page",
+    "name": "Cart",
     "settings": [
       {
         "type": "checkbox",
@@ -10285,7 +10286,7 @@
     "settings": [
       {
         "type": "header",
-        "content": "Setting: jv-sc-banner-about",
+        "content": "Setting: Banner",
         "info": "[Demo](https://bigc-1.myshopify.com/pages/about-us)"
       },
       {
@@ -10623,7 +10624,28 @@
         "label": "Text color",
         "default": "#fff",
         "info": "Default: #fff"
+      },
+      {
+        "type": "header",
+        "content": "Team Section"
+      },
+       {
+        "type": "checkbox",
+        "id": "about_page_team_enable",
+        "label": "Team Enable",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Testimonials Section"
+      },
+       {
+        "type": "checkbox",
+        "id": "about_page_testi_enable",
+        "label": "Testimonial Enable",
+        "default": true
       }
+    
     ]
   },
   {
