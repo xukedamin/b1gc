@@ -252,6 +252,20 @@
   }
 }
 
+.search-form.search-form-blog{
+  width: 100%;
+  margin: 0;
+  position: static;
+}
+
+.search-form.search-form-blog form{
+  height: 100%;
+}
+
+.search-form.search-form-blog input[type="search"]{
+    padding-left: 10px;
+}
+
 /*
 Search auto completed
 */

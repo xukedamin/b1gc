@@ -610,14 +610,14 @@
         "id": "main_menu_hot_items",
         "label": "Main Menu hot items",
         "default": "featured",
-        "info": "Separate handles with comma(,) without any whitespace"
+        "info": "Separate items with comma(,) without any whitespace"
       },
       {
         "type": "text",
         "id": "main_menu_new_items",
         "label": "Main Menu new items",
         "default": "shop",
-        "info": "Separate handles with comma(,) without any whitespace"
+        "info": "Separate items with comma(,) without any whitespace"
       },
       {
         "type": "header",
@@ -5271,7 +5271,7 @@
         "type": "checkbox",
         "id": "blog_search",
         "label": "Show post search",
-        "default": true
+        "default": false
       },
       {
         "type": "checkbox",

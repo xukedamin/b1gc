@@ -1,3 +1,11 @@
+{% comment %} ----- Blog Search ----- {% endcomment %}
+{% if settings.blog_search %}
+<aside class=" widget widget_search">
+  {%include 'search-bar-blog' %}
+</aside>
+{% endif %}
+
+
 {% comment %} -----BLog  Sidebar textwidget ----- {% endcomment %}
 {% if settings.textwidget2_visible %}
   <div class="widget widget-post-adv mb-30">
