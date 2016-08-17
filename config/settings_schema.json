@@ -5622,6 +5622,40 @@
       },
       {
         "type": "header",
+        "content": "Tabs"
+      },
+    
+      {
+        "type": "checkbox",
+        "id": "product_custom_tab_enable",
+        "label": "Show product custom tab",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_custom_tab_title",
+        "label": "Enter product custom tab title",
+        "default": "Shipping and return"
+      },
+      {
+        "type": "textarea",
+        "id": "product_custom_tab",
+        "label": "Enter product custom tab content",
+        "default": "Custom tab content"
+      },
+        {
+        "type": "checkbox",
+        "id": "product_size_chart_enable",
+        "label": "Show product size chart tab",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "product_size_chart.png",
+        "label": "Product size chart"
+      },
+      {
+        "type": "header",
         "content": "Product page - tab bottom"
       },
       {
@@ -5657,35 +5691,6 @@
         "type": "collection",
         "id": "featured_prod_collection",
         "label": "Select collection"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_size_chart_enable",
-        "label": "Show product size chart tab",
-        "default": true
-      },
-      {
-        "type": "image",
-        "id": "product_size_chart.png",
-        "label": "Product size chart"
-      },
-      {
-        "type": "checkbox",
-        "id": "product_custom_tab_enable",
-        "label": "Show product custom tab",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "product_custom_tab_title",
-        "label": "Enter product custom tab title",
-        "default": "Shipping and return"
-      },
-      {
-        "type": "textarea",
-        "id": "product_custom_tab",
-        "label": "Enter product custom tab content",
-        "default": "Custom tab content"
       }
     ]
   },
@@ -5869,6 +5874,10 @@
         "default": "#fff"
       },
       {
+        "type": "header",
+        "content": "Date"
+      },
+      {
         "type": "checkbox",
         "id": "countdown_date",
         "label": "1. Show Date",
@@ -5885,6 +5894,10 @@
         "id": "countdown_date_color",
         "label": "Date color",
         "default": "#fbb450"
+      },
+      {
+        "type": "header",
+        "content": "Hours"
       },
       {
         "type": "checkbox",
@@ -5905,6 +5918,10 @@
         "default": "#fbb450"
       },
       {
+        "type": "header",
+        "content": "Minute"
+      },
+      {
         "type": "checkbox",
         "id": "countdown_minute",
         "label": "Show Minute",
@@ -5921,6 +5938,10 @@
         "id": "countdown_minute_color",
         "label": "Minute color",
         "default": "#fbb450"
+      },
+      {
+        "type": "header",
+        "content": "Second"
       },
       {
         "type": "checkbox",
@@ -10738,11 +10759,11 @@
         "label": "Email",
         "default": "bigcshop@domain.com"
       },
-       {
+      {
         "type": "header",
         "content": "Contact form"
       },
-       {
+      {
         "type": "checkbox",
         "id": "contact_form_enable",
         "label": "Enable",
