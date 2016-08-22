@@ -2,7 +2,7 @@
 
 <div class="banner-home7">
   <div class="bannerslider7 banner-slider-circle-hoztical slider-owl-single-item-paging background-transparent" data-pauseonhover="{{settings.slide_pauseOnHover}}"
-data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}" data-time="{{settings.slide_time}}">
+data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}">
     <div class="wrap-item">
 
       {% for i in (1..4) %}
@@ -24,11 +24,13 @@ data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}
         {% if settings[slide] %}
 
           <div class="item">
+            {%comment%}
             {% if settings[slide_video] != blank %}
           <video class="slide-video" poster="{{ slide_img | asset_url  }}" preload="auto" autoplay="" loop="loop" muted="muted">
             <source src="{{settings[slide_video]}}" type="video/mp4">
           </video>
           {% endif %}
+           {%endcomment%}
             <div class="content-banner-slider">
               <div class="container">
                 <div class="row">

@@ -372,6 +372,11 @@
       if ($('.slider-tab').length > 0) {
           $('.slider-tab .bxslider').bxSlider({
               pagerCustom: '.slider-tab #bx-pager',
+              autoHover: true,
+              auto: true,
+              speed: $(this).data('speed') || 2000,
+              auto: $(this).data('autoplay') || false,
+              autoHover: $(this).data('pauseonhover') || false,
               nextText: '',
               prevText: ''
           });
@@ -689,11 +694,15 @@
             $('.slider-owl-single-item-paging').each(function() {
 
               $(this).hide().imagesLoaded(function(){
+
                 $(this).show().find('.wrap-item').owlCarousel({
                     singleItem: true,
                     pagination: true,
                     lazyLoad : true,
                     navigation: false,
+                    slideSpeed: $(this).data('speed') || 2000,
+                    autoPlay: $(this).data('autoplay') || false,
+                    stopOnHover: $(this).data('pauseonhover') || false
                 });
               });
 
@@ -726,7 +735,9 @@
                   pagination: false,
                   navigation: true,
                   lazyLoad : true,
-                  autoPlay: false,
+                  slideSpeed: $(this).data('speed') || 2000,
+                  autoPlay: $(this).data('autoplay') || false,
+                  stopOnHover: $(this).data('pauseonhover') || false,
                   navigationText: ['<span class="lnr lnr-chevron-left"></span>', '<span class="lnr lnr-chevron-right"></span>']
                 });
 

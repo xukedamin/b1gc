@@ -4683,11 +4683,7 @@
         "id": "slide_1",
         "label": "Show"
       },
-      {
-        "type": "text",
-        "id": "slide_1_video",
-        "label": "Video ( .MP4 file )"
-      },
+
       {
         "type": "text",
         "id": "slide_1_icon",
@@ -4728,11 +4724,7 @@
         "id": "slide_2",
         "label": "Show"
       },
-      {
-        "type": "text",
-        "id": "slide_2_video",
-        "label": "Video ( .MP4 file )"
-      },
+  
       {
         "type": "text",
         "id": "slide_2_icon",
@@ -4773,11 +4765,7 @@
         "id": "slide_3",
         "label": "Show"
       },
-      {
-        "type": "text",
-        "id": "slide_3_video",
-        "label": "Video ( .MP4 file )"
-      },
+    
       {
         "type": "text",
         "id": "slide_3_icon",
@@ -4818,11 +4806,7 @@
         "id": "slide_4",
         "label": "Show"
       },
-      {
-        "type": "text",
-        "id": "slide_4_video",
-        "label": "Video ( .MP4 file )"
-      },
+    
       {
         "type": "text",
         "id": "slide_4_icon",
@@ -4881,9 +4865,15 @@
         "default": "true"
       },
       {
+        "type": "text",
+        "id": "slide_speed",
+        "label": "Speed",
+        "default": "400"
+      },
+      {
         "type": "select",
         "id": "slide_pauseOnHover",
-        "label": "Pause On Hover",
+        "label": "Stop On Hover",
         "options": [
           {
             "value": "true",
@@ -4896,18 +4886,8 @@
         ],
         "default": "true"
       },
-      {
-        "type": "text",
-        "id": "slide_speed",
-        "label": "Speed",
-        "default": "400"
-      },
-      {
-        "type": "text",
-        "id": "slide_time",
-        "label": "Time",
-        "default": "8000"
-      },
+     
+     
       {
         "type": "header",
         "content": "Style 1"

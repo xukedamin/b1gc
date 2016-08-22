@@ -1,5 +1,6 @@
 
-<div class="bannerslider2 banner-slider banner-slider-circle-vertical slider-owl-single-item-paging">
+<div class="bannerslider2 banner-slider banner-slider-circle-vertical slider-owl-single-item-paging" data-pauseonhover="{{settings.slide_pauseOnHover}}"
+data-autoplay="{{settings.slide_autoplay}}" data-speed="{{settings.slide_speed}}">
   <div class="wrap-item">
     {% for i in (1..4) %}
       {% capture slide %}slide_{{ i }}{% endcapture %}
