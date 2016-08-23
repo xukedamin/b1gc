@@ -2931,6 +2931,15 @@ textarea:focus {
     width: 100%;
   }
 
+  .list-tab-title .nav > li > a {
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .list-tab-title .nav > li > a::after {
+    bottom: 0;
+  }
+
   .product-tabs-grid-simple-wrapper.tab_style1 li {
     display: inline-block;
     width: auto;
@@ -8226,8 +8235,17 @@ Page Detail Mr
     margin: 0;
     position: static;
   }
+  .item-product-leading .info-price {
+    white-space: nowrap;
+  }
   .item-product-leading .info-price span {
-    font-size: 50px;
+    font-size: 30px;
+  }
+  .item-product-leading .info-price span.money {
+    margin-bottom: 10px;
+  }
+  .item-product-leading .countdown--big, .item-product-leading .countdown-wrap {
+    display: none;
   }
 
   .new-product .owl-theme .owl-controls .owl-buttons div {
@@ -10742,7 +10760,7 @@ Custom background
   }
 
   .content-catelog {
-    padding-left: 0;
+    padding-left: 20px;
   }
 }
 /*Header Slider*/

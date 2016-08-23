@@ -1,13 +1,10 @@
 {% include 'header-top-bar--welcome' %}
-
 <div id="header" class="header1-wrapper">
   {% include 'header-top-bar--setting' with top_bar_header_cart_show:false %}
   <div class="header header1 clearfix">
     <div class="container">
       <div class="row">
-      <!-- col-md-3 col-sm-3 col-xs-12  -->
         <div class="col-xs-12 col-md-absolute">
-          <!-- <div class="logo logo-home"> -->
           <div class="header__logo-wrapper">
             {%include 'header-logo' %}
           </div>
@@ -20,7 +17,6 @@
           </div>
         </div>
         
-        <!-- col-md-2 col-sm-2 home-box-extra-wrapper -->
         <div class="home-box-extra-wrapper col-md-absolute right">
           {% include 'header-1_box-extra' %}
         </div>
@@ -28,8 +24,6 @@
     </div>
   </div>
 </div>
-
-
 <div class="container heading-line">
   <div class="row-background {%if settings.header_1_slider_enable %}slider--enable{%endif%} {%if settings.header_1_cat_box_enable%}catbox--enable{%endif%}">
      

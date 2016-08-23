@@ -355,6 +355,15 @@
 	.nav.nav-tabs li{
 		display: block;
 		width: 100%;
+
+	}
+	.list-tab-title .nav > li > a{
+		line-height: 40px;
+		text-align: center;
+	}
+	.list-tab-title .nav > li > a::after 
+	{
+		bottom: 0;
 	}
 
 	.product-tabs-grid-simple-wrapper.tab_style1 li{

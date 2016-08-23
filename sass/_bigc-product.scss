@@ -1384,10 +1384,23 @@ $height : 32px;
       position: static;
     }
 
+    .info-price{
+      white-space: nowrap;
+    }
+
     .info-price span{
-      font-size: 50px;
+      font-size: 30px;
+      &.money{
+        margin-bottom: 10px;
+      }
+    }
+
+    .countdown--big, .countdown-wrap{
+      display: none;
     }
   }
+
+
 
   //slider grid product
   .new-product .owl-theme .owl-controls .owl-buttons div{
