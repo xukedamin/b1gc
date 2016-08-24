@@ -1367,6 +1367,12 @@ $height : 32px;
   .collection-product .countdown--small{
     bottom: auto;
   }
+  //product-leading
+  .item-product-leading {
+    .info-price span{
+      font-size: 40px;
+    }
+  }
 }
 
 
@@ -1375,6 +1381,10 @@ $height : 32px;
   //countdown
   .collection-product .countdown--small{
     bottom: 50px;
+  }
+
+  .product-grid.tab-content .product-grid-item.col-md-6:nth-child(3){
+    clear: left;
   }
 
   //product-leading
