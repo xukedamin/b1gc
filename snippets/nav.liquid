@@ -1,36 +1,26 @@
 {%comment%}required: hot_label_enable : Boolean {%endcomment%}
-
 {% if handle != '' %}
   {% if linklists[handle].links.size > 0 %}
   <ul class="{{ class }} ">
     {% for link in linklists[handle].links %}  
-
       {% assign handlej = link.title | handleize %}
       {% assign style ='nav' %}
-
       {% for i in (1..10) %}
         {% capture nav_id %}nav{{i}}{% endcapture %}
         {% capture nav_style %}nav{{i}}_style{% endcapture %}
         {% assign nav_handle = settings[nav_id] %}
-       
         {% if nav_handle == handlej %}
           {% capture stylei %}nav-{{settings[nav_style]}}{% endcapture %}
           {% assign style = stylei %}
-
           {% capture nav_column %}nav{{i}}_column{% endcapture %}
           {% assign nav_column_setting = settings[nav_column] %} 
-
           {% capture nav_img_enable %}nav{{i}}_bg_img_enable{% endcapture %}
           {% capture nav_img_pos %}nav{{i}}_bg_img_position{% endcapture %}
           {% capture nav_product%}nav{{i}}_product{% endcapture %}
-
           {% break %}
         {% endif %}
-
       {% endfor %}
-
       {% capture handlei %}{{handlej}}{% endcapture %}
-
       {% if link.active %} 
         {% assign class_li = 'active' %}
         {%else%}
@@ -42,21 +32,17 @@
       {% if style == 'nav-style1' %}
         {%capture class_add %} mega-menu menu-{{nav_column_setting}}-col{%endcapture%}
         {% assign class_li = class_li | append: class_add %}
-        
       {% endif %}
       <li class="{{class_li}}">
         <a href="{{ link.url }}">{{ link.title }} 
-
           {%if hot_label_enable %}
-            
-            {% assign hots = {{settings.main_menu_hot_items}} | split: ',' %}
+            {% assign hots = settings.main_menu_hot_items | split: ',' %}
             {%for hot in hots %}
                {% if link.handle == hot %}
                <sup class="label-sub title-hot hidden-xs"> {{'collections.general.hot' | t}}</sup>
                {% endif %}
             {% endfor %}
-          
-          {% assign news = {{settings.main_menu_new_items}} | split: ',' %}
+          {% assign news = settings.main_menu_new_items | split: ',' %}
            {% for n in news %}
                {% if link.handle == n %}
                <sup class="label-sub title-new hidden-xs">{{'collections.general.new' | t}}</sup>
@@ -64,11 +50,8 @@
             {% endfor %}
           {% endif %}
         </a>
-
         {% include style class:' sub-menu', handle: handlei %}
-
       </li>
-
     {% endfor%}
   </ul>
   {% endif %}
