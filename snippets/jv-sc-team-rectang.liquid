@@ -1,5 +1,5 @@
 {% assign sourcedata = blogs[settings.team_rect_data] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign number_cols = settings.team_rect_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.team_rect_data_tag %}
 
@@ -7,7 +7,7 @@
 
 {% include 'jv-sub-heading-box' %} 
 
-{%if count >= 1 %}
+{%if blogs[settings.team_rect_data] and count >= 1 %}
 
 {%unless in_row %}
 {%assign in_row = true %}

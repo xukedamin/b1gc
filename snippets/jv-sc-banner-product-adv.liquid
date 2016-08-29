@@ -1,6 +1,6 @@
 {% assign blogs_list_grids = settings.banner_product_datablog %}
 {% assign sourcedata = blogs[blogs_list_grids] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count |size %}
 {% assign number_cols = settings.banner_product_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.banner_product_datablog_tag %}
 
@@ -9,7 +9,7 @@
   {%include 'jv-sub-heading-box'%}
 </div>
 
-{%if count >= 1 %}
+{%if blogs[blogs_list_grids] and count >= 1 %}
 <div class="row product-advert">
    {% for article in sourcedata.articles %}
     

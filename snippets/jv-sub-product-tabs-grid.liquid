@@ -37,13 +37,12 @@
 				{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
-					{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+					{% if collections[featured_row] and settings[featured_row_enable] and settings[featured_row] != "" %}
 					{% assign featured_row = settings[featured_row] %}
-
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
-					
+          
 					{% unless collections[featured_row].all_products_count == 0 %}
-						<li class="{% if i == 1 %} active {% endif %} ">
+						<li class="{% if i == 1 %} active {% endif %} {{settings[featured_row]}}">
 							<a href="#{{listProduct}}_product-tabs-grid-tab_{{ i }}" data-toggle="tab" role="tab" ><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
 						</li>
 					{% endunless %}
@@ -69,12 +68,12 @@
 			{%capture leading_time%}{{listProduct}}{{i}}_product_time{%endcapture%}
 
 
-			{% if settings[featured_row_enable] and settings[featured_row] != blank %}
+			{% if collections[featured_row] and settings[featured_row_enable] and settings[featured_row] != "" %}
 				{% assign featured_row = settings[featured_row] %}
 				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
 				{% unless collections[featured_row].all_products_count == 0 %}
-					<div role="tabpanel" class="tab-pane fade {% if i == 1 %} in active{% else %} undefined {% endif %}" id="{{listProduct}}_product-tabs-grid-tab_{{ i }}">
+					<div role="tabpanel" class="{{collections.featured_row.size}} tab-pane fade {% if i == 1 %} in active{% else %} undefined {% endif %}" id="{{listProduct}}_product-tabs-grid-tab_{{ i }}">
 					
 					{% unless collections[featured_row].all_products_count == 0 %}
 						{% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: true , leading_product_image:leading_product_image, leading_time: leading_time; quickview_big_enable:false  %}
@@ -105,7 +104,3 @@ for (var i = list.length - 1; i >= 0; i--) {
 }
 
 </script>
-
-
-
-

@@ -1,5 +1,5 @@
 {% assign sourcedata = blogs[settings.team_gallery_data] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign number_cols = settings.team_gallery_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.team_gallery_data_tag %}
 
@@ -7,10 +7,9 @@
 
 {% include 'jv-sub-heading-box' %} 
 
-{%if count >= 1 %}
+{%if blogs[settings.team_gallery_data] and count >= 1 %}
 
 <div class="team-gallery">
-  
   <div class="row">
      {% for article in sourcedata.articles %}
 

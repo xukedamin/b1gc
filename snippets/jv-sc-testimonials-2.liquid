@@ -1,11 +1,11 @@
 {% assign sourcedata = blogs[settings.testimonial_s2_data] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign number_cols = settings.testimonial_s2_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.testimonial_s2_data_tag %}
 
 {%comment%}default :testi_person {%endcomment%} 
 
-{%if count >= 1 %}
+{%if blogs[settings.testimonial_s2_data] and count >= 1 %}
 
 <div class="slider-owl-single-item-paging-fade testimonial-slider testimonials-2">
 {% include 'jv-sub-heading-box' %}

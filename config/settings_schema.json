@@ -1443,6 +1443,12 @@
         "type": "header",
         "content": "Footer Newsletter"
       },
+       {
+        "type": "checkbox",
+        "id": "footer_newsletter_popup_enable",
+        "label": "Enable newsletter Popup",
+        "default": false
+      },
       {
         "type": "checkbox",
         "id": "footer_newsletter_enable",

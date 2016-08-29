@@ -1,11 +1,11 @@
 {% assign blogs_list_grids = settings.banner_4_datablog %}
 {% assign sourcedata = blogs[blogs_list_grids] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign blog_tag_filter = settings.banner_4_datablog_tag %}
 
 {%comment%}default :banner_style4 {%endcomment%} 
 
-{%if count >= 1 %}
+{%if  blogs[blogs_list_grids] and count >= 1 %}
 <div class="banner advert">
 {% include 'jv-sub-heading-box'%}
 <div class="row">

@@ -1,5 +1,5 @@
 {% assign sourcedata = blogs[settings.testimonial_s1_data] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign number_cols = settings.testimonial_s1_columns | plus: 0 %}
 {% assign blog_tag_filter = settings.testimonial_s1_data_tag %}
 
@@ -7,7 +7,7 @@
 
 {% include 'jv-sub-heading-box' %} 
 
-{%if count >= 1 %}
+{%if  blogs[settings.testimonial_s1_data] and count >= 1 %}
 
 <div class="customer-saying testimonials-1 slider-owl-3-items">
 	<div class="wrap-item">

@@ -1,6 +1,6 @@
 {% assign blogs_list_grids = settings.banner_catalog_datablog %}
 {% assign sourcedata = blogs[blogs_list_grids] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign blog_tag_filter = settings.banner_catalog_datablog_tag %}
 
 {%comment%}default :banner_stylecatalog {%endcomment%} 
@@ -8,7 +8,8 @@
   {%include 'jv-sub-heading-box'%}
 </div>
 
-{%if count >= 1 %}
+
+{%if blogs[blogs_list_grids] and count >= 1 %}
 <div class="row">
    {% for article in sourcedata.articles %}
     
@@ -50,12 +51,13 @@
 					</div>
 				</div>
 			</div>
-
     {%endif %}
   {%endfor %}
 </div>
 {% else %}
+<div class="container">
   <div class="row">
-    <p>Nothing found</p>
+    <p>Nothing found. Please create blog article first. Located: jv-sc-banner-catalog</p>
   </div>
+ </div>
 {%endif%}

@@ -1,12 +1,12 @@
 {% assign sourcedata = blogs[settings.testimonial_s3_data] %}
-{% assign count = sourcedata.articles_count %}
+{% assign count = sourcedata.articles_count | size %}
 {% assign blog_tag_filter = settings.testimonial_s3_data_tag %}
 
 {%comment%}default :testi_person {%endcomment%} 
 {%assign ii = 1 %}
 {%assign j = 0 %}
 {%assign item_per_slide = 2 %}
-{%if count >= 1 %}
+{%if blogs[settings.testimonial_s3_data] and count >= 1 %}
 
 {%comment%}calculate the real number of testi_person tag to close item{%endcomment%}
 {%assign size = 0 %}
