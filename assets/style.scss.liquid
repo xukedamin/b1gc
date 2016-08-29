@@ -1,7 +1,7 @@
 /*============================================================================
 Shopify JV BigC v1.0
-Copyright 2014 Shopify Inc.
-Built with Sass - http://sass-lang.com/
+Copyright 2016 Joomlavi.
+Version 1.0
 
 Some things to know about this file:
 - Sass is compiled on Shopify's server so you don't need to convert it to CSS yourself
@@ -29,14 +29,12 @@ $preLarge: $large - $viewportIncrement;
 #General Variables
 ==============================================================================*/
 
-
 // Mobile Nav Bar
 $mobileNavBarHeight: 50px;
 
 // Width variables
 $gutter: 30px;
 $gridGutter: 30px;
-
 
 // Radius
 $radius: 2px;
@@ -47,7 +45,6 @@ $passwordPageUseBgImage: true;
 
 /*================ Typography ================*/
 
-//body
 body{
 
   -webkit-font-smoothing: antialiased;
@@ -61,9 +58,6 @@ body{
   line-height: {{ settings.line_height_body }};
   font-family:  {{ settings.font_type_base_family }}
 }
-
-
-// Header Font
 
 .h1,h1 {
     font-size: {{settings.size_heading_h1}}px

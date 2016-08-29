@@ -1363,11 +1363,16 @@ $height : 32px;
 
 @media (max-width: 990px) and (min-width: 768px)
 {
-  //countdown
+  /*countdown*/
   .collection-product .countdown--small{
     bottom: auto;
   }
-  //product-leading
+  
+  .collection-product.product-grid .countdown--small{
+    bottom: 50px;
+  }
+
+  /*product-leading*/
   .item-product-leading {
     .info-price span{
       font-size: 40px;
@@ -1378,7 +1383,7 @@ $height : 32px;
 
 @media (max-width: 767px){
   
-  //countdown
+  /*countdown*/
   .collection-product .countdown--small{
     bottom: 50px;
   }
@@ -1387,7 +1392,7 @@ $height : 32px;
     clear: left;
   }
 
-  //product-leading
+  /*product-leading*/
   .item-product-leading {
     .item-product-info {
       margin: 0;
@@ -1443,7 +1448,7 @@ $height : 32px;
     margin-right: 0;
   }
 
-  //single product
+  
   
 
   .none-sidebar .product-gallery.no-zoom .extra > a {

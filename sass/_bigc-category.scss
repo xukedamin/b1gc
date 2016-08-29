@@ -159,6 +159,7 @@ Page Grid
 .toolbar.toolbar-bottom {
     border-top: 1px solid $color_mercury;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .product-pagi-nav {
@@ -176,13 +177,12 @@ Page Grid
       display: block;
       height: 36px;
       line-height: 36px;
-      @extend %text-center;
       width: 36px;
+      @extend %text-center;
       @extend %jv-transition-easeout;
     }
 
     &.active > *, 
-    
     &:hover > * {
       color: $color_white;
       border-color: $color_shark;
@@ -400,8 +400,6 @@ Page Product List
 }
 
 
-
-
 .item-product-info .product-readmore {
   border: 1px solid $color_mercury;
   color: $color_shark;
@@ -471,6 +469,4 @@ Page Product List
   .has-sidebar + .toolbar.toolbar-bottom{
     padding-bottom: 30px;
   }
-
-
 }

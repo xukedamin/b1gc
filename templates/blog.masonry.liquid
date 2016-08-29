@@ -1,10 +1,5 @@
 <main class="main-content">
-
-  {% if page.metafields.jvpage.breadcrumb != 'hide'  %}  
   <div class="container"> {% include 'breadcrumb' %} </div>
-  {% endif %}  
-
-{% if page.metafields.jvpage.titlePage != 'hide'  %}
   <div class="common-static-header">
     <div class="parallax-bg" data-stellar-background-ratio="0.25"
       {% if page.metafields.jvpage.titleBackground != blank %}
@@ -23,21 +18,19 @@
       </h1>
     </div>
   </div>
-{% endif %}
+  
 <section role="main" class="wrapper-content  full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
 <div class="container">
 
   {% paginate blog.articles by 8 %}
 
   <div class="row">
-    <div class="col-md-9 col-md-offset-3 content-blog-page">
+    <div class="col-sm-9 col-sm-offset-3 col-md-offset-3 content-blog-page">
       <div class="row masonry-container">
-        
         {% for article in blog.articles %}
           {%include 'blog--masonry-item' %}
           {% endfor %}
         </div>
-        
 
         {% if paginate.pages > 1 %}
         <div class="post-pagi-nav">
@@ -46,7 +39,6 @@
           </div>
         </div>
         {% endif %}
-
         
         {%comment %}
         <div id="product-list-foot"></div>
@@ -59,32 +51,16 @@
 
       </div>
       <script language="javascript">
-      
       jQuery(function($){
-
           var $container = $('.masonry-container').imagesLoaded(function(){
             $container.masonry({
               itemSelector: '.itemMasonry'
             });
           });
-
-          
-          // var msnry = new Masonry( grid, {
-          //   itemSelector: '.itemMasonry'
-          // });
-          // grid.addEventListener( 'click', function( event ) {
-          //   if ( !matchesSelector( event.target, '.popular-box' )  ) {
-          //     return;
-          //   }
-          //   var itemElem = event.target.parentNode;
-          //   itemElem.classList.toggle('is-expanded');
-          //   msnry.layout();
-          // });
-
       });
 
       </script>
-      <aside class="sidebar-blog col-md-3 col-md-jvoffset-12">
+      <aside class="sidebar-blog col-sm-3 col-sm-jvoffset-12 col-md-jvoffset-12">
         {% include 'blog-sidebar' %}
       </aside>
     </div>

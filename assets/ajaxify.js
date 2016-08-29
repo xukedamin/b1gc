@@ -1052,7 +1052,7 @@ var ajaxifyShopify = (function(module, $) {
 
         var itemAdd = currentQty + 1,
             itemMinus = currentQty - 1,
-            itemQty = currentQty + ' x';
+            itemQty = currentQty;
 
         var source   = $("#ajaxifyQty").html(),
             template = Handlebars.compile(source),

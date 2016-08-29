@@ -1,10 +1,4 @@
-{% if settings.bg_page_wishlist_enable %}    
-{% capture backgroundimage %}bg_page_wishlist.jpg{% endcapture %}
-{% else %}    
-{% capture backgroundimage %}header-parallax.jpg{% endcapture %}
-{% endif %} 
-
-<section  id="block-title" class="wrap_bg_header {% if settings.bg_breadcrumb_parallax %} is_background_parallax {% endif %} "  {% if settings.bg_breadcrumb_parallax %} data-stellar-background-ratio="0.5"  {% endif %}  style=" background-image:url({{ backgroundimage | asset_url }})"  >
+<section  id="block-title" class="wrap_bg_header">
   <div class="container">
     <div class="wrap-title ">
       <h1 class="entry-title" ><span>{{ page.title }}</span></h1>
@@ -14,7 +8,6 @@
 </section>  
 
 <main class="wrapper main-content  " role="main">
-
 
   <div class="container">
     <div class="wishlist-page">

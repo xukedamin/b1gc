@@ -314,6 +314,12 @@ Mega menu
   }
 
 
+.header4 .mainmenu,
+.header2 .mainmenu{
+  margin-left: 200px;
+}
+
+
 /* -------------------------------------------------------------------
 Home 4
 --------------------------------------------------------------------*/
@@ -507,6 +513,13 @@ NAV - vertical style//HOME 1
   }
 }
 
+@media (max-width: 991px) {
+  .header4 .mainmenu,
+  .header2 .mainmenu{
+    margin-left: 140px;
+  }
+}
+
 
 @media (max-width: 767px) {
   .mobile-menu {
@@ -527,7 +540,7 @@ NAV - vertical style//HOME 1
   }
 
   .mainmenu > .dropdownMenu{
-    top: 35px;
+    top: 40px;
   }
   .mainmenu .dropdownMenu{
     padding: 0 15px;

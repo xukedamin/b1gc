@@ -10245,7 +10245,7 @@
           },
           {
             "value": "modal",
-            "label": "Modal"
+            "label": "Enable"
           }
         ],
         "default": "modal"

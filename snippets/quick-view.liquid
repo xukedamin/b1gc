@@ -90,7 +90,8 @@
             is_compare_at_price = true;
           }
       var content = product.description.replace(/(<([^>]+)>)/ig, "");        
-          content = content.split(" ").splice(0, 20).join(" ") + "...";
+      content = content.replace(/\[jvcountdown\](.*)\[\/jvcountdown\]/g, "");
+      content = content.split(" ").splice(0, 20).join(" ") + "...";
 
       var variantCount = (product.variants.length) > 1 ? true: false ;
          

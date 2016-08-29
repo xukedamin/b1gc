@@ -756,6 +756,19 @@ a.jvlogo {
   margin-top: -20px;
 }
 
+@media (max-width: 1280px){
+  .language-inner-box.item-box-sub {
+      left: 0;
+      margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px){
+  .info-header2 .info-search .search-form {
+      margin-right: 0px;
+  }
+}
+
 
 @media only screen and (max-width: 992px) {
 
@@ -891,8 +904,6 @@ a.jvlogo {
   .header2 .mobile-menu{
     top: 10px;
   }
-
-
 
   // header 3
   //Header 3 Logo

@@ -1,5 +1,4 @@
 {% include 'header-top-bar--welcome' %}
-
 <div class="header header3">
 	<div class="container">
 		<div class="mainmenu main-nav3 pull-left">
@@ -14,36 +13,27 @@
 		<div class="header__logo-wrapper">
 			{%include 'header-logo' %}
 		</div>
-		
 		<div class="info-header info-header3 header__info-wrapper">
 			<ul class="info-total">
 				<li class="info-user info-user3">
-					
 					{% if shop.customer_accounts_enabled %}
 						{% if customer %}
-							<a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} ">
-	            	  <span class="lnr lnr-user"></span> 
-	          	</a>
+							<a class="info-icon icon-user top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} "><span class="lnr lnr-user"></a>
 	          {% else %}
 	          	<a href="/account/login" class="info-icon icon-user  top-header__menu-title account-link">
 	              <span class="lnr lnr-user"></span>
 	            </a>
 						{% endif %}
 			    {% endif %}
-
 					<div class="box-info-user">
-
 						{% if shop.customer_accounts_enabled %}
 	          {% if customer %}
-
               <ul class="list-unstyled user-info-list">
                 <li><a href="/account">{{'customer.account.welcome_text' | t}} {{ customer.first_name }}</a></li>
                 <li class="customer-navlink"><span class="lnr lnr-cog"></span><a href="/account">{{ 'layout.customer.view_account' | t }}</a></li>
                 <li><span class="lnr lnr-exit"></span>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
               </ul>
-
 	          {% else %}
-
 	              <ul class="list-unstyled  user-info-list">
 	                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
 	                {% if shop.customer_accounts_optional %}
@@ -53,14 +43,12 @@
 
 			        {% endif %}
 			      {% endif %}
-						
 						{% if settings.show_multiple_currencies and settings.header_top_bar_setting_currency %}
 						<div class="currency-wrapper">
 							<div class="currency__title">Currency</div>
 		            {% include 'currency-picker' %}
 		         </div>
 		        {% endif %}
-
 						{% if settings.header_top_bar_setting_lang %}
 						<ul class="list-unstyled language-list">
 							<li  class="active"><a href="#"><img src='{{ "flag-fr.png" | asset_url }}' alt="" />French</a></li>
@@ -69,7 +57,6 @@
 						</ul>
 						{% endif %}
 					</div>
-
 				</li>
 
 				{% if settings.header_search_enable %}
@@ -84,14 +71,10 @@
 				{%if settings.header_cart_enable %}
 				<li class="info-cart info-cart3">
 					<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span>  <sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup></a>
-					
 					{% include 'mini-cart' with inner_cart_info_class: 'inner-cart-info5' %}
-					
 				</li>
 				{% endif %}
-				
 			</ul>
 		</div>
-		
 	</div>
 </div>

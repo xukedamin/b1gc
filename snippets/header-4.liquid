@@ -1,15 +1,11 @@
 {% include 'header-top-bar--welcome' %}
 {% include 'header-top-bar--setting' with top_bar_myaccount_show:false %}
-
-
 <div class="header header4">
 	<div class="container">
 			<div class="logo-wrapper" style="position:absolute;left: 15px;bottom: 0; top:0;">
-				
 				{% include 'header-logo' %}
-
 			</div>
-			<div class="mainmenu pull-left" style="margin-left:200px;">
+			<div class="mainmenu pull-left">
 				  {% include 'nav' class: 'dropdownMenu ', handle: settings.header_main_menu , hot_label_enable: true%}
 		    
 		    <div class="mobile-menu">
@@ -19,14 +15,12 @@
 	    </div>
 			<div class="info-header pull-right">
 					<ul class="info-total">
-
 					{% if settings.header_search_enable %}
 						<li class="info-search">
 							<a href="#" class="info-icon icon-search"><span class="lnr lnr-magnifier"></span></a>
 								 {% include 'search-bar-2' %}
 						</li>
 						{% endif %}
-
 						<li class="info-user">
 								{% if shop.customer_accounts_enabled %}
 				          {% if customer %}
@@ -51,20 +45,15 @@
 				              </ul>
 				        {% endif %}
 				      {% endif %}
-
 							</li>
-							
 							{%if settings.header_cart_enable and settings.header_top_bar_setting == false %}
 							<li class="info-cart">
 								<a href="#" class="info-icon icon-cart"><span class="lnr lnr-cart"></span> 
 									<sup class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</sup>
 								</a>
-								
 								{% include 'mini-cart' %}
-								
 							</li>
 							{% endif %}
-							
 					</ul>
 			</div>
 	</div>
