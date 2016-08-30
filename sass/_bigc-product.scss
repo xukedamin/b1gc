@@ -361,6 +361,10 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     &.sale-item {
       background: $color_havelock-blue;
     }
+    &.soldout-item{
+      background: #777;
+      font-size: 8px;
+    }
   }
 }
 
@@ -368,8 +372,6 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .product-thumbnail-slider-wrapper .product-box-promotion{
   left: 20px;
 }
-
-
 
 
 .new-product {
@@ -1190,6 +1192,7 @@ $height : 32px;
 .swatch-element {
   label {
     border: 1px solid $color_mercury;
+    padding: 0 5px;
   }
   input:checked + label, label:hover {
     @extend %jv-color-primary;

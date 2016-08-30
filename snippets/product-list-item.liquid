@@ -54,7 +54,7 @@ Select the product image size from settings.
       {% endif %}
       
         {% if sold_out %}
-            <div class="badge badge--sold-out saleoff"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
+           <span class="soldout-item">{{ 'products.product.sold_out' | t }}</span>
           {% else %}
             {% if on_sale %}
               <span class="sale-item">-{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>

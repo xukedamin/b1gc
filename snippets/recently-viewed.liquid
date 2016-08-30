@@ -1,6 +1,5 @@
 {% if settings.viewed_enable %}
 
-
 {{ 'handlebars.min.js' | asset_url | script_tag }}
 {{ 'jquery.products.js' | asset_url | script_tag }}
 
@@ -11,7 +10,6 @@
   </div>
 </div>
 
-
 <script id="recently-viewed-product-template" class="foobar" type="text/x-handlebars-template">
   {% raw %}
     <div class="product-small shop-recently-viewed-item clearfix ">
@@ -21,31 +19,24 @@
           </a>
       </div>
 
-      <h3 class="title-product">
-        <a href="{{product.url}}" title="{{product.title}}">{{product.title}}</a>
-      </h3>
+      <h3 class="title-product"><a href="{{product.url}}" title="{{product.title}}">{{product.title}}</a></h3>
 
         <div class="price info-price">
         {{#if product.available}}
           {{{price_format}}}
-
           {{#if is_compare_at_price}}
             <del class="price_compare"> <span class="money">{{{compare_at_price_format}}}</del></span>
           {{/if}}
-
           {{else}}
-            <div class="badge badge--sold-out saleoff"><span class="sold_out badge-label">Sold out</span></div>
+            <span class="soldout-item">Sold out</span>
         {{/if}}
 
         </div>
         
         </div>
     </div>
-
-
   {% endraw %}
 </script>
-
   
 <script type="text/javascript">
   Shopify.Products.showRecentlyViewed( 
@@ -55,16 +46,10 @@
 
       {% if settings.show_multiple_currencies %}
         if (window.t.checkNeedToConvertCurrency()){
-      
           Currency.convertAll('{{ shop.currency }}', jQuery('[name=currencies]').val());
         }
       {% endif %}
-
       jQuery("#recently-viewed-products .sold_out").html("{{'products.product.sold_out' | t}}");
-      
-      // if(window.show_multiple_currencies){
-      //   currenciesCallbackSpecial('#recently-viewed-products span.money');
-      // } 
     }
   });
 

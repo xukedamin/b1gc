@@ -34,12 +34,7 @@
     {{ article.content }}
   </div>
   
-  {%if settings.article_single_show_tag %}
-  <div class="list-post-tags">
-    {% include 'article--tags' %}
-  </div>
-  {%endif%}
-
+  {% include 'article--tags' %}
 
   {% if settings.article_single_show_articlenav and blog.next_article or blog.previous_article %}
     <p class="control-post clearfix pt-25">

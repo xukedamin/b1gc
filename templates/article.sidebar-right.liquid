@@ -3,26 +3,19 @@
   <div class="container"> {% include 'breadcrumb' %} </div>
 {% endif %}
   <section role="main" class="wrapper-content full-content  {% if page.metafields.jvpage.spaceContent == 'no'  %} no-padding  {% endif %}">
-
     <div class="container">
       {% assign number_of_comments = article.comments_count %}
       {% if comment and comment.created_at %}
         {% assign number_of_comments = article.comments_count | plus: 1 %}
       {% endif %}
-
       <div class="row">
         <div class="col-md-9">
-         
-          
           {%include 'article--content' %}
-
         </div>
         <aside class=" sidebar col-md-3">
           {% include 'blog-sidebar' %}
         </aside>
       </div>
-
-
     </div>
   </section>
 </main>

@@ -8,16 +8,15 @@
 <main class="wrapper main-content product-style-detail">
   <div class="container">
     <div class="row">
-
+    
       {%include 'page-product--content' %}
 
       {% if settings.product_style_option != 'product_style_option_nosidebar' %}
-
         {% assign class_side_bar = 'col-md-3 col-md-jvoffset-12' %}
         {% if settings.product_style_option == 'product_style_option_rightsidebar' %}
           {% assign class_side_bar = 'col-md-3' %}
         {% endif %}
-
+      
         <aside class="sidebar sidebar-product collection-filters {{ class_side_bar }}" id="collectionFilters">
           {% include 'collection-sidebar-product' %}
         </aside>

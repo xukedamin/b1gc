@@ -1,8 +1,10 @@
-{% if article.tags.size > 0 %}
-<div class="tag">
-    <label class="tag-title">{{ 'blogs.article.tags' | t }}:</label>
-    {% for tag in article.tags %}
-      <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="{% if forloop.last %}last{% endif %}">{{ tag }} </a>
-    {% endfor %}
- </div>
-{% endif %}
+{%if settings.article_single_show_tag and article.tags.size > 0 %}
+  <div class="list-post-tags">
+	<div class="tag">
+	    <label class="tag-title">{{ 'blogs.article.tags' | t }}:</label>
+	    {% for tag in article.tags %}
+	      <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="{% if forloop.last %}last{% endif %}">{{ tag }} </a>
+	    {% endfor %}
+	 </div>
+  </div>
+{%endif%}

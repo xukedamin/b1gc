@@ -17,6 +17,8 @@ snippet for blog template
             {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image'}}
             </a>
           </div>
+          {% else %}
+            <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
         {% endif %}
       {% endif %}
     </header>

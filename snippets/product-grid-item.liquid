@@ -16,7 +16,6 @@
   {% assign sold_out = false %}
 {% endif %}
 
-
 {% unless quickview_big_enable %}
    {% assign quickview_big_enable = false %}
 {% endunless %}
@@ -25,9 +24,8 @@
    {% assign product_desc_enable = false %}
 {% endunless %}
 
-{% comment %}
-  Select the product image size from settings.
-{% endcomment %}
+{% comment %}  Select the product image size from settings. {% endcomment %}
+
 {% assign image_size = settings.collection_prod_image_sizes %}
 
 <div class="product-grid-item {{ grid_item_width }}{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} ">
@@ -43,13 +41,10 @@
 
       {% include 'product-item--countdown' with countdown_wrap:"countdown--small" %}
 
-
       <div class="product-extra-mask">
         <div class="product-extra-link">
             
-            {% if quickview_big_enable == false%}
-            {%include 'product-grid-item--product-action' %}
-            {% endif %}
+            {% if quickview_big_enable == false%}{%include 'product-grid-item--product-action' %}{% endif %}
 
             {% if settings.product_quickview_enable %}
               <a href="#popupid" class="action product-quick-view" data-id="{{ product.handle }}" ><span class="lnr lnr-magnifier"></span></a>
@@ -63,12 +58,11 @@
         {% assign date_published = product.published_at | date:'%Y%m%d' %}
         {% assign date_now = 'now' | date:'%Y%m%d' %}
         {% assign date_difference = date_now | minus: date_published %}
-        {% if date_difference < 30 %}
-        <span class="new-item">{{'collections.general.new'}}</span>
-        {% endif %}
+
+        {% if date_difference < 30 %}<span class="new-item">{{'collections.general.new'}}</span>{% endif %}
         
         {% if sold_out %}
-            <div class="badge badge--sold-out saleoff"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
+           <span class="soldout-item">{{ 'products.product.sold_out' | t }}</span>
           {% else %}
             {% if on_sale %}
               <span class="sale-item">-{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%</span>
@@ -79,17 +73,12 @@
     </div>
     
     <div class="item-product-info">
-      <h3 class="title-product">
-      
-      <a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a>
-      </h3>
+      <h3 class="title-product"><a href="{{ product.url | within: current_collection }}" class="product-title">{{ product.title }}</a></h3>
       <div class="info-price product-item--price price">
-       
         <span class="">
           {% include 'price' with product.price %}
         </span>
          {% if on_sale %}
-            
             {%if settings.product_show_price_compare_at_price == 'save' %}
               <div class="sale-tag {% if settings.product_reviews_enable %} has-reviews{% endif %}">
               {% assign compare_price = product.compare_at_price %}
@@ -99,12 +88,9 @@
             {% else %}
                <del>{% include 'price' with product.compare_at_price %}</del>
             {% endif %}
-
         {% endif %}
-        
       </div>
       
-
       <div class="desc hidden">
         {% if product.description contains '[jvcountdown]' %}
             {% assign des = product.description | split:'[/jvcountdown]' | last %}
@@ -114,22 +100,12 @@
         {%endif %}
       </div>
 
-
-       {% if settings.product_reviews_enable %}
-          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-        {% endif %}
+       {% if settings.product_reviews_enable %}<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>{% endif %}
 
         {% if quickview_big_enable == true %}
-        <div class="cart-wishlist-compare">
-            {%include 'product-grid-item--product-action' %}
-        </div>
+        <div class="cart-wishlist-compare">{%include 'product-grid-item--product-action' %}</div>
         {% endif %}
 
     </div>
   </div>
-
-
 </div>
-
-
-

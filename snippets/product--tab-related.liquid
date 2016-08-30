@@ -1,6 +1,5 @@
 {% assign number_of_products = settings.related_prod_num %}
 {% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
-
 {% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
   {% assign found_a_collection = false %}
   {% for c in product.collections %}
@@ -16,23 +15,20 @@
   <div class="nav-tabs-default">
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="active"><a href="#related-product" aria-controls="related-product" role="tab" data-toggle="tab">{{'products.general.related_products' | t}}</a></li>
-
       {%if settings.featured_prod_visible%}
       <li role="presentation"><a href="#featured-product" aria-controls="featured-product" role="tab" data-toggle="tab">{{settings.featured_prod_heading}}</a></li>
       {% endif %}
     </ul>
   </div>
 
-
   <!-- Tab panes -->
     <div class="tab-content">
       
       {%if settings.related_products_enable %}
+     
       <div role="tabpanel" class="tab-pane active" id="related-product">
         <div class="shop-detail-relate">
-        
-        {% if collection and collection.products_count > 1 %}
-          
+          {% if collection and collection.products_count > 1 %}
           <div class="shop-detail-relate pb-45 product-slider slider-owl-1-item-nav owl-default">
             {% assign current_product = product %}
             {% assign current_product_found = false %}
@@ -49,10 +45,10 @@
             {% endfor %}
             </div>
           </div>
+          {%else%}
+          <p>{{'collections.general.no_matches' | t}}</p>
+          {% endif %}
         </div>   
-
-        {% endif %}
-
       </div>
      {% endif %}
       
@@ -73,8 +69,5 @@
         </div>
       </div>
       {% endif %}
-
   </div>
-
 </div>
-

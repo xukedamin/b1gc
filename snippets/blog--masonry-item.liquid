@@ -11,6 +11,8 @@
           <div class="post-thumbnail popular-box-thumb">
             {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url }}
           </div>
+          {% else %}
+            <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
         {% endif %}
       {% endif %}
       <div class="popular-box-text">
