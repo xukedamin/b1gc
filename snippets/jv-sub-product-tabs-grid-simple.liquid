@@ -89,20 +89,23 @@ required: listProduct
 					<div id="{{listProduct}}_product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
 						{% include 'featured-row-content' with leading_product: false, class_col: 'col-md-3 col-sm-6 col-xs-12', product_loadmore: settings[listProductShowMoreBtn] , leading_product_image:'', leading_time: '', quickview_big_enable: true %}
 					{% endunless %}
-					
-					{%comment%}
-					{%if product_paginav == true %}
-						<div class="pagination-colorful">
-							<ul class="list-inline">
-								<li><a href="#" class="active">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-							</ul>
-						</div>
-					{%endif%}
-					{%endcomment%}
-				
+									
 					</div>
+				{%endif %}
+
+				{%if settings[featured_row] == blank %}
+					<p class="mb-30">
+            Select collection in Theme Setting &gt; 
+            {%case listProduct %}
+            	{%when "sc_product_tab_grid_style1_" %} 
+            	<b>SC: P2- Tab grid Filter 1</b> 
+            	{%when "sc_product_tab_grid_style2_"%} 
+            	<b>SC: P3- Tab grid Filter 2</b>
+            	{%when "sc_product_tab_grid_style3_"%}
+            	<b>SC: P4- Tab grid Filter 3</b>
+            	{% endcase %}
+            to display products
+				</p>
 
 				{% endif %}
 			{% endfor %}
@@ -111,8 +114,6 @@ required: listProduct
 		</div>
 	</div>
 </div>
-
-
 
 <script>
 	function randomID() {

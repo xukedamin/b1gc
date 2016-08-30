@@ -15,8 +15,6 @@
 
 {% capture blog_show_author %}{{blogDataId}}_show_author{%endcapture%}
 
-
-
 {%if settings.blog_general_icon_comment != blank %}
   {%assign icon_comment = settings.blog_general_icon_comment %}
 {%else%}
@@ -42,6 +40,10 @@
 {% assign blogs_list_grids = settings[blog_handle] %}
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
+
+{% assign count = blog.articles_count | size %}
+
+{%if  blogs[blogs_list_grids] and count >= 1 %}
 
 <div class="latest-post alt">
   <div class="container">
@@ -138,7 +140,10 @@
     </div>
     <!-- End Item -->
 
-
   {% endfor %}
 </div>
-<!-- End Latest Post -->
+{%else %}
+  <div class="row">
+    <div class="col-md-12 mb-30">Navigate to <b>Theme Setting</b> &gt; <b>SC: B4 Blog style 4</b> . Select datasource from your Blog </div>
+  </div>
+{%endif%}

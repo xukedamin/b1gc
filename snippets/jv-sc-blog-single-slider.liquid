@@ -45,13 +45,13 @@
    {%assign icon_user ="lnr lnr-user"%}
 {%endif%}
 
+{% assign count = blog.articles_count | size %}
+{%if  blogs[blogs_list_grids] and count >= 1 %}
 
 <div class="home-latest-news">
-  
   <div class="container">
     {%include 'jv-sub-heading-box' %}
   </div>
-
   <div class="wrap-latest-news-slider {%if settings[blog_color_bg_custom_enable]%}blog__color--custom{%endif%}">
     <div class="container">
       <div class="default-directnav home-directnav slider-directnav slider-owl-single-item-nav">
@@ -136,4 +136,9 @@
     </div>
   </div>
 </div>
-<!-- End Latest-news -->
+
+{%else %}
+  <div class="row">
+    <div class="col-md-12 mb-30">Navigate to <b>Theme Setting</b> &gt; <b>SC: B5 Blog style 5</b> . Select datasource from your Blog </div>
+  </div>
+{%endif%}

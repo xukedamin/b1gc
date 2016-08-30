@@ -24,9 +24,12 @@
 				{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
 
+					{%if settings[featured_row] == blank %}
+						<p class="mb-30"> Select collection in Theme Setting &gt; SC: P1-Tabs grid icon </p>
+					{%endif %}
+
 					{% if settings[featured_row_enable] and settings[featured_row] != blank %}
 					{% assign featured_row = settings[featured_row] %}
-
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
 					
 					{% unless collections[featured_row].all_products_count == 0 %}

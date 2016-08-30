@@ -13,11 +13,12 @@
 				{% capture featured_row %}{{listProduct}}{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}_limit{% endcapture %}
 				
-				{% if settings[featured_row] != blank %}
+				{%if settings[featured_row] == blank %}
+				<p class="mb-30"> Select collection in Theme Setting &gt; SC: P8- Product Slider single </p>
+				{%endif %}
 
+				{% if settings[featured_row] != blank %}
 					{% assign featured_row = settings[featured_row] %}
-					
-				
 					{% unless collections[featured_row].all_products_count == 0 %}
 						{% assign header_title = collections[featured_row].title %}
 						{% assign more_link = collections[featured_row].url %}
@@ -31,7 +32,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- End Item -->
 							{% endfor %}
 						{% endunless %}
 					{% endif %}

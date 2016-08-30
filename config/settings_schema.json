@@ -1443,7 +1443,7 @@
         "type": "header",
         "content": "Footer Newsletter"
       },
-       {
+      {
         "type": "checkbox",
         "id": "footer_newsletter_popup_enable",
         "label": "Enable newsletter Popup",
@@ -1556,8 +1556,8 @@
         "type": "text",
         "id": "general_backtotop_icon",
         "label": "Icon",
-        "default": "lnr lnr-chevron-up-circle",
-        "info": "Default: lnr lnr-chevron-up-circle. [Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
+        "default": "lnr lnr-chevron-up",
+        "info": "Default: lnr lnr-chevron-up. [Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       },
       {
         "type": "text",
@@ -1774,7 +1774,7 @@
         "type": "snippet",
         "id": "home1_pos_content_2",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-icon. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -2176,7 +2176,7 @@
         "type": "snippet",
         "id": "home2_pos_content_2",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-leading-1. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -2726,7 +2726,7 @@
         "type": "snippet",
         "id": "home3_pos_content_2",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid-simple-style-1. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-filter-1. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -3132,7 +3132,7 @@
         "type": "snippet",
         "id": "home4_pos_content_2",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-leading-1. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -3645,7 +3645,7 @@
         "type": "snippet",
         "id": "home5_pos_content_2",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid-simple-style-2. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-filter-2. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -3979,7 +3979,7 @@
         "type": "snippet",
         "id": "home6_pos_content_1",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid--inline. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-leading-2. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -4123,7 +4123,7 @@
         "type": "snippet",
         "id": "home6_pos_content_3",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-tabs-grid. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-leading-1. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -4385,7 +4385,7 @@
         "type": "snippet",
         "id": "home7_pos_content_1",
         "label": "Select shortcode",
-        "info": "Default: jv-sc-product-tabs-grid-simple-style-3. Only file with prefix 'jv-sc-' affected"
+        "info": "Default: jv-sc-product-tabs-grid-filter-3. Only file with prefix 'jv-sc-' affected"
       },
       {
         "type": "header",
@@ -4689,7 +4689,6 @@
         "id": "slide_1",
         "label": "Show"
       },
-
       {
         "type": "text",
         "id": "slide_1_icon",
@@ -4730,7 +4729,6 @@
         "id": "slide_2",
         "label": "Show"
       },
-  
       {
         "type": "text",
         "id": "slide_2_icon",
@@ -4771,7 +4769,6 @@
         "id": "slide_3",
         "label": "Show"
       },
-    
       {
         "type": "text",
         "id": "slide_3_icon",
@@ -4812,7 +4809,6 @@
         "id": "slide_4",
         "label": "Show"
       },
-    
       {
         "type": "text",
         "id": "slide_4_icon",
@@ -4892,8 +4888,6 @@
         ],
         "default": "true"
       },
-     
-     
       {
         "type": "header",
         "content": "Style 1"
@@ -5610,7 +5604,6 @@
         "type": "header",
         "content": "Tabs"
       },
-    
       {
         "type": "checkbox",
         "id": "product_custom_tab_enable",
@@ -5629,7 +5622,7 @@
         "label": "Enter product custom tab content",
         "default": "Custom tab content"
       },
-        {
+      {
         "type": "checkbox",
         "id": "product_size_chart_enable",
         "label": "Show product size chart tab",
@@ -6058,11 +6051,12 @@
     ]
   },
   {
-    "name": "SC: P1-Tabs grid simple",
+    "name": "SC: P1-Tabs grid icon",
     "settings": [
       {
         "type": "header",
-        "content": "P1-Tabs grid simple"
+        "content": "P1-Tabs grid icon",
+        "info": "jv-sc-tabs-grid-icon"
       },
       {
         "type": "checkbox",

@@ -9,73 +9,73 @@
 
 {%if blogs[settings.team_rect_data] and count >= 1 %}
 
-{%unless in_row %}
-{%assign in_row = true %}
-{%endunless%}
+	{%unless in_row %} {%assign in_row = true %} {%endunless%}
+	{%unless class_item %} {%capture class_item%}col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12{%endcapture%} {%endunless%}
 
-{%unless class_item %}
-{%capture class_item%}col-md-{{12 | divided_by : number_cols}} col-sm-6 col-xs-12{%endcapture%}
-{%endunless%}
+	<div class="team-rectang wrap-item">
+		{%if in_row %}
+	  <div class="row">
+	  {%endif %}
+	     {% for article in sourcedata.articles %}
+	     
+	      {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
+	        {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
+	        {% assign person_desc = temp | split:'[jvperson]' | last %}
+	        
+	        {% assign temp = person_desc | split:'[/job]' | first %}
+	        {% assign person_job = temp | split:'[job]' | last %}
 
-<div class="team-rectang wrap-item">
-	{%if in_row %}
-  <div class="row">
-  {%endif %}
-     {% for article in sourcedata.articles %}
-     
-      {% if article.tags contains blog_tag_filter and article.excerpt contains '[jvperson]' %}
-        {% assign temp = article.excerpt | split:'[/jvperson]' | first %}
-        {% assign person_desc = temp | split:'[jvperson]' | last %}
-        
-        {% assign temp = person_desc | split:'[/job]' | first %}
-        {% assign person_job = temp | split:'[job]' | last %}
+	        {% assign temp = personcode | split:'[/url]' | first %}
+	        {% assign person_url = temp | split:'[url]' | last %}
 
-        {% assign temp = personcode | split:'[/url]' | first %}
-        {% assign person_url = temp | split:'[url]' | last %}
+	        {% assign temp = personcode | split:'[/links]' | first %}
+	        {% assign person_links = temp | split:'[links]' | last %}
 
-        {% assign temp = personcode | split:'[/links]' | first %}
-        {% assign person_links = temp | split:'[links]' | last %}
+	        <div class="{{class_item}}">
+						<div class="item-team-rectang">
+							<div class="team-rectang-thumb">
+								 <img src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}">
+							</div>
+							<div class="team-circle-info">
+								<h3><a href="{{person_url | url_escape }}">{{ article.title }}</a></h3>
+								{%if person_job %}
+								<span>{{ person_job }}</span>
+								{%endif%}
 
-        <div class="{{class_item}}">
-					<div class="item-team-rectang">
-						<div class="team-rectang-thumb">
-							 <img src="{{ article.image.src | img_url: 'original' }}" alt="{{ article.title }}">
-						</div>
-						<div class="team-circle-info">
-							<h3><a href="{{person_url | url_escape }}">{{ article.title }}</a></h3>
-							{%if person_job %}
-							<span>{{ person_job }}</span>
-							{%endif%}
+								{%if article.content != blank %}
+								<p class="desc">{{article.content | strip_html | truncatewords: 5}}</p>
+								{%endif%}
 
-							{%if article.content != blank %}
-							<p class="desc">{{article.content | strip_html | truncatewords: 5}}</p>
-							{%endif%}
+						 		{% assign lis =  person_links | split: ' | ' %}
+								{% assign lis_size = lis | size %}
+								
+								{%if settings.team_social_enable and lis_size > 0 %}
+								<ul class="team-circle-social-network list-inline">
+									{%for i in (1..4) %}
+										{%capture social_i%}team_social_{{i}}{%endcapture%}
+										{% if settings[social_i] != blank %}
+											<li><a target="_blank" href="{{lis[i] | url_escape }}"><i class="{{settings[social_i] }}"></i></a></li>
+										{% endif %}
+									{%endfor %}
+								</ul>
+								{% endif %}
 
-					 		{% assign lis =  person_links | split: ' | ' %}
-							{% assign lis_size = lis | size %}
-							
-							{%if settings.team_social_enable and lis_size > 0 %}
-							<ul class="team-circle-social-network list-inline">
-								{%for i in (1..4) %}
-									{%capture social_i%}team_social_{{i}}{%endcapture%}
-									{% if settings[social_i] != blank %}
-										<li><a target="_blank" href="{{lis[i] | url_escape }}"><i class="{{settings[social_i] }}"></i></a></li>
-									{% endif %}
-								{%endfor %}
-							</ul>
-							{% endif %}
-
+							</div>
 						</div>
 					</div>
-				</div>
 
 
-        {%endif %}
-    {%endfor %}
-  
-  {%if in_row %}
+	        {%endif %}
+	    {%endfor %}
+	  
+	  {%if in_row %}
+	  </div>
+	  {%endif %}
+	  
+	</div>
+
+	{% else %}
+  <div class="row">
+   <div class="col-md-12">Navigate to <b>Theme Setting</b> &gt; <b>SC: Team</b>  &gt; <b>Team Rect</b>. Select datasource from your Blog (Article must created with Team style format. Please check document)</div>
   </div>
-  {%endif %}
-  
-</div>
 {%endif%}

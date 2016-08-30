@@ -11,6 +11,9 @@
 
 {% assign item_per_slide = 6 %}
 
+{% assign count = blog.articles_count | size %}
+{%if  blogs[blogs_list_grids] and count >= 1 %}
+
 <div class="popular-post-masonry slider-owl-single-item-paging-nolazyload">
   <div class="container">
 
@@ -79,3 +82,9 @@ jQuery(function($){
   });
 });
 </script>
+
+{%else %}
+  <div class="row">
+    <div class="col-md-12 mb-30">Navigate to <b>Theme Setting</b> &gt; <b>SC: B2 Blog style 2</b> . Select datasource from your Blog </div>
+  </div>
+{%endif%}

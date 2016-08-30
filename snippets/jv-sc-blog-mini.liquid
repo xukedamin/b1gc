@@ -16,31 +16,40 @@
 {% assign limit_item = settings[blog_limit] | plus: 0 %}
 {% assign blog = blogs[blogs_list_grids] %}
 
-<ul class="blog-related">
-	{% for article in blog.articles limit:limit_item %}
-	
-		<li class="blog-related-item">
-				{% assign image_alt = article.title | escape %}
-				<div class="widget-recent-post-thumb">
-					<a href="{{article.url}}" class="widget-recent-post-link">	
-					{% if article.image %}
-						{{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' }}
-					{% else %}
-	          <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
+{% assign count = blog.articles_count | size %}
+{%if  blogs[blogs_list_grids] and count >= 1 %}
+
+	<ul class="blog-related">
+		{% for article in blog.articles limit:limit_item %}
+		
+			<li class="blog-related-item">
+					{% assign image_alt = article.title | escape %}
+					<div class="widget-recent-post-thumb">
+						<a href="{{article.url}}" class="widget-recent-post-link">	
+						{% if article.image %}
+							{{ article | img_url: '300x300' | img_tag: image_alt, 'article__image' }}
+						{% else %}
+		          <img src="{{ 'jv_noimage.jpg' | asset_url }}" alt="jv_noimage.jpg"/>
+						{% endif %}
+						</a>
+					</div>
+
+				<div class="content widget-recent-post-info">
+					<h3 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+					{%if settings[blog_show_date]%}
+					<time class="post-date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+						{%if settings[blog_show_dateicon] %}<span class="{{icon_date}}"></span>{% endif %}
+						<em class="text-light">{{ article.published_at | date: format: 'month_day_year' }}</em>
+					</time>
 					{% endif %}
-					</a>
 				</div>
 
-			<div class="content widget-recent-post-info">
-				<h3 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
-				{%if settings[blog_show_date]%}
-				<time class="post-date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
-					{%if settings[blog_show_dateicon] %}<span class="{{icon_date}}"></span>{% endif %}
-					<em class="text-light">{{ article.published_at | date: format: 'month_day_year' }}</em>
-				</time>
-				{% endif %}
-			</div>
+			</li>
+		{% endfor %}
+	</ul>
 
-		</li>
-	{% endfor %}
-</ul>
+{%else %}
+  <ul class="blog-related">
+    <p class="mb-30">Navigate to <b>Theme Setting</b> &gt; <b>SC: B3 Blog style 3</b> . Select datasource from your Blog </div>
+  </ul>
+{%endif%}
