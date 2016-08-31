@@ -384,6 +384,7 @@ body { color: #1b1d1f ; font-family: "Open Sans", sans-serif; font-size: 13px; l
 img { max-width: 100%; }
 a { color: inherit; }
 a:hover, a:focus { text-decoration: none; outline: none; }
+a.color-primary{  @extend %jv-color-primary; }
 .container { max-width: 1200px; width: 100%; }
 input, input:focus, input:hover { outline: none; }
 p { line-height: 24px; }
@@ -462,7 +463,6 @@ select option {
 
 .tab-pane.active { display: block; }
 [class*="lnr-"] { @extend %jv-font-Linearicons; font-style: normal; font-variant: normal; font-weight: 400; line-height: 1; text-transform: none; }
-
 
 .bread-crumb {
   border-bottom: 1px solid $color_mercury;

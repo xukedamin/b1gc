@@ -52,17 +52,16 @@ required: listProduct
 							{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 							{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
 							{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+							{% assign featured_row = settings[featured_row] %}
 
-							{% if settings[featured_row_enable] and settings[featured_row] != blank %}
-								{% assign featured_row = settings[featured_row] %}
-
+							{% if collections[featured_row] != empty and settings[featured_row_enable] %}
 								{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
 							
-								{% unless collections[featured_row].all_products_count == 0 %}
+								{% if collections[featured_row].all_products_count > 0 and collections[featured_row].title != "" %}
 								<li class="{% if i == 1 %} active {% endif %}" role="presentation">
 									<a data-toggle="tab" role="tab" href="#{{listProduct}}_product-grid-simple--tab{{ i }}"><span class="{{settings[featured_row_icon]}}"></span> {% include 'featured-row-title' %}</a>
 								</li>
-								{% endunless %}
+								{% endif %}
 							{% endif %}
 						{% endfor %}
 					
@@ -80,22 +79,21 @@ required: listProduct
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+				{% assign featured_row = settings[featured_row] %}
 
-				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
-					{% assign featured_row = settings[featured_row] %}
+				{% if collections[featured_row] != empty and settings[featured_row_enable] %}
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
 
-					{% unless collections[featured_row].all_products_count == 0 %}
+					{% if collections[featured_row].all_products_count > 0 and collections[featured_row].title != ""  %}
 					<div id="{{listProduct}}_product-grid-simple--tab{{ i }}" class="tab-pane {% if i == 1 %} active {% endif %} {%if product_loadmore == true%}list-product-loadmore{%endif%}" role="tabpanel">
 						{% include 'featured-row-content' with leading_product: false, class_col: 'col-md-3 col-sm-6 col-xs-12', product_loadmore: settings[listProductShowMoreBtn] , leading_product_image:'', leading_time: '', quickview_big_enable: true %}
-					{% endunless %}
-									
+					{% endif %}								
 					</div>
 				{%endif %}
 
-				{%if settings[featured_row] == blank %}
+				{%if collections[featured_row] == empty %}
 					<p class="mb-30">
-            Select collection in Theme Setting &gt; 
+             Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; 
             {%case listProduct %}
             	{%when "sc_product_tab_grid_style1_" %} 
             	<b>SC: P2- Tab grid Filter 1</b> 
@@ -104,9 +102,8 @@ required: listProduct
             	{%when "sc_product_tab_grid_style3_"%}
             	<b>SC: P4- Tab grid Filter 3</b>
             	{% endcase %}
-            to display products
+            - Tab {{i}} to display products
 				</p>
-
 				{% endif %}
 			{% endfor %}
 		

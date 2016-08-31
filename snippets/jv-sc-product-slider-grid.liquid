@@ -6,26 +6,24 @@
 		<div class="wrap-item">
 			{% for i in (1..3) %}
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
-				{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
+				{% capture featured_row %}sc_product_slider_grid_{{ i }}{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
-				
-				{%if settings[featured_row] == blank %}
-				<p class="mb-30"> Select collection in Theme Setting &gt; SC: P7- Product Slider grid </p>
-				{%endif %}
 
-				{% if settings[featured_row_enable] and settings[featured_row] != blank %}
-				{% assign featured_row = settings[featured_row] %}
-				{% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
-
-					<div class="item">
-						{% unless collections[featured_row].all_products_count == 0 %}
-							{% include 'featured-row-content' with class_col: 'col-md-4 col-sm-6 col-xs-12' ,leading_product: false, leading_product_image:'', leading_time: '' %}
-						{% endunless %}
-					</div>
-				{% endif %}
-
+				{% if collections[featured_row] and settings[featured_row_enable] %}
+                  {%if settings[featured_row] == blank %}
+                      <p class="mb-30"> Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; SC: P7- Product Slider grid - Collection {{i}} </p>
+                  {%else%}
+                    {% assign featured_row = settings[featured_row] %}
+                    {% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
+         
+          			{% unless collections[featured_row].all_products_count == 0 %}
+                      <div class="item {{featured_row}} {{test}} {{collections[featured_row].products.size}}">
+                           {% include 'featured-row-content' with class_col: 'col-md-4 col-sm-6 col-xs-12' ,leading_product: false, leading_product_image:'', leading_time: '' %}
+                      </div>
+          			{% endunless %}
+                  {% endif %}
+          		{%endif %}
 			{% endfor %}
-			
 		</div>
 	</div>
 </div>

@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "logo": "https://cdn.shopify.com/s/global/branding/shopify_logo_256x256.png",
+    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/1184\/2838\/t\/11\/assets\/thumbnail.png",
     "settings": [
       {
         "type": "header",
@@ -9,11 +9,11 @@
       },
       {
         "type": "paragraph",
-        "content": "Ideal for stores with large inventories, Wolverine is designed to make it quick and easy to browse through all the categories and products your store has to offer. Features include prominent navigation, multiple homepage collections, sidebar filtering, and easy integration with the Product Reviews app."
+        "content": "Ideal for stores with large inventories, Big Shop is designed to make it quick and easy to browse through all the categories and products your store has to offer. Features include prominent navigation, multiple homepage collections, sidebar filtering, and easy integration with the Product Reviews app."
       },
       {
         "type": "paragraph",
-        "content": "This theme is fully supported by Shopify. For support and customizations, read the [theme documentation](https://joomlavi.com) or contact [joomlavi.dev@gmail.com](mailto:joomlavi.dev@gmail.com?subject=[BigC shop]+Theme+Support)."
+        "content": "This theme is fully supported by Joomlavi. For support read the [theme documentation](https://joomlavi.com) or contact [joomlavi.dev@gmail.com](mailto:joomlavi.dev@gmail.com?subject=[Big shop Shopify]+Theme+Support)."
       }
     ]
   },

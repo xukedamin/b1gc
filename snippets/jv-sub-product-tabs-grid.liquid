@@ -4,7 +4,6 @@
 	+ {{row}}_enable
 	+ {{row}}_limit
 	+ {{row}}_icon
-
 {% endcomment %}
 
 {% capture listProduct_style %}{{listProduct}}style{% endcapture %}
@@ -14,11 +13,7 @@
 	{% if style_header_product == 'inline' %}
 	<div class="header-product-tab">
 		<div class="row">
-			
-			<div class="col-md-3 col-sm-3 col-xs-12">
-				{% include 'jv-sub-heading-box' %}
-			</div>
-
+			<div class="col-md-3 col-sm-3 col-xs-12">				{% include 'jv-sub-heading-box' %}			</div>
 			<div class="col-md-9 col-sm-9 col-xs-12">
 				<div class="list-tab-title">
 	{% endif %}
@@ -35,16 +30,15 @@
 				{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 				{% capture featured_row_icon %}{{listProduct}}{{ i }}_icon{% endcapture %}
 				{% capture row_limit_setting %}{{listProduct}}{{ i }}_limit{% endcapture %}
+          		{% assign featured_row = settings[featured_row] %}
 
-				{% if collections[featured_row] and settings[featured_row_enable] and settings[featured_row] != blank %}
-					{% assign featured_row = settings[featured_row] %}
+				{% if collections[featured_row] != empty and settings[featured_row_enable] and featured_row != blank %}
 					{% assign row_limit_setting = settings[row_limit_setting] | plus: 0 %}
-          
-					{% unless collections[featured_row].all_products_count == 0 %}
-						<li class="{% if i == 1 %} active {% endif %} {{settings[featured_row]}}">
+					{% if collections[featured_row].all_products_count > 0 and collections[featured_row].title != "" %}
+						<li class="{% if i == 1 %} active {% endif %}">
 							<a href="#{{listProduct}}_product-tabs-grid-tab_{{ i }}" data-toggle="tab" role="tab" ><span class="{{settings[featured_row_icon]}}"></span>{% include 'featured-row-title' %}</a>
 						</li>
-					{% endunless %}
+					{% endif %}
 
 				{% endif %}
 			{% endfor %}
@@ -66,45 +60,37 @@
 
 			{%capture leading_product_image %}{{listProduct}}{{i}}_product_lead_img.png {%endcapture%}
 			{%capture leading_time%}{{listProduct}}{{i}}_product_time{%endcapture%}
+      {% assign featured_row = settings[featured_row] %}
+      
+      {%if collections[featured_row] == empty %}
+        <p class="theme-custom mb-30">
+        Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; 
+        {%if listProduct == "sc_product_tab_grid_inline_" %} <b>SC: P6- Tab grid Leading style 2</b> {%else%} <b>SC: P5- Tab grid Leading style 1</b>{%endif%} - TAB {{i}}
+  to display products </p>
+        {%endif%}
+      
+			{% if collections[featured_row] != empty and settings[featured_row_enable] %}
 
-			{% if collections[featured_row] and settings[featured_row_enable] %}
-            	{%if settings[featured_row] == blank %}
-      				<p class="mb-30">
-              Select collection in Theme Setting &gt; 
-              {%if listProduct == "sc_product_tab_grid_inline_" %} <b>SC: P6- Tab grid Leading style 2</b> {%else%} <b>SC: P5- Tab grid Leading style 1</b>{%endif%}
-to display products
-            </p>
-      			{%else%}
-                  {% assign featured_row = settings[featured_row] %}
-                  {% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
-
-                  {% unless collections[featured_row].all_products_count == 0 %}
-                      <div role="tabpanel" class="{{collections.featured_row.size}} tab-pane fade {% if i == 1 %} in active{% else %} undefined {% endif %}" id="{{listProduct}}_product-tabs-grid-tab_{{ i }}">
-
-                      {% unless collections[featured_row].all_products_count == 0 %}
-                          {% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: true , leading_product_image:leading_product_image, leading_time: leading_time; quickview_big_enable:false  %}
-                      {% endunless %}
-                      </div>
-                  {% endunless %}
-      			{% endif %}
+        {% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
+        {% if collections[featured_row].all_products_count > 0 %}
+          <div role="tabpanel" class="{{collections.featured_row.size}} tab-pane fade {% if i == 1 %} in active{% else %} undefined {% endif %}" id="{{listProduct}}_product-tabs-grid-tab_{{ i }}">
+            {% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: true , leading_product_image:leading_product_image, leading_time: leading_time; quickview_big_enable:false  %}
+           </div>
+        {% endif %}
 			{% endif %}
 		{% endfor %}
 	</div>
 </div>
 
-
 <script>
-	function randomID() {
+function randomID() {
   return '_' + Math.random().toString(36).substr(2, 9);
 };
-
 var list = jQuery('.product-tabs-grid-wrapper .nav a[role=tab]');
 var panels = jQuery('.product-tabs-grid-wrapper .tab-content .tab-pane');
-
 for (var i = list.length - 1; i >= 0; i--) {
 	var random =  randomID();
 	jQuery(list[i]).attr('href', jQuery(list[i]).attr('href') + random);
 	jQuery(panels[i]).attr('id', jQuery(panels[i]).attr('id') + random);
 }
-
 </script>
