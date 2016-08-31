@@ -327,7 +327,7 @@
 
   .action{
      border: 1px solid $color_mercury;
-    color: $color_currious-blue-darker;
+    @extend %jv-color-secondary;
     display: inline-block;
     vertical-align: middle;
     height: 38px;
@@ -335,9 +335,10 @@
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
       &:hover {
-      background: $color_currious-blue-darker;
+    @extend %jv-bg-color-secondary;
+
       color: $color_white;
-      border-color: $color_currious-blue-darker;
+      @extend %jv-border-color-secondary;
     }
   }
 
@@ -345,11 +346,14 @@
     background: $color_currious-blue-darker url('{{ "icon-cart.png" | asset_url }}') no-repeat scroll center center;
     height: 48px;
     width: 48px;
-    // margin-right: 10px;
+    // @extend %jv-bg-color-secondary;
+    background-color: $color_secondary !important;
 
     &:hover {
       background: $color_bright-sun url('{{ "icon-cart.png" | asset_url }}') no-repeat scroll center center;
-      border-color :$color_bright-sun;
+      // border-color :$color_bright-sun;
+      border-color: $color_secondary-inverse !important;
+      background-color: $color_secondary-inverse !important;
     }
   }
   .product-wishlist,
@@ -358,8 +362,6 @@
   }
  
 }
-
-
 
 //jv shopify
 
@@ -404,8 +406,6 @@
 .js-qty{
   display: inline-block;
 }
-
-
 
 #mini-cart.mini_cart_hidden {
     opacity: 0 !important;

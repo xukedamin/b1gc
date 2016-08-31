@@ -10,7 +10,9 @@
   padding: 20px 30px;
 
   &.item-message-info {
-    background: $color_currious-blue-darker none repeat scroll 0 0;
+    // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+    
     color: $color_white;
   }
   span.lnr {

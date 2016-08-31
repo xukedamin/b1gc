@@ -77,10 +77,9 @@
       }
 
     &:hover {
-      background: $color_currious-blue-darker;
+      // background: $color_currious-blue-darker;
+      @extend %jv-bg-color-secondary;
       color: $color_white;
-
-    
     }
   }
 }

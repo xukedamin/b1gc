@@ -24,7 +24,8 @@
 
   > span {
     @extend %label_title-banner-box;
-    background: $color_candlelight none repeat scroll 0 0;
+    // background: $color_candlelight none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary-inverse;
     padding: 0 10px 3px;
   }
 }
@@ -34,7 +35,8 @@
 
   > span {
     @extend %label_title-banner-box;
-    background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+    // background: $color_currious-blue-darker none repeat scroll 0 0;
     padding: 0 10px 4px;
   }
 }
@@ -122,7 +124,9 @@
 
 .banner-style2 {
   .banner-box-title.banner-box-title-blue {
-    background: $color_currious-blue-darker;
+    
+    @extend %jv-bg-color-secondary;
+    
     margin: 0;
     padding: 2px 15px 5px;
     color: $color_white;
@@ -132,13 +136,15 @@
 
   .title-banner-box-blue {
     font-size: 48px;
-    color: $color_currious-blue-darker;
+    
+    @extend %jv-color-secondary;
     margin: 0;
   }
 
   &:hover {
     .banner-box-title.banner-box-title-blue {
-      background: $color_candlelight;
+      // background: $color_candlelight;
+      @extend %jv-bg-color-secondary-inverse;
     }
     .banner-box-info {
       opacity: 1;
@@ -168,19 +174,10 @@
     color: $color_mine-shaft;
   }
   &.style2 {
-    color: $color_currious-blue-darker;
+    @extend %jv-color-secondary;
   }
 }
 
-
-// .banner-box.banner-style3 {
-//   &.box-left {
-//     margin-right: -10px;
-//   }
-//   &.box-right {
-//     margin-left: -10px;
-//   }
-// }
 
 .col-left .banner-box.banner-style3{
     margin-right: -10px;
@@ -208,7 +205,9 @@
 
     @include p-el(before, 0, 0) {
       border-right: 36px solid transparent;
-      border-top: 36px solid $color_currious-blue-darker;
+      border-top-width: 36px;
+      border-top-style: solid;
+      @extend %jv-border-top-color-secondary;
       left: 0;
       top: 0;
       @extend %jv-transition-easeout;
@@ -241,8 +240,6 @@
     }
   }
 }
-
-
 
 
 // banner-adv-product

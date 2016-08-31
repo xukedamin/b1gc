@@ -6,7 +6,9 @@
     width: 120px;
     
     &:before {
-      background: $color_currious-blue-darker none repeat scroll 0 0;
+      // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+      
       content: "";
       height: 100%;
       left: 0;

@@ -72,13 +72,14 @@ a.jvlogo {
 
 .logo-text h1
 {
-  color: $color_currious-blue-darker;
+  @extend %jv-color-secondary;
   font-size: 48px;
   margin: 0;
   @extend %text-up;
 
   span {
-    color: $color_bright-sun;
+    // color: $color_bright-sun;
+    @extend %jv-color-secondary-inverse;
   }
 }
 
@@ -177,7 +178,7 @@ a.jvlogo {
     color: $color_dusty-gray;
 
     a:hover {
-      color: $color_currious-blue-darker;
+       @extend %jv-color-secondary;
     }
   }
   li {

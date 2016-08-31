@@ -430,7 +430,8 @@
    .owl-page {
      display: block;
       span {
-          background: #fed533 none repeat scroll 0 0;
+          // background: #fed533 none repeat scroll 0 0;
+          @extend %jv-bg-color-secondary-inverse;
           border-radius: 4px;
           display: block;
           height: 5px;
@@ -443,7 +444,7 @@
 
     .owl-page.active span,
     &.clickable .owl-page:hover span {
-        background: $color_currious-blue-darker none repeat scroll 0 0;
+      @extend %jv-bg-color-secondary;
         opacity: 1;
     }
   }
@@ -457,7 +458,8 @@
     margin: 0;
 
     span {
-      background: #fed533 none repeat scroll 0 0;
+      // background: #fed533 none repeat scroll 0 0;
+      @extend %jv-bg-color-secondary-inverse;
       border-radius: 4px;
       color: $color_white;
       display: inline-block;
@@ -469,7 +471,8 @@
     margin: 0;
 
     span {
-      background: #2ea0d7 none repeat scroll 0 0;
+      // background: #2ea0d7 none repeat scroll 0 0;
+      @extend %jv-bg-color-secondary;
       border-radius: 4px;
       color: $color_white;
       display: inline-block;
@@ -477,12 +480,14 @@
     }
   }
   .btn-link-default {
-    background: #2ea0d7 none repeat scroll 0 0;
+    // background: #2ea0d7 none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
     border-radius: 4px;
     margin-top: 15px;
 
     &:hover {
-      background: #FED533 none repeat scroll 0 0;
+      // background: #FED533 none repeat scroll 0 0;
+      @extend %jv-bg-color-secondary-inverse;
     }
   }
   .desc {
@@ -554,13 +559,17 @@
         width: 10px;
       }
       &.active span {
-        background: $color_currious-blue-darker none repeat scroll 0 0;
+        // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+
         opacity: 1;
       }
     }
 
      &.clickable .owl-page:hover span {
-        background: $color_currious-blue-darker none repeat scroll 0 0;
+        // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+        
         opacity: 1;
       }
   }

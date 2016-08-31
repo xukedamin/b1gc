@@ -46,7 +46,9 @@
   z-index: 999;
 
   .info-icon.icon-cart {
-    background: $color_currious-blue-darker none repeat scroll 0 0;
+    // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+
     color: $color_white;
     display: block;
     position: relative;
@@ -74,7 +76,9 @@
       border-radius: 6px;
     }
     .cart-edit {
-      background: $color_currious-blue-darker none repeat scroll 0 0;
+      // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+
 
       &:hover {
         @extend %jv-bg-color-primary; 
@@ -84,7 +88,9 @@
       @extend %jv-bg-color-primary; 
 
       &:hover {
-        background: $color_currious-blue-darker none repeat scroll 0 0;
+        // background: $color_currious-blue-darker none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
+
       }
     }
   }
@@ -112,7 +118,9 @@
 
 .register-box {
   .link-login {
-    background: $color_currious-blue-darker;
+    // background: $color_currious-blue-darker;
+    @extend %jv-bg-color-secondary;
+
 
     &:hover {
       background: $color_bright-sun;
@@ -122,7 +130,9 @@
     background: $color_bright-sun;
 
     &:hover {
-      background: $color_currious-blue-darker;
+      // background: $color_currious-blue-darker;
+    @extend %jv-bg-color-secondary;
+      
     }
   }
 }

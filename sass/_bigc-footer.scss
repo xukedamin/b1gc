@@ -101,7 +101,8 @@
     a {
       color: $color_shark;
       &:hover {
-        color: $color_currious-blue-darker;
+        // color: $color_currious-blue-darker;
+        @extend %jv-color-secondary;
       }
     }
     > li {
@@ -125,7 +126,8 @@
     color: $color_dove-gray;
     position: relative;
     &:hover {
-      color: $color_currious-blue-darker;
+      // color: $color_currious-blue-darker;
+      @extend %jv-color-secondary;
     }
     &:before {
       @extend %jv-font-Linearicons;

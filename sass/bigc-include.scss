@@ -125,6 +125,13 @@ $color_border : $color_mercury;
 	border-color: $color_secondary;
 }
 
+%jv-border-top-color-secondary{
+	border-top-color: $color_secondary;
+}
+%jv-border-right-color-secondary{
+	border-right-color: $color_secondary;
+}
+
 %jv-bg-color-secondary-inverse{
 	background-color: $color_secondary-inverse;
 }

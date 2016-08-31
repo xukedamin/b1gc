@@ -1341,7 +1341,8 @@
   @extend %jv-transition-easeout;
 
   &:hover {
-    background: $color_candlelight none repeat scroll 0 0;
+    // background: $color_candlelight none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary-inverse;
     color: $color_white;
   }
 }

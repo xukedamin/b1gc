@@ -89,9 +89,8 @@ required: listProduct
 						{% include 'featured-row-content' with leading_product: false, class_col: 'col-md-3 col-sm-6 col-xs-12', product_loadmore: settings[listProductShowMoreBtn] , leading_product_image:'', leading_time: '', quickview_big_enable: true %}
 					{% endif %}								
 					</div>
-				{%endif %}
 
-				{%if collections[featured_row] == empty %}
+				{%elsif collections[featured_row] == empty %}
 					<p class="mb-30">
              Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; 
             {%case listProduct %}
