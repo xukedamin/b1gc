@@ -6175,62 +6175,6 @@
         "label": "Icon",
         "default": "lnr lnr-page-break",
         "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "header",
-        "content": "Tab 5"
-      },
-      {
-        "type": "checkbox",
-        "id": "sc_product_tab_grid_icon_5_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "collection",
-        "id": "sc_product_tab_grid_icon_5",
-        "label": "Select Colletion 5"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_icon_5_limit",
-        "label": "Limit",
-        "default": "8"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_icon_5_icon",
-        "label": "Icon",
-        "default": "lnr lnr-page-break",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
-      },
-      {
-        "type": "header",
-        "content": "Tab 6"
-      },
-      {
-        "type": "checkbox",
-        "id": "sc_product_tab_grid_icon_6_enable",
-        "label": "Show",
-        "default": true
-      },
-      {
-        "type": "collection",
-        "id": "sc_product_tab_grid_icon_6",
-        "label": "Select Collection 6"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_icon_6_limit",
-        "label": "Limit",
-        "default": "8"
-      },
-      {
-        "type": "text",
-        "id": "sc_product_tab_grid_icon_6_icon",
-        "label": "Icon",
-        "default": "lnr lnr-page-break",
-        "info": "[Find icon](https://bigc-1.myshopify.com/pages/font-linearicons)"
       }
     ]
   },

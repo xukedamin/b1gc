@@ -23,7 +23,6 @@
 		@extend %jv-transition-easeout;
 	}
 }
-
 .list-button-box1 {
 	background: $color_wild-sand none repeat scroll 0 0;
 	padding: 50px 0 40px;
@@ -34,7 +33,6 @@
 		line-height: normal;
 	}
 }
-
 .list-button-box2 {
 	background: $color_shark none repeat scroll 0 0;
 	padding: 50px 0 40px;
@@ -44,7 +42,6 @@
 		margin-left: 50px;
 	}
 }
-
 // btn color
 
 .bt-brown {
@@ -70,15 +67,12 @@
 .bt-gold {
 	@extend %jv-bg-color-secondary-inverse;
 }
-
 .title-bittons {
 	font-size: 16px;
 	margin: 50px 0 30px;
 	@extend %text-up;
 }
-
-.bt-radius, 
-.bt-radius span {
+.bt-radius, .bt-radius span {
 	@include prefix(border-radius, 4px);
 }
 .bt-cart {
@@ -91,7 +85,6 @@
 .bt-shadow {
 	box-shadow: 0 4px 4px 0 rgba($color_black, 0.3);
 }
-
 // btn style
 
 .bt-style1:hover {
@@ -120,9 +113,6 @@
 	@extend %jv-bg-color-primary-inverse;
 	color: $color_white;
 }
-
-
-
 .bt-style6 {
 	box-shadow: 0 0 0 2px $color_shark inset;
 
@@ -141,7 +131,6 @@
 		box-shadow: none;
 	}
 }
-
 .bt-style8 {
 	background-clip: content-box;
 	box-shadow: 0 0 0 1px $color_shark inset;
@@ -152,19 +141,15 @@
 		background-clip: padding-box;
 	}
 }
-
 .bt-style9:hover {
 	@extend %jv-bg-color-primary-inverse;
 }
-
 .bt-style10:hover {
 	@extend %jv-bg-color-primary;
 }
-
-.btn-box-shadow{
-	@include prefix(box-shadow, 0 0 0 1px $color_white inset );
+.btn-box-shadow {
+	@include prefix(box-shadow, 0 0 0 1px $color_white inset);
 }
-
 .bt-style11 {
 	@extend .btn-box-shadow;
 
@@ -173,7 +158,6 @@
 		box-shadow: 0 0 0 2px $color_white inset;
 	}
 }
-
 .bt-style12 {
 	@extend .btn-box-shadow;
 
@@ -183,9 +167,8 @@
 		@extend %jv-color-primary-inverse;
 	}
 }
-
 .bt-style13 {
-	@extend .btn-box-shadow ;
+	@extend .btn-box-shadow;
 
 	&:hover {
 		box-shadow: 0 0 0 4px $color-primary inset;
@@ -193,21 +176,18 @@
 		@extend %jv-color-primary-inverse;
 	}
 }
-
 .bt-style14 {
-	@extend .btn-box-shadow ;
+	@extend .btn-box-shadow;
 
 	&:hover {
 		background: $color_white;
 		@extend %jv-color-primary-inverse;
 	}
 }
-
 .bt-style15:hover {
 	background: #323436;
 	@extend %jv-color-primary;
 }
-
 .bt-style16 {
 	box-shadow: 0 0 0 2px $color_white inset;
 
@@ -225,7 +205,6 @@
 		color: $color_white;
 	}
 }
-
 .bt-style18 {
 	box-shadow: 0 0 0 4px $color-primary inset;
 	background: $color_white;
@@ -238,7 +217,7 @@
 	}
 }
 .bt-style19 {
-	@extend .btn-box-shadow ;
+	@extend .btn-box-shadow;
 
 	&:hover {
 		@extend %jv-bg-color-primary-inverse;
@@ -249,7 +228,6 @@
 	@extend %jv-bg-color-primary;
 	color: $color_white;
 }
-
 .bt-style21 {
 	width: 140px;
 	padding: 0;
@@ -263,13 +241,11 @@
 		}
 	}
 }
-
 .bt-style22:hover {
 	box-shadow: 0 0 0 1px $color_secondary inset;
 	background: $color_white;
 	@extend %jv-color-secondary;
 }
-
 .bt-style23:hover {
 	@extend %jv-bg-color-secondary-inverse;
 	@extend %jv-color-primary-inverse;
@@ -278,7 +254,6 @@
 .bt-style24:hover {
 	@extend %jv-bg-color-secondary-inverse;
 }
-
 .bt-style25 {
 	box-shadow: 0 0 0 1px $color_mercury-darker inset;
 
@@ -301,7 +276,6 @@
 		@extend %jv-bg-color-secondary;
 	}
 }
-
 .bt-style27 {
 	box-shadow: 0 0 0 1px $color_secondary inset;
 	background: $color_white;
@@ -312,13 +286,11 @@
 		color: $color_white;
 	}
 }
-
 .bt-style28:hover {
 	@extend %jv-bg-color-secondary;
 	color: $color_white;
 	box-shadow: none;
 }
-
 .bt-style29:hover {
 	@extend %jv-bg-color-secondary;
 }
@@ -398,7 +370,6 @@
 	@extend %jv-bg-color-secondary-inverse;
 
 	&:hover {
-		
 		@extend %jv-color-secondary-inverse;
 		@extend %jv-bg-color-primary-inverse;
 	}
@@ -418,8 +389,6 @@
 		box-shadow: 0 0 0 2px #323436 inset;
 	}
 }
-
-
 //btn link
 .link-black {
 	background: transparent none repeat scroll 0 0;
@@ -432,7 +401,6 @@
 	height: 36px;
 	line-height: 36px;
 }
-
 .link-style1 {
 	padding: 0 30px;
 	border: 1px solid transparent;
@@ -442,12 +410,11 @@
 		text-decoration: none;
 	}
 }
-
 .link-style2 {
 	border-bottom: 3px double transparent;
 
 	&:hover {
-		border-bottom-color:  $color_shark;
+		border-bottom-color: $color_shark;
 		text-decoration: none;
 		color: $color_dove-gray;
 	}
@@ -457,13 +424,12 @@
 	border-top: 1px solid transparent;
 
 	&:hover {
-		border-bottom-color:  $color_shark;
-		border-top-color:  $color_shark;
+		border-bottom-color: $color_shark;
+		border-top-color: $color_shark;
 		text-decoration: none;
 	}
 }
-
-//NOTE: jv addition
+//NOTE:jv addition
 .jv-btn-icon {
 	&:before {
 		@extend %jv-font-Linearicons;
@@ -485,13 +451,11 @@
 		@extend %jv-transition-easeout;
 	}
 }
-
-.jv-btn-cart{
+.jv-btn-cart {
 	&:before {
 		content: "\e82e";
 	}
 }
-
 .link-style4 {
 	@extend .jv-btn-icon, .jv-btn-cart;
 
@@ -518,10 +482,9 @@
 		}
 	}
 }
-
 .link-style9 {
-
 	@extend .jv-btn-icon, .jv-btn-cart;
+
 	span {
 		@extend %jv-transform-translate0-100;
 	}
@@ -537,7 +500,6 @@
 		}
 	}
 }
-
 .link-style14 {
 	@extend .jv-btn-icon, .jv-btn-cart;
 
@@ -547,7 +509,7 @@
 	}
 	&:after {
 		bottom: 100%;
-		@extend %jv-bg-color-primary; 
+		@extend %jv-bg-color-primary;
 	}
 	span {
 		@extend %jv-transform-translate0-0;
@@ -564,7 +526,6 @@
 		}
 	}
 }
-
 .link-style19 {
 	@extend .jv-btn-icon, .jv-btn-cart;
 
@@ -572,7 +533,7 @@
 		@extend %jv-color-primary;
 	}
 	&:after {
-		@extend %jv-bg-color-primary; 
+		@extend %jv-bg-color-primary;
 	}
 	span {
 		@extend %jv-transform-translate0-100;
@@ -589,7 +550,6 @@
 		}
 	}
 }
-
 .link-style5:hover {
 	@extend %jv-color-primary;
 }
@@ -625,8 +585,6 @@
 		text-decoration: underline;
 	}
 }
-
-
 .link-style10 {
 	@extend %jv-color-primary;
 
@@ -648,24 +606,22 @@
 	text-decoration: underline;
 	@extend %jv-transition-easeout;
 }
-
 .link-style11 {
 	padding: 0 30px;
 	border: 1px solid transparent;
 
 	&:hover {
-		border: 1px solid $color-primary;;
+		border: 1px solid $color-primary;
 		text-decoration: none;
 		@extend %jv-color-primary;
 	}
 }
 .link-style16 {
 	padding: 0 30px;
-	
 	border-style: solid;
 	border-width: 1px;
 	text-decoration: none;
-	@extend %jv-border-color-primary; 
+	@extend %jv-border-color-primary;
 	@extend %jv-color-primary;
 
 	&:hover {
@@ -699,8 +655,8 @@
 	border-top: 1px solid transparent;
 
 	&:hover {
-		border-bottom-color:   $color_secondary;
-		border-top-color:   $color_secondary;
+		border-bottom-color: $color_secondary;
+		border-top-color: $color_secondary;
 		text-decoration: none;
 		@extend %jv-color-secondary;
 	}
@@ -711,10 +667,9 @@
 	border-top: 1px solid $color_secondary;
 	@extend %jv-color-secondary;
 
-	&.link-white{
+	&.link-white {
 		@extend %jv-color-secondary;
 	}
-
 	&:hover {
 		border-bottom-color: transparent;
 		border-top-color: transparent;
@@ -732,8 +687,6 @@
 		color: $color_white;
 	}
 }
-
-
 //btn shape
 
 .btn-circle-box {
@@ -766,7 +719,6 @@
 			z-index: 99;
 		}
 	}
-
 	.link-add-cart {
 		width: 48px;
 		height: 48px;
@@ -789,18 +741,13 @@
 		height: 130px;
 		line-height: 130px;
 	}
-
 }
-
-
 .jv-link-add-cart-img {
-		background: url('{{ "icon-cart.png" | asset_url }}') no-repeat center center;
-	}
+	background: url('{{ "icon-cart.png" | asset_url }}') no-repeat center center;
+}
 .jv-link-add-cart-img-black {
-		background: url('{{ "icon-cart2.png" | asset_url }}') no-repeat center center;
-	}
-
-
+	background: url('{{ "icon-cart2.png" | asset_url }}') no-repeat center center;
+}
 .btn-circle-box1 {
 	a {
 		@extend %jv-bg-color-secondary;
@@ -810,9 +757,8 @@
 			@extend %jv-bg-color-secondary-inverse;
 		}
 	}
-
 	.link-add-cart {
-		background-color: $color_secondary ; 
+		background-color: $color_secondary;
 		@extend .jv-link-add-cart-img;
 	}
 	.link-wishlist:hover span {
@@ -822,7 +768,6 @@
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
 	}
 }
-
 .btn-circle-box2 {
 	a {
 		@extend %jv-bg-color-primary-inverse;
@@ -846,13 +791,10 @@
 			box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
-	.link-wishlist:hover span,
-	.link-compare:hover span {
+	.link-wishlist:hover span, .link-compare:hover span {
 		@extend %jv-transform-scale-2;
 	}
 }
-
-
 .btn-circle-box11 {
 	a {
 		@extend %jv-bg-color-secondary-inverse;
@@ -862,8 +804,6 @@
 			@extend %jv-bg-color-secondary;
 		}
 	}
-
-
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
 		@extend %jv-bg-color-secondary-inverse;
@@ -875,7 +815,6 @@
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
 	}
 }
-
 .btn-circle-box22 {
 	a {
 		@extend %jv-bg-color-primary;
@@ -899,27 +838,22 @@
 			box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.3);
 		}
 	}
-	.link-wishlist:hover,
-	.link-compare:hover {
+	.link-wishlist:hover, .link-compare:hover {
 		box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.3);
 	}
 }
-
 .btn-circle-box3 {
 	.link-quick-view {
 		@extend %jv-bg-color-secondary;
 		color: $color_white;
 
 		&:hover {
-			// background: $color_sunglow;
 			@extend %jv-bg-color-secondary-inverse;
 		}
 	}
 }
-
 .btn-circle-box33 {
 	.link-quick-view {
-		// background: $color_sunglow;
 		@extend %jv-bg-color-secondary-inverse;
 		color: $color_white;
 
@@ -928,7 +862,6 @@
 		}
 	}
 }
-
 .btn-circle-box4 {
 	a {
 		background: $color_white;
@@ -936,7 +869,6 @@
 		box-shadow: 0 0 0 1px $color_mercury inset;
 		margin: 0 5px;
 	}
-
 	.link-add-cart {
 		@extend %jv-bg-color-secondary;
 		@extend .jv-link-add-cart-img;
@@ -955,21 +887,18 @@
 		color: $color_white;
 	}
 }
-
 .btn-circle-box44 {
 	a {
 		margin: 0 5px;
 	}
-
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: $color_shark ;
+		background-color: $color_shark;
 
 		&:hover {
 			@extend %jv-bg-color-secondary;
 		}
 	}
-
 	.link-wishlist {
 		box-shadow: 0 0 0 1px $color_secondary inset;
 		background: $color_white;
@@ -990,8 +919,6 @@
 		}
 	}
 }
-
-
 .list-button-circle {
 	padding: 10px 0;
 
@@ -999,7 +926,6 @@
 		padding: 5px 0;
 	}
 }
-
 .btn-circle-box7 {
 	.link-quick-view {
 		background: $color_mercury;
@@ -1011,7 +937,6 @@
 		}
 	}
 }
-
 .btn-circle-box77 .link-quick-view {
 	background: $color_mercury;
 	@extend %jv-color-primary-inverse;
@@ -1021,11 +946,7 @@
 		border: 3px solid transparent;
 	}
 }
-
-
-
 .btn-circle-box5 {
-
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
 		@extend %jv-bg-color-secondary;
@@ -1079,7 +1000,6 @@
 		}
 	}
 }
-
 .btn-circle-box55 {
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
@@ -1134,7 +1054,6 @@
 		}
 	}
 }
-
 .btn-circle-box6 {
 	a {
 		color: $color_white;
@@ -1173,11 +1092,9 @@
 		}
 	}
 	.link-compare:hover {
-		// transform: rotate(225deg) scale(2);
 		@include prefix(transform, rotate(225deg) scale(2));
 	}
 }
-
 .btn-circle-box66 {
 	.link-wishlist {
 		background: $color_white;
@@ -1228,7 +1145,6 @@
 		}
 	}
 }
-
 .btn-circle-box8 {
 	a {
 		background: transparent;
@@ -1238,41 +1154,37 @@
 	}
 	.link-add-cart {
 		@extend .jv-link-add-cart-img-black;
-		background-color: $color_white ;
+		background-color: $color_white;
 		box-shadow: 0 0 0 1px transparent inset;
 
 		&:hover {
 			@extend .jv-link-add-cart-img;
-			background-color: transparent ;
+			background-color: transparent;
 			box-shadow: 0 0 0 1px rgba($color_white, 0.2) inset;
 		}
 	}
 	.link-wishlist:hover {
 		color: #1698D4;
 		@include prefix(box-shadow, 0 0 0 1px #1698D4 inset);
-
 	}
 	.link-compare:hover {
 		color: $color_white;
-		@include prefix(box-shadow, 0 0 0 1px $color_white inset );
+		@include prefix(box-shadow, 0 0 0 1px $color_white inset);
 	}
 }
-
-
 .btn-circle-box88 {
 	a {
 		margin: 0 5px;
 	}
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: transparent ;
-			@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
+		background-color: transparent;
+		@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
 
 		&:hover {
 			@extend .jv-link-add-cart-img;
-			background-color: $color_white ;
+			background-color: $color_white;
 			@include prefix(box-shadow, 0 0 0 1px transparent inset);
-
 		}
 	}
 	.link-wishlist {
@@ -1282,21 +1194,18 @@
 		&:hover {
 			color: $color_white;
 			@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
-			
 		}
 	}
 	.link-compare {
 		color: $color_white;
 		box-shadow: 0 0 0 1px $color_white inset;
-		@include prefix(box-shadow,0 0 0 1px $color_white inset);
+		@include prefix(box-shadow, 0 0 0 1px $color_white inset);
 
 		&:hover {
-			@include prefix(box-shadow,0 0 0 1px rgba($color_white, 0.2) inset);
-			
+			@include prefix(box-shadow, 0 0 0 1px rgba($color_white, 0.2) inset);
 		}
 	}
 }
-
 .btn-link-default {
 	background: $color_shark none repeat scroll 0 0;
 	border: medium none;
@@ -1311,42 +1220,37 @@
 
 	&:hover {
 		color: $color_white;
-		background: $color_casablanca;
+		// background: $color_casablanca;
+		@extend %jv-bg-color-primary;
 	}
 }
-
-.btn-link-default.btn-link-loadmore:hover {
-	background:$color_bright-sun;
-}
 .btn-link-default.btn-link-loadmore {
-    @extend %jv-bg-color-secondary;
-    border-radius: 4px;
-    display: block;
-    margin: 30px auto auto;
-    width: 300px;
+	@extend %jv-bg-color-secondary;
+	border-radius: 4px;
+	display: block;
+	margin: 30px auto auto;
+	width: 300px;
+	.btn-link-default.btn-link-loadmore:hover {
+		background: $color_bright-sun;
+	}
 }
-
-
 //banners
 .btn-box-banner {
-  @extend %jv-bg-color-secondary;
-  border-radius: 4px;
-  color: $color_white;
-  display: inline-block;
+	@extend %jv-bg-color-secondary;
+	border-radius: 4px;
+	color: $color_white;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 12px;
+	padding: 0 20px;
+	@extend %jv-transition-easeout;
 
-  height: 40px;
-  line-height: 40px;
-  margin-top: 12px;
-  padding: 0 20px;
-  @extend %jv-transition-easeout;
-
-  &:hover {
-    // background: $color_candlelight none repeat scroll 0 0;
-    @extend %jv-bg-color-secondary-inverse;
-    color: $color_white;
-  }
+	&:hover {
+		@extend %jv-bg-color-secondary-inverse;
+		color: $color_white;
+	}
 }
-
 .btn-link-hidden {
 	@extend %jv-bg-color-secondary;
 	border-radius: 6px;
@@ -1361,91 +1265,72 @@
 	top: 50%;
 	width: 140px;
 	margin-left: 10px;
-
 	@extend %text-center;
 	@extend %text-up;
 	@extend %jv-transition-easeout;
 	@extend %jv-transform-scale-0;
 
 	&:hover {
-	  background: $color_bright-sun none repeat scroll 0 0;
+		background: $color_bright-sun none repeat scroll 0 0;
 	}
 }
-
 //bt-link bt-blue bt-radius bt-style23
 .btn-submit-form {
-  @extend %jv-bg-color-secondary;
-  border: medium none;
-  color: $color_white;
-  height: 40px;
-  padding: 0 30px;
-  
-  @extend %text-up;
-  @extend %jv-border-radius-4;
-  @extend %jv-transition-easeout;
+	@extend %jv-bg-color-secondary;
+	border: medium none;
+	color: $color_white;
+	height: 40px;
+	padding: 0 30px;
+	@extend %text-up;
+	@extend %jv-border-radius-4;
+	@extend %jv-transition-easeout;
 
-  &:hover {
-	  @extend %jv-bg-color-secondary-inverse;
-  }
-
+	&:hover {
+		@extend %jv-bg-color-secondary-inverse;
+	}
 }
-
-
 .btn-link-default.btn-compare {
-  margin-right: 25px;
-  padding: 0 20px;
+	margin-right: 25px;
+	padding: 0 20px;
 }
-
 // bt-link bt-gold bt-radius bt-shadow bt-style28
 .btn-reset-form {
+	@extend .btn-submit-form;
+	@extend %jv-bg-color-secondary-inverse;
 
-  @extend .btn-submit-form;
-  @extend %jv-bg-color-secondary-inverse;
-
-  &:hover {
-    @extend %jv-bg-color-secondary;
-  }
+	&:hover {
+		@extend %jv-bg-color-secondary;
+	}
 }
-
-
-
-.bt-primary{
+.bt-primary {
 	@extend .bt-link, .bt-yellow, .bt-style5;
 }
-
-.bt-primary-inverse{
+.bt-primary-inverse {
 	@extend .bt-link, .bt-black, .bt-style4;
 }
-
-.btn-primary
-{
+.btn-primary {
 	@extend .bt-primary;
 	background-image: none;
 	box-shadow: none;
 	border: none;
 }
-
 .text-link {
-	span{text-decoration: inherit;}
+	span {
+		text-decoration: inherit;
+	}
 }
-
-@media (max-width: 767px){
-
-	div[class^='list-button-box'] .bt-link{
-	    margin-left: 15px;
+@media (max-width:767px) {
+	div[class^='list-button-box'] .bt-link {
+		margin-left: 15px;
 	}
-
 	.btn-circle-box {
-	    display: block; 
-	    margin: 15px; 
+		display: block;
+		margin: 15px;
 	}
-
-	.btn-link-default.btn-link-loadmore{
+	.btn-link-default.btn-link-loadmore {
 		width: 100%;
 	}
-
-	.bt-loadmore{
+	.bt-loadmore {
 		width: auto;
 	}
-
 }

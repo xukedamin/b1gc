@@ -1,44 +1,42 @@
 /***********************************************************************
 						Tabs&Toggles						
 ************************************************************************/
+
 /*Tabs Icon*/
 
 .related-product .nav-tabs-icon {
-    margin-top: 50px;
+	margin-top: 50px;
 }
-
 .nav-tabs-default {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 
-  .nav.nav-tabs {
-    border: medium none;
-    margin: 25px 0 0;
-    @extend %text-center;
-  }
-  .nav.nav-tabs li {
-    display: inline-block;
-    float: none;
+	.nav.nav-tabs {
+		border: medium none;
+		margin: 25px 0 0;
+		@extend %text-center;
+	}
+	.nav.nav-tabs li {
+		display: inline-block;
+		float: none;
 
-    &.active a {
-      background: $color_shark;
-      color: $color_white;
-    }
-    a {
-      border: medium none;
-      border-radius: 0;
-      color: $color_shark;
-      @extend %text-up;
-      @extend %jv-transition-easeout;
+		&.active a {
+			background: $color_shark;
+			color: $color_white;
+		}
+		a {
+			border: medium none;
+			border-radius: 0;
+			color: $color_shark;
+			@extend %text-up;
+			@extend %jv-transition-easeout;
 
-      &:hover {
-        background: $color_shark;
-        color: $color_white;
-      }
-    }
-  }
+			&:hover {
+				background: $color_shark;
+				color: $color_white;
+			}
+		}
+	}
 }
-
-
 .nav-tabs-icon {
 	margin-bottom: 50px;
 
@@ -118,10 +116,8 @@
 		}
 	}
 }
-
-
-.box-product-tab{
-	margin:80px 0;
+.box-product-tab {
+	margin: 80px 0;
 }
 
 /*Tabs Border*/
@@ -157,10 +153,8 @@
 					top: 0;
 					left: 0;
 					content: "";
-					// background: $color_currious-blue-darker;
-    @extend %jv-bg-color-secondary;
-
 					opacity: 0;
+					@extend %jv-bg-color-secondary;
 					@extend %jv-transition-easeout;
 				}
 				&:hover {
@@ -193,169 +187,153 @@
 		}
 	}
 }
-
 .tab-content.tab-content-border {
-    border: 1px solid $color_mercury;
-    border-radius: 4px;
-    padding: 20px 25px 15px;
+	border: 1px solid $color_mercury;
+	border-radius: 4px;
+	padding: 20px 25px 15px;
 }
-
-
 //from home 3
 .nav-tabs-bestsale .filter-product .btn-filter {
-    border-right-width: 5px;
-    border-right-style: solid;
-    // border-right-color: $color_currious-blue-darker;
-    @extend %jv-border-right-color-secondary;
+	border-right-width: 5px;
+	border-right-style: solid;
+	@extend %jv-border-right-color-secondary;
 }
-
 .nav-tabs-bestsale .nav-tabs {
-  border: medium none;
+	border: medium none;
 
-  > li {
-    float: left;
-    margin-bottom: 0;
+	> li {
+		float: left;
+		margin-bottom: 0;
 
-    > a {
-      border: medium none transparent;
-      border-radius: 0;
-      line-height: inherit;
-      margin-right: 30px;
-      padding: 0;
-      position: relative;
-      text-transform: capitalize;
-      color: $color_shark;
-    }
-    > a:hover, &.active > a {
-      // color: $color_currious-blue-darker;
-      @extend %jv-color-secondary;
-      background: none;
-      border: none;
-    }
-  }
+		> a {
+			border: medium none transparent;
+			border-radius: 0;
+			line-height: inherit;
+			margin-right: 30px;
+			padding: 0;
+			position: relative;
+			text-transform: capitalize;
+			color: $color_shark;
+		}
+		> a:hover, 
+		&.active > a {
+			@extend %jv-color-secondary;
+			background: none;
+			border: none;
+		}
+	}
 }
-
 .nav-tabs-bestsale .nav-tabs {
-  > li > a::after {
-    background: $color_silver-darker none repeat scroll 0 0;
-    content: "";
-    height: 12px;
-    position: absolute;
-    right: -16px;
-    top: 4px;
-    @include prefix(transform, rotate(20deg));
-    width: 1px;
-  }
+	> li > a::after {
+		background: $color_silver-darker none repeat scroll 0 0;
+		content: "";
+		height: 12px;
+		position: absolute;
+		right: -16px;
+		top: 4px;
+		@include prefix(transform, rotate(20deg));
+		width: 1px;
+	}
+	> li:last-child > a {
+		margin-right: 0;
 
-  > li:last-child > a {
-    margin-right: 0;
-
-    &:after {
-      display: none;
-    }
-  }
+		&:after {
+			display: none;
+		}
+	}
 }
 
-
-//product tab
 /*Featured Product Tab*/
-
 .header-product-tab {
-    border-bottom: 2px solid $color_mercury;
-    margin-bottom: 30px;
-    padding-bottom: 14px;
-    .row > .div{
-    	min-height: 33px;
-    }
-}
+	border-bottom: 2px solid $color_mercury;
+	margin-bottom: 30px;
+	padding-bottom: 14px;
 
+	.row > .div {
+		min-height: 33px;
+	}
+}
 .list-tab-title .nav > li > a {
-  border: medium none;
-  color: $color_shark;
-  font-size: 13px;
-  padding: 0;
-  position: relative;
-  @extend %text-up;
+	border: medium none;
+	color: $color_shark;
+	font-size: 13px;
+	padding: 0;
+	position: relative;
+	@extend %text-up;
 }
 .list-tab-title .nav.nav-tabs {
-  border: medium none;
-  margin-top: 7px;
+	border: medium none;
+	margin-top: 7px;
 }
 .list-tab-title .nav-tabs > li {
-  margin: 0 50px 0 0;
+	margin: 0 50px 0 0;
 }
 .list-tab-title .nav > li > a:hover, 
 .list-tab-title .nav > li.active > a {
-  background: transparent none repeat scroll 0 0;
-  border: medium none;
-  color: $color_dusty-gray;
+	background: transparent none repeat scroll 0 0;
+	border: medium none;
+	color: $color_dusty-gray;
 }
 .list-tab-title .nav > li > a::after {
-  background: $color_shark none repeat scroll 0 0;
-  bottom: -24px;
-  content: "";
-  height: 4px;
-  left: 50%;
-  position: absolute;
-  width: 0;
-  @extend %jv-transition-easeout;
-  opacity: 0;
+	background: $color_shark none repeat scroll 0 0;
+	bottom: -24px;
+	content: "";
+	height: 4px;
+	left: 50%;
+	position: absolute;
+	width: 0;
+	@extend %jv-transition-easeout;
+	opacity: 0;
 }
 .list-tab-title .nav > li > a:hover::after, 
 .list-tab-title .nav > li.active > a::after {
-  opacity: 1;
-  width: 100%;
-  left: 0;
+	opacity: 1;
+	width: 100%;
+	left: 0;
 }
-
 .info-sale {
-    background:url('{{ "bg-sale.png" | asset_url }}') no-repeat;
-    position: relative;
-    width: 77px;
-    height: 78px;
-    @extend %text-center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  > span {
-      display: block;
-      line-height: 78px;
-      font-weight: bold;
-  }
+	background: url('{{ "bg-sale.png" | asset_url }}') no-repeat;
+	position: relative;
+	width: 77px;
+	height: 78px;
+	@extend %text-center;
+	margin-top: 25px;
+	margin-bottom: 15px;
+
+	> span {
+		display: block;
+		line-height: 78px;
+		font-weight: bold;
+	}
 }
-
-
 //home 5
-.nav-tabs-filter  .nav-tabs > li.active > a,
-.nav-tabs-filter  .nav-tabs > li.active > a:hover,
-.nav-tabs-filter  .nav-tabs > li.active > a:focus,
+.nav-tabs-filter  .nav-tabs > li.active > a, 
+.nav-tabs-filter  .nav-tabs > li.active > a:hover, 
+.nav-tabs-filter  .nav-tabs > li.active > a:focus, 
 .nav-tabs-filter  .nav-tabs > li > a:hover {
-    // background: $color_currious-blue-darker none repeat scroll 0 0;
-    @extend %jv-bg-color-secondary;
-    
-    // border-color: $color_currious-blue-darker;
-    @extend %jv-border-color-secondary;
-    color: $color_white;
+	@extend %jv-bg-color-secondary;
+	@extend %jv-border-color-secondary;
+	color: $color_white;
 }
-
 .nav-tabs-filter .nav-tabs > li {
-  margin: 0 10px 0 0;
-  > a {
-    background: $color_white none repeat scroll 0 0;
-    border: 1px solid $color_mercury;
-    border-radius: 4px;
-    color: $color_shark;
-    height: 36px;
-    line-height: 36px;
-    margin-right: 0;
-    padding: 0 23px;
-    @extend %text-up;
-    @extend %jv-transition-easeout;
-  }
-}
+	margin: 0 10px 0 0;
 
+	> a {
+		background: $color_white none repeat scroll 0 0;
+		border: 1px solid $color_mercury;
+		border-radius: 4px;
+		color: $color_shark;
+		height: 36px;
+		line-height: 36px;
+		margin-right: 0;
+		padding: 0 23px;
+		@extend %text-up;
+		@extend %jv-transition-easeout;
+	}
+}
 .nav-tabs-filter .nav.nav-tabs {
-    border: medium none;
-    margin: 0;
+	border: medium none;
+	margin: 0;
 }
 
 @media only screen and (max-width: 991px) {
@@ -379,8 +357,6 @@
 	{
 		bottom: 0;
 	}
-
-
 
 	.product-tabs-grid-simple-wrapper.tab_style1 li{
 		display: inline-block;

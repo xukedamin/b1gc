@@ -8,11 +8,7 @@
     border: medium none;
     margin: 0;
   }
-
 }
-
-
-
 .about-box {
   margin-bottom: 30px;
   position: relative;
@@ -29,15 +25,13 @@
     @extend %jv-transition-easeout;
     width: 0;
   }
-
   &:hover:before {
     height: 100%;
     left: 0;
     top: 0;
     width: 100%;
   }
-
-  div.img{
+  div.img {
     height: 100%;
     position: absolute;
     top: 0;
@@ -45,37 +39,41 @@
     left: 0;
     right: 0;
     z-index: -1;
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
   }
-
 }
-
 .about-box-text {
   @extend %text-center;
   padding-top: 20px;
   padding-bottom: 20px;
- 
 
   p {
     font-size: 30px;
     margin: 25px 0 0;
     color: inherit;
   }
-
   a {
     font-size: 90px;
     color: inherit;
   }
-
 }
-
-.blue-box { background: $color_currious-blue-darker none repeat scroll 0 0; }
-.dark-yellow-box { background: $color_saffron none repeat scroll 0 0; }
-.violet-box { background: $color_rhino none repeat scroll 0 0; }
-.yellow-box { background: $color_bright-sun none repeat scroll 0 0; }
-.about-box.yellow-box p, .about-box.yellow-box a { color: $color_black; }
-
+.blue-box {
+  background: $color_currious-blue-darker none repeat scroll 0 0;
+}
+.dark-yellow-box {
+  background: $color_saffron none repeat scroll 0 0;
+}
+.violet-box {
+  background: $color_rhino none repeat scroll 0 0;
+}
+.yellow-box {
+  background: $color_bright-sun none repeat scroll 0 0;
+}
+.about-box.yellow-box p, 
+.about-box.yellow-box a {
+  color: $color_black;
+}
 .about-big-text {
   color: $color_black;
   font-size: 60px;
@@ -86,25 +84,19 @@
   top: 80px;
   width: 200px;
 }
-
 .about-box-image {
   img {
     @extend %jv-transition-easeout;
   }
-
-   > img {
+  > img {
     width: 100%;
-}
-
+  }
   &:hover {
     img {
       @extend %jv-transform-scale-115;
     }
-
   }
-
 }
-
 .about-big-icon {
   @extend %text-center;
   bottom: 60px;
@@ -115,13 +107,9 @@
   right: 30px;
   width: 120px;
 }
-
-
-.about-big-text.about-icon{
+.about-big-text.about-icon {
   top: 20px;
 }
-
-
 .about-box-image .about-text {
   font-size: 30px;
   left: 50px;
@@ -129,70 +117,27 @@
   top: 120px;
   color: inherit;
 }
-
-.about-box-image .about-text.about-icon{
+.about-box-image .about-text.about-icon {
   top: 70px;
 }
-
-
 .about-intro {
   > h2 {
     color: $color_black;
     margin: 0 0 20px;
   }
-
   > p {
     color: $color_dove-gray;
     margin: 0 0 20px;
   }
-
 }
-
 .about-content {
   margin-top: 20px;
 }
-
-
-
-
-// .item-post-slider {
-//   padding: 0 10px;
-
-//   > h3 {
-//     margin: 0 0 25px;
-//   }
-
-//   h3 a {
-//     color: #379fd7;
-//     font-size: 16px;
-//     margin-bottom: 20px;
-
-//     &:hover {
-//       color: $color_bright-sun;
-//     }
-
-//   }
-
-//   > span {
-//     color: $color_dusty-gray;
-//   }
-
-//   > p {
-//     color: $color_dove-gray;
-//     margin-top: 10px;
-//   }
-
-// }
-
-.post-slider
- {
+.post-slider {
   border: 1px solid $color_mercury;
   padding: 25px 50px;
 }
-
-.post-slider,
-.slider-btn-shadow{
-  
+.post-slider, .slider-btn-shadow {
   .owl-theme .owl-controls .owl-buttons {
     div {
       background: $color_white none repeat scroll 0 0;
@@ -213,32 +158,24 @@
       i {
         line-height: 36px;
       }
-
       &:hover {
         box-shadow: none;
-        // background: $color_currious-blue-darker;
         @extend %jv-bg-color-secondary;
         color: $color_white;
       }
-
     }
-
     .owl-prev {
       left: 0;
       margin-left: -35px;
       box-shadow: -1px 3px 3px -1px rgba($color_black, 0.2);
     }
-
     .owl-next {
       right: 0;
       margin-right: -35px;
       box-shadow: -1px 3px 3px -1px rgba($color_black, 0.2);
     }
-
   }
-
 }
-
 .post-slider-thumb {
   display: block;
   margin-bottom: 20px;
@@ -249,13 +186,9 @@
     width: 100%;
     @extend %jv-transition-easeout;
   }
-
   &:hover {
     img {
-      
-       @extend %jv-transform-scale-115;
+      @extend %jv-transform-scale-115;
     }
-
   }
-
 }

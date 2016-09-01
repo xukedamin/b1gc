@@ -101,7 +101,6 @@
     a {
       color: $color_shark;
       &:hover {
-        // color: $color_currious-blue-darker;
         @extend %jv-color-secondary;
       }
     }
@@ -126,7 +125,6 @@
     color: $color_dove-gray;
     position: relative;
     &:hover {
-      // color: $color_currious-blue-darker;
       @extend %jv-color-secondary;
     }
     &:before {
@@ -161,7 +159,6 @@
   border-right: 1px solid $color_mercury;
   margin: auto;
   max-width: 280px;
-  // min-height: 280px;
   padding: 0 60px;
   width: 100%;
 
@@ -315,18 +312,4 @@ $back-top-icon-fontsize : #{'{{settings.general_backtotop_icon_font_size}}px'};
     max-width: none;
     padding: 0;
   }
-
-
 }
-
-
-
-
-
- 
-
-
-
-
-
-

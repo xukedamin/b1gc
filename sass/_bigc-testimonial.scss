@@ -1,9 +1,7 @@
-
 .item-customer-saying {
   display: table;
   width: 100%;
 }
-
 .thumb-customer-saying {
   display: table-cell;
   width: 70px;
@@ -15,17 +13,13 @@
     width: 70px;
     height: 70px;
   }
-
-  .img,
-  img {
+  .img, img {
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
     width: 100%;
     height: 100%;
   }
-
 }
-
 .info-customer-saying {
   display: table-cell;
   padding-left: 40px;
@@ -41,86 +35,62 @@
     top: 5px;
     content: "\f10d";
   }
-
   >h3 {
     margin: 20px 0 5px;
   }
-
   h3 a {
-    // color: $color_currious-blue-darker;
     @extend %jv-color-secondary;
-
     font-size: 16px;
 
     &:hover {
       color: $color_bright-sun;
     }
-
   }
-
   .desc {
     position: relative;
   }
-
   > span {
     color: $color_dusty-gray;
   }
-
 }
-
 .customer-saying {
   margin-top: 45px;
 
   >h2 {
     margin: 0 0 45px;
   }
-
 }
-
 .thumb-customer-saying a:hover img {
   @include prefix(transform, rotate(30deg));
 }
-
-/*Testimonial*/
-
 span.click-button {
   clear: both;
   display: block;
   font-size: 30px;
   z-index: 2;
-  
+
   &:hover {
     cursor: pointer;
   }
 }
-
-
+.left-open span.click-button:before, 
+.right-open span.click-button:before {
+  @extend %jv-font-Linearicons;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .left-open span.click-button:before {
   content: "\e879";
-  @extend %jv-font-Linearicons;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
 .right-open span.click-button:before {
   content: "\e87a";
-  @extend %jv-font-Linearicons;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
 .side-testimonial {
   width: 50%;
   float: left;
@@ -135,7 +105,6 @@ span.click-button {
   @extend %jv-transition-easeout;
   -webkit-backface-visibility: hidden;
 }
-
 .testimonial-page-left {
   color: $color_white;
   left: -250%;
@@ -143,24 +112,20 @@ span.click-button {
   @include prefix(transform, translateX(-100%));
   @extend %jv-transition-easeout;
 }
-
 .testimonial-page-right {
   color: $color_shark;
   right: -100%;
   padding-left: 50px;
   @include prefix(transform, translateX(100%));
 }
-
 .side-right {
   position: relative;
   right: 0;
 }
-
 .side-left {
   position: relative;
   left: 0;
 }
-
 .left-open {
   .side-left {
     @extend %jv-transition-easeout;
@@ -181,7 +146,6 @@ span.click-button {
     -webkit-backface-visibility: hidden;
   }
 }
-
 .right-open {
   .side-left {
     visibility: hidden;
@@ -198,7 +162,6 @@ span.click-button {
     -webkit-backface-visibility: hidden;
   }
 }
-
 .left-open .item-testimonial.item-left .testimonial-job {
   color: $color_shark;
   border-top: 1px solid $color_shark;
@@ -215,14 +178,10 @@ span.click-button {
 .right-open .item-testimonial.item-right .testimonial-title a {
   color: $color_white;
 }
-
-
-
 .testimonial-title {
-    font-size: 60px;
-    margin: 35px 0 25px;
+  font-size: 60px;
+  margin: 35px 0 25px;
 }
-
 .testimonial-thumb-link {
   background: $color_white none repeat scroll 0 0;
   display: inline-block;
@@ -244,31 +203,24 @@ span.click-button {
     z-index: 9;
     padding: 10px;
     border: 10px solid $color_white;
-    
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
   }
-
   &:hover {
     &:before {
       opacity: 1;
     }
-    .img,
-    img {
+    .img, img {
       @include prefix(transform, rotate(30deg));
     }
   }
-  .img,
-  > img {
+  .img, > img {
     height: 170px;
     width: 170px;
     @extend %jv-transition-easeout;
     @extend %jv-border-radius-50;
   }
 }
-
-
-
 .item-testimonial {
   @extend %text-center;
 
@@ -299,17 +251,14 @@ span.click-button {
   }
 }
 
-
 /*Testimonial*/
 .testimonial-slider {
   margin: 40px 0 70px;
 }
-
 .testimo-item {
   background: $color_boulder-darker none repeat scroll 0 0;
   color: $color_white;
 }
-
 .info-testimo-author {
   left: 0;
   position: absolute;
@@ -317,15 +266,12 @@ span.click-button {
   width: 100%;
   z-index: 2;
 }
-
 .testimo-thumb {
   filter: blur(8px);
   -moz-filter: blur(8px);
   -webkit-filter: blur(8px);
   @extend %jv-transform-scale-115;
-  
 }
-
 .testimo-content-left {
   overflow: hidden;
   position: relative;
@@ -339,7 +285,6 @@ span.click-button {
     z-index: 1;
   }
 }
-
 .testimo-avatar {
   border: 3px solid $color_mine-shaft;
   width: 150px;
@@ -347,7 +292,6 @@ span.click-button {
   display: inline-block;
   overflow: hidden;
   position: relative;
-  
   @extend %jv-border-radius-50;
 
   &:before {
@@ -355,29 +299,24 @@ span.click-button {
     content: "";
     width: 100%;
     height: 100%;
-
     background-color: rgba($color_casablanca, 0.2);
     display: block;
     top: 0;
     left: 0;
     opacity: 0;
     z-index: 9;
-    
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
   }
-
   &:hover {
     &:before {
       opacity: 1;
     }
-    .img,
-    img {
+    .img, img {
       @include prefix(transform, rotate(30deg));
     }
   }
-  .img,
-  img {
+  .img, img {
     width: 100%;
     height: 100%;
     @extend %jv-border-radius-50;
@@ -396,7 +335,6 @@ span.click-button {
     }
   }
 }
-
 .testimo-content-right {
   padding-left: 55px;
   padding-right: 70px;
@@ -409,16 +347,14 @@ span.click-button {
     left: 0;
     position: absolute;
     top: 0;
-    content:"\e83f";
+    content: "\e83f";
   }
 }
-
 .testimo-desc {
   padding-top: 60px;
   position: relative;
   font-size: 16px;
 }
-
 .testimo-date {
   color: $color_silver-darker;
   display: block;
@@ -436,8 +372,6 @@ span.click-button {
     width: 24px;
   }
 }
-
-
 //home 1
 .home-testimonial {
   background: $color_wild-sand none repeat scroll 0 0;
@@ -458,11 +392,9 @@ span.click-button {
     color: $color_white;
     position: relative;
   }
- 
 }
-
-.testimonial.two-sides{
-  .jv-heading{ 
+.testimonial.two-sides {
+  .jv-heading {
     position: relative;
     color: $color_white;
   }

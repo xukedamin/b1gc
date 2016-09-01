@@ -1,7 +1,6 @@
 /*************************************************************
 Page Detail
 *************************************************************/
-
 .category-slider {
   background: $color_wild-sand none repeat scroll 0 0;
   padding: 50px 0;
@@ -10,7 +9,6 @@ Page Detail
     width: 100%;
   }
 }
-
 .item-collections {
   margin-bottom: 30px;
 
@@ -20,7 +18,6 @@ Page Detail
   }
   .inner {
     background-color: $color_white;
-
     .info-collections {
       @include transition(all 0.3s ease-in-out 0s);
       background-color: rgba($color_black, 0.4);
@@ -40,13 +37,11 @@ Page Detail
         @extend %text-up;
       }
     }
-
     &:hover .info-collections {
       background-color: rgba($color_black, 0.6);
     }
   }
 }
-
 .title-list-collection {
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
@@ -59,7 +54,6 @@ Page Detail
     margin: 0;
   }
 }
-
 
 
 /*======================== Magnific Popup custom styles ===================== */

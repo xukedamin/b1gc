@@ -1,8 +1,6 @@
-
 /*******************************************************************
-						Post Format Gallery
+            Post Format Gallery
 ********************************************************************/
-
 .post-format-gallery {
   margin-bottom: 50px;
   position: relative;
@@ -25,7 +23,7 @@
       position: relative;
 
       &.active {
-         border-width: 1px;
+        border-width: 1px;
         border-style: solid;
         @extend %jv-border-color-primary;
       }
@@ -41,7 +39,7 @@
         opacity: 0;
       }
       &:hover {
-         border-width: 1px;
+        border-width: 1px;
         border-style: solid;
         @extend %jv-border-color-primary;
 
@@ -70,7 +68,7 @@
       margin-top: -15px;
 
       &:hover {
-       @extend %jv-color-primary;
+        @extend %jv-color-primary;
       }
     }
     .bx-prev {
@@ -83,86 +81,83 @@
     }
   }
 }
-
-.post-format-video{
-    margin-bottom: 50px;
+.post-format-video {
+  margin-bottom: 50px;
 }
 
 /*******************************************************************
-						Post Format Hot Deal
+            Post Format Hot Deal
 ********************************************************************/
 .box-hot-deal {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 .wrap-deal-countdown {
-    left: 0;
-    position: absolute;
-    top: -30px;
-    width: 100%;
+  left: 0;
+  position: absolute;
+  top: -30px;
+  width: 100%;
 }
 .deal-countdown {
-  	width:200px;
-  	margin:auto;
-  	
-    @extend %text-center;
+  width: 200px;
+  margin: auto;
+  @extend %text-center;
 
   .time_circles > div {
-      background: $color_mid-gray none repeat scroll 0 0;
-      @extend %jv-border-radius-50;
-      color: $color_white;
-      display: inline-block;
-      height: 46px;
-      line-height: 38px;
-      margin: 0 2px;
-      width: 46px !important;
+    background: $color_mid-gray none repeat scroll 0 0;
+    @extend %jv-border-radius-50;
+    color: $color_white;
+    display: inline-block;
+    height: 46px;
+    line-height: 38px;
+    margin: 0 2px;
+    width: 46px !important;
   }
-  
   canvas {
-      position: relative;
-      top: 52px;
-      z-index: 9;
+    position: relative;
+    top: 52px;
+    z-index: 9;
   }
 }
+
 /*******************************************************************
-						Post Format Image
+            Post Format Image
 ********************************************************************/
 .title-post-leading {
-    
-      border-bottom-style: solid;
-      border-bottom-width: 2px;
-      @extend %jv-border-color-primary;
-
-    font-size: 16px;
-    margin-bottom: 22px;
-    padding-bottom: 17px;
-    @extend %text-up;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  @extend %jv-border-color-primary;
+  font-size: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  @extend %text-up;
 }
 .post-banner-link {
-    display: block;
-   img {
-      height: auto;
-      width: 100%;
+  display: block;
+
+  img {
+    height: auto;
+    width: 100%;
   }
 }
 .post-banner-image {
-    background: $color_white none repeat scroll 0 0;
-     border-bottom-style: solid;
-      border-bottom-width: 2px;
-      @extend %jv-border-color-primary;
-    margin-bottom: 30px;
-    padding: 15px;
+  background: $color_white none repeat scroll 0 0;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  @extend %jv-border-color-primary;
+  margin-bottom: 30px;
+  padding: 15px;
 }
 .inner-post-banner-image {
-    position: relative;
+  position: relative;
 }
 .post-banner-text {
-    @extend %jv-bg-color-primary; 
-    bottom: 0;
-    color: $color_white;
-    left: 0;
-    margin: 0;
-    padding: 10px 15px;
-    position: absolute;
-    @extend %text-center;
-    width: 100%;
+  @extend %jv-bg-color-primary;
+  bottom: 0;
+  color: $color_white;
+  left: 0;
+  margin: 0;
+  padding: 10px 15px;
+  position: absolute;
+  @extend %text-center;
+  width: 100%;
 }

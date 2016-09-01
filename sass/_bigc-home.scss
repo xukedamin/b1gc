@@ -1,5 +1,5 @@
 /*******************************************************************
-							Front Page
+	Header 1 - Category box
 ********************************************************************/
 .home-extra-sub {
   background: $color_shark none repeat scroll 0 0;
@@ -19,7 +19,6 @@
     visibility: visible;
   }
 }
-
 
 .home-extra-sub .close-extra-sub {
   color: #a8a8a9;
@@ -80,7 +79,6 @@
 .home-extra-sub .share-social {
   border-top: 1px solid rgba($color_white, 0.1);
   margin-top: 35px;
-
   a {
     color: $color_white;
     display: block;
@@ -144,7 +142,8 @@
     @extend %jv-transition-easeout;
 
     &:hover {
-      color: $color_casablanca;
+      // color: $color_casablanca;
+        @extend %jv-color-primary;
 
       >.lnr {
         @extend %jv-transform-scale-12;
@@ -184,8 +183,6 @@
   }
 }
 
-
-
 .item-header-banner {
   background: $color_wild-sand none repeat scroll 0 0;
   border: 10px solid $color_white;
@@ -219,8 +216,8 @@
 
 
 .header-banner-thumb {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .header-banner-title {
@@ -343,7 +340,20 @@
   }
 }
 
-// .product-featured-thumb
+/*icon*/
+.icon-extra-sub.hide-box {
+  opacity: 0;
+  visibility: hidden;
+}
+.icon-home-share {
+  background: $color_shark none repeat scroll 0 0;
+}
+.icon-home-cart, 
+.icon-home-search {
+  background: $color_mine-shaft none repeat scroll 0 0;
+}
+
+/*single slider product*/
 
 .product-featured-thumb {
     background: $color_white none repeat scroll 0 0;

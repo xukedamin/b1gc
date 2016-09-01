@@ -4,15 +4,12 @@
 .list-message-box {
   margin: 80px 0 20px;
 }
-
 .item-message-box {
   margin-bottom: 30px;
   padding: 20px 30px;
 
   &.item-message-info {
-    // background: $color_currious-blue-darker none repeat scroll 0 0;
     @extend %jv-bg-color-secondary;
-    
     color: $color_white;
   }
   span.lnr {
@@ -34,23 +31,23 @@
   }
   &.item-message-warning {
     background: $color_white none repeat scroll 0 0;
-   @extend %jv-color-primary;
+    @extend %jv-color-primary;
   }
 }
 
-
-.ajax-box-message  {
+.ajax-box-message {
   @extend %text-center;
-  display: none;  
+  display: none;
   position: fixed;
   bottom: 0 !important;
   width: 100%;
   z-index: 9999;
   background-color: $color_white;
 
-  &.slideInUp {  display: block;  }
-
-  .message  {
+  &.slideInUp {
+    display: block;
+  }
+  .message {
     margin: 0;
     padding: 20px 0;
   }

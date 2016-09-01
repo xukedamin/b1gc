@@ -40,7 +40,7 @@ $color_shark : #1b1d1f; //323436 //d0d0d0 //252627
 $color_mine-shaft: #3a3a3a;
 
 //yellow
-$color_casablanca : #fbb450; //251,180,80
+$color_casablanca : #fbb450; //251,180,80 --> replaced by color_primary
 $color_saffron : #f3b929;
 $color_bright-sun : #fdd932; //FEC942 //F9DD47 //249, 221, 71
 $color_sunglow : #FFD533; //fed533
@@ -94,11 +94,11 @@ $color_border : $color_mercury;
 // $color_secondary : $color_currious-blue-darker;
 // $color_secondary-inverse : $color_candlelight;
 
-%jv-bg-color-primary{
-	background-color: $color_primary;
-}
 %jv-color-primary{
 	color: $color_primary !important;
+}
+%jv-bg-color-primary{
+	background-color: $color_primary;
 }
 %jv-border-color-primary{
 	border-color: $color_primary;
@@ -146,8 +146,6 @@ $color_border : $color_mercury;
 @import 'bigc-typo';
 @import 'bigc-icon';
 
-
-
 @import 'bigc-button';
 @import 'bigc-chart-progress';
 @import 'bigc-contact';
@@ -186,9 +184,5 @@ $color_border : $color_mercury;
 @import 'filter';
 
 @import 'bigc-home';
-
-@import 'bigc-home3';
-@import 'bigc-home5';
-@import 'bigc-home7';
-
+@import 'bigc-sc-product';
 @import 'bigc-responsive';

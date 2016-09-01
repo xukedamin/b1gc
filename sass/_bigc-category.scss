@@ -1,9 +1,7 @@
-
 .messagefull .content {
     padding: 20px 25px 20px 110px;
     position: relative;
 }
-
 
 .item-collections .inner {
   position: relative;
@@ -74,16 +72,16 @@ Page Grid
 
   .ui-selectmenu-button {
     background: $color_white none repeat scroll 0 0;
-    border: 1px solid $color_mercury;
     border-radius: 0;
+    border: 1px solid $color_mercury;
     color: $color_shark;
     display: inline-block;
     font-family: open sans;
     font-size: 13px;
     font-weight: 400;
     height: 36px;
-    @extend %text-up;
     width: 130px !important;
+    @extend %text-up;
 
     &:after {
       @extend %jv-font-Linearicons;
@@ -137,7 +135,8 @@ Page Grid
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
   border: 1px solid $color_supernova;
-  color: $color_casablanca;
+  // color: $color_casablanca;
+  @extend %jv-color-primary;
   font-weight: normal;
 }
 
@@ -145,9 +144,6 @@ Page Grid
     padding: 5px 1em 5px 0.4em;
 }
 
-// .sort-pagi-bar {
-//  position: relative;
-// }
 
 .toolbar{
   position: relative;
@@ -266,11 +262,16 @@ Page Grid Mr
     padding: 0;
 }
 .ui-slider-range.ui-widget-header.ui-corner-all {
-    background: $color_casablanca none repeat scroll 0 0;
+    // background: $color_casablanca none repeat scroll 0 0;
+    @extend %jv-bg-color-primary;
 }
 .ui-slider-handle.ui-state-default.ui-corner-all {
     background: $color_white none repeat scroll 0 0;
-    border: 2px solid $color_casablanca;
+    border-width: 2px;
+    border-style: solid;
+    // border-color: $color_casablanca;
+    @extend %jv-border-color-primary;
+
     border-radius: 0;
     height: 10px;
     margin: 0 0 0 -5px;

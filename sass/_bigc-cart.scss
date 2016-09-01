@@ -235,7 +235,6 @@
   vertical-align: top;
 
   .remove-product {
-    // background: transparent  url('{{ "remove-cart2.png" | asset_url }}') no-repeat scroll center center;
     border: 1px solid $color_mercury;
     color: $color_mercury;
     display: inline-block;
@@ -289,7 +288,6 @@
 }
 
 
-//HOME 4
 .info-total .dropdownMenu .info-icon{
   display: inline;
     line-height: 24px; 
@@ -346,12 +344,10 @@
     background: $color_currious-blue-darker url('{{ "icon-cart.png" | asset_url }}') no-repeat scroll center center;
     height: 48px;
     width: 48px;
-    // @extend %jv-bg-color-secondary;
     background-color: $color_secondary !important;
 
     &:hover {
       background: $color_bright-sun url('{{ "icon-cart.png" | asset_url }}') no-repeat scroll center center;
-      // border-color :$color_bright-sun;
       border-color: $color_secondary-inverse !important;
       background-color: $color_secondary-inverse !important;
     }
@@ -561,7 +557,6 @@
 
 .shop-cart-total {
   span.price {
-      font-family: 'Montserrat', sans-serif;
       letter-spacing: 0.05em;
       text-align: right;
   }

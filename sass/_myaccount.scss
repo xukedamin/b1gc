@@ -9,9 +9,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-
   background-image: url("{{ 'account_bg_image.jpg'  | asset_url }}");
-
   &:after {
     background-color: rgba(51, 51, 51, 0.6);
     content: "";
@@ -24,7 +22,6 @@
     width: 100%;
   }
 }
-
 
 /*============================================================================
 # Login page
@@ -160,10 +157,7 @@
   p {
    @extend %jv-color-primary;
   }
-
 }
-
-
 
 
 .page-login-wrapper .footer-foot {
@@ -178,76 +172,58 @@
 .page-register-wrapper .footer-foot {
   background-color: $color_wild-sand;
 }
-
 .page-account {
   background-color: $color_white;
   position: relative;
   padding: 50px;
-
 }
-
 .page-register form {
   background-color: $color_white;
   position: relative;
   margin: 0 auto;
   padding: 50px;
   max-width: 570px;
-  
+
   h3 {
     margin-bottom: 50px;
     @extend %text-center;
   }
-
 }
-
-
-
 //adress page /account/addresses
 
-.section-header--center{
+.section-header--center {
   @extend %text-center;
   @extend %text-up;
 }
-
-
-.form-vertical{ 
-  input,
-  select,
-  textarea {
+.form-vertical {
+  input, select, textarea {
     display: block;
     margin-bottom: 10px
   }
 }
-
-input.input-full, 
-textarea.input-full, 
-select.input-full {
-    width: 100%;
+input.input-full, textarea.input-full, select.input-full {
+  width: 100%;
 }
-
-.form-spacer{
+.form-spacer {
   font-size: 0;
 }
-
-.form-border{
+.form-border {
   border: 1px solid $color_alto;
   padding: 20px;
-  h4{
+
+  h4 {
     text-transform: uppercase;
     margin-bottom: 30px;
   }
-
 }
-
 .hidden-label {
-    position: absolute;
-    height: 0;
-    width: 0;
-    margin-bottom: 0;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  height: 0;
+  width: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
-
 .form-vertical form {
   background-color: $color_white;
   position: relative;
@@ -255,42 +231,31 @@ select.input-full {
   padding: 50px;
   max-width: 400px;
 }
-
 .form-success {
   color: #56ad6a;
   background-color: #ecfef0;
   border-color: #56ad6a;
 }
-
 .note, .errors {
-    border-radius: 3px;
-    padding: 6px 12px;
-    margin-bottom: 15px;
-    border: 1px solid transparent;
-    font-size: 0.9em;
-    text-align: left;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  font-size: 0.9em;
+  text-align: left;
 }
-
-
-
-
 section.one-child {
   padding: 75px 0;
   position: relative;
 }
 
-
-
-
 @media only screen and (max-width: 767px) {
   .page-account{
     padding: 10px 15px;
   }
-
   section.one-child{
     padding: 50px 0;
   }
- 
 
 }
 

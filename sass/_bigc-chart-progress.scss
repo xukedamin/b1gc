@@ -12,8 +12,6 @@
 }
 .circle1 {
 	float: left;
-	// margin-right: 135px;
-	// width: 300px;
 
 	&:last-child {
 		margin-right: 0;
@@ -37,62 +35,54 @@
 }
 
 
-
 //boostrap progressbar
-.progress-item{
-	span{
-	    font-weight: 400;
-	    font-size: 16px;
-	   color: $color_abbey;
-	   margin-bottom: 5px;
-	   display: inline-block;
+.progress-item {
+	span {
+		font-weight: 400;
+		font-size: 16px;
+		color: $color_abbey;
+		margin-bottom: 5px;
+		display: inline-block;
 	}
-
-	.pb_label{
+	.pb_label {
 		font-weight: 600;
 	}
-	.pb_unit{
+	.pb_unit {
 		float: right;
 	}
 }
-
-
-.progress{
+.progress {
 	height: 11px;
 	background: $color_mercury;
 	border: none;
 	@include prefix(box-shadow, none);
-	.progress-bar{
+
+	.progress-bar {
 		@extend %jv-border-radius-4;
 		@include prefix(box-shadow, none);
-
 	}
 }
-
-.progress.sm{
+.progress.sm {
 	height: 5px;
-	.progress-bar{
+
+	.progress-bar {
 		@extend %jv-border-radius-0;
 	}
 }
-
-.progress{
-	.progress-bar.progress-bar-warning{
+.progress {
+	.progress-bar.progress-bar-warning {
 		background: $color_bright-sun;
 	}
-
-	.progress-bar.progress-bar-info{
+	.progress-bar.progress-bar-info {
 		background: $color_curious-blue;
 	}
-
-	.progress-bar.progress-bar-black{
+	.progress-bar.progress-bar-black {
 		background: $color_abbey;
 	}
 }
 
-
 /*Pie Chart*/
-.pieChart-target{
+.pieChart-target {
 	float: left;
 	height: 210px;
 	margin-left: -8px;
@@ -103,12 +93,10 @@
 		margin-right: 0;
 	}
 }
-
 .percentage:last-child {
 	display: none;
 }
-
-.pieChart-blue{
+.pieChart-blue {
 	.pie0 {
 		background-color: $color_curious-blue;
 		fill: $color_curious-blue;
@@ -118,9 +106,7 @@
 		fill: $color_jelly-bean;
 	}
 }
-
-.pieChart-yellow
-{
+.pieChart-yellow {
 	.pie0 {
 		background-color: $color_bright-sun;
 		fill: $color_bright-sun;
@@ -130,9 +116,7 @@
 		fill: $color_old-gold;
 	}
 }
-
-.pieChart-gray
-{
+.pieChart-gray {
 	.pie0 {
 		background-color: $color_silver-chalice;
 		fill: $color_silver-chalice;
@@ -142,7 +126,6 @@
 		fill: $color_silver-darker;
 	}
 }
-
 .pieChart-black {
 	.pie0 {
 		background-color: $color_abbey;

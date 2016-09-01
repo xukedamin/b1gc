@@ -149,7 +149,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   padding: 10px 0px;
   list-style: none;
   @include prefix(box-shadow,-1px 3px 5px -1px rgba($color_black, 0.1));
-  // box-shadow: -1px 3px 5px -1px rgba($color_black, 0.1);
   @extend %jv-transition-easeout;
   li{
     padding: 0 15px;
@@ -169,8 +168,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
   right: 15px;
   top: 15px;
 }
-
-
 
 //retangle top before sub menu (desktop)
 .mainmenu:not(.nav-vertical) > .dropdownMenu > .menu-item-has-children {
@@ -195,7 +192,6 @@ $menu__mega__bg__img : #{'{{settings.mega_bg_img }}' };
       visibility: visible;
       bottom: 0px;
   }
- 
 }
 
 
@@ -345,10 +341,12 @@ Label badge
   @extend %text-up;
 }
 .title-hot {
-  color: $color_casablanca;
+  // color: $color_casablanca;
+  @extend %jv-color-primary;
 }
 .title-new {
-  color: $color_curious-blue;
+  // color: $color_curious-blue;
+ @extend %jv-color-secondary;
 }
 .mega-menu .sub-menu .label-sub {
   display: inline-block;
@@ -567,10 +565,6 @@ NAV - vertical style//HOME 1
     height: auto;
   }
 
-
-
-
-  //*HERE2*//
   .mainmenu > ul > li.menu-item-has-children {
     position: relative;
     > a {
@@ -615,7 +609,6 @@ NAV - vertical style//HOME 1
       border : none;
     }
   }
-
 
   ///////MegaMenu
 
@@ -746,6 +739,4 @@ NAV - vertical style//HOME 1
   .mainmenu.main-nav7 > .dropdownMenu{
     top: 55px;
   }
-
-
 }

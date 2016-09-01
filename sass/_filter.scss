@@ -56,13 +56,13 @@
   }
 }
 
-.advanced-filters a::before, 
-.advanced-filters a::after {
+.advanced-filters a:before, 
+.advanced-filters a:after {
     content: "";
     display: block;
     position: absolute;
 }
-.advanced-filters a::before {
+.advanced-filters a:before {
     background-color: $color_white;
     border: 1px solid $color_mercury;
     height: 12px;
@@ -80,14 +80,12 @@
 .advanced-filters a:hover::after {
     background-color: $color_mercury;
 }
-.advanced-filter.active-filter a::after {
+.advanced-filter.active-filter a:after {
     background-color: $color_black;
 }
-.advanced-filter.active-filter a:hover::after {
+.advanced-filter.active-filter a:hover:after {
     background-color: $color_black;
     color: $color_white;
-    // content: "x";
-    // font-family: "icons";
     content: "\e870";
     @extend %jv-font-Linearicons;
     font-size: 8px;
@@ -99,13 +97,13 @@
     width: 12px;
 }
 
-.box-attr-filter .advanced-filters a::before {
+.box-attr-filter .advanced-filters a:before {
   top: 1px;
 }
-.box-attr-filter .advanced-filters a::after {
+.box-attr-filter .advanced-filters a:after {
   top: 4px;
 }
-.box-attr-filter  .advanced-filter.active-filter a:hover::after {
+.box-attr-filter  .advanced-filter.active-filter a:hover:after {
   top: 1px;
 }
 
@@ -196,8 +194,6 @@
   }
 }
 
-
-
 .attr-price-filter {
   display: inline-block;
 
@@ -211,10 +207,6 @@
     margin-bottom: 15px;
   }
 }
-
-
-
-
 
 
 @media (max-width: 767px){

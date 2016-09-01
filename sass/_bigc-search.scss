@@ -1,33 +1,25 @@
-// _bigc-search.scss
-
-  .search-form {
-    background: $color_white none repeat scroll 0 0;
-    border: 1px solid $color_mercury;
-    width: 490px;
-    height: 70px;
-    margin-right: -95px;
-    margin-top: 45px;
-    padding: 15px;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 99;
-
-    @include prefix(box-shadow, -1px 3px 5px -1px rgba($color_black, 0.1));
-
-  }
-
-
-
+.search-form {
+  background: $color_white none repeat scroll 0 0;
+  border: 1px solid $color_mercury;
+  width: 490px;
+  height: 70px;
+  margin-right: -95px;
+  margin-top: 45px;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 99;
+  @include prefix(box-shadow, -1px 3px 5px -1px rgba($color_black, 0.1));
+}
 .info-search {
   position: relative;
 
-   .search-form {
-      opacity: 0;
-      visibility: hidden;
-      @extend %jv-transition-easeout;
-   }
-
+  .search-form {
+    opacity: 0;
+    visibility: hidden;
+    @extend %jv-transition-easeout;
+  }
   &:hover {
     .search-form {
       opacity: 1;
@@ -40,15 +32,12 @@
       margin-top: 10px;
     }
   }
-
-
   &:after {
     background: $color_white none repeat scroll 0 0;
     border-color: $color_mercury;
     border-style: solid;
     border-width: 0 0 1px 1px;
     color: $color_mercury;
-    
     top: 100%;
     left: 0;
     margin-left: 2px;
@@ -56,20 +45,16 @@
     opacity: 0;
     visibility: hidden;
     z-index: 10;
-    
     width: 10px;
     height: 10px;
     position: absolute;
     content: "";
-
     @include prefix(transform, rotate(135deg));
     @extend %jv-transition-easeout;
   }
 }
-
 .search-form {
-  input[type="text"],
-  input[type="search"] {
+  input[type="text"], input[type="search"] {
     border: medium none;
     color: $color_dusty-gray;
     height: 100%;
@@ -80,7 +65,6 @@
     width: 100%;
   }
 }
-
 .wrap-toggle-search {
   border: 1px solid $color_mercury;
   height: 40px;
@@ -89,20 +73,14 @@
 }
 
 /*search category*/
-.search-form form{
+.search-form form {
   position: relative;
-  //fix autocomplete search
 }
-
 .search-form .btn-link-default {
   position: absolute;
-  // right: 15px;
-  // top: 15px;
-  //fix autocomplete search
-  right: 0 ;
+  right: 0;
   top: 0;
 }
-
 .toggle-search-category {
   display: block;
   height: 100%;
@@ -119,7 +97,6 @@
     z-index: 9;
   }
 }
-
 .toggle-category span {
   line-height: 40px;
 }
@@ -151,10 +128,8 @@
 }
 
 /*Header 3 - Search form 3*/
-
 .search-form.search-form3 {
-  input[type="text"],
-  input[type="search"] {
+  input[type="text"], input[type="search"] {
     border: 1px solid $color_mercury;
     border-radius: 6px;
     color: $color_dusty-gray;
@@ -162,19 +137,12 @@
     padding: 0 15px;
     position: absolute;
     width: 327px;
-    //fix autocomplete search
-    // left: 15px;
-    // top: 15px;
     left: 0;
     top: 0;
   }
-
   .btn-link-default {
     background: $color_curious-blue none repeat scroll 0 0;
     border-radius: 6px;
-    //fix autocomplete search
-    // top: 15px;
-    // right: 15px;
     top: 0;
     right: 0;
     padding: 0 20px;
@@ -184,8 +152,6 @@
     }
   }
 }
-
-
 .search-form3.search-form {
   background: $color_white none repeat scroll 0 0;
   border: medium none;
@@ -193,21 +159,16 @@
   box-shadow: 1px 3px 3px 1px rgba($color_black, 0.1);
   margin-right: -0px;
   margin-top: 35px;
-  // overflow: hidden;
   right: 0;
   width: 450px;
 }
-
 .info-search {
-
-  &:hover .search-form3.search-form{
-    margin-top:5px;
+  &:hover .search-form3.search-form {
+    margin-top: 5px;
   }
 }
 
-
 /*seach form 7*/
-
 .search-form7 {
   border-left: 1px solid $color_mercury-darker;
   display: inline-block;
@@ -216,22 +177,19 @@
   padding-left: 30px;
   width: 220px;
 
-  input[type="text"],
-  input[type="search"] {
+  input[type="text"], input[type="search"] {
     border: medium none;
     color: $color_dusty-gray;
     max-width: 165px;
   }
-
-  input[type="submit"],
-  button[type="submit"] {
+  input[type="submit"], button[type="submit"] {
     background: url('{{ "icon-search.png" | asset_url }}') no-repeat center center;
     border: medium none;
     display: inline-block;
     height: 16px;
     width: 16px;
-    
-    &.btn-link-default{
+
+    &.btn-link-default {
       line-height: 16px;
       text-indent: -9999px;
       padding: 0;
@@ -241,48 +199,40 @@
     padding-top: 15px;
   }
 }
-
-.search-result .search-form7{
+.search-result .search-form7 {
   line-height: 47px;
   border: 1px solid $color_mercury-darker;
   padding-left: 0;
 
-  >form{
+  >form {
     padding: 0;
   }
 }
-
-.search-form.search-form-blog{
+.search-form.search-form-blog {
   width: 100%;
   margin: 0;
   position: static;
 }
-
-.search-form.search-form-blog form{
+.search-form.search-form-blog form {
   height: 100%;
 }
-
-.search-form.search-form-blog input[type="search"]{
-    padding-left: 10px;
+.search-form.search-form-blog input[type="search"] {
+  padding-left: 10px;
 }
 
 /*
 Search auto completed
 */
-
-
 .search-results {
   z-index: 8889;
-  list-style-type: none;   
+  list-style-type: none;
   width: 242px;
   margin: 0;
   padding: 0;
   background: $color_white;
   border: 1px solid #e5e5e5;
-  
-  @include prefix(box-shadow,0px 4px 7px 0px rgba(0,0,0,0.1));
+  @include prefix(box-shadow, 0px 4px 7px 0px rgba(0, 0, 0, 0.1));
   @extend %jv-border-radius-4;
-
   overflow: hidden;
 }
 .search-results li {
@@ -303,7 +253,6 @@ Search auto completed
   width: 192px;
   padding-left: 8px;
   font-size: inherit;
-
   @extend %text-ellipsis;
   @extend %text-left;
 }
@@ -311,28 +260,26 @@ Search auto completed
   float: left;
   display: block;
   width: 32px;
-  height: 32px;    
+  height: 32px;
   margin: 3px 0 3px 3px;
   padding: 0;
   overflow: hidden;
   @extend %text-center;
 }
 
-
 /*Search page*/
-
 .header-static {
   position: relative;
   padding: 90px 0;
 
-   .search-form7 {
-      margin-top: 10px;
-      input[type="search"]{
-        background: transparent;
-        color: $color_white;
-      }
-   }
+  .search-form7 {
+    margin-top: 10px;
 
+    input[type="search"] {
+      background: transparent;
+      color: $color_white;
+    }
+  }
   .parallax-bg {
     background-attachment: fixed;
     background-position: 50% 0;
@@ -364,9 +311,8 @@ Search auto completed
     margin-bottom: 0;
   }
 }
-
-.info-search{
-  .search-form{
+.info-search {
+  .search-form {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: visibility 0s ease-in-out 0.4s, opacity 0.4s ease-in-out;
@@ -401,10 +347,8 @@ Search auto completed
       margin-top: 15px;
     }
   }
-
   .info-search.form-visible:after{
     opacity: 1;
     visibility: visible;
   }
-
 }

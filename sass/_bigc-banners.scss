@@ -1,8 +1,6 @@
 /***********************************************************************
             Banners         
 ************************************************************************/
-
-
 .banner-box {
   margin-bottom: 50px;
   overflow: hidden;
@@ -10,64 +8,52 @@
   @extend %text-up;
 }
 
-
-// NOTE: addition class
-%label_title-banner-box{
+%label_title-banner-box {
   border-radius: 4px;
   color: $color_white;
   display: inline-block;
   font-size: 30px;
 }
-
 .title-banner-box-yellow {
   margin: 0;
 
   > span {
     @extend %label_title-banner-box;
-    // background: $color_candlelight none repeat scroll 0 0;
     @extend %jv-bg-color-secondary-inverse;
     padding: 0 10px 3px;
   }
 }
-
 .title-banner-box-blue {
   margin: 0;
 
   > span {
     @extend %label_title-banner-box;
     @extend %jv-bg-color-secondary;
-    // background: $color_currious-blue-darker none repeat scroll 0 0;
     padding: 0 10px 4px;
   }
 }
-
 .title-banner-box-black {
   font-size: 24px;
   margin: 0;
 }
 
-//a contain image
 .banner-box-link {
   display: block;
   overflow: hidden;
   position: relative;
 }
-
 .banner-box {
-  .zoom-img,
-  .banner-box-link img {
+  .zoom-img, .banner-box-link img {
     width: 100%;
     @extend %jv-transition-easeout;
   }
   &:hover {
-    .zoom-img,
-    .banner-box-link img {
+    .zoom-img, .banner-box-link img {
       @extend %jv-transform-scale-115;
     }
   }
 }
-
-//Banner box style 1 -----------------
+/*Banner box style 1 -----------------*/
 
 .banner-style1 {
   .banner-box-info {
@@ -87,7 +73,6 @@
     z-index: 9;
     @extend %jv-transition-easeout;
   }
-  
   @include p-el(after, 0, 0) {
     bottom: 0;
     right: 0;
@@ -95,8 +80,7 @@
     z-index: 9;
     @extend %jv-transition-easeout;
   }
-
-  &:hover{
+  &:hover {
     &:after {
       width: 100%;
       height: 100%;
@@ -107,7 +91,6 @@
     }
   }
 }
-
 .banner-box.banner-style1 {
   &.box-center {
     margin: 0 -7px;
@@ -119,38 +102,30 @@
     margin-left: -14px;
   }
 }
-
-//Banner box style 2 -----------------
+/*Banner box style 2 -----------------*/
 
 .banner-style2 {
   .banner-box-title.banner-box-title-blue {
-    
     @extend %jv-bg-color-secondary;
-    
     margin: 0;
     padding: 2px 15px 5px;
     color: $color_white;
     @extend %text-center;
     @extend %jv-transition-easeout;
   }
-
   .title-banner-box-blue {
     font-size: 48px;
-    
     @extend %jv-color-secondary;
     margin: 0;
   }
-
   &:hover {
     .banner-box-title.banner-box-title-blue {
-      // background: $color_candlelight;
       @extend %jv-bg-color-secondary-inverse;
     }
     .banner-box-info {
       opacity: 1;
     }
   }
-
   .banner-box-info {
     position: absolute;
     top: 120px;
@@ -161,10 +136,8 @@
     @extend %text-center;
     @extend %jv-transition-easeout;
   }
-
 }
-
-//Banner box style 3 -----------------
+/*Banner box style 3 -----------------*/
 
 .title-banner-box {
   font-size: 18px;
@@ -177,16 +150,12 @@
     @extend %jv-color-secondary;
   }
 }
-
-
-.col-left .banner-box.banner-style3{
-    margin-right: -10px;
+.col-left .banner-box.banner-style3 {
+  margin-right: -10px;
 }
-.col-right .banner-box.banner-style3{
-    margin-left: -10px;
+.col-right .banner-box.banner-style3 {
+  margin-left: -10px;
 }
-
-
 .banner-box.banner-style3 {
   margin-bottom: 10px;
   overflow: visible;
@@ -212,7 +181,6 @@
       top: 0;
       @extend %jv-transition-easeout;
     }
-
     @include p-el(after, 0, 0) {
       border-right: 36px solid transparent;
       border-top: 36px solid $color_white;
@@ -221,9 +189,7 @@
       @extend %jv-transition-easeout;
       opacity: 0;
     }
-   
   }
-
   &:hover {
     box-shadow: 4px 4px 4px -1px rgba($color_black, 0.1);
 
@@ -240,9 +206,7 @@
     }
   }
 }
-
-
-// banner-adv-product
+/* banner-adv-product*/
 .banner-adv-product {
   margin: 50px 0 20px;
 }
@@ -251,7 +215,6 @@
 .advert {
   margin-top: 10px;
 }
-
 .item-advert {
   position: relative;
   overflow: hidden;
@@ -262,22 +225,16 @@
   &.right {
     margin-left: -10px;
   }
-
   .thumb-adv img {
     @extend %jv-transition-easeout;
   }
-
   &:hover .thumb-adv img {
     filter: blur(5px);
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
-    
     @extend %jv-transform-scale-115;
   }
-
 }
-
-
 .text-adv {
   background: rgba(246, 246, 246, 0.65) none repeat scroll 0 0;
   border-bottom: 1px solid rgba($color_black, 0.1);
@@ -299,7 +256,6 @@
   }
 }
 
-
 /*Featured*/
 .sub-title {
   font-size: 16px;
@@ -313,13 +269,10 @@
   margin: 0;
   @extend %text-up;
 }
-
-
 .desc-title {
   color: $color_dusty-gray;
   @extend %text-up;
 }
-
 .leading-text-adv {
   bottom: 0;
   color: $color_white;
@@ -333,7 +286,6 @@
   top: 0;
   width: 100%;
 }
-
 .item-text-adv {
   top: 100%;
   color: $color_white;
@@ -349,7 +301,6 @@
   @extend %jv-transition-easeout;
   z-index: 999;
 }
-
 //NOTE:home4
 .item-box-adv {
   .btn-link-default span {
@@ -364,12 +315,11 @@
     @extend %text-center;
     @extend %jv-transition-easeout;
 
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
   }
-  
-  &:hover{
+  &:hover {
     .btn-link-default span {
       width: 100%;
     }
@@ -386,7 +336,6 @@
       width: 100%;
       height: 100%;
     }
-
   }
 }
 
@@ -394,15 +343,39 @@
 .product-advert {
   margin-top: 40px;
 }
-
 .leading-box-adv {
   color: $color_white;
 }
-
+.leading-text-adv {
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    @extend %jv-transition-easeout;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    transition: all 0.3s ease-out 0s;
+  }
+  > a {
+    color: $color_white;
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
+.leading-box-adv:hover .leading-text-adv {
+  h3 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
 .product-advert .col-lg-3.col-md-3.col-sm-6.col-xs-12 {
   padding: 0;
 }
-
 .product-thumb-link {
   display: block;
   overflow: hidden;
@@ -413,7 +386,6 @@
     @extend %jv-transition-easeout;
   }
 }
-
 .product-box-adv {
   overflow: hidden;
   position: relative;
@@ -426,13 +398,10 @@
     @extend %text-center;
     @extend %jv-transition-easeout;
   }
-
   &:hover img {
-    
     @extend %jv-transform-scale-12;
   }
 }
-
 
 
 @media (max-width: 767px){

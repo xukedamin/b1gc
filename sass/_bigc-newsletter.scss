@@ -16,7 +16,8 @@
   }
 }
 .title-popup {
-  background: $color_casablanca none repeat scroll 0 0;
+  // background: $color_casablanca none repeat scroll 0 0;
+  @extend %jv-bg-color-primary;
   color: $color_white;
   font-size: 16px;
   font-weight: 700;
@@ -24,16 +25,12 @@
   padding: 13px 15px;
   @extend %text-up;
 }
-
 .newsletter-popup-thumb {
   @extend %text-center;
 }
-
 .content-popup {
-  // box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
-
 .newsletter-popup-info {
   > h3 {
     font-size: 16px;
@@ -45,7 +42,7 @@
   > p {
     color: $color_dove-gray;
   }
-  input[type="text"],input[type="email"] {
+  input[type="text"], input[type="email"] {
     border: 1px solid $color_mercury;
     color: $color_dusty-gray;
     height: 40px;
@@ -53,7 +50,8 @@
     width: 100%;
   }
   input[type="submit"] {
-    background: $color_casablanca none repeat scroll 0 0;
+    // background: $color_casablanca none repeat scroll 0 0;
+    @extend %jv-bg-color-primary;
     border: medium none;
     color: $color_white;
     height: 40px;
@@ -78,7 +76,6 @@
     font-weight: normal;
     margin: 0;
   }
- 
 }
 .box-header-intro {
   margin-bottom: 25px;
@@ -115,29 +112,22 @@
   display: none;
   z-index: 9999;
 }
-
-//
-.fancybox-close{
+.fancybox-close {
   top: 15px;
   right: -8px;
   background-image: none;
-  &:before{
+
+  &:before {
     content: "\e870";
     @extend %jv-font-Linearicons;
     color: $color_white;
-
   }
 }
-
-
 .newsletter-form-wrapper {
   background: $color_wild-sand none repeat scroll 0 0;
-  // border-bottom: 1px solid $color_mercury-darker;
   border-top: 1px solid $color_mercury-darker;
-  // margin-top: 40px;
   padding: 35px 0 0 0;
 }
-
 .newsletter-form {
   @extend %text-center;
 
@@ -149,7 +139,6 @@
   input[type="text"] {
     border-with: 1px;
     border-style: solid;
-    // border-color: $color_currious-blue-darker;
     @extend %jv-border-color-secondary;
     border-radius: 4px;
     color: $color_dusty-gray;
@@ -160,9 +149,7 @@
     margin: 5px 0;
   }
   input[type="submit"] {
-    // background: $color_currious-blue-darker none repeat scroll 0 0;
     @extend %jv-bg-color-secondary;
-    
     border: medium none;
     border-radius: 4px;
     color: $color_white;
@@ -181,7 +168,6 @@
   clear: left;
   width: 100%;
 }
-
 //footer newsletter
 .newsletter {
   border-bottom: 1px solid $color_mercury;
@@ -190,7 +176,6 @@
   .sub-title {
     margin-bottom: 20px;
   }
-  
   input[type="email"] {
     color: $color_dusty-gray;
     height: 40px;

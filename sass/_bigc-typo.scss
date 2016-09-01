@@ -1,37 +1,9 @@
-// _bigc-typo.scss
-.text-upper, .jv-dropcap {
+.text-upper, 
+.jv-dropcap {
   color: $color_mine-shaft;
   font-size: 30px;
 }
-.leading-text-adv {
-  h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
-    @extend %jv-transition-easeout;
-  }
-  h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 0;
-    transition: all 0.3s ease-out 0s;
-  }
-  > a {
-    color: $color_white;
-    display: inline-block;
-    text-decoration: underline;
-  }
-}
 
-//home 4
-.leading-box-adv:hover .leading-text-adv {
-  h3 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 20px;
-  }
-}
 
 /***********************************************************************
                         Headings&Separators             
@@ -42,7 +14,6 @@
 }
 .box-intro-background {
   background: $color_wild-sand none repeat scroll 0 0;
-  // margin-bottom: 100px;
   padding: 40px 0;
   @extend %text-center;
 
@@ -66,14 +37,13 @@
     margin-bottom: 70px;
   }
   > h2 {
-    
     @extend %jv-color-secondary;
     font-size: 40px;
     margin-bottom: 80px;
     font-family: 'Oswald', sans-serif;
   }
   h3 {
-   @extend %jv-color-primary;
+    @extend %jv-color-primary;
     font-size: 24px;
     font-family: "Open Sans", sans-serif;
     margin-bottom: 80px;
@@ -85,8 +55,6 @@
     margin-bottom: 80px;
   }
 }
-
-
 .box-intro {
   margin-bottom: 30px;
   @extend %text-center;
@@ -101,7 +69,6 @@
       top: 17px;
     }
   }
-
   .title {
     background: $color_white none repeat scroll 0 0;
     display: inline-block;
@@ -109,16 +76,14 @@
     padding: 0 40px;
     position: relative;
   }
-
 }
-.box-intro.left{
-   @extend %text-left;
-   .title {
-      padding-left: 0;
-   }
+.box-intro.left {
+  @extend %text-left;
+
+  .title {
+    padding-left: 0;
+  }
 }
-
-
 .item-box-sub {
   background: $color_white none repeat scroll 0 0;
   border: 1px solid $color_mercury;
@@ -131,7 +96,6 @@
   z-index: 9;
   margin-top: 30px;
   margin-left: -65px;
-
   opacity: 0;
   visibility: hidden;
   @extend %jv-transition-easeout;

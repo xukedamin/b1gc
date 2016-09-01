@@ -52,7 +52,6 @@
   }
 }
 
-
 .team-social-network {
   margin-left: -2px;
   margin-top: 20px;
@@ -77,7 +76,6 @@
       }
 
     &:hover {
-      // background: $color_currious-blue-darker;
       @extend %jv-bg-color-secondary;
       color: $color_white;
     }
@@ -85,10 +83,8 @@
 }
 
 .team-cirle-image {
-  
   @extend %jv-border-radius-50;
   @extend %jv-transition-easeout;
-  // width:100%;
   width: 270px;
   height: 270px;
 }
@@ -114,9 +110,6 @@
     }
   }
 }
-
-
-
 
 .info-circle-thumb {
   left: 0;
@@ -242,7 +235,6 @@
 .team-circle-thumb > img {
     width: 100%;
 }
-
 
 @media only screen and (max-width: 767px) {
   .team-circle-thumb{

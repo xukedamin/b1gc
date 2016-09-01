@@ -1,5 +1,3 @@
-// _bigc-brand.scss
-
 /*The Brand*/
 .the-brand {
   margin-top: 35px;
@@ -17,9 +15,7 @@
     bottom: -40px;
     left: 0;
   }
-
 }
-
 .item-brand-text {
   margin-top: 25px;
 }
@@ -27,23 +23,20 @@
   margin-bottom: 26px;
   margin-top: 20px;
 }
-
-.item-product-thumb{
+.item-product-thumb {
   &.item-left {
     margin-right: -5px;
   }
-
   &.item-right {
     margin-left: -5px;
   }
 }
-
-.the-brand .item-product-thumb img{ 
+.the-brand .item-product-thumb img {
   min-height: 400px;
 }
-
 .item-brand-thumb {
   overflow: hidden;
+
   img {
     @extend %jv-transition-easeout;
   }
