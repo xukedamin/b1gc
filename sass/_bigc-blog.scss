@@ -32,7 +32,7 @@
   }
   .download-catalog {
     background: $color_white none repeat scroll 0 0;
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     display: inline-block;
     height: 40px;
     line-height: 40px;
@@ -43,14 +43,15 @@
 
     &:hover {
       color: $color_white;
-      background: $color_shark;
+      @extend %jv-bg-color-primary-inverse;
     }
   }
 }
 .catalog {
   overflow: hidden;
 }
-.latest-post-content:before, .content-catelog:before {
+.latest-post-content:before, 
+.content-catelog:before {
   content: "";
   @extend %jv-bg-color-primary;
   position: absolute;
@@ -81,7 +82,7 @@
     margin: 28px 0 17px;
 
     a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
       font-size: 13px;
       @extend %text-up;
     }
@@ -141,10 +142,10 @@
     bottom: -21px;
     font-size: 16px;
     background: $color_white;
-    color: $color_shark;
     padding: 11px;
     margin-left: 5px;
     display: inline-block;
+    @extend %jv-color-primary-inverse;
     @extend %jv-transform-translateX-50;
     @extend %text-center;
     @extend %jv-border-radius-50;
@@ -181,7 +182,7 @@
   @extend %text-center;
 
   h2 {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     font-size: 30px;
     font-weight: bold;
     margin: 0 0 10px;
@@ -232,7 +233,6 @@
 
     &:hover {
       span {
-        // color: $color_casablanca;
         @extend %jv-color-primary;
       }
     }
@@ -323,7 +323,7 @@
   }
 }
 .post-title {
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
   font-size: 16px;
   margin: 0 0 20px;
   text-shadow: 0 0 0;
@@ -362,7 +362,7 @@
       line-height: 24px;
 
       &:hover {
-        color: $color_shark;
+        @extend %jv-color-primary-inverse;
       }
     }
   }
@@ -526,7 +526,6 @@
   }
 }
 .comment-reply {
-  // color: $color_casablanca;
   @extend %jv-color-primary;
 }
 .post-comment-reply {
@@ -576,7 +575,7 @@
   @extend %text-up;
 
   a {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     text-shadow: 0 0 0;
 
     &:hover {
@@ -586,7 +585,7 @@
 }
 .blog-list-info {
   .readmore {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     display: inline-block;
     margin-top: 5px;
     padding-left: 20px;
@@ -641,8 +640,8 @@
 .item-blog-list .video-container iframe {
   height: 183px;
 }
-//pagination
 
+//pagination
 .post-pagi-nav {
   border-top: 1px solid $color_mercury;
   padding-top: 30px;
@@ -833,7 +832,6 @@ ul.blog-related {
 
 /*blog template shortcode*/
 .latest-post {
-  // background: $color_wild-sand none repeat scroll 0 0;
   margin-top: 15px;
 }
 .item-latest-post {
@@ -928,7 +926,7 @@ ul.blog-related {
 }
 .latest-post-content .readmore {
   background: $color_white none repeat scroll 0 0;
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
   display: inline-block;
   height: 40px;
   line-height: 40px;
@@ -938,7 +936,7 @@ ul.blog-related {
   @extend %jv-transition-easeout;
 
   &:hover {
-    background: $color_shark none repeat scroll 0 0;
+    @extend %jv-bg-color-primary-inverse;
     color: $color_white;
   }
 }
@@ -961,7 +959,7 @@ ul.blog-related {
 
 /*blog single slider*/
 .wrap-latest-news-slider {
-  background: $color_shark none repeat scroll 0 0;
+  @extend %jv-bg-color-primary-inverse;
   padding: 100px 0;
   position: relative;
 }
@@ -995,7 +993,7 @@ ul.blog-related {
     font-weight: normal;
 
     h3 a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
 
       &:hover {
         color: $color_dusty-gray;

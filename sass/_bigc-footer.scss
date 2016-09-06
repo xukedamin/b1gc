@@ -3,7 +3,7 @@
   margin-top: 50px;
   padding: 55px 0 35px;
   a:hover {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
   }
 }
 
@@ -41,7 +41,7 @@
     @extend %jv-transition-easeout;
 
     &:hover {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
     }
   }
 }
@@ -64,7 +64,7 @@
 .copyright {
   color: $color_dove-gray;
   a {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
 
     &:hover {
       color: $color_dusty-gray;
@@ -99,7 +99,7 @@
   .menu-footer {
     margin: 0;
     a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
       &:hover {
         @extend %jv-color-secondary;
       }
@@ -145,7 +145,7 @@
 }
 
 .social-network-sm .share-social a {
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
   font-size: 16px;
   margin-right: 7px;
 }
@@ -212,7 +212,7 @@
       &:hover {
         background: $color_white none repeat scroll 0 0;
         box-shadow: 0 0 0 2px $color_primary inset;
-        color: $color_shark;
+        @extend %jv-color-primary-inverse;
       }
     }
   }

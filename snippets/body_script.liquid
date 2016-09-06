@@ -13,6 +13,7 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
 {% if settings.ajax_cart_method != 'none' %}
 
   {{ 'handlebars.min.js' | asset_url | script_tag }}
+
   {% include 'ajax-cart-template' %}
   {{ 'ajaxify.js' | asset_url | script_tag }}
 
@@ -69,6 +70,7 @@ window.show_multiple_currencies = {{settings.show_multiple_currencies}};
 {% endif %}
 
 {{ 'jquery.bxslider.js' | asset_url | script_tag }}
+
 {{ 'shop.js' | asset_url | script_tag }}
 
 

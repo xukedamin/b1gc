@@ -16,7 +16,6 @@
 }
 .title-banner-box-yellow {
   margin: 0;
-
   > span {
     @extend %label_title-banner-box;
     @extend %jv-bg-color-secondary-inverse;
@@ -357,7 +356,7 @@
     font-size: 40px;
     font-weight: 700;
     margin: 0;
-    transition: all 0.3s ease-out 0s;
+    @extend %jv-transition-easeout;
   }
   > a {
     color: $color_white;

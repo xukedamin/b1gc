@@ -34,7 +34,7 @@
 	}
 }
 .list-button-box2 {
-	background: $color_shark none repeat scroll 0 0;
+	@extend %jv-bg-color-primary-inverse;
 	padding: 50px 0 40px;
 
 	.bt-link {
@@ -89,7 +89,7 @@
 
 .bt-style1:hover {
 	background: $color_white none repeat scroll 0 0;
-	box-shadow: 0 0 0 2px $color_shark inset;
+	box-shadow: 0 0 0 2px $color_primary-inverse inset;
 	@extend %jv-color-primary-inverse;
 }
 .bt-style2:hover {
@@ -100,8 +100,7 @@
 .bt-style3 {
 	padding: 5px;
 	width: 143px;
-	box-shadow: 0 0 0 1px $color_shark inset;
-
+	box-shadow: 0 0 0 1px $color_primary-inverse inset;
 	&:hover {
 		background-clip: content-box;
 	}
@@ -114,10 +113,10 @@
 	color: $color_white;
 }
 .bt-style6 {
-	box-shadow: 0 0 0 2px $color_shark inset;
+	box-shadow: 0 0 0 2px $color_primary-inverse inset;
 
 	&:hover {
-		background: $color_shark none repeat scroll 0 0;
+		@extend %jv-bg-color-primary-inverse;
 		box-shadow: none;
 		color: $color_white;
 	}
@@ -133,7 +132,7 @@
 }
 .bt-style8 {
 	background-clip: content-box;
-	box-shadow: 0 0 0 1px $color_shark inset;
+	box-shadow: 0 0 0 1px $color_primary-inverse inset;
 	padding: 5px;
 	width: 143px;
 
@@ -414,7 +413,7 @@
 	border-bottom: 3px double transparent;
 
 	&:hover {
-		border-bottom-color: $color_shark;
+		border-bottom-color: $color_primary-inverse;
 		text-decoration: none;
 		color: $color_dove-gray;
 	}
@@ -424,8 +423,8 @@
 	border-top: 1px solid transparent;
 
 	&:hover {
-		border-bottom-color: $color_shark;
-		border-top-color: $color_shark;
+		border-bottom-color: $color_primary-inverse;
+		border-top-color: $color_primary-inverse;
 		text-decoration: none;
 	}
 }
@@ -442,7 +441,7 @@
 		@extend %jv-transition-easeout;
 	}
 	@include p-el(after, 100%, 1px) {
-		background: $color_shark none repeat scroll 0 0;
+		@extend %jv-bg-color-primary-inverse;
 		left: 0;
 		bottom: 0;
 		@extend %jv-transition-easeout;
@@ -555,7 +554,9 @@
 }
 .link-style6 {
 	padding: 0 30px;
-	border: 1px solid $color_shark;
+	border-width: 1px;
+	border-style: solid ;
+	@extend %jv-border-color-primary-inverse;
 	text-decoration: none;
 
 	&:hover {
@@ -564,7 +565,7 @@
 	}
 }
 .link-style7 {
-	border-bottom: 3px double $color_shark;
+	border-bottom: 3px double $color_primary-inverse;
 	color: $color_dove-gray;
 	text-decoration: none;
 
@@ -576,8 +577,8 @@
 }
 .link-style8 {
 	text-decoration: none;
-	border-bottom: 1px solid $color_shark;
-	border-top: 1px solid $color_shark;
+	border-bottom: 1px solid $color_primary-inverse;
+	border-top: 1px solid $color_primary-inverse;
 
 	&:hover {
 		border-bottom-color: transparent;
@@ -893,7 +894,7 @@
 	}
 	.link-add-cart {
 		@extend .jv-link-add-cart-img;
-		background-color: $color_shark;
+		@extend %jv-bg-color-primary-inverse;
 
 		&:hover {
 			@extend %jv-bg-color-secondary;
@@ -957,7 +958,9 @@
 			right: 0;
 			bottom: 0;
 			margin: auto;
-			border: 1px solid $color_shark;
+			border-width: 1px;
+			border-style: solid;
+			@extend %jv-border-color-primary-inverse;
 			@extend %jv-border-radius-50;
 			@extend %jv-transition-easeout;
 		}
@@ -1019,7 +1022,9 @@
 			@extend %jv-bg-color-secondary;
 
 			&:before {
-				border: 1px solid $color_shark;
+				border-width: 1px;
+				border-style: solid;
+				@extend %jv-border-color-primary-inverse;
 				width: 38px;
 				height: 38px;
 			}
@@ -1085,7 +1090,9 @@
 			@extend %jv-color-primary-inverse;
 
 			&:before {
-				border: 3px solid $color_shark;
+				border-width: 3px;
+				border-style: solid;
+				@extend %jv-border-color-primary-inverse;
 				width: 52px;
 				height: 52px;
 			}
@@ -1121,7 +1128,9 @@
 			width: 52px;
 			height: 52px;
 			margin: auto;
-			border: 3px solid $color_shark;
+			border-width: 3px;
+			border-style: solid;
+			@extend %jv-border-color-primary-inverse;
 			@extend %jv-border-radius-50;
 			@extend %jv-transition-easeout;
 		}
@@ -1207,7 +1216,7 @@
 	}
 }
 .btn-link-default {
-	background: $color_shark none repeat scroll 0 0;
+	@extend %jv-bg-color-primary-inverse;
 	border: medium none;
 	color: $color_white;
 	display: inline-block;
@@ -1220,7 +1229,6 @@
 
 	&:hover {
 		color: $color_white;
-		// background: $color_casablanca;
 		@extend %jv-bg-color-primary;
 	}
 }
@@ -1271,10 +1279,10 @@
 	@extend %jv-transform-scale-0;
 
 	&:hover {
-		background: $color_bright-sun none repeat scroll 0 0;
+		@extend %jv-bg-color-secondary-inverse;
 	}
 }
-//bt-link bt-blue bt-radius bt-style23
+/* bt-link bt-blue bt-radius bt-style23 */
 .btn-submit-form {
 	@extend %jv-bg-color-secondary;
 	border: medium none;

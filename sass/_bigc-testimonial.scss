@@ -73,6 +73,7 @@ span.click-button {
     cursor: pointer;
   }
 }
+
 .left-open span.click-button:before, 
 .right-open span.click-button:before {
   @extend %jv-font-Linearicons;
@@ -113,7 +114,7 @@ span.click-button {
   @extend %jv-transition-easeout;
 }
 .testimonial-page-right {
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
   right: -100%;
   padding-left: 50px;
   @include prefix(transform, translateX(100%));
@@ -163,12 +164,12 @@ span.click-button {
   }
 }
 .left-open .item-testimonial.item-left .testimonial-job {
-  color: $color_shark;
-  border-top: 1px solid $color_shark;
+  @extend %jv-color-primary-inverse;
+  border-top: 1px solid $color_primary-inverse;
 }
 .right-open span.click-button, 
 .left-open .item-testimonial.item-left .testimonial-title a {
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
 }
 .right-open .item-testimonial.item-right .testimonial-job {
   color: $color_white;
@@ -235,11 +236,11 @@ span.click-button {
   }
   &.item-right {
     .testimonial-title a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
     }
     .testimonial-job {
-      color: $color_shark;
-      border-top: 1px solid $color_shark;
+      @extend %jv-color-primary-inverse;
+      border-top: 1px solid $color_primary-inverse;
     }
   }
   .testimonial-job {
@@ -380,7 +381,7 @@ span.click-button {
   position: relative;
 
   &:before {
-    background: $color_shark none repeat scroll 0 0;
+    @extend %jv-bg-color-primary-inverse;
     content: "";
     height: 100%;
     left: 0;
@@ -402,18 +403,16 @@ span.click-button {
 
 @media (max-width: 767px){
   .testimo-content-right {
-      padding: 30px 15px;
+    padding: 30px 15px;
   }
-
-  .info-testimo-author{
+  .info-testimo-author {
     top: 10px;
   }
-
   .testimo-avatar {
-      display: block;
-      margin: auto;
-      max-width: 100px;
-      max-height: 100px;
+    display: block;
+    margin: auto;
+    max-width: 100px;
+    max-height: 100px;
   }
 
   //two sides
@@ -440,7 +439,6 @@ span.click-button {
       color: $color_black;
   }
 
-  //
   .home-testimonial .home-directnav .owl-buttons{
     margin-top: 0;
   }

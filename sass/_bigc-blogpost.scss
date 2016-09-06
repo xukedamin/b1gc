@@ -152,12 +152,12 @@
 }
 .post-banner-text {
   @extend %jv-bg-color-primary;
+  @extend %text-center;
   bottom: 0;
   color: $color_white;
   left: 0;
   margin: 0;
   padding: 10px 15px;
   position: absolute;
-  @extend %text-center;
   width: 100%;
 }

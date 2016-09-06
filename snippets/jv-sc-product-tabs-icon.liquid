@@ -35,6 +35,7 @@
 	</div>
 
 	<div class="tab-content">
+	{% assign flag_atleast_one_tab_enable = false %}
 		{% for i in (1..4) %}
 			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
@@ -48,12 +49,17 @@
 					<div role="tabpanel" class="tab-pane fade  {% if i == 1 %} in active  {% else %} undefined {% endif %}" id="{{listProduct}}__product-tab-tab_{{ i }}">
 					{% include 'featured-row-content' with leading_product: false, leading_product_image:'', leading_time: '',  product_loadmore: settings[listProductShowMoreBtn]  %}
 					</div>
+					{% assign flag_atleast_one_tab_enable = true %}
 				{% endunless %}
-			{%elsif collections[featured_row] == empty %}
+				
+			{%elsif collections[featured_row] == empty and settings[featured_row_enable] %}
 				<p class="mb-30">Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; SC: P1-Tabs grid icon - Tab {{i}}</p>
 			{%endif %}
 
 		{% endfor %}
+		{%if flag_atleast_one_tab_enable == false %}
+			<p class="mb-30">Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; SC: P1-Tabs grid icon</p>
+    {% endif %}
 	</div>
 
 </div>

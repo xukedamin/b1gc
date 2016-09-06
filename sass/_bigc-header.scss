@@ -31,7 +31,8 @@ a.jvlogo {
   display: inline-block;
 
   h1 {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
+
     font-size: 36px;
     font-weight: 700;
     letter-spacing: -3px;
@@ -42,10 +43,10 @@ a.jvlogo {
 // .logo-home 
 .header1 .header__logo-wrapper
 {
-    background: $color_shark none repeat scroll 0 0;
+    @extend %jv-bg-color-primary-inverse;
+    @extend %text-center;
     max-width: 200px;
     padding: 10px;
-    @extend %text-center;
     width: 100%;
 }
 
@@ -189,7 +190,8 @@ a.jvlogo {
 #HEADER - SETTING
 ==============================================================================*/
 .top-header {
-  background: $color_shark none repeat scroll 0 0;
+  // background: $color_shark none repeat scroll 0 0;
+  @extend %jv-bg-color-primary-inverse;
   color: $color_white;
 
   h5 {
@@ -218,7 +220,7 @@ a.jvlogo {
 
 .top-left {
   .top-header {
-    background: $color_shark;
+    @extend %jv-bg-color-primary-inverse;
   }
   .language-box {
     display: inline-block;
@@ -260,8 +262,8 @@ a.jvlogo {
   @extend %jv-transition-easeout;
 }
 
-.language-box::after, 
-.currency-box::after {
+.language-box:after, 
+.currency-box:after {
   @extend %jv-arrow-up--bottom;
 }
 
@@ -311,7 +313,6 @@ a.jvlogo {
 
     &:after {
        content: '\e874';
-      /*chevron down*/
       @extend %jv-font-Linearicons;
       position: absolute;
       right: 20px;
@@ -508,7 +509,9 @@ a.jvlogo {
     }
   }
   .info-icon.icon-search {
-    border: 1px solid $color_shark;
+    border-width: 1px;
+    border-style: solid;
+    @extend %jv-border-color-primary-inverse;
     display: block;
     font-size: 18px;
     height: 32px;
@@ -529,8 +532,6 @@ a.jvlogo {
 .header.header3 {
   background: $color_alabaster none repeat scroll 0 0;
 }
-
-
 
 .box-info-user {
   background: $color_white none repeat scroll 0 0;
@@ -569,7 +570,7 @@ a.jvlogo {
     margin-left: 1px;
   }
   .info-icon {
-    background: $color_curious-blue none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
     border-radius: 6px;
     color: $color_white;
     display: block;
@@ -579,7 +580,7 @@ a.jvlogo {
     width: 40px;
 
     &:hover {
-      background: $color_bright-sun;
+       @extend %jv-bg-color-secondary-inverse;
     }
     sup {
       margin-left: 6px;
@@ -606,7 +607,7 @@ a.jvlogo {
         display: inline-block;
 
         &:hover {
-          color: $color_curious-blue;
+          @extend %jv-color-secondary;
         }
       }
       .lnr {
@@ -615,13 +616,15 @@ a.jvlogo {
       }
     }
   }
-  .currency-wrapper{
-   
-    padding: 0 10px;
-    .currency__title{
-      border-bottom: 1px solid $color_mercury;padding-bottom: 10px;padding-left: 10px;
-    }
+.currency-wrapper {
+  padding: 0 10px;
+
+  .currency__title {
+    border-bottom: 1px solid $color_mercury;
+    padding-bottom: 10px;
+    padding-left: 10px;
   }
+}
 }
 
 .box-info-user {
@@ -654,7 +657,7 @@ a.jvlogo {
       border-bottom: 1px solid $color_mercury;
 
       a {
-        color: $color_curious-blue;
+        @extend %jv-color-secondary;
       }
     }
   }
@@ -672,14 +675,14 @@ a.jvlogo {
   &.active {
     border-bottom: 1px solid $color_mercury;
     a {
-      color: $color_curious-blue;
+      @extend %jv-color-secondary;
     }
   }
 }
 
 
-.info-header3 .info-total>li::before,
-.info-header3 .info-total>li::after{
+.info-header3 .info-total>li:before,
+.info-header3 .info-total>li:after{
   display:none;
 }
 
@@ -873,7 +876,7 @@ a.jvlogo {
       width: 40px;
       line-height: 40px;
       text-align: center;
-      >span.lnr{
+      > span.lnr{
         font-size: 16px;    
         margin-right: 0;
         font-weight: 700;
@@ -1067,14 +1070,13 @@ a.jvlogo {
 
 @media only screen and (max-width: 480px) {
 
-  .header .search-form7 input[type="search"] {
-      max-width: 100px;
-  }
-
-  .header5 .search-results{
-    margin-left: -70px;
-    top: 50px;
-  }
+.header .search-form7 input[type="search"] {
+  max-width: 100px;
+}
+.header5 .search-results {
+  margin-left: -70px;
+  top: 50px;
+}
 
 }
 
@@ -1082,10 +1084,9 @@ a.jvlogo {
 @media only screen and (max-width: 360px) {
 
   .header .search-form7 input[type="search"] {
-      max-width: 50px;
+    max-width: 50px;
   }
-
-  .row-background{
+  .row-background {
     max-width: 300px !important;
     width: 300px !important;
   }

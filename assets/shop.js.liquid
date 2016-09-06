@@ -900,7 +900,7 @@ $(timber.init);
                 });
 
                 //single -> related products in tab --> must rebuild timecircle
-                jvbigC.goJVCountdown_load_rebuild(this);
+                // jvbigC.goJVCountdown_load_rebuild(this);
 
                });
             });
@@ -909,7 +909,6 @@ $(timber.init);
         //NEDD CHECK UNUSED
        if ($('.slider-owl-1-item-nav.arrow-style').length > 0) {
             // .product-slider.slider-owl-1-item-nav
-            //.post-gallery/ == page Post Slider
 
             $('.slider-owl-1-item-nav.arrow-style').each(function() {
 
@@ -1003,20 +1002,20 @@ $(timber.init);
         if ($('.slider-owl-single-item-nav').length > 0) {
             $('.slider-owl-single-item-nav').each(function() {
 
-              $(this).hide().imagesLoaded(function(){
-                $(this).show().find('.wrap-item').owlCarousel({
+              var $this = $(this);
+               $this.hide().imagesLoaded().done(function(){
+                 $this.show().find('.wrap-item').owlCarousel({
                     singleItem: true,
                     pagination: false,
                     lazyLoad : true,
                     navigation: true,
                     navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
-                  
                   });
-
+                  
                   //for featured-collection
-                  jvbigC.goJVCountdown_load_rebuild(this);
-
+                  // jvbigC.goJVCountdown_load_rebuild($this);
                 });
+               
             });
         }
         
@@ -1041,7 +1040,6 @@ $(timber.init);
         //.banner-slider-circle-hoztical
         //.banner-slider-circle-vertical
         //.banner-slider-rect-vertical
-        
         //.header-slider == slider 1
         if ($('.slider-owl-single-item-paging').length > 0) {
             $('.slider-owl-single-item-paging').each(function() {
@@ -1095,7 +1093,7 @@ $(timber.init);
                 });
 
                 // for product-tab-slider home 6 & new product
-                jvbigC.goJVCountdown_load_rebuild(this);
+                // jvbigC.goJVCountdown_load_rebuild(this);
               });
             });
         }
@@ -1125,52 +1123,54 @@ $(timber.init);
 
         //Home Product Single Featured Slider
         if ($('.home-featured-slider').length > 0) {
-            $('.home-featured-slider').each(function() {
+               $('.home-featured-slider').each(function() {
+                var $this = $(this);
+               
+               // $(this).hide().imagesLoaded().done(function(){
+                $this.hide().imagesLoaded().done(function(){
+                  
+                   // $('.home-featured-slider').show().find('.wrap-item').owlCarousel({
+                  $this.show().find('.wrap-item').owlCarousel({
+                      items: 1,
+                      itemsCustom: [
+                          [0, 1],
+                          [480, 1],
+                          [768, 1],
+                          [992, 1],
+                          [1200, 1]
+                      ],
+                      addClassActive: true,
+                      lazyLoad : true,
+                      pagination: true,
+                      navigation: true,
+                      navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
+                  });
 
-               $(this).hide().imagesLoaded(function(){
+                  // jvbigC.goJVCountdown_load_rebuild($this);
+               
+                  var first = $('.home-featured-slider .owl-theme .owl-controls .owl-page').first().index() + 1;
+                  var last = $('.home-featured-slider .owl-theme .owl-controls .owl-page').last().index() + 1;
+                  $('.control-paginav-featured-slider').prepend('<span class="first-num">' + first + '</span>');
+                  $('.control-paginav-featured-slider').append('<span class="last-num">' + last + '</span>');
 
-                $(this).show().find('.wrap-item').owlCarousel({
-                    items: 1,
-                    itemsCustom: [
-                        [0, 1],
-                        [480, 1],
-                        [768, 1],
-                        [992, 1],
-                        [1200, 1]
-                    ],
-                    addClassActive: true,
-                    lazyLoad : true,
-                    pagination: true,
-                    navigation: true,
-                    navigationText: ['<span class="lnr lnr-arrow-left-circle"></span>', '<span class="lnr lnr-arrow-right-circle"></span>']
-                });
+                  //Range with fixed maximum
+                  $(".control-paginav-featured-slider #slider-range-max").slider({
+                      range: "max",
+                      min: first,
+                      max: last,
+                      value: first,
+                      slide: function(event, ui) {
+                          $(".control-paginav-featured-slider #amount").text(ui.value);
+                          $('.home-featured-slider').find('.wrap-item').trigger('owl.goTo', ui.value);
+                      }
+                  });
 
-                jvbigC.goJVCountdown_load_rebuild(this);
-
-              
-            var first = $('.home-featured-slider .owl-theme .owl-controls .owl-page').first().index() + 1;
-            var last = $('.home-featured-slider .owl-theme .owl-controls .owl-page').last().index() + 1;
-            $('.control-paginav-featured-slider').prepend('<span class="first-num">' + first + '</span>');
-            $('.control-paginav-featured-slider').append('<span class="last-num">' + last + '</span>');
-            //Range with fixed maximum
-            $(".control-paginav-featured-slider #slider-range-max").slider({
-                range: "max",
-                min: first,
-                max: last,
-                value: first,
-                slide: function(event, ui) {
-                    $(".control-paginav-featured-slider #amount").text(ui.value);
-                    $('.home-featured-slider').find('.wrap-item').trigger('owl.goTo', ui.value);
-                }
-            });
-            $(".control-paginav-featured-slider #amount").text($(".control-paginav-featured-slider #slider-range-max").slider("value"));
-            $(".control-paginav-featured-slider #amount").appendTo($(".control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all"));
-
+                  $(".control-paginav-featured-slider #amount").text($(".control-paginav-featured-slider #slider-range-max").slider("value"));
+                  $(".control-paginav-featured-slider #amount").appendTo($(".control-paginav-featured-slider .ui-slider-handle.ui-state-default.ui-corner-all"));
+                
               });
+
             });
-
-
-
         }
 
     },
@@ -1454,6 +1454,72 @@ $(timber.init);
       }
     },
 
+    getOpts :function(ele) {
+       var id = $(ele).attr('id'),
+            canvascolor = $(ele).data('canvascolor'),
+            circlegbcolor = $(ele).data('circlegbcolor'),
+            ani = $(ele).data('ani'), 
+            time;
+      if($(ele).parent().hasClass('countdown--small')){
+        time = {
+            Days: {
+                text: '',
+                color: $(ele).data('datecolor'),
+                show: $(ele).data('dateshow')
+            },
+            Hours: {
+                text:  '',
+                color: $(ele).data('hourcolor'),
+                show: $(ele).data('hourshow')
+            },
+            Minutes: {
+                text: '',
+                color: $(ele).data('mincolor'),
+                show: $(ele).data('minshow')
+            },
+            Seconds: {
+                text: '',
+                color: $(ele).data('secshow'),
+                show: $(ele).data('secshow')
+            }
+        };
+      }
+      else{
+         time = {
+            Days: {
+                text: $(ele).data('datetext'),
+                color: $(ele).data('datecolor'),
+                show: $(ele).data('dateshow')
+            },
+            Hours: {
+                text:  $(ele).data('hourtext'),
+                color: $(ele).data('hourcolor'),
+                show: $(ele).data('hourshow')
+            },
+            Minutes: {
+                text: $(ele).data('mintext'),
+                color: $(ele).data('mincolor'),
+                show: $(ele).data('minshow')
+            },
+            Seconds: {
+                text: $(ele).data('sectext'),
+                color: $(ele).data('secshow'),
+                show: $(ele).data('secshow')
+            }
+        };
+      }
+
+      return {
+          time: time,
+          animation: ani,
+          fg_width: 0.03,
+          bg_width: 0,
+          text_size: 0,
+          circle_bg_color: canvascolor
+      };
+    },
+
+    
     goJVCountdown_load_rebuild: function(ele){
 
         $(ele).find('.jv-countdown').each(function(){
@@ -1464,7 +1530,12 @@ $(timber.init);
 
             if(var_date > today_date){
             //must rebuild countdown when changing the tabs  
-            $(this).TimeCircles().rebuild();
+
+          //  var opts = getOpts();
+            var opts = jvbigC.getOpts(this);
+            $(this).TimeCircles(opts).rebuild();
+
+            // $(this).TimeCircles().rebuild();
             
             //update circle to have the same dimension for w and h
             $(ele).find( ".time_circles div[class^='textDiv_']").each(function(){
@@ -1475,6 +1546,7 @@ $(timber.init);
 
         });
     },
+    
 
 
     goJVCountdown_tabClick_rebuild: function(){
@@ -1542,9 +1614,8 @@ $(timber.init);
       });
     }
 
-
-
   };
+
     
   $(document).ready(function() {
         
@@ -1576,6 +1647,8 @@ $(timber.init);
 
     //call
     window.t.go();
+    jvbigC.goJVCountdown();
+    jvbigC.goJVCountdown_tabClick_rebuild();
 
     jvbigC.btnLoadMore();
     jvbigC.goTestimonialLeftRight();
@@ -1584,7 +1657,6 @@ $(timber.init);
     jvbigC.goCategoryLightbox();
 
     jvbigC.goAttachToSliderBx();
-
     jvbigC.goAttachToSliderOwl();
 
     jvbigC.goMenuMobile();
@@ -1597,11 +1669,6 @@ $(timber.init);
     jvbigC.goFilterPriceSidebar();
 
     jvbigC.goChangeView();
-    
-    
-    jvbigC.goJVCountdown();
-
-    jvbigC.goJVCountdown_tabClick_rebuild();
 
     jvbigC.goToTop();
       
@@ -1610,7 +1677,7 @@ $(timber.init);
 
   //Window Load
   $(window).load(function() {
-   
+    
   });
 
 })(jQuery); // End of use strict

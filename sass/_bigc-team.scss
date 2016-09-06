@@ -37,7 +37,7 @@
     color:$color_currious-blue-darker;
     font-size:16px;
     &:hover{
-      color:$color_shark;
+        @extend %jv-color-primary-inverse;
     }
   }
   
@@ -62,12 +62,12 @@
     padding-right: 2px;
   }
   a {
-    background: $color_wild-sand none repeat scroll 0 0;
     @extend %jv-border-radius-50;
+    @extend %text-center;
+    background: $color_wild-sand none repeat scroll 0 0;
     color: $color_dove-gray;
     display: block;
     height: 34px;
-    @extend %text-center;
     width: 34px;
 
     @extend %jv-transition-easeout;
@@ -90,7 +90,7 @@
 }
 
 .team-circle-thumb {
-  background: $color_shark none repeat scroll 0 0;
+  @extend %jv-bg-color-primary-inverse;
   @extend %jv-border-radius-50;
   position: relative;
   cursor: pointer;
@@ -112,16 +112,16 @@
 }
 
 .info-circle-thumb {
+  @extend %jv-transform-scale-0;
+  @extend %jv-transition-easeout;
+  @extend %text-center;
   left: 0;
+  opacity: 0;
   padding: 50px 50px 0;
   position: absolute;
-  @extend %text-center;
   top: 0;
   visibility: hidden;
   width: 100%;
-  opacity: 0;
-  @extend %jv-transition-easeout;
-  @extend %jv-transform-scale-0;
   
   .desc{
   	color:$color_dusty-gray;
@@ -134,14 +134,14 @@
   margin-top: 20px;
 
   a {
+    @extend %jv-border-radius-50;
+    @extend %jv-transition-easeout;
+    @extend %text-center;
     background: $color_wild-sand none repeat scroll 0 0;
     color: $color_dove-gray;
     display: block;
     height: 34px;
-    @extend %text-center;
     width: 34px;
-    @extend %jv-transition-easeout;
-    @extend %jv-border-radius-50;
 
     &:hover {
       @extend %jv-bg-color-primary;;
@@ -162,7 +162,7 @@
   @extend %text-center;
 
   h3 a {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     font-size: 16px;
 
     &:hover {
@@ -184,12 +184,12 @@
   @extend %text-center;
 
   .team-circle-info {
+    @extend %jv-transition-easeout;
     background: $color_white none repeat scroll 0 0;
     bottom: -60px;
     left: 0;
     padding: 0 20px 15px;
     position: absolute;
-    @extend %jv-transition-easeout;
     width: 100%;
   }
   &:hover .team-circle-info {
@@ -198,7 +198,7 @@
   .desc{
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    @extend %text-ellipsis;
   }
 }
 

@@ -141,7 +141,7 @@
     top: 0;
   }
   .btn-link-default {
-    background: $color_curious-blue none repeat scroll 0 0;
+    @extend %jv-bg-color-secondary;
     border-radius: 6px;
     top: 0;
     right: 0;
@@ -212,12 +212,13 @@
   width: 100%;
   margin: 0;
   position: static;
-}
-.search-form.search-form-blog form {
-  height: 100%;
-}
-.search-form.search-form-blog input[type="search"] {
-  padding-left: 10px;
+
+  form {
+    height: 100%;
+  }
+  input[type="search"] {
+    padding-left: 10px;
+  }
 }
 
 /*

@@ -39,7 +39,7 @@
   padding: 65px;
 
   .locator-thumb-link {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     font-size: 60px;
     position: relative;
     @extend %jv-transition-easeout;
@@ -47,7 +47,6 @@
   }
   &:hover {
     .locator-thumb-link {
-      // color: $color_casablanca;
         @extend %jv-color-primary;
     }
   }
@@ -77,10 +76,9 @@
     color: $color_dove-gray;
   }
   .sub-title a {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
 
     &:hover {
-      // color: $color_casablanca;
       @extend %jv-color-primary;
     }
   }
@@ -110,7 +108,7 @@
     margin: 0 0 10px;
 
     a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
 
       &:hover {
         color: $color_dusty-gray;
@@ -209,7 +207,7 @@
   background-color: $color_mercury;
 }
 .bg-yellow {
-  @extend %jv-bg-color-primary
+  @extend %jv-bg-color-primary;
 }
 .bg-white {
   background: $color_white;

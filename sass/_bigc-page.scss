@@ -69,11 +69,7 @@ Page Detail
 .mfp-bg.mfp-fade {
   -webkit-backface-visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  @extend %jv-transition-easeout;
 }
 
 /* overlay animate in */
@@ -91,10 +87,7 @@ Page Detail
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  @extend %jv-transition-easeout;
 }
 /* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {

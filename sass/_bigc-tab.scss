@@ -20,18 +20,18 @@
 		float: none;
 
 		&.active a {
-			background: $color_shark;
+			@extend %jv-bg-color-primary-inverse;
 			color: $color_white;
 		}
 		a {
 			border: medium none;
 			border-radius: 0;
-			color: $color_shark;
+			@extend %jv-color-primary-inverse;
 			@extend %text-up;
 			@extend %jv-transition-easeout;
 
 			&:hover {
-				background: $color_shark;
+				@extend %jv-bg-color-primary-inverse;
 				color: $color_white;
 			}
 		}
@@ -69,8 +69,8 @@
 					top: 0;
 					left: 50%;
 					content: "";
-					background: $color_shark;
 					opacity: 0;
+					@extend %jv-bg-color-primary-inverse;
 					@extend %jv-transition-easeout;
 				}
 				&:after {
@@ -88,7 +88,7 @@
 					margin-right: 10px;
 				}
 				&:hover {
-					color: $color_shark;
+					@extend %jv-color-primary-inverse;
 					border: none;
 
 					&:before, &:after {
@@ -104,7 +104,7 @@
 				}
 			}
 			&.active > a {
-				color: $color_shark;
+				@extend %jv-color-primary-inverse;
 				border: none;
 
 				&:before, &:after {
@@ -133,18 +133,19 @@
 			margin-right: 2px;
 
 			> a {
+				
+				@extend %jv-border-radius-4;
+				@extend %jv-color-primary-inverse;
+				@extend %jv-transition-easeout;
+				@extend %text-up;
+				background: transparent;
+				border: none;
 				box-shadow: 0 0 0 1px $color_mercury inset;
-				border-radius: 4px;
-				color: $color_shark;
 				font-size: 13px;
 				line-height: inherit;
 				margin-right: 6px;
-				padding: 10px 25px;
-				background: transparent;
-				border: none;
 				overflow: hidden;
-				@extend %text-up;
-				@extend %jv-transition-easeout;
+				padding: 10px 25px;
 
 				&:before {
 					position: absolute;
@@ -158,7 +159,7 @@
 					@extend %jv-transition-easeout;
 				}
 				&:hover {
-					color: $color_shark;
+						@extend %jv-color-primary-inverse;
 					border: none;
 
 					&:before {
@@ -167,7 +168,7 @@
 				}
 			}
 			&.active > a {
-				color: $color_shark;
+					@extend %jv-color-primary-inverse;
 				border: none;
 
 				&:before {
@@ -189,7 +190,8 @@
 }
 .tab-content.tab-content-border {
 	border: 1px solid $color_mercury;
-	border-radius: 4px;
+	// border-radius: 4px;
+	@extend %jv-border-radius-4;
 	padding: 20px 25px 15px;
 }
 //from home 3
@@ -213,7 +215,7 @@
 			padding: 0;
 			position: relative;
 			text-transform: capitalize;
-			color: $color_shark;
+			@extend %jv-color-primary-inverse;
 		}
 		> a:hover, 
 		&.active > a {
@@ -224,7 +226,7 @@
 	}
 }
 .nav-tabs-bestsale .nav-tabs {
-	> li > a::after {
+	> li > a:after {
 		background: $color_silver-darker none repeat scroll 0 0;
 		content: "";
 		height: 12px;
@@ -255,7 +257,7 @@
 }
 .list-tab-title .nav > li > a {
 	border: medium none;
-	color: $color_shark;
+	@extend %jv-color-primary-inverse;
 	font-size: 13px;
 	padding: 0;
 	position: relative;
@@ -274,8 +276,8 @@
 	border: medium none;
 	color: $color_dusty-gray;
 }
-.list-tab-title .nav > li > a::after {
-	background: $color_shark none repeat scroll 0 0;
+.list-tab-title .nav > li > a:after {
+	@extend %jv-bg-color-primary-inverse;
 	bottom: -24px;
 	content: "";
 	height: 4px;
@@ -285,12 +287,14 @@
 	@extend %jv-transition-easeout;
 	opacity: 0;
 }
-.list-tab-title .nav > li > a:hover::after, 
-.list-tab-title .nav > li.active > a::after {
+.list-tab-title .nav > li > a:hover:after, 
+.list-tab-title .nav > li.active > a:after {
 	opacity: 1;
 	width: 100%;
 	left: 0;
 }
+
+
 .info-sale {
 	background: url('{{ "bg-sale.png" | asset_url }}') no-repeat;
 	position: relative;
@@ -307,10 +311,10 @@
 	}
 }
 //home 5
-.nav-tabs-filter  .nav-tabs > li.active > a, 
-.nav-tabs-filter  .nav-tabs > li.active > a:hover, 
-.nav-tabs-filter  .nav-tabs > li.active > a:focus, 
-.nav-tabs-filter  .nav-tabs > li > a:hover {
+.nav-tabs-filter .nav-tabs > li.active > a, 
+.nav-tabs-filter .nav-tabs > li.active > a:hover, 
+.nav-tabs-filter .nav-tabs > li.active > a:focus, 
+.nav-tabs-filter .nav-tabs > li > a:hover {
 	@extend %jv-bg-color-secondary;
 	@extend %jv-border-color-secondary;
 	color: $color_white;
@@ -319,16 +323,16 @@
 	margin: 0 10px 0 0;
 
 	> a {
+		@extend %jv-color-primary-inverse;
+		@extend %jv-border-radius-4;
+		@extend %jv-transition-easeout;
+		@extend %text-up;
 		background: $color_white none repeat scroll 0 0;
 		border: 1px solid $color_mercury;
-		border-radius: 4px;
-		color: $color_shark;
 		height: 36px;
 		line-height: 36px;
 		margin-right: 0;
 		padding: 0 23px;
-		@extend %text-up;
-		@extend %jv-transition-easeout;
 	}
 }
 .nav-tabs-filter .nav.nav-tabs {
@@ -352,10 +356,10 @@
 	.list-tab-title .nav > li > a{
 		line-height: 40px;
 		text-align: center;
-	}
-	.list-tab-title .nav > li > a::after 
-	{
-		bottom: 0;
+		&:after 
+		{
+			bottom: 0;
+		}
 	}
 
 	.product-tabs-grid-simple-wrapper.tab_style1 li{
@@ -366,19 +370,19 @@
 
 	.nav-tabs-default .nav.nav-tabs li {
 		display: block;
-	    border-color: $color_mercury;
-	    border-style: solid;
-	    border-width: 1px 0px 1px 0px;
+    border-color: $color_mercury;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
 	}
 
-	.nav-tabs-border.nav-tabs-block .nav-tabs>li{
+	.nav-tabs-border.nav-tabs-block .nav-tabs > li{
 		margin-bottom: 0;
 	}
 
-  .nav-tabs-border .nav-tabs>li:last-child{
+  .nav-tabs-border .nav-tabs > li:last-child{
     margin-bottom: 0;
   }
-  .nav-tabs-border .nav-tabs>li>a{
+  .nav-tabs-border .nav-tabs > li > a{
     margin-right: 0;
   }
 }

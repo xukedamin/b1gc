@@ -94,11 +94,11 @@ $color_border : $color_mercury;
 // $color_secondary : $color_currious-blue-darker;
 // $color_secondary-inverse : $color_candlelight;
 
-%jv-color-primary{
-	color: $color_primary !important;
-}
 %jv-bg-color-primary{
 	background-color: $color_primary;
+}
+%jv-color-primary{
+	color: $color_primary !important;
 }
 %jv-border-color-primary{
 	border-color: $color_primary;

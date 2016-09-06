@@ -87,7 +87,7 @@
     opacity: 1;
     padding: 0;
     width: 36px;
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     @extend %jv-border-radius-50;
   }
   li {
@@ -168,7 +168,15 @@
     }
   }
   .product-quick-view {
-    @extend %jv-color-secondary;
+
+    &.action{
+      @extend %jv-bg-color-secondary;
+      @extend %text-center;
+    }
+    @extend %jv-border-radius-50;
+    @extend %jv-transform-scale-05;
+    @extend %jv-transition-easeout;
+    @extend %text-up;
     bottom: 0;
     color: $color_white;
     display: block;
@@ -176,18 +184,12 @@
     left: 0;
     line-height: 130px;
     margin: auto;
+    opacity: 0;
+    padding: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 130px;
-    opacity: 0;
-    @extend %text-center;
-    @extend %text-up;
-    @extend %jv-border-radius-50;
-    @extend %jv-transition-easeout;
-    @extend %jv-transform-scale-05;
-    padding: 0;
-    text-align: center;
 
     [class*="lnr-"] {
       font-size: 20px;
@@ -210,7 +212,7 @@
     margin: 15px 0 10px;
 
     a {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
       @extend %text-up;
 
       &:hover {
@@ -270,13 +272,13 @@
 
   .info-icon.icon-cart {
     @extend %jv-bg-color-secondary;
-    color: $color_white;
-    display: block;
-    position: relative;
-    height: 56px;
-    width: 56px;
     @extend %jv-border-radius-50;
     @extend %text-center;
+    color: $color_white;
+    display: block;
+    height: 56px;
+    position: relative;
+    width: 56px;
 
     span {
       font-size: 18px;
@@ -379,7 +381,7 @@
     @extend %jv-transition-easeout;
 
     &:hover {
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
     }
   }
   .product-compare {
@@ -394,6 +396,7 @@
     margin: 0;
     padding: 0 20px;
     width: auto;
+    color: $color_white;
 
     span.text {
       display: inline-block;

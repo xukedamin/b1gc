@@ -39,7 +39,8 @@ Page Grid
   }
   a {
     border: 1px solid $color_mercury;
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
+
     display: block;
     height: 36px;
     line-height: 36px;
@@ -50,19 +51,24 @@ Page Grid
     &.active,
     &.collection-view--active {
       color: $color_white;
-      border: 1px solid $color_shark;
+      border-width: 1px;
+      border-style: solid;
+      @extend %jv-border-color-primary-inverse;
     }
     &.grid {
       background: transparent url('{{ "icon-grid.png" | asset_url }}') no-repeat scroll left 20px center;
     }
     &.grid.collection-view--active {
       background: $color_shark url('{{ "icon-grid-active.png" | asset_url }}') no-repeat scroll left 20px center;
+      @extend %jv-bg-color-primary-inverse;
     }
     &.list {
       background: transparent url('{{ "icon-list.png" | asset_url }}') no-repeat scroll left 20px center;
-    }
+
+    } 
     &.list.collection-view--active {
       background: $color_shark url('{{ "icon-list-active.png" | asset_url }}') no-repeat scroll left 20px center;
+      @extend %jv-bg-color-primary-inverse;
     }
   }
 }
@@ -74,7 +80,7 @@ Page Grid
     background: $color_white none repeat scroll 0 0;
     border-radius: 0;
     border: 1px solid $color_mercury;
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     display: inline-block;
     font-family: open sans;
     font-size: 13px;
@@ -104,7 +110,7 @@ Page Grid
 
   .filter-selected {
     border: 1px solid $color_mercury;
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     display: block;
     height: 36px;
     line-height: 36px;
@@ -135,7 +141,6 @@ Page Grid
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
   border: 1px solid $color_supernova;
-  // color: $color_casablanca;
   @extend %jv-color-primary;
   font-weight: normal;
 }
@@ -169,7 +174,7 @@ Page Grid
   .item-paginate {
     > * {
       border: 1px solid $color_mercury;
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
       display: block;
       height: 36px;
       line-height: 36px;
@@ -181,8 +186,8 @@ Page Grid
     &.active > *, 
     &:hover > * {
       color: $color_white;
-      border-color: $color_shark;
-      background-color: $color_shark;
+      @extend %jv-border-color-primary-inverse;
+      @extend %jv-bg-color-primary-inverse;
     }
     &.disabled {
       opacity: 0.5
@@ -218,7 +223,6 @@ Page Grid Mr
     a {
       color: $color_shark;
       position: relative;
-
       &:hover {
         color: $color_dusty-gray;
       }
@@ -262,14 +266,12 @@ Page Grid Mr
     padding: 0;
 }
 .ui-slider-range.ui-widget-header.ui-corner-all {
-    // background: $color_casablanca none repeat scroll 0 0;
     @extend %jv-bg-color-primary;
 }
 .ui-slider-handle.ui-state-default.ui-corner-all {
     background: $color_white none repeat scroll 0 0;
     border-width: 2px;
     border-style: solid;
-    // border-color: $color_casablanca;
     @extend %jv-border-color-primary;
 
     border-radius: 0;
@@ -413,8 +415,10 @@ Page Product List
   @extend %jv-transition-easeout;
 
   &:hover {
-    background: $color_shark none repeat scroll 0 0;
-    border: 1px solid $color_shark;
+    border-width: 1px;
+    border-style: solid;
+    @extend %jv-bg-color-primary-inverse;
+    @extend %jv-border-color-primary-inverse;
     color: $color_white;
   }
 }

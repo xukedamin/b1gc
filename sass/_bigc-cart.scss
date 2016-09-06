@@ -212,17 +212,17 @@
     margin-right: 10px;
   }
   > * {
+    @extend %jv-transition-easeout;
+    @extend %text-center;
+    @extend %text-up;
+    background: $color_shark;
+    border: medium none;
+    color: $color_white;
     display: inline-block;
-    width: 160px;
     height: 40px;
     line-height: 40px;
-    background: $color_shark;
-    color: $color_white;
-    @extend %text-center;
-    border: medium none;
     vertical-align: top;
-    @extend %text-up;
-    @extend %jv-transition-easeout;
+    width: 160px;
   }
   *:hover {
     @extend %jv-bg-color-primary;
@@ -240,7 +240,6 @@
     display: inline-block;
     height: 30px;
     line-height: 30px;
-    
     width: 30px;
     margin-bottom: 3px;
     @extend %text-center;
@@ -460,10 +459,9 @@
 }
 
 .shop-cart-list table thead th {
-      border-bottom-style: solid;
-      border-bottom-width: 2px;
-      @extend %jv-border-color-primary;
-
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  @extend %jv-border-color-primary;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -557,17 +555,15 @@
 
 .shop-cart-total {
   span.price {
-      letter-spacing: 0.05em;
-      text-align: right;
+    letter-spacing: 0.05em;
+    text-align: right;
   }
-
   h3.title {
-      margin-bottom: 40px;
-      font-size: 24px;
-      @extend %text-center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    @extend %text-center;
   }
 }
-
 .shop-cart-total .sub-total {
   margin-bottom: 20px;
 
@@ -599,7 +595,7 @@
 }
 
 .shop-cart-total .shipping {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 18px;
 
   &:after {
@@ -708,19 +704,18 @@
     }
   }
 }
-
 form.cart-page-form .list-button [class*="btn"] {
-    display: block;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-    height: 50px;
-    line-height: 50px
-}
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  height: 50px;
+  line-height: 50px;
 
-form.cart-page-form .list-button [class*="btn"]+[class*="btn"] {
-    margin-top: 10px
+  &+[class*="btn"] {
+    margin-top: 10px;
+  }
 }
 
 form.cart-page-form .cart-row-special {
@@ -729,24 +724,24 @@ form.cart-page-form .cart-row-special {
     font-size: 18px;
     font-weight: 300;
     line-height: 46px;
-    margin: 0 0 10px
+    margin: 0 0 10px;
   }
   textarea {
     display: block;
     height: 110px;
-    width: 100%
+    width: 100%;
   }
 }
 
 form.cart-page-form .additional-checkout-buttons {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 form.cart-page-form .shop-cart-total .total {
-  text-align: right
-}
-form.cart-page-form .shop-cart-total .total h4 {
-  display: inline-block;
-  margin: 0 10px 0 0
+  text-align: right;
+   h4 {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
 }
 form.cart-page-form .shop-cart-total span.price {
   display: inline-block;
@@ -756,14 +751,17 @@ form.cart-page-form .shop-cart-total span.price {
   padding-top: 22px;
   text-align: right
 }
+
 .cart-page-form .delivery-date {
   overflow: hidden;
   margin-bottom: 30px;
+
+  label {
+    display: block;
+    line-height: normal
+  }
 }
-.cart-page-form .delivery-date label {
-  display: block;
-  line-height: normal
-}
+
 form.cart-page-form .list-button .normal-btn, 
 form.cart-page-form .list-button a.border-btn {
   font-size: 11px;
@@ -824,7 +822,7 @@ form.cart-page-form .list-button br {
       margin-bottom: 30px
   }
 
-  //cart
+  // cart
   .shop-cart-total .button-wrapper a.border-btn {
       padding-left:50px;
       padding-right: 50px

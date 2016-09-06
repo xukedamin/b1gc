@@ -53,6 +53,7 @@
 	{% endif %}
 
 	<div class="product-grid tab-content">
+	{% assign flag_atleast_one_tab_enable = false %}
 		{% for i in (1..4) %}
 			{% capture featured_row_enable %}{{listProduct}}{{ i }}_enable{% endcapture %}
 			{% capture featured_row %}{{listProduct}}{{ i }}{% endcapture %}
@@ -62,23 +63,29 @@
 			{%capture leading_time%}{{listProduct}}{{i}}_product_time{%endcapture%}
       {% assign featured_row = settings[featured_row] %}
       
-      {%if collections[featured_row] == empty %}
+      {%if collections[featured_row] == empty and settings[featured_row_enable] %}
         <p class="theme-custom mb-30">
         Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; 
-        {%if listProduct == "sc_product_tab_grid_inline_" %} <b>SC: P6- Tab grid Leading style 2</b> {%else%} <b>SC: P5- Tab grid Leading style 1</b>{%endif%} - TAB {{i}}
-  to display products </p>
-        {%endif%}
+        {%if listProduct == "sc_product_tab_grid_inline_" %} 
+        <b>SC: P6- Tab grid Leading style 2</b> {%else%} <b>SC: P5- Tab grid Leading style 1</b>{%endif%} - TAB {{i}}  to display products </p>
+      {%endif%}
       
 			{% if collections[featured_row] != empty and settings[featured_row_enable] %}
-
         {% assign row_limit_setting = settings[row_limit_setting] | plus: 0  %}
         {% if collections[featured_row].all_products_count > 0 %}
           <div role="tabpanel" class="{{collections.featured_row.size}} tab-pane fade {% if i == 1 %} in active{% else %} undefined {% endif %}" id="{{listProduct}}_product-tabs-grid-tab_{{ i }}">
             {% include 'featured-row-content' with class_col: 'col-md-3 col-sm-6 col-xs-12'  with leading_product: true , leading_product_image:leading_product_image, leading_time: leading_time; quickview_big_enable:false  %}
            </div>
+           {% assign flag_atleast_one_tab_enable = true %}
         {% endif %}
 			{% endif %}
 		{% endfor %}
+
+			{%if flag_atleast_one_tab_enable == false %}
+				 <p class="theme-custom mb-30">
+        Select collection in <a class="color-primary" href="/admin/themes/{{ theme.id }}/settings">Customize theme</a> &gt; 
+        {%if listProduct == "sc_product_tab_grid_inline_" %} <b>SC: P6- Tab grid Leading style 2</b> {%else%} <b>SC: P5- Tab grid Leading style 1</b>{%endif%} to display products </p>
+      {% endif %}
 	</div>
 </div>
 

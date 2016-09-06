@@ -40,7 +40,7 @@
 
     a {
       background: rgba($color_white, 0.9) none repeat scroll 0 0;
-      color: $color_shark;
+      @extend %jv-color-primary-inverse;
       display: inline-block;
       float: left;
       font-size: 13px;
@@ -54,7 +54,7 @@
 
       &:before {
         position: absolute;
-        background: $color_shark;
+        @extend %jv-bg-color-primary-inverse;
         top: -3px;
         left: 0;
         width: 100%;
@@ -63,7 +63,8 @@
         content: "";
         @extend %jv-transition-easeout;
       }
-      &:hover::before, &.active::before {
+      &:hover::before, 
+      &.active::before {
         opacity: 1;
       }
       &.active {
@@ -84,11 +85,11 @@
       width: 7px;
 
       &:hover {
-        background: $color_shark;
+        @extend %jv-bg-color-primary-inverse;
       }
     }
     &.active span {
-      background: $color_shark;
+      @extend %jv-bg-color-primary-inverse;
     }
   }
   .owl-pagination {
@@ -207,7 +208,9 @@
 }
 
 // .home-directnav 
-.slider-directnav, .partner-slider-directnav, .partner-slider-paginav-buttonnav {
+.slider-directnav, 
+.partner-slider-directnav, 
+.partner-slider-paginav-buttonnav {
   .owl-theme .owl-controls .owl-buttons div {
     background: transparent none repeat scroll 0 0;
     border-radius: 0;
@@ -219,7 +222,6 @@
     padding: 0;
 
     &:hover {
-      // color: $color_casablanca;
         @extend %jv-color-primary;
     }
   }
@@ -239,9 +241,11 @@
   }
   .owl-theme .owl-controls .owl-buttons div {
     background: transparent none repeat scroll 0 0;
-    border: 1px solid $color_shark;
-    border-radius: 0;
-    color: $color_shark;
+    border-width: 1px;
+    border-style: solid;
+    @extend %jv-border-color-primary-inverse;
+    @extend %jv-color-primary-inverse;
+    @extend %jv-border-radius-0;
     display: inline-block;
     font-size: 10px;
     height: 24px;
@@ -252,10 +256,8 @@
     text-shadow: 0 0 0;
 
     &:hover {
-      // border-color: $color_casablanca;
-      // color: $color_casablanca;
-        @extend %jv-color-primary;
-        @extend %jv-border-color-primary;
+      @extend %jv-color-primary;
+      @extend %jv-border-color-primary;
     }
   }
 }
@@ -356,7 +358,6 @@
     }
     .owl-page.active span, 
     &.clickable .owl-page:hover span {
-      // background: $color_casablanca none repeat scroll 0 0;
       @extend %jv-bg-color-primary;
       opacity: 1;
     }
@@ -541,7 +542,7 @@
   &:hover {
     border-color: $color_casablanca;
     // color: $color_casablanca;
-      @extend %jv-bg-color-primary;
+      @extend %jv-color-primary;
   }
 }
 .banner-slider {

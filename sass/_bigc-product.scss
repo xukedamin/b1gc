@@ -13,7 +13,8 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .product-grid.tab-content .product-grid-item.col-md-3:nth-child(4n+1) {
   clear: none;
 }
-.product-grid.tab-content .product-grid-item.col-md-3:nth-child(4), .product-grid.tab-content .product-grid-item.col-md-3:nth-child(8) {
+.product-grid.tab-content .product-grid-item.col-md-3:nth-child(4), 
+.product-grid.tab-content .product-grid-item.col-md-3:nth-child(8) {
   clear: left;
 }
 .heading-row-wrapper {
@@ -32,9 +33,9 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   margin: 0 0 7px;
 
   a {
-    color: $color_shark;
-    text-shadow: 0 0 0;
+    @extend %jv-color-primary-inverse;
     @extend %text-up;
+    text-shadow: 0 0 0;
 
     &:hover {
       color: $color_dusty-gray;
@@ -148,12 +149,12 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .product-extra-link {
   .action {
     background: $color_white none repeat scroll 0 0;
-    color: $color_shark;
     display: inline-block;
     margin: auto;
     position: absolute;
     width: 40px;
     height: 40px;
+    @extend %jv-color-primary-inverse;
     @extend %text-center;
     @extend %jv-border-radius-50;
     @extend %jv-transition-easeout;
@@ -161,7 +162,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     z-index: 99;
     &:hover {
       color: $color_white;
-      background: $color_shark;
+      @extend %jv-bg-color-primary-inverse;
     }
     span {
       line-height: 40px;
@@ -265,7 +266,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     }
   }
   .readmore {
-    color: $color_shark;
+    @extend %jv-color-primary-inverse;
     display: block;
     margin-top: 10px;
     text-decoration: underline;
@@ -349,11 +350,10 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     background: rgba($color_white, 0.9) none repeat scroll 0 0;
 
     .action {
-      background: $color_shark;
+      @extend %jv-bg-color-primary-inverse;
       color: $color_white;
 
       &:hover {
-        // background: $color_casablanca;
         @extend %jv-bg-color-primary;
         color: $color_white;
       }
@@ -391,10 +391,13 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     }
   }
   .owl-theme .owl-controls .owl-buttons div {
+    @extend %jv-border-color-primary-inverse;
+    @extend %jv-border-radius-0;
+    @extend %jv-color-primary-inverse;
+    @extend %jv-transition-easeout;
     background: transparent none repeat scroll 0 0;
-    border: 1px solid $color_shark;
-    border-radius: 0;
-    color: $color_shark;
+    border-style: solid;
+    border-width: 1px;
     display: inline-block;
     font-size: 10px;
     height: 24px;
@@ -405,15 +408,12 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     text-shadow: 0 0 0;
     top: -66px;
     width: 24px;
-    @extend %jv-transition-easeout;
   }
   &:hover  .owl-theme .owl-controls .owl-buttons div {
     opacity: 1;
   }
   .owl-theme .owl-controls .owl-buttons div {
     &:hover {
-      // border-color: $color_casablanca;
-      // color: $color_casablanca;
         @extend %jv-color-primary;
         @extend %jv-border-color-primary;
     }
@@ -526,7 +526,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     position: absolute;
     top: 50%;
   }
-  ////new
+  /*new*/
 
   .bx-pager {
     @extend %text-center;
@@ -754,7 +754,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
   }
 }
 .btn.link-wishlist {
-  color: $color_shark;
+  @extend %jv-color-primary-inverse;
   padding: 0;
 }
 .info-extra button.btn.link-wishlist {
@@ -922,15 +922,15 @@ $canvas_color: #{'{{ settings.countdown_background_color }}'};
 $canvas__text_color: #{'{{ settings.countdown_text_color }}'};
 
 .time_circles > div {
-  position: absolute;
-  text-align: center;
-  top: 0 !important;
-  display: inline-block;
-  bottom: 0;
   @extend %jv-border-radius-50;
   @extend %text-center;
   background: $canvas_color none repeat scroll 0 0;
+  bottom: 0;
   color: $canvas__text_color;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  top: 0 !important;
 }
 .time_circles > div > h4 {
   margin: 0px;
@@ -963,7 +963,7 @@ $canvas__text_color: #{'{{ settings.countdown_text_color }}'};
   margin-top: 0;
 }
 
-///swatch color size
+/*swatch color size*/
 $width : 32px;
 $height : 32px;
 
@@ -1085,10 +1085,10 @@ $height : 32px;
     padding: 0 5px;
   }
   input:checked + label, label:hover {
+    @extend %jv-border-color-primary;
     @extend %jv-color-primary;
     border-style: solid;
     border-width: 1px;
-    @extend %jv-border-color-primary;
     font-weight: bold;
   }
   input:checked + label img, label:hover img {

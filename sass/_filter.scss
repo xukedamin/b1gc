@@ -12,7 +12,8 @@
   background: $color_white none repeat scroll 0 0;
   border: 1px solid $color_mercury-darker;
   border-radius: 4px;
-  color: $color_shark;
+  // color: $color_shark;
+  @extedn %jv-color-primary-inverse;
   display: block;
   float: left;
   height: 36px;
