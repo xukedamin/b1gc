@@ -832,6 +832,11 @@ a.jvlogo {
     }
   }
 
+  .header-slider.default-paginav{
+    float: left;
+    width: 100%;
+  }
+
   //header3
   .box-info-user{
     left: 50%;
@@ -1087,8 +1092,9 @@ a.jvlogo {
     max-width: 50px;
   }
   .row-background {
-    max-width: 300px !important;
-    width: 300px !important;
+    // max-width: 350px !important;
+    // width: 350px !important;
+    width: 100%;
   }
  
 }

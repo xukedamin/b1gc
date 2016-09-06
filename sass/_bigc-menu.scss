@@ -698,6 +698,7 @@ NAV - vertical style//HOME 1
 
   .nav-vertical {
     max-width: none;
+    margin-top: 0;
 
     > ul > li:before {
       display: block;
@@ -720,6 +721,13 @@ NAV - vertical style//HOME 1
   }
   .nav-vertical >.dropdownMenu {
     background-color: $color_black;
+    visibility: hidden;
+    display: none;
+    &.active{
+      visibility: visible;
+      display: block;
+    }
+
 
     li {
       border-bottom-color: rgba($color_white, 0.3) !important;

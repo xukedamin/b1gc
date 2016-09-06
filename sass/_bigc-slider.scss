@@ -675,6 +675,10 @@ div[class^='bannerslider'] .img {
   .bannerslider1 .img{
     max-height: 300px;
   }
+  .header-slider.default-paginav{
+    margin: 10px -10px 30px;
+  }
+
 
   //bannerslider2
   .bannerslider2 .item{
@@ -766,4 +770,11 @@ div[class^='bannerslider'] .img {
     width: 20px;
     height: 20px;
   }
+}
+
+@media (max-width: 360px){
+  .header-slider.default-paginav{
+    margin : 0;
+  }
+  
 }

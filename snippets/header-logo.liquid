@@ -7,8 +7,12 @@
 {%else %}
 	<span class="logo-table">
 		<span class="logo-table-cell">
-			<img src="{{ settings.logo_type_use | asset_url }}" alt="{{ shop.name }}"  class="logo-img hidden-xs">
-			<img src="{{ 'logo-mobile.png' | asset_url }}" alt="{{ shop.name }} logo-mobile"  class="logo-img mobile hidden visible-xs">
+			{%if settings.header_default == '1' %}
+				<img src="{{ settings.logo_type_use | asset_url }}" alt="{{ shop.name }}"  class="logo-img">
+			{%else%}
+				<img src="{{ settings.logo_type_use | asset_url }}" alt="{{ shop.name }}"  class="logo-img hidden-xs">
+				<img src="{{ 'logo-mobile.png' | asset_url }}" alt="{{ shop.name }} logo-mobile"  class="logo-img mobile visible-xs">
+			{%endif %}
 		</span>
 	</span>
 {% endif %}

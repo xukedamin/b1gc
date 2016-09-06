@@ -623,6 +623,11 @@
 
 @media only screen and (max-width: 767px) {
   //header1
+    .header-slider.default-paginav,
+   .header-banner{
+    float: left;
+    width: 100%;
+   }
   .home-box-extra-wrapper{
     position: absolute;
     top: 1px;
@@ -689,5 +694,23 @@
   .item-header-banner.box-left,
   .item-header-banner.box-right{
     margin: 10px 20px;
+  }
+
+  .control-paginav-featured-slider{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .item-header-banner.box-left,
+  .item-header-banner.box-right{
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 360x){
+  .header-banner{
+    margin: 0 !important;
+    
   }
 }

@@ -1,10 +1,7 @@
-
 {%if settings.header_top_bar_setting %}
-
 {% unless top_bar_myaccount_show != blank %}
 	{% assign top_bar_myaccount_show = true %}
 {% endunless %}
-
 {% unless top_bar_header_cart_show != blank %}
 	{% assign top_bar_header_cart_show = true %}
 {% endunless %}
@@ -12,10 +9,8 @@
 <div class="top-header">
 	<div class="container">
 		<div class="row">
-			<!-- <div class="col-md-4 col-sm-4 col-xs-7"> -->
 			<div class="pull-left">
 				<div class="top-left">
-					
 					{%if settings.header_top_bar_setting_lang %}
 					<div class="language-box">
 						<a href="#" class="language-link">En</a>
@@ -29,24 +24,17 @@
 						</div>
 					</div>
 					{%endif %}
-					
 					{%if settings.header_top_bar_setting_currency and settings.show_multiple_currencies%}
 						{% include 'currency-picker' %}
 					{% endif %}
-
 				</div>
 			</div>
-			<!-- <div class="col-md-8 col-sm-8 col-xs-5"> -->
 			<div class="pull-right">
 				<div class="top-right">
 					<ul class="list-inline">
-						
 						{% if shop.customer_accounts_enabled and top_bar_myaccount_show %}
 						<li class="info-user">
-
 			          {% if customer %}
-			          <!--   <ul class="dropdownMenu subrtl">
-			              <li> -->
 			                <a class="top-header__menu-title account-link" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
 			                  <span class="lnr lnr-user"></span> <span class="hidden-xs">{{ 'layout.customer.my_account' | t }}</span>
 			                </a>
@@ -56,36 +44,26 @@
 			                  <li><a href="/pages/wishlist"><span class="lnr lnr-heart"></span> {{ 'wishlist.title' | t }}</a></li>
 			                  <li><span class="lnr lnr-exit"></span>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
 			                </ul>
-			            <!--   </li>
-			            </ul> -->
 			          {% else %}
-			           <!--  <ul class="dropdownMenu pull-right subrtl">
-			              <li>  -->
-			              	<a href="/account/login" class="top-header__menu-title account-link">
-			                <span class="lnr lnr-user"></span> <span class="hidden-xs">{{ 'layout.customer.my_account' | t }}</span>
-			              </a>
-			              <ul class="inner-user-info">
-			                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
-			                {% if shop.customer_accounts_optional %}
-			                <li><span class="lnr lnr-select"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
-			                {% endif %}
-											
-			              </ul>
-			          <!--   </li>
-			          </ul> -->
+	              	<a href="/account/login" class="top-header__menu-title account-link">
+	                <span class="lnr lnr-user"></span> <span class="hidden-xs">{{ 'layout.customer.my_account' | t }}</span>
+	              </a>
+	              <ul class="inner-user-info">
+	                <li><span class="lnr lnr-lock"></span>{{ 'layout.customer.sign_in' | t | customer_login_link }}</li>
+	                {% if shop.customer_accounts_optional %}
+	                <li><span class="lnr lnr-select"></span>{{ 'layout.customer.register' | t | customer_register_link }}</li>
+	                {% endif %}
+									
+	              </ul>
 			        {% endif %}
-
 						</li>
 			      {% endif %}
-						
 						{% if settings.header_cart_enable and top_bar_header_cart_show %}
 						<li class="info-cart">
 		            <a href="#" class="top-header__menu-title mycart-link cart-toggle xs-text-hidden">
 		            	<span class="lnr-cart"></span> {{ 'cart.general.mycart' | t }}  <span class="number-cart-total cart-count {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
 		            </a>
-		            
 		            {% include 'mini-cart' %}
-					        
 						</li>
 					    {% endif %}
 					</ul>
