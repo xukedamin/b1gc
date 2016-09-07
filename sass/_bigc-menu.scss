@@ -446,6 +446,10 @@ NAV - vertical style//HOME 1
     left: 100%;
     width: 650px;
     background-image: none;
+
+    @include at-query(null, $preMedium, $postMedium) {
+      width: 490px;
+    }
   }
 }
 

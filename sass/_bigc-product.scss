@@ -713,6 +713,8 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
     margin-bottom: 1em;
     display: inline;
     font-weight: normal;
+    /*FF & Chrome*/
+    vertical-align: top;
     @extend %text-up;
   }
 }

@@ -20,7 +20,9 @@ a.color-primary, .heading-box h3, .bt-brown, .bt-style15:hover, .link-style14:be
   border-color: {{ settings.color_primary }};
 }
 
-.list-button-box2, .bt-black, .bt-primary-inverse, .bt-style5:hover, .bt-primary:hover, .btn-primary:hover, .bt-style6:hover, .bt-style7:hover, .bt-style9:hover, .bt-style16:hover, .bt-style17:hover, .bt-style18:hover, .bt-style19:hover, .bt-style31:hover, .bt-style35:hover, .bt-style36, .bt-style37:hover, .bt-style38:hover, .bt-style39:hover, .bt-style40, .jv-btn-icon:after, .link-style4:after, .link-style9:after, .link-style14:after, .link-style19:after, .btn-circle-box2 a, .btn-circle-box4 .link-add-cart:hover, .btn-circle-box44 .link-add-cart, .btn-link-default, .newsletter-popup-info input[type="submit"]:hover, .nav-tabs-default .nav.nav-tabs li.active a, .nav-tabs-default .nav.nav-tabs li a:hover, .nav-tabs-icon .nav-tabs > li > a:before, .list-tab-title .nav > li > a:after, .home-testimonial:before, .panel-group.accordion.style3 .panel-heading a:before, .nav-vertical li.menu-item-has-children > .sub-menu, .nav-vertical .dropdownMenu .mega-menu .mega-menu-content.sub-menu, .header1 .header__logo-wrapper, .top-header, .top-left .top-header, .product-extra-link .action:hover, .new-product .product-extra-link .action, .product-sort a.grid.collection-view--active, .product-sort a.list.collection-view--active, .product-pagi-nav .item-paginate.active > *, .product-pagi-nav .item-paginate:hover > *, .item-product-info .product-readmore:hover, .content-catelog .download-catalog:hover, .latest-post-content .readmore:hover, .wrap-latest-news-slider, .team-circle-thumb, .slider-tab #bx-pager a:before, .paginav-slider .owl-theme .owl-controls .owl-page span:hover, .paginav-slider .owl-theme .owl-controls .owl-page.active span, .home-extra-sub, .item-header-banner:hover .header-banner-title, .header-banner-title:after, .icon-home-share, .control-paginav-featured-slider .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+.list-button-box2, .bt-black, .bt-primary-inverse, .bt-style5:hover, .bt-primary:hover, .btn-primary:hover, .bt-style6:hover, .bt-style7:hover, .bt-style9:hover, .bt-style16:hover, .bt-style17:hover, .bt-style18:hover, .bt-style19:hover, .bt-style31:hover, .bt-style35:hover, .bt-style36, .bt-style37:hover, .bt-style38:hover, .bt-style39:hover, .bt-style40, .jv-btn-icon:after, .link-style4:after, .link-style9:after, .link-style14:after, .link-style19:after, .btn-circle-box2 a, .btn-circle-box4 .link-add-cart:hover, .btn-circle-box44 .link-add-cart, .btn-link-default, .newsletter-popup-info input[type="submit"]:hover, .nav-tabs-default .nav.nav-tabs li.active a, .nav-tabs-default .nav.nav-tabs li a:hover, .nav-tabs-icon .nav-tabs > li > a:before, .list-tab-title .nav > li > a:after, .home-testimonial:before, .panel-group.accordion.style3 .panel-heading a:before, .nav-vertical li.menu-item-has-children > .sub-menu, .nav-vertical .dropdownMenu .mega-menu .mega-menu-content.sub-menu, .header1 .header__logo-wrapper, .top-header, .top-left .top-header, .product-extra-link .action:hover, .new-product .product-extra-link .action, .product-sort a.grid.collection-view--active, .product-sort a.list.collection-view--active, .product-pagi-nav .item-paginate.active > *, .product-pagi-nav .item-paginate:hover > *, .item-product-info .product-readmore:hover, .content-catelog .download-catalog:hover, .latest-post-content .readmore:hover, .wrap-latest-news-slider, .team-circle-thumb, .header-slider .owl-theme .owl-controls .owl-page span:hover, .header-slider .owl-theme .owl-controls .owl-page.active span, .slider-tab #bx-pager a:before, .paginav-slider .owl-theme .owl-controls .owl-page span:hover, .paginav-slider .owl-theme .owl-controls .owl-page.active span, .slider-directnav .owl-theme .owl-controls .owl-page span,
+.partner-slider-directnav .owl-theme .owl-controls .owl-page span,
+.partner-slider-paginav-buttonnav .owl-theme .owl-controls .owl-page span, .banner-slider-circle-vertical .owl-theme .owl-controls .owl-page span, .home-extra-sub, .item-header-banner:hover .header-banner-title, .header-banner-title:after, .icon-home-share, .control-paginav-featured-slider .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
   background-color: {{ settings.color_primary_inverse }};
 }
 
@@ -3298,6 +3300,11 @@ span.click-button:hover {
   position: relative;
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .testimonial.two-sides .jv-heading .title {
+    color: {{ settings.color_primary_inverse }};
+  }
+}
 
 @media (max-width: 767px) {
   .testimo-content-right {
@@ -3456,6 +3463,11 @@ span.click-button:hover {
 }
 .jv-heading h2 {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 481px) {
+  .jv-heading .title {
+    font-size: 24px;
+  }
 }
 
 .jv-heading.box-intro h2 {
@@ -4132,6 +4144,11 @@ NAV - vertical style//HOME 1
   left: 100%;
   width: 650px;
   background-image: none;
+}
+@media screen and (min-width: 767px) and (max-width: 990px) {
+  .nav-vertical .dropdownMenu .mega-menu .mega-menu-content.sub-menu {
+    width: 490px;
+  }
 }
 
 .nav-vertical > ul > li:hover > a:before {
@@ -6448,6 +6465,7 @@ a.jvlogo {
 
   .header.header1 {
     padding-top: 20px;
+    max-height: 200px;
   }
 
   .header1 .header__logo-wrapper {
@@ -6458,6 +6476,8 @@ a.jvlogo {
     right: 16px;
     top: auto;
     bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
   }
 
   .header1 .mainmenu > .dropdownMenu {
@@ -7586,6 +7606,8 @@ a.jvlogo {
   margin-bottom: 1em;
   display: inline;
   font-weight: normal;
+  /*FF & Chrome*/
+  vertical-align: top;
 }
 
 .wrap-cart-detail .info-qty {
@@ -10671,9 +10693,6 @@ ul.blog-related .post-date {
   opacity: 1;
   width: 7px;
 }
-.header-slider .owl-theme .owl-controls .owl-page span:hover, .header-slider .owl-theme .owl-controls .owl-page.active span {
-  background: #000 none repeat scroll 0 0;
-}
 
 .home-slider {
   background: #eeeeee none repeat scroll 0 0;
@@ -10701,13 +10720,13 @@ ul.blog-related .post-date {
   width: 370px;
 }
 .slider-tab #bx-pager a:before {
+  content: "";
+  height: 3px;
+  left: 0;
+  opacity: 0;
   position: absolute;
   top: -3px;
-  left: 0;
   width: 100%;
-  height: 3px;
-  opacity: 0;
-  content: "";
 }
 .slider-tab #bx-pager a:hover::before, .slider-tab #bx-pager a.active::before {
   opacity: 1;
@@ -10851,7 +10870,7 @@ ul.blog-related .post-date {
 .partner-slider-directnav .owl-buttons,
 .partner-slider-paginav-buttonnav .owl-buttons {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: -50px;
 }
 
@@ -10950,7 +10969,6 @@ ul.blog-related .post-date {
   display: block;
 }
 .banner-slider-circle-vertical .owl-theme .owl-controls .owl-page span {
-  background: #1b1d1f none repeat scroll 0 0;
   display: block;
   height: 6px;
   margin: 4px 0;
@@ -12166,6 +12184,11 @@ section.one-child {
   position: relative;
   width: 100px;
 }
+@media screen and (min-width: 768px) {
+  .home-box-extra {
+    background-color: {{ settings.color_primary_inverse }};
+  }
+}
 .home-box-extra > div > a {
   color: #fff;
   display: block;
@@ -12334,7 +12357,7 @@ section.one-child {
 
 .icon-home-cart,
 .icon-home-search {
-  background: #3a3a3a none repeat scroll 0 0;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /*single slider product*/
@@ -12591,6 +12614,7 @@ section.one-child {
     top: 1px;
     right: 16px;
     padding: 0;
+    z-index: 99;
   }
 
   .home-box-extra {

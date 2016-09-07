@@ -8,6 +8,11 @@
   h2 {
     margin-bottom: 20px;
   }
+  .title{
+    @include at-query($max,$postSmall) {
+      font-size: 24px;
+    }
+  }
 }
 .jv-heading.box-intro h2 {
   margin-bottom: 0;
@@ -411,3 +416,4 @@
 .item-service-thumb > a span {
   line-height: 70px;
 }
+

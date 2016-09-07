@@ -70,7 +70,7 @@
 
     a {
       @include p-el(before, 14px, 14px) {
-        background: rgba($color_black, 0) url('{{ "add.png" | asset_url }}') no-repeat scroll center center;
+        background: transparent url('{{ "add.png" | asset_url }}') no-repeat scroll center center;
         display: block;
         left: 0;
         top: 17px;

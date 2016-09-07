@@ -854,6 +854,7 @@ a.jvlogo {
   //header 1
   .header.header1{
     padding-top: 20px;
+    max-height: 200px;
   }
   .header1 .header__logo-wrapper{
     max-width: 100%;
@@ -863,6 +864,8 @@ a.jvlogo {
     right: 16px;
     top: auto;
     bottom: 0;
+    background: rgba(255,255,255,0.1);
+    border: none;
   }
 
   .header1 .mainmenu > .dropdownMenu {

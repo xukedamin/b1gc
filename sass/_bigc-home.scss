@@ -132,6 +132,11 @@
   position: relative;
   width: 100px;
 
+  // @extend %jv-bg-color-primary-inverse;
+  @include at-query($min, $preLarge) {
+    background-color: $color_primary_inverse;
+  }
+
   > div > a {
     color: $color_white;
     display: block;
@@ -351,8 +356,7 @@
 }
 .icon-home-cart, 
 .icon-home-search {
-  background: $color_mine-shaft none repeat scroll 0 0;
-  // background: lighten( $color_primary-inverse, 10% );
+  background: rgba(255,255,255,0.1);
 }
 
 /*single slider product*/
@@ -633,6 +637,7 @@
     top: 1px;
     right: 16px;
     padding: 0;
+    z-index: 99;
   }
 
   .home-box-extra{

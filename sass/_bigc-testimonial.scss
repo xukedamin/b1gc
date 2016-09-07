@@ -398,6 +398,11 @@ span.click-button {
   .jv-heading {
     position: relative;
     color: $color_white;
+    .title{
+      @include at-query($max, $preMedium) {
+        color: $color_primary-inverse;
+      }
+    }
   }
 }
 
