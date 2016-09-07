@@ -548,11 +548,15 @@ NAV - vertical style//HOME 1
   }
   .mainmenu .dropdownMenu{
     padding: 0 15px;
+    visibility: hidden;
+    display: none;
   }
 
-  .mainmenu .active
+  .mainmenu .dropdownMenu.active
   {
     right: 0;
+    visibility: visible;
+    display: block;
   }
 
   .mainmenu > ul > li{

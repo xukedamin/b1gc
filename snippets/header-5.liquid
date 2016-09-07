@@ -23,21 +23,21 @@
 					{% if shop.customer_accounts_enabled %}
           	{% if customer %}
              <a class="link-login account-link nosub" href="/account" data-toggle="tooltip" title="{{ first_name.first_name }} " >
-             		<span class="lnr lnr-user hidden visible-xs"></span>
+             		<span class="lnr lnr-user visible-xs"></span>
                	<span class="hidden-xs">{{ 'layout.customer.my_account' | t }}</span>
               </a>
               <a href="/account/logout" class="link-signin">
-              	<span class="lnr lnr-exit hidden visible-xs"></span>
+              	<span class="lnr lnr-exit visible-xs"></span>
               	<span class="hidden-xs">{{ 'layout.customer.log_out' | t }}</span>
               </a>
               
            	{% else %}
            		<a href="/account/login" class="link-login account-link nosub">
-           			<span class="lnr lnr-user hidden visible-xs"></span>
+           			<span class="lnr lnr-user visible-xs"></span>
                 <span class="hidden-xs"> {{ 'layout.customer.sign_in' | t }}</span>
               </a>
               <a href="/account/register" class="link-signin">
-              	<span class="lnr lnr-select hidden visible-xs"></span>
+              	<span class="lnr lnr-select visible-xs"></span>
               	<span class="hidden-xs">{{ 'layout.customer.register' | t }}</span>
               </a>
            {% endif %}

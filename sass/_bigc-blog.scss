@@ -229,7 +229,8 @@
   @extend %text-up;
 
   a {
-    display: block;
+    display: inline-block;
+    @extend %jv-bg-color-primary-inverse;
 
     &:hover {
       span {
@@ -238,7 +239,7 @@
     }
   }
   span {
-    background: rgba($color_shark, 0.9) none repeat scroll 0 0;
+    background: rgba($color_white, 0.1) none repeat scroll 0 0;
     color: $color_white;
     display: inline-block;
     padding: 16px 20px;
@@ -1092,9 +1093,11 @@ ul.blog-related {
 }
 
 .popular-box-text.blog__color--custom
-.title-popular-box span{
-  color: #{'{{settings.sc_blog_masonry_slider_color_text_custom}}'} !important;
+.title-popular-box {
   background: #{'{{settings.sc_blog_masonry_slider_color_bg_custom}}'} !important;
+  span{
+    color: #{'{{settings.sc_blog_masonry_slider_color_text_custom}}'} !important;
+  }
 }
 
 /*

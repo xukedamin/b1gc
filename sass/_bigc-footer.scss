@@ -174,7 +174,8 @@
 }
 
 .footer.footer-dark {
-  background: $color_cod-gray none repeat scroll 0 0;
+  // background: $color_cod-gray none repeat scroll 0 0;
+  @extend %jv-bg-color-primary-inverse;
   color: $color_white;
   margin-top: 0;
 
