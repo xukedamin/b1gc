@@ -149,7 +149,8 @@
     padding: 0 20px;
 
     &:hover {
-      background: $color_sunglow;
+      // background: $color_sunglow;
+      @extend %jv-bg-color-secondary-inverse;
     }
   }
 }

@@ -118,7 +118,8 @@
     @include prefix(border-radius, 6px);
 
     &:hover {
-      background: $color_bright-sun;
+      // background: $color_bright-sun;
+      @extend %jv-bg-color-secondary-inverse;
     }
   }
 }
@@ -325,7 +326,8 @@
     display: inline-block;
 
     &:hover {
-      color: $color_bright-sun;
+      // color: $color_bright-sun;
+      @extend %jv-color-secondary-inverse;
     }
   }
 }

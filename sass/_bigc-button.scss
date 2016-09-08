@@ -1239,7 +1239,8 @@
 	margin: 30px auto auto;
 	width: 300px;
 	.btn-link-default.btn-link-loadmore:hover {
-		background: $color_bright-sun;
+		// background: $color_bright-sun;
+		@extend %jv-bg-color-secondary-inverse;
 	}
 }
 //banners

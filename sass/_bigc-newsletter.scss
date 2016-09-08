@@ -158,7 +158,8 @@
     padding: 0 25px;
 
     &:hover {
-      background: $color_bright-sun;
+      // background: $color_bright-sun;
+      @extend %jv-bg-color-secondary-inverse;
     }
   }
 }
