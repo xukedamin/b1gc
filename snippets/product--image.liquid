@@ -7,21 +7,15 @@
     </div>
     {% if product.images.size > 1 %}
     <div class="" id="productThumbs">
-      
-      
       <div class="" id="bx-pager">
-
       {% for image in product.images %}
         <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb">
           <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
         </a>
-       
       {% endfor %}
       </div>
-
     </div>
     {% endif %}
-
   </div>
 
 {% else %}
@@ -32,42 +26,27 @@
 
   <div class="product-thumbnail-slider product-gallery no-zoom">
     <div class="product-photo-container bxslider" id="productPhoto">
-
      {% for image in product.images %}
-      
       <a href="{{ image.src | img_url: 'large' }}" rel="prettyPhoto[gallery]">
       <img {%if forloop.index == 1 %} id="productPhotoImg" {% endif %} data-id="productPhotoImg" src="{{ image.src | img_url: 'large' }}" alt="{{ image.alt | escape }}">
       </a>
       {% endfor %}
-
-
     </div>
     {% if product.images.size > 1 %}
     <div class="" id="productThumbs">
-      
-      
       <div class="" id="bx-pager">
-
-
       {%if page_style == 'nosidebar' %}
-
           {%include 'product--image-nosidebar' %}
-
         {% else %}
-
           {% for image in product.images %}
             <a href="{{ image.src | img_url: 'large' }}" class="product-photo-thumb" data-slide-index="{{forloop.index | minus: 1}}" >
               <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
             </a>
           {% endfor %}
-
       {%endif%}
-
       </div>
-
     </div>
     {% endif %}
-
   </div>
   
   {{ 'https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/js/jquery.prettyPhoto.min.js' |  script_tag }}
@@ -75,19 +54,12 @@
   <script type="text/javascript" charset="utf-8">
     (function($){
       $(document).ready(function(){
-
         $("a[rel^='prettyPhoto']").prettyPhoto({social_tools : false, deeplinking: false});
-
-
       }); 
-
     })(jQuery);     
   </script>  
 
-
 {% endif %}
-
-
 
 {% if product.compare_at_price_max > product.price %}
   <div class="product-box-promotion">

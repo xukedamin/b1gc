@@ -33,7 +33,12 @@ timber.cacheSelectors = function () {
     $sidebarDropdownExpand: $('.sidebar-sublist__expand'),
     $sidebarDropdownContract: $('.sidebar-sublist__contract'),
     $sidebarSubLists: $('.sidebar-sublist__content'),
-    $sidebarViewMore: $('.sidebar-module__viewmore')
+    $sidebarViewMore: $('.sidebar-module__viewmore'),
+
+     // Equal height elements
+    $featuredBoxes: $('.product-list-filter.tab_style2 .item-product'),
+    $featuredImages: $('.featured-box--image'),
+    //$productGridImages: $('.product-grid-image')
 
   };
 };
@@ -60,6 +65,7 @@ timber.init = function () {
   }
 
   timber.productImageSwitch();
+  timber.equalHeights();
   timber.responsiveVideos();
   
   timber.sidebarViewMore();
@@ -145,7 +151,7 @@ timber.equalHeights = function () {
   });
 
   function resizeElements() {
-    timber.cache.$featuredImages.css('height', 'auto').equalHeights();
+    //timber.cache.$featuredImages.css('height', 'auto').equalHeights();
     timber.cache.$featuredBoxes.css('height', 'auto').equalHeights();
   //  timber.cache.$productGridImages.css('height', 'auto').equalHeights();
   }

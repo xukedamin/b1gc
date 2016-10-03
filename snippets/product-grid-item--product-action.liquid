@@ -3,7 +3,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-<a class="action product-compare" href="{{product.url}}"><span class="lnr lnr-link"></span></a>
+<a class="action product-compare" href="{{product.url}}" title="{{'products.product.show_details' | t}}"><span class="lnr lnr-link"></span></a>
 
 {% comment %}
 <form action="/cart/add" method="post" enctype="multipart/form-data" class="addToCartForm form-add-to-cart " id="product-actions-{{ product.id }}">
@@ -28,7 +28,8 @@
 {% assign variantCount = product.variants | size %}
 <form action="/cart/add" method="post" class="addToCartForm1 form-add-to-cart" data-id="product-actions-{{ product.id }}"  enctype="multipart/form-data" >    
   {% if sold_out %}
-    <button class="action product-add-cart" type="submit"  disabled="disabled" data-toggle="tooltip" data-placement="top" title="{{ 'products.product.unavailable' | t }}" ><span class="text"> {{'products.product.unavailable' | t}}</span> </button>
+    <button class="action product-add-cart" type="submit"  disabled="disabled" data-toggle="tooltip" data-placement="top" title="{{ 'products.product.unavailable' | t }}" >
+    <span class="lnr lnr-cart"><span class="text"> {{'products.product.unavailable' | t}}</span> </button>
   {% elsif variantCount > 1 %}
       <button class="action product-add-cart" type="button" onclick="window.location.href='{{product.url}}'" data-toggle="tooltip" data-placement="top" title="{{'products.product.select_options' | t }}"><span class="lnr lnr-cart"></span><span class="text"> {{'products.product.select_options' | t}}</span></button>
   {% else %}
