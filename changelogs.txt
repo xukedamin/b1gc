@@ -1,9 +1,10 @@
-== October, 2016
+== October 4th, 2016
 [Fix] css sc-catalog
 [Fix] css Add to cart : product unvalable icon
 [Fix] equal height in:
-- sc product filter2 : .product-list-filter.tab_style2
-- sold out (home 3)(home7
+- sc product filter2 
+- sold out label
+- product details swatch css
 
 == Sep 30th, 2016
 Initial release
