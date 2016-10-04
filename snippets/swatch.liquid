@@ -21,9 +21,13 @@
     {% assign found_option = true %}
     {% assign option_index = forloop.index0 %}
     <style>
-      label[for="product-select-option-{{ option_index }}"] { display: none; }
+      label[for="productSelect-option-{{ option_index }}"] { display: none; }
+      #productSelect-option-{{ option_index }} { display: none; }
+      #productSelect-option-{{ option_index }} + .custom-style-select-box { display: none !important; }
+
+      /*label[for="product-select-option-{{ option_index }}"] { display: none; }
       #product-select-option-{{ option_index }} { display: none; }
-      #product-select-option-{{ option_index }} + .custom-style-select-box { display: none !important; }
+      #product-select-option-{{ option_index }} + .custom-style-select-box { display: none !important; }*/
     </style>
     <script>$(window).load(function() { $('.selector-wrapper:eq({{ option_index }})').hide(); });</script>
     {% assign downcased_option = swatch | downcase %}

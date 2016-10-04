@@ -3,6 +3,7 @@
 [Fix] css Add to cart : product unvalable icon
 [Fix] equal height in:
 - sc product filter2 : .product-list-filter.tab_style2
+- sold out (home 3)(home7
 
 == Sep 30th, 2016
 Initial release

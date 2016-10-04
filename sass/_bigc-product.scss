@@ -669,6 +669,7 @@ $product__review__star_color: #{'{{ settings.product_reviews_star_color }}'};
 .selector-wrapper {
   position: relative;
   margin: 20px 0;
+  border: none;
 
   > label {
     position: absolute;
